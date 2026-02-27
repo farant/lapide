@@ -10,6 +10,19 @@ body {
 	padding-right: 20px;
 }
 
+a:visited {
+	color: blue;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 hr {
   margin-top: 50px;
   margin-bottom: 50px;
