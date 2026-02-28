@@ -10,8 +10,10 @@ body {
 	padding-right: 20px;
 }
 
-h1 h2 h3 h4 h5 h6 {
-	line-height: 160%;
+h1 {
+  line-height: 140%;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 
 a:visited {
