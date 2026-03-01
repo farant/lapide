@@ -23,13 +23,13 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 
 - **Beda Venerabilis — De Sex Dierum Creatione** (On the Creation of Light, On the Second Day, On the Creation of Human Beings, Recapitulation of the Six Days, On the Cunning of the Serpent, The Voice of the One Rebuking, On the Excuse of the Man): quotes 145–152
 - **Baldricus Dolensis — Hierosolymitanae Historiae** (Prologue, Council of Clermont, Book Two, Book Three, Book Four, The Siege of Jerusalem): quotes 153–162
+- **Bernardus Claraevallensis — Super Antiphonarium** (Sections 1, 7, 8, 11): quotes 163–167
+- **Bernardus Claraevallensis — Tonale** (Opening Dialogue): quotes 168–169
+- **Bernardus Claraevallensis — Tractatus Cantandi Graduale**: quote 170
+- **Bonacursus Catholicus — Vita Haereticorum** (Against the Pasagians, Against the Cathars, Against the Arnaldists): quotes 171–174
+- **Bernardus Fontis Calidi — Adversus Waldensium Sectam** (Chapters I, III, IV, V, IX): quotes 175–180
 
 ## To Do
 
 - Cornelius Lapide (01–13)
-- Bernardus Claraevallensis — Tonale
-- Bernardus Claraevallensis — Tractatus Cantandi Graduale
-- Bernardus Claraevallensis — Super Antiphonarium
 - Bertholdus Constantiensis
-- Bernardus Fontis Calidi — Adversus Waldensium Sectam
-- Bonacursus Catholicus — Vita Haereticorum
