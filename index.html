@@ -22,6 +22,21 @@ img {
 	<body>
 		<img src="materdolorosa2.png" />
 		<p class="consecration">Mater Dolorosa, ora pro nobis</p>
+
+		<div id="featured-quote"></div>
+
+		<script>
+		var QUOTE_COUNT = 60;
+		var n = Math.floor(Math.random() * QUOTE_COUNT) + 1;
+		fetch('quotes/' + n + '.html')
+			.then(function(r) { return r.text(); })
+			.then(function(html) {
+				document.getElementById('featured-quote').innerHTML = html;
+			});
+		</script>
+
+		<hr>
+
 		<h1>Cornelius Lapide</h1>
 		<h2>Commentaries on the Bible</h2>
 		<ul>
@@ -65,6 +80,11 @@ img {
 				08 - Pianciani, On the Work of the First Day / Second Day
 				</a>
 			</li>
+			<li>
+				<a href="09_De_Opere_Tertiae_Diei-Quartae_Diei.html">
+				09 - Pianciani, On the Work of the Third Day / Fourth Day
+				</a>
+			</li>
 		</ul>
 
 		<hr>
@@ -79,6 +99,17 @@ img {
 			<li>
 				<a href="adamus_scotus/Sermones.html">
 				Sermones (Sermons)
+				</a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<h1>Baldricus Dolensis (Baldric of Dol)</h1>
+		<ul>
+			<li>
+				<a href="baldricus_dolensis/Hierosolymitanae_Historiae.html">
+				Hierosolymitanae Historiae (History of Jerusalem)
 				</a>
 			</li>
 		</ul>
