@@ -22,11 +22,11 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Berengosus Trevirensis — De Laude Et Inventione Sanctae Crucis** (Book I Ch 1, Book II Chs 1 & 8, Book III Chs 1 & 4, Appendix): quotes 138–144
 
 - **Beda Venerabilis — De Sex Dierum Creatione** (On the Creation of Light, On the Second Day, On the Creation of Human Beings, Recapitulation of the Six Days, On the Cunning of the Serpent, The Voice of the One Rebuking, On the Excuse of the Man): quotes 145–152
+- **Baldricus Dolensis — Hierosolymitanae Historiae** (Prologue, Council of Clermont, Book Two, Book Three, Book Four, The Siege of Jerusalem): quotes 153–162
 
 ## To Do
 
 - Cornelius Lapide (01–12)
-- Baldricus Dolensis — Hierosolymitanae Historiae
 - Bernardus Claraevallensis — Tonale
 - Bernardus Claraevallensis — Tractatus Cantandi Graduale
 - Bernardus Fontis Calidi — Adversus Waldensium Sectam
