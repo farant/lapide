@@ -32,8 +32,10 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Cornelius a Lapide — Preliminares** (Dedicatory Letter, The Life of Cornelius a Lapide): quotes 181–188
 - **Jerome — Praefationes** (The Helmeted Prologue, Jerome to Paulinus): quotes 189–194
 - **Fr. Lacordaire — Du Culte de Jésus-Christ dans les Écritures**: quotes 195–198
+- **Pianciani — In Historiam Creationis Mosaicam Commentatio** (Section XXI): quotes 199–200
+- **Pianciani — De Prioribus Versibus Geneseos** (Section XXX): quote 201
 
 ## To Do
 
-- Cornelius Lapide (03–13)
+- Cornelius Lapide (08–13)
 - Bertholdus Constantiensis
