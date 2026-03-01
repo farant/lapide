@@ -29,7 +29,11 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Bonacursus Catholicus — Vita Haereticorum** (Against the Pasagians, Against the Cathars, Against the Arnaldists): quotes 171–174
 - **Bernardus Fontis Calidi — Adversus Waldensium Sectam** (Chapters I, III, IV, V, IX): quotes 175–180
 
+- **Cornelius a Lapide — Preliminares** (Dedicatory Letter, The Life of Cornelius a Lapide): quotes 181–188
+- **Jerome — Praefationes** (The Helmeted Prologue, Jerome to Paulinus): quotes 189–194
+- **Fr. Lacordaire — Du Culte de Jésus-Christ dans les Écritures**: quotes 195–198
+
 ## To Do
 
-- Cornelius Lapide (01–13)
+- Cornelius Lapide (03–13)
 - Bertholdus Constantiensis
