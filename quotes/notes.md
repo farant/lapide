@@ -16,6 +16,7 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Berno Augiae Divitis — De Varia Psalmorum Modulatione** (Synopsis, Sections 5, 7, 8): quotes 104–109
 - **Berno Augiae Divitis — De Consona Tonorum Diversitate** (Prefatory Letter, Tones 7, 8): quotes 110–114
 - **Bertarius Virdunensis — Gesta Episcoporum Virdunensium** (Preface, Verses of Fortunatus, Chapters 8, 18, 19): quotes 115–120
+- **Bertarius Virdunensis — Gesta Episcoporum Virdunensium Continuatio** (Barnoinus, Hugo, Heymo, Abbot Richard, Bishop Richard): quotes 121–126
 
 ## To Do
 
@@ -25,5 +26,4 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - Berengosus Trevirensis — De Laude Et Inventione Sanctae Crucis
 - Bernardus Fontis Calidi — Adversus Waldensium Sectam
 - Bertarius Cassinensis — Vita Sanctae Scholasticae
-- Bertarius Virdunensis — Gesta Episcoporum Virdunensium Continuatio
 - Bonacursus Catholicus — Vita Haereticorum
