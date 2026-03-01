@@ -19,13 +19,13 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Bertarius Virdunensis — Gesta Episcoporum Virdunensium Continuatio** (Barnoinus, Hugo, Heymo, Abbot Richard, Bishop Richard): quotes 121–126
 - **Bertarius Cassinensis — Vita Sanctae Scholasticae** (Sections 2, 7, 10, 12, 13, 14): quotes 127–132
 - **Bernardus Monachus Francus — Itinerarium In Loca Sancta** (Sections 4, 6, 10, 13, 18): quotes 133–137
+- **Berengosus Trevirensis — De Laude Et Inventione Sanctae Crucis** (Book I Ch 1, Book II Chs 1 & 8, Book III Chs 1 & 4, Appendix): quotes 138–144
 
 ## To Do
 
 - Cornelius Lapide (01–12)
 - Baldricus Dolensis — Hierosolymitanae Historiae
 - Beda Venerabilis — De Sex Dierum Creatione
-- Berengosus Trevirensis — De Laude Et Inventione Sanctae Crucis
 - Bernardus Claraevallensis — Tonale
 - Bernardus Claraevallensis — Tractatus Cantandi Graduale
 - Bernardus Fontis Calidi — Adversus Waldensium Sectam
