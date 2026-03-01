@@ -41,6 +41,7 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Cornelius a Lapide — Proemium Et Encomium Sacrae Scripturae Pt2** (Chapter V cont., The Fathers, Saintly Examples, Sacred Writers as Pens, Six Utilities, Praises of Moses): quotes 222–231
 - **Cornelius a Lapide — Commentaria In Pentateuchum Mosis Canones** (Canons, Sacred Chronology): no quotes (technical/linguistic reference)
 - **Cornelius a Lapide — Genesis Caput Primum Synopsis Pt1** (Verses 1–12): quotes 232–239
+- **Cornelius a Lapide — Genesis Caput Primum Synopsis Pt2** (Verses 14–31, Chapter II Verses 1–3): quotes 240–252
 
 ## To Do
 
