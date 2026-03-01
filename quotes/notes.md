@@ -39,6 +39,8 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Pianciani — Appendix: De Creatione Angelorum** (Section LXXXII): quote 208
 - **Cornelius a Lapide — Proemium Et Encomium Sacrae Scripturae Pt1** (Section One, Chapters I–V): quotes 209–221
 - **Cornelius a Lapide — Proemium Et Encomium Sacrae Scripturae Pt2** (Chapter V cont., The Fathers, Saintly Examples, Sacred Writers as Pens, Six Utilities, Praises of Moses): quotes 222–231
+- **Cornelius a Lapide — Commentaria In Pentateuchum Mosis Canones** (Canons, Sacred Chronology): no quotes (technical/linguistic reference)
+- **Cornelius a Lapide — Genesis Caput Primum Synopsis Pt1** (Verses 1–12): quotes 232–239
 
 ## To Do
 
