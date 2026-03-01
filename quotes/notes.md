@@ -10,11 +10,12 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 
 - **Bandinus Magister — Sententiarum I** (Distinctions II, VIII, XXIII, XXXIII, XLII, XLVI, XLVII, XLVIII): quotes 53–60
 - **Bandinus Magister — Sententiarum II** (Distinctions 1, 13, 17, 19, 21, 23, 25, 26, 27, 37, 43): quotes 61–73
+- **Bandinus Magister — Sententiarum III** (Distinctions II, XIII, XVIII, XX, XXI, XXV, XXVIII–XXIX, XXXIV, XXXV, XXXVIII): quotes 74–84
 
 ## To Do
 
 - Cornelius Lapide (01–09)
-- Bandinus Magister — Sententiarum III–IV
+- Bandinus Magister — Sententiarum IV
 - Beda Venerabilis — De Sex Dierum Creatione
 - Bernardus Monachus Francus — Itinerarium In Loca Sancta
 - Berno Augiae Divitis — De Consona Tonorum Diversitate

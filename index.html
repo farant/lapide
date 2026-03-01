@@ -17,6 +17,12 @@ img {
 	font-weight: bold;
 	font-style: italic;
 }
+.footer {
+	margin-top: 8em;
+	opacity: 0.5;
+	font-style: italic;
+	text-align: center;
+}
 </style>
 	</head>
 	<body>
@@ -26,7 +32,7 @@ img {
 		<div id="featured-quote"></div>
 
 		<script>
-		var QUOTE_COUNT = 73;
+		var QUOTE_COUNT = 84;
 		var n = Math.floor(Math.random() * QUOTE_COUNT) + 1;
 		fetch('quotes/' + n + '.html')
 			.then(function(r) { return r.text(); })
@@ -83,6 +89,11 @@ img {
 			<li>
 				<a href="09_De_Opere_Tertiae_Diei-Quartae_Diei.html">
 				09 - Pianciani, On the Work of the Third Day / Fourth Day
+				</a>
+			</li>
+			<li>
+				<a href="10_De_Opere_Quintae-Sextae_Diei_Et_Septima_Die.html">
+				10 - Pianciani, On the Work of the Fifth Day / Sixth Day and the Seventh Day
 				</a>
 			</li>
 		</ul>
@@ -253,5 +264,9 @@ img {
 				</a>
 			</li>
 		</ul>
+		<div class="footer">
+			All the work on this website is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>
+		</div>
 	</body>
 </html>
+
