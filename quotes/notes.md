@@ -26,8 +26,10 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 
 ## To Do
 
-- Cornelius Lapide (01–12)
+- Cornelius Lapide (01–13)
 - Bernardus Claraevallensis — Tonale
 - Bernardus Claraevallensis — Tractatus Cantandi Graduale
+- Bernardus Claraevallensis — Super Antiphonarium
+- Bertholdus Constantiensis
 - Bernardus Fontis Calidi — Adversus Waldensium Sectam
 - Bonacursus Catholicus — Vita Haereticorum
