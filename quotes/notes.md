@@ -34,8 +34,11 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Fr. Lacordaire — Du Culte de Jésus-Christ dans les Écritures**: quotes 195–198
 - **Pianciani — In Historiam Creationis Mosaicam Commentatio** (Section XXI): quotes 199–200
 - **Pianciani — De Prioribus Versibus Geneseos** (Section XXX): quote 201
+- **Pianciani — De Opere Primae Diei / Secundae Diei** (Sections XXXI, XLV): quotes 202–203
+- **Pianciani — De Opere Quintae / Sextae Diei Et Septima Die** (Sections LXXIII, LXXIV, LXXIX): quotes 204–207
+- **Pianciani — Appendix: De Creatione Angelorum** (Section LXXXII): quote 208
 
 ## To Do
 
-- Cornelius Lapide (08–13)
+- Cornelius Lapide (12–13)
 - Bertholdus Constantiensis
