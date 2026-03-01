@@ -10,6 +10,10 @@ body {
 	padding-right: 20px;
 }
 
+#featured-quote.loading {
+	min-height: 120px;
+}
+
 h1 {
   line-height: 140%;
   text-indent: -1em;

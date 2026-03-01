@@ -29,7 +29,7 @@ img {
 		<img src="materdolorosa2.png" />
 		<p class="consecration">Mater Dolorosa, ora pro nobis</p>
 
-		<div id="featured-quote"></div>
+		<div id="featured-quote" class="loading"></div>
 
 		<script>
 		var QUOTE_COUNT = 109;
@@ -38,6 +38,7 @@ img {
 			.then(function(r) { return r.text(); })
 			.then(function(html) {
 				document.getElementById('featured-quote').innerHTML = html;
+				document.getElementById('featured-quote').classList.remove('loading');
 			});
 		</script>
 
