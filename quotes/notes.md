@@ -13,6 +13,7 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Bandinus Magister — Sententiarum III** (Distinctions II, XIII, XVIII, XX, XXI, XXV, XXVIII–XXIX, XXXIV, XXXV, XXXVIII): quotes 74–84
 - **Bandinus Magister — Sententiarum IV** (Distinctions I, V, IX, XI, XIV, XVI, XVIII, XX, XLI): quotes 85–96
 - **Berno Augiae Divitis — Musica Seu Prologus In Tonarium** (Proem, Sections 2, 4, 14, Epilogue): quotes 97–103
+- **Berno Augiae Divitis — De Varia Psalmorum Modulatione** (Synopsis, Sections 5, 7, 8): quotes 104–109
 
 ## To Do
 
@@ -20,7 +21,6 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - Beda Venerabilis — De Sex Dierum Creatione
 - Bernardus Monachus Francus — Itinerarium In Loca Sancta
 - Berno Augiae Divitis — De Consona Tonorum Diversitate
-- Berno Augiae Divitis — De Varia Psalmorum Modulatione
 - Berengosus Trevirensis — De Laude Et Inventione Sanctae Crucis
 - Bernardus Fontis Calidi — Adversus Waldensium Sectam
 - Bertarius Cassinensis — Vita Sanctae Scholasticae
