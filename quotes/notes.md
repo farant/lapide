@@ -9,11 +9,12 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Adamus Scotus — Sermones** (Sermons VIII, IX, XXI, XXXII, XLI, XLII, XLIV, XLV): quotes 42–52
 
 - **Bandinus Magister — Sententiarum I** (Distinctions II, VIII, XXIII, XXXIII, XLII, XLVI, XLVII, XLVIII): quotes 53–60
+- **Bandinus Magister — Sententiarum II** (Distinctions 1, 13, 17, 19, 21, 23, 25, 26, 27, 37, 43): quotes 61–73
 
 ## To Do
 
 - Cornelius Lapide (01–09)
-- Bandinus Magister — Sententiarum II–IV
+- Bandinus Magister — Sententiarum III–IV
 - Beda Venerabilis — De Sex Dierum Creatione
 - Bernardus Monachus Francus — Itinerarium In Loca Sancta
 - Berno Augiae Divitis — De Consona Tonorum Diversitate
