@@ -37,8 +37,9 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Pianciani — De Opere Primae Diei / Secundae Diei** (Sections XXXI, XLV): quotes 202–203
 - **Pianciani — De Opere Quintae / Sextae Diei Et Septima Die** (Sections LXXIII, LXXIV, LXXIX): quotes 204–207
 - **Pianciani — Appendix: De Creatione Angelorum** (Section LXXXII): quote 208
+- **Cornelius a Lapide — Proemium Et Encomium Sacrae Scripturae Pt1** (Section One, Chapters I–V): quotes 209–221
 
 ## To Do
 
-- Cornelius Lapide (12–13)
+- Cornelius Lapide (13)
 - Bertholdus Constantiensis
