@@ -52,6 +52,8 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 
 - **Cornelius a Lapide — Genesis Caput Tertium Synopsis** (Verses 1, 4, 6, 7, 9, 15, 17, 19, 21, 22; Chapter IV Verse 1): quotes 318–332
 
+- **Cornelius a Lapide — Genesis Caput Quartum Synopsis** (Verses 3, 5, 7, 9, 10, 14, 17; Chapter V Verse 2): quotes 333–346
+
 ## To Do
 
 - Bertholdus Constantiensis
