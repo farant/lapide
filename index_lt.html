@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="la">
+	<head>
+		<title>Translationes Patristicae Latinae</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+<!--
+	Ave Maria gratia plena Dominus tecum,
+	benedicta tu in mulieribus
+	et benedictus fructus ventris tui Jesus.
+	Sancta Maria Mater Dei
+	ora pro nobis peccatoribus
+	nunc et in hora mortis nostrae.
+
+	Amen.
+
+	May the most Holy, most Sacred, most Adorable
+	and Ineffable Name of God be forever praised,
+	blessed, loved, adored and glorified: in Heaven,
+	on Earth and in Hell, by all the creatures of God
+	and by the Sacred Heart of Our Lord Jesus Christ
+	in the most Holy Sacrament of the Altar.
+
+	Amen.
+-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+	max-width: 100%;
+}
+.consecration {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 2em;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+}
+.footer {
+	margin-top: 8em;
+	opacity: 0.5;
+	font-style: italic;
+	text-align: center;
+}
+</style>
+	<meta name="description" content="Textus originales Latini operum patristicorum et mediavalium, inter quae Commentaria Cornelii a Lapide in Genesim et opera Patrum Ecclesiae.">
+<link rel="canonical" href="https://lapide.org/index_lt.html">
+<meta property="og:title" content="Translationes Patristicae Latinae">
+<meta property="og:description" content="Textus originales Latini operum patristicorum et mediavalium, inter quae Commentaria Cornelii a Lapide in Genesim et opera Patrum Ecclesiae.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lapide.org/index_lt.html">
+<meta property="og:image" content="https://lapide.org/materdolorosa2.png">
+<link rel="alternate" hreflang="en" href="https://lapide.org/">
+<link rel="alternate" hreflang="la" href="https://lapide.org/index_lt.html">
+</head>
+	<body>
+		<img src="materdolorosa2.png" />
+		<p class="consecration">Mater Dolorosa, ora pro nobis</p>
+
+		<p style="text-align: center;"><a href="index.html">English</a> · Latina</p>
+
+		<div id="featured-quote" class="loading"></div>
+
+		<script>
+		var QUOTE_COUNT = 8;
+		var n = Math.floor(Math.random() * QUOTE_COUNT) + 1;
+		fetch('quotes_lt/' + n + '.html')
+			.then(function(r) { return r.text(); })
+			.then(function(html) {
+				document.getElementById('featured-quote').innerHTML = html;
+				document.getElementById('featured-quote').classList.remove('loading');
+			});
+		</script>
+
+		<hr>
+
+		<h1>Cornelius Lapide</h1>
+		<h2>Commentaria in Sacram Scripturam</h2>
+		<p>Cornelius a Lapide (Cornelius Cornelissen van den Steen, 1567–1637) exegeta Flander Societatis Jesu fuit, natus Bocolti in Principatu-Episcopatu Leodiensi. Sacram Scripturam in Universitate Lovaniensi per viginti annos docuit, deinde Romam vocatus, ubi reliquum vitae scribendo transegit. Commentaria eius fere omnes libros Sacrae Scripturae complectuntur, et ob singularem amplitudinem celebrantur, interpretationibus patristicis, mediavalibus et recentioribus in unam continuam expositionem contextis. Inter frequentissime consulta commentaria catholica biblica permanent, praesertim a concionatoribus aestimata propter copiam applicationum moralium et allegoricarum.</p>
+		<ul>
+			<li>
+				<a href="01_Preliminares_lt.html">
+				Preliminares
+				</a>
+			</li>
+		</ul>
+
+		<p class="note">
+		Omnis materia experimentum est utens instrumentum "Claude" ad textus Latinos transferendos. Fieri potest ut errores ex processu OCR vel translatione ipsa oriantur.<br/><br/>
+		Si errores inveneritis, optimus modus me certiorem faciendi est "Issue" creare apud <a href="https://github.com/farant/lapide">https://github.com/farant/lapide</a>.<br/><br/>
+		Deus vos benedicat!
+		</p>
+		<div class="footer">
+			Omnis textus et forma in hoc situ <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> est et in publico dominio
+		</div>
+	</body>
+</html>
