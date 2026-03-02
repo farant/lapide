@@ -10,6 +10,15 @@ body {
 	padding-right: 20px;
 }
 
+
+.nav .prev {
+	float: left;
+}
+
+.nav .next {
+	float: right;
+}
+
 #featured-quote.loading {
 	min-height: 120px;
 }
