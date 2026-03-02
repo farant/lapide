@@ -48,6 +48,8 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 - **Cornelius a Lapide — Genesis Caput Secundum Synopsis Pt1** (Verses 3–9): quotes 274–286
 - **Cornelius a Lapide — Genesis Caput Secundum Synopsis Pt2** (Verses 9–25, Chapter III Verse 1): quotes 287–297
 
+- **Adamus Perseniae — Mariale** (Title Page, Sermons I–II & IV–V, Fragments I–III, V, VII): quotes 298–317
+
 ## To Do
 
 - Bertholdus Constantiensis
