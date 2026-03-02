@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_es.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_lt.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
@@ -299,6 +304,11 @@
     <loc>https://lapide.org/guigo_i/Meditationes.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_es.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/index_lt.html</loc>
