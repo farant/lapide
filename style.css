@@ -46,3 +46,9 @@ hr {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.note {
+  margin-top: 8em;
+  font-style: italic;
+  opacity: 0.5;
+}
