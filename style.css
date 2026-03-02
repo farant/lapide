@@ -11,12 +11,13 @@ body {
 }
 
 
-.nav .prev {
-	float: left;
+.nav {
+	display: flex;
+	justify-content: space-between;
 }
 
-.nav .next {
-	float: right;
+.nav .next:only-child {
+	margin-left: auto;
 }
 
 #featured-quote.loading {
@@ -51,4 +52,12 @@ hr {
   margin-top: 8em;
   font-style: italic;
   opacity: 0.5;
+}
+
+
+hr + .nav {
+  margin-top: -40px;
+}
+.nav + hr {
+  margin-top: 10px;
 }
