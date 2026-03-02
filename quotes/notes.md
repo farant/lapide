@@ -45,6 +45,8 @@ Curated quotes displayed randomly on the index page. Each fragment is a numbered
 
 - **Caesar Baronius — De Martyrologio Romano** (Treatise Chs IV & X; March 7, May 23, June 2, June 24, July 25, July 28, August 6, August 13, August 15, August 24, August 25, September 15, September 16, October 10, October 21, October 24, December 20, December 23, December 25): quotes 253–273
 
+- **Cornelius a Lapide — Genesis Caput Secundum Synopsis Pt1** (Verses 3–9): quotes 274–286
+
 ## To Do
 
 - Bertholdus Constantiensis
