@@ -26,6 +26,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_id.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_lt.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
@@ -658,6 +663,11 @@
   <url>
     <loc>https://lapide.org/index_it.html</loc>
     <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_id.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
