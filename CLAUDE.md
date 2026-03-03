@@ -8,11 +8,12 @@ Catholic theological texts site at lapide.org. Primarily Cornelius a Lapide's bi
 - **Latin**: `filename_lt.html` with `lang="la"`
 - **Spanish**: `filename_es.html` with `lang="es"`
 - **French**: `filename_fr.html` with `lang="fr"`
+- **Portuguese**: `filename_pt.html` with `lang="pt"`
 - Future languages follow the same pattern: `filename_XX.html` with the appropriate ISO 639-1 code.
 
-Index pages: `index.html`, `index_lt.html`, `index_es.html`, `index_fr.html`
+Index pages: `index.html`, `index_lt.html`, `index_es.html`, `index_fr.html`, `index_pt.html`
 
-Quotes directories: `quotes/` (English), `quotes_lt/` (Latin), `quotes_es/` (Spanish), `quotes_fr/` (French)
+Quotes directories: `quotes/` (English), `quotes_lt/` (Latin), `quotes_es/` (Spanish), `quotes_fr/` (French), `quotes_pt/` (Portuguese)
 
 All pages use `style.css`. No build system — plain static HTML.
 
@@ -76,7 +77,11 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 - Use the target language's standard forms for biblical proper names (e.g., Spanish: Moisés, Josué, Isaías, Jeremías; not Moses, Joshua, Isaiah, Jeremiah).
 - Use traditional liturgical phrasing for well-known Scripture quotations where such a tradition exists in the target language.
 - Preserve all HTML structure exactly: `<p>`, `<em>`, `<b>`, `<hr />`, anchor IDs. The translated file should have the same number of `<p>` tags as the source.
-- **Diacritics are critical.** When delegating to agents, explicitly instruct them to use proper diacritics for the target language (e.g., French: é, è, ê, à, â, î, ô, û, ç, ù, ë, ï, œ). Agents may omit them unless strongly prompted.
+- **Diacritics are critical.** When delegating to agents, explicitly instruct them to use proper diacritics for the target language (e.g., French: é, è, ê, à, â, î, ô, û, ç, ù, ë, ï, œ; Portuguese: ã, õ, á, é, í, ó, ú, â, ê, ô, à, ç). Agents may omit them unless strongly prompted.
+
+### Language-specific conventions
+
+- **Portuguese**: Use European Portuguese (traditional orthography: facto, exactamente, correctamente — not Brazilian fato, exatamente, corretamente). European Portuguese is appropriate for the formal scholarly/theological register of the source material and its European ecclesiastical context. The text remains fully accessible to Brazilian readers, as differences between the two standards are minimal in formal theological writing.
 
 ### 8. Review pass
 

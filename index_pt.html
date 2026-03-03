@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<title>Traduções Patrísticas Latinas</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+<!--
+	Ave Maria gratia plena Dominus tecum,
+	benedicta tu in mulieribus
+	et benedictus fructus ventris tui Jesus.
+	Sancta Maria Mater Dei
+	ora pro nobis peccatoribus
+	nunc et in hora mortis nostrae.
+
+	Amen.
+
+	May the most Holy, most Sacred, most Adorable
+	and Ineffable Name of God be forever praised,
+	blessed, loved, adored and glorified: in Heaven,
+	on Earth and in Hell, by all the creatures of God
+	and by the Sacred Heart of Our Lord Jesus Christ
+	in the most Holy Sacrament of the Altar.
+
+	Amen.
+-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+	max-width: 100%;
+}
+.consecration {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 2em;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+}
+.footer {
+	margin-top: 8em;
+	opacity: 0.5;
+	font-style: italic;
+	text-align: center;
+}
+</style>
+	<meta name="description" content="Traduções para o português de textos teológicos patrísticos e medievais em latim, incluindo os Comentários de Cornelius a Lapide sobre o Génesis e obras dos Padres da Igreja.">
+<link rel="canonical" href="https://lapide.org/index_pt.html">
+<meta property="og:title" content="Traduções Patrísticas Latinas">
+<meta property="og:description" content="Traduções para o português de textos teológicos patrísticos e medievais em latim, incluindo os Comentários de Cornelius a Lapide sobre o Génesis e obras dos Padres da Igreja.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lapide.org/index_pt.html">
+<meta property="og:image" content="https://lapide.org/materdolorosa2.png">
+<link rel="alternate" hreflang="en" href="https://lapide.org/">
+<link rel="alternate" hreflang="la" href="https://lapide.org/index_lt.html">
+<link rel="alternate" hreflang="es" href="https://lapide.org/index_es.html">
+<link rel="alternate" hreflang="fr" href="https://lapide.org/index_fr.html">
+<link rel="alternate" hreflang="pt" href="https://lapide.org/index_pt.html">
+</head>
+	<body>
+		<img src="materdolorosa2.png" />
+		<p class="consecration">Mater Dolorosa, ora pro nobis</p>
+
+		<p style="text-align: center;"><a href="index.html">English</a> · <a href="index_lt.html">Latina</a> · <a href="index_es.html">Español</a> · <a href="index_fr.html">Français</a> · Português</p>
+
+		<div id="featured-quote" class="loading"></div>
+
+		<script>
+		var QUOTE_COUNT = 8;
+		var n = Math.floor(Math.random() * QUOTE_COUNT) + 1;
+		fetch('quotes_pt/' + n + '.html')
+			.then(function(r) { return r.text(); })
+			.then(function(html) {
+				document.getElementById('featured-quote').innerHTML = html;
+				document.getElementById('featured-quote').classList.remove('loading');
+			});
+		</script>
+
+		<hr>
+
+		<h1>Cornelius Lapide</h1>
+		<h2>Comentários à Sagrada Escritura</h2>
+		<p>Cornelius a Lapide (Cornelius Cornelissen van den Steen, 1567–1637) foi um exegeta flamengo da Companhia de Jesus, nascido em Bocholt no Principado-Bispado de Liège. Ensinou Sagrada Escritura na Universidade de Lovaina durante vinte anos antes de ser chamado a Roma, onde passou o resto da sua vida a escrever. Os seus comentários abrangem quase todos os livros da Sagrada Escritura e são celebrados pela sua extraordinária amplitude, entrelaçando interpretações patrísticas, medievais e contemporâneas numa única exposição contínua. Permanecem entre os comentários bíblicos católicos mais frequentemente consultados, valorizados especialmente pelos pregadores pela sua riqueza de aplicações morais e alegóricas.</p>
+		<ul>
+			<li>
+				<a href="01_Preliminares_pt.html">
+				Preliminares
+				</a>
+			</li>
+		</ul>
+
+		<p class="note">
+		Todo o conteúdo é uma experiência utilizando a ferramenta de inteligência artificial «Claude» para traduzir textos latinos para português. Isto parece funcionar razoavelmente bem, mas é certamente possível que existam erros causados pelo processo de OCR ou pela própria tradução.<br/><br/>
+		Sei que isto é um pouco técnico, mas se encontrarem erros a melhor maneira de me informar é provavelmente criar uma «Issue» em <a href="https://github.com/farant/lapide">https://github.com/farant/lapide</a> onde se encontra todo o conteúdo do sítio.<br/><br/>
+		Deus vos abençoe e espero que estas traduções vos sejam úteis!
+		</p>
+		<div class="footer">
+			Todo o texto e código deste sítio web é <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> e pertence ao domínio público
+		</div>
+	</body>
+</html>
