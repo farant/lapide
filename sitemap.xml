@@ -2,16 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lapide.org/</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_Preliminares.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lapide.org/01_Preliminares_tl.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
@@ -22,17 +17,12 @@
   </url>
   <url>
     <loc>https://lapide.org/01_Preliminares_es.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_Preliminares_fr.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lapide.org/01_Preliminares_it.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -46,23 +36,33 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_it.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_Preliminares_pt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_Preliminares_tl.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_01.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_01_es.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -77,7 +77,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_01_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -87,7 +87,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_02.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -107,7 +107,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_02_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -117,7 +117,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_03.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_03_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_04.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -177,7 +177,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_05.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -207,7 +207,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_06.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_07.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -227,7 +227,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_08.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -237,7 +237,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_09.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -452,17 +452,27 @@
   </url>
   <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_ar.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_es.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_fr.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_hi.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -472,67 +482,87 @@
   </url>
   <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_it.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_pt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_tl.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_es.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_fr.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_id.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_it.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_pt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_es.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_fr.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_it.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_pt.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -671,27 +701,17 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lapide.org/index_es.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lapide.org/index_fr.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lapide.org/index_it.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lapide.org/index_tl.html</loc>
+    <loc>https://lapide.org/index_ar.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lapide.org/index_ar.html</loc>
+    <loc>https://lapide.org/index_es.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_fr.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
@@ -706,13 +726,23 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index_it.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index_lt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/index_pt.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_tl.html</loc>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
