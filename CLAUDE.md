@@ -25,6 +25,7 @@ All pages use `style.css`. No build system — plain static HTML.
 - The Latin is the original source text for patristic works (Jerome, etc.). The English is itself a translation. For later authors like Lacordaire, the original may be French (preserved in the `_lt` file), with the English as the primary translation reference.
 - Use both sources: English for clear meaning, Latin to check against the original.
 - For large files, split into sections (by anchor ID) and translate in parallel using multiple agents, then stitch together. The first agent handles lines from the start through the end of its section (including the HTML head); subsequent agents output only body content (no doctype/head); the final agent includes `</body></html>`.
+- **Temporary files**: When agents need to write intermediate/partial output, use `tmp_` prefixed files in the project directory (e.g., `tmp_proemium_it_part1.html`) rather than `/tmp/`. Background agents often lack permission to write to `/tmp/`. Clean up `tmp_*` files after stitching.
 - When the `_lt` file contains text already in the target language (e.g., Lacordaire's French in `02_Clemens`), copy that section verbatim rather than translating it.
 
 ### 2. HTML head conventions for the new file
@@ -78,6 +79,8 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 - Use traditional liturgical phrasing for well-known Scripture quotations where such a tradition exists in the target language.
 - Preserve all HTML structure exactly: `<p>`, `<em>`, `<b>`, `<hr />`, anchor IDs. The translated file should have the same number of `<p>` tags as the source.
 - **Diacritics are critical.** When delegating to agents, explicitly instruct them to use proper diacritics for the target language (e.g., French: é, è, ê, à, â, î, ô, û, ç, ù, ë, ï, œ; Portuguese: ã, õ, á, é, í, ó, ú, â, ê, ô, à, ç). Agents may omit them unless strongly prompted.
+- **Quotations must be translated into the target language.** All quoted text (Scripture, Church Fathers, classical authors, etc.) should be translated into the target language, not left in Latin/Greek/Hebrew. The only exception is when the English source itself keeps the quotation in the original language (e.g., Hebrew etymologies, untranslated Latin technical terms). Match the English file's approach: if the English translates a quote into English, translate it into the target language; if the English preserves it in the original language, preserve it likewise.
+- **Verse and poetry in `<em>` tags follow the same rule.** Classical verse (Virgil, Ovid, Claudian, Orpheus, etc.) inside `<em>` tags must be translated into the target language using the target language's standard quoting convention (e.g., guillemets «...» for French, Portuguese, Spanish, Italian) when the English version translates the verse. Agents often default to leaving verse in Latin even when surrounding prose is translated — explicitly instruct them to translate all `<em>`-tagged verse that the English translates.
 
 ### Language-specific conventions
 
@@ -85,7 +88,64 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 
 ### 8. Review pass
 
-After stitching the translated file together, run a reviewer agent that reads the full file alongside the English and Latin sources. The reviewer should check: missing diacritics, `<p>` tag count parity, anchor ID consistency, hreflang completeness, translation quality, and quote link correctness.
+After stitching the translated file together, run review agents. For small/medium files (~60KB or less), a single reviewer agent may suffice. For large files (~100KB+), split the review into parallel agents to ensure thorough coverage rather than spot-checking.
+
+#### Structural review (one agent, whole file)
+
+Mechanical checks that can be verified programmatically across the entire file:
+- `<p>` tag count parity with the English source
+- Anchor ID presence (all IDs from the English file must exist in the translation)
+- hreflang completeness in `<head>`
+- HTML tag matching (`<b>`, `<em>`, `<hr />` counts match English)
+- Canonical URL, `og:url`, `lang` attribute correctness
+- Numerical data integrity (dates, years, verse references)
+- Stitching issues at join points (duplicate lines, missing content, broken tags)
+
+#### Translation quality review (multiple agents for large files, split by section)
+
+Deep comparison against English and Latin sources that requires actually reading the text:
+- Translation accuracy and completeness (no omitted sentences or paragraphs)
+- Diacritics correctness in context
+- Register consistency (formal scholarly/theological throughout)
+- Quotation handling (translated into target language where English translates them)
+- Biblical proper name forms (target language standard forms)
+- Section heading consistency (TOC entries must match their corresponding section headings)
+
+For large files, assign each quality reviewer a section of the file (by anchor ID ranges or line ranges), ensuring **full coverage** — every paragraph should be reviewed by at least one agent. The goal is a genuine review of the entire translation, not a spot check of selected passages.
+
+## Extracting English Quotes from Genesis Commentary
+
+### Workflow
+
+1. Read the full chapter file (`01_genesis_XX.html`) in sections if needed.
+2. Identify standout quotable passages — from Church Fathers, saints, and Lapide himself. Look for spiritual, moral, and historically interesting passages with universal appeal.
+3. Present candidates to the user for approval before creating files.
+4. Create sequentially numbered HTML files in `quotes/`.
+
+### Quote file format
+
+```html
+<blockquote>
+<p>QUOTE TEXT</p>
+<cite>— ATTRIBUTION, in Cornelius a Lapide, <a href="01_genesis_XX.html#anchor-id">Commentary on Genesis, Chapter XX — "Section Title"</a></cite>
+</blockquote>
+```
+
+### Attribution conventions
+
+- **Canonized saint**: `— St. Author, in Cornelius a Lapide, ...`
+- **Lapide's own words**: `— Cornelius a Lapide, ...` (no "in" prefix)
+- **Blessed (not canonized)**: `— Bl. Author, in Cornelius a Lapide, ...`
+- **Religious brother**: `— Brother Author, in Cornelius a Lapide, ...`
+- **Non-saint / secular author**: `— Author, in Cornelius a Lapide, ...`
+- **Saint speaking (e.g. deathbed speech)**: `— St. Author, in Cornelius a Lapide, ...`
+
+### Notes
+
+- Quote density varies by chapter richness: theological chapters yield 5–8 quotes; genealogical or legal chapters may yield 1–2.
+- Anchor IDs vary per chapter — some use `#verse-X`, others use descriptive names like `#verse-12-ladder-moral` or `#moral-conclusion`. Check the chapter's table of contents.
+- Section titles in the cite tag should reflect the section heading or a short descriptive phrase from the chapter.
+- Genesis commentary files are named `01_genesis_XX.html` (XX = chapter number, no leading zero).
 
 ## Content Notes
 
