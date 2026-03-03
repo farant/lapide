@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<title>Terjemahan Patristik Latin</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+<!--
+	Ave Maria gratia plena Dominus tecum,
+	benedicta tu in mulieribus
+	et benedictus fructus ventris tui Jesus.
+	Sancta Maria Mater Dei
+	ora pro nobis peccatoribus
+	nunc et in hora mortis nostrae.
+
+	Amen.
+
+	May the most Holy, most Sacred, most Adorable
+	and Ineffable Name of God be forever praised,
+	blessed, loved, adored and glorified: in Heaven,
+	on Earth and in Hell, by all the creatures of God
+	and by the Sacred Heart of Our Lord Jesus Christ
+	in the most Holy Sacrament of the Altar.
+
+	Amen.
+-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+	max-width: 100%;
+}
+.consecration {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 2em;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+}
+.footer {
+	margin-top: 8em;
+	opacity: 0.5;
+	font-style: italic;
+	text-align: center;
+}
+</style>
+	<meta name="description" content="Terjemahan bahasa Indonesia dari teks-teks teologi patristik dan abad pertengahan berbahasa Latin, termasuk Tafsir Cornelius a Lapide atas Kitab Kejadian dan karya-karya para Bapa Gereja.">
+<link rel="canonical" href="https://lapide.org/index_id.html">
+<meta property="og:title" content="Terjemahan Patristik Latin">
+<meta property="og:description" content="Terjemahan bahasa Indonesia dari teks-teks teologi patristik dan abad pertengahan berbahasa Latin, termasuk Tafsir Cornelius a Lapide atas Kitab Kejadian dan karya-karya para Bapa Gereja.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lapide.org/index_id.html">
+<meta property="og:image" content="https://lapide.org/materdolorosa2.png">
+<link rel="alternate" hreflang="en" href="https://lapide.org/">
+<link rel="alternate" hreflang="la" href="https://lapide.org/index_lt.html">
+<link rel="alternate" hreflang="es" href="https://lapide.org/index_es.html">
+<link rel="alternate" hreflang="fr" href="https://lapide.org/index_fr.html">
+<link rel="alternate" hreflang="pt" href="https://lapide.org/index_pt.html">
+<link rel="alternate" hreflang="it" href="https://lapide.org/index_it.html">
+<link rel="alternate" hreflang="id" href="https://lapide.org/index_id.html">
+</head>
+	<body>
+		<img src="materdolorosa2.png" />
+		<p class="consecration">Mater Dolorosa, ora pro nobis</p>
+
+		<p style="text-align: center;"><a href="index.html">English</a> · <a href="index_lt.html">Latina</a> · <a href="index_es.html">Español</a> · <a href="index_fr.html">Français</a> · <a href="index_pt.html">Português</a> · <a href="index_it.html">Italiano</a> · Bahasa Indonesia</p>
+
+		<div id="featured-quote" class="loading"></div>
+
+		<script>
+		var QUOTE_COUNT = 8;
+		if (QUOTE_COUNT > 0) {
+			var n = Math.floor(Math.random() * QUOTE_COUNT) + 1;
+			fetch('quotes_id/' + n + '.html')
+				.then(function(r) { return r.text(); })
+				.then(function(html) {
+					document.getElementById('featured-quote').innerHTML = html;
+					document.getElementById('featured-quote').classList.remove('loading');
+				});
+		} else {
+			document.getElementById('featured-quote').classList.remove('loading');
+		}
+		</script>
+
+		<hr>
+
+		<h1>Cornelius Lapide</h1>
+		<h2>Tafsir atas Kitab Suci</h2>
+		<p>Cornelius a Lapide (Cornelius Cornelissen van den Steen, 1567–1637) adalah seorang ahli tafsir Kitab Suci dari Ordo Yesuit yang berasal dari Bocholt di Keuskupan Liège, Flandria. Ia mengajar Kitab Suci di Universitas Leuven selama dua puluh tahun sebelum dipanggil ke Roma, tempat ia menghabiskan sisa hidupnya untuk menulis. Tafsir-tafsirnya mencakup hampir seluruh kitab dalam Alkitab dan terkenal karena keluasan luar biasa, memadukan penafsiran patristik, abad pertengahan, dan kontemporer ke dalam satu eksposisi berkesinambungan. Tafsir-tafsir ini tetap menjadi salah satu tafsir Kitab Suci Katolik yang paling sering dirujuk, terutama dihargai oleh para pengkhotbah karena kekayaan penerapan moral dan alegorisnya.</p>
+		<ul>
+			<li>
+				<a href="01_Preliminares_id.html">
+				Pendahuluan
+				</a>
+			</li>
+		</ul>
+
+		<p class="note">
+		Seluruh konten ini merupakan eksperimen menggunakan kecerdasan buatan "Claude" untuk menerjemahkan teks-teks Latin ke dalam bahasa Indonesia. Hasilnya tampaknya cukup baik, tetapi tentu saja mungkin terdapat kesalahan yang disebabkan oleh proses OCR atau penerjemahan itu sendiri.<br/><br/>
+		Saya tahu ini agak teknis, tetapi jika Anda menemukan kesalahan, cara terbaik untuk memberitahu saya mungkin adalah dengan membuat "Issue" di <a href="https://github.com/farant/lapide">https://github.com/farant/lapide</a> tempat seluruh konten situs ini berada.<br/><br/>
+		Tuhan memberkati Anda dan semoga terjemahan-terjemahan ini bermanfaat!
+		</p>
+		<div class="footer">
+			Seluruh teks dan markup di situs web ini berlisensi <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> dan berada dalam domain publik
+		</div>
+	</body>
+</html>
