@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tl">
+	<head>
+		<title>Mga Salin ng Patristikong Latin</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+<!--
+	Ave Maria gratia plena Dominus tecum,
+	benedicta tu in mulieribus
+	et benedictus fructus ventris tui Jesus.
+	Sancta Maria Mater Dei
+	ora pro nobis peccatoribus
+	nunc et in hora mortis nostrae.
+
+	Amen.
+
+	May the most Holy, most Sacred, most Adorable
+	and Ineffable Name of God be forever praised,
+	blessed, loved, adored and glorified: in Heaven,
+	on Earth and in Hell, by all the creatures of God
+	and by the Sacred Heart of Our Lord Jesus Christ
+	in the most Holy Sacrament of the Altar.
+
+	Amen.
+-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+	max-width: 100%;
+}
+.consecration {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 2em;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+}
+.footer {
+	margin-top: 8em;
+	opacity: 0.5;
+	font-style: italic;
+	text-align: center;
+}
+</style>
+	<meta name="description" content="Mga salin sa Filipino ng mga patristiko at medyebal na teksto sa teolohiyang Latin, kasama ang Komentaryo ni Cornelius a Lapide sa Genesis at mga akda ng mga Ama ng Simbahan.">
+<link rel="canonical" href="https://lapide.org/index_tl.html">
+<meta property="og:title" content="Mga Salin ng Patristikong Latin">
+<meta property="og:description" content="Mga salin sa Filipino ng mga patristiko at medyebal na teksto sa teolohiyang Latin, kasama ang Komentaryo ni Cornelius a Lapide sa Genesis at mga akda ng mga Ama ng Simbahan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lapide.org/index_tl.html">
+<meta property="og:image" content="https://lapide.org/materdolorosa2.png">
+<link rel="alternate" hreflang="en" href="https://lapide.org/">
+<link rel="alternate" hreflang="la" href="https://lapide.org/index_lt.html">
+<link rel="alternate" hreflang="es" href="https://lapide.org/index_es.html">
+<link rel="alternate" hreflang="fr" href="https://lapide.org/index_fr.html">
+<link rel="alternate" hreflang="pt" href="https://lapide.org/index_pt.html">
+<link rel="alternate" hreflang="it" href="https://lapide.org/index_it.html">
+<link rel="alternate" hreflang="id" href="https://lapide.org/index_id.html">
+<link rel="alternate" hreflang="ar" href="https://lapide.org/index_ar.html">
+<link rel="alternate" hreflang="hi" href="https://lapide.org/index_hi.html">
+<link rel="alternate" hreflang="tl" href="https://lapide.org/index_tl.html">
+</head>
+	<body>
+		<img src="materdolorosa2.png" />
+		<p class="consecration">Mater Dolorosa, ora pro nobis</p>
+
+		<p style="text-align: center;"><a href="index.html">English</a> · <a href="index_lt.html">Latina</a> · <a href="index_es.html">Español</a> · <a href="index_fr.html">Français</a> · <a href="index_pt.html">Português</a> · <a href="index_it.html">Italiano</a> · <a href="index_id.html">Bahasa Indonesia</a> · <a href="index_ar.html">العربية</a> · <a href="index_hi.html">हिन्दी</a> · Filipino</p>
+
+		<div id="featured-quote" class="loading"></div>
+
+		<script>
+		var QUOTE_COUNT = 8;
+		if (QUOTE_COUNT > 0) {
+			var n = Math.floor(Math.random() * QUOTE_COUNT) + 1;
+			fetch('quotes_tl/' + n + '.html')
+				.then(function(r) { return r.text(); })
+				.then(function(html) {
+					document.getElementById('featured-quote').innerHTML = html;
+					document.getElementById('featured-quote').classList.remove('loading');
+				});
+		} else {
+			document.getElementById('featured-quote').classList.remove('loading');
+		}
+		</script>
+
+		<hr>
+
+		<h1>Cornelius Lapide</h1>
+		<h2>Mga Komentaryo sa Banal na Kasulatan</h2>
+		<p>Si Cornelius a Lapide (Cornelius Cornelissen van den Steen, 1567–1637) ay isang ekseheta na Hesuwita mula sa Flandria, ipinanganak sa Bocholt sa Prinsipado-Obispado ng Lieja. Nagturo siya ng Banal na Kasulatan sa Unibersidad ng Leuven sa loob ng dalawampung taon bago siya tinawag sa Roma, kung saan niya ginugol ang natitirang bahagi ng kanyang buhay sa pagsusulat. Ang kanyang mga komentaryo ay sumasaklaw sa halos lahat ng aklat ng Bibliya at kilala sa kanilang pambihirang lawak, na pinagtatahi ang mga patristiko, medyebal, at kontemporaryong interpretasyon sa isang tuloy-tuloy na eksposisyon. Nananatili ang mga ito bilang isa sa mga pinakamadalas na sangguniang komentaryong biblikal na Katoliko, pinahahalagahan lalo na ng mga mangangaral dahil sa kayamanan ng moral at alegorikal na mga aplikasyon.</p>
+		<ul>
+			<li>
+				<a href="01_Preliminares_tl.html">
+				Mga Panimula
+				</a>
+			</li>
+		</ul>
+
+		<p class="note">
+		Ang lahat ng nilalaman ay isang eksperimento gamit ang kasangkapang artipisyal na katalinuhan na "Claude" upang isalin ang mga tekstong Latin sa Filipino. Tila gumagana ito nang maayos, ngunit tiyak na posible na may mga pagkakamali na dulot ng proseso ng OCR o ng pagsasalin mismo.<br/><br/>
+		Alam kong medyo teknikal ito, ngunit kung makakita kayo ng mga pagkakamali, ang pinakamainam na paraan upang ipaalam sa akin ay ang lumikha ng isang "Issue" sa <a href="https://github.com/farant/lapide">https://github.com/farant/lapide</a> kung saan matatagpuan ang lahat ng nilalaman ng site.<br/><br/>
+		Pagpalain kayo ng Diyos at sana ay makatulong sa inyo ang mga salin na ito!
+		</p>
+		<div class="footer">
+			Ang lahat ng teksto at markup sa website na ito ay <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> at nasa pampublikong domain
+		</div>
+	</body>
+</html>
