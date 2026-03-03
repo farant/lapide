@@ -67,7 +67,7 @@ hr + .nav {
 }
 
 [dir="rtl"] h1 {
-  text-indent: 1em;
+  text-indent: -1em;
   padding-left: 0;
   padding-right: 1em;
 }
