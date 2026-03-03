@@ -516,6 +516,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_hi.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_id.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
@@ -536,6 +541,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_tl.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1_ar.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
@@ -547,6 +562,16 @@
   </url>
   <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_fr.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_hi.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_id.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>

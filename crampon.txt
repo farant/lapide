@@ -129,3 +129,570 @@ Drach, etc.). To be removed from the English text and all translations.
   3rd soiree; Annales de Philosophie, vol. III, page 163 ff.; Haneberg, op. cit.
   book I, chapter IV, p. 29 ff."
   Bibliographic reference. Cites Meignan, Desdouits, Haneberg — all post-Lapide.
+
+
+01_genesis_06.html
+------------------
+
+- Line 111: "(1) The particle is for most interpreters a causal particle composed
+  of the..." Philological note on Hebrew particle in verse 3. Editorial format.
+
+- Line 173: "(1) Verse 9. 'These are the generations of Noah.' By the word toledot
+  are al..." Note on Hebrew toledot (generations vs. events). Editorial gloss.
+
+- Line 227: "(1) Cf. Meignan, op. cit. p. 143. N. Tiele in his Commentaries
+  demonstrates..." Ark capacity calculation. Cites Meignan, Tiele.
+
+- Line 237: "(2) Schultens raises two objections against the common interpretation
+  of the..." Note on tsohar meaning (window vs. roof). Cites Schultens.
+
+- Line 269: "(1) In this verse the same thing that had been said in the preceding
+  verse i..." Editorial note on repetition between verses 16–17. Touches on
+  documentary hypothesis.
+
+- Line 271: "(2) 'With the earth.' For others, the Hebrew particle has the same
+  force as..." Philological note on Hebrew particle et. Cites 1 Kings 9:25,
+  Psalm 67:7.
+
+- Line 279: "(1) 'And I will establish My covenant,' etc. The word berith (from
+  'he cut,'..." Lexical note on Hebrew berith (covenant). Cites Allioli.
+
+
+01_genesis_07.html
+------------------
+
+- Line 110: "(1) So Rosenmuller and Allioli, and the words taken literally can
+  scarcely be understood otherwise." Cites Rosenmüller, Allioli.
+
+- Line 136: "(1) In the second month, that is, November, according to Cappel's
+  computation in his Sacred Chronology..." Chronological note. Cites Cappel.
+
+- Line 258: "(1) Concerning the flood, and all questions pertaining to it, see
+  Meignan, op. cit. p. 143; Desdonits, Soirees, etc., 4th soiree..."
+  Bibliographic reference. Cites Meignan, Desdouits, Wiseman.
+
+
+01_genesis_08.html
+------------------
+
+- Line 100: "(1) There is even today a region in Armenia which the inhabitants
+  call Ararat..." Geographical gloss on Ararat location. References Chardin's
+  Voyages (Paris 1811 edition), d'Anville's map.
+
+- Line 126: "(1) The sense of the Hebrew text is that the raven, once it went
+  forth while the earth was drying, returned several times..." Philological note
+  on Gen 8:7. Textual-critical framing.
+
+- Line 228: "(1) Or, as others say, 'of rest,' that is, 'of sweetness'..."
+  Alternative etymology of reah hannichoach. Short editorial gloss.
+
+
+01_genesis_09.html
+------------------
+
+- Line 116: "(1) Rashi and other more recent Hebrew scholars think that what is
+  forbidden here is the eating of a limb cut from a living animal..." Note on
+  blood-eating prohibition. Cites Rosenmüller (Das alte und neue Morgenland).
+
+- Line 146: "(1) The Lawgiver proceeds to the blood of man, as more worthy and
+  excellent..." Editorial summary on progression from animal to human blood.
+  Cites Ravius.
+
+- Line 160: "(1) The accentuation does not permit that interpretation; for the
+  Hebrew must be joined with what follows, since the major distinctive accent
+  Zakeph-Katon..." Technical Masoretic accentuation note. 19th-century style.
+
+- Line 248: "(1) Meignan has excellently illustrated this entire pericope, Gen. IX,
+  18-27, in the cited work, pages 286 ff." Bibliographic cross-reference. Cites
+  Meignan.
+
+- Line 330: "(1) On the effects of this Noachic curse upon Canaan, cf. Lenormant,
+  Introduction to the History of Western Asia..." Bibliographic note. Cites
+  Lenormant, Meignan.
+
+
+01_genesis_10.html
+------------------
+
+- Line 68: "(1) Thus Rosenmuller: 'This chapter contains the most ancient geography,
+  interwoven with genealogy...'" Introductory note quoting Rosenmüller on the
+  nature of Genesis 10 as geographical-genealogical catalogue.
+
+
+01_genesis_11.html
+------------------
+
+- Line 69: "(1) That Hebrew was the first language of men is denied..." Note
+  challenging Hebrew as first language. Cites Molitor, Wiseman, Vitringa,
+  Perizonius, Meignan.
+
+- Line 81: "(1) Since the mountains of Armenia in which the ark rested are more to
+  the north..." Geographical note on "from the East." Cites Bochart.
+
+- Line 117: "(2) Schroeder says the simplest meaning of verse 4 is..." Alternative
+  interpretation of Tower of Babel as civic ambition. Cites Schroeder.
+
+- Line 119: "(2) Indeed, the remains of this tower have recently been found
+  again..." Archaeological note on Birs-Nimrod. Cites Oppert (Journal Asiatique,
+  1857).
+
+- Line 131: "(1) Cf. Meignan, op. cit. p. 149." Brief bibliographic cross-reference.
+
+- Line 191: "(1) Mention of this tower is also found among foreign peoples: cf.
+  Rosenmuller..." Bibliographic note. Cites Rosenmüller, Rohrbacher, Humboldt,
+  Wiseman.
+
+- Line 199: "(2) 'Above in chapter 10, our author [Moses] had indeed begun to
+  recount the progeny...'" Extended Rosenmüller quotation on Shem's genealogy
+  and Septuagint/Samaritan number discrepancies.
+
+- Line 263: "(1) It is most probable that the Ur mentioned in verse 28 is the same
+  city..." Editorial note identifying biblical Ur with Ammianus Marcellinus's
+  fort. Geographical analysis.
+
+
+01_genesis_12.html
+------------------
+
+- Line 116: "(1) But less correctly in the literal sense. For 'in' here signifies
+  through your seed..." Editorial correction to Lapide on Gen 12:3.
+
+- Line 162: "(1) From the verb ra'ah, 'he saw,' hence meaning conspicuous..."
+  Philological note on etymology of Moreh/elon (terebinth vs. oak).
+
+- Line 190: "(2) And he called upon the name of the Lord, that is, he slaughtered
+  victims..." Clarifying note on offering sacrifices.
+
+- Line 192: "(3) Princes, that is, nobles, courtiers; according to others, prefects
+  of regions..." Vocabulary note on "princes" in verse 15.
+
+- Line 200: "(1) That in this verse servants and maidservants are inserted between
+  donkeys and sh..." Cites Houbigant on servant/animal ordering in verse 16.
+
+- Line 234: "Pharaoh is not a proper name, but a common title of the kings of
+  Egypt..." Unnumbered editorial gloss on "Pharaoh" as title. Coptic evidence.
+
+- Line 236: "(2) Verse 20. 'Concerning Abraham,' Hebrew alav, 'about him'..."
+  Philological note on Hebrew alav in verse 20.
+
+
+01_genesis_13.html
+------------------
+
+- Line 170: "(1) Many think the words 'in Hebron' are not from the hand of Moses..."
+  Text-critical note on whether "Hebron" is a post-Mosaic gloss. Discusses
+  Kiriath-Arba toponymy.
+
+
+01_genesis_14.html
+------------------
+
+None found.
+
+
+01_genesis_15.html
+------------------
+
+None found.
+
+
+01_genesis_16.html
+------------------
+
+NOTE: These 3 footnotes use plain <p> tags (not italic <p><em>), identifiable
+only by citing post-Lapide scholars. A format variation from the usual pattern.
+
+- Line 161: "The Ishmaelites, or Arabs, leading a wandering way of life, still
+  today make all of Arabia..." Paragraph on Ishmaelite nomadic banditry ending
+  with "So says Rosenmuller at this passage." Cites Rosenmüller.
+
+- Line 185: "Rosenmuller translates the Hebrew thus with the Syriac: You God of
+  vision..." Alternative Hebrew translation of verse 13. Cites Rosenmüller twice.
+
+- Line 193: "Others translate the Hebrew as: the well of the living one...
+  Gesenius: the well of life and vision..." Alternative translations of verse 14.
+  Cites Gesenius.
+
+
+01_genesis_17.html
+------------------
+
+None found.
+
+
+01_genesis_18.html
+------------------
+
+- Line 101: "The name adonai, a plural of excellence, to be translated in the
+  singular as 'Lord,'..." Lengthy philological note on Hebrew adonai, Masoretic
+  marginal note, hospitality customs. Cites Rosenmüller.
+
+- Line 141: "Hear Thevenot, Oriental Travels, book 2, chapter 32: 'They also eat
+  cakes or flatbreads...'" Eastern bread-making customs. Cites Thevenot
+  (d. 1667, works published post-Lapide).
+
+- Line 153: "Verse 8. The Hebrew word rendered as 'butter' by the Vulgate
+  translator would be better translated as 'cream of milk'..." Philological
+  note. Cites Michaelis.
+
+- Line 127: "These are not the words of one reproaching, but of one rejoicing and
+  praising the deed..." Brief interpretive gloss on verse 5. No post-Lapide
+  scholar named but editorial tone and format match Crampon.
+
+- Line 175: "Drusius translates the Hebrew differently: 'at this living time'..."
+  Alternative translation citing Drusius.
+
+UNCERTAIN (may be Lapide's own):
+
+- Line 151: "Lest it seem surprising to anyone that in verse 7, Abraham himself, a
+  man so wealthy and practically a chieftain (Emir), ran to the herds..."
+  Cites Homer Iliad 11:205-221. Could be Lapide's own aside.
+
+
+01_genesis_19.html
+------------------
+
+None found.
+
+
+01_genesis_20.html
+------------------
+
+- Line 161: "Schroeder rightly observes that in those most ancient times it was
+  the custom not to veil..." Plain <p> paragraph on veiling customs. Cites
+  Schroeder. Format variation (not italic, no number marker).
+
+
+01_genesis_21.html
+------------------
+
+- Line 196: "Many, like the Vulgate translator, think that from the meaning of
+  growing which the verb has..." Philological note on Hebrew word for archer.
+  Plain <p> paragraph. Cites Rosenmüller.
+
+
+01_genesis_22.html
+------------------
+
+- Line 81: "(1) Among the reasons why God asked of Abraham that notable proof of
+  piety and obedience..." Editorial note on why God tested Abraham with child
+  sacrifice, referencing Phoenician idolaters.
+
+- Line 105: "(Others finally teach that this word is composed of the hophal
+  participle of the verb ra'ah..." Unnumbered parenthetical note adding another
+  etymology for "Moriah."
+
+- Line 131: "(Two young men, that is, his servants. For the Hebrew word na'ar is
+  known to be used..." Unnumbered parenthetical gloss on na'ar and parallel
+  Roman/Greek usage (puer).
+
+- Line 179: "(For victims were customarily bound, lest they escape the blow,
+  especially human ones..." Unnumbered parenthetical on binding sacrificial
+  victims. Cites Ovid, Virgil.
+
+- Line 253: "(1) For the word achar, which the Vulgate translator correctly
+  rendered as 'behind,' many codices..." Textual-critical note on Hebrew variant
+  achar vs. echad in verse 13.
+
+- Line 313: "(1) Since Aram, or Syria, is manifold (for Aram-Naharaim, that is
+  Mesopotamia, Aram-Zobah..." Genealogical note on which Aram is meant in
+  verse 21.
+
+
+01_genesis_23.html
+------------------
+
+- Line 94 (partial): "...Yet Rosenmuller says these conjectures are unnecessary;
+  for, as appears from verse 17..." Crampon material spliced into end of a
+  Lapide paragraph. Cites Rosenmüller and Lowth on Machpelah as proper name
+  and Hebrew burial cave archaeology.
+
+
+01_genesis_24.html
+------------------
+
+- Line 203: "The Hebrew nezem, which Jerome translates as 'earrings,' actually
+  means a nose ri..." Plain <p> paragraph. Cites Rosenmüller and de Saulcy
+  (History of Jewish Art) on Hebrew nezem as nose ring.
+
+
+01_genesis_25.html
+------------------
+
+None found.
+
+
+01_genesis_26.html
+------------------
+
+- Line 183: "(1) Verse 17. To the torrent of Gerar. The Hebrew word signifies both
+  torrent and valley..." Lexicographic note on Hebrew word for torrent/valley.
+
+- Line 313: "(1) The wives of Esau are said to be of Hittite origin both here and
+  below in 27:46..." Lengthy note on discrepancy of Esau's wives' names between
+  Gen 26:34 and 36:2-3. Cites Vater, Tuch (post-Lapide Rationalists) and
+  Chardin's Voyage en Perse on Eastern name-changing customs.
+
+
+01_genesis_27.html
+------------------
+
+- Line 57: "(1) Verse 5. To carry out his father's command. The Septuagint read
+  l'avikha..." Textual-critical note comparing Septuagint and Hebrew readings.
+
+- Line 130: "(1) In the regions of the East there are evening and morning dews in
+  place of rains..." Geographical/meteorological note on Eastern dew and rain.
+
+- Line 154: "(1) The reasons why Isaac was unwilling to repeat or revoke his
+  prayers in Esau's fa..." Editorial note on Isaac's refusal to revoke blessing.
+  Cites Clericus (Jean Le Clerc, 1657-1736, post-Lapide).
+
+
+01_genesis_28.html
+------------------
+
+None found.
+
+
+01_genesis_29.html
+------------------
+
+- Line 87: "(1) Concerning wells of this kind still existing in Palestine, for
+  example on the right side..." Archaeological/travel note on Palestinian wells.
+  Cites de Saulcy (History of Jewish Art).
+
+- Line 165: "(1) It is surprising, however, that Jacob offered service to Laban as
+  a dowry, when from..." Editorial note questioning why Jacob offered labor
+  instead of requesting dowry from Isaac.
+
+- Line 187: "(2) With the face veiled, which is still the custom in the regions of
+  the East." Brief cultural note on bridal veiling custom.
+
+
+01_genesis_30.html
+------------------
+
+None found.
+
+
+01_genesis_31.html
+------------------
+
+- Line 293: "Many think that Laban is called 'Syrian' here not to indicate his
+  homeland, but to mark..." Unnumbered italic note on "Syrian" as character
+  description (Syrians considered cunning).
+
+- Line 327: "The word 'tympanum' [timbrel] is onomatopoetic, expressing the sound
+  of a drum struck by..." Unnumbered italic endnote on tympanum/tambourine.
+  References French "tambours de basque."
+
+- Line 329: "The Segolta accent, placed on the word... forbids joining the words
+  'before our kinsmen'..." Unnumbered italic endnote on Masoretic accentuation.
+
+- Line 331: "For 'whatever was lost by theft,' the Hebrew reads 'the theft of the
+  day and of the night.'..." Unnumbered italic endnote on Hebrew grammar
+  (paragogic nun).
+
+
+01_genesis_32.html
+------------------
+
+- Line 141: "(1) For 'and afterward I will see him,' the Hebrew reads: 'I will
+  cause to cease...'" Alternative Hebrew reading for verse 20.
+
+
+01_genesis_33.html
+------------------
+
+None found.
+
+
+01_genesis_34.html
+------------------
+
+- Line 70: "(1) Verse 10. For 'trade in it' the Hebrew has 'go about in it'..."
+  Hebrew philological note on verse 10.
+
+- Line 72: "(2) Verse 15. For 'we will be able to make a covenant,' the Hebrew has
+  'we will consent to you'..." Hebrew philological note on verse 15.
+
+- Line 260: "(1) A metaphor drawn from waters. When I was now peaceful in this
+  region, yo..." Editorial gloss on verse 30 ("You have troubled me").
+
+
+01_genesis_35.html
+------------------
+
+- Line 149: "(1) 'There were two kinds of earrings,' says Clericus..." Note on
+  earrings and superstitious use. Cites Clericus (Le Clerc, post-Lapide).
+
+- Line 169: "(1) For 'under the oak,' the Hebrew has 'under that terebinth'..."
+  Philological note on verse 8 (Deborah's burial). Cultural observation on
+  reverence for nurses.
+
+- Line 243: "(1) Jacob did the same thing here that he had done twenty years
+  before..." Editorial note on Jacob renewing the pillar at Bethel.
+
+
+01_genesis_36.html
+------------------
+
+- Lines 124-134: "(1) A twofold difficulty arises here..." Extended 6-paragraph
+  block on Mosaic authorship of Gen 36:31. Cites Michaelis, Rosenmüller.
+
+- Line 154: "(1) It was a village in the time of Abulfeda, but preserving ancient
+  towers..." Geographic note on Rohoboth.
+
+- Line 156: "(2) Verse 39. Others with Aben Ezra translate: Meetabel, daughter of
+  Matred..." Alternative translation note.
+
+- Line 164: "(3) As to why in this verse and the two immediately following, the
+  chieftains..." Note on repeated chieftain list. Cites Rosenmüller.
+
+
+01_genesis_37.html
+------------------
+
+- Line 88: "(1) Verse 1 resumes the thread broken off above at xxxv, 27..."
+  Editorial note on narrative resumption after ch36 parenthesis.
+
+- Line 90: "(2) It may seem surprising that this heading promises the history of
+  Jacob, when neverth..." Note on why "history of Jacob" heads a Joseph
+  narrative.
+
+- Line 111: "(1) Schroeder, in his Commentary on the Dress of Hebrew Women, p. 245,
+  thinks Joseph'..." Note on Joseph's coat. Cites Schroeder.
+
+- Line 154: "(1) Since Joseph's mother Rachel was then dead, it is asked whom Jacob
+  understood by th..." Note identifying Bilhah as the "mother" in verse 10.
+
+- Line 212: "(1) The Ishmaelites and Midianites are distinguished here as genus and
+  species..." Clarification citing Aben-Ezra.
+
+- Line 271: "(1) Sheol is entirely agreed to designate the underworld, or limbo of
+  the fathers..." Note on meaning of Sheol. Cites Breecher, Pareau (1807).
+
+
+01_genesis_38.html
+------------------
+
+- Line 64: "Many think that what is narrated at the beginning of this chapter could
+  not have ha..." Long chronological note on Gen 38 placement. Cites de Wette,
+  Ranke, Havernick, Rosenmüller. Unnumbered italic.
+
+- Line 89: "So also Rosenmuller. When his wife bore the other sons, Judah was
+  present..." Brief note on Chezib/Kesib geography. Cites Rosenmüller.
+  Unnumbered italic.
+
+- Line 98: "By the expression 'he was slain by Him (the Lord),' it is signified
+  that Er did not..." Gloss on "slain by the Lord" = premature death.
+  Unnumbered italic.
+
+- Line 111: "Verse 12. For 'shepherd of the flock' the Hebrew now has 'his
+  friend.'..." Textual-critical note correcting Vulgate. Unnumbered italic.
+
+- Line 129: "Nor should their opinion be dismissed who hold that enaim means the
+  opening of two..." Alternative etymology for "enaim." Unnumbered italic.
+
+- Line 147: "This ring is a signet ring, hanging from a bracelet, as is still the
+  custom among t..." Archaeological/ethnographic note. Unnumbered italic.
+
+- Line 209: "Others, because of the accent, read and translate it separately
+  thus..." Alternative reading based on Hebrew accents. Unnumbered italic.
+
+
+01_genesis_39.html
+------------------
+
+- Line 59: "(1) Verse 2. In Hebrew it reads, 'in the house of his masters,' with
+  the plural used..." Philological note on Hebrew plural + classical reference
+  to Plautus (atriensis).
+
+
+01_genesis_40.html
+------------------
+
+- Line 49: "(1) Verse 5. 'Each according to the interpretation of his own dream,'
+  that is..." Clarifying gloss on verse 5.
+
+- Line 51: "(2) Verse 11. It seems to have been the custom at that time, says
+  Rosenmuller, that fresh grapes..." Egyptian grape-pressing custom. Cites
+  Rosenmüller, Wiseman.
+
+- Line 98: "(3) Jerome rightly interprets the Hebrew tottet ('will take away') as
+  'will remember.'..." Philological note on Hebrew tottet.
+
+- Line 105: "(4) Thus Josephus speaks, because he did not want to say that he had
+  been taken from the land..." Note on "land of the Hebrews" vs. "land of
+  Canaan."
+
+- Line 107: "(5) More accurately, 'happily' and in the opinion of the cupbearer,
+  'pleasantly'..." Alternative translations.
+
+- Line 114: "(6) For 'baskets of flour,' others translate the Hebrew as 'perforated
+  baskets'..." Alternative translation deriving chori from chor (hole).
+
+
+01_genesis_41.html
+------------------
+
+None found.
+
+
+01_genesis_42.html
+------------------
+
+- Line 94: "(1) Scarcely need it be mentioned that Joseph himself, the viceroy of
+  Egypt, did not sell..." Plain <p> (not italic) with (1) marker. Editorial note
+  on Egyptian grain-sale administration.
+
+
+01_genesis_43.html
+------------------
+
+- Line 114: "These gifts, according to Rosenmuller, were some balsam and some
+  honey, that is, juice from raisins..." Unnumbered italic paragraph. Cites
+  Rosenmüller on the gifts Jacob sent.
+
+PROBABLE (italic, standalone, out-of-sequence verse notes, but no post-Lapide
+scholar named):
+
+- Line 140: "Verse 18. The Hebrew is: 'on account of the matter of the silver that
+  returned...'" Alternative Hebrew translation, out of verse sequence.
+
+- Line 172: "Verse 27. For 'graciously' the Hebrew has 'of peace'..." Alternative
+  Hebrew reading, out of verse sequence.
+
+- Line 186: "Verse 31. Cf. Pliny, book III, epistle 16, speaking of Arria's
+  dissembling..." Standalone italic cross-reference.
+
+
+01_genesis_44.html
+------------------
+
+None found.
+
+
+01_genesis_45.html
+------------------
+
+Endnote cluster at lines 180-192 under "Footnotes" heading:
+
+- Line 182: "(1) Scholars disagree about the location of the land of Goshen.
+  According to Michae..." Geographic note on Goshen. Cites Michaelis, De Laborde.
+
+- Line 184: "(2) 'All the good things of Egypt,' literally, the goodness of Egypt..."
+  Short philological gloss.
+
+- Line 186: "(3) Verse 20. Others interpret the Hebrew 'let not your eye spare your
+  vessels' as..." Alternative Hebrew interpretation.
+
+- Line 188: "(4) Verse 23. Others translate the Hebrew as: to his father he sent
+  according to thi..." Alternative Hebrew translation.
+
+- Line 190: "(5) Others: Do not fear anything, lest while traveling you dread that
+  something simil..." Alternative interpretation of Joseph's parting words.
+
+- Line 192: "(6) Others, from the meaning of the Syriac and Arabic verb 'to be
+  cold,' translate..." Philological note citing Syriac/Arabic cognates. Cites
+  Michaelis.
