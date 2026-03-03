@@ -63,6 +63,7 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 - Add the new language to the switcher on all existing index pages.
 - Add hreflang links to all existing index pages.
 - Link to all translated content pages from the new index.
+- **Genesis chapter parentheticals**: When adding a Genesis chapter to an index page, check the English `index.html` (or `index_lt.html`) for the parenthetical description used for that chapter (e.g., "Paradise and the Formation of Eve") and translate it to match, rather than inventing a new description.
 
 ### 6. Translate quotes
 
