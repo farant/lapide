@@ -696,3 +696,73 @@ Endnote cluster at lines 180-192 under "Footnotes" heading:
 - Line 192: "(6) Others, from the meaning of the Syriac and Arabic verb 'to be
   cold,' translate..." Philological note citing Syriac/Arabic cognates. Cites
   Michaelis.
+
+
+01_genesis_46.html
+------------------
+
+- Line 151: "In presenting this genealogy, Moses seems to have had in view not
+  only to enumerate..." Unnumbered italic paragraph at end of chapter.
+  Harmonizing note on why Joseph's sons and Perez's sons appear in genealogy
+  despite not yet being born.
+
+
+01_genesis_47.html
+------------------
+
+- Line 69: "(1) Rosenmuller: 'And from the extremity of his brothers,' that is,
+  from the sum and number of them." Cites Rosenmüller.
+
+- Line 115: "(1) Verse 12. In the Hebrew it is, 'according to the mouth of the
+  little one'..." Gap-filling editorial note on verse 12.
+
+- Line 147: "(2) Verse 21. He also made the people move, he transferred them to
+  other cities..." Editorial note on Joseph's relocation policy. Cites
+  Anquetil-Duperron (Voyage aux Grandes Indes, Paris 1808).
+
+- Line 221: "(1) The sense is that Jacob, when he had received the oath and
+  promise from his son..." Summarizing editorial gloss on verse 31.
+
+
+01_genesis_48.html
+------------------
+
+- Line 139: "(1) The image is taken from the pastoral life which Jacob led."
+  Brief editorial gloss.
+
+- Line 141: "(2) Since what belongs to God alone is attributed to this Angel, many
+  think that the uncreated angel, or the Messiah..." Theological note on
+  identity of the Angel in Jacob's blessing.
+
+- Line 173: "(1) Since Shechem is called a Hivite above in chapter 34, verse 2, it
+  is likely that the Amorites are here used as a general term..." Editorial note
+  on "Amorites" as general term for Canaanites.
+
+
+01_genesis_49.html
+------------------
+
+None found.
+
+
+01_genesis_50.html
+------------------
+
+Endnote cluster at lines 266-276 under "Footnotes" heading:
+
+- Line 268: "(1) Verse 4. Joseph used the Egyptians as intermediaries because he
+  himse..." Editorial gloss on why Joseph used intermediaries. Cites Esther 4:2.
+
+- Line 270: "(2) Verse 11. Others translate the Hebrew as 'the plain of the
+  Egyptians'..." Philological note on alternative Hebrew translations.
+
+- Line 272: "(3) This passage can be translated: 'Do not fear; for am I in God's
+  pla...'" Extended exegetical note on verse 19 with multiple translations.
+
+- Line 274: "(4) Among the most ancient Greeks, grandchildren were placed on the
+  gran..." Classical antiquarian note on grandchildren on grandfather's knees.
+  Cites Homer Odyssey T. 401.
+
+- Line 276: "(5) Verse 25. 'In a coffin,' regarding which coffins Herodotus, book
+  II..." Note on Egyptian coffins/mummies. Cites de Saulcy (History of Jewish
+  Art).
