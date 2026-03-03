@@ -55,17 +55,18 @@ img {
 <link rel="alternate" hreflang="es" href="https://lapide.org/index_es.html">
 <link rel="alternate" hreflang="fr" href="https://lapide.org/index_fr.html">
 <link rel="alternate" hreflang="pt" href="https://lapide.org/index_pt.html">
+<link rel="alternate" hreflang="it" href="https://lapide.org/index_it.html">
 </head>
 	<body>
 		<img src="materdolorosa2.png" />
 		<p class="consecration">Mater Dolorosa, ora pro nobis</p>
 
-		<p style="text-align: center;"><a href="index.html">English</a> · <a href="index_lt.html">Latina</a> · <a href="index_es.html">Español</a> · <a href="index_fr.html">Français</a> · Português</p>
+		<p style="text-align: center;"><a href="index.html">English</a> · <a href="index_lt.html">Latina</a> · <a href="index_es.html">Español</a> · <a href="index_fr.html">Français</a> · Português · <a href="index_it.html">Italiano</a></p>
 
 		<div id="featured-quote" class="loading"></div>
 
 		<script>
-		var QUOTE_COUNT = 8;
+		var QUOTE_COUNT = 18;
 		var n = Math.floor(Math.random() * QUOTE_COUNT) + 1;
 		fetch('quotes_pt/' + n + '.html')
 			.then(function(r) { return r.text(); })
@@ -84,6 +85,11 @@ img {
 			<li>
 				<a href="01_Preliminares_pt.html">
 				Preliminares
+				</a>
+			</li>
+			<li>
+				<a href="02_Clemens_Hieronymi_Du_Culte_pt.html">
+				Praefationes Hieronymi / Du Culte de Jésus-Christ
 				</a>
 			</li>
 		</ul>

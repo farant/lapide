@@ -21,6 +21,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_it.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_lt.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
@@ -42,6 +47,11 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_02.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_02_lt.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>
@@ -306,6 +316,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_pt.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
@@ -327,6 +342,11 @@
   </url>
   <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_es.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>
@@ -477,6 +497,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index_fr.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_it.html</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>
