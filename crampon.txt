@@ -1,0 +1,131 @@
+Crampon Footnotes
+=================
+
+Footnotes added by Augustin Crampon (1826-1894) to his edition of Lapide's
+commentaries. Identified by: italic <p><em> blocks beginning with (1), (2), etc.,
+containing references to post-Lapide scholars (Gesenius, Rosenmüller, Patrizzi,
+Drach, etc.). To be removed from the English text and all translations.
+
+
+01_genesis_01.html
+------------------
+
+- Line 111: "(1) To these add Jean de la Haye, Commentary on Genesis, Lyon 1638;
+  Drechsler, The Unity and Authenticity of Genesis, 1838."
+  Bibliographic addition.
+
+- Lines 153-155: "(1) Patrizzi, in the work entitled On the Interpretation of the
+  Sacred Scriptures..." + continuation paragraph with arguments a) through f) for
+  reading "In the beginning" as "In the Son." Cites Patrizzi, Drach, Fabretti.
+
+- Line 225: "(1) Indeed, the word bara in the piel form means 'to cut down, to
+  polish'..." Philological note on Hebrew bara. Cites Patricius, Rosenmüller,
+  Gesenius, Kocher.
+
+- Line 273: "(1) Elohim is the plural of the noun eloah, from the root alah..."
+  Philological note on Elohim. Cites 19th-century Hebrew grammar conventions.
+
+- Lines 297-299: "(1) So also Patricius, at the place cited..." + "The noun
+  shamayim, 'heavens,' is not, as is commonly believed, dual, but plural..."
+  Two paragraphs. Cites Patricius, Schroeder, Gesenius.
+
+- Line 801: "(Here terrestrial animals are divided into three classes, of which the
+  first is called by the name behemah..." Parenthetical gloss on Hebrew animal
+  classification (behemah, hayyat, remes). No (1) marker but same editorial style.
+
+
+01_genesis_02.html
+------------------
+
+- Line 163: "In place of rain and irrigation there was a vapor, by which the entire
+  surface of the earth was moistened..." Quotes Rosenmüller on the primordial vapor.
+  No (1) marker but italic editorial paragraph citing a post-Lapide scholar.
+
+
+01_genesis_03.html
+------------------
+
+- Lines 113: "(1) But not quite correctly. Cunning is here ascribed to serpents..."
+  Note on Hebrew aram. Cites Chateaubriand (post-Lapide).
+
+- Line 115: "(2) What Moses related as having transpired between Eve and the serpent,
+  interpreters of the Rationalist school count among myths (De Wette...Hartmann...)..."
+  Long note defending historicity of the serpent narrative. Cites Patritius, Meignan,
+  Eichhorn, Lacordaire. Extensively quotes Patritius.
+
+- Line 247: "(1) The word qol is ambiguous: for it signifies both the voice of one
+  speaking and any kind of noise..." Note on Hebrew qol in Gen 3:8.
+
+- Line 249: "(2) Ruach hayom, 'the breathing' or 'respiration of the day,' is the
+  evening." Short note on Hebrew ruach hayom in Gen 3:8.
+
+- Line 293: "(1) Not that it feeds on dust alone, but because, since it crawls on the
+  ground, it cannot help but take dust into its mouth..." Gloss on serpent eating dust.
+
+- Line 309: "(1) God, passing sentence on the serpent that had deceived Eve, at the same
+  time uttered those words which... have received the name 'Protoevangelium.'" Cites
+  Sherlock, Patritius, Meignan.
+
+- Lines 311: "(2) 'And between your seed and her seed.' These words first reveal clearly
+  enough..." Exegetical note on the Protoevangelium. Extensively quotes Patritius.
+
+- Line 313: "(3) 'We have few authoritative testimonies of any weight that certainly
+  support the Vulgate interpreter in rendering the Hebrew hu as the feminine pronoun
+  she.'" Textual-critical note on ipsa/ipse. Quotes Patritius at length.
+
+- Line 329: "(1) The verb shuph, which occurs twice in this sentence, has been rendered
+  in many ways..." Philological note on shuph. Cites Rosenmüller, Meignan.
+
+- Line 365: "(1) So Rosenmuller. Your husband, even after those most severe pains
+  of childbirth, you will desire again..." Short note on Gen 3:16. Cites Rosenmüller.
+
+- Line 367: "(2) In which sense Psalm 123:2 says the eyes of servants are toward
+  their masters." Short note on Gen 3:16.
+
+- Line 487: "(1) Cf. Hengstenberg, Moses and Egypt; Meignan, op. cit. p. 135; Obry..."
+  Bibliographic note on the Cherubim. Cites Hengstenberg, Meignan, Obry, Haneberg,
+  De Saulcy — all post-Lapide scholars.
+
+
+01_genesis_04.html
+------------------
+
+- Line 131: "(1) Because sacrifices seem to have been unknown before the Flood, Grotius
+  judges that no victims were then slaughtered..." Cites Grotius (d. 1645, post-Lapide)
+  and Drach.
+
+- Line 151: "(2) And Cain was exceedingly angry. Hebrew: and Cain's [nose] burned
+  greatly, that is, Aph, nose, meaning anger." Short Hebrew gloss.
+
+- Line 167: "(1) So also Rosenmuller, for whom se'eth means 'elevation,' namely of your
+  face, would be for you." Cites Rosenmüller.
+
+- Line 197: "(1) Others: 'And to you shall be its desire,' namely of sin; 'but you shall
+  rule over it,' that is, you must resist it." Alternative translation note.
+
+- Line 261: "(1) 'From the earth,' that is, an exile from that land which opened its
+  mouth, etc." Short gloss on Gen 4:11.
+
+- Line 309: "(1) The region in which Adam had settled was considered to be in the sight
+  of God, because God especially protected it..." Gloss on Cain's fear of exile.
+
+- Line 319: "(2) 'Sevenfold' punishment stands for 'manifold.' Cf. Psalm 12:7; 118:164;
+  Proverbs 24:16." Short note on "sevenfold."
+
+- Line 359: "(1) Verse 20. 'And of herdsmen.' The Hebrew is mikneh, which word
+  properly designates acquisition, possession, and then cattle." Hebrew gloss.
+
+- Line 361: "(2) 'Organ' here seems to be a pipe or flute." Short gloss.
+
+- Line 443: "On the tetragrammaton name of God, or Jehovah, see the most learned
+  discussion by Drach, op. cit. vol. I, p. 319 ff." Bibliographic reference to Drach.
+  No (1) marker.
+
+
+01_genesis_05.html
+------------------
+
+- Line 135: "Cf. Meignan, op. cit. page 138; Desdouits, Soirees de Montlhery,
+  3rd soiree; Annales de Philosophie, vol. III, page 163 ff.; Haneberg, op. cit.
+  book I, chapter IV, p. 29 ff."
+  Bibliographic reference. Cites Meignan, Desdouits, Haneberg — all post-Lapide.
