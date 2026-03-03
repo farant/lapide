@@ -7,11 +7,12 @@ Catholic theological texts site at lapide.org. Primarily Cornelius a Lapide's bi
 - **English** (default): `filename.html` with `lang="en"`
 - **Latin**: `filename_lt.html` with `lang="la"`
 - **Spanish**: `filename_es.html` with `lang="es"`
+- **French**: `filename_fr.html` with `lang="fr"`
 - Future languages follow the same pattern: `filename_XX.html` with the appropriate ISO 639-1 code.
 
-Index pages: `index.html`, `index_lt.html`, `index_es.html`
+Index pages: `index.html`, `index_lt.html`, `index_es.html`, `index_fr.html`
 
-Quotes directories: `quotes/` (English), `quotes_lt/` (Latin), `quotes_es/` (Spanish)
+Quotes directories: `quotes/` (English), `quotes_lt/` (Latin), `quotes_es/` (Spanish), `quotes_fr/` (French)
 
 All pages use `style.css`. No build system — plain static HTML.
 
@@ -22,7 +23,8 @@ All pages use `style.css`. No build system — plain static HTML.
 - Read both the English (`filename.html`) and Latin (`filename_lt.html`) versions as sources.
 - The Latin is the original source text for patristic works (Jerome, etc.). The English is itself a translation. For later authors like Lacordaire, the original may be French (preserved in the `_lt` file), with the English as the primary translation reference.
 - Use both sources: English for clear meaning, Latin to check against the original.
-- For large files, split into sections and translate in parallel using multiple agents, then stitch together.
+- For large files, split into sections (by anchor ID) and translate in parallel using multiple agents, then stitch together. The first agent handles lines from the start through the end of its section (including the HTML head); subsequent agents output only body content (no doctype/head); the final agent includes `</body></html>`.
+- When the `_lt` file contains text already in the target language (e.g., Lacordaire's French in `02_Clemens`), copy that section verbatim rather than translating it.
 
 ### 2. HTML head conventions for the new file
 
@@ -64,8 +66,8 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 
 - Quotes live in `quotes_XX/1.html`, `quotes_XX/2.html`, etc.
 - Each quote is a `<blockquote>` with a `<cite>` linking to the relevant `_XX.html` content page and anchor.
-- Match the count in `quotes_lt/` — translate all of them.
-- Update `QUOTE_COUNT` in `index_XX.html` to match.
+- Only translate quotes that reference the file being translated (check `quotes_lt/*.html` for links to the relevant `_lt.html` file). The quote numbering continues sequentially across files.
+- Update `QUOTE_COUNT` in `index_XX.html` to match the total number of translated quotes so far.
 - The index page JavaScript fetches from `quotes_XX/N.html`.
 
 ### 7. Translation register
@@ -74,6 +76,11 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 - Use the target language's standard forms for biblical proper names (e.g., Spanish: Moisés, Josué, Isaías, Jeremías; not Moses, Joshua, Isaiah, Jeremiah).
 - Use traditional liturgical phrasing for well-known Scripture quotations where such a tradition exists in the target language.
 - Preserve all HTML structure exactly: `<p>`, `<em>`, `<b>`, `<hr />`, anchor IDs. The translated file should have the same number of `<p>` tags as the source.
+- **Diacritics are critical.** When delegating to agents, explicitly instruct them to use proper diacritics for the target language (e.g., French: é, è, ê, à, â, î, ô, û, ç, ù, ë, ï, œ). Agents may omit them unless strongly prompted.
+
+### 8. Review pass
+
+After stitching the translated file together, run a reviewer agent that reads the full file alongside the English and Latin sources. The reviewer should check: missing diacritics, `<p>` tag count parity, anchor ID consistency, hreflang completeness, translation quality, and quote link correctness.
 
 ## Content Notes
 
