@@ -61,3 +61,7 @@ hr + .nav {
 .nav + hr {
   margin-top: 10px;
 }
+
+.consecration + p {
+  margin-bottom: 3em;
+}
