@@ -38,8 +38,12 @@ function extractBody(html: string): string {
   // Remove nav divs (they contain nested divs for .prev/.next)
   body = body.replace(/<div class="nav">[\s\S]*?<\/div>\s*<\/div>\s*/g, "");
 
-  // Remove the leading "Cornelius a Lapide" byline (it's on every page, we'll put it in metadata)
-  body = body.replace(/\s*<p><b>Cornelius a Lapide<\/b><\/p>\s*/, "\n");
+  // Remove leading bylines (varies across files)
+  body = body.replace(/\s*<p><b>Cornelius a Lapide(?:, S\.J\.)?<\/b><\/p>\s*/, "\n");
+  body = body.replace(/\s*<p><b>St\. Jerome \/ Fr\. H\. D\. Lacordaire, O\.P\.<\/b><\/p>\s*/, "\n");
+
+  // Remove HTML comments
+  body = body.replace(/<!--[\s\S]*?-->/g, "");
 
   // Self-close void elements for XHTML compliance
   body = body.replace(/<hr\s*\/?>/g, "<hr />");
@@ -172,8 +176,29 @@ async function main() {
   await mkdir(join(BUILD_DIR, "META-INF"), { recursive: true });
   await mkdir(join(BUILD_DIR, "OEBPS"), { recursive: true });
 
+  // Front matter (prologues and introductory texts)
+  const FRONT_MATTER = [
+    { file: "01_Preliminares.html", id: "preliminares", epubFile: "preliminares.xhtml", title: "Preliminares" },
+    { file: "02_Clemens_Hieronymi_Du_Culte.html", id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml", title: "Jerome's Prefaces / On the Worship of Christ in Scripture" },
+    { file: "12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1.html", id: "proemium", epubFile: "proemium.xhtml", title: "Preface and Praise of Sacred Scripture" },
+    { file: "14_Commentaria_In_Pentateuchum_Mosis_Canones.html", id: "canones", epubFile: "canones.xhtml", title: "Commentary on the Pentateuch of Moses" },
+  ];
+
+  const chapters: { id: string; file: string; title: string }[] = [];
+
+  // Process front matter
+  for (const fm of FRONT_MATTER) {
+    const html = await Bun.file(join(SRC_DIR, fm.file)).text();
+    const body = extractBody(html);
+    const xhtml = buildChapter(body, fm.title);
+    await Bun.write(join(BUILD_DIR, "OEBPS", fm.epubFile), xhtml);
+    chapters.push({ id: fm.id, file: fm.epubFile, title: fm.title });
+  }
+
+  console.log(`Added ${FRONT_MATTER.length} front matter files`);
+
   // Find all Genesis chapter files and sort numerically
-  const files = (await readdir(SRC_DIR))
+  const genesisFiles = (await readdir(SRC_DIR))
     .filter((f) => /^01_genesis_\d+\.html$/.test(f))
     .sort((a, b) => {
       const numA = parseInt(a.match(/(\d+)\.html$/)![1]);
@@ -181,11 +206,9 @@ async function main() {
       return numA - numB;
     });
 
-  console.log(`Found ${files.length} chapters`);
+  console.log(`Found ${genesisFiles.length} Genesis chapters`);
 
-  const chapters: { id: string; file: string; title: string }[] = [];
-
-  for (const file of files) {
+  for (const file of genesisFiles) {
     const num = parseInt(file.match(/(\d+)\.html$/)![1]);
     const chapterId = `chapter-${num}`;
     const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
