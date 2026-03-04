@@ -111,12 +111,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_02_ar.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_02_es.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_02_fr.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_02_hi.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_02_id.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
@@ -132,6 +147,11 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_02_pt.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_02_tl.html</loc>
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
@@ -297,7 +317,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_16.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -307,7 +327,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_18.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -317,27 +337,27 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_20.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_21.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_22.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_23.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_24.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -347,12 +367,12 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_26.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_27.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -362,7 +382,7 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_29.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -372,12 +392,12 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_31.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_32.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -387,22 +407,22 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_34.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_35.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_36.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_37.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
