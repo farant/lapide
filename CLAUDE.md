@@ -61,6 +61,7 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 ### 5. Create the index page
 
 - Create `index_XX.html` modeled on the existing index pages.
+- **Title format**: `Cornelius a Lapide — [Bible Commentary in Multiple Languages]` translated to the target language (e.g., English: "Bible Commentary in Multiple Languages", French: "Commentaire Biblique en Plusieurs Langues", German: "Bibelkommentar in mehreren Sprachen"). The `og:title` must match.
 - Language switcher: plain text for the current language, `<a>` links for others. Example: `<a href="index.html">English</a> · <a href="index_lt.html">Latina</a> · Español`
 - Add the new language to the switcher on all existing index pages.
 - Add hreflang links to all existing index pages.
