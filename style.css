@@ -1,4 +1,5 @@
 
+
 body {
   max-width: 70ch;
   margin-left: auto;
@@ -8,6 +9,12 @@ body {
   line-height: 160%;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+
+[lang=ja] body,
+[lang=ko] body {
+	max-width: 55ch;
 }
 
 
@@ -80,3 +87,5 @@ hr + .nav {
   margin-left: 0;
   margin-right: auto;
 }
+
+
