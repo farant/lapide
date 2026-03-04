@@ -152,6 +152,36 @@ For large files, assign each quality reviewer a section of the file (by anchor I
 - Section titles in the cite tag should reflect the section heading or a short descriptive phrase from the chapter.
 - Genesis commentary files are named `01_genesis_XX.html` (XX = chapter number, no leading zero).
 
+## Crampon Footnotes
+
+Augustin Crampon (1826–1894), a French biblical scholar, edited and annotated Cornelius a Lapide's commentaries. He added editorial footnotes throughout the text that are not part of Lapide's original commentary. These have been identified and removed from the Genesis commentary (chapters 1–50) in both the English and Latin files. Future books (Exodus, etc.) will likely contain the same kind of additions and should be cleaned in the same way.
+
+### How to identify Crampon footnotes
+
+Crampon footnotes appear in several formats:
+
+- **Numbered italic blocks**: `<p><em>(1) ...text...</em></p>` — the most common format. Numbered sequentially within a section or as endnotes at the end of a chapter.
+- **Reversed tag order**: `<em><p>...text...</p></em>` — same content, just with `<em>` and `<p>` swapped. Seen in some chapters (e.g., ch. 27).
+- **Unnumbered italic blocks**: `<p><em>...text...</em></p>` — standalone italic paragraphs that are editorial glosses rather than Lapide's commentary.
+- **Plain (non-italic) paragraphs**: `<p>(1) ...text...</p>` — numbered but not italic. Less common.
+- **Endnote clusters**: A group of numbered footnotes gathered under a `<p id="footnotes"><b>Footnotes</b></p>` heading at the end of a chapter.
+- **Spliced text**: Crampon material inserted mid-paragraph into Lapide's own text, typically introduced with "Yet Rosenmüller says..." or similar. These require trimming the paragraph rather than deleting it entirely.
+
+### Key markers that distinguish Crampon additions from Lapide's text
+
+- **Post-Lapide scholars** (died after Lapide's 1637 death): Rosenmüller, Gesenius, Meignan, Schultens, Allioli, Cappel, Wiseman, Michaelis, Schroeder, Clericus, Bochart, Chardin, Thevenot, Drusius, Houbigant, Lowth, de Saulcy, Vater, Tuch, Oppert, Lenormant, Anquetil-Duperron, Molitor, Breecher, Pareau, Ranke, Havernick, de Wette, De Laborde, Patrizzi, Drach.
+- **Out-of-sequence verse references**: A note labeled "Verse 18" appearing in a section commenting on verse 12, for example.
+- **Alternative Hebrew/Syriac/Arabic translations** presented as standalone italic notes rather than integrated into Lapide's exegesis.
+- **Bibliographic additions**: References to works published after 1637.
+
+### Removal workflow
+
+1. Document all identified footnotes with line numbers and opening text (stored in a reference file like `crampon.txt`).
+2. Show the full text of each footnote to the user for approval before removal.
+3. Remove using the Edit tool, matching the footnote paragraph plus surrounding context (typically the following `<hr />` or next `<p>`) to avoid orphaned blank lines.
+4. Verify removal with Grep after each chapter.
+5. For chapters with Latin versions (`_lt.html`), remove the matching footnotes from both files. Genesis chapters 1–9 have Latin versions; chapter 10 onward is English only.
+
 ## Content Notes
 
 - All site content is CC0 1.0 / public domain.
