@@ -66,6 +66,10 @@ hr + .nav {
   margin-bottom: 3em;
 }
 
+.epub {
+  text-align: right;
+}
+
 [dir="rtl"] h1 {
   text-indent: -1em;
   padding-left: 0;

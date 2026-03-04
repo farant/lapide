@@ -1,25 +1,25 @@
 #!/usr/bin/env bun
 /**
- * Build an EPUB of Cornelius a Lapide's Commentary on Genesis.
+ * Build EPUBs from lapide.org HTML content.
  * Zero npm dependencies — uses Bun APIs + system `zip`.
  *
- * Usage: bun run build_epub.ts
- * Output: lapide_genesis.epub
+ * Usage:
+ *   bun run build_epub.ts                  — build Genesis EPUB
+ *   bun run build_epub.ts beda_venerabilis — build EPUB for an author
+ *   bun run build_epub.ts --all            — build all author EPUBs
+ *
+ * Output: lapide_genesis.epub or epub/<author>.epub
  */
 
 import { readdir, mkdir, rm } from "node:fs/promises";
-import { join } from "node:path";
+import { join, basename } from "node:path";
 
 const SRC_DIR = import.meta.dir;
 const BUILD_DIR = join(SRC_DIR, ".epub_build");
-const OUTPUT = join(SRC_DIR, "lapide_genesis.epub");
-
-const BOOK_TITLE = "Commentary on Genesis — Cornelius a Lapide";
-const BOOK_AUTHOR = "Cornelius a Lapide";
+const EPUB_DIR = join(SRC_DIR, "epub");
 const BOOK_LANG = "en";
-const BOOK_ID = "lapide-genesis-commentary";
 
-// Roman numerals for chapter titles
+// Roman numerals for Genesis chapter titles
 const ROMAN = [
   "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
   "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
@@ -28,9 +28,10 @@ const ROMAN = [
   "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L",
 ];
 
+// ---------- HTML Processing ----------
+
 /** Extract body content from an HTML file, stripping nav divs and site chrome. */
 function extractBody(html: string): string {
-  // Get content between <body> and </body>
   const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
   if (!bodyMatch) throw new Error("No <body> found");
   let body = bodyMatch[1];
@@ -38,9 +39,8 @@ function extractBody(html: string): string {
   // Remove nav divs (they contain nested divs for .prev/.next)
   body = body.replace(/<div class="nav">[\s\S]*?<\/div>\s*<\/div>\s*/g, "");
 
-  // Remove leading bylines (varies across files)
-  body = body.replace(/\s*<p><b>Cornelius a Lapide(?:, S\.J\.)?<\/b><\/p>\s*/, "\n");
-  body = body.replace(/\s*<p><b>St\. Jerome \/ Fr\. H\. D\. Lacordaire, O\.P\.<\/b><\/p>\s*/, "\n");
+  // Remove leading bylines — match any <p><b>...</b></p> that appears before the <h1>
+  body = body.replace(/^\s*<p><b>[^<]+<\/b><\/p>\s*/m, "\n");
 
   // Remove HTML comments
   body = body.replace(/<!--[\s\S]*?-->/g, "");
@@ -56,8 +56,18 @@ function extractBody(html: string): string {
   return body.trim();
 }
 
-/** Build an XHTML chapter file. */
-function buildChapter(body: string, title: string): string {
+/** Extract the <title> from an HTML file (text before the em dash). */
+function extractTitle(html: string): string {
+  const match = html.match(/<title>([^<]+)<\/title>/i);
+  if (!match) return "Untitled";
+  // Title format is "Work Title — Author Name", we want just the work title
+  const full = match[1].trim();
+  const dashIdx = full.indexOf(" — ");
+  return dashIdx > 0 ? full.substring(0, dashIdx) : full;
+}
+
+/** Build an XHTML content file. */
+function buildXhtml(body: string, title: string): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="${BOOK_LANG}">
@@ -72,7 +82,6 @@ ${body}
 </html>`;
 }
 
-/** Build the EPUB stylesheet (adapted from site style.css). */
 function buildStylesheet(): string {
   return `body {
   max-width: 100%;
@@ -106,20 +115,22 @@ a {
 `;
 }
 
-/** Build the OPF package document. */
-function buildOpf(chapters: { id: string; file: string; title: string }[]): string {
+// ---------- EPUB Scaffolding ----------
+
+type Chapter = { id: string; file: string; title: string };
+
+function buildOpf(bookId: string, bookTitle: string, bookAuthor: string, chapters: Chapter[]): string {
   const manifest = chapters
     .map((ch) => `    <item id="${ch.id}" href="${ch.file}" media-type="application/xhtml+xml" />`)
     .join("\n");
-
   const spine = chapters.map((ch) => `    <itemref idref="${ch.id}" />`).join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:identifier id="bookid">${BOOK_ID}</dc:identifier>
-    <dc:title>${BOOK_TITLE}</dc:title>
-    <dc:creator>${BOOK_AUTHOR}</dc:creator>
+    <dc:identifier id="bookid">${bookId}</dc:identifier>
+    <dc:title>${bookTitle}</dc:title>
+    <dc:creator>${bookAuthor}</dc:creator>
     <dc:language>${BOOK_LANG}</dc:language>
     <meta property="dcterms:modified">${new Date().toISOString().replace(/\.\d+Z/, "Z")}</meta>
   </metadata>
@@ -134,8 +145,7 @@ ${spine}
 </package>`;
 }
 
-/** Build the EPUB3 navigation document. */
-function buildNav(chapters: { id: string; file: string; title: string }[]): string {
+function buildNav(chapters: Chapter[]): string {
   const items = chapters.map((ch) => `      <li><a href="${ch.file}">${ch.title}</a></li>`).join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -156,7 +166,6 @@ ${items}
 </html>`;
 }
 
-/** Build container.xml */
 function buildContainer(): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
@@ -166,87 +175,23 @@ function buildContainer(): string {
 </container>`;
 }
 
-// ---------- Main ----------
+// ---------- ZIP and Write ----------
 
-async function main() {
-  console.log("Building EPUB...");
-
-  // Clean and create build directory
-  await rm(BUILD_DIR, { recursive: true, force: true });
-  await mkdir(join(BUILD_DIR, "META-INF"), { recursive: true });
-  await mkdir(join(BUILD_DIR, "OEBPS"), { recursive: true });
-
-  // Front matter (prologues and introductory texts)
-  const FRONT_MATTER = [
-    { file: "01_Preliminares.html", id: "preliminares", epubFile: "preliminares.xhtml", title: "Preliminares" },
-    { file: "02_Clemens_Hieronymi_Du_Culte.html", id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml", title: "Jerome's Prefaces / On the Worship of Christ in Scripture" },
-    { file: "12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1.html", id: "proemium", epubFile: "proemium.xhtml", title: "Preface and Praise of Sacred Scripture" },
-    { file: "14_Commentaria_In_Pentateuchum_Mosis_Canones.html", id: "canones", epubFile: "canones.xhtml", title: "Commentary on the Pentateuch of Moses" },
-  ];
-
-  const chapters: { id: string; file: string; title: string }[] = [];
-
-  // Process front matter
-  for (const fm of FRONT_MATTER) {
-    const html = await Bun.file(join(SRC_DIR, fm.file)).text();
-    const body = extractBody(html);
-    const xhtml = buildChapter(body, fm.title);
-    await Bun.write(join(BUILD_DIR, "OEBPS", fm.epubFile), xhtml);
-    chapters.push({ id: fm.id, file: fm.epubFile, title: fm.title });
-  }
-
-  console.log(`Added ${FRONT_MATTER.length} front matter files`);
-
-  // Find all Genesis chapter files and sort numerically
-  const genesisFiles = (await readdir(SRC_DIR))
-    .filter((f) => /^01_genesis_\d+\.html$/.test(f))
-    .sort((a, b) => {
-      const numA = parseInt(a.match(/(\d+)\.html$/)![1]);
-      const numB = parseInt(b.match(/(\d+)\.html$/)![1]);
-      return numA - numB;
-    });
-
-  console.log(`Found ${genesisFiles.length} Genesis chapters`);
-
-  for (const file of genesisFiles) {
-    const num = parseInt(file.match(/(\d+)\.html$/)![1]);
-    const chapterId = `chapter-${num}`;
-    const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
-    const title = `Genesis ${ROMAN[num]}`;
-
-    const html = await Bun.file(join(SRC_DIR, file)).text();
-    const body = extractBody(html);
-    const xhtml = buildChapter(body, title);
-
-    await Bun.write(join(BUILD_DIR, "OEBPS", chapterFile), xhtml);
-    chapters.push({ id: chapterId, file: chapterFile, title });
-  }
-
-  // Write mimetype (must be first in ZIP, uncompressed)
+async function writeEpub(outputPath: string, chapters: Chapter[], bookId: string, bookTitle: string, bookAuthor: string) {
+  // Write scaffolding
   await Bun.write(join(BUILD_DIR, "mimetype"), "application/epub+zip");
-
-  // Write container.xml
   await Bun.write(join(BUILD_DIR, "META-INF", "container.xml"), buildContainer());
-
-  // Write OPF
-  await Bun.write(join(BUILD_DIR, "OEBPS", "content.opf"), buildOpf(chapters));
-
-  // Write nav
+  await Bun.write(join(BUILD_DIR, "OEBPS", "content.opf"), buildOpf(bookId, bookTitle, bookAuthor, chapters));
   await Bun.write(join(BUILD_DIR, "OEBPS", "nav.xhtml"), buildNav(chapters));
-
-  // Write stylesheet
   await Bun.write(join(BUILD_DIR, "OEBPS", "style.css"), buildStylesheet());
 
-  // Build the ZIP using system zip
-  // EPUB spec: mimetype must be first entry, stored (not compressed)
+  // Build ZIP
   const zipProc = Bun.spawn(
     ["bash", "-c", [
       `cd "${BUILD_DIR}"`,
-      `rm -f "${OUTPUT}"`,
-      // Add mimetype first, stored (no compression)
-      `zip -0 -X "${OUTPUT}" mimetype`,
-      // Add everything else, compressed
-      `zip -r -X "${OUTPUT}" META-INF OEBPS`,
+      `rm -f "${outputPath}"`,
+      `zip -0 -X "${outputPath}" mimetype`,
+      `zip -r -X "${outputPath}" META-INF OEBPS`,
     ].join(" && ")],
     { stdout: "pipe", stderr: "pipe" }
   );
@@ -257,11 +202,175 @@ async function main() {
     throw new Error(`zip failed (exit ${exitCode}): ${stderr}`);
   }
 
-  // Clean up build directory
-  await rm(BUILD_DIR, { recursive: true, force: true });
+  const stat = Bun.file(outputPath);
+  console.log(`  -> ${outputPath} (${(stat.size / 1024).toFixed(0)} KB)`);
+}
 
-  const stat = Bun.file(OUTPUT);
-  console.log(`Done! ${OUTPUT} (${(stat.size / 1024).toFixed(0)} KB)`);
+async function resetBuildDir() {
+  await rm(BUILD_DIR, { recursive: true, force: true });
+  await mkdir(join(BUILD_DIR, "META-INF"), { recursive: true });
+  await mkdir(join(BUILD_DIR, "OEBPS"), { recursive: true });
+}
+
+// ---------- Parse index.html for author info ----------
+
+interface AuthorInfo {
+  dir: string;
+  displayName: string;
+  works: { href: string; title: string }[];
+}
+
+async function parseAuthors(): Promise<AuthorInfo[]> {
+  const indexHtml = await Bun.file(join(SRC_DIR, "index.html")).text();
+  const authors: AuthorInfo[] = [];
+
+  // Split by <hr> sections after the Genesis block
+  // Each author section starts with <h1>Display Name (Latin Name)</h1>
+  // and contains <a href="dir/File.html">Title</a> links
+  const sections = indexHtml.split(/<hr\s*\/?>/);
+
+  for (const section of sections) {
+    const h1Match = section.match(/<h1>([^<]+)<\/h1>/);
+    if (!h1Match) continue;
+    const displayName = h1Match[1].trim();
+
+    // Find all links to subdirectory HTML files
+    const linkRegex = /<a\s+href="([^"]+\/[^"]+\.html)">\s*\n?\s*([^<]+)/g;
+    const works: { href: string; title: string }[] = [];
+    let m;
+    while ((m = linkRegex.exec(section)) !== null) {
+      works.push({ href: m[1].trim(), title: m[2].trim() });
+    }
+
+    if (works.length === 0) continue;
+
+    // Extract directory name from first work's href
+    const dir = works[0].href.split("/")[0];
+
+    // Skip Lapide (handled separately)
+    if (dir.startsWith("01_") || dir.startsWith("02_") || dir.startsWith("12_") || dir.startsWith("14_")) continue;
+
+    authors.push({ dir, displayName, works });
+  }
+
+  return authors;
+}
+
+// ---------- Build Functions ----------
+
+async function buildGenesis() {
+  console.log("Building Genesis EPUB...");
+  await resetBuildDir();
+
+  const chapters: Chapter[] = [];
+
+  // Front matter
+  const FRONT_MATTER = [
+    { file: "01_Preliminares.html", id: "preliminares", epubFile: "preliminares.xhtml", title: "Preliminares" },
+    { file: "02_Clemens_Hieronymi_Du_Culte.html", id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml", title: "Jerome's Prefaces / On the Worship of Christ in Scripture" },
+    { file: "12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1.html", id: "proemium", epubFile: "proemium.xhtml", title: "Preface and Praise of Sacred Scripture" },
+    { file: "14_Commentaria_In_Pentateuchum_Mosis_Canones.html", id: "canones", epubFile: "canones.xhtml", title: "Commentary on the Pentateuch of Moses" },
+  ];
+
+  for (const fm of FRONT_MATTER) {
+    const html = await Bun.file(join(SRC_DIR, fm.file)).text();
+    const body = extractBody(html);
+    await Bun.write(join(BUILD_DIR, "OEBPS", fm.epubFile), buildXhtml(body, fm.title));
+    chapters.push({ id: fm.id, file: fm.epubFile, title: fm.title });
+  }
+
+  // Genesis chapters
+  const genesisFiles = (await readdir(SRC_DIR))
+    .filter((f) => /^01_genesis_\d+\.html$/.test(f))
+    .sort((a, b) => {
+      const numA = parseInt(a.match(/(\d+)\.html$/)![1]);
+      const numB = parseInt(b.match(/(\d+)\.html$/)![1]);
+      return numA - numB;
+    });
+
+  console.log(`  ${FRONT_MATTER.length} front matter + ${genesisFiles.length} chapters`);
+
+  for (const file of genesisFiles) {
+    const num = parseInt(file.match(/(\d+)\.html$/)![1]);
+    const chapterId = `chapter-${num}`;
+    const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
+    const title = `Genesis ${ROMAN[num]}`;
+
+    const html = await Bun.file(join(SRC_DIR, file)).text();
+    const body = extractBody(html);
+    await Bun.write(join(BUILD_DIR, "OEBPS", chapterFile), buildXhtml(body, title));
+    chapters.push({ id: chapterId, file: chapterFile, title });
+  }
+
+  await writeEpub(
+    join(SRC_DIR, "lapide_genesis.epub"),
+    chapters,
+    "lapide-genesis-commentary",
+    "Commentary on Genesis — Cornelius a Lapide",
+    "Cornelius a Lapide"
+  );
+}
+
+async function buildAuthor(author: AuthorInfo) {
+  console.log(`Building ${author.displayName}...`);
+  await resetBuildDir();
+
+  const chapters: Chapter[] = [];
+
+  for (let i = 0; i < author.works.length; i++) {
+    const work = author.works[i];
+    const srcPath = join(SRC_DIR, work.href);
+    const html = await Bun.file(srcPath).text();
+    const title = extractTitle(html);
+    const body = extractBody(html);
+    const epubFile = `work_${String(i + 1).padStart(2, "0")}.xhtml`;
+    const id = `work-${i + 1}`;
+
+    await Bun.write(join(BUILD_DIR, "OEBPS", epubFile), buildXhtml(body, title));
+    chapters.push({ id, file: epubFile, title });
+  }
+
+  await mkdir(EPUB_DIR, { recursive: true });
+  await writeEpub(
+    join(EPUB_DIR, `${author.dir}.epub`),
+    chapters,
+    `lapide-${author.dir}`,
+    author.displayName,
+    author.displayName
+  );
+}
+
+// ---------- Main ----------
+
+async function main() {
+  const arg = process.argv[2];
+
+  if (!arg) {
+    // Default: build Genesis
+    await buildGenesis();
+  } else if (arg === "--all") {
+    // Build Genesis + all authors
+    await buildGenesis();
+    const authors = await parseAuthors();
+    console.log(`\nFound ${authors.length} authors`);
+    for (const author of authors) {
+      await buildAuthor(author);
+    }
+  } else {
+    // Build a specific author
+    const authors = await parseAuthors();
+    const author = authors.find((a) => a.dir === arg);
+    if (!author) {
+      console.error(`Author "${arg}" not found. Available:`);
+      for (const a of authors) console.error(`  ${a.dir} — ${a.displayName}`);
+      process.exit(1);
+    }
+    await buildAuthor(author);
+  }
+
+  // Clean up
+  await rm(BUILD_DIR, { recursive: true, force: true });
+  console.log("\nDone!");
 }
 
 main().catch((err) => {
