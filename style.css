@@ -13,8 +13,16 @@ body {
 
 
 [lang=ja] body,
-[lang=ko] body {
+[lang=ko] body{
 	max-width: 55ch;
+}
+
+[lang=ja] p {
+  overflow-wrap: break-word;
+}
+
+[lang=zh] body {
+	max-width: 36em;
 }
 
 
