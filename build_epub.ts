@@ -268,7 +268,7 @@ async function buildGenesis() {
   const FRONT_MATTER = [
     { file: "01_Preliminares.html", id: "preliminares", epubFile: "preliminares.xhtml", title: "Preliminares" },
     { file: "02_Clemens_Hieronymi_Du_Culte.html", id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml", title: "Jerome's Prefaces / On the Worship of Christ in Scripture" },
-    { file: "12_Proemium_Et_Encomium_Sacrae_Scripturae_Pt1.html", id: "proemium", epubFile: "proemium.xhtml", title: "Preface and Praise of Sacred Scripture" },
+    { file: "12_Proemium_Et_Encomium_Sacrae_Scripturae.html", id: "proemium", epubFile: "proemium.xhtml", title: "Preface and Praise of Sacred Scripture" },
     { file: "14_Commentaria_In_Pentateuchum_Mosis_Canones.html", id: "canones", epubFile: "canones.xhtml", title: "Commentary on the Pentateuch of Moses" },
   ];
 
