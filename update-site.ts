@@ -199,6 +199,31 @@ async function updateHreflang(files: string[]) {
   console.log(`Hreflang: updated ${updatedCount} files across ${groups.size} groups (${[...groups.values()].filter(g => g.size > 1).length} multilingual)`);
 }
 
+// ── Favicon ──
+
+const FAVICON_LINK = '<link rel="icon" type="image/svg+xml" href="favicon.svg">';
+
+async function updateFavicon(files: string[]) {
+  let updatedCount = 0;
+
+  for (const filepath of files) {
+    let content = await readFile(filepath, "utf-8");
+    if (content.includes('rel="icon"')) continue;
+
+    const headCloseIdx = content.indexOf("</head>");
+    if (headCloseIdx === -1) continue;
+
+    const before = content.slice(0, headCloseIdx);
+    const after = content.slice(headCloseIdx);
+    content = before.trimEnd() + "\n" + FAVICON_LINK + "\n" + after;
+
+    await writeFile(filepath, content, "utf-8");
+    updatedCount++;
+  }
+
+  console.log(`Favicon: added to ${updatedCount} files`);
+}
+
 // ── Sitemap generation ──
 
 async function generateSitemap(files: string[]) {
@@ -252,6 +277,7 @@ async function main() {
   const files = await collectHtmlFiles();
   console.log(`Found ${files.length} HTML files`);
 
+  await updateFavicon(files);
   await updateHreflang(files);
   await generateSitemap(files);
 
