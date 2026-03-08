@@ -108,6 +108,7 @@ Each language has its own conventions file covering proper names, saint names, q
 - **German** — See `lang_conventions/de.md`
 - **Greek (Modern)** — See `lang_conventions/el.md`
 - **Spanish** — See `lang_conventions/es.md`
+- **French** — See `lang_conventions/fr.md`
 - **Hindi** — See `lang_conventions/hi.md`
 - **Indonesian** — See `lang_conventions/id.md`
 - **Japanese** — See `lang_conventions/ja.md`
