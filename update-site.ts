@@ -201,21 +201,40 @@ async function updateHreflang(files: string[]) {
 
 // ── Favicon ──
 
-const FAVICON_LINK = '<link rel="icon" type="image/svg+xml" href="favicon.svg">';
+function faviconLink(filepath: string): string {
+  const rel = relative(ROOT, filepath);
+  const depth = rel.split("/").length - 1;
+  const prefix = depth > 0 ? "../".repeat(depth) : "";
+  return `<link rel="icon" type="image/svg+xml" href="${prefix}favicon.svg">`;
+}
 
 async function updateFavicon(files: string[]) {
   let updatedCount = 0;
 
   for (const filepath of files) {
     let content = await readFile(filepath, "utf-8");
-    if (content.includes('rel="icon"')) continue;
+    const expectedLink = faviconLink(filepath);
 
+    // Fix incorrect favicon paths or add missing favicon
+    const faviconRegex = /<link\s+rel="icon"\s+type="image\/svg\+xml"\s+href="[^"]*favicon\.svg"\s*\/?>/;
+    const match = content.match(faviconRegex);
+
+    if (match) {
+      if (match[0] === expectedLink) continue; // already correct
+      // Replace incorrect path
+      content = content.replace(faviconRegex, expectedLink);
+      await writeFile(filepath, content, "utf-8");
+      updatedCount++;
+      continue;
+    }
+
+    // No favicon link at all — add one
     const headCloseIdx = content.indexOf("</head>");
     if (headCloseIdx === -1) continue;
 
     const before = content.slice(0, headCloseIdx);
     const after = content.slice(headCloseIdx);
-    content = before.trimEnd() + "\n" + FAVICON_LINK + "\n" + after;
+    content = before.trimEnd() + "\n" + expectedLink + "\n" + after;
 
     await writeFile(filepath, content, "utf-8");
     updatedCount++;
