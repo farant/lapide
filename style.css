@@ -13,6 +13,7 @@ body {
 
 
 [lang=ja] body,
+[lang=th] body,
 [lang=ko] body{
 	max-width: 55ch;
 }
