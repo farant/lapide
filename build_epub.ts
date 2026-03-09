@@ -21,15 +21,16 @@ const EPUB_DIR = join(SRC_DIR, "epub");
 // Language suffix map (same as update-site.ts)
 const SUFFIX_TO_LANG: Record<string, string> = {
   "": "en", "_lt": "la", "_es": "es", "_fr": "fr", "_pt": "pt",
-  "_de": "de", "_zh": "zh", "_ro": "ro", "_el": "el", "_nl": "nl",
-  "_tr": "tr", "_sv": "sv", "_vi": "vi", "_ar": "ar", "_hi": "hi",
-  "_id": "id", "_it": "it", "_ko": "ko", "_ja": "ja", "_ru": "ru",
-  "_pl": "pl", "_tl": "tl",
+  "_de": "de", "_zh": "zh", "_ro": "ro", "_el": "el", "_he": "he",
+  "_nl": "nl", "_tr": "tr", "_sv": "sv", "_vi": "vi", "_ar": "ar",
+  "_hi": "hi", "_hu": "hu", "_id": "id", "_it": "it", "_ko": "ko",
+  "_ja": "ja", "_ru": "ru", "_pl": "pl", "_tl": "tl", "_fa": "fa",
+  "_th": "th",
 };
 
 let bookLang = "en";
 
-const RTL_LANGS = new Set(["ar", "he"]);
+const RTL_LANGS = new Set(["ar", "he", "fa"]);
 
 // Roman numerals for Genesis chapter titles
 const ROMAN = [
