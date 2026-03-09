@@ -111,6 +111,7 @@ Each language has its own conventions file covering proper names, saint names, q
 - **French** — See `lang_conventions/fr.md`
 - **Hindi** — See `lang_conventions/hi.md`
 - **Indonesian** — See `lang_conventions/id.md`
+- **Italian** — See `lang_conventions/it.md`
 - **Japanese** — See `lang_conventions/ja.md`
 - **Korean** — See `lang_conventions/ko.md`
 - **Dutch** — See `lang_conventions/nl.md`
