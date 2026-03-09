@@ -1026,6 +1026,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_fa.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_fr.html</loc>
     <lastmod>2026-03-09</lastmod>
     <priority>0.8</priority>
@@ -1151,7 +1156,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_he.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_hi.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_hu.html</loc>
     <lastmod>2026-03-09</lastmod>
     <priority>0.8</priority>
   </url>
@@ -1642,6 +1657,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index_es.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_fa.html</loc>
     <lastmod>2026-03-09</lastmod>
     <priority>0.8</priority>
   </url>

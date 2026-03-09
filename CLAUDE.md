@@ -66,6 +66,16 @@ Run `bun update-site.ts` after adding any new translated page or index file. Thi
 
 The script is idempotent — safe to run repeatedly. It replaces all manual hreflang and sitemap maintenance. To add a new language code, add an entry to the `SUFFIX_TO_LANG` map in the script.
 
+### 3b. Fix quotation marks (hard-tier languages)
+
+Run `bun fix-quotes.ts <files>` after stitching any translated file for a language that uses non-ASCII quotation marks. This is a **tokenizer-level limitation**: Claude literally cannot emit the Hungarian closing quote U+201D — the tokenizer always produces ASCII U+0022 instead. This cannot be fixed by prompting or manual editing (the Edit tool has the same limitation). The script is the only reliable fix.
+
+Currently supports: Hungarian (`„..."` → ensures closing `"` is U+201D, not ASCII U+0022). Handles quotes that span across HTML tags (e.g., opening „ inside one `<em>`, closing in another).
+
+Run on all translated content, quotes, and index files: `bun fix-quotes.ts 01_Preliminares_hu.html index_hu.html quotes_hu/*.html`
+
+The script is idempotent — safe to run on already-fixed files. To add support for additional languages, add entries to the `LANG_RULES` map in the script.
+
 ### 4. Anchor IDs
 
 Keep the same `id` attributes across all language versions (e.g., `id="helmeted-prologue"`, `id="jerome-to-paulinus"`, `id="du-culte"`). These are language-neutral identifiers used for cross-linking and quotes.
@@ -124,6 +134,7 @@ Each language has its own conventions file covering proper names, saint names, q
 - **Russian** — See `lang_conventions/ru.md`
 - **Swedish** — See `lang_conventions/sv.md`
 - **Tagalog** — See `lang_conventions/tl.md`
+- **Thai** — See `lang_conventions/th.md`
 - **Turkish** — See `lang_conventions/tr.md`
 - **Vietnamese** — See `lang_conventions/vi.md`
 - **Chinese (Mandarin)** — See `lang_conventions/zh.md`

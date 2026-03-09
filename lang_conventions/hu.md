@@ -254,7 +254,7 @@ Use **irodalmi nyelv** (literary language) — the formal written standard. Mark
 
 ## Agent pitfalls
 
-- **English-style quotes**: Agents default to "..." instead of „...". Must be explicitly instructed to use Hungarian „lower-upper" marks with »...« for nested quotes. Even when agents use the correct opening „ (U+201E), they often use ASCII `"` (U+0022) for the closing mark instead of the correct `"` (U+201D). Explicitly instruct: closing quote is " (U+201D, right double quotation mark), NOT straight ASCII double quote.
+- **Closing quotation mark (U+201D) is unfixable by agents**: This is a tokenizer-level limitation, not a prompting issue. Claude (and likely other LLMs) literally cannot emit the Hungarian closing quote character U+201D — the tokenizer maps it to ASCII U+0022. Even when explicitly instructed, agents will produce the correct opening „ (U+201E) but always use ASCII `"` for the close. **Do not attempt to fix this manually** — Claude cannot emit U+201D in Edit tool calls either. Instead, always run `bun fix-quotes.ts` after any Hungarian translation or quote creation. The script handles this reliably, including quotes that span across HTML tags (e.g., opening „ inside one `<em>` and closing in another).
 - **Article before vowels**: Hungarian definite article "a" must become "az" before vowel-initial words. Agents sometimes miss this (e.g., *"a újabb" instead of "az újabb").
 - **Dropping double acute accents**: The most common error. Agents write ö/ü where ő/ű is required. Explicitly instruct: „Use ő (o with double acute) and ű (u with double acute) — these are NOT the same as ö and ü."
 - **Wrong conjugation paradigm**: Agents frequently use indefinite conjugation with definite objects. Review every verb+object pair.
