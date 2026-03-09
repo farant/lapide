@@ -13,6 +13,7 @@ Catholic theological texts site at lapide.org. Primarily Cornelius a Lapide's bi
 - **Chinese**: `filename_zh.html` with `lang="zh"`
 - **Romanian**: `filename_ro.html` with `lang="ro"`
 - **Greek**: `filename_el.html` with `lang="el"`
+- **Hebrew**: `filename_he.html` with `lang="he"`
 - **Dutch**: `filename_nl.html` with `lang="nl"`
 - **Turkish**: `filename_tr.html` with `lang="tr"`
 - **Swedish**: `filename_sv.html` with `lang="sv"`
@@ -109,7 +110,9 @@ Each language has its own conventions file covering proper names, saint names, q
 - **Greek (Modern)** — See `lang_conventions/el.md`
 - **Spanish** — See `lang_conventions/es.md`
 - **French** — See `lang_conventions/fr.md`
+- **Hebrew (Modern)** — See `lang_conventions/he.md`
 - **Hindi** — See `lang_conventions/hi.md`
+- **Hungarian** — See `lang_conventions/hu.md`
 - **Indonesian** — See `lang_conventions/id.md`
 - **Italian** — See `lang_conventions/it.md`
 - **Japanese** — See `lang_conventions/ja.md`
@@ -151,6 +154,35 @@ Deep comparison against English and Latin sources that requires actually reading
 - Section heading consistency (TOC entries must match their corresponding section headings)
 
 For large files, assign each quality reviewer a section of the file (by anchor ID ranges or line ranges), ensuring **full coverage** — every paragraph should be reviewed by at least one agent. The goal is a genuine review of the entire translation, not a spot check of selected passages.
+
+#### Hard-tier language review (multiple passes)
+
+Some languages have stacking difficulties that cause significantly higher LLM error rates — not just one hard feature but several interacting simultaneously. These languages require a multi-pass review process instead of a single review pass.
+
+**Hard-tier languages**: Hungarian, Thai, Burmese, Amharic.
+
+Why each qualifies:
+- **Hungarian** — Definite/indefinite verb conjugation (every verb+object pair), 3-way vowel harmony in suffixes, double acute diacritics (ő/ű vs ö/ü), topic-focus word order. Errors compound: fixing a conjugation can break vowel harmony.
+- **Thai** — No spaces between words (word segmentation), tonal, vowels written above/below/before/after consonants. Reviewing is harder because errors aren't visually obvious.
+- **Burmese** — Same word segmentation problem as Thai, plus significantly less LLM training data.
+- **Amharic** — Unique Ge'ez script, complex Semitic verb morphology with subject and object agreement markers, limited LLM training data.
+
+**Multi-pass process:**
+
+**Pass 1** (same as standard): Structural review + translation quality review, split by section for large files. Fix all identified issues.
+
+**Pass 2** (focused lint pass on the fixed file): A targeted mechanical review checking only the known pitfalls for that specific language. This pass is narrower and checklist-driven — it catches errors introduced by Pass 1 fixes and errors that slipped through the first review due to error density.
+
+For Hungarian, Pass 2 checks:
+- Every verb with a definite object → correct (tárgyas) conjugation?
+- Every case suffix → correct vowel harmony variant (-ban/-ben, -hoz/-hez/-höz, etc.)?
+- Every ö/ü → should it be ő/ű (or vice versa)?
+- Every quotation mark → „..." not "..."?
+- Relative pronouns → amely/amelyet (formal), not ami/amit (colloquial)?
+
+If Pass 2 finds very few issues, the file is done. If it finds many, run a Pass 3 (same focused lint), though diminishing returns are expected after 2 passes.
+
+**Quotes and index pages**: For hard-tier languages, quotes (`quotes_XX/`) and index pages (`index_XX.html`) also get one review pass after creation. These are short texts, so a single pass checking the language-specific pitfalls (conjugation, diacritics, quotation marks, proper names) is sufficient — no need for multi-pass review.
 
 #### Updating language conventions
 

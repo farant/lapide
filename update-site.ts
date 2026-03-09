@@ -36,6 +36,8 @@ const SUFFIX_TO_LANG: Record<string, string> = {
   _ru: "ru",
   _ro: "ro",
   _el: "el",
+  _he: "he",
+  _hu: "hu",
   _nl: "nl",
   _tr: "tr",
   _vi: "vi",

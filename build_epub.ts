@@ -29,6 +29,8 @@ const SUFFIX_TO_LANG: Record<string, string> = {
 
 let bookLang = "en";
 
+const RTL_LANGS = new Set(["ar", "he"]);
+
 // Roman numerals for Genesis chapter titles
 const ROMAN = [
   "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
@@ -78,9 +80,10 @@ function extractTitle(html: string): string {
 
 /** Build an XHTML content file. */
 function buildXhtml(body: string, title: string): string {
+  const dir = RTL_LANGS.has(bookLang) ? ' dir="rtl"' : '';
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="${bookLang}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="${bookLang}"${dir}>
 <head>
 <meta charset="UTF-8" />
 <title>${title}</title>
@@ -149,7 +152,7 @@ function buildOpf(bookId: string, bookTitle: string, bookAuthor: string, chapter
     <item id="style" href="style.css" media-type="text/css" />
 ${manifest}
   </manifest>
-  <spine>
+  <spine${RTL_LANGS.has(bookLang) ? ' page-progression-direction="rtl"' : ''}>
 ${spine}
   </spine>
 </package>`;
@@ -158,9 +161,10 @@ ${spine}
 function buildNav(chapters: Chapter[]): string {
   const items = chapters.map((ch) => `      <li><a href="${ch.file}">${ch.title}</a></li>`).join("\n");
 
+  const dir = RTL_LANGS.has(bookLang) ? ' dir="rtl"' : '';
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="${bookLang}">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="${bookLang}"${dir}>
 <head>
 <meta charset="UTF-8" />
 <title>Table of Contents</title>
