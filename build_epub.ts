@@ -17,7 +17,17 @@ import { join, basename } from "node:path";
 const SRC_DIR = import.meta.dir;
 const BUILD_DIR = join(SRC_DIR, ".epub_build");
 const EPUB_DIR = join(SRC_DIR, "epub");
-const BOOK_LANG = "en";
+
+// Language suffix map (same as update-site.ts)
+const SUFFIX_TO_LANG: Record<string, string> = {
+  "": "en", "_lt": "la", "_es": "es", "_fr": "fr", "_pt": "pt",
+  "_de": "de", "_zh": "zh", "_ro": "ro", "_el": "el", "_nl": "nl",
+  "_tr": "tr", "_sv": "sv", "_vi": "vi", "_ar": "ar", "_hi": "hi",
+  "_id": "id", "_it": "it", "_ko": "ko", "_ja": "ja", "_ru": "ru",
+  "_pl": "pl", "_tl": "tl",
+};
+
+let bookLang = "en";
 
 // Roman numerals for Genesis chapter titles
 const ROMAN = [
@@ -70,7 +80,7 @@ function extractTitle(html: string): string {
 function buildXhtml(body: string, title: string): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="${BOOK_LANG}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="${bookLang}">
 <head>
 <meta charset="UTF-8" />
 <title>${title}</title>
@@ -131,7 +141,7 @@ function buildOpf(bookId: string, bookTitle: string, bookAuthor: string, chapter
     <dc:identifier id="bookid">${bookId}</dc:identifier>
     <dc:title>${bookTitle}</dc:title>
     <dc:creator>${bookAuthor}</dc:creator>
-    <dc:language>${BOOK_LANG}</dc:language>
+    <dc:language>${bookLang}</dc:language>
     <meta property="dcterms:modified">${new Date().toISOString().replace(/\.\d+Z/, "Z")}</meta>
   </metadata>
   <manifest>
@@ -150,7 +160,7 @@ function buildNav(chapters: Chapter[]): string {
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="${BOOK_LANG}">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="${bookLang}">
 <head>
 <meta charset="UTF-8" />
 <title>Table of Contents</title>
@@ -210,6 +220,33 @@ async function resetBuildDir() {
   await rm(BUILD_DIR, { recursive: true, force: true });
   await mkdir(join(BUILD_DIR, "META-INF"), { recursive: true });
   await mkdir(join(BUILD_DIR, "OEBPS"), { recursive: true });
+}
+
+// ---------- Language Helpers ----------
+
+/** Convert an English href like "guigo_i/Meditationes.html" to its translated version. */
+function langHref(href: string, langSuffix: string): string {
+  return href.replace(/\.html$/, `${langSuffix}.html`);
+}
+
+/** Find all language suffixes that have translations for a given author. */
+async function findAuthorLangs(author: AuthorInfo): Promise<string[]> {
+  const found: string[] = [];
+  for (const [suffix, lang] of Object.entries(SUFFIX_TO_LANG)) {
+    if (suffix === "" || lang === "la") continue; // skip English and Latin
+    // Check if all works have a translated version
+    let allExist = true;
+    for (const work of author.works) {
+      const translatedPath = join(SRC_DIR, langHref(work.href, suffix));
+      const file = Bun.file(translatedPath);
+      if (!(await file.exists())) {
+        allExist = false;
+        break;
+      }
+    }
+    if (allExist) found.push(suffix);
+  }
+  return found;
 }
 
 // ---------- Parse index.html for author info ----------
@@ -311,15 +348,19 @@ async function buildGenesis() {
   );
 }
 
-async function buildAuthor(author: AuthorInfo) {
-  console.log(`Building ${author.displayName}...`);
+async function buildAuthor(author: AuthorInfo, langSuffix = "") {
+  const lang = SUFFIX_TO_LANG[langSuffix] || "en";
+  const label = langSuffix ? ` [${lang}]` : "";
+  console.log(`Building ${author.displayName}${label}...`);
+  bookLang = lang;
   await resetBuildDir();
 
   const chapters: Chapter[] = [];
 
   for (let i = 0; i < author.works.length; i++) {
     const work = author.works[i];
-    const srcPath = join(SRC_DIR, work.href);
+    const href = langSuffix ? langHref(work.href, langSuffix) : work.href;
+    const srcPath = join(SRC_DIR, href);
     const html = await Bun.file(srcPath).text();
     const title = extractTitle(html);
     const body = extractBody(html);
@@ -330,31 +371,73 @@ async function buildAuthor(author: AuthorInfo) {
     chapters.push({ id, file: epubFile, title });
   }
 
+  const epubName = langSuffix ? `${author.dir}${langSuffix}` : author.dir;
   await mkdir(EPUB_DIR, { recursive: true });
   await writeEpub(
-    join(EPUB_DIR, `${author.dir}.epub`),
+    join(EPUB_DIR, `${epubName}.epub`),
     chapters,
-    `lapide-${author.dir}`,
+    `lapide-${epubName}`,
     author.displayName,
     author.displayName
   );
+  bookLang = "en"; // reset
 }
 
 // ---------- Main ----------
 
 async function main() {
-  const arg = process.argv[2];
+  const args = process.argv.slice(2);
+  const langIdx = args.indexOf("--lang");
+  let langSuffix = "";
+  if (langIdx >= 0 && args[langIdx + 1]) {
+    const langCode = args[langIdx + 1];
+    // Find the suffix for this language code
+    const entry = Object.entries(SUFFIX_TO_LANG).find(([, l]) => l === langCode);
+    if (!entry || entry[0] === "") {
+      console.error(`Language "${langCode}" not supported or is the default (en).`);
+      console.error("Available:", Object.values(SUFFIX_TO_LANG).filter(l => l !== "en").join(", "));
+      process.exit(1);
+    }
+    langSuffix = entry[0];
+    args.splice(langIdx, 2);
+  }
+
+  const arg = args[0];
 
   if (!arg) {
     // Default: build Genesis
     await buildGenesis();
   } else if (arg === "--all") {
-    // Build Genesis + all authors
-    await buildGenesis();
+    // Build Genesis + all authors (English only, or specified lang)
+    if (!langSuffix) await buildGenesis();
     const authors = await parseAuthors();
     console.log(`\nFound ${authors.length} authors`);
     for (const author of authors) {
-      await buildAuthor(author);
+      if (langSuffix) {
+        // Check if translations exist for this author
+        const href = langHref(author.works[0].href, langSuffix);
+        const exists = await Bun.file(join(SRC_DIR, href)).exists();
+        if (exists) await buildAuthor(author, langSuffix);
+      } else {
+        await buildAuthor(author);
+      }
+    }
+  } else if (arg === "--all-langs") {
+    // Build all translations for a specific author or all authors
+    const authors = await parseAuthors();
+    const targetDir = args[1];
+    const targetAuthors = targetDir
+      ? authors.filter(a => a.dir === targetDir)
+      : authors;
+    if (targetDir && targetAuthors.length === 0) {
+      console.error(`Author "${targetDir}" not found.`);
+      process.exit(1);
+    }
+    for (const author of targetAuthors) {
+      const langs = await findAuthorLangs(author);
+      for (const suffix of langs) {
+        await buildAuthor(author, suffix);
+      }
     }
   } else {
     // Build a specific author
@@ -365,7 +448,7 @@ async function main() {
       for (const a of authors) console.error(`  ${a.dir} — ${a.displayName}`);
       process.exit(1);
     }
-    await buildAuthor(author);
+    await buildAuthor(author, langSuffix);
   }
 
   // Clean up
