@@ -5,10 +5,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 600px;
   line-height: 160%;
 	padding-left: 20px;
 	padding-right: 20px;
+	background-image: url('/infant-of-prague.jpg');
+	background-repeat: no-repeat;
+  background-position: center bottom;
+  margin-bottom: -50px;
 }
 
 
