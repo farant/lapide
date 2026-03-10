@@ -15,6 +15,12 @@ body {
   margin-bottom: -50px;
 }
 
+@media (max-width:560px) {
+	body {
+		background-size: 90%;
+	}
+}
+
 
 [lang=ja] body,
 [lang=th] body,
