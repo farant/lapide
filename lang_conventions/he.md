@@ -73,6 +73,20 @@ Agents translating the Vulgate block must translate **from the Latin Vulgate**, 
 - Gen 2:18 — "faciamus" (plural) → נַעֲשֶׂה (not אֶעֱשֶׂה singular)
 - Gen 2:21 — "replevit" → וַיְמַלֵּא (not וַיִּסְגֹּר)
 - Gen 2:24 — "duo" → שְׁנֵיהֶם (Vulgate adds "two," Masoretic lacks it)
+- Gen 3:1 — "animantibus terrae" → חַיַּת הָאָרֶץ (not חַיַּת הַשָּׂדֶה)
+- Gen 3:6 — "aspectuque delectabile" → נֶחְמָד לְמַרְאֶה (not לְהַשְׂכִּיל "to make wise")
+- Gen 3:8 — "ad auram post meridiem" → לְרוּחַ אַחַר הַצָּהֳרַיִם (not לְרוּחַ הַיּוֹם)
+- Gen 3:12 — "sociam" → לְחֲבֵרָה (not עִמָּדִי)
+- Gen 3:14 — "inter omnia animantia et bestias terrae" → מִכָּל הַחַיּוֹת וּמִכָּל בַּהֲמוֹת הָאָרֶץ (different structure)
+- Gen 3:14 — "super pectus tuum" → עַל חָזְךָ (not עַל גְּחֹנְךָ "on your belly")
+- Gen 3:15 — "ipsa conteret caput tuum" → הִיא תְּרוֹצֵץ אֶת רֹאשְׁךָ (feminine "she shall crush," not masculine הוּא יְשׁוּפְךָ)
+- Gen 3:15 — "insidiaberis calcaneo ejus" → תֶּאֱרֹב לַעֲקֵבָהּ (lie in wait for HER heel, not תְּשׁוּפֶנּוּ עָקֵב)
+- Gen 3:16 — "sub viri potestate eris" → תַּחַת מֶמְשֶׁלֶת אִישֵׁךְ תִּהְיִי (not תְּשׁוּקָתֵךְ "your desire")
+- Gen 3:17 — "in opere tuo" → בַּעֲמָלֶךָ (not בַּעֲבוּרֶךָ "on your account")
+- Gen 3:17 — "in laboribus" → בִּיגִיעוֹת (not בְּעִצָּבוֹן)
+- Gen 3:19 — "in sudore vultus tui" → בְּזֵעַת פָּנֶיךָ (not בְּזֵעַת אַפֶּיךָ; "vultus" = face, not "nose")
+- Gen 3:23 — "paradiso voluptatis" → גַּן הַתַּעֲנוּגוֹת (not גַּן עֵדֶן)
+- Gen 3:24 — "ante paradisum voluptatis" → לִפְנֵי גַּן הַתַּעֲנוּגוֹת (not מִקֶּדֶם לְגַן עֵדֶן)
 
 This list will grow as more chapters are translated. When new divergences are found, add them here.
 
