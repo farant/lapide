@@ -436,6 +436,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_04_hu.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_04_id.html</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
@@ -557,6 +562,11 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_05_hi.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_05_hu.html</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
   </url>
@@ -1196,6 +1206,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_sw.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_th.html</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
@@ -1326,6 +1341,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_sw.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_th.html</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
@@ -1452,6 +1472,11 @@
   </url>
   <url>
     <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_sv.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/12_Proemium_Et_Encomium_Sacrae_Scripturae_sw.html</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
   </url>
@@ -1892,6 +1917,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index_sv.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_sw.html</loc>
     <lastmod>2026-03-10</lastmod>
     <priority>0.8</priority>
   </url>

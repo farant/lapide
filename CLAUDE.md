@@ -132,6 +132,7 @@ Each language has its own conventions file covering proper names, saint names, q
 - **Portuguese** — See `lang_conventions/pt.md`
 - **Romanian** — See `lang_conventions/ro.md`
 - **Russian** — See `lang_conventions/ru.md`
+- **Swahili** — See `lang_conventions/sw.md`
 - **Swedish** — See `lang_conventions/sv.md`
 - **Tagalog** — See `lang_conventions/tl.md`
 - **Thai** — See `lang_conventions/th.md`
