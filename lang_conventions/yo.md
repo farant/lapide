@@ -291,3 +291,13 @@ Yoruba religious texts are predominantly Protestant (Yoruba Bible translation hi
 - **Eukárístì** (Eucharist), not "Àṣàrò Olúwa" (Lord's Supper — Protestant)
 - **Wúndíá Maria** (Virgin Mary — Catholic devotional), not just "Maria" alone in theological contexts referring to the Blessed Virgin
 - **Ìjẹ́wọ́** (Confession — Catholic sacramental sense)
+
+## Number handling
+
+In formal/scholarly Yoruba (Yorùbá ìwé), follow these conventions for numbers:
+
+1.  **Avoid Roman Numerals:** Roman numerals are rarely used in standard Yoruba publishing. Always translate them into either spelled-out Yoruba ordinals or Arabic digits depending on the context.
+2.  **Titles for Monarchs and Popes:** Translate Roman numerals into spelled-out ordinals (e.g., Henry VIII -> *Henry Kẹjọ*, Charles V -> *Charles Karùn-ún*, Pope Clement VIII -> *Póòpù Klementi Kẹjọ*).
+3.  **Book and Chapter Citations:** Use Arabic digits or spelled-out ordinals rather than Roman numerals (e.g., Ìwé IV, orí ix -> *Ìwé 4, orí 9* or *Ìwé kẹrin, orí kẹsàn-án*).
+4.  **Quantities, Durations, and Ages:** Spell these out with correct tone marks in formal prose (e.g., *ọdún mẹ́tàlá* for 13 years, *ogójì ọdún* for 40 years, *ẹgbẹ̀rin pàríṣì* for 800 parishes).
+5.  **Calendar Years and Versions:** Standard Arabic digits are correct for years (e.g., *1572*, *1616*) and versions/licenses.
