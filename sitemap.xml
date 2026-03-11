@@ -291,6 +291,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_03_ceb.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_03_de.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
@@ -426,6 +431,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_04_ceb.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_04_de.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
@@ -557,6 +567,11 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_05_ar.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_05_ceb.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
   </url>
@@ -1271,6 +1286,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_yo.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_zh.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
@@ -1876,6 +1896,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/guigo_i/Meditationes_ja.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/guigo_i/Meditationes_ko.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/guigo_i/Meditationes_lt.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.6</priority>
@@ -2027,6 +2057,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index_vi.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_yo.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
   </url>

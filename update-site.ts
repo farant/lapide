@@ -46,6 +46,7 @@ const SUFFIX_TO_LANG: Record<string, string> = {
   _fa: "fa",
   _th: "th",
   _ceb: "ceb",
+  _yo: "yo",
 };
 
 const KNOWN_SUFFIXES = new Set(

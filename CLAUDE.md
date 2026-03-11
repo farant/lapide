@@ -139,6 +139,7 @@ Each language has its own conventions file covering proper names, saint names, q
 - **Thai** — See `lang_conventions/th.md`
 - **Turkish** — See `lang_conventions/tr.md`
 - **Vietnamese** — See `lang_conventions/vi.md`
+- **Yoruba** — See `lang_conventions/yo.md`
 - **Cebuano** — See `lang_conventions/ceb.md`
 - **Chinese (Mandarin)** — See `lang_conventions/zh.md`
 
