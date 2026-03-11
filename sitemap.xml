@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_01_ceb.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_01_de.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
@@ -376,6 +381,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_03_sw.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_03_th.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
@@ -506,6 +516,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_04_sw.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_04_th.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
@@ -632,6 +647,11 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_05_sv.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_05_sw.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
   </url>
@@ -1541,6 +1561,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_ceb.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_de.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.8</priority>
@@ -1822,6 +1847,11 @@
   </url>
   <url>
     <loc>https://lapide.org/guigo_i/Meditationes_he.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/guigo_i/Meditationes_hi.html</loc>
     <lastmod>2026-03-11</lastmod>
     <priority>0.6</priority>
   </url>
