@@ -301,3 +301,25 @@ In formal/scholarly Yoruba (Yorùbá ìwé), follow these conventions for number
 3.  **Book and Chapter Citations:** Use Arabic digits or spelled-out ordinals rather than Roman numerals (e.g., Ìwé IV, orí ix -> *Ìwé 4, orí 9* or *Ìwé kẹrin, orí kẹsàn-án*).
 4.  **Quantities, Durations, and Ages:** Spell these out with correct tone marks in formal prose (e.g., *ọdún mẹ́tàlá* for 13 years, *ogójì ọdún* for 40 years, *ẹgbẹ̀rin pàríṣì* for 800 parishes).
 5.  **Calendar Years and Versions:** Standard Arabic digits are correct for years (e.g., *1572*, *1616*) and versions/licenses.
+
+### Vigesimal system — CRITICAL warning for AI agents
+
+Yoruba uses a **vigesimal (base-20) number system** with subtractive constructions that is extremely error-prone for LLMs. The system multiplies by 20 and subtracts from the next multiple, creating unintuitive patterns:
+
+- 20 = ogún
+- 30 = ọgbọ̀n
+- 40 = ogójì (20 × 2)
+- 50 = àádọ́ta (60 − 10)
+- 60 = ọgọ́ta (20 × 3)
+- 100 = ọgọ́rùn-ún (20 × 5) — **NOT ọgọ́fà** (which is 120 = 20 × 6)
+- 110 = àádọ́fà (120 − 10)
+- 120 = ọgọ́fà (20 × 6)
+- 140 = ogóje (20 × 7)
+- 145 = àrùn-dín-láàdọ́jọ (160 − 10 − 5)
+
+**Known agent failure**: Agents confuse ọgọ́rùn-ún (100) with ọgọ́fà (120), then build compound numbers on the wrong base. This produces numbers that are off by 20–30, sometimes exceeding the range of possibility (e.g., generating "Psalm 174" when only 150 exist).
+
+**Rule: Use Arabic numerals for all numbers above 20** in reference contexts (psalm numbers, verse numbers, page counts, census figures, etc.). Spell out only small, familiar numbers (1–20) and round vigesimal multiples (ogójì = 40, ọgọ́ta = 60) where natural in prose. For example:
+- "àwọn Saamu — 37, 111, 112, 119, àti 145" (not spelled-out vigesimal forms)
+- "ẹni 120 tí wọ́n gbàgbọ́" (use Arabic 120, not ọgọ́fà in running text)
+- But: "ogójì ọjọ́" (40 days) is fine — small vigesimal multiples are safe
