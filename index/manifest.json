@@ -1,0 +1,1582 @@
+[
+  {
+    "name": "De Hexaemeron",
+    "slug": "ambrose/de-hexaemeron",
+    "category": "bibliography",
+    "path": "bibliography/ambrose/de-hexaemeron.html"
+  },
+  {
+    "name": "Annals of the Church of Cambrai",
+    "slug": "anon/annals-church-cambrai",
+    "category": "bibliography",
+    "path": "bibliography/anon/annals-church-cambrai.html"
+  },
+  {
+    "name": "Life of St. Lietbert",
+    "slug": "anon/life-of-lietbert",
+    "category": "bibliography",
+    "path": "bibliography/anon/life-of-lietbert.html"
+  },
+  {
+    "name": "De Doctrina Christiana",
+    "slug": "augustine/de-doctrina-christiana",
+    "category": "bibliography",
+    "path": "bibliography/augustine/de-doctrina-christiana.html"
+  },
+  {
+    "name": "Epistle 140",
+    "slug": "basil/epistle-140",
+    "category": "bibliography",
+    "path": "bibliography/basil/epistle-140.html"
+  },
+  {
+    "name": "Epistle 164",
+    "slug": "basil/epistle-164",
+    "category": "bibliography",
+    "path": "bibliography/basil/epistle-164.html"
+  },
+  {
+    "name": "Epistle 63",
+    "slug": "basil/epistle-63",
+    "category": "bibliography",
+    "path": "bibliography/basil/epistle-63.html"
+  },
+  {
+    "name": "Hexaemeron",
+    "slug": "basil/hexaemeron",
+    "category": "bibliography",
+    "path": "bibliography/basil/hexaemeron.html"
+  },
+  {
+    "name": "3-4 Esdras",
+    "slug": "bible/3-4-esdras",
+    "category": "bibliography",
+    "path": "bibliography/bible/3-4-esdras.html"
+  },
+  {
+    "name": "Prayer of Manasseh",
+    "slug": "bible/prayer-of-manasseh",
+    "category": "bibliography",
+    "path": "bibliography/bible/prayer-of-manasseh.html"
+  },
+  {
+    "name": "The Vulgate",
+    "slug": "bible/vulgate",
+    "category": "bibliography",
+    "path": "bibliography/bible/vulgate.html"
+  },
+  {
+    "name": "Cum Sacrorum (Bull on the Vulgate)",
+    "slug": "clement-viii/bull-vulgate",
+    "category": "bibliography",
+    "path": "bibliography/clement-viii/bull-vulgate.html"
+  },
+  {
+    "name": "Council of Trent, Session IV",
+    "slug": "council/trent-session-iv",
+    "category": "bibliography",
+    "path": "bibliography/council/trent-session-iv.html"
+  },
+  {
+    "name": "Annotations on the Pentateuch",
+    "slug": "crampon/annotations-pentateuch",
+    "category": "bibliography",
+    "path": "bibliography/crampon/annotations-pentateuch.html"
+  },
+  {
+    "name": "Letter 2 to Antonianus",
+    "slug": "cyprian/letter-2-to-antonianus",
+    "category": "bibliography",
+    "path": "bibliography/cyprian/letter-2-to-antonianus.html"
+  },
+  {
+    "name": "Verses on Modestus",
+    "slug": "cyrus-theodorus/verses-on-modestus",
+    "category": "bibliography",
+    "path": "bibliography/cyrus-theodorus/verses-on-modestus.html"
+  },
+  {
+    "name": "First Oration on Holy Images",
+    "slug": "damascene/oration-on-images-1",
+    "category": "bibliography",
+    "path": "bibliography/damascene/oration-on-images-1.html"
+  },
+  {
+    "name": "On Jerome's Translation",
+    "slug": "gregory-great/on-jerome-translation",
+    "category": "bibliography",
+    "path": "bibliography/gregory-great/on-jerome-translation.html"
+  },
+  {
+    "name": "Oration in Praise of Basil",
+    "slug": "gregory-nazianzen/oration-praise-basil",
+    "category": "bibliography",
+    "path": "bibliography/gregory-nazianzen/oration-praise-basil.html"
+  },
+  {
+    "name": "Works on Basil",
+    "slug": "gregory-nyssa/on-basil",
+    "category": "bibliography",
+    "path": "bibliography/gregory-nyssa/on-basil.html"
+  },
+  {
+    "name": "On the Bishops of Cambrai",
+    "slug": "hincmar/on-cambrai-bishops",
+    "category": "bibliography",
+    "path": "bibliography/hincmar/on-cambrai-bishops.html"
+  },
+  {
+    "name": "Works of Homer",
+    "slug": "homer/works",
+    "category": "bibliography",
+    "path": "bibliography/homer/works.html"
+  },
+  {
+    "name": "Ars Poetica",
+    "slug": "horace/ars-poetica",
+    "category": "bibliography",
+    "path": "bibliography/horace/ars-poetica.html"
+  },
+  {
+    "name": "On Jerome's Version",
+    "slug": "isidore/on-jerome-version",
+    "category": "bibliography",
+    "path": "bibliography/isidore/on-jerome-version.html"
+  },
+  {
+    "name": "Commentaries on Acts",
+    "slug": "lapide/commentaries-acts",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-acts.html"
+  },
+  {
+    "name": "Commentaries on the Apocalypse",
+    "slug": "lapide/commentaries-apocalypse",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-apocalypse.html"
+  },
+  {
+    "name": "Commentaries on the Catholic Epistles",
+    "slug": "lapide/commentaries-catholic-epistles",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-catholic-epistles.html"
+  },
+  {
+    "name": "Commentaries on Ecclesiastes",
+    "slug": "lapide/commentaries-ecclesiastes",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-ecclesiastes.html"
+  },
+  {
+    "name": "Commentaries on Ecclesiasticus",
+    "slug": "lapide/commentaries-ecclesiasticus",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-ecclesiasticus.html"
+  },
+  {
+    "name": "Commentaries on Ezra through Maccabees",
+    "slug": "lapide/commentaries-ezra-maccabees",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-ezra-maccabees.html"
+  },
+  {
+    "name": "Commentaries on the Gospels",
+    "slug": "lapide/commentaries-gospels",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-gospels.html"
+  },
+  {
+    "name": "Commentaries on Job",
+    "slug": "lapide/commentaries-job",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-job.html"
+  },
+  {
+    "name": "Commentaries on Joshua through Chronicles",
+    "slug": "lapide/commentaries-joshua-chronicles",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-joshua-chronicles.html"
+  },
+  {
+    "name": "Commentaries on the Major Prophets",
+    "slug": "lapide/commentaries-major-prophets",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-major-prophets.html"
+  },
+  {
+    "name": "Commentaries on the Minor Prophets",
+    "slug": "lapide/commentaries-minor-prophets",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-minor-prophets.html"
+  },
+  {
+    "name": "Commentaries on the Pauline Epistles",
+    "slug": "lapide/commentaries-pauline-epistles",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-pauline-epistles.html"
+  },
+  {
+    "name": "Commentaries on the Pentateuch",
+    "slug": "lapide/commentaries-pentateuch",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-pentateuch.html"
+  },
+  {
+    "name": "Commentaries on Proverbs",
+    "slug": "lapide/commentaries-proverbs",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-proverbs.html"
+  },
+  {
+    "name": "Commentaries on the Psalms",
+    "slug": "lapide/commentaries-psalms",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-psalms.html"
+  },
+  {
+    "name": "Commentaries on the Song of Songs",
+    "slug": "lapide/commentaries-song-of-songs",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-song-of-songs.html"
+  },
+  {
+    "name": "Commentaries on Wisdom",
+    "slug": "lapide/commentaries-wisdom",
+    "category": "bibliography",
+    "path": "bibliography/lapide/commentaries-wisdom.html"
+  },
+  {
+    "name": "Ecclesiastical History",
+    "slug": "rufinus/ecclesiastical-history",
+    "category": "bibliography",
+    "path": "bibliography/rufinus/ecclesiastical-history.html"
+  },
+  {
+    "name": "Greek Translation of Jerome's Psalter and Prophets",
+    "slug": "sophronius/greek-translation-psalter-prophets",
+    "category": "bibliography",
+    "path": "bibliography/sophronius/greek-translation-psalter-prophets.html"
+  },
+  {
+    "name": "Ecclesiastical History",
+    "slug": "theodoret/ecclesiastical-history",
+    "category": "bibliography",
+    "path": "bibliography/theodoret/ecclesiastical-history.html"
+  },
+  {
+    "name": "Apostolic See",
+    "slug": "church/apostolic-see",
+    "category": "organization",
+    "subcategory": "church",
+    "path": "organization/church/apostolic-see.html"
+  },
+  {
+    "name": "Metropolitan Church of Mechlin",
+    "slug": "church/metropolitan-church-mechlin",
+    "category": "organization",
+    "subcategory": "church",
+    "path": "organization/church/metropolitan-church-mechlin.html"
+  },
+  {
+    "name": "St. Peter's Basilica",
+    "slug": "church/st-peters-basilica",
+    "category": "organization",
+    "subcategory": "church",
+    "path": "organization/church/st-peters-basilica.html"
+  },
+  {
+    "name": "Vatican Press",
+    "slug": "church/vatican-press",
+    "category": "organization",
+    "subcategory": "church",
+    "path": "organization/church/vatican-press.html"
+  },
+  {
+    "name": "Fifth Lateran Council",
+    "slug": "council/lateran-v",
+    "category": "organization",
+    "subcategory": "council",
+    "path": "organization/council/lateran-v.html"
+  },
+  {
+    "name": "Council of Trent",
+    "slug": "council/trent",
+    "category": "organization",
+    "subcategory": "council",
+    "path": "organization/council/trent.html"
+  },
+  {
+    "name": "Archdiocese of Cambrai",
+    "slug": "diocese/archdiocese-of-cambrai",
+    "category": "organization",
+    "subcategory": "diocese",
+    "path": "organization/diocese/archdiocese-of-cambrai.html"
+  },
+  {
+    "name": "Archdiocese of Mechlin",
+    "slug": "diocese/archdiocese-of-mechlin",
+    "category": "organization",
+    "subcategory": "diocese",
+    "path": "organization/diocese/archdiocese-of-mechlin.html"
+  },
+  {
+    "name": "Diocese of Amiens",
+    "slug": "diocese/diocese-of-amiens",
+    "category": "organization",
+    "subcategory": "diocese",
+    "path": "organization/diocese/diocese-of-amiens.html"
+  },
+  {
+    "name": "Diocese of Ghent",
+    "slug": "diocese/diocese-of-ghent",
+    "category": "organization",
+    "subcategory": "diocese",
+    "path": "organization/diocese/diocese-of-ghent.html"
+  },
+  {
+    "name": "Holy Roman Empire",
+    "slug": "government/holy-roman-empire",
+    "category": "organization",
+    "subcategory": "government",
+    "path": "organization/government/holy-roman-empire.html"
+  },
+  {
+    "name": "Spanish Netherlands",
+    "slug": "government/spanish-netherlands",
+    "category": "organization",
+    "subcategory": "government",
+    "path": "organization/government/spanish-netherlands.html"
+  },
+  {
+    "name": "Cramoisy",
+    "slug": "publisher/cramoisy",
+    "category": "organization",
+    "subcategory": "publisher",
+    "path": "organization/publisher/cramoisy.html"
+  },
+  {
+    "name": "Ludwig Vives (publisher)",
+    "slug": "publisher/ludwig-vives",
+    "category": "organization",
+    "subcategory": "publisher",
+    "path": "organization/publisher/ludwig-vives.html"
+  },
+  {
+    "name": "Nutius & Moretus",
+    "slug": "publisher/nutius-moretus",
+    "category": "organization",
+    "subcategory": "publisher",
+    "path": "organization/publisher/nutius-moretus.html"
+  },
+  {
+    "name": "Society of Jesus",
+    "slug": "religious-order/society-of-jesus",
+    "category": "organization",
+    "subcategory": "religious-order",
+    "path": "organization/religious-order/society-of-jesus.html"
+  },
+  {
+    "name": "University of Louvain",
+    "slug": "university/louvain",
+    "category": "organization",
+    "subcategory": "university",
+    "path": "organization/university/louvain.html"
+  },
+  {
+    "name": "Aaron",
+    "slug": "biblical/aaron",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/aaron.html"
+  },
+  {
+    "name": "Abraham",
+    "slug": "biblical/abraham",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/abraham.html"
+  },
+  {
+    "name": "Daniel",
+    "slug": "biblical/daniel",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/daniel.html"
+  },
+  {
+    "name": "Elijah",
+    "slug": "biblical/elijah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/elijah.html"
+  },
+  {
+    "name": "Isaac",
+    "slug": "biblical/isaac",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/isaac.html"
+  },
+  {
+    "name": "Jacob",
+    "slug": "biblical/jacob",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/jacob.html"
+  },
+  {
+    "name": "Jesus Christ",
+    "slug": "biblical/jesus-christ",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/jesus-christ.html"
+  },
+  {
+    "name": "Job",
+    "slug": "biblical/job",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/job.html"
+  },
+  {
+    "name": "John the Apostle",
+    "slug": "biblical/john-the-apostle",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/john-the-apostle.html"
+  },
+  {
+    "name": "Joseph",
+    "slug": "biblical/joseph-patriarch",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/joseph-patriarch.html"
+  },
+  {
+    "name": "Martha",
+    "slug": "biblical/martha",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/martha.html"
+  },
+  {
+    "name": "Mary Magdalene",
+    "slug": "biblical/mary-magdalene",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/mary-magdalene.html"
+  },
+  {
+    "name": "Melchizedek",
+    "slug": "biblical/melchizedek",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/melchizedek.html"
+  },
+  {
+    "name": "Moses",
+    "slug": "biblical/moses",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/moses.html"
+  },
+  {
+    "name": "Paul the Apostle",
+    "slug": "biblical/paul",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/paul.html"
+  },
+  {
+    "name": "Pharaoh",
+    "slug": "biblical/pharaoh",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/biblical/pharaoh.html"
+  },
+  {
+    "name": "Remigius of Auxerre",
+    "slug": "blessed/remigius-of-auxerre",
+    "category": "person",
+    "subcategory": "blessed",
+    "path": "person/blessed/remigius-of-auxerre.html"
+  },
+  {
+    "name": "Homer",
+    "slug": "classical/homer",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/classical/homer.html"
+  },
+  {
+    "name": "Horace",
+    "slug": "classical/horace",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/classical/horace.html"
+  },
+  {
+    "name": "Libanius",
+    "slug": "classical/libanius",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/classical/libanius.html"
+  },
+  {
+    "name": "Cornelius a Lapide",
+    "slug": "cleric/cornelius-a-lapide",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/cleric/cornelius-a-lapide.html"
+  },
+  {
+    "name": "Augustinus Crampon",
+    "slug": "cleric/crampon",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/cleric/crampon.html"
+  },
+  {
+    "name": "Jacobus Antonius",
+    "slug": "cleric/jacobus-antonius",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/cleric/jacobus-antonius.html"
+  },
+  {
+    "name": "Charles Scribani",
+    "slug": "cleric/scribani",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/cleric/scribani.html"
+  },
+  {
+    "name": "Egbert Spitholdius",
+    "slug": "cleric/spitholdius",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/cleric/spitholdius.html"
+  },
+  {
+    "name": "Henry Francis Van der Burch",
+    "slug": "cleric/van-der-burch",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/cleric/van-der-burch.html"
+  },
+  {
+    "name": "Mutius Vitelleschi",
+    "slug": "cleric/vitelleschi",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/cleric/vitelleschi.html"
+  },
+  {
+    "name": "Cyrus Theodorus",
+    "slug": "other/cyrus-theodorus",
+    "category": "person",
+    "subcategory": "other",
+    "path": "person/other/cyrus-theodorus.html"
+  },
+  {
+    "name": "Demosthenes (imperial cook)",
+    "slug": "other/demosthenes-cook",
+    "category": "person",
+    "subcategory": "other",
+    "path": "person/other/demosthenes-cook.html"
+  },
+  {
+    "name": "Modestus",
+    "slug": "other/modestus",
+    "category": "person",
+    "subcategory": "other",
+    "path": "person/other/modestus.html"
+  },
+  {
+    "name": "Pope Clement VIII",
+    "slug": "pope/clement-viii",
+    "category": "person",
+    "subcategory": "pope",
+    "path": "person/pope/clement-viii.html"
+  },
+  {
+    "name": "Pope Gregory XIV",
+    "slug": "pope/gregory-xiv",
+    "category": "person",
+    "subcategory": "pope",
+    "path": "person/pope/gregory-xiv.html"
+  },
+  {
+    "name": "Pope Innocent IX",
+    "slug": "pope/innocent-ix",
+    "category": "person",
+    "subcategory": "pope",
+    "path": "person/pope/innocent-ix.html"
+  },
+  {
+    "name": "Pope Pius IV",
+    "slug": "pope/pius-iv",
+    "category": "person",
+    "subcategory": "pope",
+    "path": "person/pope/pius-iv.html"
+  },
+  {
+    "name": "Pope Pius V",
+    "slug": "pope/pius-v",
+    "category": "person",
+    "subcategory": "pope",
+    "path": "person/pope/pius-v.html"
+  },
+  {
+    "name": "Pope Sixtus V",
+    "slug": "pope/sixtus-v",
+    "category": "person",
+    "subcategory": "pope",
+    "path": "person/pope/sixtus-v.html"
+  },
+  {
+    "name": "Pope Urban VII",
+    "slug": "pope/urban-vii",
+    "category": "person",
+    "subcategory": "pope",
+    "path": "person/pope/urban-vii.html"
+  },
+  {
+    "name": "Archduke Albert of Austria",
+    "slug": "ruler/archduke-albert",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/archduke-albert.html"
+  },
+  {
+    "name": "Charles V",
+    "slug": "ruler/charles-v",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/charles-v.html"
+  },
+  {
+    "name": "King Dagobert",
+    "slug": "ruler/dagobert",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/dagobert.html"
+  },
+  {
+    "name": "Duke of Alba",
+    "slug": "ruler/duke-of-alba",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/duke-of-alba.html"
+  },
+  {
+    "name": "Emperor Henry IV",
+    "slug": "ruler/henry-iv-emperor",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/henry-iv-emperor.html"
+  },
+  {
+    "name": "Henry VIII",
+    "slug": "ruler/henry-viii",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/henry-viii.html"
+  },
+  {
+    "name": "Julian the Apostate",
+    "slug": "ruler/julian-the-apostate",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/julian-the-apostate.html"
+  },
+  {
+    "name": "Philip II of Spain",
+    "slug": "ruler/philip-ii",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/philip-ii.html"
+  },
+  {
+    "name": "Emperor Valens",
+    "slug": "ruler/valens",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/ruler/valens.html"
+  },
+  {
+    "name": "St. Albert the Great",
+    "slug": "saint/albert-the-great",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/albert-the-great.html"
+  },
+  {
+    "name": "St. Ambrose",
+    "slug": "saint/ambrose",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/ambrose.html"
+  },
+  {
+    "name": "St. Anselm of Canterbury",
+    "slug": "saint/anselm-of-canterbury",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/anselm-of-canterbury.html"
+  },
+  {
+    "name": "St. Augustine of Hippo",
+    "slug": "saint/augustine",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/augustine.html"
+  },
+  {
+    "name": "St. Authbert",
+    "slug": "saint/authbert",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/authbert.html"
+  },
+  {
+    "name": "St. Basil the Great",
+    "slug": "saint/basil-the-great",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/basil-the-great.html"
+  },
+  {
+    "name": "St. Bede the Venerable",
+    "slug": "saint/bede",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/bede.html"
+  },
+  {
+    "name": "St. Bernard of Clairvaux",
+    "slug": "saint/bernard-of-clairvaux",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/bernard-of-clairvaux.html"
+  },
+  {
+    "name": "Blessed Virgin Mary",
+    "slug": "saint/blessed-virgin-mary",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/blessed-virgin-mary.html"
+  },
+  {
+    "name": "St. Bonaventure",
+    "slug": "saint/bonaventure",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/bonaventure.html"
+  },
+  {
+    "name": "Pope St. Cornelius",
+    "slug": "saint/cornelius-pope",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/cornelius-pope.html"
+  },
+  {
+    "name": "St. Cyprian of Carthage",
+    "slug": "saint/cyprian",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/cyprian.html"
+  },
+  {
+    "name": "St. Emmelia",
+    "slug": "saint/emmelia",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/emmelia.html"
+  },
+  {
+    "name": "St. Ephrem the Syrian",
+    "slug": "saint/ephrem-the-syrian",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/ephrem-the-syrian.html"
+  },
+  {
+    "name": "St. Gaugericus",
+    "slug": "saint/gaugericus",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/gaugericus.html"
+  },
+  {
+    "name": "St. Ghislain",
+    "slug": "saint/ghislain",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/ghislain.html"
+  },
+  {
+    "name": "St. Gregory Nazianzen",
+    "slug": "saint/gregory-nazianzen",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/gregory-nazianzen.html"
+  },
+  {
+    "name": "St. Gregory of Nyssa",
+    "slug": "saint/gregory-of-nyssa",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/gregory-of-nyssa.html"
+  },
+  {
+    "name": "St. Gregory the Great",
+    "slug": "saint/gregory-the-great",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/gregory-the-great.html"
+  },
+  {
+    "name": "St. Isidore of Seville",
+    "slug": "saint/isidore-of-seville",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/isidore-of-seville.html"
+  },
+  {
+    "name": "St. Jerome",
+    "slug": "saint/jerome",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/jerome.html"
+  },
+  {
+    "name": "St. John Damascene",
+    "slug": "saint/john-damascene",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/john-damascene.html"
+  },
+  {
+    "name": "St. John Fisher",
+    "slug": "saint/john-fisher",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/john-fisher.html"
+  },
+  {
+    "name": "St. John of Cambrai",
+    "slug": "saint/john-of-cambrai",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/john-of-cambrai.html"
+  },
+  {
+    "name": "St. John the Baptist",
+    "slug": "saint/john-the-baptist",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/john-the-baptist.html"
+  },
+  {
+    "name": "St. Landelin",
+    "slug": "saint/landelin",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/landelin.html"
+  },
+  {
+    "name": "St. Lietbert",
+    "slug": "saint/lietbert",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/lietbert.html"
+  },
+  {
+    "name": "St. Macarius of Antioch",
+    "slug": "saint/macarius-of-antioch",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/macarius-of-antioch.html"
+  },
+  {
+    "name": "St. Mercurius",
+    "slug": "saint/mercury",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/mercury.html"
+  },
+  {
+    "name": "St. Odo of Cambrai",
+    "slug": "saint/odo-of-cambrai",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/odo-of-cambrai.html"
+  },
+  {
+    "name": "St. Peter Damian",
+    "slug": "saint/peter-damian",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/peter-damian.html"
+  },
+  {
+    "name": "St. Theodoric of Cambrai",
+    "slug": "saint/theodoric-of-cambrai",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/theodoric-of-cambrai.html"
+  },
+  {
+    "name": "St. Thomas Aquinas",
+    "slug": "saint/thomas-aquinas",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/thomas-aquinas.html"
+  },
+  {
+    "name": "St. Thomas More",
+    "slug": "saint/thomas-more",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/thomas-more.html"
+  },
+  {
+    "name": "St. Vincent Madelgarius",
+    "slug": "saint/vincent-madelgarius",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/vincent-madelgarius.html"
+  },
+  {
+    "name": "St. Vindicianus",
+    "slug": "saint/vindicianus",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/vindicianus.html"
+  },
+  {
+    "name": "St. Waldetrudis",
+    "slug": "saint/waldetrudis",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/saint/waldetrudis.html"
+  },
+  {
+    "name": "Alexander of Hales",
+    "slug": "scholar/alexander-of-hales",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/alexander-of-hales.html"
+  },
+  {
+    "name": "Haymo of Halberstadt",
+    "slug": "scholar/haymo",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/haymo.html"
+  },
+  {
+    "name": "Hincmar",
+    "slug": "scholar/hincmar",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/hincmar.html"
+  },
+  {
+    "name": "Hugh of Saint Victor",
+    "slug": "scholar/hugh-of-saint-victor",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/hugh-of-saint-victor.html"
+  },
+  {
+    "name": "Peter Lombard",
+    "slug": "scholar/peter-lombard",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/peter-lombard.html"
+  },
+  {
+    "name": "Rabanus Maurus",
+    "slug": "scholar/rabanus-maurus",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/rabanus-maurus.html"
+  },
+  {
+    "name": "Richard of Saint Victor",
+    "slug": "scholar/richard-of-saint-victor",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/richard-of-saint-victor.html"
+  },
+  {
+    "name": "Rufinus of Aquileia",
+    "slug": "scholar/rufinus",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/rufinus.html"
+  },
+  {
+    "name": "Rupert of Deutz",
+    "slug": "scholar/rupert-of-deutz",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/rupert-of-deutz.html"
+  },
+  {
+    "name": "Sophronius",
+    "slug": "scholar/sophronius",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/sophronius.html"
+  },
+  {
+    "name": "Theodoret of Cyrrhus",
+    "slug": "scholar/theodoret",
+    "category": "person",
+    "subcategory": "scholar",
+    "path": "person/scholar/theodoret.html"
+  },
+  {
+    "name": "Caesarea in Cappadocia",
+    "slug": "asia-minor/cappadocia/caesarea",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/asia-minor/cappadocia/caesarea.html"
+  },
+  {
+    "name": "Neocaesarea",
+    "slug": "asia-minor/cappadocia/neocaesarea",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/asia-minor/cappadocia/neocaesarea.html"
+  },
+  {
+    "name": "Pontus",
+    "slug": "asia-minor/pontus",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/asia-minor/pontus.html"
+  },
+  {
+    "name": "Canaan",
+    "slug": "biblical/canaan",
+    "category": "place",
+    "subcategory": "biblical-site",
+    "path": "place/biblical/canaan.html"
+  },
+  {
+    "name": "Plains of Moab",
+    "slug": "biblical/plains-of-moab",
+    "category": "place",
+    "subcategory": "biblical-site",
+    "path": "place/biblical/plains-of-moab.html"
+  },
+  {
+    "name": "Rochester",
+    "slug": "europe/england/rochester",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/england/rochester.html"
+  },
+  {
+    "name": "Amiens",
+    "slug": "europe/france/amiens",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/france/amiens.html"
+  },
+  {
+    "name": "Anchin",
+    "slug": "europe/france/anchin",
+    "category": "place",
+    "subcategory": "abbey",
+    "path": "place/europe/france/anchin.html"
+  },
+  {
+    "name": "Paris",
+    "slug": "europe/france/paris",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/france/paris.html"
+  },
+  {
+    "name": "Athens",
+    "slug": "europe/greece/athens",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/greece/athens.html"
+  },
+  {
+    "name": "Rome",
+    "slug": "europe/italy/rome",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/italy/rome.html"
+  },
+  {
+    "name": "Trent",
+    "slug": "europe/italy/trent",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/italy/trent.html"
+  },
+  {
+    "name": "Antwerp",
+    "slug": "europe/low-countries/antwerp",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/low-countries/antwerp.html"
+  },
+  {
+    "name": "Belgium",
+    "slug": "europe/low-countries/belgium",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/europe/low-countries/belgium.html"
+  },
+  {
+    "name": "Bocholt",
+    "slug": "europe/low-countries/bocholt",
+    "category": "place",
+    "subcategory": "town",
+    "path": "place/europe/low-countries/bocholt.html"
+  },
+  {
+    "name": "Cambrai",
+    "slug": "europe/low-countries/cambrai",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/low-countries/cambrai.html"
+  },
+  {
+    "name": "Flanders",
+    "slug": "europe/low-countries/flanders",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/europe/low-countries/flanders.html"
+  },
+  {
+    "name": "Ghent",
+    "slug": "europe/low-countries/ghent",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/low-countries/ghent.html"
+  },
+  {
+    "name": "Hainaut",
+    "slug": "europe/low-countries/hainaut",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/europe/low-countries/hainaut.html"
+  },
+  {
+    "name": "Louvain",
+    "slug": "europe/low-countries/louvain",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/low-countries/louvain.html"
+  },
+  {
+    "name": "Mechlin",
+    "slug": "europe/low-countries/mechlin",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/low-countries/mechlin.html"
+  },
+  {
+    "name": "Mons",
+    "slug": "europe/low-countries/mons",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/low-countries/mons.html"
+  },
+  {
+    "name": "Valenciennes",
+    "slug": "europe/low-countries/valenciennes",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/europe/low-countries/valenciennes.html"
+  },
+  {
+    "name": "Antioch in Armenia",
+    "slug": "middle-east/antioch-armenia",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/middle-east/antioch-armenia.html"
+  },
+  {
+    "name": "Egypt",
+    "slug": "middle-east/egypt",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/middle-east/egypt.html"
+  },
+  {
+    "name": "Mesopotamia",
+    "slug": "middle-east/mesopotamia",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/middle-east/mesopotamia.html"
+  },
+  {
+    "name": "Bethlehem",
+    "slug": "middle-east/palestine/bethlehem",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/middle-east/palestine/bethlehem.html"
+  },
+  {
+    "name": "Jerusalem",
+    "slug": "middle-east/palestine/jerusalem",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/middle-east/palestine/jerusalem.html"
+  },
+  {
+    "name": "Our Lady of Aspromont",
+    "slug": "sacred-site/our-lady-of-aspromont",
+    "category": "place",
+    "subcategory": "shrine",
+    "path": "place/sacred-site/our-lady-of-aspromont.html"
+  },
+  {
+    "name": "Marian Devotion",
+    "slug": "devotion/marian",
+    "category": "subject",
+    "path": "subject/devotion/marian.html"
+  },
+  {
+    "name": "Pilgrimage",
+    "slug": "devotion/pilgrimage",
+    "category": "subject",
+    "path": "subject/devotion/pilgrimage.html"
+  },
+  {
+    "name": "Veneration of Relics",
+    "slug": "devotion/relics",
+    "category": "subject",
+    "path": "subject/devotion/relics.html"
+  },
+  {
+    "name": "Sacred Images",
+    "slug": "devotion/sacred-images",
+    "category": "subject",
+    "path": "subject/devotion/sacred-images.html"
+  },
+  {
+    "name": "Censorship and Regulation of Sacred Texts",
+    "slug": "ecclesiology/authority/censorship",
+    "category": "subject",
+    "path": "subject/ecclesiology/authority/censorship.html"
+  },
+  {
+    "name": "Episcopal Duties",
+    "slug": "ecclesiology/clergy/episcopal-duties",
+    "category": "subject",
+    "path": "subject/ecclesiology/clergy/episcopal-duties.html"
+  },
+  {
+    "name": "Female Religious Communities",
+    "slug": "ecclesiology/religious-life/female-religious",
+    "category": "subject",
+    "path": "subject/ecclesiology/religious-life/female-religious.html"
+  },
+  {
+    "name": "Monasticism",
+    "slug": "ecclesiology/religious-life/monasticism",
+    "category": "subject",
+    "path": "subject/ecclesiology/religious-life/monasticism.html"
+  },
+  {
+    "name": "Nazirites",
+    "slug": "ecclesiology/religious-life/nazirites",
+    "category": "subject",
+    "path": "subject/ecclesiology/religious-life/nazirites.html"
+  },
+  {
+    "name": "Typology",
+    "slug": "exegesis/methods/typology",
+    "category": "subject",
+    "path": "subject/exegesis/methods/typology.html"
+  },
+  {
+    "name": "The Old Latin (Italic) Version",
+    "slug": "exegesis/textual-criticism/old-latin",
+    "category": "subject",
+    "path": "subject/exegesis/textual-criticism/old-latin.html"
+  },
+  {
+    "name": "Editorial History of the Vulgate",
+    "slug": "exegesis/textual-criticism/vulgate-editions",
+    "category": "subject",
+    "path": "subject/exegesis/textual-criticism/vulgate-editions.html"
+  },
+  {
+    "name": "Hospitality",
+    "slug": "morals/practices/hospitality",
+    "category": "subject",
+    "path": "subject/morals/practices/hospitality.html"
+  },
+  {
+    "name": "Charity",
+    "slug": "morals/virtues/charity",
+    "category": "subject",
+    "path": "subject/morals/virtues/charity.html"
+  },
+  {
+    "name": "Chastity",
+    "slug": "morals/virtues/chastity",
+    "category": "subject",
+    "path": "subject/morals/virtues/chastity.html"
+  },
+  {
+    "name": "Constancy",
+    "slug": "morals/virtues/constancy",
+    "category": "subject",
+    "path": "subject/morals/virtues/constancy.html"
+  },
+  {
+    "name": "Humility",
+    "slug": "morals/virtues/humility",
+    "category": "subject",
+    "path": "subject/morals/virtues/humility.html"
+  },
+  {
+    "name": "Meekness",
+    "slug": "morals/virtues/meekness",
+    "category": "subject",
+    "path": "subject/morals/virtues/meekness.html"
+  },
+  {
+    "name": "Obedience",
+    "slug": "morals/virtues/obedience",
+    "category": "subject",
+    "path": "subject/morals/virtues/obedience.html"
+  },
+  {
+    "name": "Poverty and Detachment from Wealth",
+    "slug": "morals/virtues/poverty",
+    "category": "subject",
+    "path": "subject/morals/virtues/poverty.html"
+  },
+  {
+    "name": "Active Life",
+    "slug": "spirituality/active-life",
+    "category": "subject",
+    "path": "subject/spirituality/active-life.html"
+  },
+  {
+    "name": "Contemplative Life",
+    "slug": "spirituality/contemplative-life",
+    "category": "subject",
+    "path": "subject/spirituality/contemplative-life.html"
+  },
+  {
+    "name": "Contemptus Mundi",
+    "slug": "spirituality/contemptus-mundi",
+    "category": "subject",
+    "path": "subject/spirituality/contemptus-mundi.html"
+  },
+  {
+    "name": "Desire for Martyrdom",
+    "slug": "spirituality/desire-for-martyrdom",
+    "category": "subject",
+    "path": "subject/spirituality/desire-for-martyrdom.html"
+  },
+  {
+    "name": "Eternal Life and Heavenly Glory",
+    "slug": "theology/eschatology/eternal-life",
+    "category": "subject",
+    "path": "subject/theology/eschatology/eternal-life.html"
+  },
+  {
+    "name": "Providence of God",
+    "slug": "theology/god/providence",
+    "category": "subject",
+    "path": "subject/theology/god/providence.html"
+  },
+  {
+    "name": "The Holy Trinity",
+    "slug": "theology/god/trinity",
+    "category": "subject",
+    "path": "subject/theology/god/trinity.html"
+  },
+  {
+    "name": "Canon of Scripture",
+    "slug": "theology/scripture/canon",
+    "category": "subject",
+    "path": "subject/theology/scripture/canon.html"
+  },
+  {
+    "name": "Biblical Inspiration",
+    "slug": "theology/scripture/inspiration",
+    "category": "subject",
+    "path": "subject/theology/scripture/inspiration.html"
+  },
+  {
+    "name": "Authority of Interpretation",
+    "slug": "theology/scripture/interpretation",
+    "category": "subject",
+    "path": "subject/theology/scripture/interpretation.html"
+  },
+  {
+    "name": "Scripture and Tradition",
+    "slug": "theology/scripture/tradition",
+    "category": "subject",
+    "path": "subject/theology/scripture/tradition.html"
+  },
+  {
+    "name": "Vulgate Authenticity",
+    "slug": "theology/scripture/vulgate",
+    "category": "subject",
+    "path": "subject/theology/scripture/vulgate.html"
+  },
+  {
+    "name": "The Gospel as Source of Saving Truth",
+    "slug": "theology/soteriology/gospel-source-of-truth",
+    "category": "subject",
+    "path": "subject/theology/soteriology/gospel-source-of-truth.html"
+  },
+  {
+    "name": "Daniel 12:3",
+    "slug": "daniel/12/3",
+    "category": "verse",
+    "path": "verse/daniel/12/3.html"
+  },
+  {
+    "name": "Deuteronomy 34:8",
+    "slug": "deuteronomy/34/8",
+    "category": "verse",
+    "path": "verse/deuteronomy/34/8.html"
+  },
+  {
+    "name": "Exodus 32:32",
+    "slug": "exodus/32/32",
+    "category": "verse",
+    "path": "verse/exodus/32/32.html"
+  },
+  {
+    "name": "Exodus 4:10,13",
+    "slug": "exodus/4/10",
+    "category": "verse",
+    "path": "verse/exodus/4/10.html"
+  },
+  {
+    "name": "Job 31:18",
+    "slug": "job/31/18",
+    "category": "verse",
+    "path": "verse/job/31/18.html"
+  },
+  {
+    "name": "John 3:30",
+    "slug": "john/3/30",
+    "category": "verse",
+    "path": "verse/john/3/30.html"
+  },
+  {
+    "name": "3 Kings 3:7",
+    "slug": "kings/3/7",
+    "category": "verse",
+    "path": "verse/kings/3/7.html"
+  },
+  {
+    "name": "Numbers 12:3",
+    "slug": "numbers/12/3",
+    "category": "verse",
+    "path": "verse/numbers/12/3.html"
+  },
+  {
+    "name": "Wisdom 8:1",
+    "slug": "wisdom/8/1",
+    "category": "verse",
+    "path": "verse/wisdom/8/1.html"
+  },
+  {
+    "name": "1572",
+    "slug": "ad/16th-century/70s/1572",
+    "category": "year",
+    "path": "year/ad/16th-century/70s/1572.html"
+  },
+  {
+    "name": "1580",
+    "slug": "ad/16th-century/80s/1580",
+    "category": "year",
+    "path": "year/ad/16th-century/80s/1580.html"
+  },
+  {
+    "name": "1592",
+    "slug": "ad/16th-century/90s/1592",
+    "category": "year",
+    "path": "year/ad/16th-century/90s/1592.html"
+  },
+  {
+    "name": "1604",
+    "slug": "ad/17th-century/00s/1604",
+    "category": "year",
+    "path": "year/ad/17th-century/00s/1604.html"
+  },
+  {
+    "name": "1615",
+    "slug": "ad/17th-century/10s/1615",
+    "category": "year",
+    "path": "year/ad/17th-century/10s/1615.html"
+  },
+  {
+    "name": "1616",
+    "slug": "ad/17th-century/10s/1616",
+    "category": "year",
+    "path": "year/ad/17th-century/10s/1616.html"
+  },
+  {
+    "name": "1623",
+    "slug": "ad/17th-century/20s/1623",
+    "category": "year",
+    "path": "year/ad/17th-century/20s/1623.html"
+  },
+  {
+    "name": "1635",
+    "slug": "ad/17th-century/30s/1635",
+    "category": "year",
+    "path": "year/ad/17th-century/30s/1635.html"
+  },
+  {
+    "name": "1637",
+    "slug": "ad/17th-century/30s/1637",
+    "category": "year",
+    "path": "year/ad/17th-century/30s/1637.html"
+  },
+  {
+    "name": "1638",
+    "slug": "ad/17th-century/30s/1638",
+    "category": "year",
+    "path": "year/ad/17th-century/30s/1638.html"
+  },
+  {
+    "name": "1642",
+    "slug": "ad/17th-century/40s/1642",
+    "category": "year",
+    "path": "year/ad/17th-century/40s/1642.html"
+  },
+  {
+    "name": "1644",
+    "slug": "ad/17th-century/40s/1644",
+    "category": "year",
+    "path": "year/ad/17th-century/40s/1644.html"
+  },
+  {
+    "name": "1852",
+    "slug": "ad/19th-century/50s/1852",
+    "category": "year",
+    "path": "year/ad/19th-century/50s/1852.html"
+  },
+  {
+    "name": "1891",
+    "slug": "ad/19th-century/90s/1891",
+    "category": "year",
+    "path": "year/ad/19th-century/90s/1891.html"
+  }
+]
