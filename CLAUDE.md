@@ -18,8 +18,10 @@ Catholic theological texts site at lapide.org. Primarily Cornelius a Lapide's bi
 - **Turkish**: `filename_tr.html` with `lang="tr"`
 - **Swedish**: `filename_sv.html` with `lang="sv"`
 - **Vietnamese**: `filename_vi.html` with `lang="vi"`
+- **Bengali**: `filename_bn.html` with `lang="bn"`
 - **Cebuano**: `filename_ceb.html` with `lang="ceb"`
 - **Igbo**: `filename_ig.html` with `lang="ig"`
+- **Tamil**: `filename_ta.html` with `lang="ta"`
 - Future languages follow the same pattern: `filename_XX.html` with the appropriate ISO 639-1 code (or ISO 639-2/3 for languages without a two-letter code, e.g., Cebuano `ceb`).
 
 Index pages: `index.html`, `index_lt.html`, `index_es.html`, `index_fr.html`, `index_pt.html`
@@ -137,11 +139,13 @@ Each language has its own conventions file covering proper names, saint names, q
 - **Swahili** — See `lang_conventions/sw.md`
 - **Swedish** — See `lang_conventions/sv.md`
 - **Tagalog** — See `lang_conventions/tl.md`
+- **Tamil** — See `lang_conventions/ta.md`
 - **Thai** — See `lang_conventions/th.md`
 - **Turkish** — See `lang_conventions/tr.md`
 - **Vietnamese** — See `lang_conventions/vi.md`
 - **Yoruba** — See `lang_conventions/yo.md`
 - **Igbo** — See `lang_conventions/ig.md`
+- **Bengali** — See `lang_conventions/bn.md`
 - **Cebuano** — See `lang_conventions/ceb.md`
 - **Chinese (Mandarin)** — See `lang_conventions/zh.md`
 
