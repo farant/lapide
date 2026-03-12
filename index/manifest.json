@@ -425,13 +425,6 @@
     "path": "person/biblical/jacob.html"
   },
   {
-    "name": "Jesus Christ",
-    "slug": "biblical/jesus-christ",
-    "category": "person",
-    "subcategory": "biblical",
-    "path": "person/biblical/jesus-christ.html"
-  },
-  {
     "name": "Job",
     "slug": "biblical/job",
     "category": "person",

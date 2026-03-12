@@ -1,0 +1,123 @@
+/* index.css — Styles for generated index pages */
+
+/* ── Breadcrumb ── */
+
+.index-breadcrumb {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 1.5em;
+}
+.index-breadcrumb a {
+  color: #4a4a8a;
+}
+
+/* ── Entry page ── */
+
+article#entry h1 {
+  text-indent: 0;
+  padding-left: 0;
+}
+
+.entry-meta {
+  font-size: 0.95em;
+  margin: 1em 0;
+  line-height: 1.6;
+}
+.entry-meta dt {
+  font-weight: 600;
+  color: #555;
+  float: left;
+  clear: left;
+  margin-right: 0.5em;
+}
+.entry-meta dt::after {
+  content: ":";
+}
+.entry-meta dd {
+  margin-left: 0;
+  margin-bottom: 0.3em;
+}
+
+#description {
+  margin: 1.5em 0;
+}
+
+#related h2 {
+  font-size: 1.1em;
+  margin-top: 2em;
+}
+#related ul {
+  padding-left: 1.2em;
+}
+#related li {
+  margin-bottom: 0.3em;
+}
+
+/* ── Directory listing pages ── */
+
+.index-listing ul {
+  list-style: none;
+  padding-left: 0;
+}
+.index-listing li {
+  margin-bottom: 0.4em;
+}
+.index-listing .dir-entry {
+  font-weight: 600;
+}
+.index-listing ul ul {
+  padding-left: 1.5em;
+  margin-top: 0.3em;
+}
+.index-listing ul ul li {
+  font-weight: normal;
+}
+
+/* ── Satellite map ── */
+
+.osm-map {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 1em 0;
+  background: #1a1a2e;
+}
+.osm-map-grid {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 256px);
+}
+.osm-map-grid img {
+  width: 256px;
+  height: 256px;
+  display: block;
+}
+.osm-map-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #e53935;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+.osm-map-attr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  font-size: 0.6em;
+  padding: 1px 5px;
+  color: rgba(255,255,255,0.8);
+}
+.osm-map-attr a {
+  color: rgba(255,255,255,0.8);
+}

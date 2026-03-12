@@ -21,6 +21,62 @@ const REFS_DIR = join(ROOT, "index/refs");
 const INDEX_DIR = join(ROOT, "index");
 const BASE_URL = "https://lapide.org";
 
+// ── OSM map tiles ──
+
+const TILE_SIZE = 256;
+const MAP_ZOOM = 5;
+const TILES_DIR = join(INDEX_DIR, "tiles");
+
+function latLonToTile(lat: number, lon: number, zoom: number) {
+  const n = Math.pow(2, zoom);
+  const xFloat = (lon + 180) / 360 * n;
+  const latRad = lat * Math.PI / 180;
+  const yFloat = (1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2 * n;
+  const x = Math.floor(xFloat);
+  const y = Math.floor(yFloat);
+  return {
+    x, y,
+    px: Math.floor((xFloat - x) * TILE_SIZE),
+    py: Math.floor((yFloat - y) * TILE_SIZE),
+  };
+}
+
+async function downloadTile(zoom: number, x: number, y: number): Promise<void> {
+  const dir = join(TILES_DIR, String(zoom), String(x));
+  const filePath = join(dir, `${y}.jpg`);
+  try {
+    await stat(filePath);
+    return; // cached
+  } catch {}
+  await mkdir(dir, { recursive: true });
+  const url = `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${zoom}/${y}/${x}`;
+  const res = await fetch(url);
+  if (!res.ok) {
+    console.warn(`  ⚠ tile ${zoom}/${x}/${y}: HTTP ${res.status}`);
+    return;
+  }
+  await writeFile(filePath, new Uint8Array(await res.arrayBuffer()));
+}
+
+function generateMapHtml(lat: number, lon: number): string {
+  const { x, y, px, py } = latLonToTile(lat, lon, MAP_ZOOM);
+  const markerX = TILE_SIZE + px;
+  const markerY = TILE_SIZE + py;
+  const tiles: string[] = [];
+  for (let dy = -1; dy <= 1; dy++) {
+    for (let dx = -1; dx <= 1; dx++) {
+      tiles.push(`      <img src="/index/tiles/${MAP_ZOOM}/${x + dx}/${y + dy}.jpg" alt="">`);
+    }
+  }
+  return `  <div class="osm-map">
+    <div class="osm-map-grid" style="left: calc(50% - ${markerX}px); top: calc(50% - ${markerY}px);">
+${tiles.join("\n")}
+    </div>
+    <div class="osm-map-pin"></div>
+    <div class="osm-map-attr">&copy; Esri, Maxar, Earthstar Geographics</div>
+  </div>`;
+}
+
 // ── YAML frontmatter parser (handles our subset) ──
 
 interface RefData {
@@ -202,11 +258,68 @@ function formatInline(s: string): string {
   s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
   // Italic
   s = s.replace(/\*(.+?)\*/g, "<em>$1</em>");
-  // Inline code (used for file references like `01_Preliminares.html#section`)
+
+  // Source references with passage ref: `file.html#section-pN-rM` → deep link to exact passage
+  s = s.replace(/`([^`]+\.html)#([^`]+)-p(\d+)-r(\d+)`/g, (_, file, section, pNum, rNum) => {
+    const fragment = `${section}-p${pNum}-r${rNum}`;
+    const href = `/${file}#${fragment}`;
+    const label = humanizeFilename(file);
+    const sectionLabel = humanizeSection(section);
+    return `<a href="${href}" class="source-ref">${escHtml(label)}, ${escHtml(sectionLabel)} ¶${pNum}</a>`;
+  });
+
+  // Source references with paragraph: `file.html#section` ~pN → paragraph link
+  s = s.replace(/`([^`]+\.html)#([^`]+)`\s*~p(\d+)/g, (_, file, section, pNum) => {
+    const href = `/${file}#${section}-p${pNum}`;
+    const label = humanizeFilename(file);
+    const sectionLabel = humanizeSection(section);
+    return `<a href="${href}" class="source-ref">${escHtml(label)}, ${escHtml(sectionLabel)} ¶${pNum}</a>`;
+  });
+
+  // Source references without paragraph: `file.html#section` → section link
+  s = s.replace(/`([^`]+\.html)#([^`]+)`/g, (_, file, section) => {
+    const href = `/${file}#${section}`;
+    const label = humanizeFilename(file);
+    const sectionLabel = humanizeSection(section);
+    return `<a href="${href}" class="source-ref">${escHtml(label)}, ${escHtml(sectionLabel)}</a>`;
+  });
+
+  // Source references (file only, no section): `file.html`
+  s = s.replace(/`([^`]+\.html)`/g, (_, file) => {
+    const href = `/${file}`;
+    const label = humanizeFilename(file);
+    return `<a href="${href}" class="source-ref">${escHtml(label)}</a>`;
+  });
+
+  // Remaining inline code
   s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
   // Links
   s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
   return s;
+}
+
+function humanizeFilename(file: string): string {
+  // "01_Preliminares.html" → "Preliminares"
+  // "01_genesis_01.html" → "Genesis 1"
+  // "02_Clemens_Hieronymi_Du_Culte.html" → "Clemens Hieronymi Du Culte"
+  let name = file.replace(/\.html$/, "");
+  // Strip leading number prefix
+  name = name.replace(/^\d+_/, "");
+  // Handle genesis chapters: "genesis_01" → "Genesis 1"
+  const genMatch = name.match(/^genesis_(\d+)(.*)$/i);
+  if (genMatch) {
+    const ch = parseInt(genMatch[1], 10);
+    const suffix = genMatch[2] ? genMatch[2].replace(/_/g, " ") : "";
+    return `Genesis ${ch}${suffix}`;
+  }
+  // Replace underscores with spaces
+  return name.replace(/_/g, " ");
+}
+
+function humanizeSection(section: string): string {
+  // "preface-reader" → "Preface Reader"
+  // "dedicatory-letter" → "Dedicatory Letter"
+  return section.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
 function escHtml(s: string): string {
@@ -346,8 +459,18 @@ function generateEntryHtml(ref: RefData): string {
     ? `\n  <dl class="entry-meta">\n${metaParts.join("\n")}\n  </dl>\n`
     : "";
 
+  // Map for places with coordinates
+  let mapHtml = "";
+  if (fm.lat != null && fm.lon != null) {
+    mapHtml = generateMapHtml(Number(fm.lat), Number(fm.lon)) + "\n";
+  }
+
   // Body content (description + references)
-  const bodyHtml = mdToHtml(ref.body);
+  // Append ?entity=slug to source-ref links so the commentary page auto-opens this entity's card
+  const bodyHtml = mdToHtml(ref.body).replace(
+    /<a href="(\/[^"]+\.html)([^"]*)" class="source-ref">/g,
+    (_, file, rest) => `<a href="${file}?entity=${encodeURIComponent(fullSlug)}${rest}" class="source-ref">`
+  );
 
   // Related section
   const related = fm.related as Record<string, string[]> | undefined;
@@ -408,7 +531,7 @@ ${items.join("\n")}
 <article id="entry" data-category="${escHtml(category)}" data-slug="${escHtml(slug)}">
 
   <h1>${escHtml(name)}</h1>
-${metaDl}
+${metaDl}${mapHtml}
   <section id="description">
     ${bodyHtml}
   </section>
@@ -567,6 +690,28 @@ async function main() {
 
   console.log(`${canonical.length} canonical entries, ${aliases.length} aliases`);
 
+  // Download map tiles for place entries with coordinates
+  const tilesToDownload = new Set<string>();
+  for (const ref of canonical) {
+    const fm = ref.frontmatter;
+    if (fm.lat != null && fm.lon != null) {
+      const { x, y } = latLonToTile(Number(fm.lat), Number(fm.lon), MAP_ZOOM);
+      for (let dy = -1; dy <= 1; dy++) {
+        for (let dx = -1; dx <= 1; dx++) {
+          tilesToDownload.add(`${MAP_ZOOM}/${x + dx}/${y + dy}`);
+        }
+      }
+    }
+  }
+  if (tilesToDownload.size > 0) {
+    console.log(`Downloading ${tilesToDownload.size} map tiles...`);
+    await Promise.all([...tilesToDownload].map(key => {
+      const [z, x, y] = key.split("/").map(Number);
+      return downloadTile(z, x, y);
+    }));
+    console.log("Map tiles ready.");
+  }
+
   // Track all generated HTML paths for directory indexes
   const generatedPaths = new Map<string, { name: string; slug: string; description?: string; dates?: string }>();
 
@@ -647,7 +792,7 @@ async function main() {
     }
     for (const entry of fsEntries) {
       if (entry.name.startsWith(".")) continue;
-      if (entry.name === "refs" || entry.name === "extractions") continue;
+      if (entry.name === "refs" || entry.name === "extractions" || entry.name === "tiles") continue;
       if (entry.name === "index.html") continue;
       if (entry.name === "DESIGN.md" || entry.name === "normalization-decisions.md") continue;
       if (entry.name === "components.js" || entry.name === "index.css" || entry.name === "manifest.json") continue;
