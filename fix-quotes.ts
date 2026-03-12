@@ -15,6 +15,14 @@
 const LANG_RULES: Record<string, { open: string; close: string; asciiClose: string }[]> = {
   // Hungarian: „..." — opening „ (U+201E), closing " (U+201D)
   hu: [{ open: "\u201E", close: "\u201D", asciiClose: '"' }],
+  // Dutch: „..." — same pattern as Hungarian
+  nl: [{ open: "\u201E", close: "\u201D", asciiClose: '"' }],
+  // German: „..." — same pattern as Hungarian
+  de: [{ open: "\u201E", close: "\u201D", asciiClose: '"' }],
+  // Polish: „..." — same pattern as Hungarian
+  pl: [{ open: "\u201E", close: "\u201D", asciiClose: '"' }],
+  // Romanian: „..." — same pattern as Hungarian
+  ro: [{ open: "\u201E", close: "\u201D", asciiClose: '"' }],
 };
 
 function detectLang(content: string): string | null {

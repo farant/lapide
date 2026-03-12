@@ -50,8 +50,10 @@ Bengali script has its own conjuncts (যুক্তাক্ষর) that must 
 
 ## Agent pitfalls
 
+- **সাধু ভাষা (archaic register)**: Agents may produce সাধু ভাষা instead of চলিত ভাষা, especially when translating elevated theological or literary prose. সাধু ভাষা is WRONG for this project. Watch for telltale সাধু verb forms: "হইল" (should be "হলো/হয়েছে"), "করিয়াছে" (should be "করেছে"), "হইতে" (should be "থেকে"/"হতে"), "করিবে" (should be "করবে"), "তাহার" (should be "তার"), "ইহা" (should be "এটি"/"এটা"), "করিবার" (should be "করার"), "যাহা" (should be "যা"), "নহে" (should be "নয়"). This is the most common Bengali pitfall — agents default to সাধু for formal/theological content because it "sounds" more literary. Explicitly instruct agents to use চলিত forms.
 - **Script confusion**: Bengali and Devanagari scripts look superficially similar but are distinct. Agents may mix characters from the two scripts. Every character must be from the Bengali Unicode block (U+0980–U+09FF).
 - **Anglicized Church Father names**: Agents default to anglicized forms like জেরোম, অগাস্টিন instead of the required Latinized forms (হিয়েরোনিমুস, আউগুস্তিনুস). Must be explicitly instructed.
 - **Colloquial register**: Agents may drift to colloquial চলিত instead of formal literary চলিত. Watch for overly casual phrasing.
 - **Missing conjuncts**: Agents may break conjunct consonants into separate characters with visible hasanta instead of proper ligatures. Most fonts handle this automatically, but the underlying Unicode must be correct.
 - **Number script**: Use Bengali numerals (০, ১, ২, ৩, ৪, ৫, ৬, ৭, ৮, ৯) in translated text, not Arabic/Western numerals, except in HTML attributes and URLs.
+- **খ্রিস্ট vs খ্রীষ্ট**: The standard Bengali Bible spelling is খ্রীষ্ট (with ঈ-কার). Agents may produce খ্রিস্ট (with ই-কার). Always use খ্রীষ্ট.
