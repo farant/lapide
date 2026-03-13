@@ -630,6 +630,7 @@ ${items.join("\n")}
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escHtml(name)} — Lapide Index</title>
 <meta name="description" content="${escHtml(description)}">
 <link rel="canonical" href="${canonicalUrl}">
@@ -668,6 +669,7 @@ function generateAliasHtml(aliasOf: string, category: string): string {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escHtml(name)} — Lapide Index</title>
 <link rel="canonical" href="${canonicalUrl}">
 <meta http-equiv="refresh" content="0; url=/index/${aliasOf}.html">
@@ -763,6 +765,7 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escHtml(title)} — Lapide Index</title>
 <link rel="canonical" href="${canonicalUrl}">
 <link rel="stylesheet" href="/style.css">
