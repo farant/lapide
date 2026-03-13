@@ -91,6 +91,19 @@ article#entry h1 {
   margin-bottom: 0.3em;
 }
 
+/* ── Root index note ── */
+
+.index-note {
+  margin: 1.5em 0;
+  padding: 1em 1.2em;
+  border-left: 3px solid #ccc;
+  color: #555;
+  font-size: 0.95em;
+}
+.index-note p {
+  margin: 0.4em 0;
+}
+
 /* ── Works section (person pages) ── */
 
 #works h2 {

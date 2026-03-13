@@ -777,6 +777,17 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
 
 <h1>${escHtml(title)}</h1>
 ${(() => {
+    // Root index page note
+    if (segments.length === 0) {
+      return `
+<div class="index-note">
+<p>Hello!</p>
+<p>This index is an even bigger experiment than the translations.</p>
+<p>It is all being generated with the assistance of "Claude" AI so it is very possible you might find mistakes. If you find any mistakes please do let me know by making an <a href="https://github.com/farant/lapide/issues">Issue</a> at <a href="https://github.com/farant/lapide">github.com/farant/lapide</a>.</p>
+<p>I'm not sure if this index will be practical or useful to build out across all of the chapters and languages, but I had the idea and wanted to see how well it worked.</p>
+</div>
+`;
+    }
     // For bibliography author directories, link to the person page
     if (segments.length === 2 && segments[0] === "bibliography") {
       const author = bibDirToAuthor.get(segments[1]);
