@@ -175,6 +175,7 @@ class EntityPanel {
 
 	_dismiss() {
 		if (this.stack.length === 0) return;
+		this._dismissScrollHint();
 		this.stack.splice(this.index, 1);
 		if (this.stack.length === 0) {
 			this.index = 0;
@@ -197,11 +198,49 @@ class EntityPanel {
 				this.el.previousElementSibling !== paragraphEl) {
 				paragraphEl.after(this.el);
 			}
+			// Check if the panel is below the viewport
+			requestAnimationFrame(() => this._showScrollHint());
 		} else {
 			// Desktop: panel lives in body, positioned via CSS
 			if (this.el.parentNode !== document.body) {
 				document.body.appendChild(this.el);
 			}
+		}
+	}
+
+	_showScrollHint() {
+		// Remove any existing hint
+		this._dismissScrollHint();
+
+		const rect = this.el.getBoundingClientRect();
+		// If the top of the panel is within or above the viewport, no hint needed
+		if (rect.top < window.innerHeight - 40) return;
+
+		const hint = document.createElement('div');
+		hint.className = 'ep-scroll-hint';
+		hint.innerHTML = '&#8595;';  // down arrow
+		hint.setAttribute('aria-label', 'Scroll down to see entity card');
+		document.body.appendChild(hint);
+		this._scrollHint = hint;
+
+		// Tap to scroll to panel
+		hint.addEventListener('click', () => {
+			this.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			this._dismissScrollHint();
+		});
+
+		// Auto-dismiss after 3s
+		this._scrollHintTimer = setTimeout(() => this._dismissScrollHint(), 3000);
+	}
+
+	_dismissScrollHint() {
+		if (this._scrollHint) {
+			this._scrollHint.remove();
+			this._scrollHint = null;
+		}
+		if (this._scrollHintTimer) {
+			clearTimeout(this._scrollHintTimer);
+			this._scrollHintTimer = null;
 		}
 	}
 }
@@ -436,6 +475,33 @@ mark.passage-highlight.fade-out {
 .passage-highlight-para {
   background-color: #fef3c7;
   transition: background-color 1s ease;
+}
+
+/* ── Scroll hint (mobile, panel off-screen) ── */
+
+.ep-scroll-hint {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #4a4a8a;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  animation: ep-bounce 0.6s ease infinite alternate;
+  z-index: 200;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes ep-bounce {
+  from { transform: translateX(-50%) translateY(0); }
+  to   { transform: translateX(-50%) translateY(-6px); }
 }
 `;
 
