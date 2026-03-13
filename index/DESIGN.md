@@ -661,7 +661,7 @@ Source document
 │  Stage 3:   │  → passage spans added to source HTML
 │  Annotate   │  → ref file links updated with content hashes
 └─────┬───────┘
-      │
+      │ verify (--check + lint)
       ▼
 ┌─────────────┐
 │  Stage 4:   │  → audit report (all refs verified against passage text)
@@ -671,9 +671,9 @@ Source document
       ▼
 ┌─────────────┐
 │  Stage 5:   │  → entity-ref web component tags added to source HTML
-│  Entity-ref │
+│  Entity-ref │  → components.js script tag auto-inserted
 └─────┬───────┘
-      │
+      │ verify (lint) + review (agents, fanned out)
       ▼
 ┌─────────────┐
 │  Stage 6:   │  → index/**/*.html (generated from refs)
@@ -1002,7 +1002,7 @@ Fix any errors, then run a reconciliation pass if needed to resolve cross-refere
 
 Embed a JSON sidecar in the source HTML that maps each referenced text passage to its location within a paragraph. No inline markup (`<span>`, etc.) is added to the text itself — all annotation data lives in a `<script type="application/json" id="passage-annotations">` block inserted before `</body>`.
 
-**Tool**: `bun annotate-source.ts <source.html>`
+**Tool**: `bun annotate-source.ts <source.html>` (or `--check` for dry-run verification)
 
 The annotator:
 
@@ -1047,11 +1047,22 @@ The annotator:
 
 The hash makes each reference self-verifying — if the source text changes, the hash changes, and `validate-refs.ts` will flag the stale link.
 
-**Idempotent** — removes any existing sidecar and strips existing `-s-{hash}` suffixes from ref file links before re-deriving everything from current text.
+**Idempotent** — removes any existing sidecar and strips existing `-s-{hash}` suffixes from ref file links before re-deriving everything from current text. Ref file link updates are line-targeted (not global regex), so multiple annotations within the same paragraph each get their own correct hash.
+
+**Dry-run mode** (`--check`): compares the current state against what a fresh annotate run would produce, without modifying any files. Reports new/removed/changed annotations and stale ref file links. Exits 0 if everything is in sync, 1 if changes are needed. Use after editing source HTML to quickly verify nothing drifted.
 
 **Client-side behavior**: When a URL fragment matches `#...-s-{hash}`, JavaScript reads the sidecar, finds the annotation by ID, locates the paragraph, and highlights the referenced character range. The `components.js` script handles this.
 
+**Ref file format**: Each `text:` entry must appear on its own link line. If two passages in the same paragraph are referenced, use two separate link entries (each with its own `text:` field), not two `text:` fields under one link. This ensures each link gets a unique hash.
+
 Output: source HTML with embedded JSON sidecar + ref files updated with hash-based links.
+
+**Post-annotate verification**:
+
+```
+bun annotate-source.ts --check <source.html>   # confirm 0 changes needed
+bun lint-annotations.ts <source.html>           # confirm 0 issues
+```
 
 ### Stage 4: Verify
 
@@ -1068,15 +1079,43 @@ Output: audit report. Zero failures required before proceeding.
 
 Add `<entity-ref>` web component tags to the source HTML, wrapping entity names with links to their index pages. This stage creates the forward links from commentary text to index entries.
 
+**Tool**: `bun tag-entity-refs.ts <source.html>`
+
 ```html
 <entity-ref slug="person/classical/libanius">Libanius</entity-ref> the Sophist
 ```
 
 Entity-ref tags appear independently in the HTML text. They do not interact with the JSON sidecar annotations — entity-refs are forward links (text → index entry), while sidecar annotations are backlinks (index entry → text).
 
-Annotation is conservative — only tag references that can be confidently identified. Ambiguous references are left untagged.
+The tagger:
 
-Output: fully annotated source HTML with entity-ref tags and JSON sidecar.
+1. Reads all ref files to build a name → slug index (including `also_known_as` aliases)
+2. Strips any existing `<entity-ref>` tags (idempotent)
+3. For each paragraph, searches for entity name mentions as whole words (longest match first)
+4. Tags the first mention of each entity per section (not every occurrence)
+5. Resolves ambiguous names (multiple entities share a name) using ref file context — only tags in paragraphs where the ref file explicitly references that entity
+6. Skips text inside `<a>` tags (already linked)
+7. Auto-inserts `<script src="/index/components.js" type="module"></script>` in `<head>` if missing
+
+**Annotation strategy**: conservative — only tag references that can be confidently identified. Ambiguous references are left untagged and can be resolved in later passes.
+
+**Post-tagging verification**:
+
+```
+bun lint-annotations.ts <source.html>   # confirm entity-ref slugs all resolve, components.js present
+```
+
+**Manual review** (fanned out for large documents): After automated tagging, run review agents to check for:
+
+- **Missing tags**: entity names mentioned in the text but not tagged — especially names that differ from the canonical form (e.g., "the Doctor of Grace" for Augustine, "the Apostle" for Paul in context)
+- **Mislabeled tags**: entity-ref tags pointing to the wrong slug — especially ambiguous names that the tagger resolved incorrectly (e.g., "Gregory" tagged as Gregory of Nyssa when context indicates Gregory the Great)
+- **Over-tagging**: names tagged as entities that are actually common words in context (e.g., "Grace" as a person name vs. the theological concept)
+
+For large documents, split the review by section range and run multiple agents in parallel. Each agent reads its assigned section of the tagged HTML alongside the ref files, checking that every entity-ref tag is correct and that no obvious entity mentions were missed. Agents should report findings as a list of specific corrections (add/remove/change tag at paragraph ID).
+
+Apply corrections, then re-run `bun tag-entity-refs.ts` (idempotent — strips and re-tags) if structural changes are needed, or apply targeted fixes with the Edit tool for individual corrections.
+
+Output: fully annotated source HTML with entity-ref tags, JSON sidecar, and components.js script tag.
 
 ### Stage 6: Generate
 
@@ -1094,21 +1133,35 @@ Output: `index/**/*.html` entry pages, alias pages, directory index pages, and `
 | 1 | Extract | Manual (agents) |
 | 2 | Normalize | Manual (agents) + `bun validate-refs.ts` |
 | 3 | Annotate | `bun annotate-source.ts <source.html>` |
+| 3✓ | Verify | `bun annotate-source.ts --check <source.html>` + `bun lint-annotations.ts <source.html>` |
 | 4 | Verify | `bun validate-refs.ts` |
 | 5 | Entity-ref | `bun tag-entity-refs.ts <source.html>` |
+| 5✓ | Verify | `bun lint-annotations.ts <source.html>` |
 | 6 | Generate | `bun generate-index.ts` |
 
 Additional utility tools:
 - `bun validate-extractions.ts <source.html> [extraction-dir]` — validates extraction files against source HTML
 - `bun audit-refs.ts` — detailed audit of ref file references
-- `bun lint-annotations.ts` — checks sidecar annotation integrity
+- `bun lint-annotations.ts <source.html>` — checks sidecar annotation integrity (orphans, broken slugs, missing script tags, invalid offsets)
+- `bun annotate-source.ts --check <source.html>` — dry-run annotation comparison (exits 1 if out of sync)
 - `bun fix-ref-links.ts` — repairs broken ref file links
 - `bun sync-passage-refs.ts` — syncs passage references across ref files
 - `bun check-index-links.ts` / `bun fix-index-links.ts` — check and repair index page links
 
 ### Pipeline notes
 
-Each stage has a review checkpoint. Documents can be at different stages — e.g., Preliminares may be fully annotated while Genesis 1 is still at the extraction stage.
+Each stage has a review/verify checkpoint. Documents can be at different stages — e.g., Preliminares may be fully annotated while Genesis 1 is still at the extraction stage.
+
+**Full verification chain** (run after completing Stages 3–5 for a document):
+
+```
+bun validate-refs.ts                              # text: fields match HTML
+bun annotate-source.ts <source.html>              # re-derive sidecar + update ref hashes
+bun annotate-source.ts --check <source.html>      # confirm 0 changes needed
+bun lint-annotations.ts <source.html>             # confirm 0 issues (orphans, broken slugs, offsets)
+```
+
+All four should pass clean before considering a document fully indexed.
 
 Stage 6 (Generate) can also be run independently at any time, since it only reads ref files and produces HTML.
 
