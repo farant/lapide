@@ -22,7 +22,7 @@ The printing press of the Holy See, used for the authoritative edition of the co
 
 - `01_Preliminares.html#preface-reader-p13-s-091ac66` — The corrected Vulgate issued from the Vatican Press
   text: "Receive therefore, Christian reader, with the approval of the same Clement, Supreme Pontiff, from the Vatican Press, the Old and Vulgate edition of the Holy Scripture"
-- `01_Preliminares.html#clement-viii-p2-s-b8b6421` — Clement VIII forbids printing elsewhere for ten years
+- `01_Preliminares.html#clement-viii-p2-s-7b3a29e` — Clement VIII forbids printing elsewhere for ten years
   text: "it be printed by anyone anywhere other than in our Vatican Press"
 - `01_Preliminares.html#clement-viii-p2-s-b8b6421` — Printers must obtain a copy from the Vatican Press
   text: "no one presume to commit this edition of the Holy Scriptures to the press unless he has first obtained a copy printed in the Vatican Press"

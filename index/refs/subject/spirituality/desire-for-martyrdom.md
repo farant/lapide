@@ -19,9 +19,9 @@ The ardent, lifelong desire to seal one's faith with blood, as exemplified by Co
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-24aca0e` — Lapide's desire for martyrdom, "divinely implanted from his very first novitiate," persisted throughout his life.
+- `01_Preliminares.html#life-p3-s-ef2f41e` — Lapide's desire for martyrdom, "divinely implanted from his very first novitiate," persisted throughout his life.
   text: "The most ardent desire to undergo martyrdom, divinely implanted from his very first novitiate, he always so persistently retained that he unceasingly besought that crown for himself with all his vows."
-- `01_Preliminares.html#life-p3-s-24aca0e` — In 1604, Lapide nearly achieved martyrdom at Aspromont when Dutch cavalry attacked; he was saved while carrying the Eucharist to protect it from heretics.
+- `01_Preliminares.html#life-p3-s-ed36842` — In 1604, Lapide nearly achieved martyrdom at Aspromont when Dutch cavalry attacked; he was saved while carrying the Eucharist to protect it from heretics.
   text: "He had almost already clasped it in his hands in the year 1604, when, staying near the shrine of Our Lady of Aspromont... a Dutch cavalry unit fell upon the place unexpectedly on the very feast of the Nativity of Our Lady"
 - `01_Preliminares.html#life-p3-s-24aca0e` — Lapide's prayer to the Prophets asking them to obtain for him "the fourth martyrdom, that of blood" after bearing three other martyrdoms.
   text: "obtain for me, I beseech you, as a crowning gift the fourth martyrdom, that of blood. I have exhausted for you my vital and animal spirits; I shall exhaust my blood also."

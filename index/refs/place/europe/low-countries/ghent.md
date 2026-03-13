@@ -30,7 +30,7 @@ Major city in Flanders, described as the jewel of Flanders and Belgium, renowned
   text: "you were called to the bishopric of Ghent by our Most Serene Archduke"
 - `01_Preliminares.html#dedicatory-letter-p18-s-143b62d` — Van der Burch transferred from Ghent to Cambrai
   text: "His Most Serene Highness the Archduke was considering transferring you from the bishopric of Ghent"
-- `01_Preliminares.html#dedicatory-letter-p21-s-5c6a1d4` — Van der Burch drew the hearts of the people of Ghent
+- `01_Preliminares.html#dedicatory-letter-p21-s-c020025` — Van der Burch drew the hearts of the people of Ghent
   text: "you have drawn the hearts of the people of Ghent into love for you"
 - `01_Preliminares.html#dedicatory-letter-p21-s-5c6a1d4` — Ghent described as the jewel of Flanders and birthplace of Charles V
   text: "Ghent is the jewel of Flanders and Belgium, renowned not least as the birthplace of Charles V the Unconquered Emperor"

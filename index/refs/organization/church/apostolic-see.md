@@ -26,7 +26,7 @@ The episcopal jurisdiction of the Pope as Bishop of Rome. Referenced as the supr
 
 - `01_Preliminares.html#trent-decrees-p3-s-7228970` — Three legates of the Apostolic See presided at the Council
   text: "with the three legates of the Apostolic See presiding over it"
-- `01_Preliminares.html#preface-reader-p10-s-dae8f0e` — Integrity of the Scriptures pertains to the care of the Apostolic See
+- `01_Preliminares.html#preface-reader-p10-s-72b2646` — Integrity of the Scriptures pertains to the care of the Apostolic See
   text: "the very integrity and purity of the Scriptures themselves, are known to pertain especially to the care of the Apostolic See"
 - `01_Preliminares.html#preface-reader-p10-s-dae8f0e` — Pius IV entrusted the Vulgate correction to Cardinals
   text: "Pius IV, Supreme Pontiff, with his incredible vigilance over all parts of the Church, entrusted that task to certain most select Cardinals of the Holy Roman Church"

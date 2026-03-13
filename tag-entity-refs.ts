@@ -334,7 +334,16 @@ html = html.replace(pPattern, (_, openTag, paraId, innerHtml, closeTag) => {
   return `${openTag}${segments.map((s) => s.content).join("")}${closeTag}`;
 });
 
-// --- Step 5: Write output ---
+// --- Step 5: Ensure components.js script tag is present ---
+
+const COMPONENTS_TAG = '<script src="/index/components.js" type="module"></script>';
+
+if (!html.includes('/index/components.js')) {
+  html = html.replace('</head>', `${COMPONENTS_TAG}\n</head>`);
+  console.log(`\nInserted ${COMPONENTS_TAG} into <head>`);
+}
+
+// --- Step 6: Write output ---
 
 await Bun.write(sourceFile, html);
 

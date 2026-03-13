@@ -30,7 +30,7 @@ Seat of the papacy and the Catholic Church. Lapide was summoned here by his Jesu
   text: "formerly professor of Holy Scripture at Louvain, afterwards at Rome"
 - `01_Preliminares.html#permissions-s-d604b94` — Vitelleschi's permission letter dated at Rome
   text: "we have given these letters signed with our own hand and secured with our seal, at Rome, 9 January 1616"
-- `01_Preliminares.html#life-p2-s-a1a1126` — Lapide summoned to Rome by his superiors
+- `01_Preliminares.html#life-p2-s-1b2adb6` — Lapide summoned to Rome by his superiors
   text: "was then summoned to Rome by his superiors, where he expounded the same subjects for many years"
 - `01_Preliminares.html#life-p2-s-a1a1126` — Lapide found in Rome what Jerome sought in Bethlehem
   text: "whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome"

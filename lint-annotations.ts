@@ -1,24 +1,23 @@
 #!/usr/bin/env bun
 /**
- * lint-annotations.ts — Check for gaps between ref files, passage markup, and entity-ref tags
+ * lint-annotations.ts — Check for gaps between ref files, sidecar annotations, and entity-ref tags
  *
  * Usage: bun lint-annotations.ts <annotated-file.html>
  *
  * Checks:
- * 1. Ref file references still using old ~pN format (not synced to passage IDs)
- * 2. Ref file references pointing to paragraphs with no ref-passage spans
- * 3. Paragraph IDs referenced in ref files that don't exist in the HTML
- * 4. ref-passage spans whose IDs aren't referenced by any ref file
- * 5. entity-ref tags pointing to slugs with no ref file
- * 6. Ref file entities mentioned in the source text but missing entity-ref tags
+ * 1. Ref file references still using old ~pN format (not synced to sidecar hashes)
+ * 2. Ref file references pointing to paragraphs with no sidecar annotation
+ * 3. Paragraph IDs in ref files that don't exist in the HTML
+ * 4. Sidecar annotations not referenced by any ref file (orphans)
+ * 5. Sidecar annotations with invalid paragraph IDs or out-of-range offsets
+ * 6. entity-ref tags pointing to slugs with no ref file
+ * 7. components.js script tag missing from <head>
  */
 
-import { readFile, readdir } from "fs/promises";
-import { join } from "path";
+import { Glob } from "bun";
 
-const ROOT = import.meta.dir;
-const REFS_DIR = join(ROOT, "index/refs");
-const sourceFile = process.argv.find(a => a.endsWith(".html"));
+const REFS_DIR = "index/refs";
+const sourceFile = Bun.argv.find(a => a.endsWith(".html"));
 
 if (!sourceFile) {
   console.error("Usage: bun lint-annotations.ts <annotated-file.html>");
@@ -29,41 +28,75 @@ const fileName = sourceFile.split("/").pop()!;
 
 // ── Parse the annotated HTML ──
 
+interface SidecarAnnotation {
+  id: string;
+  paragraph: string;
+  start: number;
+  end: number;
+  entities: string[];
+}
+
 interface HtmlData {
-  paragraphIds: Set<string>;          // all id="..." on <p> tags
-  passageSpans: Map<string, string[]>; // passage ID → entity slugs from data-entities
-  passagesByParagraph: Map<string, string[]>; // paragraph ID → passage IDs in it
-  entityRefSlugs: Set<string>;         // all slug="..." from <entity-ref> tags
+  paragraphIds: Set<string>;
+  paragraphTexts: Map<string, number>; // id → plain text length
+  annotations: SidecarAnnotation[];
+  annotationIds: Set<string>;
+  annotationsByParagraph: Map<string, string[]>;
+  entityRefSlugs: Set<string>;
+  hasComponentsScript: boolean;
   content: string;
 }
 
-async function parseHtml(): Promise<HtmlData> {
-  const content = await readFile(sourceFile!, "utf-8");
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&rsquo;/g, "\u2019")
+    .replace(/&lsquo;/g, "\u2018")
+    .replace(/&rdquo;/g, "\u201D")
+    .replace(/&ldquo;/g, "\u201C")
+    .replace(/&mdash;/g, "\u2014")
+    .replace(/&ndash;/g, "\u2013")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-  // Paragraph IDs
+async function parseHtml(): Promise<HtmlData> {
+  const content = await Bun.file(sourceFile!).text();
+
+  // Paragraph IDs and plain text lengths
   const paragraphIds = new Set<string>();
-  const pIdRe = /<p\s+id="([^"]+)"/g;
+  const paragraphTexts = new Map<string, number>();
+  const pIdRe = /<p\s[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/p>/gi;
   let m;
   while ((m = pIdRe.exec(content)) !== null) {
     paragraphIds.add(m[1]);
+    paragraphTexts.set(m[1], stripHtml(m[2]).length);
   }
 
-  // Passage spans
-  const passageSpans = new Map<string, string[]>();
-  const passagesByParagraph = new Map<string, string[]>();
-  const spanRe = /id="([^"]*-r\d+)"\s+data-entities="([^"]+)"/g;
-  while ((m = spanRe.exec(content)) !== null) {
-    const passageId = m[1];
-    const entities = m[2].split(",");
-    passageSpans.set(passageId, entities);
-
-    // Extract paragraph ID (everything before -rN)
-    const paraMatch = passageId.match(/^(.+)-r\d+$/);
-    if (paraMatch) {
-      const paraId = paraMatch[1];
-      if (!passagesByParagraph.has(paraId)) passagesByParagraph.set(paraId, []);
-      passagesByParagraph.get(paraId)!.push(passageId);
+  // Parse sidecar JSON
+  let annotations: SidecarAnnotation[] = [];
+  const sidecarMatch = content.match(
+    /<script type="application\/json" id="passage-annotations">([\s\S]*?)<\/script>/
+  );
+  if (sidecarMatch) {
+    try {
+      annotations = JSON.parse(sidecarMatch[1]);
+    } catch {
+      annotations = [];
     }
+  }
+
+  const annotationIds = new Set(annotations.map(a => a.id));
+  const annotationsByParagraph = new Map<string, string[]>();
+  for (const a of annotations) {
+    if (!annotationsByParagraph.has(a.paragraph)) annotationsByParagraph.set(a.paragraph, []);
+    annotationsByParagraph.get(a.paragraph)!.push(a.id);
   }
 
   // Entity-ref slugs
@@ -73,13 +106,19 @@ async function parseHtml(): Promise<HtmlData> {
     entityRefSlugs.add(m[1]);
   }
 
-  return { paragraphIds, passageSpans, passagesByParagraph, entityRefSlugs, content };
+  // Components script tag
+  const hasComponentsScript = content.includes("/index/components.js");
+
+  return {
+    paragraphIds, paragraphTexts, annotations, annotationIds,
+    annotationsByParagraph, entityRefSlugs, hasComponentsScript, content,
+  };
 }
 
 // ── Parse ref files ──
 
 interface RefFileEntry {
-  entitySlug: string;   // e.g., "person/saint/jerome"
+  entitySlug: string;
   entityName: string;
   filePath: string;
   references: RefLine[];
@@ -87,89 +126,94 @@ interface RefFileEntry {
 
 interface RefLine {
   raw: string;
-  paragraphId: string | null;  // e.g., "preface-reader-p2"
-  passageId: string | null;    // e.g., "preface-reader-p2-r2" (if synced)
-  isSynced: boolean;           // true if using passage ID, false if still ~pN
-}
-
-async function parseRefFiles(): Promise<RefFileEntry[]> {
-  const entries: RefFileEntry[] = [];
-
-  async function walk(dir: string) {
-    const dirEntries = await readdir(dir, { withFileTypes: true });
-    for (const entry of dirEntries) {
-      const full = join(dir, entry.name);
-      if (entry.isDirectory()) {
-        await walk(full);
-      } else if (entry.name.endsWith(".md")) {
-        const content = await readFile(full, "utf-8");
-        const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
-        if (!fmMatch) continue;
-        const fm = fmMatch[1];
-        if (fm.match(/^alias_of:/m)) continue;
-
-        const slugMatch = fm.match(/^slug:\s*(.+)$/m);
-        const categoryMatch = fm.match(/^category:\s*(.+)$/m);
-        const nameMatch = fm.match(/^name:\s*(.+)$/m);
-        if (!slugMatch || !categoryMatch) continue;
-
-        const slug = slugMatch[1].trim();
-        const category = categoryMatch[1].trim();
-        const entitySlug = `${category}/${slug}`;
-        const entityName = nameMatch ? nameMatch[1].trim() : slug;
-
-        // Parse reference lines for this file
-        const references: RefLine[] = [];
-        const lines = content.split("\n");
-        let inRefs = false;
-
-        for (const line of lines) {
-          if (line.match(/^## References in Commentary/)) { inRefs = true; continue; }
-          if (inRefs && line.startsWith("## ")) { inRefs = false; continue; }
-          if (!inRefs) continue;
-          if (!line.includes(`\`${fileName}#`)) continue;
-
-          // Check if it's a synced passage ref
-          const passageMatch = line.match(new RegExp(`\`${escapeRegex(fileName)}#([^\`]+)-r(\\d+)\``));
-          if (passageMatch) {
-            const passageId = `${passageMatch[1]}-r${passageMatch[2]}`;
-            const paraMatch = passageMatch[1].match(/^(.+)$/);
-            references.push({
-              raw: line,
-              paragraphId: passageMatch[1],
-              passageId,
-              isSynced: true,
-            });
-            continue;
-          }
-
-          // Old-style ~pN reference
-          const oldMatch = line.match(new RegExp(`\`${escapeRegex(fileName)}#([^'\`]+)\`\\s*~p(\\d+)`));
-          if (oldMatch) {
-            const section = oldMatch[1];
-            const pNum = oldMatch[2];
-            references.push({
-              raw: line,
-              paragraphId: `${section}-p${pNum}`,
-              passageId: null,
-              isSynced: false,
-            });
-          }
-        }
-
-        if (references.length > 0) {
-          entries.push({ entitySlug, entityName, filePath: full, references });
-        }
-      }
-    }
-  }
-
-  await walk(REFS_DIR);
-  return entries;
+  paragraphId: string | null;
+  annotationId: string | null; // e.g., "preface-reader-p2-s-a3f2b1c"
+  isSynced: boolean;           // true if using -s-hash, false if old format
 }
 
 function escapeRegex(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+async function parseRefFiles(): Promise<RefFileEntry[]> {
+  const entries: RefFileEntry[] = [];
+  const glob = new Glob("**/*.md");
+
+  for await (const path of glob.scan(REFS_DIR)) {
+    const full = `${REFS_DIR}/${path}`;
+    const content = await Bun.file(full).text();
+    const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    if (!fmMatch) continue;
+    const fm = fmMatch[1];
+    if (fm.match(/^alias_of:/m)) continue;
+
+    const slugMatch = fm.match(/^slug:\s*(.+)$/m);
+    const nameMatch = fm.match(/^name:\s*(.+)$/m);
+    if (!slugMatch) continue;
+
+    const slug = slugMatch[1].trim();
+    const entityName = nameMatch ? nameMatch[1].trim().replace(/^["']|["']$/g, "") : slug;
+
+    const references: RefLine[] = [];
+    const lines = content.split("\n");
+    let inRefs = false;
+
+    for (const line of lines) {
+      if (line.match(/^## References in Commentary/)) { inRefs = true; continue; }
+      if (inRefs && line.startsWith("## ")) { inRefs = false; continue; }
+      if (!inRefs) continue;
+      if (!line.includes(`\`${fileName}#`)) continue;
+
+      // Sidecar hash ref: `source.html#paragraph-id-s-XXXXXXX`
+      const sidecarMatch = line.match(new RegExp(
+        "`" + escapeRegex(fileName) + "#([^`]+)-s-([a-f0-9]{7})`"
+      ));
+      if (sidecarMatch) {
+        const paraId = sidecarMatch[1];
+        const annotationId = `${paraId}-s-${sidecarMatch[2]}`;
+        references.push({
+          raw: line,
+          paragraphId: paraId,
+          annotationId,
+          isSynced: true,
+        });
+        continue;
+      }
+
+      // Bare paragraph ref (no hash): `source.html#paragraph-id`
+      const bareMatch = line.match(new RegExp(
+        "`" + escapeRegex(fileName) + "#([^`]+)`"
+      ));
+      if (bareMatch) {
+        references.push({
+          raw: line,
+          paragraphId: bareMatch[1],
+          annotationId: null,
+          isSynced: false,
+        });
+        continue;
+      }
+
+      // Old-style ~pN reference
+      const oldMatch = line.match(new RegExp(
+        "`" + escapeRegex(fileName) + "#([^`]+)`\\s*~p(\\d+)"
+      ));
+      if (oldMatch) {
+        references.push({
+          raw: line,
+          paragraphId: `${oldMatch[1]}-p${oldMatch[2]}`,
+          annotationId: null,
+          isSynced: false,
+        });
+      }
+    }
+
+    if (references.length > 0) {
+      entries.push({ entitySlug: slug, entityName, filePath: full, references });
+    }
+  }
+
+  return entries;
 }
 
 // ── Lint checks ──
@@ -182,17 +226,17 @@ async function main() {
 
   let issueCount = 0;
 
-  // Check 1: Ref file references still using old ~pN format
-  const unsynced: { entity: string; paraId: string; raw: string }[] = [];
+  // Check 1: Ref file references not synced to sidecar hashes
+  const unsynced: { entity: string; paraId: string }[] = [];
   for (const ref of refFiles) {
     for (const r of ref.references) {
       if (!r.isSynced) {
-        unsynced.push({ entity: ref.entitySlug, paraId: r.paragraphId!, raw: r.raw });
+        unsynced.push({ entity: ref.entitySlug, paraId: r.paragraphId! });
       }
     }
   }
   if (unsynced.length > 0) {
-    console.log(`❌ ${unsynced.length} ref entries still using old ~pN format (not synced to passage IDs):`);
+    console.log(`❌ ${unsynced.length} ref entries not synced to sidecar hashes (missing -s-XXXXXXX suffix):`);
     for (const u of unsynced.slice(0, 20)) {
       console.log(`   ${u.entity} → ${u.paraId}`);
     }
@@ -201,25 +245,23 @@ async function main() {
     issueCount += unsynced.length;
   }
 
-  // Check 2: Paragraphs referenced by ref files that have no ref-passage spans
-  const noPassage: { entity: string; paraId: string }[] = [];
+  // Check 2: Ref file references pointing to paragraphs with no sidecar annotation
+  const noAnnotation: { entity: string; paraId: string }[] = [];
   for (const ref of refFiles) {
     for (const r of ref.references) {
-      if (r.paragraphId && !html.passagesByParagraph.has(r.paragraphId)) {
-        noPassage.push({ entity: ref.entitySlug, paraId: r.paragraphId });
+      if (r.isSynced && r.annotationId && !html.annotationIds.has(r.annotationId)) {
+        noAnnotation.push({ entity: ref.entitySlug, paraId: r.paragraphId! });
       }
     }
   }
-  // Deduplicate by paraId
-  const uniqueNoPassage = [...new Map(noPassage.map(n => [n.paraId, n])).values()];
-  if (uniqueNoPassage.length > 0) {
-    console.log(`⚠️  ${uniqueNoPassage.length} paragraphs referenced by ref files have no ref-passage spans:`);
-    for (const n of uniqueNoPassage.slice(0, 20)) {
-      console.log(`   ${n.paraId}`);
+  if (noAnnotation.length > 0) {
+    console.log(`❌ ${noAnnotation.length} ref entries have sidecar hash that doesn't match any annotation:`);
+    for (const n of noAnnotation.slice(0, 20)) {
+      console.log(`   ${n.entity} → ${n.paraId}`);
     }
-    if (uniqueNoPassage.length > 20) console.log(`   ... and ${uniqueNoPassage.length - 20} more`);
+    if (noAnnotation.length > 20) console.log(`   ... and ${noAnnotation.length - 20} more`);
     console.log();
-    issueCount += uniqueNoPassage.length;
+    issueCount += noAnnotation.length;
   }
 
   // Check 3: Paragraph IDs in ref files that don't exist in the HTML
@@ -242,54 +284,68 @@ async function main() {
     issueCount += uniqueMissingParas.length;
   }
 
-  // Check 4: Passage span IDs not referenced by any ref file
-  const allReferencedPassages = new Set<string>();
+  // Check 4: Sidecar annotations not referenced by any ref file (orphans)
+  const allReferencedAnnotations = new Set<string>();
   for (const ref of refFiles) {
     for (const r of ref.references) {
-      if (r.passageId) allReferencedPassages.add(r.passageId);
+      if (r.annotationId) allReferencedAnnotations.add(r.annotationId);
     }
   }
-  const orphanPassages: string[] = [];
-  for (const [passageId] of html.passageSpans) {
-    if (!allReferencedPassages.has(passageId)) {
-      orphanPassages.push(passageId);
+  const orphanAnnotations: string[] = [];
+  for (const a of html.annotations) {
+    if (!allReferencedAnnotations.has(a.id)) {
+      orphanAnnotations.push(a.id);
     }
   }
-  if (orphanPassages.length > 0) {
-    console.log(`⚠️  ${orphanPassages.length} ref-passage spans not referenced by any ref file:`);
-    for (const p of orphanPassages.slice(0, 20)) {
+  if (orphanAnnotations.length > 0) {
+    console.log(`⚠️  ${orphanAnnotations.length} sidecar annotations not referenced by any ref file:`);
+    for (const p of orphanAnnotations.slice(0, 20)) {
       console.log(`   ${p}`);
     }
-    if (orphanPassages.length > 20) console.log(`   ... and ${orphanPassages.length - 20} more`);
+    if (orphanAnnotations.length > 20) console.log(`   ... and ${orphanAnnotations.length - 20} more`);
     console.log();
-    issueCount += orphanPassages.length;
+    issueCount += orphanAnnotations.length;
   }
 
-  // Check 5: entity-ref tags pointing to slugs with no ref file
-  const allRefSlugs = new Set(refFiles.map(r => r.entitySlug));
-  // Also collect slugs from all ref files (not just those referencing this file)
-  const allKnownSlugs = new Set<string>();
-  async function collectAllSlugs(dir: string) {
-    const entries = await readdir(dir, { withFileTypes: true });
-    for (const entry of entries) {
-      const full = join(dir, entry.name);
-      if (entry.isDirectory()) {
-        await collectAllSlugs(full);
-      } else if (entry.name.endsWith(".md")) {
-        const content = await readFile(full, "utf-8");
-        const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
-        if (!fmMatch) continue;
-        const fm = fmMatch[1];
-        if (fm.match(/^alias_of:/m)) continue;
-        const slugMatch = fm.match(/^slug:\s*(.+)$/m);
-        const categoryMatch = fm.match(/^category:\s*(.+)$/m);
-        if (slugMatch && categoryMatch) {
-          allKnownSlugs.add(`${categoryMatch[1].trim()}/${slugMatch[1].trim()}`);
-        }
-      }
+  // Check 5: Sidecar annotations with invalid paragraph IDs or out-of-range offsets
+  const invalidAnnotations: { id: string; reason: string }[] = [];
+  for (const a of html.annotations) {
+    if (!html.paragraphIds.has(a.paragraph)) {
+      invalidAnnotations.push({ id: a.id, reason: `paragraph "${a.paragraph}" not found` });
+      continue;
+    }
+    const textLen = html.paragraphTexts.get(a.paragraph) || 0;
+    if (a.start < 0 || a.end < 0 || a.start > a.end) {
+      invalidAnnotations.push({ id: a.id, reason: `invalid offsets start=${a.start} end=${a.end}` });
+    } else if (a.end > textLen + 5) {
+      // +5 tolerance for whitespace normalization differences
+      invalidAnnotations.push({ id: a.id, reason: `end offset ${a.end} exceeds paragraph text length ${textLen}` });
     }
   }
-  await collectAllSlugs(REFS_DIR);
+  if (invalidAnnotations.length > 0) {
+    console.log(`❌ ${invalidAnnotations.length} sidecar annotations have invalid data:`);
+    for (const a of invalidAnnotations.slice(0, 20)) {
+      console.log(`   ${a.id}: ${a.reason}`);
+    }
+    if (invalidAnnotations.length > 20) console.log(`   ... and ${invalidAnnotations.length - 20} more`);
+    console.log();
+    issueCount += invalidAnnotations.length;
+  }
+
+  // Check 6: entity-ref tags pointing to slugs with no ref file
+  const allKnownSlugs = new Set<string>();
+  const slugGlob = new Glob("**/*.md");
+  for await (const path of slugGlob.scan(REFS_DIR)) {
+    const content = await Bun.file(`${REFS_DIR}/${path}`).text();
+    const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+    if (!fmMatch) continue;
+    const fm = fmMatch[1];
+    if (fm.match(/^alias_of:/m)) continue;
+    const slugMatch = fm.match(/^slug:\s*(.+)$/m);
+    if (slugMatch) {
+      allKnownSlugs.add(slugMatch[1].trim());
+    }
+  }
 
   const brokenEntityRefs: string[] = [];
   for (const slug of html.entityRefSlugs) {
@@ -306,9 +362,16 @@ async function main() {
     issueCount += brokenEntityRefs.length;
   }
 
+  // Check 7: components.js script tag missing
+  if (!html.hasComponentsScript) {
+    console.log(`⚠️  Missing <script src="/index/components.js" type="module"></script> in <head>`);
+    console.log(`   Run 'bun tag-entity-refs.ts ${sourceFile}' to auto-insert it.\n`);
+    issueCount++;
+  }
+
   // Summary
   console.log("─".repeat(60));
-  console.log(`Scanned: ${html.paragraphIds.size} paragraphs, ${html.passageSpans.size} passage spans, ${html.entityRefSlugs.size} entity-ref tags`);
+  console.log(`Scanned: ${html.paragraphIds.size} paragraphs, ${html.annotations.length} sidecar annotations, ${html.entityRefSlugs.size} entity-ref tags`);
   console.log(`Ref files checked: ${refFiles.length} entities with ${refFiles.reduce((n, r) => n + r.references.length, 0)} references to ${fileName}`);
 
   if (issueCount === 0) {

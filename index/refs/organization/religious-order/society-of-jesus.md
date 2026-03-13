@@ -34,7 +34,7 @@ Catholic religious order founded by St. Ignatius of Loyola in 1540. Cornelius a 
   text: "You are a friend of our Society and of all Religious who are truly Religious"
 - `01_Preliminares.html#dedicatory-letter-p52-s-9c260b5` — The Louvain College and whole Society bear esteem toward Van der Burch
   text: "this token and pledge of the love and esteem which I, the Louvain College, and our whole Society bear toward you"
-- `01_Preliminares.html#permissions-s-5aefad9` — Vitelleschi grants permission for the commentary to be printed
+- `01_Preliminares.html#permissions-s-e3d2091` — Vitelleschi grants permission for the commentary to be printed
   text: "MUTIUS VITELLESCHI. SUPERIOR GENERAL OF THE SOCIETY OF JESUS."
 - `01_Preliminares.html#permissions-s-5aefad9` — Three theologians of the Society reviewed the commentaries
   text: "three theologians of our Society, to whom this task was entrusted, have reviewed the Commentaries on the Pentateuch"

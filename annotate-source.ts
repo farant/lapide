@@ -12,6 +12,11 @@
  *   #dedicatory-letter-p8 → #dedicatory-letter-p8-s-a3f2b1c
  *
  * Usage: bun annotate-source.ts <source.html>
+ *        bun annotate-source.ts --check <source.html>
+ *
+ * Flags:
+ *   --check   Dry-run mode. Reports what would change without modifying
+ *             any files. Exits 0 if everything is in sync, 1 if not.
  *
  * Idempotent — replaces any existing passage-annotations block and
  * re-derives all hashes from current text.
@@ -19,9 +24,10 @@
 
 import { Glob } from "bun";
 
-const sourceFile = Bun.argv[2];
+const checkMode = Bun.argv.includes("--check");
+const sourceFile = Bun.argv.find(a => a.endsWith(".html"));
 if (!sourceFile) {
-  console.error("Usage: bun annotate-source.ts <source.html>");
+  console.error("Usage: bun annotate-source.ts [--check] <source.html>");
   process.exit(1);
 }
 
@@ -269,7 +275,7 @@ interface Annotation {
 }
 
 const annotations: Annotation[] = [];
-const refFileUpdates: { filePath: string; paraId: string; newId: string }[] = [];
+const refFileUpdates: { filePath: string; lineIndex: number; paraId: string; newId: string }[] = [];
 
 for (const [, pending] of pendingByKey) {
   const hash = computeHash(pending.matchedText);
@@ -286,6 +292,7 @@ for (const [, pending] of pendingByKey) {
   for (const entry of pending.refFileEntries) {
     refFileUpdates.push({
       filePath: entry.refFilePath,
+      lineIndex: entry.refLineIndex,
       paraId: entry.paragraphId,
       newId: id,
     });
@@ -300,48 +307,147 @@ annotations.sort((a, b) => {
 
 console.log(`Generated ${annotations.length} annotations (${missed} missed)`);
 
-// --- Embed sidecar JSON ---
+// --- Check mode: compare against existing state ---
 
-const jsonBlock = `<script type="application/json" id="passage-annotations">\n${JSON.stringify(annotations, null, 2)}\n</script>`;
+if (checkMode) {
+  let issues = 0;
 
-html = html.replace(/(\s*)<\/body>/, `\n${jsonBlock}\n$1</body>`);
+  // Parse existing sidecar from original file
+  const originalHtml = await Bun.file(sourceFile).text();
+  const sidecarMatch = originalHtml.match(
+    /<script type="application\/json" id="passage-annotations">([\s\S]*?)<\/script>/
+  );
+  let existingAnnotations: Annotation[] = [];
+  if (sidecarMatch) {
+    try { existingAnnotations = JSON.parse(sidecarMatch[1]); } catch {}
+  }
 
-await Bun.write(sourceFile, html);
-console.log(`Embedded ${annotations.length} annotations in ${sourceFile}`);
+  const existingById = new Map(existingAnnotations.map(a => [a.id, a]));
+  const newById = new Map(annotations.map(a => [a.id, a]));
 
-// --- Update ref file links ---
+  // Annotations that would be added
+  const added = annotations.filter(a => !existingById.has(a.id));
+  if (added.length > 0) {
+    console.log(`\n+ ${added.length} new annotation(s) would be added:`);
+    for (const a of added) {
+      console.log(`   ${a.id} (${a.entities.join(", ")})`);
+    }
+    issues += added.length;
+  }
 
-// Group by file
-const updatesByFile = new Map<string, { paraId: string; newId: string }[]>();
-for (const u of refFileUpdates) {
-  if (!updatesByFile.has(u.filePath)) updatesByFile.set(u.filePath, []);
-  updatesByFile.get(u.filePath)!.push(u);
-}
+  // Annotations that would be removed
+  const removed = existingAnnotations.filter(a => !newById.has(a.id));
+  if (removed.length > 0) {
+    console.log(`\n- ${removed.length} annotation(s) would be removed:`);
+    for (const a of removed) {
+      console.log(`   ${a.id} (${a.entities.join(", ")})`);
+    }
+    issues += removed.length;
+  }
 
-let filesUpdated = 0;
-for (const [filePath, updates] of updatesByFile) {
-  let content = await Bun.file(filePath).text();
-  let changed = false;
+  // Annotations with changed offsets or entities
+  const changed: { id: string; reason: string }[] = [];
+  for (const a of annotations) {
+    const existing = existingById.get(a.id);
+    if (!existing) continue;
+    if (existing.start !== a.start || existing.end !== a.end) {
+      changed.push({ id: a.id, reason: `offsets ${existing.start}:${existing.end} → ${a.start}:${a.end}` });
+    } else if (JSON.stringify(existing.entities) !== JSON.stringify(a.entities)) {
+      changed.push({ id: a.id, reason: `entities [${existing.entities}] → [${a.entities}]` });
+    }
+  }
+  if (changed.length > 0) {
+    console.log(`\n~ ${changed.length} annotation(s) would be updated:`);
+    for (const c of changed) {
+      console.log(`   ${c.id}: ${c.reason}`);
+    }
+    issues += changed.length;
+  }
 
-  for (const { paraId, newId } of updates) {
-    // Match both the bare paragraph ID and any existing -s-hash version
-    const pattern = new RegExp(
-      "`" + sourceBasename.replace(/\./g, "\\.") + "#" + paraId.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(-s-[a-f0-9]{7})?`",
-      "g"
-    );
-    const replacement = "`" + sourceBasename + "#" + newId + "`";
-    const newContent = content.replace(pattern, replacement);
-    if (newContent !== content) {
-      content = newContent;
-      changed = true;
+  // Ref file links that would change (check line-by-line)
+  const updatesByFile = new Map<string, { lineIndex: number; paraId: string; newId: string }[]>();
+  for (const u of refFileUpdates) {
+    if (!updatesByFile.has(u.filePath)) updatesByFile.set(u.filePath, []);
+    updatesByFile.get(u.filePath)!.push(u);
+  }
+
+  let staleLinks = 0;
+  for (const [filePath, updates] of updatesByFile) {
+    const lines = (await Bun.file(filePath).text()).split("\n");
+    for (const { lineIndex, paraId, newId } of updates) {
+      const line = lines[lineIndex];
+      if (!line) continue;
+      const pattern = new RegExp(
+        "`" + sourceBasename.replace(/\./g, "\\.") + "#" + paraId.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(-s-[a-f0-9]{7})?`"
+      );
+      const expected = "`" + sourceBasename + "#" + newId + "`";
+      const match = line.match(pattern);
+      if (match && match[0] !== expected) {
+        if (staleLinks === 0) console.log(`\n⚠ Ref file links that need updating:`);
+        console.log(`   ${filePath.replace(REFS_DIR + "/", "")}: ${match[0]} → ${expected}`);
+        staleLinks++;
+      }
+    }
+  }
+  issues += staleLinks;
+
+  if (!sidecarMatch && annotations.length > 0) {
+    console.log(`\n⚠ No existing sidecar block — ${annotations.length} annotations would be embedded`);
+    issues += annotations.length;
+  }
+
+  // Summary
+  console.log("\n" + "─".repeat(60));
+  if (issues === 0 && missed === 0) {
+    console.log("✅ Everything in sync.");
+  } else {
+    if (issues > 0) console.log(`${issues} annotation/link change(s) needed.`);
+    if (missed > 0) console.log(`${missed} reference(s) could not be matched.`);
+    process.exit(1);
+  }
+} else {
+  // --- Normal mode: write changes ---
+
+  // Embed sidecar JSON
+  const jsonBlock = `<script type="application/json" id="passage-annotations">\n${JSON.stringify(annotations, null, 2)}\n</script>`;
+
+  html = html.replace(/(\s*)<\/body>/, `\n${jsonBlock}\n$1</body>`);
+
+  await Bun.write(sourceFile, html);
+  console.log(`Embedded ${annotations.length} annotations in ${sourceFile}`);
+
+  // Update ref file links (line-targeted to handle multiple annotations per paragraph)
+  const updatesByFile = new Map<string, { lineIndex: number; paraId: string; newId: string }[]>();
+  for (const u of refFileUpdates) {
+    if (!updatesByFile.has(u.filePath)) updatesByFile.set(u.filePath, []);
+    updatesByFile.get(u.filePath)!.push(u);
+  }
+
+  let filesUpdated = 0;
+  for (const [filePath, updates] of updatesByFile) {
+    const lines = (await Bun.file(filePath).text()).split("\n");
+    let changed = false;
+
+    for (const { lineIndex, paraId, newId } of updates) {
+      const line = lines[lineIndex];
+      if (!line) continue;
+      const pattern = new RegExp(
+        "`" + sourceBasename.replace(/\./g, "\\.") + "#" + paraId.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(-s-[a-f0-9]{7})?`"
+      );
+      const replacement = "`" + sourceBasename + "#" + newId + "`";
+      const newLine = line.replace(pattern, replacement);
+      if (newLine !== line) {
+        lines[lineIndex] = newLine;
+        changed = true;
+      }
+    }
+
+    if (changed) {
+      await Bun.write(filePath, lines.join("\n"));
+      filesUpdated++;
     }
   }
 
-  if (changed) {
-    await Bun.write(filePath, content);
-    filesUpdated++;
-  }
+  console.log(`Updated links in ${filesUpdated} ref files`);
+  console.log(`\nDone. Run 'bun validate-refs.ts' to verify.`);
 }
-
-console.log(`Updated links in ${filesUpdated} ref files`);
-console.log(`\nDone. Run 'bun validate-refs.ts' to verify.`);

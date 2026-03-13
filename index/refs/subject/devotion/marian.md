@@ -20,7 +20,7 @@ Devotion to the Blessed Virgin Mary — her intercession, miraculous aid, and ro
 
 - `01_Preliminares.html#dedicatory-letter-p29-s-a443342` — Basil prayed before an image of Our Lady against Julian the Apostate and received prophetic knowledge through it.
   text: "stood before the image of Our Lady"
-- `01_Preliminares.html#life-p3-s-ade3ff3` — Lapide was saved from the Dutch cavalry attack at Aspromont "by the aid of Our Lady, whom he implored with an urgent vow" on the feast of the Nativity of Our Lady.
+- `01_Preliminares.html#life-p3-s-9f4637f` — Lapide was saved from the Dutch cavalry attack at Aspromont "by the aid of Our Lady, whom he implored with an urgent vow" on the feast of the Nativity of Our Lady.
   text: "by the aid of Our Lady, whom he implored with an urgent vow, the danger was dispersed, not without the appearance of a miracle"
 - `01_Preliminares.html#life-p3-s-ade3ff3` — Lapide entreats the Blessed Mother to obtain for him martyrdom; she had called him into the Society and directed him in a wonderful way.
   text: "turning to the most blessed Mother of God, to whom he owed himself and all he had, by whom he had been called, unworthy as he was, into the holy Society of her Son, in which she had directed, aided, and instructed him in a wonderful way."
