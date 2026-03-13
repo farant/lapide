@@ -21,5 +21,5 @@ Small town in the region of Eupen, in the eastern part of the Low Countries (mod
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p2-s-491058b` — Lapide described as a native of Bocholt
+- `01_Preliminares.html#life-p2-s-b1278b8` — Lapide described as a native of Bocholt
   text: "a native of Bocholt in the region of Eupen, born of respectable parents"

@@ -23,5 +23,5 @@ Antwerp printer whose heirs received permission to print Lapide's work.
 
 ## References in Commentary
 
-- `01_Preliminares.html#permissions-p2-s-ec6a65b` — His heirs granted permission by Scribani to print Lapide's work
+- `01_Preliminares.html#permissions-p2-s-b420371` — His heirs granted permission by Scribani to print Lapide's work
   text: "I... grant to the heirs of Martin Nutius and to Jan Moretus, printers of Antwerp, permission to commit to the press"

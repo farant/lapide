@@ -16,5 +16,5 @@ Lapide's commentary on the historical books of the Old Testament, published post
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-7c0fad3` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-49fe9cd` — Listed in catalogue of works
   text: "on the books of Joshua, Judges, Ruth, Kings, and Chronicles, Antwerp 1642, in folio"

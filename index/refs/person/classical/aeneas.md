@@ -19,7 +19,7 @@ Trojan hero of Virgil's Aeneid. Virgil's songs on his misfortunes are listed amo
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-77156d0` — Virgil's songs on the misfortunes of Aeneas; "when Aeneas lost the shores of his homeland"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-19108c8` — Virgil's songs on the misfortunes of Aeneas; "when Aeneas lost the shores of his homeland"
   text: "those of Virgil on the misfortunes of Aeneas"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-62f54bb` — Aeneas losing the shores of his homeland
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-3b08c3b` — Aeneas losing the shores of his homeland
   text: "when Aeneas lost the shores of his homeland"

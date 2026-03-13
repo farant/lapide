@@ -28,9 +28,9 @@ Pope and Doctor of the Church. One of the four great Latin Doctors. Praised Jero
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p4-s-f9cfd51` — Called the older Latin edition the "Old translation"
+- `01_Preliminares.html#preface-reader-p4-s-571d590` — Called the older Latin edition the "Old translation"
   text: "St. Gregory the Old translation"
-- `01_Preliminares.html#preface-reader-p6-s-df5ae2a` — Praised Jerome's translation so highly that he says it rendered everything more truly from the Hebrew
+- `01_Preliminares.html#preface-reader-p6-s-a26202e` — Praised Jerome's translation so highly that he says it rendered everything more truly from the Hebrew
   text: "The same St. Gregory praises him so highly that he says his translation (which he calls the new one) has rendered everything more truly from the Hebrew speech"
-- `01_Preliminares.html#life-p2-s-79d086e` — Listed among saints whose company Lapide found in Rome (referred to as "Gregory")
+- `01_Preliminares.html#life-p2-s-134aff7` — Listed among saints whose company Lapide found in Rome (referred to as "Gregory")
   text: "in company with Saint Basil, Gregory, and Jerome"

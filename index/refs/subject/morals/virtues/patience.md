@@ -18,7 +18,7 @@ The virtue of bearing injuries, sufferings, and adversity with equanimity. Lietb
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p41-s-fb7a800` — Lietbert of Cambrai "used his enemies to practise patience."
+- `01_Preliminares.html#dedicatory-letter-p41-s-d918128` — Lietbert of Cambrai "used his enemies to practise patience."
   text: "he used his friends to repay kindness, his enemies to practise patience, and the rest to cultivate good will."
-- `01_Preliminares.html#dedicatory-letter-p34-s-52b82d4` — Van der Burch "swallowed much that was hard" in his reforming work, with more hardship anticipated.
+- `01_Preliminares.html#dedicatory-letter-p34-s-bef93d9` — Van der Burch "swallowed much that was hard" in his reforming work, with more hardship anticipated.
   text: "You have swallowed much that was hard in this work; you will swallow harder things yet, but God will be present and will grant you to overcome them."

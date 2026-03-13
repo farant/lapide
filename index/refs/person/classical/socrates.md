@@ -18,5 +18,5 @@ Greek philosopher. Jerome closes his survey of Scripture by invoking "that Socra
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p42-s-a8aac7e` — Jerome closes his survey of Scripture by invoking "that Socratic saying: I know only this, that I know nothing"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p42-s-5c179fb` — Jerome closes his survey of Scripture by invoking "that Socratic saying: I know only this, that I know nothing"
   text: "For the rest, that Socratic saying is fulfilled in us: 'I know only this, that I know nothing.'"

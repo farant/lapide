@@ -20,9 +20,9 @@ Persecution of Catholics by Protestant/heretical forces — destruction of prope
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p12-s-1c1f384` — In 1572, heretics seized Mechlin, imprisoned Van der Burch's father, and nearly killed him; in 1580 they pillaged his house again and demanded ransom for his wife.
+- `01_Preliminares.html#dedicatory-letter-p12-s-7decdf9` — In 1572, heretics seized Mechlin, imprisoned Van der Burch's father, and nearly killed him; in 1580 they pillaged his house again and demanded ransom for his wife.
   text: "in the year 1572, when the heretics seized Mechlin by surprise, he was cast into a degrading prison, subjected to many hardships, and also endured a severe loss of fortune... Then in the year 1580, when the same city was again occupied by the heretics, his house was pillaged once more"
-- `01_Preliminares.html#life-p3-s-69c2842` — Dutch cavalry attacked the shrine of Our Lady of Aspromont in 1604; Lapide carried the Eucharist out "lest it be profaned by heretics."
+- `01_Preliminares.html#life-p3-s-4657e6f` — Dutch cavalry attacked the shrine of Our Lady of Aspromont in 1604; Lapide carried the Eucharist out "lest it be profaned by heretics."
   text: "a Dutch cavalry unit fell upon the place unexpectedly on the very feast of the Nativity of Our Lady, laying everything waste with sword and fire"
-- `01_Preliminares.html#dedicatory-letter-p26-s-226fb81` — Heretics attacked Basil for establishing monasteries, accusing him of introducing novelties.
+- `01_Preliminares.html#dedicatory-letter-p26-s-7e47589` — Heretics attacked Basil for establishing monasteries, accusing him of introducing novelties.
   text: "The heretics attacked him on this account, as though he had turned out to be an inventor of novelties"

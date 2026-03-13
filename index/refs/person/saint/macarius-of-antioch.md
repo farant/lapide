@@ -28,5 +28,5 @@ Archbishop of Antioch in Armenia whose relics were sent by Van der Burch to Mons
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p25-s-b373754` — His relics (his body) sent by Van der Burch to Mons during plague; upon arrival, the pestilence receded; people of Mons erected a silver reliquary in thanksgiving
+- `01_Preliminares.html#dedicatory-letter-p25-s-cfc0d10` — His relics (his body) sent by Van der Burch to Mons during plague; upon arrival, the pestilence receded; people of Mons erected a silver reliquary in thanksgiving
   text: "you sent to them the relics — the body of Saint Macarius, once Archbishop of Antioch in Armenia — and as soon as it was brought into the city, the pestilence, as if struck back from heaven, began to recede"

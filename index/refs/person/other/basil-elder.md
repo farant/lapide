@@ -22,5 +22,5 @@ Father of Basil the Great. Illustrious for piety no less than birth.
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p11-s-b310ba6` — Named as Basil's father, illustrious for piety no less than birth
+- `01_Preliminares.html#dedicatory-letter-p11-s-42dc662` — Named as Basil's father, illustrious for piety no less than birth
   text: "parents illustrious for piety no less than for birth — Basil and Emmelia"

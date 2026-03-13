@@ -25,5 +25,5 @@ Hermit and founder of a monastery in Hainault. Listed among companions who assis
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p42-s-559cb92` — Listed among companions who assisted Authbert in Hainault
+- `01_Preliminares.html#dedicatory-letter-p42-s-af60209` — Listed among companions who assisted Authbert in Hainault
   text: "such as Saint Landelin, Saint Ghislain, Saint Vincent Count of Hainault, and Saint Waldetrudis"

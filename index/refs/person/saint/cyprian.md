@@ -27,7 +27,7 @@ Bishop of Carthage, Church Father, and martyr. His letter to Antonianus praising
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p14-s-e47b0ba` — Praises Saint Cornelius, Bishop of Rome, in book IV, letter 2 to Antonianus, describing how Cornelius ascended through all offices of the Church before becoming bishop
+- `01_Preliminares.html#dedicatory-letter-p14-s-2eb17fb` — Praises Saint Cornelius, Bishop of Rome, in book IV, letter 2 to Antonianus, describing how Cornelius ascended through all offices of the Church before becoming bishop
   text: "Saint Cyprian praises Saint Cornelius, Bishop of Rome, in book IV, letter 2 to Antonianus"
 - `01_Preliminares.html#dedicatory-letter-p15-s-6f30a83` — Lapide says that Cyprian's words portraying Cornelius also portray Van der Burch
   text: "Is it not with these very words with which he portrays Cornelius that Saint Cyprian also portrays you, Most Illustrious Lord"

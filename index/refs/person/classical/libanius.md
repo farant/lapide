@@ -24,5 +24,5 @@ Greek rhetorician and teacher at Antioch. Recipient of Basil's letter 140 in whi
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p8-s-ad4745b` — Basil writes letter 140 to Libanius the Sophist, telling him that he converses with Moses and Elijah
+- `01_Preliminares.html#dedicatory-letter-p8-s-2329337` — Basil writes letter 140 to Libanius the Sophist, telling him that he converses with Moses and Elijah
   text: "Saint Basil himself acknowledges this in letter 140 to Libanius the Sophist"

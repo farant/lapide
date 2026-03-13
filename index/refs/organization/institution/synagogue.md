@@ -13,7 +13,7 @@ Jewish assembly and place of worship. Jerome contrasts the gilded temple of the 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f5e4194` — Jerome contrasts the desert spring of the Church with the gilded temple of the synagogue
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-3216856` — Jerome contrasts the desert spring of the Church with the gilded temple of the synagogue
   text: "more in the desert spring of the Church than in the gilded temple of the synagogue"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-3a9bfa6` — The Synagogue judges Jesus Christ
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-9350798` — The Synagogue judges Jesus Christ
   text: "The Synagogue judges Him"

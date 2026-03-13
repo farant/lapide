@@ -19,5 +19,5 @@ Printers of Antwerp. The heirs of Martin Nutius and Jan Moretus were granted per
 
 ## References in Commentary
 
-- `01_Preliminares.html#permissions-p2-s-895b5d9` — Scribani grants permission to the Antwerp printers
+- `01_Preliminares.html#permissions-p2-s-23e93d7` — Scribani grants permission to the Antwerp printers
   text: "grant to the heirs of Martin Nutius and to Jan Moretus, printers of Antwerp, permission to commit to the press the Commentaries on the Pentateuch of Moses"

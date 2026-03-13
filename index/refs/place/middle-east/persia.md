@@ -17,5 +17,5 @@ Ancient empire east of Mesopotamia; Apollonius entered Persia on his journey eas
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-bb9b4ad` — Apollonius entered Persia on his journey to India
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-7918570` — Apollonius entered Persia on his journey to India
   text: "entered Persia, crossed the Caucasus"

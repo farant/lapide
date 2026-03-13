@@ -22,5 +22,5 @@ Greek lyric poet. David is compared to Alcaeus by Jerome.
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p38-s-ba274f2` — David is compared to Alcaeus
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p38-s-2fa4a0c` — David is compared to Alcaeus
   text: "our Pindar and Alcaeus"

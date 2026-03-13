@@ -20,5 +20,5 @@ Indian Brahman sage and teacher of Apollonius. Sat on a golden throne, drank fro
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-a9e21c8` — Sat on a golden throne, drank from the fountain of Tantalus, taught about nature and the stars
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-4f14acd` — Sat on a golden throne, drank from the fountain of Tantalus, taught about nature and the stars
   text: "he might hear Hiarchas sitting on a golden throne and drinking from the fountain of Tantalus, teaching among a few disciples about nature"

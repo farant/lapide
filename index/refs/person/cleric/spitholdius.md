@@ -22,5 +22,5 @@ Canon and Parish Priest of Antwerp who served as Censor of Books. Certified Lapi
 
 ## References in Commentary
 
-- `01_Preliminares.html#permissions-p3-s-9658b55` — Gives censor's assessment certifying Lapide's commentary as learned, pious, and worthy of publication; dated 9 May 1615
+- `01_Preliminares.html#permissions-p3-s-895ca0e` — Gives censor's assessment certifying Lapide's commentary as learned, pious, and worthy of publication; dated 9 May 1615
   text: "EGBERT SPITHOLDIUS, Licenciate in Sacred Theology, Canon and Parish Priest of Antwerp, Censor of Books."

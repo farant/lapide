@@ -21,9 +21,9 @@ Greek philosopher. Traveled laboriously through Egypt and to Archytas of Tarentu
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-de99f52` — Traveled laboriously through Egypt and to Archytas of Tarentum and Magna Graecia; though a master at Athens, preferred to learn modestly; captured by pirates, sold, and enslaved, yet greater than his buyer
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-220941c` — Traveled laboriously through Egypt and to Archytas of Tarentum and Magna Graecia; though a master at Athens, preferred to learn modestly; captured by pirates, sold, and enslaved, yet greater than his buyer
   text: "thus Plato most laboriously traveled through Egypt, and to Archytas of Tarentum, and that coast of Italy which was once called Magna Graecia"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-55e35c0` — "The learned Plato did not know" the mystery of the Logos; contrasted with John's prologue
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-68619ac` — "The learned Plato did not know" the mystery of the Logos; contrasted with John's prologue
   text: "This the learned Plato did not know; this the eloquent Demosthenes was ignorant of."
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-309328b` — Lacordaire says Paul is "more passionate than Plato"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-4520545` — Lacordaire says Paul is "more passionate than Plato"
   text: "more passionate than Plato"

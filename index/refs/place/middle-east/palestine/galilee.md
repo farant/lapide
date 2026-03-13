@@ -19,7 +19,7 @@ Northern region of Palestine; where Jesus preached the Sermon on the Mount and c
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p22-s-44d0132` — Jesus addresses the crowd from a mountain in Galilee with the Beatitudes
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p22-s-4bdd5e9` — Jesus addresses the crowd from a mountain in Galilee with the Beatitudes
   text: "from the top of a mountain in Galilee, addressing the crowd that follows him"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-29b10a9` — The immense throng accompanied Jesus through the countryside of Galilee
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-0d77812` — The immense throng accompanied Jesus through the countryside of Galilee
   text: "the immense throng that accompanied him through the countryside of Galilee"

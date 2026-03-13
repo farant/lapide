@@ -17,5 +17,5 @@ Ecumenical council of the Catholic Church (1512-1517). Referenced by the Council
 
 ## References in Commentary
 
-- `01_Preliminares.html#trent-decrees-p11-s-7eb58c6` — Trent invokes the fine from the Lateran Council
+- `01_Preliminares.html#trent-decrees-p11-s-fc4faf8` — Trent invokes the fine from the Lateran Council
   text: "penalty of anathema and the fine imposed in the canon of the most recent Lateran Council"

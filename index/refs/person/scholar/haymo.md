@@ -24,5 +24,5 @@ Medieval biblical commentator. Among the scholars who used Jerome's version of S
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-91de8a2` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-c384696` — Listed among scholars who used Jerome's version
   text: "Rabanus, Haymo, Anselm"

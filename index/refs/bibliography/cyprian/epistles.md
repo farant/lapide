@@ -24,5 +24,5 @@ Cyprian's collection of letters, including his letter to Antonianus (Book IV, Le
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p14-s-e47b0ba` — Cyprian quoted praising Bishop Cornelius of Rome for ascending through all Church offices before accepting the episcopate
+- `01_Preliminares.html#dedicatory-letter-p14-s-2eb17fb` — Cyprian quoted praising Bishop Cornelius of Rome for ascending through all Church offices before accepting the episcopate
   text: "Saint Cyprian praises Saint Cornelius, Bishop of Rome, in book IV, letter 2 to Antonianus"

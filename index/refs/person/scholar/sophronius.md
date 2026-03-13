@@ -22,5 +22,5 @@ Scholar who, observing Jerome's translation was highly approved, translated the 
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p6-s-1bb71c0` — A most erudite man who translated the Psalter and the Prophets from Jerome's version into elegant Greek
+- `01_Preliminares.html#preface-reader-p6-s-5d9513c` — A most erudite man who translated the Psalter and the Prophets from Jerome's version into elegant Greek
   text: "Sophronius also, a most erudite man, observing that St. Jerome's translation was highly approved not only by Latins but also by Greeks, valued it so greatly that he translated the Psalter and the Prophets from Jerome's version into elegant Greek."

@@ -20,5 +20,5 @@ Philostratus's biography of the Neo-Pythagorean philosopher Apollonius of Tyana,
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-097a64f` — Jerome cites Philostratus as having written about Apollonius's travels in eight volumes, as an example of the lengths to which seekers of knowledge go
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-75b441f` — Jerome cites Philostratus as having written about Apollonius's travels in eight volumes, as an example of the lengths to which seekers of knowledge go
   text: "Philostratus wrote about this most fully in eight volumes."

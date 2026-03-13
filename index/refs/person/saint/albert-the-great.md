@@ -25,5 +25,5 @@ Dominican friar, Bishop of Regensburg, and Doctor of the Church. Teacher of Thom
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-2f21107` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-26c0178` — Listed among scholars who used Jerome's version
   text: "Alexander, Albert, Thomas, Bonaventure"

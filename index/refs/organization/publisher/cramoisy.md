@@ -15,5 +15,5 @@ Parisian publisher. Printed Lapide's commentary on the Proverbs of Solomon in 16
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-9a6939b` — Lapide's Proverbs commentary published at Cramoisy's
+- `01_Preliminares.html#life-p3-s-17920e6` — Lapide's Proverbs commentary published at Cramoisy's
   text: "on the Proverbs of Solomon, Antwerp and Paris, at Cramoisy's, 1635"

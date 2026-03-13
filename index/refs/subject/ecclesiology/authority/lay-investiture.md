@@ -19,5 +19,5 @@ The conflict over whether secular rulers could confer ecclesiastical insignia (s
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p46-s-cf84849` — St. Odo of Cambrai was driven from his see by Emperor Henry IV because he refused to accept lay investiture.
+- `01_Preliminares.html#dedicatory-letter-p46-s-58e46f1` — St. Odo of Cambrai was driven from his see by Emperor Henry IV because he refused to accept lay investiture.
   text: "when driven from his see by the Emperor Henry IV because he refused to receive again as a gift from him the staff and ring which he had received from the Church at his consecration, he spent the rest of his life in exile at Anchin and died in that exile."

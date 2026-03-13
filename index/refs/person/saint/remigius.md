@@ -39,5 +39,5 @@ Listed first among scholars who used Jerome's version of Scripture so exclusivel
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-4fa5899` — Listed first among scholars who used Jerome's version, causing other versions to become obsolete
+- `01_Preliminares.html#preface-reader-p7-s-2409033` — Listed first among scholars who used Jerome's version, causing other versions to become obsolete
   text: "the most learned men who came after—Remigius, Bede, Rabanus, Haymo, Anselm, Peter Damian, Richard, Hugh, Bernard, Rupert, Peter Lombard, Alexander, Albert, Thomas, Bonaventure"

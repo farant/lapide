@@ -20,11 +20,11 @@ Catholic university in Louvain, one of the foremost in the Spanish Netherlands. 
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-c8e7593` — Lapide described as formerly professor at Louvain
+- `01_Preliminares.html#title-page-s-3942cab` — Lapide described as formerly professor at Louvain
   text: "formerly professor of Holy Scripture at Louvain"
-- `01_Preliminares.html#life-p2-s-bdd5083` — Lapide taught Sacred Language and Holy Scripture at Louvain for more than twenty years
+- `01_Preliminares.html#life-p2-s-e5465c3` — Lapide taught Sacred Language and Holy Scripture at Louvain for more than twenty years
   text: "He taught the Sacred Language and Holy Scripture publicly at Louvain for more than twenty years"
-- `01_Preliminares.html#dedicatory-letter-p52-s-3a813d4` — Lapide refers to the Louvain College
+- `01_Preliminares.html#dedicatory-letter-p52-s-ff3d881` — Lapide refers to the Louvain College
   text: "the Louvain College, and our whole Society"
-- `01_Preliminares.html#preface-reader-p10-s-328d290` — Theologians of distinguished Academies labored on the Vulgate
+- `01_Preliminares.html#preface-reader-p10-s-4ad6fe0` — Theologians of distinguished Academies labored on the Vulgate
   text: "the theologians of distinguished Academies labored with great praise in restoring the Vulgate edition to its pristine splendor"

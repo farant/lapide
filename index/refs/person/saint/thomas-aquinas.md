@@ -25,5 +25,5 @@ Dominican friar and Doctor of the Church. The Angelic Doctor, preeminent theolog
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-eb18f3e` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-87aa17b` — Listed among scholars who used Jerome's version
   text: "Albert, Thomas, Bonaventure"

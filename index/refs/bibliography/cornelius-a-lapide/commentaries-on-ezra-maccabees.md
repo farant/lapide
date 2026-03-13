@@ -16,5 +16,5 @@ Lapide's commentary on the deuterocanonical historical books and others, publish
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-06d4e2a` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-fb55709` — Listed in catalogue of works
   text: "on the books of Ezra, Nehemiah, Tobit, Judith, Esther, and Maccabees, Antwerp 1644"

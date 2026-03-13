@@ -24,5 +24,5 @@ Pope who succeeded Urban VII and undertook to complete the Vulgate correction be
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p11-s-e7fe0f7` — Succeeded Urban VII; carrying out Sixtus V's intention, undertook to complete the Vulgate correction
+- `01_Preliminares.html#preface-reader-p11-s-b4b5eb9` — Succeeded Urban VII; carrying out Sixtus V's intention, undertook to complete the Vulgate correction
   text: "Gregory XIV, who after the twelve-day Pontificate of Urban VII had succeeded Sixtus, carrying out his intention of mind, undertook to complete it"

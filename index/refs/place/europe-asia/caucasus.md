@@ -18,5 +18,5 @@ Mountain range between the Black Sea and the Caspian Sea; Apollonius crossed the
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-5ae6f37` — Apollonius crossed the Caucasus
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-b9710b6` — Apollonius crossed the Caucasus
   text: "crossed the Caucasus"

@@ -16,7 +16,7 @@ Moderation and self-denial in bodily comforts, especially regarding food and phy
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-b5e27c7` — Lapide refused any exceptional food despite frail health and advanced age; "nothing could have seemed gentler than he, nothing more modest, nothing more temperate."
+- `01_Preliminares.html#life-p3-s-2cc3538` — Lapide refused any exceptional food despite frail health and advanced age; "nothing could have seemed gentler than he, nothing more modest, nothing more temperate."
   text: "Nothing could have seemed gentler than he, nothing more modest, nothing more temperate."
-- `01_Preliminares.html#dedicatory-letter-p15-s-f54d972` — Van der Burch was always first in choir "even in the depths of winter, in the most bitter cold," indulging his body no rest.
+- `01_Preliminares.html#dedicatory-letter-p15-s-c7a07f8` — Van der Burch was always first in choir "even in the depths of winter, in the most bitter cold," indulging his body no rest.
   text: "even in the depths of winter, in the most bitter cold, even when you returned home wearied from a pastoral visitation abroad, indulging your body no rest"

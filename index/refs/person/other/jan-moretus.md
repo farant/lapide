@@ -24,5 +24,5 @@ Printer of Antwerp, of the Plantin-Moretus dynasty. Granted permission by Scriba
 
 ## References in Commentary
 
-- `01_Preliminares.html#permissions-p2-s-80764d8` — Granted permission by Scribani to print Lapide's work
+- `01_Preliminares.html#permissions-p2-s-0f587cb` — Granted permission by Scribani to print Lapide's work
   text: "the heirs of Martin Nutius and to Jan Moretus, printers of Antwerp"

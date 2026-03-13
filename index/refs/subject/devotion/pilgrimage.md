@@ -16,5 +16,5 @@ The practice of religious pilgrimage to holy sites, undertaken as an act of piet
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p41-s-0ce849d` — St. Lietbert of Cambrai departed for Jerusalem and drew three thousand men on pilgrimage.
+- `01_Preliminares.html#dedicatory-letter-p41-s-0d18a80` — St. Lietbert of Cambrai departed for Jerusalem and drew three thousand men on pilgrimage.
   text: "On departing for Jerusalem he drew with him three thousand men, who accompanied him on pilgrimage."

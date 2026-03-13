@@ -21,5 +21,5 @@ Greek colony in southern Italy; home of the philosopher Archytas, whom Plato vis
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-d9fb363` — Plato traveled to Archytas of Tarentum
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-c60c332` — Plato traveled to Archytas of Tarentum
   text: "to Archytas of Tarentum"

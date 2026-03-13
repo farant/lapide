@@ -19,9 +19,9 @@ Ancient land, referenced both as the place of Moses' captivity under Pharaoh, fr
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p5-s-6a68bbd` — Moses led the Hebrews out of Egypt
+- `01_Preliminares.html#dedicatory-letter-p5-s-c943548` — Moses led the Hebrews out of Egypt
   text: "led them out of Egypt through trackless deserts"
-- `01_Preliminares.html#dedicatory-letter-p26-s-f82d5e8` — Egypt named as full of monastic followers
+- `01_Preliminares.html#dedicatory-letter-p26-s-43a9cfe` — Egypt named as full of monastic followers
   text: "Egypt, Palestine, and Mesopotamia are full of those who follow this Christian Philosophy"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-a7a57e6` — Plato traveled laboriously through Egypt seeking knowledge
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-14eb755` — Plato traveled laboriously through Egypt seeking knowledge
   text: "Plato most laboriously traveled through Egypt"

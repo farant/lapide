@@ -23,7 +23,7 @@ Bishop of Crete and companion of Paul. Paul commanded Titus that a bishop should
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-3a70dbe` — Paul took Barnabas and Titus to set forth the Gospel; Paul commands Titus that a bishop should hold fast the faithful word
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-4b21693` — Paul took Barnabas and Titus to set forth the Gospel; Paul commands Titus that a bishop should hold fast the faithful word
   text: "He commands Titus that among the other virtues of a bishop, which he depicted in a brief discourse, he should also choose in him knowledge of the Scriptures"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p45-s-3d315c5` — Paul instructs Timothy and Titus
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p45-s-a9dcb20` — Paul instructs Timothy and Titus
   text: "He instructs Timothy and Titus"

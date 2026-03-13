@@ -21,7 +21,7 @@ Brother of Moses and first High Priest of Israel.
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p5-s-d3a8336` — Moses transferred the priesthood to his brother Aaron and consecrated him as High Priest
+- `01_Preliminares.html#dedicatory-letter-p5-s-b501f6f` — Moses transferred the priesthood to his brother Aaron and consecrated him as High Priest
   text: "until he transferred the one office, namely the priesthood, to his brother Aaron, and consecrated him as High Priest."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p12-s-87becf0` — The vestments of Aaron and the entire Levitical order breathe forth heavenly mysteries in Leviticus
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p12-s-ad78976` — The vestments of Aaron and the entire Levitical order breathe forth heavenly mysteries in Leviticus
   text: "the vestments of Aaron, and the entire Levitical order breathe forth heavenly mysteries"

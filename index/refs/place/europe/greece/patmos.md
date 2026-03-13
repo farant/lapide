@@ -18,5 +18,5 @@ Aegean island where St. John was exiled and received the visions of the Apocalyp
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-b41214a` — John stands upon the shores of Patmos as the last of the prophets, announcing the Church's transfigurations
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-d2047a0` — John stands upon the shores of Patmos as the last of the prophets, announcing the Church's transfigurations
   text: "stands upon the shores of Patmos"

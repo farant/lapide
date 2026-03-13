@@ -19,5 +19,5 @@ French dramatist. Lacordaire lists "the laments of Racine's Phaedra" among the g
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-77facb3` — Lacordaire lists "the laments of Racine's Phaedra" among the greatest achievements of secular poetry, but sets them below the Miserere, Lamentations, and Isaiah
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-bec498a` — Lacordaire lists "the laments of Racine's Phaedra" among the greatest achievements of secular poetry, but sets them below the Miserere, Lamentations, and Isaiah
   text: "the laments of Racine's Phaedra"

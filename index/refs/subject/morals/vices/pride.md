@@ -18,5 +18,5 @@ The vice of arrogance, especially as manifested in the presumptuous seizure of e
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p14-s-3dee1c9` — Cyprian contrasts those "who are puffed up by the swelling of their arrogance and pride" and seize the episcopate with the truly humble Cornelius who suffered compulsion to accept it.
+- `01_Preliminares.html#dedicatory-letter-p14-s-28c9051` — Cyprian contrasts those "who are puffed up by the swelling of their arrogance and pride" and seize the episcopate with the truly humble Cornelius who suffered compulsion to accept it.
   text: "he neither sought the episcopate itself, nor desired it, nor seized it as others do who are puffed up by the swelling of their arrogance and pride"

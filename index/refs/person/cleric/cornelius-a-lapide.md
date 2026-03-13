@@ -42,11 +42,11 @@ Jesuit biblical commentator who taught Holy Scripture at Louvain for over twenty
   text: "Cornelius a Lapide, S.J."
 - `01_Preliminares.html#title-page-s-73c1adb` — Full title page identifies him as author and professor
   text: "COMMENTARIES ON HOLY SCRIPTURE By Reverend Father Cornelius a Lapide, of the Society of Jesus, formerly professor of Holy Scripture at Louvain, afterwards at Rome"
-- `01_Preliminares.html#permissions-s-55978dd` — Vitelleschi grants permission for his Commentaries on the Pentateuch to be printed
+- `01_Preliminares.html#permissions-s-a3b5521` — Vitelleschi grants permission for his Commentaries on the Pentateuch to be printed
   text: "the Commentaries on the Pentateuch of Father Cornelius Cornelii a Lapide, theologian of our Society"
-- `01_Preliminares.html#permissions-p2-s-326d650` — Scribani grants printing permission for his work
+- `01_Preliminares.html#permissions-p2-s-51f474b` — Scribani grants printing permission for his work
   text: "the Commentaries on the Pentateuch of Moses, authored by Father Cornelius Cornelii a Lapide, theologian of our Society"
-- `01_Preliminares.html#permissions-p3-s-f650936` — Spitholdius certifies his commentary as learned and pious
+- `01_Preliminares.html#permissions-p3-s-c8c07b3` — Spitholdius certifies his commentary as learned and pious
   text: "This Commentary of the Very Reverend Father Cornelius Cornelii a Lapide, theologian of the Society of Jesus, is learned and pious"
 - `01_Preliminares.html#permissions-p4-s-bb92bbf` — Crampon's annotations to his commentaries noted
   text: "Annotations by which Aug. Crampon, priest of the diocese of Amiens, has illustrated and enriched Father Cornelius a Lapide's Commentaries on the Pentateuch."
@@ -54,7 +54,7 @@ Jesuit biblical commentator who taught Holy Scripture at Louvain for over twenty
   text: "THE LIFE OF CORNELIUS A LAPIDE."
 - `01_Preliminares.html#life-p2-s-b5c0709` — Full biography: born in Bocholt, entered Society of Jesus 1592, taught at Louvain 20+ years, then Rome; his prayer expressing devotion to solitude and contemplation
   text: "Cornelius Cornelii a Lapide, a Belgian by nationality, a native of Bocholt in the region of Eupen, born of respectable parents, began to worship God in faith, hope, and charity from the first use of reason."
-- `01_Preliminares.html#life-p3-s-4470c51` — Continues biography: his humility, desire for martyrdom, near-capture by Dutch cavalry at Aspromont in 1604, devotion to the Blessed Virgin, death in Rome 12 March 1637; catalogue of his published works
+- `01_Preliminares.html#life-p3-s-fb402f7` — Continues biography: his humility, desire for martyrdom, near-capture by Dutch cavalry at Aspromont in 1604, devotion to the Blessed Virgin, death in Rome 12 March 1637; catalogue of his published works
   text: "Absorbed in these pursuits of holiness, after he had passed seventy years of age, he paid at last the debt of nature in the Holy City, where he had always desired to mingle his bones with those of the saints, on 12 March in the year 1637."
 - `01_Preliminares.html#life-p4-s-2f38c83` — Left incomplete commentaries on Job and Psalms
   text: "He left incomplete his commentaries on the books of Job and Psalms."

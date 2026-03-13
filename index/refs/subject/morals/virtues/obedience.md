@@ -16,7 +16,7 @@ The virtue of obedience to religious superiors and divine commands — valued ab
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-16b51d7` — For Lapide, "obedience was always dearer to him than life, and the love of truth." Obedience led him to bring his writings into public light.
+- `01_Preliminares.html#life-p3-s-631ff59` — For Lapide, "obedience was always dearer to him than life, and the love of truth." Obedience led him to bring his writings into public light.
   text: "Obedience was always dearer to him than life, and the love of truth."
-- `01_Preliminares.html#dedicatory-letter-p17-s-97a99a0` — Van der Burch submitted to his Provincial's persuasion and "bowed his neck again to the pious burden" of the vicariate.
+- `01_Preliminares.html#dedicatory-letter-p17-s-8e77d40` — Van der Burch submitted to his Provincial's persuasion and "bowed his neck again to the pious burden" of the vicariate.
   text: "had not our Reverend Father Provincial... drawn you back from this resolve and persuaded you to bow your neck again to the pious burden."

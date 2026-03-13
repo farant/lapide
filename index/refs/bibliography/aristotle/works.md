@@ -17,5 +17,5 @@ Aristotle referenced by Lacordaire as the paradigm of rigorous dialectic, to whi
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-acde0d5` — Lacordaire compares Paul's epistles to the rigor of Aristotle and the passion of Plato
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-75df646` — Lacordaire compares Paul's epistles to the rigor of Aristotle and the passion of Plato
   text: "he is at once more rigorous than Aristotle and more passionate than Plato"

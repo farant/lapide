@@ -17,9 +17,9 @@ Catholic diocese in Flanders. Van der Burch served as its Bishop, restoring disc
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p15-s-f6a6d27` — Van der Burch called to the bishopric of Ghent
+- `01_Preliminares.html#dedicatory-letter-p15-s-1521601` — Van der Burch called to the bishopric of Ghent
   text: "you were called to the bishopric of Ghent by our Most Serene Archduke"
-- `01_Preliminares.html#dedicatory-letter-p18-s-72a0fd2` — Van der Burch transferred from the bishopric of Ghent
+- `01_Preliminares.html#dedicatory-letter-p18-s-8ca53a2` — Van der Burch transferred from the bishopric of Ghent
   text: "transferring you from the bishopric of Ghent"
-- `01_Preliminares.html#dedicatory-letter-p28-s-53f547a` — Van der Burch reformed monasteries in the diocese
+- `01_Preliminares.html#dedicatory-letter-p28-s-4fb05fe` — Van der Burch reformed monasteries in the diocese
   text: "now in the diocese of Ghent, have been so frequently visited, reformed, built up, and directed by you"

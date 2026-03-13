@@ -21,7 +21,7 @@ Plato referenced both by Jerome (as an example of a seeker of learning who trave
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-a48494a` — Jerome cites Plato's arduous journeys to Egypt and Magna Graecia as an example of dedication to learning
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-da6b2b7` — Jerome cites Plato's arduous journeys to Egypt and Magna Graecia as an example of dedication to learning
   text: "Plato most laboriously traveled through Egypt, and to Archytas of Tarentum, and that coast of Italy which was once called Magna Graecia"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-acde0d5` — Lacordaire compares Paul to Plato in passionate eloquence
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-75df646` — Lacordaire compares Paul to Plato in passionate eloquence
   text: "he is at once more rigorous than Aristotle and more passionate than Plato"

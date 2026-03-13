@@ -27,5 +27,5 @@ Theologian, historian, and translator of Greek theological works into Latin. Att
 
 - `01_Preliminares.html#dedicatory-letter-p9-s-d12cf31` — Attests that Basil and Gregory Nazianzen devoted thirteen years to reading Moses and Sacred Scriptures after studying at Athens
   text: "Rufinus attests that after Saint Basil and Saint Gregory Nazianzen had studied eloquence and philosophy at Athens"
-- `01_Preliminares.html#dedicatory-letter-p22-s-44c04a9` — Recounts (Book II, chapter ix) Basil's zeal and benefactions in Pontus: rousing sluggish minds, building monasteries, teaching psalms, transforming the province
+- `01_Preliminares.html#dedicatory-letter-p22-s-cc08105` — Recounts (Book II, chapter ix) Basil's zeal and benefactions in Pontus: rousing sluggish minds, building monasteries, teaching psalms, transforming the province
   text: "Rufinus recounts the zeal and benefactions of Saint Basil toward his own people, Book II, chapter ix"

@@ -21,5 +21,5 @@ Tacitus's historical works, referenced by Lacordaire as inspired by the memory o
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-ae9477e` — Lacordaire pairs Tacitus with Livy as the great historians Rome produced
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-4dab133` — Lacordaire pairs Tacitus with Livy as the great historians Rome produced
   text: "it was Rome still that inspired Tacitus, by bringing back to him under Nero the soul of its consuls"

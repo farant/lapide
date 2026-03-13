@@ -29,5 +29,5 @@ Jerome's letter to Bishop Paulinus of Nola, encouraging the study of Scripture a
   text: "Presumably Genesis is perfectly clear"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p43-s-d2a8193` — Jerome transitions to the New Testament
   text: "Let me touch briefly on the New Testament as well."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-f6ea6a5` — Jerome concludes with exhortations to Paulinus to renounce the world and devote himself to Scripture
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-df112eb` — Jerome concludes with exhortations to Paulinus to renounce the world and devote himself to Scripture
   text: "I pray you, dearest brother, to live among these things, to meditate on them, to know nothing else, to seek nothing else."

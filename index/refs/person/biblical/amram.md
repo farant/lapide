@@ -21,5 +21,5 @@ Father of Moses. Part of Moses' genealogy.
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p10-s-7d8e06f` — Moses' ancestor: Caath begot Amram, Amram begot Moses
+- `01_Preliminares.html#dedicatory-letter-p10-s-bda7e0e` — Moses' ancestor: Caath begot Amram, Amram begot Moses
   text: "Caath Amram, and Amram Moses."

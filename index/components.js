@@ -526,15 +526,44 @@ function getAnnotations() {
 // Walk text nodes inside an element, counting characters (text-only, skipping tags).
 // Returns the text node + local offset for a given character position.
 function findTextPosition(el, charOffset) {
+	// Sidecar offsets are relative to whitespace-collapsed, trimmed plain text.
+	// Walk text nodes, tracking a normalized position that matches stripHtml() output.
 	const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-	let pos = 0;
+	let normPos = 0;    // position in normalized (collapsed/trimmed) text
+	let leading = true; // still in leading whitespace
+	let lastWasWs = false; // tracks whitespace runs across text node boundaries
 	let node;
 	while ((node = walker.nextNode())) {
-		const len = node.textContent.length;
-		if (pos + len > charOffset) {
-			return { node, offset: charOffset - pos };
+		const text = node.textContent;
+		for (let i = 0; i < text.length; i++) {
+			const isWs = /\s/.test(text[i]);
+			if (leading && isWs) continue;  // skip leading whitespace
+			if (leading && !isWs) leading = false;
+			// Collapse runs of whitespace to a single space
+			if (isWs) {
+				if (!lastWasWs) {
+					if (normPos === charOffset) return { node, offset: i };
+					normPos++;
+					lastWasWs = true;
+				}
+				continue;
+			}
+			lastWasWs = false;
+			if (normPos === charOffset) return { node, offset: i };
+			normPos++;
 		}
-		pos += len;
+	}
+	// charOffset is at the very end of the text
+	if (normPos === charOffset) {
+		// Return position at end of last text node
+		const allTextNodes = [];
+		const w2 = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+		let n2;
+		while ((n2 = w2.nextNode())) allTextNodes.push(n2);
+		if (allTextNodes.length > 0) {
+			const last = allTextNodes[allTextNodes.length - 1];
+			return { node: last, offset: last.textContent.length };
+		}
 	}
 	return null;
 }
@@ -585,29 +614,51 @@ function highlightPassage() {
 		return;
 	}
 
-	// Create a Range and wrap it in a <mark>
-	try {
-		const range = document.createRange();
-		range.setStart(startPos.node, startPos.offset);
-		range.setEnd(endPos.node, endPos.offset);
+	// Wrap matching text nodes in <mark> elements using TreeWalker
+	// (handles ranges that span across inline elements like <entity-ref>)
+	const range = document.createRange();
+	range.setStart(startPos.node, startPos.offset);
+	range.setEnd(endPos.node, endPos.offset);
 
+	// Collect text nodes within the range
+	const walker = document.createTreeWalker(para, NodeFilter.SHOW_TEXT);
+	const textNodes = [];
+	let inRange = false;
+	while (walker.nextNode()) {
+		const node = walker.currentNode;
+		if (node === startPos.node) inRange = true;
+		if (inRange) {
+			const nStart = node === startPos.node ? startPos.offset : 0;
+			const nEnd = node === endPos.node ? endPos.offset : node.textContent.length;
+			if (nStart < nEnd) {
+				textNodes.push({ node, start: nStart, end: nEnd });
+			}
+		}
+		if (node === endPos.node) break;
+	}
+
+	// Wrap in reverse order to preserve offsets
+	let firstMark = null;
+	for (let i = textNodes.length - 1; i >= 0; i--) {
+		const { node, start, end } = textNodes[i];
+		const markRange = document.createRange();
+		markRange.setStart(node, start);
+		markRange.setEnd(node, end);
 		const mark = document.createElement('mark');
 		mark.className = 'passage-highlight';
-		mark.id = hash;
-		range.surroundContents(mark);
+		if (i === 0) {
+			mark.id = hash;
+			firstMark = mark;
+		}
+		markRange.surroundContents(mark);
+	}
 
-		// Scroll and fade
-		mark.scrollIntoView({ behavior: 'smooth', block: 'center' });
-		setTimeout(() => mark.classList.add('fade-out'), 5000);
+	if (firstMark) {
+		firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' });
 		setTimeout(() => {
-			clearHighlights();
-		}, 6000);
-	} catch (e) {
-		// surroundContents can fail if range spans multiple elements
-		// Fall back to highlighting the whole paragraph
-		para.classList.add('passage-highlight-para');
-		para.scrollIntoView({ behavior: 'smooth', block: 'center' });
-		setTimeout(() => para.classList.remove('passage-highlight-para'), 6000);
+			document.querySelectorAll('mark.passage-highlight').forEach(m => m.classList.add('fade-out'));
+		}, 5000);
+		setTimeout(() => { clearHighlights(); }, 6000);
 	}
 }
 

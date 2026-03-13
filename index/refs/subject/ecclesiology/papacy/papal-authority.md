@@ -22,9 +22,9 @@ The role of the Apostolic See in overseeing the integrity of Scripture, enforcin
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p10-s-bc95074` — The integrity of Scripture and execution of conciliar decrees are said to pertain especially to the care of the Apostolic See.
+- `01_Preliminares.html#preface-reader-p10-s-cd25feb` — The integrity of Scripture and execution of conciliar decrees are said to pertain especially to the care of the Apostolic See.
   text: "the execution of the decrees of general councils, and the very integrity and purity of the Scriptures themselves, are known to pertain especially to the care of the Apostolic See"
-- `01_Preliminares.html#clement-viii-p2-s-a0ded6f` — Clement VIII exercises apostolic authority to regulate printing of the Vulgate, restricting it to the Vatican Press.
+- `01_Preliminares.html#clement-viii-p2-s-951997c` — Clement VIII exercises apostolic authority to regulate printing of the Vulgate, restricting it to the Vatican Press.
   text: "We, desiring opportunely to provide that the same text may hereafter be preserved incorrupt, as is fitting, by Apostolic authority"
 - `01_Preliminares.html#clement-viii-p4-s-085fe12` — The Pope commands all patriarchs, archbishops, bishops, and prelates to enforce his decrees, invoking the secular arm if necessary.
   text: "We therefore command all and each of the Patriarchs, Archbishops, Bishops, and other Prelates of churches and places... that they take care and ensure that these present letters be inviolably and perpetually observed"

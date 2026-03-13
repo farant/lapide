@@ -15,5 +15,5 @@ General reference to Isidore of Seville's writings (in multiple places) where he
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p6-s-5369497` — Isidore cited as preferring Jerome's version to all others
+- `01_Preliminares.html#preface-reader-p6-s-928a945` — Isidore cited as preferring Jerome's version to all others
   text: "St. Isidore, moreover, in more than one place prefers the Hieronymian version to all others and affirms that it is commonly received and approved by the Christian churches because it is clearer in words and truer in meaning."

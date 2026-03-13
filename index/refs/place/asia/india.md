@@ -18,5 +18,5 @@ Subcontinent in southern Asia; Apollonius penetrated the most opulent kingdoms o
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-d629618` — Apollonius penetrated the most opulent kingdoms of India
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-e378c74` — Apollonius penetrated the most opulent kingdoms of India
   text: "penetrated the most opulent kingdoms of India"

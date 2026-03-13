@@ -20,7 +20,7 @@ The veneration of the bodily remains of saints and their use in supplication for
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p25-s-2294925` — Van der Burch sent the relics of St. Macarius to Mons during a plague; the pestilence receded upon the body's arrival.
+- `01_Preliminares.html#dedicatory-letter-p25-s-c92d8d5` — Van der Burch sent the relics of St. Macarius to Mons during a plague; the pestilence receded upon the body's arrival.
   text: "you sent to them the relics — the body of Saint Macarius, once Archbishop of Antioch in Armenia — and as soon as it was brought into the city, the pestilence, as if struck back from heaven, began to recede and diminish"
-- `01_Preliminares.html#dedicatory-letter-p42-s-75a7472` — St. Authbert of Cambrai "adorned the relics of the saints with the greatest seemliness."
+- `01_Preliminares.html#dedicatory-letter-p42-s-972a049` — St. Authbert of Cambrai "adorned the relics of the saints with the greatest seemliness."
   text: "He also adorned the relics of the saints with the greatest seemliness."

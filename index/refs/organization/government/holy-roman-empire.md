@@ -17,7 +17,7 @@ Supranational political entity in central Europe. Van der Burch held the title o
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-s-3003cd7` — Van der Burch addressed as Prince of the Holy Roman Empire
+- `01_Preliminares.html#dedicatory-letter-s-2dc624a` — Van der Burch addressed as Prince of the Holy Roman Empire
   text: "PRINCE OF THE HOLY ROMAN EMPIRE, COUNT OF CAMBRAI."
-- `01_Preliminares.html#dedicatory-letter-p2-s-dc30cac` — Van der Burch inaugurated as Prince of the Holy Roman Empire at Cambrai
+- `01_Preliminares.html#dedicatory-letter-p2-s-b0d4fd7` — Van der Burch inaugurated as Prince of the Holy Roman Empire at Cambrai
   text: "you were being inaugurated as Archbishop and Prince of the Holy Roman Empire at Cambrai"

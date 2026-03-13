@@ -19,5 +19,5 @@ Town in Galilee; where Jesus grew up in the obscure house of an artisan. He left
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-676f9fb` — Jesus leaves Nazareth to go to the banks of the Jordan for baptism
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-59be7da` — Jesus leaves Nazareth to go to the banks of the Jordan for baptism
   text: "he will leave Nazareth and go down to the banks of the Jordan"

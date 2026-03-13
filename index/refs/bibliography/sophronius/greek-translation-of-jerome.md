@@ -15,5 +15,5 @@ Sophronius's translation of Jerome's Latin Psalter and Prophets into elegant Gre
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p6-s-1bb71c0` — Sophronius described as translating Jerome's Psalter and Prophets into elegant Greek
+- `01_Preliminares.html#preface-reader-p6-s-5d9513c` — Sophronius described as translating Jerome's Psalter and Prophets into elegant Greek
   text: "Sophronius also, a most erudite man, observing that St. Jerome's translation was highly approved not only by Latins but also by Greeks, valued it so greatly that he translated the Psalter and the Prophets from Jerome's version into elegant Greek."

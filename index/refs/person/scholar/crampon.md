@@ -28,7 +28,7 @@ French biblical scholar and priest of the Diocese of Amiens. Revised and annotat
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-41bb9a2` — Named as the one who revised and illustrated the commentaries with notes
+- `01_Preliminares.html#title-page-s-e0dd2b8` — Named as the one who revised and illustrated the commentaries with notes
   text: "Carefully revised and illustrated with notes by Augustinus Crampon, Priest of the Diocese of Amiens."
 - `01_Preliminares.html#permissions-p4-s-bb92bbf` — His annotations to the Commentaries on the Pentateuch approved for printing by the Bishop of Amiens in 1852
   text: "Annotations by which Aug. Crampon, priest of the diocese of Amiens, has illustrated and enriched Father Cornelius a Lapide's Commentaries on the Pentateuch."

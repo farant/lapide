@@ -20,5 +20,5 @@ Greek philosopher. Lacordaire says Paul is "more rigorous than Aristotle and mor
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-acde0d5` — Lacordaire says Paul is "more rigorous than Aristotle"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-75df646` — Lacordaire says Paul is "more rigorous than Aristotle"
   text: "he is at once more rigorous than Aristotle and more passionate than Plato"

@@ -27,11 +27,11 @@ The singular character of Paul's apostolate and epistles. Lacordaire portrays Pa
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-b19c02f` — Lacordaire describes Paul as having no analogue in any literature, standing alone at an altitude that disconcerts. His fullness overflows through every channel of speech; he makes enthymemes that tear out the entrails and deductions that make one weep.
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-bc943a5` — Lacordaire describes Paul as having no analogue in any literature, standing alone at an altitude that disconcerts. His fullness overflows through every channel of speech; he makes enthymemes that tear out the entrails and deductions that make one weep.
   text: "Saint Paul resembles nothing; he has no analogue in any secular literature, nor in any sacred literature. He stands alone, and at an altitude that disconcerts"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p50-s-810920e` — Paul's language is a sort of Greek steeped in Hebraism; once one has the key and rises to understand him, one falls into the intoxication of admiration. He has beneath him the entire ocean of truth.
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p50-s-4448383` — Paul's language is a sort of Greek steeped in Hebraism; once one has the key and rises to understand him, one falls into the intoxication of admiration. He has beneath him the entire ocean of truth.
   text: "when one has the key to his language, and once, by dint of rereading him, one has risen little by little to understand him, one falls into the intoxication of admiration."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-9235de0` — Paul is called a vessel of election because he was an armory of the law and the holy Scriptures.
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-a09d95b` — Paul is called a vessel of election because he was an armory of the law and the holy Scriptures.
   text: "Why is the apostle Paul called a vessel of election? Surely because he was an armory of the law and the holy Scriptures."
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p45-s-a36135b` — Jerome's summary: Paul writes to seven churches (the eighth to the Hebrews is placed by most outside the number), instructs Timothy and Titus, and intercedes for Philemon.
   text: "Paul the Apostle writes to seven churches, for the eighth, to the Hebrews, is placed by most outside the number."

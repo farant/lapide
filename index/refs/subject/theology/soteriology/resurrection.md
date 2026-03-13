@@ -15,5 +15,5 @@ The bodily resurrection prophesied in Job, who testifies that he will rise from 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p15-s-96cd29e` — Jerome praises Job as the model of patience whose book prophesies the resurrection of bodies more clearly and cautiously than any other.
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p15-s-7c9e5b7` — Jerome praises Job as the model of patience whose book prophesies the resurrection of bodies more clearly and cautiously than any other.
   text: "it so prophesies the resurrection of bodies that no one has written of it either more clearly or more cautiously."

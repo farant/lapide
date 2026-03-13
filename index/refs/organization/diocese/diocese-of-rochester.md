@@ -17,5 +17,5 @@ English diocese. Bl. John Fisher was raised to the bishopric of Rochester on acc
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p19-s-69ff5be` — Fisher raised to the bishopric and refused to leave
+- `01_Preliminares.html#dedicatory-letter-p19-s-8739d2e` — Fisher raised to the bishopric and refused to leave
   text: "who was raised to the bishopric of Rochester on account of his incomparable learning and innocence of life"

@@ -18,5 +18,5 @@ Major port city in Egypt; great center of learning in the ancient world. Apollon
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f00cc54` — Apollonius returned to Alexandria before going on to Ethiopia
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f7d55c6` — Apollonius returned to Alexandria before going on to Ethiopia
   text: "having returned to Alexandria, he went on to Ethiopia"

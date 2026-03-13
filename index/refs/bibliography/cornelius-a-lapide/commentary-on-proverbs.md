@@ -17,5 +17,5 @@ Lapide's commentary on Proverbs, published at Antwerp and Paris (Cramoisy) in 16
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-9a6939b` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-17920e6` — Listed in catalogue of works
   text: "on the Proverbs of Solomon, Antwerp and Paris, at Cramoisy's, 1635"

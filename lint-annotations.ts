@@ -12,6 +12,7 @@
  * 5. Sidecar annotations with invalid paragraph IDs or out-of-range offsets
  * 6. entity-ref tags pointing to slugs with no ref file
  * 7. components.js script tag missing from <head>
+ * 8. Generated index pages linking to stale/missing annotation hashes
  */
 
 import { Glob } from "bun";
@@ -38,7 +39,7 @@ interface SidecarAnnotation {
 
 interface HtmlData {
   paragraphIds: Set<string>;
-  paragraphTexts: Map<string, number>; // id → plain text length
+  paragraphTexts: Map<string, string>; // id → plain text content
   annotations: SidecarAnnotation[];
   annotationIds: Set<string>;
   annotationsByParagraph: Map<string, string[]>;
@@ -71,12 +72,12 @@ async function parseHtml(): Promise<HtmlData> {
 
   // Paragraph IDs and plain text lengths
   const paragraphIds = new Set<string>();
-  const paragraphTexts = new Map<string, number>();
+  const paragraphTexts = new Map<string, string>();
   const pIdRe = /<p\s[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/p>/gi;
   let m;
   while ((m = pIdRe.exec(content)) !== null) {
     paragraphIds.add(m[1]);
-    paragraphTexts.set(m[1], stripHtml(m[2]).length);
+    paragraphTexts.set(m[1], stripHtml(m[2]));
   }
 
   // Parse sidecar JSON
@@ -129,6 +130,7 @@ interface RefLine {
   paragraphId: string | null;
   annotationId: string | null; // e.g., "preface-reader-p2-s-a3f2b1c"
   isSynced: boolean;           // true if using -s-hash, false if old format
+  expectedText: string | null; // the text: "..." field from the ref file
 }
 
 function escapeRegex(s: string): string {
@@ -158,11 +160,17 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
     const lines = content.split("\n");
     let inRefs = false;
 
-    for (const line of lines) {
+    for (let li = 0; li < lines.length; li++) {
+      const line = lines[li];
       if (line.match(/^## References in Commentary/)) { inRefs = true; continue; }
       if (inRefs && line.startsWith("## ")) { inRefs = false; continue; }
       if (!inRefs) continue;
       if (!line.includes(`\`${fileName}#`)) continue;
+
+      // Extract text: "..." from the next line (if present)
+      const nextLine = li + 1 < lines.length ? lines[li + 1] : "";
+      const textMatch = nextLine.match(/^\s*text:\s*"([^"]*)"/);
+      const expectedText = textMatch ? textMatch[1] : null;
 
       // Sidecar hash ref: `source.html#paragraph-id-s-XXXXXXX`
       const sidecarMatch = line.match(new RegExp(
@@ -176,6 +184,7 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
           paragraphId: paraId,
           annotationId,
           isSynced: true,
+          expectedText,
         });
         continue;
       }
@@ -190,6 +199,7 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
           paragraphId: bareMatch[1],
           annotationId: null,
           isSynced: false,
+          expectedText,
         });
         continue;
       }
@@ -204,6 +214,7 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
           paragraphId: `${oldMatch[1]}-p${oldMatch[2]}`,
           annotationId: null,
           isSynced: false,
+          expectedText,
         });
       }
     }
@@ -314,7 +325,7 @@ async function main() {
       invalidAnnotations.push({ id: a.id, reason: `paragraph "${a.paragraph}" not found` });
       continue;
     }
-    const textLen = html.paragraphTexts.get(a.paragraph) || 0;
+    const textLen = (html.paragraphTexts.get(a.paragraph) || "").length;
     if (a.start < 0 || a.end < 0 || a.start > a.end) {
       invalidAnnotations.push({ id: a.id, reason: `invalid offsets start=${a.start} end=${a.end}` });
     } else if (a.end > textLen + 5) {
@@ -330,6 +341,87 @@ async function main() {
     if (invalidAnnotations.length > 20) console.log(`   ... and ${invalidAnnotations.length - 20} more`);
     console.log();
     issueCount += invalidAnnotations.length;
+  }
+
+  // Check 5b: Annotation text at offsets doesn't match ref file's expected text
+  // Build a map from annotation ID → expected text from ref files
+  const refExpectedTexts = new Map<string, { text: string; entity: string }>();
+  for (const ref of refFiles) {
+    for (const r of ref.references) {
+      if (r.annotationId && r.expectedText) {
+        refExpectedTexts.set(r.annotationId, { text: r.expectedText, entity: ref.entitySlug });
+      }
+    }
+  }
+
+  const textMismatches: { id: string; selected: string; expected: string; entity: string; startOff: number; endOff: number }[] = [];
+  for (const a of html.annotations) {
+    const plainText = html.paragraphTexts.get(a.paragraph);
+    if (!plainText) continue;
+
+    const expected = refExpectedTexts.get(a.id);
+    if (!expected) continue;
+
+    const selectedText = plainText.slice(a.start, a.end).replace(/\s+/g, " ").trim();
+    const expectedText = expected.text.replace(/\s+/g, " ").trim();
+
+    // Skip ellipsis matches (they span a range, text won't match exactly)
+    if (expected.text.includes("...")) continue;
+
+    if (selectedText === expectedText) continue;
+
+    // Determine how far off the start/end are
+    let startOff = 0;
+    let endOff = 0;
+    for (let d = 1; d <= 3; d++) {
+      if (startOff === 0) {
+        const tryStart = plainText.slice(a.start - d, a.end).replace(/\s+/g, " ").trim();
+        if (tryStart === expectedText || tryStart.startsWith(expectedText)) startOff = d;
+      }
+      if (endOff === 0) {
+        const tryEnd = plainText.slice(a.start, a.end + d).replace(/\s+/g, " ").trim();
+        if (tryEnd === expectedText || tryEnd.endsWith(expectedText.slice(-10))) endOff = d;
+      }
+    }
+
+    textMismatches.push({
+      id: a.id,
+      selected: selectedText,
+      expected: expectedText,
+      entity: expected.entity,
+      startOff,
+      endOff,
+    });
+  }
+
+  if (textMismatches.length > 0) {
+    // Categorize
+    const startOnly = textMismatches.filter(m => m.startOff > 0 && m.endOff === 0);
+    const endOnly = textMismatches.filter(m => m.startOff === 0 && m.endOff > 0);
+    const bothOff = textMismatches.filter(m => m.startOff > 0 && m.endOff > 0);
+    const other = textMismatches.filter(m => m.startOff === 0 && m.endOff === 0);
+
+    console.log(`❌ ${textMismatches.length} annotations have text at offsets that doesn't match expected ref text:`);
+    if (startOnly.length > 0) console.log(`   Start offset too high: ${startOnly.length}`);
+    if (endOnly.length > 0) console.log(`   End offset too low: ${endOnly.length}`);
+    if (bothOff.length > 0) console.log(`   Both start+end off: ${bothOff.length}`);
+    if (other.length > 0) console.log(`   Other mismatch: ${other.length}`);
+    console.log();
+
+    // Show a few examples
+    const examples = textMismatches.slice(0, 10);
+    for (const m of examples) {
+      const selPreview = m.selected.length > 60 ? m.selected.slice(0, 60) + "..." : m.selected;
+      const expPreview = m.expected.length > 60 ? m.expected.slice(0, 60) + "..." : m.expected;
+      const offDesc = m.startOff > 0 && m.endOff > 0 ? `start+${m.startOff}, end-${m.endOff}`
+        : m.startOff > 0 ? `start+${m.startOff}` : m.endOff > 0 ? `end-${m.endOff}` : "other";
+      console.log(`   ${m.id} (${offDesc})`);
+      console.log(`     selected: "${selPreview}"`);
+      console.log(`     expected: "${expPreview}"`);
+    }
+    if (textMismatches.length > 10) console.log(`   ... and ${textMismatches.length - 10} more`);
+    console.log();
+    issueCount += textMismatches.length;
   }
 
   // Check 6: entity-ref tags pointing to slugs with no ref file
@@ -367,6 +459,32 @@ async function main() {
     console.log(`⚠️  Missing <script src="/index/components.js" type="module"></script> in <head>`);
     console.log(`   Run 'bun tag-entity-refs.ts ${sourceFile}' to auto-insert it.\n`);
     issueCount++;
+  }
+
+  // Check 8: Generated index pages with stale/missing annotation hashes
+  const indexGlob = new Glob("**/*.html");
+  const staleIndexLinks: { indexPage: string; hash: string }[] = [];
+  const linkRe = new RegExp(
+    `/${escapeRegex(fileName)}[^"]*#([a-z0-9-]+-s-[a-f0-9]{7})`,
+    "g"
+  );
+  for await (const path of indexGlob.scan("index")) {
+    const pageContent = await Bun.file(`index/${path}`).text();
+    let lm;
+    while ((lm = linkRe.exec(pageContent)) !== null) {
+      if (!html.annotationIds.has(lm[1])) {
+        staleIndexLinks.push({ indexPage: `index/${path}`, hash: lm[1] });
+      }
+    }
+  }
+  if (staleIndexLinks.length > 0) {
+    console.log(`❌ ${staleIndexLinks.length} generated index page links point to annotation hashes not in sidecar:`);
+    for (const s of staleIndexLinks.slice(0, 20)) {
+      console.log(`   ${s.indexPage} → #${s.hash}`);
+    }
+    if (staleIndexLinks.length > 20) console.log(`   ... and ${staleIndexLinks.length - 20} more`);
+    console.log(`   Fix: re-run 'bun generate-index.ts' after 'bun annotate-source.ts ${sourceFile}'\n`);
+    issueCount += staleIndexLinks.length;
   }
 
   // Summary

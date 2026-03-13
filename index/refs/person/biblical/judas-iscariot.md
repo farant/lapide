@@ -20,7 +20,7 @@ Apostle who betrayed Christ. Betrayed him with a kiss.
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p46-s-7ea84bf` — Judas, one of his disciples, betrayed him with a kiss
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p46-s-01867b6` — Judas, one of his disciples, betrayed him with a kiss
   text: "Judas, one of his disciples, betrayed him with a kiss"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-96dcbee` — Judas will betray him
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-a4bce16` — Judas will betray him
   text: "Peter will weep for him, Judas will betray him, all will flee"

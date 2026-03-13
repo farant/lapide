@@ -18,5 +18,5 @@ Bookseller and publisher in Paris, located at 13 Rue Delambre. Published the 189
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-937b3e6` — Publisher of this edition
+- `01_Preliminares.html#title-page-s-76227c2` — Publisher of this edition
   text: "PARIS Published by Ludwig Vives, bookseller and publisher, 13, Street commonly called Delambre, 13. 1891"

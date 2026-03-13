@@ -18,5 +18,5 @@ City in Armenia, not to be confused with Antioch on the Orontes. St. Macarius se
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p25-s-454cd65` — The relics of St. Macarius, once Archbishop of Antioch in Armenia
+- `01_Preliminares.html#dedicatory-letter-p25-s-321f8bd` — The relics of St. Macarius, once Archbishop of Antioch in Armenia
   text: "the relics — the body of Saint Macarius, once Archbishop of Antioch in Armenia"

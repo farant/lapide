@@ -20,7 +20,7 @@ Kingdom of England. Home of Bl. Thomas More, the illustrious Chancellor and mart
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p12-s-6bba3f7` — Thomas More described as Chancellor of England and martyr
+- `01_Preliminares.html#dedicatory-letter-p12-s-aff1390` — Thomas More described as Chancellor of England and martyr
   text: "that illustrious Chancellor of England and martyr, Blessed Thomas More"
-- `01_Preliminares.html#dedicatory-letter-p19-s-b5534fc` — John Fisher described as the illustrious martyr of England
+- `01_Preliminares.html#dedicatory-letter-p19-s-1354d22` — John Fisher described as the illustrious martyr of England
   text: "John Fisher, Bishop of Rochester, the illustrious martyr of England"

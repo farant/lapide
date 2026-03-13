@@ -19,7 +19,7 @@ Addressee of Lacordaire's letter on the worship of Christ in Sacred Scripture. T
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p4-s-e8edb33` — Lacordaire addresses him as "my dear Emmanuel"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p4-s-710690e` — Lacordaire addresses him as "my dear Emmanuel"
   text: "So it is, my dear Emmanuel."
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-63191ce` — Addressed directly
   text: "Whence comes, you will say to me, this power of the psalms and the prophecies?"

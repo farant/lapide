@@ -21,5 +21,5 @@ Valley and seasonal watercourse east of Jerusalem; Jesus crossed it on the night
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p46-s-6e5dc70` — Jesus went to a garden situated beyond the torrent of Cedron where he was betrayed
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p46-s-9cf2dfa` — Jesus went to a garden situated beyond the torrent of Cedron where he was betrayed
   text: "a garden situated beyond the torrent of Cedron"

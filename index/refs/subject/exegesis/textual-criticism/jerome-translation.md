@@ -26,17 +26,17 @@ Jerome's role as translator of the Vulgate, praised by the Fathers for his maste
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p4-s-7002400` — The Vulgate received partly from Jerome's translation or emendation.
+- `01_Preliminares.html#preface-reader-p4-s-da74622` — The Vulgate received partly from Jerome's translation or emendation.
   text: "received in part from the translation or emendation of St. Jerome"
-- `01_Preliminares.html#preface-reader-p5-s-d8f3913` — Augustine's testimony praising the older Italic edition as "more tenacious of the words while preserving the clarity of the meaning."
+- `01_Preliminares.html#preface-reader-p5-s-57e8f81` — Augustine's testimony praising the older Italic edition as "more tenacious of the words while preserving the clarity of the meaning."
   text: "the Italic should be preferred because it was — as he himself says — 'more tenacious of the words while preserving the clarity of the meaning.'"
-- `01_Preliminares.html#preface-reader-p6-s-23b976a` — Multiple Fathers attest to Jerome's excellence: Augustine calls him most learned in three languages; Gregory says his translation rendered everything more truly from Hebrew; Isidore affirms it is commonly received; Sophronius translated Jerome's Psalter and Prophets into Greek.
+- `01_Preliminares.html#preface-reader-p6-s-4bc798e` — Multiple Fathers attest to Jerome's excellence: Augustine calls him most learned in three languages; Gregory says his translation rendered everything more truly from Hebrew; Isidore affirms it is commonly received; Sophronius translated Jerome's Psalter and Prophets into Greek.
   text: "St. Augustine calls him a most learned man and most skilled in three languages, and confirms by the testimony even of the Hebrews themselves that his translation is truthful."
-- `01_Preliminares.html#preface-reader-p7-s-52bc6cd` — All the great medieval theologians (Bede, Rabanus, Anselm, Peter Lombard, Aquinas, Bonaventure, etc.) used Jerome's version exclusively, causing other versions to become obsolete.
+- `01_Preliminares.html#preface-reader-p7-s-b972325` — All the great medieval theologians (Bede, Rabanus, Anselm, Peter Lombard, Aquinas, Bonaventure, etc.) used Jerome's version exclusively, causing other versions to become obsolete.
   text: "the most learned men who came after — Remigius, Bede, Rabanus, Haymo, Anselm, Peter Damian, Richard, Hugh, Bernard, Rupert, Peter Lombard, Alexander, Albert, Thomas, Bonaventure, and all the others... have used St. Jerome's version in such a way that the other versions... have, as it were, slipped from the hands of theologians and become utterly obsolete."
-- `01_Preliminares.html#preface-reader-p8-s-acb6948` — Jerome celebrated as the greatest Doctor divinely raised up for scriptural interpretation.
+- `01_Preliminares.html#preface-reader-p8-s-01e6328` — Jerome celebrated as the greatest Doctor divinely raised up for scriptural interpretation.
   text: "the Catholic Church not undeservedly celebrates St. Jerome as the greatest Doctor and as one divinely raised up for the interpretation of the sacred Scriptures"
-- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-903dacf` — Jerome defends his translation labor as a humble offering to the temple of God, compares himself to those who offer skins and goats' hair, and asserts the reader should compare his work against the Hebrew truth.
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-19651ed` — Jerome defends his translation labor as a humble offering to the temple of God, compares himself to those who offer skins and goats' hair, and asserts the reader should compare his work against the Hebrew truth.
   text: "In the temple of God each one offers what he can: some offer gold, silver, and precious stones; others offer fine linen and purple and scarlet and hyacinth; it goes well with us if we offer skins and goats' hair."
-- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-4bdce6a` — Jerome claims ownership of his translation through diligent study and emendation, and challenges critics to verify against the Hebrew.
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-33e0737` — Jerome claims ownership of his translation through diligent study and emendation, and challenges critics to verify against the Hebrew.
   text: "Read therefore first my Samuel and my Melachim -- mine, I say, mine. For whatever we have both learned by more frequent translating and hold by more careful emending is ours."

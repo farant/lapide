@@ -19,5 +19,5 @@ Village in Galilee; site of the wedding feast where Jesus performed his first mi
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-6faa52a` — The reader will be among the guests at the feast of Cana
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-c827eca` — The reader will be among the guests at the feast of Cana
   text: "You will be among the guests at the feast of Cana"

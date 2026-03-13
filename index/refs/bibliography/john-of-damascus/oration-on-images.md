@@ -24,5 +24,5 @@ John of Damascus's defence of the veneration of icons, citing miracles associate
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p29-s-b86c05c` — Damascene cited (from Helladius) on Basil's vision before an image of Our Lady, in which the martyr Mercury appeared with a bloodied spear, portending the death of Julian the Apostate
+- `01_Preliminares.html#dedicatory-letter-p29-s-3a70ce5` — Damascene cited (from Helladius) on Basil's vision before an image of Our Lady, in which the martyr Mercury appeared with a bloodied spear, portending the death of Julian the Apostate
   text: "so Damascene writes from Helladius, in his first Oration On Images"

@@ -25,5 +25,5 @@ Roman soldier and Christian martyr. Depicted on an image of Our Lady before whic
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p29-s-ae94b87` — Depicted on an image of Our Lady before which Basil prayed; in a vision, appeared first dim then holding a bloodied spear (portending Julian's death)
+- `01_Preliminares.html#dedicatory-letter-p29-s-1a12c29` — Depicted on an image of Our Lady before which Basil prayed; in a vision, appeared first dim then holding a bloodied spear (portending Julian's death)
   text: "on which also was depicted the figure of Mercury the celebrated martyr"

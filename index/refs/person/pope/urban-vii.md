@@ -22,5 +22,5 @@ Pope with the shortest pontificate in history (twelve days), between Sixtus V an
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p11-s-6586561` — Mentioned for his twelve-day pontificate between Sixtus V and Gregory XIV
+- `01_Preliminares.html#preface-reader-p11-s-9fd01b0` — Mentioned for his twelve-day pontificate between Sixtus V and Gregory XIV
   text: "the twelve-day Pontificate of Urban VII"

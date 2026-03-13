@@ -19,5 +19,5 @@ Major city in western Asia Minor; both drove out and blessed Paul.
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-6838123` — Ephesus drives Paul out and blesses him
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-e6e3e97` — Ephesus drives Paul out and blesses him
   text: "Ephesus drives him out and blesses him"

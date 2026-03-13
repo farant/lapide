@@ -19,7 +19,7 @@ Capital of France. Location of the publisher Ludwig Vives, who issued the 1891 C
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-937b3e6` — Place of publication of the 1891 Vives edition
+- `01_Preliminares.html#title-page-s-76227c2` — Place of publication of the 1891 Vives edition
   text: "PARIS Published by Ludwig Vives, bookseller and publisher, 13, Street commonly called Delambre, 13. 1891"
-- `01_Preliminares.html#life-p3-s-bc0b194` — Lapide's works published at Paris
+- `01_Preliminares.html#life-p3-s-ab1d07f` — Lapide's works published at Paris
   text: "on the Proverbs of Solomon, Antwerp and Paris, at Cramoisy's, 1635; on Ecclesiastes, Antwerp 1638, Paris 1639"

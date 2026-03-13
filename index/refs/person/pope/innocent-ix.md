@@ -23,5 +23,5 @@ Pope who succeeded Gregory XIV but died in a very short time before the Vulgate 
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p12-s-db11085` — Succeeded Gregory XIV but also died in a very short time before the Vulgate correction could be completed
+- `01_Preliminares.html#preface-reader-p12-s-42de48c` — Succeeded Gregory XIV but also died in a very short time before the Vulgate correction could be completed
   text: "when he also, and the one who succeeded him, Innocent IX, had been taken from this light in the briefest time"

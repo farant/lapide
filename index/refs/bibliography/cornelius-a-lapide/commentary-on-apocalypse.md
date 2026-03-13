@@ -14,5 +14,5 @@ Lapide's commentary on the Revelation of St. John.
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-992c5d0` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-809bb04` — Listed in catalogue of works
   text: "on the Apocalypse of the Apostle Saint John"

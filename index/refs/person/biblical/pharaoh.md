@@ -20,9 +20,9 @@ King of Egypt who oppressed the Israelites. Moses withstood Pharaoh and his Magi
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p5-s-c2392a9` — Moses rescued the people from Pharaoh with his pastoral staff
+- `01_Preliminares.html#dedicatory-letter-p5-s-4388eb8` — Moses rescued the people from Pharaoh with his pastoral staff
   text: "he both rescued from Pharaoh with his pastoral staff"
-- `01_Preliminares.html#dedicatory-letter-p13-s-32ca167` — Moses educated at the court of Pharaoh in the first forty years
+- `01_Preliminares.html#dedicatory-letter-p13-s-ea61c2d` — Moses educated at the court of Pharaoh in the first forty years
   text: "In the first forty years he was educated at the court of Pharaoh in all the wisdom of the Egyptians"
 - `01_Preliminares.html#dedicatory-letter-p29-s-563f096` — Moses withstood Pharaoh and his Magicians with marvellous constancy
   text: "Moses withstood Pharaoh and his Magicians with marvellous constancy"

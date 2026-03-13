@@ -23,5 +23,5 @@ Ambrose's adaptation and translation of Basil's Hexaemeron for Latin audiences, 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p8-s-8d6ee64` — Described as Ambrose's translation of Basil's Hexaemeron
+- `01_Preliminares.html#dedicatory-letter-p8-s-104e74a` — Described as Ambrose's translation of Basil's Hexaemeron
   text: "Saint Ambrose translated them, and gave to Latin ears not so much his own work as that of Saint Basil, in his treatise On the Work of the Six Days."

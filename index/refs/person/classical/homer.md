@@ -24,11 +24,11 @@ Ancient Greek epic poet. Calls a king the shepherd of the peoples.
 
 - `01_Preliminares.html#dedicatory-letter-p6-s-2cffc64` — Calls a king the shepherd of the peoples
   text: "Homer calls a king the shepherd of the peoples, because he ought to feed them, as a shepherd feeds sheep, and not fleece them."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-aab44e5` — Jerome mentions Homerocentones (centos from Homer) as examples of misusing texts
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f150c02` — Jerome mentions Homerocentones (centos from Homer) as examples of misusing texts
   text: "As though we had not read Homerocentones and Virgiliocento"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p12-s-6b62abb` — The poems of Homer are posterior to the Pentateuch by at least five centuries
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p12-s-f6cbb81` — The poems of Homer are posterior to the Pentateuch by at least five centuries
   text: "the most ancient books that remain to us, after the books of Moses, are the poems of Homer, posterior to the Pentateuch by at least five centuries"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p14-s-f64951a` — Reading Homer or Virgil produces passionate admiration; compared to but surpassed by biblical poetry
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p14-s-2ba0705` — Reading Homer or Virgil produces passionate admiration; compared to but surpassed by biblical poetry
   text: "it surrenders to a passionate admiration that it has known only in reading Homer or Virgil"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-81f66a2` — Homer's songs on the wrath of Achilles are set beside but below the Miserere, Lamentations, and Isaiah 53
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-3dc65e4` — Homer's songs on the wrath of Achilles are set beside but below the Miserere, Lamentations, and Isaiah 53
   text: "Homer's songs on the wrath of Achilles"

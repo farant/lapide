@@ -18,5 +18,5 @@ King of Lydia, proverbially wealthy. The widow's two coins are preferred to his 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-aa6f0c2` — The widow's two coins are preferred to the riches of Croesus
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-142d025` — The widow's two coins are preferred to the riches of Croesus
   text: "she is preferred to the riches of Croesus"

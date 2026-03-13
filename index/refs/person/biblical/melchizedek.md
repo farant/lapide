@@ -23,5 +23,5 @@ King of Salem and priest of God Most High. Listed first among patriarchs who hel
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p5-s-d652c01` — Listed first among patriarchs who held both supreme powers (prince and priest) in conjunction
+- `01_Preliminares.html#dedicatory-letter-p5-s-43521e2` — Listed first among patriarchs who held both supreme powers (prince and priest) in conjunction
   text: "in Melchizedek, Abraham, Isaac, Jacob, and the other ancient patriarchs, both supreme powers — that is, of the prince and of the priest — were held in conjunction"

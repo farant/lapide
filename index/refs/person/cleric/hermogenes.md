@@ -21,5 +21,5 @@ Bishop of Caesarea who ordained Basil a priest.
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p13-s-27d1b80` — Ordained Basil a priest
+- `01_Preliminares.html#dedicatory-letter-p13-s-b25cef0` — Ordained Basil a priest
   text: "he was ordained a priest by Hermogenes, Bishop of Caesarea"

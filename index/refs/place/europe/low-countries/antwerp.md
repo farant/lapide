@@ -26,11 +26,11 @@ Major commercial city in the Spanish Netherlands. Location of the Nutius/Moretus
 
 ## References in Commentary
 
-- `01_Preliminares.html#permissions-p2-s-561cc81` — Scribani grants printing permission to Antwerp printers
+- `01_Preliminares.html#permissions-p2-s-19f1253` — Scribani grants printing permission to Antwerp printers
   text: "I, Charles Scribani, Provincial Superior of the Society of Jesus in the province of Flandro-Belgica, by authority granted to me for this purpose by the Very Reverend Father General Mutius Vitelleschi, grant to the heirs of Martin Nutius and to Jan Moretus, printers of Antwerp"
-- `01_Preliminares.html#permissions-p2-s-aa922da` — Permission letter dated at Antwerp
+- `01_Preliminares.html#permissions-p2-s-4db3dc1` — Permission letter dated at Antwerp
   text: "I have given these letters written with my own hand and secured with the seal of my office, at Antwerp, 23 August, in the year 1616"
-- `01_Preliminares.html#permissions-p3-s-c72557e` — Spitholdius identified as Canon and Parish Priest of Antwerp
+- `01_Preliminares.html#permissions-p3-s-8159fa0` — Spitholdius identified as Canon and Parish Priest of Antwerp
   text: "Licenciate in Sacred Theology, Canon and Parish Priest of Antwerp, Censor of Books"
-- `01_Preliminares.html#life-p3-s-c067af7` — Multiple works by Lapide published at Antwerp
+- `01_Preliminares.html#life-p3-s-4afbdcc` — Multiple works by Lapide published at Antwerp
   text: "Commentaries on the Pentateuch of Moses, Antwerp 1616, again in 1623 in folio"

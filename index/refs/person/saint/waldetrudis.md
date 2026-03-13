@@ -25,5 +25,5 @@ Wife of St. Vincent of Hainault who later founded a convent at Mons. Listed amon
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p42-s-9a06554` — Listed among companions who assisted Authbert; identified as wife of Vincent
+- `01_Preliminares.html#dedicatory-letter-p42-s-dfd39cc` — Listed among companions who assisted Authbert; identified as wife of Vincent
   text: "Saint Waldetrudis, wife of Vincent"

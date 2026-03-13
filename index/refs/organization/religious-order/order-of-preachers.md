@@ -16,5 +16,5 @@ Catholic religious order founded by St. Dominic in 1216. Lacordaire was a member
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#preamble-p1-s-d00b79e` — Lacordaire identified as a member of the Order of Preachers
+- `02_Clemens_Hieronymi_Du_Culte.html#preamble-p1-s-0a56a54` — Lacordaire identified as a member of the Order of Preachers
   text: "Fr. H. D. Lacordaire, O.P."

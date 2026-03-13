@@ -22,7 +22,7 @@ Gregory of Nyssa's biographical testimony about his brother Basil, including the
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p23-s-51b0815` — Ephrem saw a dove whispering into Basil's ear while preaching, as Gregory of Nyssa testifies
+- `01_Preliminares.html#dedicatory-letter-p23-s-65e2639` — Ephrem saw a dove whispering into Basil's ear while preaching, as Gregory of Nyssa testifies
   text: "a dove, I say, which is the sign and hieroglyph of the Holy Spirit, as Gregory of Nyssa testifies"
-- `01_Preliminares.html#dedicatory-letter-p23-s-92183fa` — Basil gave away his personal inheritance to the poor, per Gregory of Nyssa
+- `01_Preliminares.html#dedicatory-letter-p23-s-d14e745` — Basil gave away his personal inheritance to the poor, per Gregory of Nyssa
   text: "Basil's own brother Gregory of Nyssa adds that at that time Saint Basil also gave away his own personal inheritance to the poor."

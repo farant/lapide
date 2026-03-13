@@ -21,5 +21,5 @@ Apostle and companion of Paul. Paul took Barnabas and Titus to set forth the Gos
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-6f1893f` — Paul took Barnabas and Titus after fourteen years to set forth the Gospel to the Apostles
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-376a884` — Paul took Barnabas and Titus after fourteen years to set forth the Gospel to the Apostles
   text: "having taken Barnabas and Titus, he set forth the Gospel to the Apostles"

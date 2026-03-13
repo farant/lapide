@@ -24,5 +24,5 @@ Spanish general and governor of the Netherlands. Suddenly arrived with his army 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p12-s-cf36698` — Suddenly arrived with his army in 1572 to rescue Van der Burch's father from heretics at Mechlin; had he not arrived, the father was destined for death
+- `01_Preliminares.html#dedicatory-letter-p12-s-e0042c2` — Suddenly arrived with his army in 1572 to rescue Van der Burch's father from heretics at Mechlin; had he not arrived, the father was destined for death
   text: "had the Duke of Alba not suddenly arrived with his army, he was already destined for death."

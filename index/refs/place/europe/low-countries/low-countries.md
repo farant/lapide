@@ -30,13 +30,13 @@ The Low Countries, frequently referred to as "Belgium" in the text, designates t
 
 - `01_Preliminares.html#dedicatory-letter-p7-s-8ced1e8` — Lapide asks Van der Burch to be "our Moses of the Low Countries"
   text: "Be therefore, Most Illustrious Lord, our Moses of the Low Countries"
-- `01_Preliminares.html#dedicatory-letter-p11-s-696f80e` — Van der Burch's father stood firm amid upheavals
+- `01_Preliminares.html#dedicatory-letter-p11-s-29f6b6d` — Van der Burch's father stood firm amid upheavals
   text: "he stood firm and unshaken in loyalty to his Prince amid the wondrous and grievous upheavals and storms of these Low Countries"
-- `01_Preliminares.html#dedicatory-letter-p15-s-5de785b` — The choir and clergy of Mechlin described as a mirror for all the Low Countries
+- `01_Preliminares.html#dedicatory-letter-p15-s-98efd51` — The choir and clergy of Mechlin described as a mirror for all the Low Countries
   text: "the choir and clergy of Mechlin, who are a mirror of virtue and religion for all the Low Countries"
-- `01_Preliminares.html#dedicatory-letter-p15-s-fbea179` — Van der Burch commended himself to all the Low Countries
+- `01_Preliminares.html#dedicatory-letter-p15-s-4160f6c` — Van der Burch commended himself to all the Low Countries
   text: "you so commended yourself to him and to all the Low Countries"
-- `01_Preliminares.html#dedicatory-letter-p21-s-354875e` — A new splendour shines upon all Belgium
+- `01_Preliminares.html#dedicatory-letter-p21-s-b29140e` — A new splendour shines upon all Belgium
   text: "a new splendour — indeed a glory — shines out upon all Belgium like a new radiance from the Church of Ghent"
-- `01_Preliminares.html#dedicatory-letter-p21-s-75c9679` — Belgium described as the jewel of the world
+- `01_Preliminares.html#dedicatory-letter-p21-s-e7f7b16` — Belgium described as the jewel of the world
   text: "as Belgium is the jewel of the world, so Ghent is the jewel of Flanders and Belgium"

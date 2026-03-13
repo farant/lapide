@@ -20,5 +20,5 @@ Ancient region between the Tigris and Euphrates rivers. Named alongside Egypt an
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p26-s-f82d5e8` — Mesopotamia named alongside Egypt and Palestine
+- `01_Preliminares.html#dedicatory-letter-p26-s-43a9cfe` — Mesopotamia named alongside Egypt and Palestine
   text: "Egypt, Palestine, and Mesopotamia are full of those who follow this Christian Philosophy"

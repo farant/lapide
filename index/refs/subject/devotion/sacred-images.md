@@ -18,5 +18,5 @@ The veneration of sacred images, including their miraculous properties and role 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p29-s-8ad6956` — Basil prayed before "the image of Our Lady, on which also was depicted the figure of Mercury the celebrated martyr" and received a vision of the martyr holding a bloodied spear.
+- `01_Preliminares.html#dedicatory-letter-p29-s-c0a3a98` — Basil prayed before "the image of Our Lady, on which also was depicted the figure of Mercury the celebrated martyr" and received a vision of the martyr holding a bloodied spear.
   text: "Basil... stood before the image of Our Lady, on which also was depicted the figure of Mercury the celebrated martyr, and stood there in prayer that the impious apostate Julian might be removed. And from that image indeed he learned what was to come to pass."

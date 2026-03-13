@@ -14,5 +14,5 @@ Lapide's commentary on the Gospels of Matthew, Mark, Luke, and John.
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-e256bb8` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-63a6cc9` — Listed in catalogue of works
   text: "on the four Gospels of Jesus Christ"

@@ -22,5 +22,5 @@ Official of the Ethiopian queen, converted by Philip. Was reading Isaiah in his 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-276bab2` — Was reading Isaiah in his chariot; asked Philip "How can I, unless someone teaches me?"; believed and was baptized in the same hour; Jerome says he is neither holier nor more studious than this eunuch
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-c1f4993` — Was reading Isaiah in his chariot; asked Philip "How can I, unless someone teaches me?"; believed and was baptized in the same hour; Jerome says he is neither holier nor more studious than this eunuch
   text: "the holy Eunuch -- or rather man (for thus Scripture names him) -- when he was reading Isaiah the prophet, asked by Philip: 'Do you think you understand what you are reading?' answered: 'How can I, unless someone teaches me?'"

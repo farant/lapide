@@ -20,5 +20,5 @@ Last king of the northern kingdom of Israel. Led away to the Assyrians, marking 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p20-s-53103ae` — Led away to the Assyrians; marks the end of the kingdom of Israel
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p20-s-0d7ad6c` — Led away to the Assyrians; marks the end of the kingdom of Israel
   text: "Hosea, who was led away to the Assyrians"

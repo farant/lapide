@@ -23,5 +23,5 @@ The extended discourse of Jesus to his apostles at the Last Supper, comprising c
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p46-s-8092c68` — Lacordaire directs the reader to John 13-17 as Christ's final instruction to his apostles before the Passion
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p46-s-656650c` — Lacordaire directs the reader to John 13-17 as Christ's final instruction to his apostles before the Passion
   text: "the discourse recorded in chapters 13, 14, 15, 16, and 17 of the Gospel of Saint John (the reader, for God's sake, must not fail to read it)"

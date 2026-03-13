@@ -23,9 +23,9 @@ City in the County of Hainaut, part of the Spanish Netherlands. Suffered a sever
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p25-s-f65dc2e` — The people of Mons afflicted by plague and delivered by relics
+- `01_Preliminares.html#dedicatory-letter-p25-s-d3d8b17` — The people of Mons afflicted by plague and delivered by relics
   text: "The people of Hainaut and Mons experienced this very thing this year. For when they were afflicted with a most grievous plague"
-- `01_Preliminares.html#dedicatory-letter-p25-s-c4d6e29` — Silver reliquary erected in thanksgiving
+- `01_Preliminares.html#dedicatory-letter-p25-s-d901196` — Silver reliquary erected in thanksgiving
   text: "All the people of Mons acknowledge this and celebrate it publicly, and in thanksgiving they erected a silver reliquary for Saint Macarius"
-- `01_Preliminares.html#dedicatory-letter-p37-s-98e1fe4` — The Mons region rejoices at Van der Burch's appointment
+- `01_Preliminares.html#dedicatory-letter-p37-s-833a4e2` — The Mons region rejoices at Van der Burch's appointment
   text: "the Mons region rejoices, Valenciennes exults, Cambrai cries aloud with joy"

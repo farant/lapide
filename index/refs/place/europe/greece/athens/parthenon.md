@@ -18,5 +18,5 @@ Temple of Athena on the Acropolis of Athens; Lacordaire describes dwelling at it
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-0adbfb5` — Lacordaire says he dwells at the foot of the Parthenon
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-40f8504` — Lacordaire says he dwells at the foot of the Parthenon
   text: "I dwell at the foot of the Parthenon"

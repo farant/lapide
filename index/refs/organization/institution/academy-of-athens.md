@@ -18,5 +18,5 @@ Philosophical school founded by Plato in Athens. Jerome notes that Plato, though
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-66ea0dc` — Plato's teaching resounded in the gymnasia of the Academy, yet he chose to become a stranger and a student
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f2aef69` — Plato's teaching resounded in the gymnasia of the Academy, yet he chose to become a stranger and a student
   text: "whose teaching resounded in the gymnasia of the Academy, might become a stranger and a student"

@@ -19,7 +19,7 @@ French poet, writer, and politician. Lacordaire lists "Lamartine's The Lake" amo
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-5ba9352` — Lacordaire lists "Lamartine's The Lake with its waters, its shores, and his beloved" among the greatest secular poetry, set below the prophets
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-a64b270` — Lacordaire lists "Lamartine's The Lake with its waters, its shores, and his beloved" among the greatest secular poetry, set below the prophets
   text: "Lamartine's The Lake with its waters, its shores, and his beloved"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-09326ce` — "When Lamartine's beloved turned her eyes for the last time upon the waters that had cradled her confidences — the muse of man is spent"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-e0bddf9` — "When Lamartine's beloved turned her eyes for the last time upon the waters that had cradled her confidences — the muse of man is spent"
   text: "when Lamartine's beloved turned her eyes for the last time upon the waters"

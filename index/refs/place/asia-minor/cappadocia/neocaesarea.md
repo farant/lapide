@@ -21,5 +21,5 @@ City in Pontus, northeastern Asia Minor (modern Niksar, Turkey). St. Basil fled 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p16-s-990fcac` — Basil fled the bishopric of Neocaesarea
+- `01_Preliminares.html#dedicatory-letter-p16-s-b0c5cff` — Basil fled the bishopric of Neocaesarea
   text: "Saint Basil likewise fled the bishopric of Neocaesarea, as he himself writes in Epistle 164"

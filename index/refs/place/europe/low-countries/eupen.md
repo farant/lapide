@@ -20,5 +20,5 @@ Region in the eastern part of the Low Countries (modern-day eastern Belgium). Co
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p2-s-8c4a467` — Lapide described as a native of Bocholt in the region of Eupen
+- `01_Preliminares.html#life-p2-s-9af7205` — Lapide described as a native of Bocholt in the region of Eupen
   text: "a native of Bocholt in the region of Eupen"

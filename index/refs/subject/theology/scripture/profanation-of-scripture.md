@@ -17,5 +17,5 @@ The misuse of sacred Scripture for profane purposes — divination, incantations
 
 ## References in Commentary
 
-- `01_Preliminares.html#trent-decrees-p12-s-d3169f2` — Trent condemns turning Scripture to profane purposes and empowers bishops to restrain violators with penalties.
+- `01_Preliminares.html#trent-decrees-p12-s-dc82808` — Trent condemns turning Scripture to profane purposes and empowers bishops to restrain violators with penalties.
   text: "wishing to repress that rashness by which the words and sentences of sacred Scripture are turned and twisted to profane things — namely to scurrilous, fabulous, vain, adulatory, detractive, impious and diabolical incantations, divinations, lots, and even defamatory libels"

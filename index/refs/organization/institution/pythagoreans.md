@@ -16,5 +16,5 @@ Philosophical school founded by Pythagoras. Jerome notes the Pythagoreans held t
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-3ae95fa` — The Pythagoreans held that Apollonius was a philosopher, not a magician
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-4bae481` — The Pythagoreans held that Apollonius was a philosopher, not a magician
   text: "or a philosopher, as the Pythagoreans hold"

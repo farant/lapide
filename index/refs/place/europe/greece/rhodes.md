@@ -18,5 +18,5 @@ Greek island in the Aegean Sea; Aeschines lived in exile at Rhodes, where he hea
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-eecac7e` — Aeschines in exile at Rhodes heard the oration of Demosthenes
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-387ed0e` — Aeschines in exile at Rhodes heard the oration of Demosthenes
   text: "Aeschines, when he was in exile at Rhodes"

@@ -15,5 +15,5 @@ Parisian publisher. Published Lacordaire's Letters to a Young Man on the Christi
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p2-s-001f4c2` — The letter excerpted from Lacordaire's work published by Poussielgue-Rusand in Paris, 1858
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p2-s-d918d0d` — The letter excerpted from Lacordaire's work published by Poussielgue-Rusand in Paris, 1858
   text: "Paris, 1858, published by Poussielgue-Rusand"

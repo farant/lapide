@@ -18,5 +18,5 @@ The local Church of Ghent, whose renewed discipline under Van der Burch's episco
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p21-s-354875e` — New splendour shines from the Church of Ghent
+- `01_Preliminares.html#dedicatory-letter-p21-s-b29140e` — New splendour shines from the Church of Ghent
   text: "a new splendour — indeed a glory — shines out upon all Belgium like a new radiance from the Church of Ghent"

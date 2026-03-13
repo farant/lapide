@@ -19,5 +19,5 @@ Racine's tragedy, cited by Lacordaire among the greatest works of human literary
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-77facb3` — Lacordaire lists "the laments of Racine's Phaedra" among the pinnacles of human poetry
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-bec498a` — Lacordaire lists "the laments of Racine's Phaedra" among the pinnacles of human poetry
   text: "the laments of Racine's Phaedra"

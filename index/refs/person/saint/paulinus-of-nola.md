@@ -23,9 +23,9 @@ Bishop of Nola and correspondent of Jerome. Addressee of Jerome's famous letter 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-s-9c59013` — Named as the addressee of Jerome's letter
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-s-170187d` — Named as the addressee of Jerome's letter
   text: "JEROME TO PAULINUS."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-da4d46f` — Jerome praises his ardor and zeal for learning
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-138a38a` — Jerome praises his ardor and zeal for learning
   text: "your ardor and zeal for learning ought to be approved on its own, even without us."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-3de125e` — Jerome urges him to renounce the world and hasten to join him; praises his prudence and eloquence
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-24d6baa` — Jerome urges him to renounce the world and hasten to join him; praises his prudence and eloquence
   text: "Hasten, I beg you, and rather cut than untie the rope of the little boat stuck in the surf."

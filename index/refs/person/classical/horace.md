@@ -26,7 +26,7 @@ Roman lyric poet. Quoted as "the Poet" on blending the useful with the sweet.
 
 - `01_Preliminares.html#dedicatory-letter-p50-s-c192b0d` — Quoted as "the Poet": "He wins all votes who blends the useful with the sweet."
   text: "He wins all votes who blends the useful with the sweet."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-e449d2d` — Jerome quotes him: "What belongs to physicians, physicians promise; craftsmen handle the work of craftsmen" and "We write poems, learned and unlearned alike, without distinction"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-d1a4e14` — Jerome quotes him: "What belongs to physicians, physicians promise; craftsmen handle the work of craftsmen" and "We write poems, learned and unlearned alike, without distinction"
   text: "What belongs to physicians, physicians promise; craftsmen handle the work of craftsmen."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p38-s-6e05cc5` — David is compared to Horace
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p38-s-d354348` — David is compared to Horace
   text: "our Horace too, Catullus and Serenus"

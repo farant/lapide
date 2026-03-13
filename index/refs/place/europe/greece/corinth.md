@@ -19,5 +19,5 @@ Major Greek city on the isthmus connecting the Peloponnese to the mainland; rece
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-1fc93d3` — Corinth receives Paul
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-5ee00b5` — Corinth receives Paul
   text: "Corinth receives him"

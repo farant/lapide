@@ -23,5 +23,5 @@ King of England who wished to promote John Fisher to a grander see. Fisher refus
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p19-s-792cfbf` — Wished to promote John Fisher to a grander see; Fisher refused to abandon Rochester
+- `01_Preliminares.html#dedicatory-letter-p19-s-5c9ffd2` — Wished to promote John Fisher to a grander see; Fisher refused to abandon Rochester
   text: "Henry VIII wished to promote him to something grander, he could never be prevailed upon to abandon his own bride"

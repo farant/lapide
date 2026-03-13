@@ -21,7 +21,7 @@ The sacrament of ordination and the principle that one should ascend through all
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p14-s-5a18af8` — Cyprian praises Cornelius for ascending "through all the offices of the Church" and through "every step of religious life" to the summit of the priesthood.
+- `01_Preliminares.html#dedicatory-letter-p14-s-2680037` — Cyprian praises Cornelius for ascending "through all the offices of the Church" and through "every step of religious life" to the summit of the priesthood.
   text: "having been advanced through all the offices of the Church, and having often merited well of the Lord in the divine ministrations, he ascended to the lofty summit of the priesthood by every step of religious life"
-- `01_Preliminares.html#dedicatory-letter-p15-s-210f7d5` — Van der Burch's own gradual ascent: canon, priest, confessor, dean, vicar-general, bishop, archbishop.
+- `01_Preliminares.html#dedicatory-letter-p15-s-1eb224b` — Van der Burch's own gradual ascent: canon, priest, confessor, dean, vicar-general, bishop, archbishop.
   text: "You ascended step by step to the summit of the priesthood."

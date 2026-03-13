@@ -24,5 +24,5 @@ Cardinal-Bishop of Ostia, Doctor of the Church, and Benedictine reformer. Among 
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-e705876` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-bf1502e` — Listed among scholars who used Jerome's version
   text: "Anselm, Peter Damian, Richard, Hugh"

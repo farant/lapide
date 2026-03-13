@@ -16,5 +16,5 @@ One of the rivers of paradise mentioned in Genesis; Jerome identifies it with a 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-b2d9aea` — Apollonius crossed the very wide river Phison to reach the Brahmans
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-24e31e9` — Apollonius crossed the very wide river Phison to reach the Brahmans
   text: "having crossed the very wide river Phison, he reached the Brahmans"

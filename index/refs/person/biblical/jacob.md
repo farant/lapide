@@ -25,7 +25,7 @@ Patriarch, son of Isaac, father of the twelve tribes of Israel. Listed among the
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p5-s-28000fc` — Listed among ancient patriarchs holding both supreme powers
+- `01_Preliminares.html#dedicatory-letter-p5-s-c6c5219` — Listed among ancient patriarchs holding both supreme powers
   text: "Melchizedek, Abraham, Isaac, Jacob, and the other ancient patriarchs"
-- `01_Preliminares.html#dedicatory-letter-p10-s-acb0e58` — Moses' ancestor: Isaac begot Jacob, Jacob begot Levi
+- `01_Preliminares.html#dedicatory-letter-p10-s-917ad1d` — Moses' ancestor: Isaac begot Jacob, Jacob begot Levi
   text: "Isaac Jacob, Jacob Levi"

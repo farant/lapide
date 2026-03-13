@@ -19,5 +19,5 @@ Ancient region covering modern France; nobles came from Gaul to visit Titus Livi
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-c61370d` — Nobles came from the farthest borders of Spain and Gaul to visit Titus Livius
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-c1cf888` — Nobles came from the farthest borders of Spain and Gaul to visit Titus Livius
   text: "from the farthest borders of Spain and Gaul to Titus Livius"

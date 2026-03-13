@@ -24,5 +24,5 @@ Archbishop of Mainz and Benedictine monk. Among the scholars who used Jerome's v
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-c797e19` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-a461892` — Listed among scholars who used Jerome's version
   text: "Remigius, Bede, Rabanus, Haymo"

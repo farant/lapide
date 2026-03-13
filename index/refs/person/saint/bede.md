@@ -25,5 +25,5 @@ Benedictine monk, Doctor of the Church, and historian. Among the scholars who us
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-cb71fed` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-0f32e92` — Listed among scholars who used Jerome's version
   text: "Remigius, Bede, Rabanus, Haymo, Anselm, Peter Damian"

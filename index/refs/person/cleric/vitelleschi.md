@@ -25,5 +25,5 @@ Superior General of the Society of Jesus. Granted permission for Lapide's Commen
 
 - `01_Preliminares.html#permissions-s-e3d2091` — Grants permission for Lapide's Commentaries on the Pentateuch to be printed, dated Rome, 9 January 1616
   text: "MUTIUS VITELLESCHI. SUPERIOR GENERAL OF THE SOCIETY OF JESUS."
-- `01_Preliminares.html#permissions-p2-s-95dcc84` — Scribani acts by authority granted by Vitelleschi
+- `01_Preliminares.html#permissions-p2-s-cc68a2f` — Scribani acts by authority granted by Vitelleschi
   text: "by authority granted to me for this purpose by the Very Reverend Father General Mutius Vitelleschi"

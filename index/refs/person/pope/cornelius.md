@@ -25,7 +25,7 @@ Pope and martyr. Praised by St. Cyprian for his humility: he did not come to the
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p14-s-e47b0ba` — Praised by Saint Cyprian in letter to Antonianus: did not come to episcopate suddenly but advanced through all offices of the Church; was quiet and modest; suffered compulsion to accept the episcopate
+- `01_Preliminares.html#dedicatory-letter-p14-s-2eb17fb` — Praised by Saint Cyprian in letter to Antonianus: did not come to episcopate suddenly but advanced through all offices of the Church; was quiet and modest; suffered compulsion to accept the episcopate
   text: "Saint Cyprian praises Saint Cornelius, Bishop of Rome, in book IV, letter 2 to Antonianus"
 - `01_Preliminares.html#dedicatory-letter-p15-s-517fa0c` — Cyprian's portrait of Cornelius applied to Van der Burch
   text: "Is it not with these very words with which he portrays Cornelius that Saint Cyprian also portrays you"

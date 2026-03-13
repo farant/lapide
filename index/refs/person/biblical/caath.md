@@ -23,5 +23,5 @@ Son of Levi and grandfather of Moses. Part of Moses' genealogy.
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p10-s-fe680ae` — Moses' ancestor: Levi begot Caath, Caath begot Amram
+- `01_Preliminares.html#dedicatory-letter-p10-s-abaf693` — Moses' ancestor: Levi begot Caath, Caath begot Amram
   text: "Levi Caath, Caath Amram"

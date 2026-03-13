@@ -27,5 +27,5 @@ Doctor of the Church and theologian. Last of the Greek Fathers. Writes from Hell
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p29-s-b86c05c` — Writes from Helladius in his first Oration On Images about Basil praying before the image of Our Lady and seeing Mercury with a bloodied spear
+- `01_Preliminares.html#dedicatory-letter-p29-s-3a70ce5` — Writes from Helladius in his first Oration On Images about Basil praying before the image of Our Lady and seeing Mercury with a bloodied spear
   text: "so Damascene writes from Helladius, in his first Oration On Images"

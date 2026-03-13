@@ -23,5 +23,5 @@ Bishop of Caesarea whom Basil faithfully stood by through his illness until deat
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p16-s-0fd2864` — Basil faithfully stood by Eusebius through his illness until death; once Eusebius died, Basil hid himself
+- `01_Preliminares.html#dedicatory-letter-p16-s-0b8b5a7` — Basil faithfully stood by Eusebius through his illness until death; once Eusebius died, Basil hid himself
   text: "after he had faithfully stood by his friend Eusebius, Bishop of Caesarea, through his illness until death, once Eusebius had died Basil immediately hid himself away"

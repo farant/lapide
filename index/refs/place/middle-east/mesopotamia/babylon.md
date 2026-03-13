@@ -18,5 +18,5 @@ Capital of the Babylonian Empire; heard the voice of the exiled saints of Judah 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-971b9f9` — Babylon hears, on the banks of its rivers, the voice of the saints it knows not
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-b5f6d3c` — Babylon hears, on the banks of its rivers, the voice of the saints it knows not
   text: "Babylon hears, on the banks of its rivers, the voice of the saints it knows not"

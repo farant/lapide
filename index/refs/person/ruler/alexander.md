@@ -20,5 +20,5 @@ King of Macedon and conqueror. Lacordaire asks: "What is Alexander or Caesar bef
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p6-s-ff52fc2` — Lacordaire asks: "What is Alexander or Caesar before Jesus Christ?"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p6-s-b5eedaa` — Lacordaire asks: "What is Alexander or Caesar before Jesus Christ?"
   text: "What is Alexander or Caesar before Jesus Christ?"

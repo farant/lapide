@@ -21,5 +21,5 @@ Pharisee and teacher of the Law. Paul boasts of learning the law of Moses and th
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-9014e7d` — Paul boasts of learning the law of Moses and the Prophets at his feet
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-bc38dfa` — Paul boasts of learning the law of Moses and the Prophets at his feet
   text: "Paul the apostle boasts that he learned the law of Moses and the Prophets at the feet of Gamaliel"

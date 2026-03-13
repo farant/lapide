@@ -22,7 +22,7 @@ Roman historian. Nobles from Spain and Gaul came to Rome solely for his fame. Ca
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-b45617b` — Nobles from Spain and Gaul came to Rome solely for his fame; called "flowing with the milky fountain of eloquence"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-5c6c499` — Nobles from Spain and Gaul came to Rome solely for his fame; called "flowing with the milky fountain of eloquence"
   text: "We read that certain nobles came from the farthest borders of Spain and Gaul to Titus Livius, flowing with the milky fountain of eloquence"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-e3c2177` — Lacordaire says "it was Rome that produced Livy before dying" and that Rome inspired Tacitus
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-ebb3d91` — Lacordaire says "it was Rome that produced Livy before dying" and that Rome inspired Tacitus
   text: "it was Rome that produced Livy before dying"

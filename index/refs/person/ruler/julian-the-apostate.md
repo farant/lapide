@@ -25,5 +25,5 @@ Roman Emperor who apostatized from Christianity. Overcome and slain through St. 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p29-s-0e6ed8b` — Overcome and slain through Basil's prayer before an image of Our Lady; Mercury appeared holding a bloodied spear
+- `01_Preliminares.html#dedicatory-letter-p29-s-391120f` — Overcome and slain through Basil's prayer before an image of Our Lady; Mercury appeared holding a bloodied spear
   text: "Saint Basil overcame and slew Julian the apostate Emperor"

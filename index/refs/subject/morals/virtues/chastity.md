@@ -16,7 +16,7 @@ The virtue of chastity, especially virginal purity, as a mark of those divinely 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p14-s-12f2ed0` — Cyprian describes Cornelius's character as marked by "the modesty of his virginal conscience."
+- `01_Preliminares.html#dedicatory-letter-p14-s-2784f7b` — Cyprian describes Cornelius's character as marked by "the modesty of his virginal conscience."
   text: "out of the modesty of his virginal conscience"
-- `01_Preliminares.html#dedicatory-letter-p22-s-8de5686` — Basil defended monks who "have renounced the world" and taught the people to "make a chaste and pure life almost desirable to all."
+- `01_Preliminares.html#dedicatory-letter-p22-s-9fe4da3` — Basil defended monks who "have renounced the world" and taught the people to "make a chaste and pure life almost desirable to all."
   text: "to make a chaste and pure life almost desirable to all"

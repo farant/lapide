@@ -25,7 +25,7 @@ Pope who recalled the Vulgate correction work with ardent zeal and ordered the c
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p11-s-3a9c7c9` — Called by divine Providence to supreme Pontificate; recalled the Vulgate correction work with ardent zeal; ordered the completed work printed; finding errors, judged the whole work should be recalled; died before completing the revision
+- `01_Preliminares.html#preface-reader-p11-s-58c170e` — Called by divine Providence to supreme Pontificate; recalled the Vulgate correction work with ardent zeal; ordered the completed work printed; finding errors, judged the whole work should be recalled; died before completing the revision
   text: "Sixtus V, called by divine Providence to the supreme Pontificate, recalled with most ardent zeal, and at length ordered the completed work to be committed to the press."
-- `01_Preliminares.html#preface-reader-p12-s-8b0e35e` — The work he aimed at was perfected under Clement VIII
+- `01_Preliminares.html#preface-reader-p12-s-ab89b12` — The work he aimed at was perfected under Clement VIII
   text: "the work at which Sixtus V had aimed was, with God's good help, perfected."

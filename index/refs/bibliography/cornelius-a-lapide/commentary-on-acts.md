@@ -14,5 +14,5 @@ Lapide's commentary on the Acts of the Apostles.
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-9d3c0cb` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-473703a` — Listed in catalogue of works
   text: "on the Acts of the Apostles"

@@ -19,7 +19,7 @@ Ancient city in Syria; Paul visited Damascus and Arabia before going up to Jerus
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-0daadfd` — Paul visited Damascus and Arabia before going up to Jerusalem
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-6de9222` — Paul visited Damascus and Arabia before going up to Jerusalem
   text: "after visiting Damascus and Arabia, went up to Jerusalem to see Peter"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p24-s-c148c46` — Amos expresses the crimes of Damascus
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p24-s-a8c4105` — Amos expresses the crimes of Damascus
   text: "the three or four crimes of Damascus"

@@ -22,5 +22,5 @@ Roman lyric poet. David is compared to Catullus by Jerome.
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p38-s-45e8816` — David is compared to Catullus
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p38-s-dc8a9d5` — David is compared to Catullus
   text: "Catullus and Serenus"

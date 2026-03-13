@@ -20,5 +20,5 @@ Capital of the northern kingdom of Israel; mentioned by Jerome in connection wit
 
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p22-s-5869404` — Hosea frequently names Samaria alongside Ephraim, Joseph, and Jezreel
   text: "Hosea frequently names Ephraim, Samaria, Joseph, Jezreel"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p24-s-8d5125d` — Amos speaks to the fat cows on the mountain of Samaria
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p24-s-02100c5` — Amos speaks to the fat cows on the mountain of Samaria
   text: "He speaks to the fat cows that are on the mountain of Samaria"

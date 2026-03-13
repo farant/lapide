@@ -22,7 +22,7 @@ Son of Jacob and steward of Egypt. Gregory Nazianzen compares Basil to Joseph as
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p23-s-a90aaaf` — Gregory Nazianzen compares Basil to Joseph as steward: "Such was our new steward and second Joseph"
+- `01_Preliminares.html#dedicatory-letter-p23-s-efc546f` — Gregory Nazianzen compares Basil to Joseph as steward: "Such was our new steward and second Joseph"
   text: "Such was our new steward and second Joseph"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-c056510` — One of the scenes that brings the reader back to the hearth of human nature: Joseph finding again his brothers who once sold him
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-d35fdc0` — One of the scenes that brings the reader back to the hearth of human nature: Joseph finding again his brothers who once sold him
   text: "Joseph finding again his brothers who once sold him"

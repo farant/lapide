@@ -17,7 +17,7 @@ The sacrament of penance — hearing confessions as a priestly ministry. Lapide 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p3-s-202d918` — Lapide was summoned by Van der Burch as "a confessor for the more solemn feasts of the year."
+- `01_Preliminares.html#dedicatory-letter-p3-s-6f0f681` — Lapide was summoned by Van der Burch as "a confessor for the more solemn feasts of the year."
   text: "summoned by you from Mechlin to the Metropolitan Church over which you presided as Dean — as a confessor for the more solemn feasts of the year"
-- `01_Preliminares.html#dedicatory-letter-p15-s-4bb8155` — Van der Burch devoted himself "to hearing confessions" as part of his priestly duties.
+- `01_Preliminares.html#dedicatory-letter-p15-s-e88fd09` — Van der Burch devoted himself "to hearing confessions" as part of his priestly duties.
   text: "by devoting yourself to hearing confessions"

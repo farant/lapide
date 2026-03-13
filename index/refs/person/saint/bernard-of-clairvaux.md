@@ -24,5 +24,5 @@ Abbot of Clairvaux, Doctor of the Church, and Cistercian reformer. Among the sch
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-39b6ad6` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-a374e6a` — Listed among scholars who used Jerome's version
   text: "Hugh, Bernard, Rupert"

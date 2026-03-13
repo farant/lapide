@@ -17,5 +17,5 @@ Lapide's commentary on Ecclesiastes, published at Antwerp in 1638 and Paris in 1
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-9b30713` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-cd3335e` — Listed in catalogue of works
   text: "on Ecclesiastes, Antwerp 1638, Paris 1639"

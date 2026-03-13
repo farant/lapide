@@ -19,7 +19,7 @@ Jewish liberators and leaders of the revolt against Seleucid rule. Purified the 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-73a6624` — The temple was defiled by the nations and purified by the Maccabees before the coming of Christ
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-09b7455` — The temple was defiled by the nations and purified by the Maccabees before the coming of Christ
   text: "defiled by the nations and purified by the Maccabees"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-8691093` — One of the scenes of human tenderness: the Maccabees delivering their homeland from the yoke of the foreigner
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-4d0fff4` — One of the scenes of human tenderness: the Maccabees delivering their homeland from the yoke of the foreigner
   text: "the Maccabees delivering their homeland from the yoke of the foreigner"

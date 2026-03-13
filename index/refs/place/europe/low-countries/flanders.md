@@ -21,7 +21,7 @@ Historical county in the Low Countries, one of the most important provinces of t
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p11-s-a5c90f6` — Van der Burch's grandfather was President of the Council of Flanders
+- `01_Preliminares.html#dedicatory-letter-p11-s-2b3f160` — Van der Burch's grandfather was President of the Council of Flanders
   text: "Your grandfather was President of the Council of Flanders"
-- `01_Preliminares.html#dedicatory-letter-p21-s-f9aecb0` — Ghent described as the jewel of Flanders
+- `01_Preliminares.html#dedicatory-letter-p21-s-a4a9601` — Ghent described as the jewel of Flanders
   text: "Ghent is the jewel of Flanders and Belgium"

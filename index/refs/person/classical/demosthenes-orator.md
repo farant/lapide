@@ -21,7 +21,7 @@ Athenian statesman and orator. Jerome calls him "the eloquent Demosthenes" who w
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-3e5a1a5` — His oration against Aeschines was read at Rhodes; all marveled and praised it; Jerome calls him "the eloquent Demosthenes" who was ignorant of the mystery of the Logos
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-66b8a62` — His oration against Aeschines was read at Rhodes; all marveled and praised it; Jerome calls him "the eloquent Demosthenes" who was ignorant of the mystery of the Logos
   text: "that oration of Demosthenes was read which he had delivered against him"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-b47e4c5` — Contrasted with John's knowledge of the Word
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-5fa2bd3` — Contrasted with John's knowledge of the Word
   text: "this the eloquent Demosthenes was ignorant of"

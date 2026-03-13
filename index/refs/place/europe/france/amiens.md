@@ -21,7 +21,7 @@ City in northern France, seat of the diocese of Amiens. Augustin Crampon, who an
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-c0f343f` — Crampon described as a priest of the Diocese of Amiens
+- `01_Preliminares.html#title-page-s-18db491` — Crampon described as a priest of the Diocese of Amiens
   text: "illustrated with notes by Augustinus Crampon, Priest of the Diocese of Amiens"
 - `01_Preliminares.html#permissions-p4-s-c5d0028` — Crampon's annotations approved by the Bishop of Amiens
   text: "Annotations by which Aug. Crampon, priest of the diocese of Amiens, has illustrated and enriched Father Cornelius a Lapide's Commentaries on the Pentateuch. Nothing hinders their printing. Given at Amiens, 2 May in the year 1852."

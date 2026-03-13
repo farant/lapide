@@ -14,7 +14,7 @@ Lapide's commentary on Isaiah, Jeremiah, Ezekiel, and Daniel. Upon completing th
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-6fef9fd` — Listed in catalogue of works: "on the four Major Prophets"
+- `01_Preliminares.html#life-p3-s-6b5643f` — Listed in catalogue of works: "on the four Major Prophets"
   text: "on the four Major Prophets"
 
 - `01_Preliminares.html#life-p3-s-6509615` — Lapide's prayer to the four prophets, imploring them for martyrdom after completing his commentary on them

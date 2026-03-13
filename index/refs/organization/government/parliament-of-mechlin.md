@@ -18,5 +18,5 @@ The supreme court of the Spanish Netherlands, sitting at Mechlin. Van der Burch'
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p11-s-4aefcab` — Van der Burch's father was first President
+- `01_Preliminares.html#dedicatory-letter-p11-s-765cb37` — Van der Burch's father was first President
   text: "Your father, a man of the highest judgment and discernment, was first President of the great Parliament of Mechlin"

@@ -33,16 +33,16 @@ Gregory Nazianzen's panegyric on his friend St. Basil of Caesarea, delivered as 
 - `01_Preliminares.html#dedicatory-letter-p13-s-2999bd1` — Gregory Nazianzen cited on Basil's progression to priesthood
   text: "After he had first read the sacred books and become their interpreter, he was ordained a priest by Hermogenes, Bishop of Caesarea"
 
-- `01_Preliminares.html#dedicatory-letter-p20-s-3d82233` — Gregory Nazianzen cited on Basil's meekness overcoming adversaries
+- `01_Preliminares.html#dedicatory-letter-p20-s-72ca7c3` — Gregory Nazianzen cited on Basil's meekness overcoming adversaries
   text: "Saint Basil, the Christian Moses, vanquished his adversaries by his steady kindness, as Saint Gregory Nazianzen writes of him."
 
-- `01_Preliminares.html#dedicatory-letter-p23-s-2335a3a` — Gregory Nazianzen cited on Basil's relief of a public famine
+- `01_Preliminares.html#dedicatory-letter-p23-s-c1a2414` — Gregory Nazianzen cited on Basil's relief of a public famine
   text: "Saint Gregory Nazianzen testifies that a public famine was relieved by Saint Basil's efforts"
 
 - `01_Preliminares.html#dedicatory-letter-p27-s-7c1231e` — Gregory Nazianzen quoted on Basil's life being a rule of living
   text: "the life of Basil was for all a rule of living"
 
-- `01_Preliminares.html#dedicatory-letter-p30-s-7870836` — Gregory Nazianzen as source for the exchange between Basil and the Prefect Modestus
+- `01_Preliminares.html#dedicatory-letter-p30-s-f3b3289` — Gregory Nazianzen as source for the exchange between Basil and the Prefect Modestus
   text: "Modestus, the Prefect of Valens, as Gregory Nazianzen testifies, pressed Basil to follow the religion of the Emperor."
 
 - `01_Preliminares.html#dedicatory-letter-p36-s-8cdab99` — Gregory Nazianzen cited on the great crowds at Basil's funeral

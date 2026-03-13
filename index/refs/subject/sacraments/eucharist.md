@@ -17,7 +17,7 @@ The Most Holy Eucharist — the sacrament of Christ's body and blood, offered da
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p2-s-963d62d` — Lapide, after ordination, "daily offered the sacred Host as a perpetual sacrifice, even to the very end of his life."
+- `01_Preliminares.html#life-p2-s-db7391d` — Lapide, after ordination, "daily offered the sacred Host as a perpetual sacrifice, even to the very end of his life."
   text: "he was ordained a priest and daily offered the sacred Host as a perpetual sacrifice, even to the very end of his life"
-- `01_Preliminares.html#life-p3-s-62d47dc` — During the attack at Aspromont, Lapide carried the Eucharist out of the church "lest it be profaned by heretics."
+- `01_Preliminares.html#life-p3-s-1bed5bc` — During the attack at Aspromont, Lapide carried the Eucharist out of the church "lest it be profaned by heretics."
   text: "by the help of the Most Holy Eucharist, which he was carrying out of the church lest it be profaned by heretics"

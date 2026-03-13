@@ -20,5 +20,5 @@ Athenian orator and rival of Demosthenes. In exile at Rhodes, heard the oration 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-7ab34d0` — In exile at Rhodes, heard the oration of Demosthenes read; sighed and said "What if you had heard the beast itself sounding forth its own words?"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f466946` — In exile at Rhodes, heard the oration of Demosthenes read; sighed and said "What if you had heard the beast itself sounding forth its own words?"
   text: "Aeschines, when he was in exile at Rhodes and that oration of Demosthenes was read which he had delivered against him"

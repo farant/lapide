@@ -21,19 +21,19 @@ Holy city in Palestine, sacred to Judaism, Christianity, and Islam. St. Lietbert
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p41-s-5b27af0` — St. Lietbert departed for Jerusalem with three thousand men
+- `01_Preliminares.html#dedicatory-letter-p41-s-20dd7fc` — St. Lietbert departed for Jerusalem with three thousand men
   text: "On departing for Jerusalem he drew with him three thousand men, who accompanied him on pilgrimage"
-- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-a283030` — Ezra discovered new letter characters after the capture of Jerusalem and restoration of the temple under Zerubbabel
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-e5f4ec1` — Ezra discovered new letter characters after the capture of Jerusalem and restoration of the temple under Zerubbabel
   text: "after the capture of Jerusalem and the restoration of the temple under Zerubbabel"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-82ece4b` — Jerusalem is founded as the people of God is formed; Zion rises alongside it
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-c28049e` — Jerusalem is founded as the people of God is formed; Zion rises alongside it
   text: "Jerusalem is founded, Zion rises"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-df054d9` — Cyrus commanded to rebuild the temple of Jerusalem
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-1eb0d88` — Cyrus commanded to rebuild the temple of Jerusalem
   text: "commanded him to rebuild the temple of Jerusalem"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-71a0315` — The temple of Jerusalem is reborn and hears the lamentations and fervor of the last prophets
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-1afc9da` — The temple of Jerusalem is reborn and hears the lamentations and fervor of the last prophets
   text: "That temple is reborn"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-8c50227` — The Levites of Jerusalem repeated the psalms of David three thousand years ago
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-b3cbed9` — The Levites of Jerusalem repeated the psalms of David three thousand years ago
   text: "the same faith as the Levites of Jerusalem, at an interval of three thousand years"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-bd35bf8` — Jeremiah wept over Jerusalem
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-ed66efa` — Jeremiah wept over Jerusalem
   text: "when Jeremiah wept over Jerusalem"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-342305f` — Jesus's last week begins in Jerusalem amid hosannas of triumph
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-abf1d9d` — Jesus's last week begins in Jerusalem amid hosannas of triumph
   text: "It begins in Jerusalem, palm in hand, amid the Hosannas of triumph"

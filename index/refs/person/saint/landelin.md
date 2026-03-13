@@ -25,5 +25,5 @@ Founder of monasteries in Frankish territory. Listed among companions who assist
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p42-s-dc87ef8` — Listed among companions who assisted Authbert in Hainault
+- `01_Preliminares.html#dedicatory-letter-p42-s-bae8919` — Listed among companions who assisted Authbert in Hainault
   text: "many companions called in to assist, such as Saint Landelin, Saint Ghislain, Saint Vincent Count of Hainault, and Saint Waldetrudis"

@@ -19,5 +19,5 @@ French Enlightenment writer and philosopher. Lacordaire refers to Voltaire calli
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-43eeafa` — Lacordaire refers to Voltaire calling the Song of Songs "a guardroom ballad" and adds "with such taste" — ironically rebuking Voltaire's dismissal
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-141fcb6` — Lacordaire refers to Voltaire calling the Song of Songs "a guardroom ballad" and adds "with such taste" — ironically rebuking Voltaire's dismissal
   text: "that famous Song of Songs, which Voltaire called with such taste a guardroom ballad"

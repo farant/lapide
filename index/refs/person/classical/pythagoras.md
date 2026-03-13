@@ -19,5 +19,5 @@ Greek philosopher and mathematician. Jerome cites him as an example of a seeker 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-7c9704f` — Jerome cites him as an example of a seeker of learning who visited the prophets of Memphis
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-411f285` — Jerome cites him as an example of a seeker of learning who visited the prophets of Memphis
   text: "Thus Pythagoras visited the prophets of Memphis"

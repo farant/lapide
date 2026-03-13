@@ -20,5 +20,5 @@ City in Kent, England. Seat of the diocese of Rochester. Bl. John Fisher was rai
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p19-s-0f399e4` — Fisher raised to the bishopric of Rochester and refused to leave
+- `01_Preliminares.html#dedicatory-letter-p19-s-3fcc23d` — Fisher raised to the bishopric of Rochester and refused to leave
   text: "John Fisher, Bishop of Rochester, the illustrious martyr of England, who was raised to the bishopric of Rochester on account of his incomparable learning and innocence of life"

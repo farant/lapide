@@ -17,5 +17,5 @@ The advisory council to the sovereign of the Spanish Netherlands. Van der Burch'
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p11-s-789a1bf` — Van der Burch's father served as President of the Privy Council
+- `01_Preliminares.html#dedicatory-letter-p11-s-0dd3ac7` — Van der Burch's father served as President of the Privy Council
   text: "and then of the Privy Council"

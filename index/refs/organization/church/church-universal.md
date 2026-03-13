@@ -22,17 +22,17 @@ The universal body of Christian believers founded by Christ. Referenced extensiv
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f3d81c5` — Holy rusticity builds up the Church of Christ by the merit of its life
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f1e5872` — Holy rusticity builds up the Church of Christ by the merit of its life
   text: "it builds up the Church of Christ by the merit of its life"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p16-s-81d3e12` — Joshua's conquest describes the spiritual kingdoms of the Church and the heavenly Jerusalem
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p16-s-6f95889` — Joshua's conquest describes the spiritual kingdoms of the Church and the heavenly Jerusalem
   text: "describes the spiritual kingdoms of the Church and the heavenly Jerusalem"
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p20-s-b95630d` — The wars of heretics against the Church are narrated in Kings
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p20-s-2df42c7` — The wars of heretics against the Church are narrated in Kings
   text: "the smallness of the Church and the wars of heretics against the Church are narrated"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p9-s-a0a8d79` — Christ founds His Church through the apostles
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p9-s-9c43e70` — Christ founds His Church through the apostles
   text: "He founds His Church through the apostles"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-d51a443` — Peter descends from the upper room and addresses the multitude; the Church is founded
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-4df5146` — Peter descends from the upper room and addresses the multitude; the Church is founded
   text: "addresses the multitude, astonished to hear him"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-885fe94` — The Holy Spirit descends to complete the edifice of the Church
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-377924a` — The Holy Spirit descends to complete the edifice of the Church
   text: "the Holy Spirit will descend to complete the edifice of the Church"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p51-s-556436e` — John announces to the Church its transfigurations in suffering and glory until the end of ages
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p51-s-0cd4d8e` — John announces to the Church its transfigurations in suffering and glory until the end of ages
   text: "the prophecy of the New Testament and of the entire future of the Church on earth"

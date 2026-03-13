@@ -24,9 +24,9 @@ City in Cappadocia, central Asia Minor (modern Kayseri, Turkey). Seat of Bishop 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p13-s-27d1b80` — Basil ordained a priest by Hermogenes, Bishop of Caesarea
+- `01_Preliminares.html#dedicatory-letter-p13-s-b25cef0` — Basil ordained a priest by Hermogenes, Bishop of Caesarea
   text: "he was ordained a priest by Hermogenes, Bishop of Caesarea"
-- `01_Preliminares.html#dedicatory-letter-p16-s-dcd84d9` — After the death of Eusebius, Basil was made bishop
+- `01_Preliminares.html#dedicatory-letter-p16-s-81e5829` — After the death of Eusebius, Basil was made bishop
   text: "he had faithfully stood by his friend Eusebius, Bishop of Caesarea, through his illness until death"
 - `01_Preliminares.html#dedicatory-letter-p38-s-70bccd9` — Basil through the single Church of Caesarea gave light to the whole world
   text: "Basil, through the single Church of Caesarea, gave light to the whole world"

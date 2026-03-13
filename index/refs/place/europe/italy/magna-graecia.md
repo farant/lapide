@@ -19,5 +19,5 @@ The coastal region of southern Italy colonized by Greek settlers, known for its 
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-70fb980` — Plato traveled to the coast of Italy once called Magna Graecia
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-dc424a7` — Plato traveled to the coast of Italy once called Magna Graecia
   text: "that coast of Italy which was once called Magna Graecia"

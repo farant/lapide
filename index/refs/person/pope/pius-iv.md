@@ -21,5 +21,5 @@ Pope who entrusted the task of correcting the Vulgate to select Cardinals and sc
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p10-s-2600771` — Entrusted the task of correcting the Vulgate to select Cardinals and scholars
+- `01_Preliminares.html#preface-reader-p10-s-7d16b93` — Entrusted the task of correcting the Vulgate to select Cardinals and scholars
   text: "Pius IV, Supreme Pontiff, with his incredible vigilance over all parts of the Church, entrusted that task to certain most select Cardinals"

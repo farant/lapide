@@ -25,7 +25,7 @@ Archbishop of Reims. Extolled the virtues of St. Theodoric and St. John, both bi
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p44-s-e77f5d8` — Extols the virtues of Saint Theodoric of Cambrai
+- `01_Preliminares.html#dedicatory-letter-p44-s-6a874bc` — Extols the virtues of Saint Theodoric of Cambrai
   text: "whose virtues Hincmar, Archbishop of Reims, extols"
-- `01_Preliminares.html#dedicatory-letter-p45-s-a57ebb7` — Celebrates Saint John of Cambrai
+- `01_Preliminares.html#dedicatory-letter-p45-s-ee97e39` — Celebrates Saint John of Cambrai
   text: "celebrated by the same Hincmar"

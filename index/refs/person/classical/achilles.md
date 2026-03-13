@@ -19,7 +19,7 @@ Hero of the Iliad. Homer's songs on his wrath are set beside but below David's M
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-81f66a2` — Homer's songs on the wrath of Achilles; "When Achilles wept for his friend killed in battle" — the muse of man is spent compared to David's Miserere
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-3dc65e4` — Homer's songs on the wrath of Achilles; "When Achilles wept for his friend killed in battle" — the muse of man is spent compared to David's Miserere
   text: "Homer's songs on the wrath of Achilles"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-64eebd8` — Achilles weeping for his friend
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-2319171` — Achilles weeping for his friend
   text: "When Achilles wept for his friend killed in battle"

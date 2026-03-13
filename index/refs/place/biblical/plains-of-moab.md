@@ -18,5 +18,5 @@ Biblical location east of the Jordan River. The children of Israel wept for Mose
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p35-s-d7764d7` — Moses' departure mourned by the Israelites
+- `01_Preliminares.html#dedicatory-letter-p35-s-1d052b0` — Moses' departure mourned by the Israelites
   text: "the children of Israel wept for him in the plains of Moab thirty days"

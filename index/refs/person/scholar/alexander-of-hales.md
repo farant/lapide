@@ -24,5 +24,5 @@ Franciscan theologian known as the "Doctor Irrefragabilis." Among the scholars w
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-8df4118` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-3d8287c` — Listed among scholars who used Jerome's version
   text: "Peter Lombard, Alexander, Albert"

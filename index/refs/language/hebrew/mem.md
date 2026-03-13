@@ -20,5 +20,5 @@ The thirteenth letter of the Hebrew alphabet. One of the five Hebrew letters tha
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-9cdd0b5` — Jerome lists Mem among the five doubled Hebrew letters
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-61105f4` — Jerome lists Mem among the five doubled Hebrew letters
   text: "Furthermore, five letters among the Hebrews are doubled: Caph, Mem, Nun, Pe, Sade; for the beginnings and middles of words are written differently through these letters than their endings."

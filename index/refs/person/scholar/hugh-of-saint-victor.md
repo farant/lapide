@@ -25,5 +25,5 @@ Augustinian canon, theologian, and philosopher at the Abbey of Saint-Victor in P
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-88c0189` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-8a472f8` — Listed among scholars who used Jerome's version
   text: "Richard, Hugh, Bernard"

@@ -23,7 +23,7 @@ Mother of God and the Blessed Virgin. The temple sees the Son of God come in her
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-ea368b3` — The temple "sees the Son of God come in the arms of a Virgin"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-6a338ad` — The temple "sees the Son of God come in the arms of a Virgin"
   text: "it sees the Son of God come in the arms of a Virgin"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-2b4c195` — Named as "Mary" among the three who remain with Christ at the end
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-3c02940` — Named as "Mary" among the three who remain with Christ at the end
   text: "it will be in the hands of John, of Mary, and of Magdalene that he will find the last farewell of earth"

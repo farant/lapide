@@ -24,9 +24,9 @@ Homer's epic poems, referenced in the dedicatory letter as characterizing kings 
 
 - `01_Preliminares.html#dedicatory-letter-p6-s-2cffc64` — Homer cited as calling a king "the shepherd of the peoples"
   text: "Homer calls a king the shepherd of the peoples, because he ought to feed them, as a shepherd feeds sheep, and not fleece them."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-aab44e5` — Jerome refers to Homerocentones as parallel to Virgiliocento, centos that misuse poetic lines
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-f150c02` — Jerome refers to Homerocentones as parallel to Virgiliocento, centos that misuse poetic lines
   text: "As though we had not read Homerocentones and Virgiliocento"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p14-s-234fca5` — Lacordaire invokes Homer alongside Virgil as the summit of human poetic genius, to which David and Isaiah are compared and found superior
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p14-s-fa9c137` — Lacordaire invokes Homer alongside Virgil as the summit of human poetic genius, to which David and Isaiah are compared and found superior
   text: "if it is capable of opening itself, it surrenders to a passionate admiration that it has known only in reading Homer or Virgil"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-81f66a2` — Lacordaire lists "Homer's songs on the wrath of Achilles" as the pinnacle of nature's poetry, inferior to David's Miserere
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-3dc65e4` — Lacordaire lists "Homer's songs on the wrath of Achilles" as the pinnacle of nature's poetry, inferior to David's Miserere
   text: "Homer's songs on the wrath of Achilles"

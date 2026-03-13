@@ -20,5 +20,5 @@ Marian shrine near Louvain, renowned for miracles. In 1604, on the feast of the 
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-31f9f52` — Lapide was staying near the shrine when attacked by Dutch cavalry
+- `01_Preliminares.html#life-p3-s-c5c5bd9` — Lapide was staying near the shrine when attacked by Dutch cavalry
   text: "staying near the shrine of Our Lady of Aspromont, renowned for miracles, not far from Louvain, and assisting the crowds of people who came for religious purposes"

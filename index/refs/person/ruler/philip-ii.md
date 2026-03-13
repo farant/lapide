@@ -26,5 +26,5 @@ King of Spain and sovereign of the Low Countries. Van der Burch's father was mos
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p11-s-e79a62f` — Van der Burch's father was most dear to Philip II for remaining loyal amid upheavals of the Low Countries
+- `01_Preliminares.html#dedicatory-letter-p11-s-420183f` — Van der Burch's father was most dear to Philip II for remaining loyal amid upheavals of the Low Countries
   text: "he stood firm and unshaken in loyalty to his Prince amid the wondrous and grievous upheavals and storms of these Low Countries, and for this reason was most dear to the Catholic King Philip II, of glorious memory."

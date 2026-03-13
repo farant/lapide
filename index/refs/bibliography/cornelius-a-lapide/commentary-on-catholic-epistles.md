@@ -14,5 +14,5 @@ Lapide's commentary on the epistles of James, Peter, John, and Jude.
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-7e11010` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-87126ba` — Listed in catalogue of works
   text: "on the Catholic Epistles"

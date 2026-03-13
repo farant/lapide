@@ -21,5 +21,5 @@ Disciple of Christ, sister of Mary and Lazarus. Lapide says in younger days he "
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p2-s-7c8bad1` — Lapide says in younger days he "played Martha" (active life) before turning to contemplation
+- `01_Preliminares.html#life-p2-s-cf136c8` — Lapide says in younger days he "played Martha" (active life) before turning to contemplation
   text: "Once in my younger days I played Martha"

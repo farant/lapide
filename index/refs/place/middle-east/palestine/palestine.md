@@ -21,7 +21,7 @@ The biblical Holy Land. Referenced as the location of Jerome's Bethlehem and as 
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p2-s-a1a1126` — Jerome's Bethlehem described as in Palestine
+- `01_Preliminares.html#life-p2-s-2081a5f` — Jerome's Bethlehem described as in Palestine
   text: "whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome"
-- `01_Preliminares.html#dedicatory-letter-p26-s-f82d5e8` — Palestine named as full of monastic followers
+- `01_Preliminares.html#dedicatory-letter-p26-s-43a9cfe` — Palestine named as full of monastic followers
   text: "Egypt, Palestine, and Mesopotamia are full of those who follow this Christian Philosophy"

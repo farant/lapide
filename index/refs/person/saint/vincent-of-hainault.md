@@ -26,5 +26,5 @@ Count of Hainault who later became a monk. Husband of St. Waldetrudis. Listed am
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p42-s-4262cfb` — Listed among companions who assisted Authbert; identified as Count of Hainault; husband of Saint Waldetrudis
+- `01_Preliminares.html#dedicatory-letter-p42-s-684c364` — Listed among companions who assisted Authbert; identified as Count of Hainault; husband of Saint Waldetrudis
   text: "Saint Vincent Count of Hainault, and Saint Waldetrudis, wife of Vincent"

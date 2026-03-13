@@ -21,7 +21,7 @@ Disciple of Christ. Lapide says he now plays "the part of Mary Magdalene" in con
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p2-s-ed6c293` — Lapide says he now plays "the part of Mary Magdalene" in contemplation, contrasting with his earlier role as Martha
+- `01_Preliminares.html#life-p2-s-072f1b3` — Lapide says he now plays "the part of Mary Magdalene" in contemplation, contrasting with his earlier role as Martha
   text: "Once in my younger days I played Martha; now in the declining slope of age I play and love the part of Mary Magdalene more"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-2b4c195` — Named as one of those with Christ at the end; Jerome calls her "Magdalene"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-3c02940` — Named as one of those with Christ at the end; Jerome calls her "Magdalene"
   text: "it will be in the hands of John, of Mary, and of Magdalene that he will find the last farewell of earth"

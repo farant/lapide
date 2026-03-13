@@ -24,5 +24,5 @@ Prefect of Valens's imperial kitchen who rebuked Basil in barbarian fashion. Bas
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p33-s-59a04d3` — Present at the confrontation with Basil; rebuked Basil in barbarian fashion; Basil replied "We have seen an illiterate Demosthenes" and told him to look after seasoning broths
+- `01_Preliminares.html#dedicatory-letter-p33-s-2863457` — Present at the confrontation with Basil; rebuked Basil in barbarian fashion; Basil replied "We have seen an illiterate Demosthenes" and told him to look after seasoning broths
   text: "a certain man named Demosthenes, prefect of the imperial kitchen, who in a thoroughly barbarian fashion rebuked Basil, master of the whole world. But Saint Basil, smiling, said: 'We have seen an illiterate Demosthenes.'"

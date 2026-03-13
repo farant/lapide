@@ -20,5 +20,5 @@ Major city of the Roman East; one of the first centers of Christianity. Paul was
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-d39cbc4` — Antioch possesses itself of Paul
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-43cc59f` — Antioch possesses itself of Paul
   text: "Antioch possesses itself of him"

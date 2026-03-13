@@ -25,5 +25,5 @@ Lord Chancellor of England and martyr. Spent fifty years in public life holding 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p12-s-774ac7b` — Illustrious Chancellor of England and martyr; spent fifty years in public life holding highest offices yet did not increase annual income to seventy gold pieces
+- `01_Preliminares.html#dedicatory-letter-p12-s-6fd92d9` — Illustrious Chancellor of England and martyr; spent fifty years in public life holding highest offices yet did not increase annual income to seventy gold pieces
   text: "that illustrious Chancellor of England and martyr, Blessed Thomas More, who, having spent fifty years in public life and holding the highest offices, yet did not increase his annual income to seventy gold pieces."

@@ -18,5 +18,5 @@ Letter in which Basil discusses his flight from the bishopric of Neocaesarea, ex
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p16-s-a3468ea` — Cited as evidence Basil fled the bishopric of Neocaesarea
+- `01_Preliminares.html#dedicatory-letter-p16-s-3adbaae` — Cited as evidence Basil fled the bishopric of Neocaesarea
   text: "Saint Basil likewise fled the bishopric of Neocaesarea, as he himself writes in Epistle 164."

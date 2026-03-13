@@ -20,7 +20,7 @@ The Jesuit college at Louvain, part of the Society of Jesus. Lapide invoked the 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p52-s-9c260b5` — Lapide invokes the love of the Louvain College
+- `01_Preliminares.html#dedicatory-letter-p52-s-5b88491` — Lapide invokes the love of the Louvain College
   text: "this token and pledge of the love and esteem which I, the Louvain College, and our whole Society bear toward you"
-- `01_Preliminares.html#dedicatory-letter-p3-s-a8ad3c1` — The Society established a College in Mechlin
+- `01_Preliminares.html#dedicatory-letter-p3-s-7c42d66` — The Society established a College in Mechlin
   text: "until our Society established both a Novitiate and a College in that city"

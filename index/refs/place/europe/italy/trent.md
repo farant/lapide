@@ -26,5 +26,5 @@ City in northern Italy, location of the ecumenical Council of Trent (1545-1563).
   text: "The sacred, œcumenical and general Council of Trent, lawfully assembled in the Holy Spirit"
 - `01_Preliminares.html#preface-reader-p2-s-d550ed9` — Benefits God bestowed through the Tridentine Synod
   text: "Among the many and great benefits which God has bestowed upon His Church through the sacred Tridentine Synod"
-- `01_Preliminares.html#preface-reader-p9-s-39bba47` — The Synod decreed the Vulgate be printed as correctly as possible
+- `01_Preliminares.html#preface-reader-p9-s-264e910` — The Synod decreed the Vulgate be printed as correctly as possible
   text: "the same most holy Synod of Trent wisely added by its decree that this same Old and Vulgate edition should be printed as correctly as possible"

@@ -16,9 +16,9 @@ Lapide's exegetical approach combining literal and moral exposition, enriched wi
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-2f6cde7` — The work contains "the Literal and Moral Exposition upon the Pentateuch of Moses."
+- `01_Preliminares.html#title-page-s-001acd7` — The work contains "the Literal and Moral Exposition upon the Pentateuch of Moses."
   text: "Containing the Literal and Moral Exposition upon the Pentateuch of Moses"
-- `01_Preliminares.html#dedicatory-letter-p48-s-a02d142` — Lapide describes his method: "the variety and breadth of the subject is greater, as also is its accessibility and pleasantness — for much is historical, other parts typological, adorned with beautiful figures and symbols."
+- `01_Preliminares.html#dedicatory-letter-p48-s-fb47982` — Lapide describes his method: "the variety and breadth of the subject is greater, as also is its accessibility and pleasantness — for much is historical, other parts typological, adorned with beautiful figures and symbols."
   text: "here the variety and breadth of the subject is greater, as also is its accessibility and pleasantness — for much is historical, other parts typological, adorned with beautiful figures and symbols"
-- `01_Preliminares.html#dedicatory-letter-p49-s-23a1c4d` — The commentaries were gathered over twenty years of teaching, woven with allegories and patristic sayings.
+- `01_Preliminares.html#dedicatory-letter-p49-s-715780a` — The commentaries were gathered over twenty years of teaching, woven with allegories and patristic sayings.
   text: "I have woven in throughout solid and pleasing allegories of the ancient ceremonies, seasoned with choice sayings, examples, and apophthegms of the ancients."

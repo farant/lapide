@@ -19,5 +19,5 @@ Benedictine abbey near Douai in northern France. St. Odo, Bishop of Cambrai, spe
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p46-s-77a588d` — St. Odo spent the rest of his life in exile at Anchin
+- `01_Preliminares.html#dedicatory-letter-p46-s-60249c7` — St. Odo spent the rest of his life in exile at Anchin
   text: "he spent the rest of his life in exile at Anchin and died in that exile"

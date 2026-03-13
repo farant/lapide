@@ -20,5 +20,5 @@ Greek sophist and biographer of Apollonius of Tyana. Wrote about Apollonius most
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-097a64f` — Wrote about Apollonius most fully in eight volumes
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-75b441f` — Wrote about Apollonius most fully in eight volumes
   text: "Philostratus wrote about this most fully in eight volumes."

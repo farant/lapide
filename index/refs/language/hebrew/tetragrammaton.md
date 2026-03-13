@@ -15,5 +15,5 @@ The four-letter name of God (YHWH). Jerome notes it was written in ancient Hebre
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-6e03b99` — Jerome reports that the tetragrammaton name of the Lord is found in certain Greek manuscripts still written in the ancient characters
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-d25d1a1` — Jerome reports that the tetragrammaton name of the Lord is found in certain Greek manuscripts still written in the ancient characters
   text: "And the tetragrammaton name of the Lord, in certain Greek manuscripts, is found expressed in the ancient letters even to this day."

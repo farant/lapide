@@ -26,5 +26,5 @@ Virgil's epic poem, cited by Jerome for lines repurposed in Virgiliocento as pse
   text: "My son, my strength, my great power alone."
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p8-s-7d36758` — Jerome quotes Aeneid II.650 as repurposed for the crucifixion scene
   text: "Such things he kept recalling, and remained fixed."
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-77156d0` — Lacordaire lists "those of Virgil on the misfortunes of Aeneas" as among the greatest works of human genius, still inferior to the psalms and prophecies
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-19108c8` — Lacordaire lists "those of Virgil on the misfortunes of Aeneas" as among the greatest works of human genius, still inferior to the psalms and prophecies
   text: "those of Virgil on the misfortunes of Aeneas"

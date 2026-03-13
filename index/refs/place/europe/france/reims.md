@@ -20,5 +20,5 @@ City in northern France, seat of the ancient archbishopric of Reims. Hincmar, Ar
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p44-s-e77f5d8` — Hincmar, Archbishop of Reims, extols St. Theodoric's virtues
+- `01_Preliminares.html#dedicatory-letter-p44-s-6a874bc` — Hincmar, Archbishop of Reims, extols St. Theodoric's virtues
   text: "whose virtues Hincmar, Archbishop of Reims, extols"

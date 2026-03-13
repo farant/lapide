@@ -25,5 +25,5 @@ Augustinian canon, theologian, and mystic at the Abbey of Saint-Victor in Paris.
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-7a8b8cc` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-f862726` — Listed among scholars who used Jerome's version
   text: "Peter Damian, Richard, Hugh"

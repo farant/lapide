@@ -17,5 +17,5 @@ Voltaire's dismissive characterization of the Song of Songs as "a guardroom ball
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-43eeafa` — Lacordaire mentions Voltaire's famous insult to the Song of Songs
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-141fcb6` — Lacordaire mentions Voltaire's famous insult to the Song of Songs
   text: "that famous Song of Songs, which Voltaire called with such taste a guardroom ballad"

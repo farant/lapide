@@ -21,5 +21,5 @@ The Hebrew name for the book of Chronicles (Paralipomenon), meaning "Words of Da
 - `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p25-s-bb54a86` — Jerome identifies Dibre Hajamim as the Hebrew name for Chronicles, translating it as "Words of Days"
   text: "The seventh, Dibre Hajamim, that is, Words of Days, which we can more expressively call the Chronicle of the entire divine history; this book is inscribed among us as the first and second of Paralipomenon."
 
-- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-313f961` — Jerome lists Dibre hajamim among the five books considered double
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-db40214` — Jerome lists Dibre hajamim among the five books considered double
   text: "five books are considered by most to be double: Samuel, Melachim, Dibre hajamim, Ezra, Jeremiah with Cinoth"

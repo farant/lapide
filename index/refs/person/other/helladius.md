@@ -21,5 +21,5 @@ Source cited by John Damascene for the account of Basil's prayer before the imag
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p29-s-b86c05c` — Damascene writes "from Helladius" about Basil's prayer before the image of Our Lady
+- `01_Preliminares.html#dedicatory-letter-p29-s-3a70ce5` — Damascene writes "from Helladius" about Basil's prayer before the image of Our Lady
   text: "so Damascene writes from Helladius, in his first Oration On Images"

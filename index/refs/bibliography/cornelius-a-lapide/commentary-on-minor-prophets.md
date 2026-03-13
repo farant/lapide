@@ -14,5 +14,5 @@ Lapide's commentary on the twelve minor prophets.
 
 ## References in Commentary
 
-- `01_Preliminares.html#life-p3-s-05517b2` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-d55dde6` — Listed in catalogue of works
   text: "on the twelve Minor Prophets"

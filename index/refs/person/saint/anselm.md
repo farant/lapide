@@ -24,5 +24,5 @@ Archbishop of Canterbury and Doctor of the Church. Father of Scholasticism. Amon
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-720a880` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-b4a7ab7` — Listed among scholars who used Jerome's version
   text: "Haymo, Anselm, Peter Damian"

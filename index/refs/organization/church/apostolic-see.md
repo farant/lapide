@@ -24,13 +24,13 @@ The episcopal jurisdiction of the Pope as Bishop of Rome. Referenced as the supr
 
 ## References in Commentary
 
-- `01_Preliminares.html#trent-decrees-p3-s-7228970` — Three legates of the Apostolic See presided at the Council
+- `01_Preliminares.html#trent-decrees-p3-s-8a21150` — Three legates of the Apostolic See presided at the Council
   text: "with the three legates of the Apostolic See presiding over it"
-- `01_Preliminares.html#preface-reader-p10-s-72b2646` — Integrity of the Scriptures pertains to the care of the Apostolic See
+- `01_Preliminares.html#preface-reader-p10-s-d157f95` — Integrity of the Scriptures pertains to the care of the Apostolic See
   text: "the very integrity and purity of the Scriptures themselves, are known to pertain especially to the care of the Apostolic See"
-- `01_Preliminares.html#preface-reader-p10-s-dae8f0e` — Pius IV entrusted the Vulgate correction to Cardinals
+- `01_Preliminares.html#preface-reader-p10-s-f7c92bb` — Pius IV entrusted the Vulgate correction to Cardinals
   text: "Pius IV, Supreme Pontiff, with his incredible vigilance over all parts of the Church, entrusted that task to certain most select Cardinals of the Holy Roman Church"
-- `01_Preliminares.html#preface-reader-p14-s-a20bef2` — The sacred congregation chosen by the Apostolic See
+- `01_Preliminares.html#preface-reader-p14-s-6913757` — The sacred congregation chosen by the Apostolic See
   text: "the sacred congregation of most eminent Cardinals and other most learned men chosen by the Apostolic See"
-- `01_Preliminares.html#preface-reader-p16-s-67f0519` — The Apostolic See does not condemn the industry of those who prepare concordances
+- `01_Preliminares.html#preface-reader-p16-s-54a817d` — The Apostolic See does not condemn the industry of those who prepare concordances
   text: "the Apostolic See does not condemn the industry of those who prepare concordances"

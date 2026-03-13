@@ -19,7 +19,7 @@ The metropolitan (cathedral) church of the Archdiocese of Mechlin. Van der Burch
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p3-s-5f03b25` — Lapide summoned to the Metropolitan Church
+- `01_Preliminares.html#dedicatory-letter-p3-s-ef4ef72` — Lapide summoned to the Metropolitan Church
   text: "summoned by you from Mechlin to the Metropolitan Church over which you presided as Dean"
-- `01_Preliminares.html#dedicatory-letter-p15-s-a95ea36` — Van der Burch chosen as Dean; choir and clergy praised
+- `01_Preliminares.html#dedicatory-letter-p15-s-c1f3bbd` — Van der Burch chosen as Dean; choir and clergy praised
   text: "they chose you as Dean of the Metropolitan Church of Mechlin — and what you accomplished in that office, the choir and clergy of Mechlin, who are a mirror of virtue and religion for all the Low Countries, still declare"

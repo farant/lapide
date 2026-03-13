@@ -17,7 +17,7 @@ Catholic diocese in northern France. Augustin Crampon, the annotator of this edi
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-4f71e83` — Crampon described as a priest of the Diocese of Amiens
+- `01_Preliminares.html#title-page-s-c8b02c4` — Crampon described as a priest of the Diocese of Amiens
   text: "Augustinus Crampon, Priest of the Diocese of Amiens"
-- `01_Preliminares.html#permissions-p4-s-3ddfab1` — Annotations approved by the Bishop of Amiens
+- `01_Preliminares.html#permissions-p4-s-53edc93` — Annotations approved by the Bishop of Amiens
   text: "Aug. Crampon, priest of the diocese of Amiens"

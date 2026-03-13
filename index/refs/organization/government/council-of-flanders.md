@@ -16,5 +16,5 @@ Governing council of the County of Flanders. Van der Burch's grandfather served 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p11-s-d0f9ab2` — Van der Burch's grandfather was President
+- `01_Preliminares.html#dedicatory-letter-p11-s-e6251d8` — Van der Burch's grandfather was President
   text: "Your grandfather was President of the Council of Flanders, who discharged that honor to great personal credit and to the gratitude of the Commonwealth"

@@ -22,5 +22,5 @@ Roman historian. Rome inspired Tacitus by bringing back to him under Nero the so
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-ae9477e` — Rome inspired Tacitus by bringing back to him under Nero the soul of its consuls
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-4dab133` — Rome inspired Tacitus by bringing back to him under Nero the soul of its consuls
   text: "it was Rome still that inspired Tacitus, by bringing back to him under Nero the soul of its consuls"

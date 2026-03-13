@@ -19,5 +19,5 @@ The Holy Spirit's role in inspiring and guiding preaching — symbolized by the 
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p23-s-6c336ed` — While Basil was preaching, Ephrem saw a dove whispering the sermon into his ear.
+- `01_Preliminares.html#dedicatory-letter-p23-s-8281869` — While Basil was preaching, Ephrem saw a dove whispering the sermon into his ear.
   text: "Saint Ephrem saw a dove whispering the sermon into his ear — a dove, I say, which is the sign and hieroglyph of the Holy Spirit"

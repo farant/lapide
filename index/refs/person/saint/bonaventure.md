@@ -23,5 +23,5 @@ Franciscan friar, Cardinal, and Doctor of the Church. The Seraphic Doctor. Liste
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-d6f24b1` — Listed last among named scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-1e68b36` — Listed last among named scholars who used Jerome's version
   text: "Thomas, Bonaventure, and all the others who have flourished in the Church over these nine hundred years"

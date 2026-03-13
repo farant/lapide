@@ -18,5 +18,5 @@ Southern region of Palestine; where Jesus spoke and lived during his public mini
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-a492c5b` — Paul saw Jesus speak in Judea only through ecstasy, not in person
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-fd78bbe` — Paul saw Jesus speak in Judea only through ecstasy, not in person
   text: "Others saw Jesus Christ born in a stable, speak in Judea, die on a cross"

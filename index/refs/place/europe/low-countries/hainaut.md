@@ -26,7 +26,7 @@ Historical county in the Low Countries, under the spiritual care of the Archbish
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p25-s-57cec14` — The people of Hainaut afflicted by plague
+- `01_Preliminares.html#dedicatory-letter-p25-s-bdb8ef7` — The people of Hainaut afflicted by plague
   text: "The people of Hainaut and Mons experienced this very thing this year"
-- `01_Preliminares.html#dedicatory-letter-p42-s-f0775f2` — Hainaut flourished in the faith under Bishop Authbert
+- `01_Preliminares.html#dedicatory-letter-p42-s-d6ab4c4` — Hainaut flourished in the faith under Bishop Authbert
   text: "Under him Hainault began to flourish in the Christian faith"

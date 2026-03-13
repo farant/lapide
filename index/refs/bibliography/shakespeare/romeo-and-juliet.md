@@ -17,5 +17,5 @@ Shakespeare's tragedy, cited by Lacordaire among the greatest works of human lit
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-e51c984` — Lacordaire lists Romeo and Juliet among the pinnacles of human poetry
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-52ada48` — Lacordaire lists Romeo and Juliet among the pinnacles of human poetry
   text: "Romeo and Juliet by Shakespeare"

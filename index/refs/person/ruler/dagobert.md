@@ -23,5 +23,5 @@ King of the Franks who came frequently to receive the counsel of St. Authbert.
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p42-s-7f889b7` — Came frequently to receive the counsel of Saint Authbert
+- `01_Preliminares.html#dedicatory-letter-p42-s-00f4357` — Came frequently to receive the counsel of Saint Authbert
   text: "King Dagobert of the Franks came not infrequently to receive the counsel of Saint Authbert."

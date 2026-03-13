@@ -26,5 +26,5 @@ Bishop of Rochester, Cardinal, and martyr. Raised to the bishopric for his learn
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p19-s-3d12939` — Raised to bishopric of Rochester for his learning and innocence; refused Henry VIII's offers of grander sees; would not abandon his first bride (Rochester); said he would count himself blessed if he could render proper account for his small flock
+- `01_Preliminares.html#dedicatory-letter-p19-s-0bdd99e` — Raised to bishopric of Rochester for his learning and innocence; refused Henry VIII's offers of grander sees; would not abandon his first bride (Rochester); said he would count himself blessed if he could render proper account for his small flock
   text: "John Fisher, Bishop of Rochester, the illustrious martyr of England, who was raised to the bishopric of Rochester on account of his incomparable learning and innocence of life."

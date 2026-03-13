@@ -21,5 +21,5 @@ King of Judah, deported to Babylon. The books of Kings describe the kingdom of J
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p20-s-42e398f` — The books of Kings describe the kingdom of Judah from Solomon to Jeconiah
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p20-s-265a293` — The books of Kings describe the kingdom of Judah from Solomon to Jeconiah
   text: "from Solomon to Jeconiah"

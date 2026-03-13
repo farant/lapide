@@ -21,5 +21,5 @@ Holy Roman Emperor and King of Spain. Born in Ghent.
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p21-s-52c6f8c` — Ghent described as renowned as his birthplace
+- `01_Preliminares.html#dedicatory-letter-p21-s-0ed2c1f` — Ghent described as renowned as his birthplace
   text: "renowned not least as the birthplace of Charles V the Unconquered Emperor"

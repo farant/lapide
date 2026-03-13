@@ -26,5 +26,5 @@ Provincial Superior of the Society of Jesus in the province of Flandro-Belgica. 
 
 ## References in Commentary
 
-- `01_Preliminares.html#permissions-p2-s-57a2891` — Grants printing permission for Lapide's Pentateuch commentary, acting by authority of Vitelleschi; gives permission to heirs of Martin Nutius and Jan Moretus; dated Antwerp, 23 August 1616
+- `01_Preliminares.html#permissions-p2-s-bab816d` — Grants printing permission for Lapide's Pentateuch commentary, acting by authority of Vitelleschi; gives permission to heirs of Martin Nutius and Jan Moretus; dated Antwerp, 23 August 1616
   text: "I, Charles Scribani, Provincial Superior of the Society of Jesus in the province of Flandro-Belgica"

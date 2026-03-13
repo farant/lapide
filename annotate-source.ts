@@ -70,6 +70,20 @@ function normalizeForMatch(s: string): string {
     .trim();
 }
 
+// Same as normalizeForMatch but without .trim() — preserves monotonic length
+// for prefix-based offset mapping in findInPlainText
+function normalizeForPosition(s: string): string {
+  return s
+    .replace(/\u0153/g, "oe")
+    .replace(/\u00E6/g, "ae")
+    .replace(/[\u2018\u2019\u0060\u00B4']/g, "'")
+    .replace(/[\u201C\u201D\u00AB\u00BB"]/g, "'")
+    .replace(/\s*[\u2014]\s*/g, " -- ")
+    .replace(/\s*--\s*/g, " -- ")
+    .replace(/[\u2013]/g, "-")
+    .replace(/\s+/g, " ");
+}
+
 function computeHash(text: string): string {
   const normalized = text.replace(/\s+/g, " ").trim();
   const data = new TextEncoder().encode(normalized);
@@ -158,10 +172,10 @@ console.log(`Found ${refEntries.length} text references to ${sourceBasename}`);
 
 // Helper: find where a normalized target starts in the original plain text
 function findInPlainText(plainText: string, normTarget: string, searchFrom: number): { start: number; end: number } | null {
-  const normPlain = normalizeForMatch(plainText);
+  const normPlain = normalizeForPosition(plainText);
 
   // Find position in normalized space
-  const normIdx = normPlain.indexOf(normTarget, searchFrom > 0 ? normalizeForMatch(plainText.slice(0, searchFrom)).length : 0);
+  const normIdx = normPlain.indexOf(normTarget, searchFrom > 0 ? normalizeForPosition(plainText.slice(0, searchFrom)).length : 0);
   if (normIdx < 0) return null;
 
   // Map normalized offset back to original offset
@@ -170,7 +184,7 @@ function findInPlainText(plainText: string, normTarget: string, searchFrom: numb
   let origEnd = -1;
 
   for (let i = 0, normLen = 0; i <= plainText.length; i++) {
-    const normSoFar = normalizeForMatch(plainText.slice(0, i));
+    const normSoFar = normalizeForPosition(plainText.slice(0, i));
     if (origStart < 0 && normSoFar.length >= normIdx) {
       origStart = i;
     }

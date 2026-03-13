@@ -20,7 +20,7 @@ Crampon's editorial annotations enriching Lapide's Commentaries on the Pentateuc
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-41bb9a2` — Crampon named as reviser and annotator on the title page
+- `01_Preliminares.html#title-page-s-e0dd2b8` — Crampon named as reviser and annotator on the title page
   text: "Carefully revised and illustrated with notes by Augustinus Crampon, Priest of the Diocese of Amiens."
 
 - `01_Preliminares.html#permissions-p4-s-bb92bbf` — Permission for Crampon's annotations granted 2 May 1852

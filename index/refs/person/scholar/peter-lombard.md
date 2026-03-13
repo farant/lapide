@@ -24,5 +24,5 @@ Bishop of Paris and theologian. Author of the Sentences, the standard theologica
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p7-s-97758c2` — Listed among scholars who used Jerome's version
+- `01_Preliminares.html#preface-reader-p7-s-3814744` — Listed among scholars who used Jerome's version
   text: "Rupert, Peter Lombard, Alexander"

@@ -21,5 +21,5 @@ City in the County of Hainaut, within the archdiocese of Cambrai (now in norther
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p37-s-98e1fe4` — Valenciennes exults at Van der Burch's appointment
+- `01_Preliminares.html#dedicatory-letter-p37-s-833a4e2` — Valenciennes exults at Van der Burch's appointment
   text: "the Mons region rejoices, Valenciennes exults, Cambrai cries aloud with joy"

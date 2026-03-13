@@ -20,7 +20,7 @@ Ancient civilization; Lacordaire describes Greece as a spiritual homeland that n
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-b902524` — Greece is like a homeland that never dies
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-06a3e89` — Greece is like a homeland that never dies
   text: "Greece is for us like a homeland that never dies"
-- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p6-s-b6b9b4a` — Lacordaire asks what Rome or Greece is before Christianity
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p6-s-a1f8fd5` — Lacordaire asks what Rome or Greece is before Christianity
   text: "what is Rome or Greece before Christianity"

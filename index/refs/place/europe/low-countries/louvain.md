@@ -25,9 +25,9 @@ University city in the Duchy of Brabant, part of the Spanish Netherlands. Cornel
 
 ## References in Commentary
 
-- `01_Preliminares.html#title-page-s-a9a9bb1` — Lapide described as formerly professor at Louvain
+- `01_Preliminares.html#title-page-s-c3eb8be` — Lapide described as formerly professor at Louvain
   text: "formerly professor of Holy Scripture at Louvain, afterwards at Rome"
-- `01_Preliminares.html#life-p2-s-bdd5083` — Lapide taught at Louvain for more than twenty years
+- `01_Preliminares.html#life-p2-s-e5465c3` — Lapide taught at Louvain for more than twenty years
   text: "He taught the Sacred Language and Holy Scripture publicly at Louvain for more than twenty years"
-- `01_Preliminares.html#dedicatory-letter-p52-s-9c260b5` — The Louvain College's esteem for Van der Burch
+- `01_Preliminares.html#dedicatory-letter-p52-s-5b88491` — The Louvain College's esteem for Van der Burch
   text: "this token and pledge of the love and esteem which I, the Louvain College, and our whole Society bear toward you"

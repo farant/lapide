@@ -22,7 +22,7 @@ Patriarch, son of Abraham. Listed among the ancient patriarchs who held both sup
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p5-s-28000fc` — Listed among ancient patriarchs holding both supreme powers
+- `01_Preliminares.html#dedicatory-letter-p5-s-c6c5219` — Listed among ancient patriarchs holding both supreme powers
   text: "Melchizedek, Abraham, Isaac, Jacob, and the other ancient patriarchs"
-- `01_Preliminares.html#dedicatory-letter-p10-s-7ca6ab4` — Moses' ancestor: Abraham begot Isaac, Isaac begot Jacob
+- `01_Preliminares.html#dedicatory-letter-p10-s-b949745` — Moses' ancestor: Abraham begot Isaac, Isaac begot Jacob
   text: "Abraham begot Isaac, Isaac Jacob"

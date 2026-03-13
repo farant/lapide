@@ -22,5 +22,5 @@ Aeschines' oration against Ctesiphon, indirectly cited via the anecdote of Aesch
 
 ## References in Commentary
 
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-3fa005b` — Jerome recounts the anecdote of Aeschines in exile praising Demosthenes' oration to illustrate the power of the living voice
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-dc3354c` — Jerome recounts the anecdote of Aeschines in exile praising Demosthenes' oration to illustrate the power of the living voice
   text: "Aeschines, when he was in exile at Rhodes and that oration of Demosthenes was read which he had delivered against him, while all marveled and praised it, sighed and said: 'What if you had heard the beast itself sounding forth its own words?'"

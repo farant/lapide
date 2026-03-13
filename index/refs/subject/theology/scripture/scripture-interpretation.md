@@ -17,5 +17,5 @@ The principle that Scripture must be interpreted according to the sense held by 
 
 ## References in Commentary
 
-- `01_Preliminares.html#trent-decrees-p10-s-0f871a9` — Trent decrees that no one may interpret Scripture contrary to the sense held by Holy Mother Church or contrary to the unanimous consent of the Fathers, under penalty of law.
+- `01_Preliminares.html#trent-decrees-p10-s-c830c1f` — Trent decrees that no one may interpret Scripture contrary to the sense held by Holy Mother Church or contrary to the unanimous consent of the Fathers, under penalty of law.
   text: "no one, relying on his own prudence, in matters of faith and morals pertaining to the edification of Christian doctrine, twisting the sacred Scripture to his own senses, shall dare to interpret the sacred Scripture contrary to that sense which holy mother Church — whose it is to judge of the true sense and interpretation of the holy Scriptures — has held and does hold; or even contrary to the unanimous consent of the Fathers"

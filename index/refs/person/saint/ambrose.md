@@ -26,5 +26,5 @@ One of the four great Latin Doctors of the Church. Bishop of Milan who translate
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p8-s-8d6ee64` — Translated Basil's Hexaemeron, giving Latin ears "not so much his own work as that of Saint Basil" in his treatise On the Work of the Six Days
+- `01_Preliminares.html#dedicatory-letter-p8-s-104e74a` — Translated Basil's Hexaemeron, giving Latin ears "not so much his own work as that of Saint Basil" in his treatise On the Work of the Six Days
   text: "Saint Ambrose translated them, and gave to Latin ears not so much his own work as that of Saint Basil, in his treatise On the Work of the Six Days."

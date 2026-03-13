@@ -22,5 +22,5 @@ Bishop of Amiens who approved Crampon's annotations for printing in 1852.
 
 ## References in Commentary
 
-- `01_Preliminares.html#permissions-p4-s-6653b87` — Approves Crampon's annotations for printing; dated Amiens, 2 May 1852
+- `01_Preliminares.html#permissions-p4-s-6d30100` — Approves Crampon's annotations for printing; dated Amiens, 2 May 1852
   text: "JACOBUS ANTONIUS Bishop of Amiens."

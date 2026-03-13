@@ -16,8 +16,8 @@ Lapide's commentary on all fourteen Pauline epistles, published before the Penta
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p48-s-89c0d58` — Lapide says his method is the same as in his Pauline commentaries, but briefer in words and ampler in matter
+- `01_Preliminares.html#dedicatory-letter-p48-s-19e5fcd` — Lapide says his method is the same as in his Pauline commentaries, but briefer in words and ampler in matter
   text: "My method here is the same as it was in the Pauline commentaries"
 
-- `01_Preliminares.html#life-p3-s-7112e8f` — Listed in catalogue of works
+- `01_Preliminares.html#life-p3-s-c05f0d0` — Listed in catalogue of works
   text: "on all the Epistles of the Apostle Saint Paul"
