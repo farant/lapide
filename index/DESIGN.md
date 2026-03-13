@@ -108,6 +108,31 @@ index/person/
 
 **Slug convention**: lowercase, hyphenated, Latin/anglicized form. `augustine` not `aurelius-augustinus-hipponensis`. The full name and variants go in the entry itself.
 
+**Dates convention**: The `dates` field in person ref files feeds the automatic generation of year pages (birth/death events with links). Use these formats to ensure the generator can parse them:
+
+| Format | Example | What it generates |
+|---|---|---|
+| `"birth–death"` | `"354–430"` | Birth event at 354, death event at 430 |
+| `"c. birth–death"` | `"c. 342–420"` | Both events marked "(approximate date)" |
+| `"c. birth–c. death"` | `"c. 625–c. 686"` | Both events marked "(approximate date)" |
+| `"d. year"` | `"d. 253"` | Death event only |
+| `"d. c. year"` | `"d. c. 674"` | Death event only, marked approximate |
+| `"birth–death BC"` | `"65–8 BC"` | Both events under BC year pages |
+| `"c. birth–death BC"` | `"c. 1040–970 BC"` | Both under BC, birth marked approximate |
+
+Parentheticals are stripped before parsing (e.g., `"c. 1040–970 BC (traditional)"` works fine).
+
+Formats the generator **cannot** parse (and will skip):
+- Floruit: `"fl. 4th century"`, `"fl. 370s"`, `"fl. 1852"`
+- Century-only: `"1st century"`, `"19th century"`
+- Vague: `"biblical figure"`, `"biblical patriarch"`
+- Ambiguous: `"d. 853 (Halberstadt) or fl. 9th century (Auxerre)"`
+- Slash dates: `"c. 5–c. 64/67 AD"`
+
+These are all valid values for the `dates` field — they just won't generate year page events. Use them when precise years aren't known.
+
+During normalization, prefer the parseable range format when a reasonable birth–death estimate exists. Use `c.` liberally — approximate dates are better than no dates for timeline browsing. Reserve `fl.` and century-only for figures where even approximate birth/death years would be speculation.
+
 ### Place
 
 Geographic hierarchy using coarse, stable regional groupings that avoid the worst historical-vs-modern-border problems. Subcontinental/cultural regions rather than nation-states.
@@ -275,6 +300,10 @@ index/year/
 ```
 
 Each year page aggregates all events/references for that year. Most years will be sparse (a few references); some will be rich.
+
+**Auto-generated year pages**: The generator automatically creates year pages from person `dates` fields — if a person has parseable birth/death dates, the corresponding year pages are generated with "Birth of [Person]" / "Death of [Person]" events (with links to the person entry). These virtual year pages require no ref file. When a year has both a ref file (with manually written events/references) and auto-derived life events, the manual events appear first and auto-events are appended, with deduplication by person name.
+
+**Directory sorting**: The top-level year directory lists BC centuries in descending order (earlier centuries first), then AD centuries in ascending order. Century, decade, and year directories all sort chronologically.
 
 ### Verse
 
