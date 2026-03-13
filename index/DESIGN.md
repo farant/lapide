@@ -898,9 +898,17 @@ The index is built incrementally, one source document at a time. Each document p
 
 ### Stage 0: Prep
 
-Add paragraph-level IDs to every `<p>` tag in the source HTML. This is a mechanical pass — no content analysis, just numbering. A script scans each section and assigns `id="{section-id}-p{n}"` to paragraphs that lack an ID.
+Add paragraph-level IDs and `data-paragraph-number` attributes to every `<p>` tag in the source HTML. Run:
 
-This must happen *before* extraction so that agents can reference actual paragraph IDs rather than counting paragraphs (which was the primary source of errors in the initial pipeline).
+```
+bun number-paragraphs.ts <source.html>
+```
+
+The script identifies sections by `<p id="...">` anchor tags. Within each section, every `<p>` gets:
+- `data-paragraph-number="N"` (1-indexed within the section)
+- `id="{section-id}-pN"` if it doesn't already have an id (the section anchor keeps its original id and gets `data-paragraph-number="1"`)
+
+The script is idempotent — safe to run repeatedly. It must run *before* extraction so that agents can reference actual paragraph IDs rather than counting paragraphs.
 
 Output: source HTML with stable paragraph IDs on every `<p>` tag.
 
@@ -916,7 +924,15 @@ This stage is purely additive. Agents read the text and identify every entity th
 - A synopsis describing what the passage says about the entity
 - Cross-references to other entities (related people, places, works, etc.)
 
-Multiple agents can work in parallel, each covering one category or one section of the document. The extraction files are reviewed before proceeding to Stage 2.
+Multiple agents can work in parallel, each covering one category or one section of the document.
+
+After extraction, validate every extraction file against the source HTML:
+
+```
+bun validate-extractions.ts <source.html> [extraction-dir-or-file]
+```
+
+This checks that every referenced paragraph ID exists and every `text: "..."` quote actually appears in the referenced paragraph. Fix any errors before proceeding to Stage 2 — catching misquotes and wrong paragraph IDs here prevents them from propagating into ref files.
 
 ### Stage 2: Normalize
 
@@ -937,29 +953,86 @@ At this stage, ref file references use paragraph-level links (e.g., `#preface-re
 
 Output: ref files in `index/refs/` (created or updated), plus `index/manifest.json`.
 
+After normalization, validate all ref files:
+
+```
+bun validate-refs.ts
+```
+
+This checks:
+- Valid YAML frontmatter with required fields (name, slug, category)
+- Slug matches file path (`person/saint/jerome` → `index/refs/person/saint/jerome.md`)
+- No duplicate slugs across files
+- Cross-references in `related:` point to existing ref files
+- Alias files point to valid canonical entries
+- Every paragraph ID exists in the source HTML
+- Every `text: "..."` quote appears in the referenced paragraph (with normalization for ligatures, dashes, and quotation marks)
+
+Fix any errors, then run a reconciliation pass if needed to resolve cross-reference mismatches between agents.
+
 ### Stage 3: Annotate
 
-Add passage-level `<span class="ref-passage">` tags to the source HTML. For each reference in the ref files:
+Embed a JSON sidecar in the source HTML that maps each referenced text passage to its location within a paragraph. No inline markup (`<span>`, etc.) is added to the text itself — all annotation data lives in a `<script type="application/json" id="passage-annotations">` block inserted before `</body>`.
 
-1. Find the exact text (from the ref file's `text:` field) within the referenced paragraph
-2. Wrap it in a `<span class="ref-passage">` with a content-hashed ID
-3. Update the ref file link to include the hash: `#paragraph-p3` → `#paragraph-p3-ra3f2b1`
+**Tool**: `bun annotate-source.ts <source.html>`
 
-The hash is computed from the plain text content of the span (tags stripped, whitespace normalized, first 7 hex chars of SHA-256). This makes every reference self-verifying.
+The annotator:
 
-If the exact text is not found at the specified paragraph, the annotator flags it as a mismatch rather than guessing. This catches extraction errors immediately.
+1. Scans all ref files in `index/refs/` for links to the source document
+2. For each `text:` field, finds the quoted text within its referenced paragraph using normalized fuzzy matching (ligature expansion, quote unification, em dash normalization)
+3. Computes a content hash (first 7 hex chars of SHA-256) from the matched plain text
+4. Records the passage as an annotation with character offsets (`start`, `end`) within the paragraph's plain text
+5. Groups annotations that point to the same text span, merging their entity slugs
+6. Embeds the full annotation array as a JSON sidecar in the HTML
+7. Updates each ref file's link to include the hash suffix: `#paragraph-p3` → `#paragraph-p3-s-a3f2b1c`
 
-Output: annotated source HTML with passage spans + ref files updated with hash-based links.
+**Why a sidecar instead of inline spans?** Many passages overlap — the same text may be referenced by multiple entities with different span boundaries. Overlapping `<span>` tags produce invalid HTML. The JSON sidecar avoids this entirely: each annotation is an independent record with character offsets, and JavaScript handles highlighting and scrolling at runtime.
+
+**Sidecar format** (embedded in the HTML file):
+
+```html
+<script type="application/json" id="passage-annotations">
+[
+  {
+    "id": "dedicatory-letter-p3-s-a8ad3c1",
+    "paragraph": "dedicatory-letter-p3",
+    "start": 0,
+    "end": 142,
+    "entities": ["place/europe/low-countries/mechlin", "person/cleric/hovius"]
+  },
+  ...
+]
+</script>
+```
+
+- `id`: `{paragraph-id}-s-{hash}` — the `-s-` prefix distinguishes sentence/span hashes from paragraph IDs
+- `paragraph`: the `id` attribute of the `<p>` tag containing this passage
+- `start`, `end`: character offsets within the paragraph's plain text (tags stripped)
+- `entities`: sorted array of ref file slugs that reference this passage
+
+**Link format in ref files** (after annotation):
+
+```
+- `01_Preliminares.html#dedicatory-letter-p3-s-a8ad3c1` — synopsis
+  text: "quoted text"
+```
+
+The hash makes each reference self-verifying — if the source text changes, the hash changes, and `validate-refs.ts` will flag the stale link.
+
+**Idempotent** — removes any existing sidecar and strips existing `-s-{hash}` suffixes from ref file links before re-deriving everything from current text.
+
+**Client-side behavior**: When a URL fragment matches `#...-s-{hash}`, JavaScript reads the sidecar, finds the annotation by ID, locates the paragraph, and highlights the referenced character range. The `components.js` script handles this.
+
+Output: source HTML with embedded JSON sidecar + ref files updated with hash-based links.
 
 ### Stage 4: Verify
 
-Run the audit tool (`bun audit-refs.ts`) to confirm:
-- Every ref file link resolves to a real passage span in the HTML
-- The `text:` field in each ref matches the actual text at the linked span
-- The hash in the span ID matches the text content
-- No orphan passage spans (spans not referenced by any ref file)
+Run `bun validate-refs.ts` to confirm:
+- Every ref file link resolves to a real paragraph ID in the HTML (stripping the `-s-{hash}` suffix)
+- The `text:` field in each ref matches actual text at the referenced paragraph
+- No broken cross-references between ref files
 
-This is a mechanical check — no judgment calls. Any failures are either extraction errors (wrong paragraph) or annotation errors (wrong text wrapped). Fix and re-run until clean.
+This is a mechanical check — no judgment calls. Any failures are either extraction errors (wrong paragraph) or annotation errors (wrong text matched). Fix and re-run until clean.
 
 Output: audit report. Zero failures required before proceeding.
 
@@ -971,11 +1044,11 @@ Add `<entity-ref>` web component tags to the source HTML, wrapping entity names 
 <entity-ref slug="person/classical/libanius">Libanius</entity-ref> the Sophist
 ```
 
-Entity-ref tags can nest inside passage spans (both directions of cross-reference on the same text) or appear independently on text that isn't part of a passage span.
+Entity-ref tags appear independently in the HTML text. They do not interact with the JSON sidecar annotations — entity-refs are forward links (text → index entry), while sidecar annotations are backlinks (index entry → text).
 
 Annotation is conservative — only tag references that can be confidently identified. Ambiguous references are left untagged.
 
-Output: fully annotated source HTML with both passage spans and entity-ref tags.
+Output: fully annotated source HTML with entity-ref tags and JSON sidecar.
 
 ### Stage 6: Generate
 

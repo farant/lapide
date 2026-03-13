@@ -1,286 +1,347 @@
-#!/usr/bin/env bun
 /**
- * annotate-source.ts — Add paragraph IDs and inline ref links to source HTML
+ * annotate-source.ts — Stage 3: Annotate
  *
- * Usage: bun annotate-source.ts <file.html> [--dry-run]
+ * Reads all ref files that reference a source HTML document, finds each
+ * quoted text within its paragraph, computes a content hash, and embeds
+ * a JSON sidecar into the HTML. No markup is added to the text itself.
  *
- * 1. Adds id="{section}-p{n}" to paragraphs within each section
- * 2. Wraps entity mentions with <entity-ref> tags for the side panel
- *    (first occurrence per section, conservative matching)
- * 3. Injects <script src="/index/components.js"> if not already present
+ * The sidecar is a <script type="application/json" id="passage-annotations">
+ * block inserted before </body>.
  *
- * Reads entity names from index/refs/ to build the annotation map.
- * Idempotent — safe to run repeatedly (skips already-annotated refs).
+ * After embedding, updates each ref file's link to include the hash:
+ *   #dedicatory-letter-p8 → #dedicatory-letter-p8-s-a3f2b1c
+ *
+ * Usage: bun annotate-source.ts <source.html>
+ *
+ * Idempotent — replaces any existing passage-annotations block and
+ * re-derives all hashes from current text.
  */
 
-import { readdir, readFile, writeFile } from "fs/promises";
-import { join } from "path";
+import { Glob } from "bun";
 
-const ROOT = import.meta.dir;
-const REFS_DIR = join(ROOT, "index/refs");
-const dryRun = process.argv.includes("--dry-run");
-const sourceFile = process.argv.find(a => a.endsWith(".html"));
-
+const sourceFile = Bun.argv[2];
 if (!sourceFile) {
-  console.error("Usage: bun annotate-source.ts <file.html> [--dry-run]");
+  console.error("Usage: bun annotate-source.ts <source.html>");
   process.exit(1);
 }
 
-// ── Build entity annotation map from ref files ──
+const REFS_DIR = "index/refs";
 
-interface EntityPattern {
-  name: string;
-  slug: string;     // e.g. "person/cleric/cornelius-a-lapide"
-  priority: number; // longer patterns match first
+// --- Utilities ---
+
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&rsquo;/g, "\u2019")
+    .replace(/&lsquo;/g, "\u2018")
+    .replace(/&rdquo;/g, "\u201D")
+    .replace(/&ldquo;/g, "\u201C")
+    .replace(/&mdash;/g, "\u2014")
+    .replace(/&ndash;/g, "\u2013")
+    .replace(/&oelig;/g, "\u0153")
+    .replace(/&aelig;/g, "\u00E6")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-async function buildEntityMap(): Promise<EntityPattern[]> {
-  const entities: EntityPattern[] = [];
-
-  async function walk(dir: string) {
-    const entries = await readdir(dir, { withFileTypes: true });
-    for (const entry of entries) {
-      const full = join(dir, entry.name);
-      if (entry.isDirectory()) {
-        await walk(full);
-      } else if (entry.name.endsWith(".md")) {
-        const content = await readFile(full, "utf-8");
-        const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
-        if (!fmMatch) continue;
-        const fm = fmMatch[1];
-
-        // Skip aliases
-        if (fm.match(/^alias_of:/m)) continue;
-
-        const nameMatch = fm.match(/^name:\s*(.+)$/m);
-        const slugMatch = fm.match(/^slug:\s*(.+)$/m);
-        const categoryMatch = fm.match(/^category:\s*(.+)$/m);
-        if (!nameMatch || !slugMatch || !categoryMatch) continue;
-
-        const name = nameMatch[1].trim();
-        const slug = slugMatch[1].trim();
-        const category = categoryMatch[1].trim();
-        const entitySlug = `${category}/${slug}`;
-
-        // Collect all name variants
-        const names: string[] = [name];
-
-        // also_known_as
-        const akaSection = content.match(/^also_known_as:\n((?:\s+-\s+.+\n?)*)/m);
-        if (akaSection) {
-          const akaLines = akaSection[1].matchAll(/^\s+-\s+(.+)$/gm);
-          for (const m of akaLines) {
-            names.push(m[1].trim());
-          }
-        }
-
-        for (const n of names) {
-          // Skip very short names that would cause false matches
-          if (n.length < 4) continue;
-          // Skip names that are too generic
-          if (/^(The |A |An )/.test(n) && n.length < 10) continue;
-
-          entities.push({
-            name: n,
-            slug: entitySlug,
-            priority: n.length, // longer matches first
-          });
-        }
-      }
-    }
-  }
-
-  await walk(REFS_DIR);
-
-  // Sort by priority (longest first) so "Saint Basil the Great" matches before "Basil"
-  entities.sort((a, b) => b.priority - a.priority);
-  return entities;
+// Normalize for fuzzy matching (same as validate-refs.ts / validate-extractions.ts)
+function normalizeForMatch(s: string): string {
+  return s
+    .replace(/\u0153/g, "oe")
+    .replace(/\u00E6/g, "ae")
+    .replace(/[\u2018\u2019\u0060\u00B4']/g, "'")
+    .replace(/[\u201C\u201D\u00AB\u00BB"]/g, "'")
+    .replace(/\s*[\u2014]\s*/g, " -- ")
+    .replace(/\s*--\s*/g, " -- ")
+    .replace(/[\u2013]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-function escapeRegex(s: string): string {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function computeHash(text: string): string {
+  const normalized = text.replace(/\s+/g, " ").trim();
+  const data = new TextEncoder().encode(normalized);
+  const hash = new Bun.CryptoHasher("sha256").update(data).digest("hex");
+  return hash.slice(0, 7);
 }
 
-// ── Paragraph ID assignment ──
+// --- Parse source HTML ---
 
-interface Section {
-  id: string;
-  startLine: number; // line of the section anchor
-  pCount: number;
+let html = await Bun.file(sourceFile).text();
+
+// Remove any existing passage-annotations block before parsing
+html = html.replace(/<script type="application\/json" id="passage-annotations">[\s\S]*?<\/script>\n?/, "");
+
+// Extract paragraph plain text
+const paragraphs = new Map<string, string>(); // id → plain text
+const pPattern = /<p\s[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/p>/gi;
+let pMatch;
+while ((pMatch = pPattern.exec(html)) !== null) {
+  paragraphs.set(pMatch[1], stripHtml(pMatch[2]));
 }
 
-function addParagraphIds(lines: string[]): string[] {
-  const result = [...lines];
-  let currentSection = "";
-  let pCount = 0;
+// --- Collect text references from ref files ---
 
-  for (let i = 0; i < result.length; i++) {
-    const line = result[i];
+interface RefEntry {
+  refFilePath: string;
+  paragraphId: string;
+  quotedText: string;
+  entitySlug: string;
+  refLineIndex: number;  // line index of the `source.html#id` link
+}
 
-    // Detect section anchors: <p id="something"> or <h2 id="something"> etc.
-    const sectionMatch = line.match(/^<(?:p|h[1-6])\s+id="([^"]+)"/);
-    if (sectionMatch) {
-      currentSection = sectionMatch[1];
-      pCount = 0; // reset counter for new section
+const refEntries: RefEntry[] = [];
+const sourceBasename = sourceFile.replace(/^.*\//, "");
+const sourcePattern = new RegExp(
+  "`" + sourceBasename.replace(/\./g, "\\.") + "#([^`]+)`"
+);
+
+const glob = new Glob("**/*.md");
+for await (const path of glob.scan(REFS_DIR)) {
+  const fullPath = `${REFS_DIR}/${path}`;
+  const content = await Bun.file(fullPath).text();
+
+  // Skip aliases
+  if (/^alias_of:/m.test(content)) continue;
+
+  // Get slug
+  const slugMatch = content.match(/^slug:\s*(.+)$/m);
+  const slug = slugMatch ? slugMatch[1].trim() : "";
+  if (!slug) continue;
+
+  const lines = content.split("\n");
+  let lastParaId = "";
+  let lastLineIndex = 0;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Match: `source.html#paragraph-id` or `source.html#paragraph-id-s-hash`
+    const refMatch = line.match(new RegExp(
+      "`" + sourceBasename.replace(/\./g, "\\.") + "#([^`]+)`"
+    ));
+    if (refMatch) {
+      // Strip any existing -s-XXXXXXX suffix to get the base paragraph ID
+      lastParaId = refMatch[1].replace(/-s-[a-f0-9]{7}$/, "");
+      lastLineIndex = i;
       continue;
     }
 
-    // Skip if no current section
-    if (!currentSection) continue;
-
-    // Match bare <p> tags (no id attribute)
-    if (line.match(/^<p>\s*$/)) {
-      pCount++;
-      result[i] = `<p id="${currentSection}-p${pCount}">`;
-    }
-    // Also handle <p> with content on same line
-    else if (line.match(/^<p>/) && !line.match(/^<p\s+id="/)) {
-      pCount++;
-      result[i] = line.replace(/^<p>/, `<p id="${currentSection}-p${pCount}">`);
+    const textMatch = line.match(/^\s*text:\s*"(.+)"$/);
+    if (textMatch && lastParaId) {
+      refEntries.push({
+        refFilePath: fullPath,
+        paragraphId: lastParaId,
+        quotedText: textMatch[1],
+        entitySlug: slug,
+        refLineIndex: lastLineIndex,
+      });
     }
   }
-
-  return result;
 }
 
-// ── Entity annotation ──
+console.log(`Found ${refEntries.length} text references to ${sourceBasename}`);
 
-function annotateEntities(lines: string[], entities: EntityPattern[]): { lines: string[]; count: number } {
-  const result = [...lines];
-  let currentSection = "";
-  const taggedInSection = new Set<string>(); // track which entities tagged per section
-  let totalCount = 0;
+// --- Find each quote in its paragraph ---
 
-  for (let i = 0; i < result.length; i++) {
-    const line = result[i];
+// Helper: find where a normalized target starts in the original plain text
+function findInPlainText(plainText: string, normTarget: string, searchFrom: number): { start: number; end: number } | null {
+  const normPlain = normalizeForMatch(plainText);
 
-    // Detect section boundaries
-    const sectionMatch = line.match(/id="([^"]+)"/);
-    if (sectionMatch && (line.startsWith("<p") || line.startsWith("<h"))) {
-      const newSection = sectionMatch[1];
-      // Only reset if this is a section anchor (not a paragraph id like "section-p3")
-      if (!newSection.match(/-p\d+$/)) {
-        currentSection = newSection;
-        taggedInSection.clear();
-      }
+  // Find position in normalized space
+  const normIdx = normPlain.indexOf(normTarget, searchFrom > 0 ? normalizeForMatch(plainText.slice(0, searchFrom)).length : 0);
+  if (normIdx < 0) return null;
+
+  // Map normalized offset back to original offset
+  // Walk through the original text, tracking normalized length
+  let origStart = -1;
+  let origEnd = -1;
+
+  for (let i = 0, normLen = 0; i <= plainText.length; i++) {
+    const normSoFar = normalizeForMatch(plainText.slice(0, i));
+    if (origStart < 0 && normSoFar.length >= normIdx) {
+      origStart = i;
     }
-
-    if (!currentSection) continue;
-
-    // Skip lines that are just HTML tags, headings, or very short
-    if (line.trim().startsWith("<hr") || line.trim().startsWith("</") || line.trim() === "") continue;
-    if (line.match(/^<[^>]+>\s*$/)) continue;
-
-    // Don't annotate inside the TOC (ul/li section)
-    if (line.trim().startsWith("<li>") || line.trim().startsWith("<ul>") || line.trim().startsWith("</ul>")) continue;
-
-    // Try each entity (longest first)
-    for (const entity of entities) {
-      if (taggedInSection.has(entity.slug)) continue;
-
-      const idx = result[i].indexOf(entity.name);
-      if (idx === -1) continue;
-
-      // Skip if already annotated for this entity
-      if (result[i].includes(`slug="${entity.slug}"`)) continue;
-
-      // Check word boundaries
-      const before = result[i][idx - 1];
-      const after = result[i][idx + entity.name.length];
-      if (before && /\w/.test(before)) continue;
-      if (after && /\w/.test(after)) continue;
-
-      // Check we're not inside an HTML tag
-      const textBefore = result[i].substring(0, idx);
-      const openBrackets = (textBefore.match(/</g) || []).length;
-      const closeBrackets = (textBefore.match(/>/g) || []).length;
-      if (openBrackets > closeBrackets) continue;
-
-      // Check we're not inside an existing <a> or <entity-ref>
-      const lastAOpen = textBefore.lastIndexOf("<a ");
-      const lastAClose = textBefore.lastIndexOf("</a>");
-      if (lastAOpen >= 0 && lastAOpen > lastAClose) continue;
-      const lastRefOpen = textBefore.lastIndexOf("<entity-ref ");
-      const lastRefClose = textBefore.lastIndexOf("</entity-ref>");
-      if (lastRefOpen >= 0 && lastRefOpen > lastRefClose) continue;
-
-      // Apply annotation
-      const annotated = `<entity-ref slug="${entity.slug}">${entity.name}</entity-ref>`;
-      result[i] = textBefore + annotated + result[i].substring(idx + entity.name.length);
-      taggedInSection.add(entity.slug);
-      totalCount++;
+    if (origStart >= 0 && normSoFar.length >= normIdx + normTarget.length) {
+      origEnd = i;
+      break;
     }
   }
 
-  return { lines: result, count: totalCount };
+  if (origStart < 0 || origEnd < 0) return null;
+  return { start: origStart, end: origEnd };
 }
 
-// ── Main ──
+interface PendingAnnotation {
+  paragraph: string;
+  start: number;
+  end: number;
+  matchedText: string;
+  entities: Set<string>;
+  refFileEntries: RefEntry[];
+}
 
-async function main() {
-  console.log(`Building entity map from ${REFS_DIR}...`);
-  const entities = await buildEntityMap();
-  console.log(`Loaded ${entities.length} entity patterns`);
+const pendingByKey = new Map<string, PendingAnnotation>();
+let missed = 0;
 
-  console.log(`\nReading ${sourceFile}...`);
-  const content = await readFile(sourceFile!, "utf-8");
-  const lines = content.split("\n");
-  console.log(`${lines.length} lines`);
+for (const entry of refEntries) {
+  const plainText = paragraphs.get(entry.paragraphId);
+  if (!plainText) {
+    console.error(`  SKIP: paragraph "${entry.paragraphId}" not found`);
+    missed++;
+    continue;
+  }
 
-  // Step 1: Add paragraph IDs
-  const withIds = addParagraphIds(lines);
-  const idsAdded = withIds.filter((l, i) => l !== lines[i]).length;
-  console.log(`\nParagraph IDs: ${idsAdded} added`);
+  const normQuote = normalizeForMatch(entry.quotedText);
+  let result: { start: number; end: number } | null = null;
 
-  // Step 2: Annotate entities
-  const { lines: annotated, count } = annotateEntities(withIds, entities);
-  console.log(`Entity refs: ${count} annotations`);
+  // Direct match
+  result = findInPlainText(plainText, normQuote, 0);
 
-  // Step 3: Inject components.js script if not present
-  const scriptTag = '<script src="/index/components.js" type="module"></script>';
-  const hasScript = annotated.some(l => l.includes('/index/components.js'));
-  if (!hasScript && count > 0) {
-    const headClose = annotated.findIndex(l => l.includes('</head>'));
-    if (headClose >= 0) {
-      annotated.splice(headClose, 0, scriptTag);
-      console.log(`Injected components.js script tag`);
+  // Ellipsis: match first and last segments, span the range
+  if (!result && normQuote.includes("...")) {
+    const segments = normQuote.split(/\.{3,}/).map(s => s.trim()).filter(s => s.length > 5);
+    if (segments.length > 0) {
+      const first = findInPlainText(plainText, segments[0], 0);
+      const last = segments.length > 1
+        ? findInPlainText(plainText, segments[segments.length - 1], first?.start || 0)
+        : first;
+      if (first && last) {
+        result = { start: first.start, end: last.end };
+      }
     }
   }
 
-  if (dryRun) {
-    console.log("\n[DRY RUN] No changes written.");
-    // Show a sample of changes
-    let shown = 0;
-    for (let i = 0; i < annotated.length && shown < 20; i++) {
-      if (annotated[i] !== lines[i]) {
-        console.log(`\n  Line ${i + 1}:`);
-        if (lines[i].length < 200) {
-          console.log(`  - ${lines[i].substring(0, 150)}`);
-          console.log(`  + ${annotated[i].substring(0, 150)}`);
-        } else {
-          // Show just the diff portion
-          const diffStart = findDiffStart(lines[i], annotated[i]);
-          const context = 40;
-          console.log(`  - ...${lines[i].substring(Math.max(0, diffStart - context), diffStart + 100)}...`);
-          console.log(`  + ...${annotated[i].substring(Math.max(0, diffStart - context), diffStart + 140)}...`);
-        }
-        shown++;
-      }
+  // Prefix fallback: match first 50 normalized chars
+  if (!result) {
+    const prefix = normQuote.slice(0, 50);
+    const prefixResult = findInPlainText(plainText, prefix, 0);
+    if (prefixResult) {
+      // Extend end by approximate remaining length
+      const approxEnd = Math.min(
+        prefixResult.start + entry.quotedText.length + 30,
+        plainText.length
+      );
+      result = { start: prefixResult.start, end: approxEnd };
     }
+  }
+
+  if (!result) {
+    console.error(`  MISS: "${entry.quotedText.slice(0, 60)}..." in #${entry.paragraphId} (${entry.refFilePath})`);
+    missed++;
+    continue;
+  }
+
+  const matchedText = plainText.slice(result.start, result.end);
+
+  // Group by paragraph + start + end to merge entities pointing to same text
+  const key = `${entry.paragraphId}:${result.start}:${result.end}`;
+  if (pendingByKey.has(key)) {
+    const existing = pendingByKey.get(key)!;
+    existing.entities.add(entry.entitySlug);
+    existing.refFileEntries.push(entry);
   } else {
-    await writeFile(sourceFile!, annotated.join("\n"), "utf-8");
-    console.log(`\nWrote ${sourceFile}`);
+    pendingByKey.set(key, {
+      paragraph: entry.paragraphId,
+      start: result.start,
+      end: result.end,
+      matchedText,
+      entities: new Set([entry.entitySlug]),
+      refFileEntries: [entry],
+    });
   }
 }
 
-function findDiffStart(a: string, b: string): number {
-  for (let i = 0; i < Math.min(a.length, b.length); i++) {
-    if (a[i] !== b[i]) return i;
-  }
-  return Math.min(a.length, b.length);
+// --- Build annotations and compute hashes ---
+
+interface Annotation {
+  id: string;
+  paragraph: string;
+  start: number;
+  end: number;
+  entities: string[];
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
+const annotations: Annotation[] = [];
+const refFileUpdates: { filePath: string; paraId: string; newId: string }[] = [];
+
+for (const [, pending] of pendingByKey) {
+  const hash = computeHash(pending.matchedText);
+  const id = `${pending.paragraph}-s-${hash}`;
+
+  annotations.push({
+    id,
+    paragraph: pending.paragraph,
+    start: pending.start,
+    end: pending.end,
+    entities: [...pending.entities].sort(),
+  });
+
+  for (const entry of pending.refFileEntries) {
+    refFileUpdates.push({
+      filePath: entry.refFilePath,
+      paraId: entry.paragraphId,
+      newId: id,
+    });
+  }
+}
+
+// Sort by paragraph then start position
+annotations.sort((a, b) => {
+  if (a.paragraph !== b.paragraph) return a.paragraph.localeCompare(b.paragraph);
+  return a.start - b.start;
 });
+
+console.log(`Generated ${annotations.length} annotations (${missed} missed)`);
+
+// --- Embed sidecar JSON ---
+
+const jsonBlock = `<script type="application/json" id="passage-annotations">\n${JSON.stringify(annotations, null, 2)}\n</script>`;
+
+html = html.replace(/(\s*)<\/body>/, `\n${jsonBlock}\n$1</body>`);
+
+await Bun.write(sourceFile, html);
+console.log(`Embedded ${annotations.length} annotations in ${sourceFile}`);
+
+// --- Update ref file links ---
+
+// Group by file
+const updatesByFile = new Map<string, { paraId: string; newId: string }[]>();
+for (const u of refFileUpdates) {
+  if (!updatesByFile.has(u.filePath)) updatesByFile.set(u.filePath, []);
+  updatesByFile.get(u.filePath)!.push(u);
+}
+
+let filesUpdated = 0;
+for (const [filePath, updates] of updatesByFile) {
+  let content = await Bun.file(filePath).text();
+  let changed = false;
+
+  for (const { paraId, newId } of updates) {
+    // Match both the bare paragraph ID and any existing -s-hash version
+    const pattern = new RegExp(
+      "`" + sourceBasename.replace(/\./g, "\\.") + "#" + paraId.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(-s-[a-f0-9]{7})?`",
+      "g"
+    );
+    const replacement = "`" + sourceBasename + "#" + newId + "`";
+    const newContent = content.replace(pattern, replacement);
+    if (newContent !== content) {
+      content = newContent;
+      changed = true;
+    }
+  }
+
+  if (changed) {
+    await Bun.write(filePath, content);
+    filesUpdated++;
+  }
+}
+
+console.log(`Updated links in ${filesUpdated} ref files`);
+console.log(`\nDone. Run 'bun validate-refs.ts' to verify.`);

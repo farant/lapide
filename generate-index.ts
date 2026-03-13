@@ -329,6 +329,9 @@ function escHtml(s: string): string {
 // ── Ref lookup for resolving names from slugs ──
 
 const refsBySlug = new Map<string, Record<string, any>>();
+const authorWorks = new Map<string, { slug: string; name: string }[]>();
+// bibliography directory name → author person slug (e.g. "sophronius" → "person/scholar/sophronius")
+const bibDirToAuthor = new Map<string, { slug: string; name: string }>();
 
 function lookupName(category: string, slug: string): string {
   const key = `${category}/${slug}`;
@@ -341,6 +344,31 @@ function lookupName(category: string, slug: string): string {
   const last = slug.split("/").pop() || slug;
   return last.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
+
+// ── Canonical Bible book order (Vulgate) ──
+
+const BIBLE_BOOK_ORDER: Record<string, number> = {
+  "genesis": 1, "exodus": 2, "leviticus": 3, "numbers": 4, "deuteronomy": 5,
+  "joshua": 6, "judges": 7, "ruth": 8,
+  "1-kings": 9, "2-kings": 10, "3-kings": 11, "4-kings": 12,
+  "1-chronicles": 13, "2-chronicles": 14,
+  "ezra": 15, "nehemiah": 16, "tobit": 17, "judith": 18, "esther": 19,
+  "1-maccabees": 20, "2-maccabees": 21,
+  "job": 22, "psalms": 23, "proverbs": 24, "ecclesiastes": 25,
+  "song-of-songs": 26, "wisdom": 27, "sirach": 28,
+  "isaiah": 29, "jeremiah": 30, "lamentations": 31, "baruch": 32,
+  "ezekiel": 33, "daniel": 34,
+  "hosea": 35, "joel": 36, "amos": 37, "obadiah": 38, "jonah": 39,
+  "micah": 40, "nahum": 41, "habakkuk": 42, "zephaniah": 43,
+  "haggai": 44, "zechariah": 45, "malachi": 46,
+  "matthew": 47, "mark": 48, "luke": 49, "john": 50, "acts": 51,
+  "romans": 52, "1-corinthians": 53, "2-corinthians": 54,
+  "galatians": 55, "ephesians": 56, "philippians": 57, "colossians": 58,
+  "1-thessalonians": 59, "2-thessalonians": 60,
+  "1-timothy": 61, "2-timothy": 62, "titus": 63, "philemon": 64, "hebrews": 65,
+  "james": 66, "1-peter": 67, "2-peter": 68,
+  "1-john": 69, "2-john": 70, "3-john": 71, "jude": 72, "revelation": 73,
+};
 
 // ── Category display names ──
 
@@ -392,8 +420,8 @@ function labelFor(segment: string): string {
 
 // ── Related link helper ──
 
-function refTag(category: string, slug: string, label: string): string {
-  return `<a href="/index/${escHtml(category)}/${escHtml(slug)}.html">${escHtml(label)}</a>`;
+function refTag(slug: string, label: string): string {
+  return `<a href="/index/${escHtml(slug)}.html">${escHtml(label)}</a>`;
 }
 
 // ── Generate entry HTML ──
@@ -403,7 +431,7 @@ function generateEntryHtml(ref: RefData): string {
   const category = fm.category as string;
   const slug = fm.slug as string;
   const name = fm.name as string;
-  const fullSlug = `${category}/${slug}`;
+  const fullSlug = slug; // slug already includes category prefix (e.g., "person/saint/jerome")
 
   // Breadcrumb — skip "ad" in year paths (it's an internal grouping, not a navigable level)
   const segments = fullSlug.split("/");
@@ -441,7 +469,11 @@ function generateEntryHtml(ref: RefData): string {
     metaParts.push(`    <dt>Description</dt>\n    <dd>${escHtml(fm.description)}</dd>`);
   }
   if (fm.author) {
-    metaParts.push(`    <dt>Author</dt>\n    <dd>${escHtml(fm.author)}</dd>`);
+    const authorLabel = escHtml(fm.author);
+    const authorHtml = fm.author_slug
+      ? `<a href="/index/${fm.author_slug}.html">${authorLabel}</a>`
+      : authorLabel;
+    metaParts.push(`    <dt>Author</dt>\n    <dd>${authorHtml}</dd>`);
   }
   if (fm.lat != null && fm.lon != null) {
     metaParts.push(`    <dt>Coordinates</dt>\n    <dd>${fm.lat}, ${fm.lon}</dd>`);
@@ -465,12 +497,95 @@ function generateEntryHtml(ref: RefData): string {
     mapHtml = generateMapHtml(Number(fm.lat), Number(fm.lon)) + "\n";
   }
 
-  // Body content (description + references)
-  // Append ?entity=slug to source-ref links so the commentary page auto-opens this entity's card
-  const bodyHtml = mdToHtml(ref.body).replace(
-    /<a href="(\/[^"]+\.html)([^"]*)" class="source-ref">/g,
-    (_, file, rest) => `<a href="${file}?entity=${encodeURIComponent(fullSlug)}${rest}" class="source-ref">`
-  );
+  // Split body into description (prose before ## headings) and structured sections
+  const descriptionProse = ref.body.split(/\n## /)[0].trim();
+  // Skip if the body starts with a heading (no prose description)
+  const descriptionHtml = (descriptionProse && !descriptionProse.startsWith("## "))
+    ? `<p>${escHtml(descriptionProse)}</p>`
+    : "";
+
+  // Events section (for year entries)
+  const eventsSection = ref.body.match(/## Events\n([\s\S]*?)(?=\n## |\n*$)/);
+  let eventsHtml = "";
+  if (eventsSection) {
+    const eventLines = eventsSection[1].split("\n").filter(l => l.startsWith("- "));
+    if (eventLines.length > 0) {
+      const items = eventLines.map(l => `      <li>${escHtml(l.slice(2))}</li>`);
+      eventsHtml = `
+  <section id="events">
+    <h2>Events</h2>
+    <ul>
+${items.join("\n")}
+    </ul>
+  </section>
+`;
+    }
+  }
+
+  // References section — parse structurally from body markdown
+  const refSection = ref.body.match(/## References in Commentary\n([\s\S]*?)(?=\n## |\n*$)/);
+  let refsHtml = "";
+  if (refSection) {
+    const refLines = refSection[1].split("\n");
+    const refItems: string[] = [];
+    for (let ri = 0; ri < refLines.length; ri++) {
+      const line = refLines[ri];
+      const refMatch = line.match(/^- `([^#]+)#([^`]+)` — (.+)$/);
+      if (!refMatch) continue;
+
+      const [, refFile, refAnchor, synopsis] = refMatch;
+      const displayName = humanizeFilename(refFile);
+      // Strip -s-{hash} from anchor for display
+      const displayAnchor = humanizeSection(refAnchor.replace(/-s-[a-f0-9]{7}$/, ""));
+
+      // Peek at next line for text: "..."
+      let textQuote = "";
+      if (ri + 1 < refLines.length) {
+        const textMatch = refLines[ri + 1].match(/^\s+text:\s*"(.+)"$/);
+        if (textMatch) {
+          textQuote = textMatch[1];
+          ri++; // skip the text line
+        }
+      }
+
+      const entityParam = encodeURIComponent(fullSlug);
+      let item = `      <li>
+        <a href="/${refFile}?entity=${entityParam}#${refAnchor}" class="source-ref">${escHtml(displayName)} — ${escHtml(displayAnchor)}</a>
+        <span class="ref-context">— ${escHtml(synopsis)}</span>`;
+      if (textQuote) {
+        item += `\n        <blockquote class="ref-quote">"${escHtml(textQuote)}"</blockquote>`;
+      }
+      item += `\n      </li>`;
+      refItems.push(item);
+    }
+    if (refItems.length > 0) {
+      refsHtml = `
+  <section id="references">
+    <h2>References in Commentary</h2>
+    <ul>
+${refItems.join("\n")}
+    </ul>
+  </section>
+`;
+    }
+  }
+
+  // Works section (for person/org entries that authored bibliography items)
+  let worksHtml = "";
+  const works = authorWorks.get(fullSlug);
+  if (works && works.length > 0) {
+    const workItems = works
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map(w => `      <li><a href="/index/${w.slug}.html">${escHtml(w.name)}</a></li>`);
+    worksHtml = `
+  <section id="works">
+    <h2>Works</h2>
+    <ul>
+${workItems.join("\n")}
+    </ul>
+  </section>
+`;
+  }
 
   // Related section
   const related = fm.related as Record<string, string[]> | undefined;
@@ -494,7 +609,7 @@ function generateEntryHtml(ref: RefData): string {
         const fullKey = `${tagCategory}/${s}`;
         if (!refsBySlug.has(fullKey) && !refsBySlug.has(s)) continue;
         const label = lookupName(tagCategory, s);
-        items.push(`      <li>${refTag(tagCategory, s, label)}</li>`);
+        items.push(`      <li>${refTag(s, label)}</li>`);
       }
     }
     if (items.length > 0) {
@@ -509,7 +624,7 @@ ${items.join("\n")}
     }
   }
 
-  const canonicalUrl = `${BASE_URL}/index/${category}/${slug}.html`;
+  const canonicalUrl = `${BASE_URL}/index/${fullSlug}.html`;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -533,9 +648,9 @@ ${items.join("\n")}
   <h1>${escHtml(name)}</h1>
 ${metaDl}${mapHtml}
   <section id="description">
-    ${bodyHtml}
+    ${descriptionHtml}
   </section>
-${relatedHtml}
+${eventsHtml}${worksHtml}${refsHtml}${relatedHtml}
 </article>
 
 </body>
@@ -546,7 +661,7 @@ ${relatedHtml}
 // ── Generate alias HTML ──
 
 function generateAliasHtml(aliasOf: string, category: string): string {
-  const canonicalUrl = `${BASE_URL}/index/${category}/${aliasOf}.html`;
+  const canonicalUrl = `${BASE_URL}/index/${aliasOf}.html`;
   const name = lookupName(category, aliasOf);
 
   return `<!DOCTYPE html>
@@ -555,12 +670,12 @@ function generateAliasHtml(aliasOf: string, category: string): string {
 <meta charset="UTF-8">
 <title>${escHtml(name)} — Lapide Index</title>
 <link rel="canonical" href="${canonicalUrl}">
-<meta http-equiv="refresh" content="0; url=/index/${category}/${aliasOf}.html">
+<meta http-equiv="refresh" content="0; url=/index/${aliasOf}.html">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/index/index.css">
 </head>
 <body>
-<p>Redirecting to <a href="/index/${category}/${aliasOf}.html">${escHtml(name)}</a>...</p>
+<p>Redirecting to <a href="/index/${aliasOf}.html">${escHtml(name)}</a>...</p>
 </body>
 </html>
 `;
@@ -598,9 +713,20 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
     breadcrumbParts.push(escHtml(title));
   }
 
-  // Sort: directories first, then alphabetically
+  // Sort: directories first, then by context-appropriate order
+  const isVerseDir = segments[0] === "verse";
   const sorted = [...entries].sort((a, b) => {
     if (a.isDir !== b.isDir) return a.isDir ? -1 : 1;
+    // Bible books: canonical order; chapters: numeric
+    if (isVerseDir) {
+      const aOrd = BIBLE_BOOK_ORDER[a.slug] ?? 999;
+      const bOrd = BIBLE_BOOK_ORDER[b.slug] ?? 999;
+      if (aOrd !== bOrd) return aOrd - bOrd;
+      // Numeric fallback for chapter numbers
+      const aNum = parseInt(a.slug, 10);
+      const bNum = parseInt(b.slug, 10);
+      if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum;
+    }
     return a.name.localeCompare(b.name);
   });
 
@@ -650,7 +776,16 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
 </nav>
 
 <h1>${escHtml(title)}</h1>
-
+${(() => {
+    // For bibliography author directories, link to the person page
+    if (segments.length === 2 && segments[0] === "bibliography") {
+      const author = bibDirToAuthor.get(segments[1]);
+      if (author) {
+        return `\n<p class="author-link">Works by <a href="/index/${author.slug}.html">${escHtml(author.name)}</a></p>\n`;
+      }
+    }
+    return "";
+  })()}
 <ul class="index-listing">
 ${listItems.join("\n")}
 </ul>
@@ -674,6 +809,29 @@ async function main() {
     if (fm.category && fm.slug) {
       refsBySlug.set(`${fm.category}/${fm.slug}`, fm);
       refsBySlug.set(fm.slug, fm);
+    }
+  }
+
+  // Build author → works reverse index and bibliography dir → author mapping
+  for (const ref of refs) {
+    const fm = ref.frontmatter;
+    if (fm.alias_of || !fm.author_slug || !fm.slug) continue;
+    const authorSlug = fm.author_slug as string;
+    if (!authorWorks.has(authorSlug)) authorWorks.set(authorSlug, []);
+    authorWorks.get(authorSlug)!.push({ slug: fm.slug, name: fm.name as string });
+
+    // Map bibliography subdirectory to author (e.g. "sophronius" → person slug)
+    const bibSlug = fm.slug as string;
+    if (bibSlug.startsWith("bibliography/")) {
+      const parts = bibSlug.split("/");
+      if (parts.length >= 3) {
+        const dirName = parts[1]; // e.g. "sophronius"
+        if (!bibDirToAuthor.has(dirName)) {
+          const authorEntry = refsBySlug.get(authorSlug);
+          const authorName = authorEntry ? (authorEntry.name as string) : labelFor(dirName);
+          bibDirToAuthor.set(dirName, { slug: authorSlug, name: authorName });
+        }
+      }
     }
   }
 
@@ -724,7 +882,7 @@ async function main() {
       continue;
     }
 
-    const outPath = join(INDEX_DIR, fm.category, `${fm.slug}.html`);
+    const outPath = join(INDEX_DIR, `${fm.slug}.html`);
     await mkdir(dirname(outPath), { recursive: true });
 
     const html = generateEntryHtml(ref);
@@ -796,6 +954,7 @@ async function main() {
       if (entry.name === "index.html") continue;
       if (entry.name === "DESIGN.md" || entry.name === "normalization-decisions.md") continue;
       if (entry.name === "components.js" || entry.name === "index.css" || entry.name === "manifest.json") continue;
+      if (entry.name === "run-two-improvements.html") continue;
 
       const full = join(dir, entry.name);
 
@@ -841,7 +1000,7 @@ async function main() {
     }
 
     // Expand subdirectories one level — but NOT at the root index or year/ level
-    const skipExpand = relDir === "" || relDir === "year";
+    const skipExpand = relDir === "" || relDir === "year" || relDir === "verse";
     if (!skipExpand) {
       for (const entry of dirEntries) {
         if (!entry.isDir) continue;

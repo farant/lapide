@@ -69,7 +69,7 @@ class EntityPanel {
       <h3 class="ep-card-name">${data.name}</h3>
       ${data.meta}
       ${data.mapHtml || ''}
-      ${data.description ? `<p class="ep-card-desc">${data.description}</p>` : ''}
+      ${data.description ? `<div class="ep-card-desc">${data.description}</div>` : ''}
       <a href="${data.url}" class="ep-card-link">View full entry &#8594;</a>
     `;
 
@@ -120,7 +120,15 @@ class EntityPanel {
 
 			// First paragraph of description
 			const descP = article.querySelector('#description > p');
-			const description = descP ? descP.textContent : '';
+			let description = descP ? descP.textContent : '';
+
+			// For year entries (or any with an events section), include events
+			const eventsUl = article.querySelector('#events > ul');
+			if (eventsUl) {
+				const items = [...eventsUl.querySelectorAll('li')].map(li => li.textContent);
+				const eventsText = items.map(t => `• ${t}`).join('\n');
+				description = description ? `${description}\n\n${eventsText}` : eventsText;
+			}
 
 			const data = { name, meta, mapHtml, description, url };
 			this.cache.set(slug, data);
@@ -351,6 +359,7 @@ entity-ref:focus {
 .ep-card-desc {
   margin: 0.5em 0;
   color: #444;
+  white-space: pre-line;
 }
 
 .ep-card-link {
@@ -413,32 +422,127 @@ entity-ref:focus {
   color: rgba(255,255,255,0.8);
 }
 
-/* ── Reference passage highlights ── */
+/* ── Passage highlights ── */
 
-.ref-passage {
-  transition: background-color 0.3s ease;
-}
-.ref-passage:target,
-.ref-passage-active {
+mark.passage-highlight {
   background-color: #fef3c7;
-  border-bottom-color: #d4a017;
+  border-bottom: 2px solid #d4a017;
+  transition: background-color 1s ease, border-color 1s ease;
+}
+mark.passage-highlight.fade-out {
+  background-color: transparent;
+  border-color: transparent;
+}
+.passage-highlight-para {
+  background-color: #fef3c7;
+  transition: background-color 1s ease;
 }
 `;
 
-// ── Passage highlight on fragment navigation ──
-// When arriving at a #...-rN fragment (a ref-passage), highlight it briefly.
+// ── Passage annotations (sidecar) ──
+
+let _annotations = null;
+
+function getAnnotations() {
+	if (_annotations) return _annotations;
+	const el = document.getElementById('passage-annotations');
+	if (!el) return [];
+	try {
+		_annotations = JSON.parse(el.textContent);
+	} catch {
+		_annotations = [];
+	}
+	return _annotations;
+}
+
+// ── Highlight a passage using sidecar character offsets ──
+
+// Walk text nodes inside an element, counting characters (text-only, skipping tags).
+// Returns the text node + local offset for a given character position.
+function findTextPosition(el, charOffset) {
+	const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+	let pos = 0;
+	let node;
+	while ((node = walker.nextNode())) {
+		const len = node.textContent.length;
+		if (pos + len > charOffset) {
+			return { node, offset: charOffset - pos };
+		}
+		pos += len;
+	}
+	return null;
+}
+
+// Remove any existing highlight marks
+function clearHighlights() {
+	document.querySelectorAll('mark.passage-highlight').forEach(mark => {
+		const parent = mark.parentNode;
+		while (mark.firstChild) parent.insertBefore(mark.firstChild, mark);
+		parent.removeChild(mark);
+		parent.normalize(); // merge adjacent text nodes
+	});
+}
 
 function highlightPassage() {
+	clearHighlights();
+
 	const hash = location.hash.slice(1);
 	if (!hash) return;
-	const target = document.getElementById(hash);
-	if (!target || !target.classList.contains('ref-passage')) return;
 
-	target.classList.add('ref-passage-active');
-	// Scroll into view with offset for readability
-	target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-	// Fade highlight after a few seconds
-	setTimeout(() => target.classList.remove('ref-passage-active'), 4000);
+	// Check if this is a sidecar annotation ID (contains -s-)
+	if (!hash.includes('-s-')) {
+		// Regular anchor — just scroll to it
+		const target = document.getElementById(hash);
+		if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		return;
+	}
+
+	const annotations = getAnnotations();
+	const annotation = annotations.find(a => a.id === hash);
+	if (!annotation) {
+		// Fallback: try to scroll to the paragraph
+		const paraId = hash.replace(/-s-[a-f0-9]+$/, '');
+		const para = document.getElementById(paraId);
+		if (para) para.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		return;
+	}
+
+	const para = document.getElementById(annotation.paragraph);
+	if (!para) return;
+
+	// Find the text positions using character offsets
+	const startPos = findTextPosition(para, annotation.start);
+	const endPos = findTextPosition(para, annotation.end);
+	if (!startPos || !endPos) {
+		// Offsets don't match — just scroll to paragraph
+		para.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		return;
+	}
+
+	// Create a Range and wrap it in a <mark>
+	try {
+		const range = document.createRange();
+		range.setStart(startPos.node, startPos.offset);
+		range.setEnd(endPos.node, endPos.offset);
+
+		const mark = document.createElement('mark');
+		mark.className = 'passage-highlight';
+		mark.id = hash;
+		range.surroundContents(mark);
+
+		// Scroll and fade
+		mark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		setTimeout(() => mark.classList.add('fade-out'), 5000);
+		setTimeout(() => {
+			clearHighlights();
+		}, 6000);
+	} catch (e) {
+		// surroundContents can fail if range spans multiple elements
+		// Fall back to highlighting the whole paragraph
+		para.classList.add('passage-highlight-para');
+		para.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		setTimeout(() => para.classList.remove('passage-highlight-para'), 6000);
+	}
 }
 
 // Auto-open entity card when arriving from an entity page via ?entity=slug
@@ -446,13 +550,29 @@ function autoShowEntity() {
 	const params = new URLSearchParams(location.search);
 	const entitySlug = params.get('entity');
 	if (!entitySlug) return;
+
 	const hash = location.hash.slice(1);
-	const target = hash ? document.getElementById(hash) : null;
-	const paragraph = target ? target.closest('p') : null;
+	let paragraph = null;
+
+	if (hash) {
+		// Try to find the paragraph from the annotation
+		if (hash.includes('-s-')) {
+			const annotations = getAnnotations();
+			const annotation = annotations.find(a => a.id === hash);
+			if (annotation) {
+				paragraph = document.getElementById(annotation.paragraph);
+			}
+		}
+		if (!paragraph) {
+			const target = document.getElementById(hash);
+			paragraph = target ? (target.closest('p') || target) : null;
+		}
+	}
+
 	getPanel().show(entitySlug, paragraph);
 }
 
-// Run on load and on hash change (for SPA-style navigation)
+// Run on load and on hash change
 window.addEventListener('hashchange', highlightPassage);
 window.addEventListener('DOMContentLoaded', () => {
 	highlightPassage();

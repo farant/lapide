@@ -1,0 +1,26 @@
+---
+name: Bethlehem
+slug: place/middle-east/palestine/bethlehem
+category: place
+subcategory: city
+also_known_as: []
+description: Town in Palestine; sought by St. Jerome as his place of study and asceticism
+lat: 31.7054
+lon: 35.2024
+aliases:
+  - place/middle-east/israel/bethlehem
+related:
+  people:
+    - person/saint/jerome
+    - person/cleric/cornelius-a-lapide
+  places:
+    - place/middle-east/palestine/palestine
+    - place/europe/italy/rome
+---
+
+Town in Palestine, sought by St. Jerome as his place of study and asceticism. Lapide says he found his own "Bethlehem" in his cell in Rome.
+
+## References in Commentary
+
+- `01_Preliminares.html#life-p2-s-a1a1126` — Lapide compares his cell in Rome to Jerome's Bethlehem
+  text: "whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome"

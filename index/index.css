@@ -42,6 +42,44 @@ article#entry h1 {
   margin: 1.5em 0;
 }
 
+/* ── References section ── */
+
+#references h2 {
+  font-size: 1.1em;
+  margin-top: 2em;
+}
+#references ul {
+  padding-left: 1.2em;
+}
+#references li {
+  margin-bottom: 0.8em;
+}
+.ref-context {
+  color: #666;
+  font-size: 0.9em;
+}
+.ref-quote {
+  margin: 0.3em 0 0 0;
+  padding: 0.3em 0.8em;
+  border-left: 3px solid #ddd;
+  color: #555;
+  font-size: 0.88em;
+  font-style: italic;
+}
+.source-ref {
+  color: #4a4a8a;
+}
+
+/* ── Events section ── */
+
+#events h2 {
+  font-size: 1.1em;
+  margin-top: 2em;
+}
+#events li {
+  margin-bottom: 0.3em;
+}
+
 #related h2 {
   font-size: 1.1em;
   margin-top: 2em;
@@ -53,11 +91,21 @@ article#entry h1 {
   margin-bottom: 0.3em;
 }
 
+/* ── Works section (person pages) ── */
+
+#works h2 {
+  font-size: 1.1em;
+  margin-top: 2em;
+}
+#works li {
+  margin-bottom: 0.3em;
+}
+
 /* ── Directory listing pages ── */
 
 .index-listing ul {
   list-style: none;
-  padding-left: 0;
+  /*padding-left: 0;*/
 }
 .index-listing li {
   margin-bottom: 0.4em;

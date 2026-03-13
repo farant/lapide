@@ -1,0 +1,24 @@
+---
+name: James the Apostle
+slug: person/biblical/james
+category: person
+subcategory: biblical
+also_known_as:
+  - Iacobus
+dates: "1st century"
+role: Apostle
+aliases: []
+related:
+  people: []
+  places: []
+  organizations: []
+  works: []
+  subjects: []
+---
+
+Apostle. One epistle of James is listed in the Tridentine canon.
+
+## References in Commentary
+
+- `01_Preliminares.html#trent-decrees-p6-s-8f79b21` — One epistle of James listed in the canon
+  text: "one of James the Apostle"

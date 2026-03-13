@@ -1,0 +1,37 @@
+---
+name: Jerome's Translation of Scripture
+slug: subject/exegesis/textual-criticism/jerome-translation
+category: subject
+description: Jerome's role as translator of the Vulgate, praised by the Fathers for his mastery of three languages and fidelity to Hebrew sources, and celebrated as the greatest Doctor raised up for scriptural interpretation
+related:
+  people:
+    - person/saint/jerome
+    - person/saint/augustine
+    - person/saint/gregory-the-great
+    - person/saint/isidore
+    - person/scholar/sophronius
+    - person/scholar/bede
+    - person/scholar/rabanus
+    - person/saint/anselm
+    - person/scholar/peter-lombard
+    - person/saint/thomas-aquinas
+    - person/saint/bonaventure
+  subjects:
+    - subject/exegesis/textual-criticism/vulgate-editions
+    - subject/theology/scripture/scripture-interpretation
+---
+
+Jerome's role as translator of the Vulgate, praised by the Fathers for his mastery of three languages (Latin, Greek, Hebrew) and fidelity to Hebrew sources. Celebrated as the greatest Doctor divinely raised up for scriptural interpretation. All the great medieval theologians used Jerome's version exclusively, causing other versions to become obsolete.
+
+## References in Commentary
+
+- `01_Preliminares.html#preface-reader-p4-s-7002400` — The Vulgate received partly from Jerome's translation or emendation.
+  text: "received in part from the translation or emendation of St. Jerome"
+- `01_Preliminares.html#preface-reader-p5-s-d8f3913` — Augustine's testimony praising the older Italic edition as "more tenacious of the words while preserving the clarity of the meaning."
+  text: "the Italic should be preferred because it was — as he himself says — 'more tenacious of the words while preserving the clarity of the meaning.'"
+- `01_Preliminares.html#preface-reader-p6-s-23b976a` — Multiple Fathers attest to Jerome's excellence: Augustine calls him most learned in three languages; Gregory says his translation rendered everything more truly from Hebrew; Isidore affirms it is commonly received; Sophronius translated Jerome's Psalter and Prophets into Greek.
+  text: "St. Augustine calls him a most learned man and most skilled in three languages, and confirms by the testimony even of the Hebrews themselves that his translation is truthful."
+- `01_Preliminares.html#preface-reader-p7-s-52bc6cd` — All the great medieval theologians (Bede, Rabanus, Anselm, Peter Lombard, Aquinas, Bonaventure, etc.) used Jerome's version exclusively, causing other versions to become obsolete.
+  text: "the most learned men who came after — Remigius, Bede, Rabanus, Haymo, Anselm, Peter Damian, Richard, Hugh, Bernard, Rupert, Peter Lombard, Alexander, Albert, Thomas, Bonaventure, and all the others... have used St. Jerome's version in such a way that the other versions... have, as it were, slipped from the hands of theologians and become utterly obsolete."
+- `01_Preliminares.html#preface-reader-p8-s-acb6948` — Jerome celebrated as the greatest Doctor divinely raised up for scriptural interpretation.
+  text: "the Catholic Church not undeservedly celebrates St. Jerome as the greatest Doctor and as one divinely raised up for the interpretation of the sacred Scriptures"
