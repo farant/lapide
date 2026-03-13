@@ -23,3 +23,5 @@ Evangelist and author of the Acts of the Apostles. His Gospel is listed third in
 
 - `01_Preliminares.html#trent-decrees-p6-s-57417a1` — His Gospel listed third; Acts of the Apostles attributed to him
   text: "according to Matthew, Mark, Luke, and John; the Acts of the Apostles written by Luke the Evangelist"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p46-s-1f427a6` — Author of Acts of the Apostles; identified as a physician "whose praise is in the Gospel"; his words are "medicine for the languishing soul"
+  text: "if we know that their author, Luke, is a physician, whose praise is in the Gospel, we will observe equally that all his words are medicine for the languishing soul."

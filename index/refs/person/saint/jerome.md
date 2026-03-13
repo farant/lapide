@@ -49,3 +49,15 @@ One of the four great Latin Doctors of the Church. Best known for his translatio
   text: "St. Jerome more than once warned that this should be done, to avoid offending the people"
 - `01_Preliminares.html#life-p2-s-5cff284` — Listed among saints whose company Lapide found in Rome; his "holy Bethlehem" sought in Palestine, found in Rome
   text: "in company with Saint Basil, Gregory, and Jerome, whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome."
+- `02_Clemens_Hieronymi_Du_Culte.html#preamble-p1-s-f468c94` — Named as one of the two authors of the work
+  text: "St. Jerome / Fr. H. D. Lacordaire, O.P."
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-s-f9db8d8` — Heading identifies him as author of the Helmeted Prologue
+  text: "THE HELMETED PROLOGUE."
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-4bdce6a` — Speaking in the first person, defends his translation labor; asks readers not to consider his work a reproach of the ancients; invokes the handmaids of Christ to pray for him against detractors
+  text: "Read therefore first my Samuel and my Melachim -- mine, I say, mine. For whatever we have both learned by more frequent translating and hold by more careful emending is ours."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-s-9c59013` — Heading identifies him as author of the letter to Paulinus
+  text: "JEROME TO PAULINUS."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-501db0a` — Speaks in first person throughout; recounts examples of seekers of learning (Pythagoras, Plato, Apollonius); writes to Paulinus about the study of Scripture
+  text: "I do not say these things because there is anything of the sort in me that you could either wish to hear from me or desire to learn"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-0c00a1c` — Addresses Paulinus at the close of the letter; offers to study together; mentions brother Eusebius
+  text: "I will receive you with open arms, and (to babble something foolish, after the pomposity of Hermagoras) whatever you seek, I will try to know together with you."

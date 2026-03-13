@@ -16,6 +16,8 @@ related:
   subjects:
     - subject/exegesis/methods/literal-and-moral
     - subject/spirituality/contemplative-life
+    - subject/exegesis/methods/spiritual-interpretation
+    - subject/theology/christology/logos
 ---
 
 The lifelong devotion to reading, meditating upon, and teaching Sacred Scripture — as practiced by the Fathers and by Lapide himself. Basil and Gregory Nazianzen spent thirteen years studying Scripture after Athens; Lapide taught it publicly for nearly forty years.
@@ -32,3 +34,13 @@ The lifelong devotion to reading, meditating upon, and teaching Sacred Scripture
   text: "He taught the Sacred Language and Holy Scripture publicly at Louvain for more than twenty years, and was then summoned to Rome by his superiors"
 - `01_Preliminares.html#life-p3-s-73aac89` — After nearly forty years of sacred study, Lapide felt "how little progress I have made in it."
   text: "For nearly forty years now I have applied myself to this sacred study, for thirty years I have done nothing else, nor ceased to teach Holy Scripture, and yet I feel how little progress I have made in it."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-e8dbae7` — Jerome praises Paulinus's zeal for learning, citing Pythagoras, Plato, and Apollonius who traversed the world to learn from teachers, and then Paul who went up to Jerusalem to see Peter, because "the living voice has a certain hidden power."
+  text: "For the living voice has a certain hidden power, and poured from the mouth of the author into the ears of the student, it sounds more forcefully."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-d09892b` — Paul learned the law at the feet of Gamaliel, Timothy was instructed from infancy in sacred letters, and Titus was required to have knowledge of the Scriptures as a bishop's virtue.
+  text: "Paul the apostle boasts that he learned the law of Moses and the Prophets at the feet of Gamaliel, so that armed with spiritual weapons he might afterward say with confidence"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-4e8ee9d` — The priest's duty to respond when asked about the law, citing Malachi/Haggai and Deuteronomy; the distinction between "just rusticity" and "learned justice" from Daniel.
+  text: "So great is the office of the priest to respond when asked about the law."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-8bb6464` — The Ethiopian eunuch demonstrates that even devout readers need a teacher: Philip came and showed him Jesus hidden in the letter.
+  text: "you might understand that you cannot enter the sacred Scriptures without a guide who shows the way."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-572dfc5` — Jerome condemns those who presume to teach Scripture without learning: the chattering old woman, the doddering old man, the wordy sophist, and those who corrupt sentences and drag Scripture to their own will.
+  text: "The art of the Scriptures alone is one that everyone everywhere claims for themselves."

@@ -19,7 +19,6 @@ article#entry h1 {
 }
 
 .entry-meta {
-  font-size: 0.95em;
   margin: 1em 0;
   line-height: 1.6;
 }
@@ -56,14 +55,12 @@ article#entry h1 {
 }
 .ref-context {
   color: #666;
-  font-size: 0.9em;
 }
 .ref-quote {
   margin: 0.3em 0 0 0;
   padding: 0.3em 0.8em;
   border-left: 3px solid #ddd;
   color: #555;
-  font-size: 0.88em;
   font-style: italic;
 }
 .source-ref {
@@ -98,7 +95,6 @@ article#entry h1 {
   padding: 1em 1.2em;
   border-left: 3px solid #ccc;
   color: #555;
-  font-size: 0.95em;
 }
 .index-note p {
   margin: 0.4em 0;

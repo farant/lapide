@@ -19,6 +19,7 @@ related:
   subjects:
     - subject/exegesis/textual-criticism/vulgate-editions
     - subject/theology/scripture/scripture-interpretation
+    - subject/theology/scripture/biblical-canon
 ---
 
 Jerome's role as translator of the Vulgate, praised by the Fathers for his mastery of three languages (Latin, Greek, Hebrew) and fidelity to Hebrew sources. Celebrated as the greatest Doctor divinely raised up for scriptural interpretation. All the great medieval theologians used Jerome's version exclusively, causing other versions to become obsolete.
@@ -35,3 +36,7 @@ Jerome's role as translator of the Vulgate, praised by the Fathers for his maste
   text: "the most learned men who came after — Remigius, Bede, Rabanus, Haymo, Anselm, Peter Damian, Richard, Hugh, Bernard, Rupert, Peter Lombard, Alexander, Albert, Thomas, Bonaventure, and all the others... have used St. Jerome's version in such a way that the other versions... have, as it were, slipped from the hands of theologians and become utterly obsolete."
 - `01_Preliminares.html#preface-reader-p8-s-acb6948` — Jerome celebrated as the greatest Doctor divinely raised up for scriptural interpretation.
   text: "the Catholic Church not undeservedly celebrates St. Jerome as the greatest Doctor and as one divinely raised up for the interpretation of the sacred Scriptures"
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-903dacf` — Jerome defends his translation labor as a humble offering to the temple of God, compares himself to those who offer skins and goats' hair, and asserts the reader should compare his work against the Hebrew truth.
+  text: "In the temple of God each one offers what he can: some offer gold, silver, and precious stones; others offer fine linen and purple and scarlet and hyacinth; it goes well with us if we offer skins and goats' hair."
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-4bdce6a` — Jerome claims ownership of his translation through diligent study and emendation, and challenges critics to verify against the Hebrew.
+  text: "Read therefore first my Samuel and my Melachim -- mine, I say, mine. For whatever we have both learned by more frequent translating and hold by more careful emending is ours."

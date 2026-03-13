@@ -71,3 +71,15 @@ Prophet, lawgiver, and leader of the Israelites. Author of the Pentateuch. The c
   text: "Imitate Moses in all things; express Basil."
 - `01_Preliminares.html#trent-decrees-p5-s-714f598` — "the five books of Moses" listed first among Old Testament canonical books
   text: "the five books of Moses, to wit, Genesis, Exodus, Leviticus, Numbers, Deuteronomy"
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p2-s-d629924` — The Samaritans write the Pentateuch of Moses with the same number of letters as the Hebrews
+  text: "The Samaritans also write the Pentateuch of Moses with the same number of letters"
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p8-s-84a3291` — The five books of Moses are properly called Torah, the Law
+  text: "These are the five books of Moses, which they properly call Torah, that is, the Law."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p14-s-0dfa813` — The five words of Moses with which the Apostle boasts to speak in the Church
+  text: "Thus far Moses, thus far the Pentateuch, with whose five words the Apostle boasts he would rather speak in the Church."
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p10-s-f716568` — Lacordaire discusses the books of Moses and the historical books as the most ancient monuments of the human mind
+  text: "When I read the Scriptures for the first time, I did not have faith"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p12-s-2f73413` — Lacordaire praises the books of Moses; compares them favorably to Homer; describes Moses as having "founded in the desert, fighting and dying, a nation that was to last four thousand years"
+  text: "the books of Moses surpass them not only by the antiquity of their composition, but by the simplicity of the narrative"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p13-s-ca83dcd` — Lacordaire urges the reader to read the books of Moses
+  text: "Read, then, the books of Moses and the historical books of the Old Testament"

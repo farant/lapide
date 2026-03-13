@@ -1,0 +1,32 @@
+---
+name: Virgil
+slug: person/classical/virgil
+category: person
+subcategory: classical
+also_known_as:
+  - Vergil
+  - Publius Vergilius Maro
+dates: "70–19 BC"
+role: Roman poet, author of the Aeneid, Eclogues, and Georgics
+related:
+  people:
+    - person/classical/homer
+    - person/classical/aeneas
+  places: []
+  organizations: []
+  works: []
+  subjects: []
+---
+
+Roman poet, author of the Aeneid, Eclogues, and Georgics. Jerome mentions the Virgiliocento and quotes from his Fourth Eclogue.
+
+## References in Commentary
+
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-1aa10ae` — Jerome mentions Virgiliocento and quoting Virgil's Fourth Eclogue as though making Virgil a Christian; quotes "Now the Virgin returns, the Saturnian kingdoms return" and "Now a new offspring is sent down from high heaven"
+  text: "as though we could not thus also call Virgil a Christian without Christ, because he wrote:"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p3-s-ba49f7a` — Virgil's Fourth Eclogue quoted: "Now the Virgin returns"
+  text: "'Now the Virgin returns, the Saturnian kingdoms return;"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p14-s-f64951a` — Reading Homer or Virgil produces passionate admiration but is surpassed by biblical poetry
+  text: "it surrenders to a passionate admiration that it has known only in reading Homer or Virgil"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-77156d0` — Virgil's songs on the misfortunes of Aeneas are listed among great secular poetry, but set below the psalms and prophets
+  text: "those of Virgil on the misfortunes of Aeneas"

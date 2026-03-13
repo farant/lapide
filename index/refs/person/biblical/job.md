@@ -26,3 +26,7 @@ Righteous sufferer, protagonist of the Book of Job. His words are quoted to desc
   text: "truly may you say those words of holy Job: 'From my infancy compassion grew up with me, and from my mother's womb it came forth with me.'"
 - `01_Preliminares.html#life-p4-s-2f38c83` — Lapide left incomplete his commentaries on the books of Job
   text: "He left incomplete his commentaries on the books of Job and Psalms."
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p19-s-3c61fc7` — First book of the Hagiographa
+  text: "And the first book begins with Job."
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p15-s-83e6a48` — Called "the model of patience"; his book begins in prose, flows into verse, ends in prose; prophesies the resurrection of bodies more clearly than anyone
+  text: "Job, the model of patience -- what mysteries does it not embrace in its discourse?"

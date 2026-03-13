@@ -1,9 +1,21 @@
 [
   {
+    "name": "Against Ctesiphon",
+    "slug": "bibliography/aeschines/against-ctesiphon",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/aeschines/against-ctesiphon.html"
+  },
+  {
     "name": "De Hexaemeron",
     "slug": "bibliography/ambrose/de-hexaemeron",
     "category": "bibliography",
     "path": "bibliography/bibliography/ambrose/de-hexaemeron.html"
+  },
+  {
+    "name": "Works of Aristotle",
+    "slug": "bibliography/aristotle/works",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/aristotle/works.html"
   },
   {
     "name": "De Doctrina Christiana",
@@ -144,6 +156,12 @@
     "path": "bibliography/bibliography/cyrus-theodorus/verses-on-modestus.html"
   },
   {
+    "name": "On the Crown",
+    "slug": "bibliography/demosthenes/on-the-crown",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/demosthenes/on-the-crown.html"
+  },
+  {
     "name": "Oration in Praise of Saint Basil",
     "slug": "bibliography/gregory-nazianzen/oration-in-praise-of-st-basil",
     "category": "bibliography",
@@ -180,6 +198,18 @@
     "path": "bibliography/bibliography/isidore/works.html"
   },
   {
+    "name": "Letter to Paulinus",
+    "slug": "bibliography/jerome/letter-to-paulinus",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/jerome/letter-to-paulinus.html"
+  },
+  {
+    "name": "The Helmeted Prologue",
+    "slug": "bibliography/jerome/prologus-galeatus",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/jerome/prologus-galeatus.html"
+  },
+  {
     "name": "Vulgate",
     "slug": "bibliography/jerome/vulgate",
     "category": "bibliography",
@@ -192,10 +222,64 @@
     "path": "bibliography/bibliography/john-of-damascus/oration-on-images.html"
   },
   {
+    "name": "Farewell Discourse (John 13-17)",
+    "slug": "bibliography/john/farewell-discourse",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/john/farewell-discourse.html"
+  },
+  {
+    "name": "Letters to a Young Man on the Christian Life",
+    "slug": "bibliography/lacordaire/letters-to-a-young-man",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/lacordaire/letters-to-a-young-man.html"
+  },
+  {
+    "name": "The Lake",
+    "slug": "bibliography/lamartine/the-lake",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/lamartine/the-lake.html"
+  },
+  {
+    "name": "History of Rome",
+    "slug": "bibliography/livy/ab-urbe-condita",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/livy/ab-urbe-condita.html"
+  },
+  {
+    "name": "Life of Apollonius of Tyana",
+    "slug": "bibliography/philostratus/life-of-apollonius",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/philostratus/life-of-apollonius.html"
+  },
+  {
+    "name": "Works of Plato",
+    "slug": "bibliography/plato/works",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/plato/works.html"
+  },
+  {
+    "name": "Phaedra",
+    "slug": "bibliography/racine/phaedra",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/racine/phaedra.html"
+  },
+  {
     "name": "Ecclesiastical History",
     "slug": "bibliography/rufinus/ecclesiastical-history",
     "category": "bibliography",
     "path": "bibliography/bibliography/rufinus/ecclesiastical-history.html"
+  },
+  {
+    "name": "Romeo and Juliet",
+    "slug": "bibliography/shakespeare/romeo-and-juliet",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/shakespeare/romeo-and-juliet.html"
+  },
+  {
+    "name": "Apology of Socrates",
+    "slug": "bibliography/socrates/apology",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/socrates/apology.html"
   },
   {
     "name": "Greek Translation of Jerome's Psalter and Prophets",
@@ -204,10 +288,230 @@
     "path": "bibliography/bibliography/sophronius/greek-translation-of-jerome.html"
   },
   {
+    "name": "Works of Tacitus",
+    "slug": "bibliography/tacitus/works",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/tacitus/works.html"
+  },
+  {
     "name": "Ecclesiastical History",
     "slug": "bibliography/theodoret/ecclesiastical-history",
     "category": "bibliography",
     "path": "bibliography/bibliography/theodoret/ecclesiastical-history.html"
+  },
+  {
+    "name": "Aeneid",
+    "slug": "bibliography/virgil/aeneid",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/virgil/aeneid.html"
+  },
+  {
+    "name": "Eclogues",
+    "slug": "bibliography/virgil/eclogues",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/virgil/eclogues.html"
+  },
+  {
+    "name": "Remark on the Song of Songs",
+    "slug": "bibliography/voltaire/remark-on-song-of-songs",
+    "category": "bibliography",
+    "path": "bibliography/bibliography/voltaire/remark-on-song-of-songs.html"
+  },
+  {
+    "name": "λόγος",
+    "slug": "language/greek/logos",
+    "category": "language",
+    "subcategory": "greek",
+    "path": "language/language/greek/logos.html"
+  },
+  {
+    "name": "בְּרֵאשִׁית",
+    "slug": "language/hebrew/bereshith",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/bereshith.html"
+  },
+  {
+    "name": "כ",
+    "slug": "language/hebrew/caph",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/caph.html"
+  },
+  {
+    "name": "כְּרוּבִים",
+    "slug": "language/hebrew/cherubim",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/cherubim.html"
+  },
+  {
+    "name": "קִינוֹת",
+    "slug": "language/hebrew/cinoth",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/cinoth.html"
+  },
+  {
+    "name": "קֹהֶלֶת",
+    "slug": "language/hebrew/coheleth",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/coheleth.html"
+  },
+  {
+    "name": "דִּבְרֵי הַיָּמִים",
+    "slug": "language/hebrew/dibre-hajamim",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/dibre-hajamim.html"
+  },
+  {
+    "name": "אֵלֶּה הַדְּבָרִים",
+    "slug": "language/hebrew/elle-haddebarim",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/elle-haddebarim.html"
+  },
+  {
+    "name": "הָמָן",
+    "slug": "language/hebrew/haman",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/haman.html"
+  },
+  {
+    "name": "יְהוֹשֻׁעַ בִּן נוּן",
+    "slug": "language/hebrew/josue-ben-nun",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/josue-ben-nun.html"
+  },
+  {
+    "name": "כְּתוּבִים",
+    "slug": "language/hebrew/kethuvim",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/kethuvim.html"
+  },
+  {
+    "name": "מַמְלָכוֹת",
+    "slug": "language/hebrew/mamlachot",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/mamlachot.html"
+  },
+  {
+    "name": "מְלָכִים",
+    "slug": "language/hebrew/melachim",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/melachim.html"
+  },
+  {
+    "name": "מ",
+    "slug": "language/hebrew/mem",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/mem.html"
+  },
+  {
+    "name": "מִשְׁלֵי",
+    "slug": "language/hebrew/misle",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/misle.html"
+  },
+  {
+    "name": "נ",
+    "slug": "language/hebrew/nun",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/nun.html"
+  },
+  {
+    "name": "עֹבַדְיָה",
+    "slug": "language/hebrew/ovadyah",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/ovadyah.html"
+  },
+  {
+    "name": "פ",
+    "slug": "language/hebrew/pe",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/pe.html"
+  },
+  {
+    "name": "צ",
+    "slug": "language/hebrew/sade",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/sade.html"
+  },
+  {
+    "name": "שְׁמוּאֵל",
+    "slug": "language/hebrew/shemuel",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/shemuel.html"
+  },
+  {
+    "name": "שִׁיר הַשִּׁירִים",
+    "slug": "language/hebrew/sir-hassirim",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/sir-hassirim.html"
+  },
+  {
+    "name": "שֹׁפְטִים",
+    "slug": "language/hebrew/sophetim",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/sophetim.html"
+  },
+  {
+    "name": "שֵׁם הַמְפֹרָשׁ",
+    "slug": "language/hebrew/tetragrammaton",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/tetragrammaton.html"
+  },
+  {
+    "name": "תְּרֵי עָשָׂר",
+    "slug": "language/hebrew/there-asar",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/there-asar.html"
+  },
+  {
+    "name": "תּוֹרָה",
+    "slug": "language/hebrew/torah",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/torah.html"
+  },
+  {
+    "name": "וַיִּקְרָא",
+    "slug": "language/hebrew/vaiicra",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/vaiicra.html"
+  },
+  {
+    "name": "וַיְדַבֵּר",
+    "slug": "language/hebrew/vajedabber",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/vajedabber.html"
+  },
+  {
+    "name": "וְאֵלֶּה שְׁמוֹת",
+    "slug": "language/hebrew/veelle-semoth",
+    "category": "language",
+    "subcategory": "hebrew",
+    "path": "language/language/hebrew/veelle-semoth.html"
   },
   {
     "name": "Apostolic See",
@@ -224,11 +528,25 @@
     "path": "organization/organization/church/church-of-ghent.html"
   },
   {
+    "name": "The Church",
+    "slug": "organization/church/church-universal",
+    "category": "organization",
+    "subcategory": "church",
+    "path": "organization/organization/church/church-universal.html"
+  },
+  {
     "name": "Metropolitan Church of Mechlin",
     "slug": "organization/church/metropolitan-church-of-mechlin",
     "category": "organization",
     "subcategory": "church",
     "path": "organization/organization/church/metropolitan-church-of-mechlin.html"
+  },
+  {
+    "name": "The Presbytery",
+    "slug": "organization/church/presbytery",
+    "category": "organization",
+    "subcategory": "church",
+    "path": "organization/organization/church/presbytery.html"
   },
   {
     "name": "Vatican Press",
@@ -322,6 +640,27 @@
     "path": "organization/organization/government/spanish-netherlands.html"
   },
   {
+    "name": "Academy of Athens",
+    "slug": "organization/institution/academy-of-athens",
+    "category": "organization",
+    "subcategory": "institution",
+    "path": "organization/organization/institution/academy-of-athens.html"
+  },
+  {
+    "name": "The Pythagoreans",
+    "slug": "organization/institution/pythagoreans",
+    "category": "organization",
+    "subcategory": "institution",
+    "path": "organization/organization/institution/pythagoreans.html"
+  },
+  {
+    "name": "The Synagogue",
+    "slug": "organization/institution/synagogue",
+    "category": "organization",
+    "subcategory": "institution",
+    "path": "organization/organization/institution/synagogue.html"
+  },
+  {
     "name": "Cramoisy",
     "slug": "organization/publisher/cramoisy",
     "category": "organization",
@@ -343,11 +682,25 @@
     "path": "organization/organization/publisher/nutius-moretus.html"
   },
   {
+    "name": "Poussielgue-Rusand",
+    "slug": "organization/publisher/poussielgue-rusand",
+    "category": "organization",
+    "subcategory": "publisher",
+    "path": "organization/organization/publisher/poussielgue-rusand.html"
+  },
+  {
     "name": "Louvain College",
     "slug": "organization/religious-order/louvain-college",
     "category": "organization",
     "subcategory": "religious-order",
     "path": "organization/organization/religious-order/louvain-college.html"
+  },
+  {
+    "name": "Order of Preachers",
+    "slug": "organization/religious-order/order-of-preachers",
+    "category": "organization",
+    "subcategory": "religious-order",
+    "path": "organization/organization/religious-order/order-of-preachers.html"
   },
   {
     "name": "Province of Flandro-Belgica",
@@ -371,6 +724,34 @@
     "path": "organization/organization/university/louvain.html"
   },
   {
+    "name": "Lamartine",
+    "slug": "person/author/lamartine",
+    "category": "person",
+    "subcategory": "author",
+    "path": "person/person/author/lamartine.html"
+  },
+  {
+    "name": "Racine",
+    "slug": "person/author/racine",
+    "category": "person",
+    "subcategory": "author",
+    "path": "person/person/author/racine.html"
+  },
+  {
+    "name": "Shakespeare",
+    "slug": "person/author/shakespeare",
+    "category": "person",
+    "subcategory": "author",
+    "path": "person/person/author/shakespeare.html"
+  },
+  {
+    "name": "Voltaire",
+    "slug": "person/author/voltaire",
+    "category": "person",
+    "subcategory": "author",
+    "path": "person/person/author/voltaire.html"
+  },
+  {
     "name": "Aaron",
     "slug": "person/biblical/aaron",
     "category": "person",
@@ -385,11 +766,32 @@
     "path": "person/person/biblical/abraham.html"
   },
   {
+    "name": "Amos",
+    "slug": "person/biblical/amos",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/amos.html"
+  },
+  {
     "name": "Amram",
     "slug": "person/biblical/amram",
     "category": "person",
     "subcategory": "biblical",
     "path": "person/person/biblical/amram.html"
+  },
+  {
+    "name": "Balaam",
+    "slug": "person/biblical/balaam",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/balaam.html"
+  },
+  {
+    "name": "Barnabas",
+    "slug": "person/biblical/barnabas",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/barnabas.html"
   },
   {
     "name": "Caath",
@@ -413,6 +815,13 @@
     "path": "person/person/biblical/david.html"
   },
   {
+    "name": "Eli",
+    "slug": "person/biblical/eli",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/eli.html"
+  },
+  {
     "name": "Elijah",
     "slug": "person/biblical/elijah",
     "category": "person",
@@ -420,11 +829,88 @@
     "path": "person/person/biblical/elijah.html"
   },
   {
+    "name": "Esther",
+    "slug": "person/biblical/esther",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/esther.html"
+  },
+  {
+    "name": "Ethiopian Eunuch",
+    "slug": "person/biblical/ethiopian-eunuch",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/ethiopian-eunuch.html"
+  },
+  {
+    "name": "Ezekiel",
+    "slug": "person/biblical/ezekiel",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/ezekiel.html"
+  },
+  {
+    "name": "Ezra",
+    "slug": "person/biblical/ezra",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/ezra.html"
+  },
+  {
+    "name": "Gamaliel",
+    "slug": "person/biblical/gamaliel",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/gamaliel.html"
+  },
+  {
+    "name": "Habakkuk",
+    "slug": "person/biblical/habakkuk",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/habakkuk.html"
+  },
+  {
+    "name": "Haggai",
+    "slug": "person/biblical/haggai",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/haggai.html"
+  },
+  {
+    "name": "Haman",
+    "slug": "person/biblical/haman",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/haman.html"
+  },
+  {
+    "name": "Hosea (King of Israel)",
+    "slug": "person/biblical/hosea-king",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/hosea-king.html"
+  },
+  {
+    "name": "Hosea",
+    "slug": "person/biblical/hosea-prophet",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/hosea-prophet.html"
+  },
+  {
     "name": "Isaac",
     "slug": "person/biblical/isaac",
     "category": "person",
     "subcategory": "biblical",
     "path": "person/person/biblical/isaac.html"
+  },
+  {
+    "name": "Isaiah",
+    "slug": "person/biblical/isaiah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/isaiah.html"
   },
   {
     "name": "Jacob",
@@ -441,11 +927,39 @@
     "path": "person/person/biblical/james.html"
   },
   {
+    "name": "Jeconiah",
+    "slug": "person/biblical/jeconiah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/jeconiah.html"
+  },
+  {
+    "name": "Jeremiah",
+    "slug": "person/biblical/jeremiah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/jeremiah.html"
+  },
+  {
+    "name": "Jeroboam",
+    "slug": "person/biblical/jeroboam",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/jeroboam.html"
+  },
+  {
     "name": "Job",
     "slug": "person/biblical/job",
     "category": "person",
     "subcategory": "biblical",
     "path": "person/person/biblical/job.html"
+  },
+  {
+    "name": "Joel",
+    "slug": "person/biblical/joel",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/joel.html"
   },
   {
     "name": "John the Apostle",
@@ -455,6 +969,13 @@
     "path": "person/person/biblical/john-the-apostle.html"
   },
   {
+    "name": "Jonah",
+    "slug": "person/biblical/jonah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/jonah.html"
+  },
+  {
     "name": "Joseph (Patriarch)",
     "slug": "person/biblical/joseph-patriarch",
     "category": "person",
@@ -462,11 +983,32 @@
     "path": "person/person/biblical/joseph-patriarch.html"
   },
   {
+    "name": "Joshua",
+    "slug": "person/biblical/joshua",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/joshua.html"
+  },
+  {
+    "name": "Judas Iscariot",
+    "slug": "person/biblical/judas-iscariot",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/judas-iscariot.html"
+  },
+  {
     "name": "Jude the Apostle",
     "slug": "person/biblical/jude",
     "category": "person",
     "subcategory": "biblical",
     "path": "person/person/biblical/jude.html"
+  },
+  {
+    "name": "Lazarus",
+    "slug": "person/biblical/lazarus",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/lazarus.html"
   },
   {
     "name": "Levi",
@@ -481,6 +1023,20 @@
     "category": "person",
     "subcategory": "biblical",
     "path": "person/person/biblical/luke.html"
+  },
+  {
+    "name": "The Maccabees",
+    "slug": "person/biblical/maccabees",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/maccabees.html"
+  },
+  {
+    "name": "Malachi",
+    "slug": "person/biblical/malachi",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/malachi.html"
   },
   {
     "name": "Manasseh",
@@ -525,11 +1081,39 @@
     "path": "person/person/biblical/melchizedek.html"
   },
   {
+    "name": "Micah",
+    "slug": "person/biblical/micah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/micah.html"
+  },
+  {
     "name": "Moses",
     "slug": "person/biblical/moses",
     "category": "person",
     "subcategory": "biblical",
     "path": "person/person/biblical/moses.html"
+  },
+  {
+    "name": "Nahum",
+    "slug": "person/biblical/nahum",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/nahum.html"
+  },
+  {
+    "name": "Nehemiah",
+    "slug": "person/biblical/nehemiah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/nehemiah.html"
+  },
+  {
+    "name": "Obadiah",
+    "slug": "person/biblical/obadiah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/obadiah.html"
   },
   {
     "name": "Paul the Apostle",
@@ -553,6 +1137,167 @@
     "path": "person/person/biblical/pharaoh.html"
   },
   {
+    "name": "Philemon",
+    "slug": "person/biblical/philemon",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/philemon.html"
+  },
+  {
+    "name": "Philip the Deacon",
+    "slug": "person/biblical/philip-the-deacon",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/philip-the-deacon.html"
+  },
+  {
+    "name": "Ruth",
+    "slug": "person/biblical/ruth",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/ruth.html"
+  },
+  {
+    "name": "Samuel",
+    "slug": "person/biblical/samuel",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/samuel.html"
+  },
+  {
+    "name": "Saul",
+    "slug": "person/biblical/saul",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/saul.html"
+  },
+  {
+    "name": "Simeon",
+    "slug": "person/biblical/simeon",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/simeon.html"
+  },
+  {
+    "name": "Solomon",
+    "slug": "person/biblical/solomon",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/solomon.html"
+  },
+  {
+    "name": "Timothy",
+    "slug": "person/biblical/timothy",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/timothy.html"
+  },
+  {
+    "name": "Titus",
+    "slug": "person/biblical/titus",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/titus.html"
+  },
+  {
+    "name": "Tobias",
+    "slug": "person/biblical/tobias",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/tobias.html"
+  },
+  {
+    "name": "Zadok",
+    "slug": "person/biblical/zadok",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/zadok.html"
+  },
+  {
+    "name": "Zechariah",
+    "slug": "person/biblical/zechariah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/zechariah.html"
+  },
+  {
+    "name": "Zephaniah",
+    "slug": "person/biblical/zephaniah",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/zephaniah.html"
+  },
+  {
+    "name": "Zerubbabel",
+    "slug": "person/biblical/zerubbabel",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/zerubbabel.html"
+  },
+  {
+    "name": "Achilles",
+    "slug": "person/classical/achilles",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/achilles.html"
+  },
+  {
+    "name": "Aeneas",
+    "slug": "person/classical/aeneas",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/aeneas.html"
+  },
+  {
+    "name": "Aeschines",
+    "slug": "person/classical/aeschines",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/aeschines.html"
+  },
+  {
+    "name": "Alcaeus",
+    "slug": "person/classical/alcaeus",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/alcaeus.html"
+  },
+  {
+    "name": "Apollonius of Tyana",
+    "slug": "person/classical/apollonius-of-tyana",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/apollonius-of-tyana.html"
+  },
+  {
+    "name": "Archytas of Tarentum",
+    "slug": "person/classical/archytas",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/archytas.html"
+  },
+  {
+    "name": "Aristotle",
+    "slug": "person/classical/aristotle",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/aristotle.html"
+  },
+  {
+    "name": "Catullus",
+    "slug": "person/classical/catullus",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/catullus.html"
+  },
+  {
+    "name": "Cicero",
+    "slug": "person/classical/cicero",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/cicero.html"
+  },
+  {
     "name": "Cyrus Theodorus",
     "slug": "person/classical/cyrus-theodorus",
     "category": "person",
@@ -565,6 +1310,27 @@
     "category": "person",
     "subcategory": "classical",
     "path": "person/person/classical/demosthenes-cook.html"
+  },
+  {
+    "name": "Demosthenes (the orator)",
+    "slug": "person/classical/demosthenes-orator",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/demosthenes-orator.html"
+  },
+  {
+    "name": "Hermagoras",
+    "slug": "person/classical/hermagoras",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/hermagoras.html"
+  },
+  {
+    "name": "Hiarchas",
+    "slug": "person/classical/hiarchas",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/hiarchas.html"
   },
   {
     "name": "Homer",
@@ -588,6 +1354,97 @@
     "path": "person/person/classical/libanius.html"
   },
   {
+    "name": "Titus Livius (Livy)",
+    "slug": "person/classical/livy",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/livy.html"
+  },
+  {
+    "name": "Miltiades",
+    "slug": "person/classical/miltiades",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/miltiades.html"
+  },
+  {
+    "name": "Philostratus",
+    "slug": "person/classical/philostratus",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/philostratus.html"
+  },
+  {
+    "name": "Pindar",
+    "slug": "person/classical/pindar",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/pindar.html"
+  },
+  {
+    "name": "Plato",
+    "slug": "person/classical/plato",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/plato.html"
+  },
+  {
+    "name": "Pythagoras",
+    "slug": "person/classical/pythagoras",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/pythagoras.html"
+  },
+  {
+    "name": "Serenus",
+    "slug": "person/classical/serenus",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/serenus.html"
+  },
+  {
+    "name": "Simonides",
+    "slug": "person/classical/simonides",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/simonides.html"
+  },
+  {
+    "name": "Socrates",
+    "slug": "person/classical/socrates",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/socrates.html"
+  },
+  {
+    "name": "Tacitus",
+    "slug": "person/classical/tacitus",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/tacitus.html"
+  },
+  {
+    "name": "Themistocles",
+    "slug": "person/classical/themistocles",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/themistocles.html"
+  },
+  {
+    "name": "Virgil",
+    "slug": "person/classical/virgil",
+    "category": "person",
+    "subcategory": "classical",
+    "path": "person/person/classical/virgil.html"
+  },
+  {
+    "name": "Brother Ambrosius",
+    "slug": "person/cleric/ambrosius-brother",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/person/cleric/ambrosius-brother.html"
+  },
+  {
     "name": "Antonianus",
     "slug": "person/cleric/antonianus",
     "category": "person",
@@ -600,6 +1457,13 @@
     "category": "person",
     "subcategory": "cleric",
     "path": "person/person/cleric/cornelius-a-lapide.html"
+  },
+  {
+    "name": "Eusebius (Jerome's companion)",
+    "slug": "person/cleric/eusebius-brother",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/person/cleric/eusebius-brother.html"
   },
   {
     "name": "Eusebius of Caesarea (Bishop)",
@@ -628,6 +1492,13 @@
     "category": "person",
     "subcategory": "cleric",
     "path": "person/person/cleric/jacobus-antonius.html"
+  },
+  {
+    "name": "Fr. H. D. Lacordaire, O.P.",
+    "slug": "person/cleric/lacordaire",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/person/cleric/lacordaire.html"
   },
   {
     "name": "Charles Scribani",
@@ -677,6 +1548,13 @@
     "category": "person",
     "subcategory": "other",
     "path": "person/person/other/basil-elder.html"
+  },
+  {
+    "name": "Emmanuel",
+    "slug": "person/other/emmanuel",
+    "category": "person",
+    "subcategory": "other",
+    "path": "person/person/other/emmanuel.html"
   },
   {
     "name": "Emmelia",
@@ -777,11 +1655,39 @@
     "path": "person/person/pope/urban-vii.html"
   },
   {
+    "name": "Alexander the Great",
+    "slug": "person/ruler/alexander",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/person/ruler/alexander.html"
+  },
+  {
+    "name": "Julius Caesar",
+    "slug": "person/ruler/caesar",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/person/ruler/caesar.html"
+  },
+  {
     "name": "Charles V, Holy Roman Emperor",
     "slug": "person/ruler/charles-v",
     "category": "person",
     "subcategory": "ruler",
     "path": "person/person/ruler/charles-v.html"
+  },
+  {
+    "name": "Croesus",
+    "slug": "person/ruler/croesus",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/person/ruler/croesus.html"
+  },
+  {
+    "name": "Cyrus the Great",
+    "slug": "person/ruler/cyrus",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/person/ruler/cyrus.html"
   },
   {
     "name": "Dagobert I",
@@ -817,6 +1723,13 @@
     "category": "person",
     "subcategory": "ruler",
     "path": "person/person/ruler/julian-the-apostate.html"
+  },
+  {
+    "name": "Nero",
+    "slug": "person/ruler/nero",
+    "category": "person",
+    "subcategory": "ruler",
+    "path": "person/person/ruler/nero.html"
   },
   {
     "name": "Philip II of Spain",
@@ -887,6 +1800,13 @@
     "category": "person",
     "subcategory": "saint",
     "path": "person/person/saint/bernard-of-clairvaux.html"
+  },
+  {
+    "name": "Blessed Virgin Mary",
+    "slug": "person/saint/blessed-virgin-mary",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/person/saint/blessed-virgin-mary.html"
   },
   {
     "name": "St. Bonaventure",
@@ -1013,6 +1933,13 @@
     "category": "person",
     "subcategory": "saint",
     "path": "person/person/saint/odo-of-cambrai.html"
+  },
+  {
+    "name": "St. Paulinus of Nola",
+    "slug": "person/saint/paulinus-of-nola",
+    "category": "person",
+    "subcategory": "saint",
+    "path": "person/person/saint/paulinus-of-nola.html"
   },
   {
     "name": "St. Peter Damian",
@@ -1155,6 +2082,13 @@
     "path": "person/person/scholar/theodoret.html"
   },
   {
+    "name": "Ethiopia",
+    "slug": "place/africa/ethiopia",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/africa/ethiopia.html"
+  },
+  {
     "name": "Antioch in Armenia",
     "slug": "place/asia-minor/antioch-in-armenia",
     "category": "place",
@@ -1176,6 +2110,13 @@
     "path": "place/place/asia-minor/cappadocia/neocaesarea.html"
   },
   {
+    "name": "Ephesus",
+    "slug": "place/asia-minor/ephesus",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/asia-minor/ephesus.html"
+  },
+  {
     "name": "Pontus",
     "slug": "place/asia-minor/pontus/pontus",
     "category": "place",
@@ -1183,11 +2124,32 @@
     "path": "place/place/asia-minor/pontus/pontus.html"
   },
   {
+    "name": "India",
+    "slug": "place/asia/india",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/asia/india.html"
+  },
+  {
+    "name": "Phison",
+    "slug": "place/biblical/phison-river",
+    "category": "place",
+    "subcategory": "river",
+    "path": "place/place/biblical/phison-river.html"
+  },
+  {
     "name": "Plains of Moab",
     "slug": "place/biblical/plains-of-moab",
     "category": "place",
     "subcategory": "biblical-site",
     "path": "place/place/biblical/plains-of-moab.html"
+  },
+  {
+    "name": "Caucasus",
+    "slug": "place/europe-asia/caucasus",
+    "category": "place",
+    "subcategory": "mountain-range",
+    "path": "place/place/europe-asia/caucasus.html"
   },
   {
     "name": "England",
@@ -1218,6 +2180,13 @@
     "path": "place/place/europe/france/anchin.html"
   },
   {
+    "name": "Gaul",
+    "slug": "place/europe/france/gaul",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/europe/france/gaul.html"
+  },
+  {
     "name": "Paris",
     "slug": "place/europe/france/paris",
     "category": "place",
@@ -1232,11 +2201,67 @@
     "path": "place/place/europe/france/reims.html"
   },
   {
+    "name": "Greece",
+    "slug": "place/europe/greece",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/europe/greece.html"
+  },
+  {
     "name": "Athens",
     "slug": "place/europe/greece/athens",
     "category": "place",
     "subcategory": "city",
     "path": "place/place/europe/greece/athens.html"
+  },
+  {
+    "name": "Parthenon",
+    "slug": "place/europe/greece/athens/parthenon",
+    "category": "place",
+    "subcategory": "temple",
+    "path": "place/place/europe/greece/athens/parthenon.html"
+  },
+  {
+    "name": "Corinth",
+    "slug": "place/europe/greece/corinth",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/europe/greece/corinth.html"
+  },
+  {
+    "name": "Marathon",
+    "slug": "place/europe/greece/marathon",
+    "category": "place",
+    "subcategory": "plain",
+    "path": "place/place/europe/greece/marathon.html"
+  },
+  {
+    "name": "Patmos",
+    "slug": "place/europe/greece/patmos",
+    "category": "place",
+    "subcategory": "island",
+    "path": "place/place/europe/greece/patmos.html"
+  },
+  {
+    "name": "Rhodes",
+    "slug": "place/europe/greece/rhodes",
+    "category": "place",
+    "subcategory": "island",
+    "path": "place/place/europe/greece/rhodes.html"
+  },
+  {
+    "name": "Salamis",
+    "slug": "place/europe/greece/salamis",
+    "category": "place",
+    "subcategory": "island",
+    "path": "place/place/europe/greece/salamis.html"
+  },
+  {
+    "name": "Magna Graecia",
+    "slug": "place/europe/italy/magna-graecia",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/europe/italy/magna-graecia.html"
   },
   {
     "name": "Rome",
@@ -1246,11 +2271,25 @@
     "path": "place/place/europe/italy/rome.html"
   },
   {
+    "name": "Tarpeian Rock",
+    "slug": "place/europe/italy/rome/tarpeian-rock",
+    "category": "place",
+    "subcategory": "landmark",
+    "path": "place/place/europe/italy/rome/tarpeian-rock.html"
+  },
+  {
     "name": "St. Peter's Basilica",
     "slug": "place/europe/italy/st-peters",
     "category": "place",
     "subcategory": "sacred-site",
     "path": "place/place/europe/italy/st-peters.html"
+  },
+  {
+    "name": "Tarentum",
+    "slug": "place/europe/italy/tarentum",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/europe/italy/tarentum.html"
   },
   {
     "name": "Trent",
@@ -1344,11 +2383,46 @@
     "path": "place/place/europe/low-countries/valenciennes.html"
   },
   {
+    "name": "Spain",
+    "slug": "place/europe/spain",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/europe/spain.html"
+  },
+  {
+    "name": "Arabia",
+    "slug": "place/middle-east/arabia",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/middle-east/arabia.html"
+  },
+  {
+    "name": "Nineveh",
+    "slug": "place/middle-east/assyria/nineveh",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/middle-east/assyria/nineveh.html"
+  },
+  {
     "name": "Egypt",
     "slug": "place/middle-east/egypt",
     "category": "place",
     "subcategory": "region",
     "path": "place/place/middle-east/egypt.html"
+  },
+  {
+    "name": "Alexandria",
+    "slug": "place/middle-east/egypt/alexandria",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/middle-east/egypt/alexandria.html"
+  },
+  {
+    "name": "Memphis",
+    "slug": "place/middle-east/egypt/memphis",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/middle-east/egypt/memphis.html"
   },
   {
     "name": "Mesopotamia",
@@ -1358,11 +2432,39 @@
     "path": "place/place/middle-east/mesopotamia.html"
   },
   {
+    "name": "Babylon",
+    "slug": "place/middle-east/mesopotamia/babylon",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/middle-east/mesopotamia/babylon.html"
+  },
+  {
     "name": "Bethlehem",
     "slug": "place/middle-east/palestine/bethlehem",
     "category": "place",
     "subcategory": "city",
     "path": "place/place/middle-east/palestine/bethlehem.html"
+  },
+  {
+    "name": "Cana",
+    "slug": "place/middle-east/palestine/cana",
+    "category": "place",
+    "subcategory": "village",
+    "path": "place/place/middle-east/palestine/cana.html"
+  },
+  {
+    "name": "Cedron",
+    "slug": "place/middle-east/palestine/cedron",
+    "category": "place",
+    "subcategory": "valley",
+    "path": "place/place/middle-east/palestine/cedron.html"
+  },
+  {
+    "name": "Galilee",
+    "slug": "place/middle-east/palestine/galilee",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/middle-east/palestine/galilee.html"
   },
   {
     "name": "Jerusalem",
@@ -1372,11 +2474,74 @@
     "path": "place/place/middle-east/palestine/jerusalem.html"
   },
   {
+    "name": "Jordan",
+    "slug": "place/middle-east/palestine/jordan-river",
+    "category": "place",
+    "subcategory": "river",
+    "path": "place/place/middle-east/palestine/jordan-river.html"
+  },
+  {
+    "name": "Judea",
+    "slug": "place/middle-east/palestine/judea",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/middle-east/palestine/judea.html"
+  },
+  {
+    "name": "Moresheth",
+    "slug": "place/middle-east/palestine/moresheth",
+    "category": "place",
+    "subcategory": "town",
+    "path": "place/place/middle-east/palestine/moresheth.html"
+  },
+  {
+    "name": "Nazareth",
+    "slug": "place/middle-east/palestine/nazareth",
+    "category": "place",
+    "subcategory": "town",
+    "path": "place/place/middle-east/palestine/nazareth.html"
+  },
+  {
     "name": "Palestine",
     "slug": "place/middle-east/palestine/palestine",
     "category": "place",
     "subcategory": "region",
     "path": "place/place/middle-east/palestine/palestine.html"
+  },
+  {
+    "name": "Samaria",
+    "slug": "place/middle-east/palestine/samaria",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/middle-east/palestine/samaria.html"
+  },
+  {
+    "name": "Zion",
+    "slug": "place/middle-east/palestine/zion",
+    "category": "place",
+    "subcategory": "hill",
+    "path": "place/place/middle-east/palestine/zion.html"
+  },
+  {
+    "name": "Persia",
+    "slug": "place/middle-east/persia",
+    "category": "place",
+    "subcategory": "region",
+    "path": "place/place/middle-east/persia.html"
+  },
+  {
+    "name": "Antioch",
+    "slug": "place/middle-east/syria/antioch",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/middle-east/syria/antioch.html"
+  },
+  {
+    "name": "Damascus",
+    "slug": "place/middle-east/syria/damascus",
+    "category": "place",
+    "subcategory": "city",
+    "path": "place/place/middle-east/syria/damascus.html"
   },
   {
     "name": "Our Lady of Aspromont",
@@ -1498,6 +2663,12 @@
     "slug": "subject/exegesis/methods/literal-and-moral",
     "category": "subject",
     "path": "subject/subject/exegesis/methods/literal-and-moral.html"
+  },
+  {
+    "name": "Spiritual Interpretation of Scripture",
+    "slug": "subject/exegesis/methods/spiritual-interpretation",
+    "category": "subject",
+    "path": "subject/subject/exegesis/methods/spiritual-interpretation.html"
   },
   {
     "name": "Typology",
@@ -1632,10 +2803,40 @@
     "path": "subject/subject/spirituality/desire-for-martyrdom.html"
   },
   {
+    "name": "History and the Reading of Scripture",
+    "slug": "subject/spirituality/lectio-divina",
+    "category": "subject",
+    "path": "subject/subject/spirituality/lectio-divina.html"
+  },
+  {
     "name": "Zeal for Souls",
     "slug": "subject/spirituality/zeal-for-souls",
     "category": "subject",
     "path": "subject/subject/spirituality/zeal-for-souls.html"
+  },
+  {
+    "name": "Christ Prefigured in the Old Testament",
+    "slug": "subject/theology/christology/christ-prefigured",
+    "category": "subject",
+    "path": "subject/subject/theology/christology/christ-prefigured.html"
+  },
+  {
+    "name": "Logos (The Word)",
+    "slug": "subject/theology/christology/logos",
+    "category": "subject",
+    "path": "subject/subject/theology/christology/logos.html"
+  },
+  {
+    "name": "Passion of Christ",
+    "slug": "subject/theology/christology/passion-of-christ",
+    "category": "subject",
+    "path": "subject/subject/theology/christology/passion-of-christ.html"
+  },
+  {
+    "name": "Wisdom of God and Worldly Wisdom",
+    "slug": "subject/theology/christology/wisdom-of-god",
+    "category": "subject",
+    "path": "subject/subject/theology/christology/wisdom-of-god.html"
   },
   {
     "name": "Holy Spirit and Preaching",
@@ -1656,16 +2857,70 @@
     "path": "subject/subject/theology/god/trinity.html"
   },
   {
+    "name": "Apocalypse / Revelation",
+    "slug": "subject/theology/scripture/apocalypse",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/apocalypse.html"
+  },
+  {
+    "name": "Apocrypha",
+    "slug": "subject/theology/scripture/apocrypha",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/apocrypha.html"
+  },
+  {
     "name": "Biblical Canon",
     "slug": "subject/theology/scripture/biblical-canon",
     "category": "subject",
     "path": "subject/subject/theology/scripture/biblical-canon.html"
   },
   {
+    "name": "The Gospel",
+    "slug": "subject/theology/scripture/gospel",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/gospel.html"
+  },
+  {
+    "name": "Hebrew Alphabet (Mystical Significance)",
+    "slug": "subject/theology/scripture/hebrew-alphabet",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/hebrew-alphabet.html"
+  },
+  {
+    "name": "Inspiration of Scripture",
+    "slug": "subject/theology/scripture/inspiration",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/inspiration.html"
+  },
+  {
+    "name": "Paul's Apostolate and Epistles",
+    "slug": "subject/theology/scripture/pauline-epistles",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/pauline-epistles.html"
+  },
+  {
     "name": "Profanation of Scripture",
     "slug": "subject/theology/scripture/profanation-of-scripture",
     "category": "subject",
     "path": "subject/subject/theology/scripture/profanation-of-scripture.html"
+  },
+  {
+    "name": "Prophecy",
+    "slug": "subject/theology/scripture/prophecy",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/prophecy.html"
+  },
+  {
+    "name": "Psalms and Prophetic Poetry",
+    "slug": "subject/theology/scripture/psalms",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/psalms.html"
+  },
+  {
+    "name": "Salvation History",
+    "slug": "subject/theology/scripture/salvation-history",
+    "category": "subject",
+    "path": "subject/subject/theology/scripture/salvation-history.html"
   },
   {
     "name": "Scripture and Tradition",
@@ -1686,16 +2941,64 @@
     "path": "subject/subject/theology/scripture/scripture-study.html"
   },
   {
+    "name": "Resurrection of the Body",
+    "slug": "subject/theology/soteriology/resurrection",
+    "category": "subject",
+    "path": "subject/subject/theology/soteriology/resurrection.html"
+  },
+  {
+    "name": "1 Corinthians 1:19",
+    "slug": "verse/1-corinthians/1/19",
+    "category": "verse",
+    "path": "verse/verse/1-corinthians/1/19.html"
+  },
+  {
+    "name": "2 Corinthians 10:4-5",
+    "slug": "verse/2-corinthians/10/4-5",
+    "category": "verse",
+    "path": "verse/verse/2-corinthians/10/4-5.html"
+  },
+  {
+    "name": "2 Corinthians 11:6",
+    "slug": "verse/2-corinthians/11/6",
+    "category": "verse",
+    "path": "verse/verse/2-corinthians/11/6.html"
+  },
+  {
+    "name": "2 Corinthians 13:3",
+    "slug": "verse/2-corinthians/13/3",
+    "category": "verse",
+    "path": "verse/verse/2-corinthians/13/3.html"
+  },
+  {
     "name": "3 Kings 3:7 (Vulgate)",
     "slug": "verse/3-kings/3/7",
     "category": "verse",
     "path": "verse/verse/3-kings/3/7.html"
   },
   {
+    "name": "Acts 8:30-31",
+    "slug": "verse/acts/8/30-31",
+    "category": "verse",
+    "path": "verse/verse/acts/8/30-31.html"
+  },
+  {
+    "name": "Acts 9:6 (Vulgate)",
+    "slug": "verse/acts/9/6",
+    "category": "verse",
+    "path": "verse/verse/acts/9/6.html"
+  },
+  {
     "name": "Daniel 12:3",
     "slug": "verse/daniel/12/3",
     "category": "verse",
     "path": "verse/verse/daniel/12/3.html"
+  },
+  {
+    "name": "Deuteronomy 32:7",
+    "slug": "verse/deuteronomy/32/7",
+    "category": "verse",
+    "path": "verse/verse/deuteronomy/32/7.html"
   },
   {
     "name": "Deuteronomy 34:8",
@@ -1722,10 +3025,70 @@
     "path": "verse/verse/exodus/4/13.html"
   },
   {
+    "name": "Galatians 1:17-18",
+    "slug": "verse/galatians/1/17-18",
+    "category": "verse",
+    "path": "verse/verse/galatians/1/17-18.html"
+  },
+  {
+    "name": "Galatians 2:1-2",
+    "slug": "verse/galatians/2/1-2",
+    "category": "verse",
+    "path": "verse/verse/galatians/2/1-2.html"
+  },
+  {
+    "name": "Genesis 1:1",
+    "slug": "verse/genesis/1/1",
+    "category": "verse",
+    "path": "verse/verse/genesis/1/1.html"
+  },
+  {
+    "name": "Habakkuk 3:3-4 (Vulgate)",
+    "slug": "verse/habakkuk/3/3-4",
+    "category": "verse",
+    "path": "verse/verse/habakkuk/3/3-4.html"
+  },
+  {
+    "name": "Haggai 2:12",
+    "slug": "verse/haggai/2/12",
+    "category": "verse",
+    "path": "verse/verse/haggai/2/12.html"
+  },
+  {
+    "name": "Haggai 2:7-8 (Vulgate)",
+    "slug": "verse/haggai/2/7-8",
+    "category": "verse",
+    "path": "verse/verse/haggai/2/7-8.html"
+  },
+  {
+    "name": "Isaiah 16:1",
+    "slug": "verse/isaiah/16/1",
+    "category": "verse",
+    "path": "verse/verse/isaiah/16/1.html"
+  },
+  {
+    "name": "Isaiah 40:3",
+    "slug": "verse/isaiah/40/3",
+    "category": "verse",
+    "path": "verse/verse/isaiah/40/3.html"
+  },
+  {
+    "name": "Job 19:25-27 (Vulgate)",
+    "slug": "verse/job/19/25-27",
+    "category": "verse",
+    "path": "verse/verse/job/19/25-27.html"
+  },
+  {
     "name": "Job 31:18",
     "slug": "verse/job/31/18",
     "category": "verse",
     "path": "verse/verse/job/31/18.html"
+  },
+  {
+    "name": "John 1:1",
+    "slug": "verse/john/1/1",
+    "category": "verse",
+    "path": "verse/verse/john/1/1.html"
   },
   {
     "name": "John 13:4-5",
@@ -1734,10 +3097,148 @@
     "path": "verse/verse/john/13/4-5.html"
   },
   {
+    "name": "John 14:1-3",
+    "slug": "verse/john/14/1-3",
+    "category": "verse",
+    "path": "verse/verse/john/14/1-3.html"
+  },
+  {
+    "name": "John 17:1",
+    "slug": "verse/john/17/1",
+    "category": "verse",
+    "path": "verse/verse/john/17/1.html"
+  },
+  {
+    "name": "John 21:17",
+    "slug": "verse/john/21/17",
+    "category": "verse",
+    "path": "verse/verse/john/21/17.html"
+  },
+  {
     "name": "John 3:30",
     "slug": "verse/john/3/30",
     "category": "verse",
     "path": "verse/verse/john/3/30.html"
+  },
+  {
+    "name": "John 8:46",
+    "slug": "verse/john/8/46",
+    "category": "verse",
+    "path": "verse/verse/john/8/46.html"
+  },
+  {
+    "name": "John 8:7",
+    "slug": "verse/john/8/7",
+    "category": "verse",
+    "path": "verse/verse/john/8/7.html"
+  },
+  {
+    "name": "Luke 15:11-32",
+    "slug": "verse/luke/15/11-32",
+    "category": "verse",
+    "path": "verse/verse/luke/15/11-32.html"
+  },
+  {
+    "name": "Luke 2:29-32",
+    "slug": "verse/luke/2/29-32",
+    "category": "verse",
+    "path": "verse/verse/luke/2/29-32.html"
+  },
+  {
+    "name": "Luke 23:34",
+    "slug": "verse/luke/23/34",
+    "category": "verse",
+    "path": "verse/verse/luke/23/34.html"
+  },
+  {
+    "name": "Malachi 1:10-11",
+    "slug": "verse/malachi/1/10-11",
+    "category": "verse",
+    "path": "verse/verse/malachi/1/10-11.html"
+  },
+  {
+    "name": "Matthew 11:28",
+    "slug": "verse/matthew/11/28",
+    "category": "verse",
+    "path": "verse/verse/matthew/11/28.html"
+  },
+  {
+    "name": "Matthew 20:27-28",
+    "slug": "verse/matthew/20/27-28",
+    "category": "verse",
+    "path": "verse/verse/matthew/20/27-28.html"
+  },
+  {
+    "name": "Matthew 23:12",
+    "slug": "verse/matthew/23/12",
+    "category": "verse",
+    "path": "verse/verse/matthew/23/12.html"
+  },
+  {
+    "name": "Matthew 26:39",
+    "slug": "verse/matthew/26/39",
+    "category": "verse",
+    "path": "verse/verse/matthew/26/39.html"
+  },
+  {
+    "name": "Matthew 3:15",
+    "slug": "verse/matthew/3/15",
+    "category": "verse",
+    "path": "verse/verse/matthew/3/15.html"
+  },
+  {
+    "name": "Matthew 3:17",
+    "slug": "verse/matthew/3/17",
+    "category": "verse",
+    "path": "verse/verse/matthew/3/17.html"
+  },
+  {
+    "name": "Matthew 3:3",
+    "slug": "verse/matthew/3/3",
+    "category": "verse",
+    "path": "verse/verse/matthew/3/3.html"
+  },
+  {
+    "name": "Matthew 4:4",
+    "slug": "verse/matthew/4/4",
+    "category": "verse",
+    "path": "verse/verse/matthew/4/4.html"
+  },
+  {
+    "name": "Matthew 5:3-10",
+    "slug": "verse/matthew/5/3-10",
+    "category": "verse",
+    "path": "verse/verse/matthew/5/3-10.html"
+  },
+  {
+    "name": "Matthew 5:39",
+    "slug": "verse/matthew/5/39",
+    "category": "verse",
+    "path": "verse/verse/matthew/5/39.html"
+  },
+  {
+    "name": "Matthew 5:44",
+    "slug": "verse/matthew/5/44",
+    "category": "verse",
+    "path": "verse/verse/matthew/5/44.html"
+  },
+  {
+    "name": "Matthew 5:48",
+    "slug": "verse/matthew/5/48",
+    "category": "verse",
+    "path": "verse/verse/matthew/5/48.html"
+  },
+  {
+    "name": "Matthew 7:12",
+    "slug": "verse/matthew/7/12",
+    "category": "verse",
+    "path": "verse/verse/matthew/7/12.html"
+  },
+  {
+    "name": "Nahum 1:15 (Vulgate)",
+    "slug": "verse/nahum/1/15",
+    "category": "verse",
+    "path": "verse/verse/nahum/1/15.html"
   },
   {
     "name": "Numbers 12:3",
@@ -1752,10 +3253,94 @@
     "path": "verse/verse/numbers/5.html"
   },
   {
+    "name": "Proverbs 31:10",
+    "slug": "verse/proverbs/31/10",
+    "category": "verse",
+    "path": "verse/verse/proverbs/31/10.html"
+  },
+  {
+    "name": "Psalm 1:2",
+    "slug": "verse/psalms/1/2",
+    "category": "verse",
+    "path": "verse/verse/psalms/1/2.html"
+  },
+  {
+    "name": "Psalm 110 (Vulgate)",
+    "slug": "verse/psalms/110",
+    "category": "verse",
+    "path": "verse/verse/psalms/110.html"
+  },
+  {
+    "name": "Psalm 111 (Vulgate)",
+    "slug": "verse/psalms/111",
+    "category": "verse",
+    "path": "verse/verse/psalms/111.html"
+  },
+  {
+    "name": "Psalm 118 (Vulgate)",
+    "slug": "verse/psalms/118",
+    "category": "verse",
+    "path": "verse/verse/psalms/118.html"
+  },
+  {
+    "name": "Psalm 118:20 (Vulgate)",
+    "slug": "verse/psalms/118/20",
+    "category": "verse",
+    "path": "verse/verse/psalms/118/20.html"
+  },
+  {
+    "name": "Psalm 144 (Vulgate)",
+    "slug": "verse/psalms/144",
+    "category": "verse",
+    "path": "verse/verse/psalms/144.html"
+  },
+  {
     "name": "Psalm 146:7 (Vulgate)",
     "slug": "verse/psalms/146/7",
     "category": "verse",
     "path": "verse/verse/psalms/146/7.html"
+  },
+  {
+    "name": "Psalm 36 (Vulgate)",
+    "slug": "verse/psalms/36",
+    "category": "verse",
+    "path": "verse/verse/psalms/36.html"
+  },
+  {
+    "name": "Psalm 38:2-3 (Vulgate)",
+    "slug": "verse/psalms/38/2-3",
+    "category": "verse",
+    "path": "verse/verse/psalms/38/2-3.html"
+  },
+  {
+    "name": "Psalm 9 (Vulgate)",
+    "slug": "verse/psalms/9",
+    "category": "verse",
+    "path": "verse/verse/psalms/9.html"
+  },
+  {
+    "name": "Revelation 22:21",
+    "slug": "verse/revelation/22/21",
+    "category": "verse",
+    "path": "verse/verse/revelation/22/21.html"
+  },
+  {
+    "name": "Revelation 3:7",
+    "slug": "verse/revelation/3/7",
+    "category": "verse",
+    "path": "verse/verse/revelation/3/7.html"
+  },
+  {
+    "name": "Revelation 4:8",
+    "slug": "verse/revelation/4/8",
+    "category": "verse",
+    "path": "verse/verse/revelation/4/8.html"
+  },
+  {
+    "name": "Titus 1:9",
+    "slug": "verse/titus/1/9",
+    "category": "verse",
+    "path": "verse/verse/titus/1/9.html"
   },
   {
     "name": "Wisdom 8:1",
@@ -2016,6 +3601,12 @@
     "path": "year/year/ad/16th-century/60s/1563.html"
   },
   {
+    "name": "1564",
+    "slug": "year/ad/16th-century/60s/1564",
+    "category": "year",
+    "path": "year/year/ad/16th-century/60s/1564.html"
+  },
+  {
     "name": "1565",
     "slug": "year/ad/16th-century/60s/1565",
     "category": "year",
@@ -2154,6 +3745,36 @@
     "path": "year/year/ad/17th-century/40s/1645.html"
   },
   {
+    "name": "1694",
+    "slug": "year/ad/17th-century/90s/1694",
+    "category": "year",
+    "path": "year/year/ad/17th-century/90s/1694.html"
+  },
+  {
+    "name": "1699",
+    "slug": "year/ad/17th-century/90s/1699",
+    "category": "year",
+    "path": "year/year/ad/17th-century/90s/1699.html"
+  },
+  {
+    "name": "1778",
+    "slug": "year/ad/18th-century/70s/1778",
+    "category": "year",
+    "path": "year/year/ad/18th-century/70s/1778.html"
+  },
+  {
+    "name": "1790",
+    "slug": "year/ad/18th-century/90s/1790",
+    "category": "year",
+    "path": "year/year/ad/18th-century/90s/1790.html"
+  },
+  {
+    "name": "1802",
+    "slug": "year/ad/19th-century/00s/1802",
+    "category": "year",
+    "path": "year/year/ad/19th-century/00s/1802.html"
+  },
+  {
     "name": "1826",
     "slug": "year/ad/19th-century/20s/1826",
     "category": "year",
@@ -2164,6 +3785,24 @@
     "slug": "year/ad/19th-century/50s/1852",
     "category": "year",
     "path": "year/year/ad/19th-century/50s/1852.html"
+  },
+  {
+    "name": "1858",
+    "slug": "year/ad/19th-century/50s/1858",
+    "category": "year",
+    "path": "year/year/ad/19th-century/50s/1858.html"
+  },
+  {
+    "name": "1861",
+    "slug": "year/ad/19th-century/60s/1861",
+    "category": "year",
+    "path": "year/year/ad/19th-century/60s/1861.html"
+  },
+  {
+    "name": "1869",
+    "slug": "year/ad/19th-century/60s/1869",
+    "category": "year",
+    "path": "year/year/ad/19th-century/60s/1869.html"
   },
   {
     "name": "1891",
@@ -2178,10 +3817,82 @@
     "path": "year/year/ad/19th-century/90s/1894.html"
   },
   {
+    "name": "100",
+    "slug": "year/ad/1st-century/00s/100",
+    "category": "year",
+    "path": "year/year/ad/1st-century/00s/100.html"
+  },
+  {
+    "name": "15",
+    "slug": "year/ad/1st-century/10s/15",
+    "category": "year",
+    "path": "year/year/ad/1st-century/10s/15.html"
+  },
+  {
+    "name": "30",
+    "slug": "year/ad/1st-century/30s/30",
+    "category": "year",
+    "path": "year/year/ad/1st-century/30s/30.html"
+  },
+  {
+    "name": "37",
+    "slug": "year/ad/1st-century/30s/37",
+    "category": "year",
+    "path": "year/year/ad/1st-century/30s/37.html"
+  },
+  {
+    "name": "50",
+    "slug": "year/ad/1st-century/50s/50",
+    "category": "year",
+    "path": "year/year/ad/1st-century/50s/50.html"
+  },
+  {
+    "name": "56",
+    "slug": "year/ad/1st-century/50s/56",
+    "category": "year",
+    "path": "year/year/ad/1st-century/50s/56.html"
+  },
+  {
+    "name": "61",
+    "slug": "year/ad/1st-century/60s/61",
+    "category": "year",
+    "path": "year/year/ad/1st-century/60s/61.html"
+  },
+  {
+    "name": "68",
+    "slug": "year/ad/1st-century/60s/68",
+    "category": "year",
+    "path": "year/year/ad/1st-century/60s/68.html"
+  },
+  {
+    "name": "97",
+    "slug": "year/ad/1st-century/90s/97",
+    "category": "year",
+    "path": "year/year/ad/1st-century/90s/97.html"
+  },
+  {
+    "name": "120",
+    "slug": "year/ad/2nd-century/20s/120",
+    "category": "year",
+    "path": "year/year/ad/2nd-century/20s/120.html"
+  },
+  {
+    "name": "170",
+    "slug": "year/ad/2nd-century/70s/170",
+    "category": "year",
+    "path": "year/year/ad/2nd-century/70s/170.html"
+  },
+  {
     "name": "210",
     "slug": "year/ad/3rd-century/10s/210",
     "category": "year",
     "path": "year/year/ad/3rd-century/10s/210.html"
+  },
+  {
+    "name": "247",
+    "slug": "year/ad/3rd-century/40s/247",
+    "category": "year",
+    "path": "year/year/ad/3rd-century/40s/247.html"
   },
   {
     "name": "250",
@@ -2346,6 +4057,12 @@
     "path": "year/year/ad/5th-century/30s/430.html"
   },
   {
+    "name": "431",
+    "slug": "year/ad/5th-century/30s/431",
+    "category": "year",
+    "path": "year/year/ad/5th-century/30s/431.html"
+  },
+  {
     "name": "458",
     "slug": "year/ad/5th-century/50s/458",
     "category": "year",
@@ -2496,6 +4213,12 @@
     "path": "year/year/ad/9th-century/80s/882.html"
   },
   {
+    "name": "931 BC",
+    "slug": "year/bc/10th-century/30s/931",
+    "category": "year",
+    "path": "year/year/bc/10th-century/30s/931.html"
+  },
+  {
     "name": "970 BC",
     "slug": "year/bc/10th-century/70s/970",
     "category": "year",
@@ -2508,10 +4231,22 @@
     "path": "year/year/bc/11th-century/40s/1040.html"
   },
   {
+    "name": "1245 BC",
+    "slug": "year/bc/13th-century/40s/1245",
+    "category": "year",
+    "path": "year/year/bc/13th-century/40s/1245.html"
+  },
+  {
     "name": "1273 BC",
     "slug": "year/bc/13th-century/70s/1273",
     "category": "year",
     "path": "year/year/bc/13th-century/70s/1273.html"
+  },
+  {
+    "name": "1355 BC",
+    "slug": "year/bc/14th-century/50s/1355",
+    "category": "year",
+    "path": "year/year/bc/14th-century/50s/1355.html"
   },
   {
     "name": "1393 BC",
@@ -2520,15 +4255,237 @@
     "path": "year/year/bc/14th-century/90s/1393.html"
   },
   {
+    "name": "100 BC",
+    "slug": "year/bc/1st-century/00s/100",
+    "category": "year",
+    "path": "year/year/bc/1st-century/00s/100.html"
+  },
+  {
     "name": "8 BC",
     "slug": "year/bc/1st-century/00s/8",
     "category": "year",
     "path": "year/year/bc/1st-century/00s/8.html"
   },
   {
+    "name": "19 BC",
+    "slug": "year/bc/1st-century/10s/19",
+    "category": "year",
+    "path": "year/year/bc/1st-century/10s/19.html"
+  },
+  {
+    "name": "43 BC",
+    "slug": "year/bc/1st-century/40s/43",
+    "category": "year",
+    "path": "year/year/bc/1st-century/40s/43.html"
+  },
+  {
+    "name": "44 BC",
+    "slug": "year/bc/1st-century/40s/44",
+    "category": "year",
+    "path": "year/year/bc/1st-century/40s/44.html"
+  },
+  {
+    "name": "54 BC",
+    "slug": "year/bc/1st-century/50s/54",
+    "category": "year",
+    "path": "year/year/bc/1st-century/50s/54.html"
+  },
+  {
     "name": "65 BC",
     "slug": "year/bc/1st-century/60s/65",
     "category": "year",
     "path": "year/year/bc/1st-century/60s/65.html"
+  },
+  {
+    "name": "70 BC",
+    "slug": "year/bc/1st-century/70s/70",
+    "category": "year",
+    "path": "year/year/bc/1st-century/70s/70.html"
+  },
+  {
+    "name": "84 BC",
+    "slug": "year/bc/1st-century/80s/84",
+    "category": "year",
+    "path": "year/year/bc/1st-century/80s/84.html"
+  },
+  {
+    "name": "106 BC",
+    "slug": "year/bc/2nd-century/00s/106",
+    "category": "year",
+    "path": "year/year/bc/2nd-century/00s/106.html"
+  },
+  {
+    "name": "314 BC",
+    "slug": "year/bc/4th-century/10s/314",
+    "category": "year",
+    "path": "year/year/bc/4th-century/10s/314.html"
+  },
+  {
+    "name": "322 BC",
+    "slug": "year/bc/4th-century/20s/322",
+    "category": "year",
+    "path": "year/year/bc/4th-century/20s/322.html"
+  },
+  {
+    "name": "323 BC",
+    "slug": "year/bc/4th-century/20s/323",
+    "category": "year",
+    "path": "year/year/bc/4th-century/20s/323.html"
+  },
+  {
+    "name": "347 BC",
+    "slug": "year/bc/4th-century/40s/347",
+    "category": "year",
+    "path": "year/year/bc/4th-century/40s/347.html"
+  },
+  {
+    "name": "348 BC",
+    "slug": "year/bc/4th-century/40s/348",
+    "category": "year",
+    "path": "year/year/bc/4th-century/40s/348.html"
+  },
+  {
+    "name": "356 BC",
+    "slug": "year/bc/4th-century/50s/356",
+    "category": "year",
+    "path": "year/year/bc/4th-century/50s/356.html"
+  },
+  {
+    "name": "384 BC",
+    "slug": "year/bc/4th-century/80s/384",
+    "category": "year",
+    "path": "year/year/bc/4th-century/80s/384.html"
+  },
+  {
+    "name": "389 BC",
+    "slug": "year/bc/4th-century/80s/389",
+    "category": "year",
+    "path": "year/year/bc/4th-century/80s/389.html"
+  },
+  {
+    "name": "399 BC",
+    "slug": "year/bc/4th-century/90s/399",
+    "category": "year",
+    "path": "year/year/bc/4th-century/90s/399.html"
+  },
+  {
+    "name": "428 BC",
+    "slug": "year/bc/5th-century/20s/428",
+    "category": "year",
+    "path": "year/year/bc/5th-century/20s/428.html"
+  },
+  {
+    "name": "438 BC",
+    "slug": "year/bc/5th-century/30s/438",
+    "category": "year",
+    "path": "year/year/bc/5th-century/30s/438.html"
+  },
+  {
+    "name": "459 BC",
+    "slug": "year/bc/5th-century/50s/459",
+    "category": "year",
+    "path": "year/year/bc/5th-century/50s/459.html"
+  },
+  {
+    "name": "468 BC",
+    "slug": "year/bc/5th-century/60s/468",
+    "category": "year",
+    "path": "year/year/bc/5th-century/60s/468.html"
+  },
+  {
+    "name": "470 BC",
+    "slug": "year/bc/5th-century/70s/470",
+    "category": "year",
+    "path": "year/year/bc/5th-century/70s/470.html"
+  },
+  {
+    "name": "489 BC",
+    "slug": "year/bc/5th-century/80s/489",
+    "category": "year",
+    "path": "year/year/bc/5th-century/80s/489.html"
+  },
+  {
+    "name": "495 BC",
+    "slug": "year/bc/5th-century/90s/495",
+    "category": "year",
+    "path": "year/year/bc/5th-century/90s/495.html"
+  },
+  {
+    "name": "600 BC",
+    "slug": "year/bc/6th-century/00s/600",
+    "category": "year",
+    "path": "year/year/bc/6th-century/00s/600.html"
+  },
+  {
+    "name": "518 BC",
+    "slug": "year/bc/6th-century/10s/518",
+    "category": "year",
+    "path": "year/year/bc/6th-century/10s/518.html"
+  },
+  {
+    "name": "524 BC",
+    "slug": "year/bc/6th-century/20s/524",
+    "category": "year",
+    "path": "year/year/bc/6th-century/20s/524.html"
+  },
+  {
+    "name": "530 BC",
+    "slug": "year/bc/6th-century/30s/530",
+    "category": "year",
+    "path": "year/year/bc/6th-century/30s/530.html"
+  },
+  {
+    "name": "546 BC",
+    "slug": "year/bc/6th-century/40s/546",
+    "category": "year",
+    "path": "year/year/bc/6th-century/40s/546.html"
+  },
+  {
+    "name": "550 BC",
+    "slug": "year/bc/6th-century/50s/550",
+    "category": "year",
+    "path": "year/year/bc/6th-century/50s/550.html"
+  },
+  {
+    "name": "556 BC",
+    "slug": "year/bc/6th-century/50s/556",
+    "category": "year",
+    "path": "year/year/bc/6th-century/50s/556.html"
+  },
+  {
+    "name": "570 BC",
+    "slug": "year/bc/6th-century/70s/570",
+    "category": "year",
+    "path": "year/year/bc/6th-century/70s/570.html"
+  },
+  {
+    "name": "580 BC",
+    "slug": "year/bc/6th-century/80s/580",
+    "category": "year",
+    "path": "year/year/bc/6th-century/80s/580.html"
+  },
+  {
+    "name": "595 BC",
+    "slug": "year/bc/6th-century/90s/595",
+    "category": "year",
+    "path": "year/year/bc/6th-century/90s/595.html"
+  },
+  {
+    "name": "620 BC",
+    "slug": "year/bc/7th-century/20s/620",
+    "category": "year",
+    "path": "year/year/bc/7th-century/20s/620.html"
+  },
+  {
+    "name": "622 BC",
+    "slug": "year/bc/7th-century/20s/622",
+    "category": "year",
+    "path": "year/year/bc/7th-century/20s/622.html"
+  },
+  {
+    "name": "650 BC",
+    "slug": "year/bc/7th-century/50s/650",
+    "category": "year",
+    "path": "year/year/bc/7th-century/50s/650.html"
   }
 ]

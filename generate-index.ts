@@ -24,7 +24,7 @@ const BASE_URL = "https://lapide.org";
 // ── OSM map tiles ──
 
 const TILE_SIZE = 256;
-const MAP_ZOOM = 5;
+const MAP_ZOOM = 4;
 const TILES_DIR = join(INDEX_DIR, "tiles");
 
 function latLonToTile(lat: number, lon: number, zoom: number) {
@@ -762,6 +762,7 @@ ${items.join("\n")}
 <title>${escHtml(name)} — Lapide Index</title>
 <meta name="description" content="${escHtml(description)}">
 <link rel="canonical" href="${canonicalUrl}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/index/index.css">
 <script src="/index/components.js" type="module"></script>
@@ -800,6 +801,7 @@ function generateAliasHtml(aliasOf: string, category: string): string {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escHtml(name)} — Lapide Index</title>
 <link rel="canonical" href="${canonicalUrl}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta http-equiv="refresh" content="0; url=/index/${aliasOf}.html">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/index/index.css">
@@ -820,6 +822,9 @@ interface DirEntry {
   isDir: boolean;
   description?: string;
   dates?: string;
+  transliteration?: string;
+  meaning?: string;
+  category?: string;
   children?: DirEntry[];
 }
 
@@ -846,6 +851,7 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
   // Sort: directories first, then by context-appropriate order
   const isVerseDir = segments[0] === "verse";
   const isYearDir = segments[0] === "year";
+  const isLanguageDir = segments[0] === "language";
   const sorted = [...entries].sort((a, b) => {
     if (a.isDir !== b.isDir) return a.isDir ? -1 : 1;
     // Year directories: chronological (BC descending, then AD ascending; centuries/decades/years numeric)
@@ -870,13 +876,25 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
       const bNum = parseInt(b.slug, 10);
       if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum;
     }
+    // Language entries: alphabetize by Latin transliteration
+    if (isLanguageDir && !a.isDir && !b.isDir) {
+      const aKey = (a.transliteration || a.slug).toLowerCase();
+      const bKey = (b.transliteration || b.slug).toLowerCase();
+      return aKey.localeCompare(bKey);
+    }
     return a.name.localeCompare(b.name);
   });
 
   function renderEntry(e: DirEntry, indent: number): string {
     let label = escHtml(e.name);
-    if (e.dates) label += ` <span class="entry-dates">(${escHtml(e.dates)})</span>`;
-    if (e.description && !e.isDir) label += ` <span class="entry-desc">— ${escHtml(e.description)}</span>`;
+    // Language entries: show "hebrew (transliteration) — meaning"
+    if (e.category === "language" && e.transliteration) {
+      label = `${escHtml(e.name)} (<em>${escHtml(e.transliteration)}</em>)`;
+      if (e.meaning) label += ` <span class="entry-desc">— ${escHtml(e.meaning)}</span>`;
+    } else {
+      if (e.dates) label += ` <span class="entry-dates">(${escHtml(e.dates)})</span>`;
+      if (e.description && !e.isDir) label += ` <span class="entry-desc">— ${escHtml(e.description)}</span>`;
+    }
     const pad = " ".repeat(indent);
     // Only show folder icon for dirs that are NOT expanded (no children)
     const icon = (e.isDir && (!e.children || e.children.length === 0)) ? "📁 " : "";
@@ -884,6 +902,12 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
     if (e.children && e.children.length > 0) {
       const childSorted = [...e.children].sort((a, b) => {
         if (a.isDir !== b.isDir) return a.isDir ? -1 : 1;
+        // Language entries: sort by Latin transliteration
+        if (a.category === "language" && b.category === "language" && !a.isDir && !b.isDir) {
+          const aKey = (a.transliteration || a.slug).toLowerCase();
+          const bKey = (b.transliteration || b.slug).toLowerCase();
+          return aKey.localeCompare(bKey);
+        }
         return a.name.localeCompare(b.name);
       });
       html += `\n${pad}  <ul>`;
@@ -909,6 +933,7 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escHtml(title)} — Lapide Index</title>
 <link rel="canonical" href="${canonicalUrl}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/index/index.css">
 <script src="/index/components.js" type="module"></script>
@@ -1074,7 +1099,7 @@ async function main() {
   }
 
   // Track all generated HTML paths for directory indexes
-  const generatedPaths = new Map<string, { name: string; slug: string; description?: string; dates?: string }>();
+  const generatedPaths = new Map<string, { name: string; slug: string; description?: string; dates?: string; transliteration?: string; meaning?: string; category?: string }>();
 
   // Generate canonical entry pages
   let entryCount = 0;
@@ -1098,6 +1123,9 @@ async function main() {
       slug: fm.slug,
       description: fm.description || fm.role,
       dates: fm.dates ? String(fm.dates) : undefined,
+      transliteration: fm.transliteration ? String(fm.transliteration) : undefined,
+      meaning: fm.meaning ? String(fm.meaning) : undefined,
+      category: fm.category ? String(fm.category) : undefined,
     });
   }
   console.log(`Generated ${entryCount} entry pages`);
@@ -1177,6 +1205,9 @@ async function main() {
           isDir: false,
           description: info?.description,
           dates: info?.dates,
+          transliteration: info?.transliteration,
+          meaning: info?.meaning,
+          category: info?.category,
         });
       }
     }

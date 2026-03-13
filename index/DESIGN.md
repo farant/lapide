@@ -1219,6 +1219,17 @@ For large documents, split the review by section range and run multiple agents i
 
 Apply corrections, then re-run `bun tag-entity-refs.ts` (idempotent — strips and re-tags) if structural changes are needed, or apply targeted fixes with the Edit tool for individual corrections.
 
+**Language entity-ref pass**: The automated tagger does not tag `language/` category refs (Hebrew words, Greek terms, etc.), because these terms are often short, transliterated, or overlap with person names (e.g., "Samuel", "Haman", "Nun"). After the main entity-ref pass and review, run a focused manual pass for language refs:
+
+1. List all `language/` ref files and their transliterated names / `also_known_as` values
+2. Search the source HTML for each term, noting line numbers and surrounding context
+3. Apply tagging decisions:
+   - **Tag**: Hebrew/Greek book names, technical terms, and letter names when used in their linguistic sense (e.g., "Bereshith", "Torah", "Logos", "Caph")
+   - **Skip**: Terms that overlap with person refs already tagged in the same location (e.g., "Samuel" as person, "Haman" as person, "Obadiah" as person — when the person tag is more primary)
+   - **Skip**: Letter names used as part of a person's name rather than as a Hebrew letter (e.g., "Nun" in "Josue ben Nun")
+4. Follow the same first-mention-per-section convention as the automated tagger
+5. Add tags manually using the Edit tool (these are typically 15–30 tags per document)
+
 Output: fully annotated source HTML with entity-ref tags, JSON sidecar, and components.js script tag.
 
 ### Stage 6: Generate

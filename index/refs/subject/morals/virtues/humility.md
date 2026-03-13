@@ -14,6 +14,8 @@ related:
   subjects:
     - subject/morals/virtues/meekness
     - subject/morals/virtues/obedience
+    - subject/morals/virtues/poverty
+    - subject/theology/scripture/scripture-study
 ---
 
 The virtue of humility, especially as expressed in reluctance to accept ecclesiastical office (nolo episcopari) and in low self-assessment despite great learning. Moses declined God's call multiple times; Basil fled and feigned sickness; Van der Burch grieved deeply and resisted the archbishopric; Lapide affirmed "I am the most foolish of men."
@@ -32,3 +34,9 @@ The virtue of humility, especially as expressed in reluctance to accept ecclesia
   text: "Authert shone among the people of Cambrai and Hainault with marvellous humility and holiness."
 - `01_Preliminares.html#life-p3-s-b8b5a40` — Lapide's own humility: despite vast learning, he affirmed "I am the most foolish of men" and "I feel how little progress I have made."
   text: "So humble was his opinion of himself amid so vast a learning... that he would affirm: 'Truly and in my conscience, I am the most foolish of men, and the wisdom of men is not with me; I am a little child who does not know his own going out or coming in.'"
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-9d0ba6a` — Jerome compares his offering to skins and goats' hair while others offer gold and silver, and declares his humility before his critics.
+  text: "it goes well with us if we offer skins and goats' hair."
+- `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-e4bd610` — Jerome, knowing his humility, resolves to guard his ways and keep silence, citing Psalm 38.
+  text: "I, knowing my humility, will always remember that saying"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-a86b9ee` — Jerome refuses to be a master, pledging himself as a companion: "refusing to be a master, I pledge myself as a companion."
+  text: "refusing to be a master, I pledge myself as a companion."

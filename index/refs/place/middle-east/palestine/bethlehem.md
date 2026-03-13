@@ -24,3 +24,5 @@ Town in Palestine, sought by St. Jerome as his place of study and asceticism. La
 
 - `01_Preliminares.html#life-p2-s-a1a1126` — Lapide compares his cell in Rome to Jerome's Bethlehem
   text: "whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-35763c8` — David passes from the flocks of Bethlehem to the throne of Judah
+  text: "who passes from the flocks of Bethlehem to the throne of Judah"

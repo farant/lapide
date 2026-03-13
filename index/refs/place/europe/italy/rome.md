@@ -38,3 +38,13 @@ Seat of the papacy and the Catholic Church. Lapide was summoned here by his Jesu
   text: "he paid at last the debt of nature in the Holy City, where he had always desired to mingle his bones with those of the saints, on 12 March in the year 1637"
 - `01_Preliminares.html#clement-viii-p6-s-bd2d856` — Clement VIII's bull given at Rome, at St. Peter's
   text: "Given at Rome, at St. Peter's, under the Fisherman's Ring, on the 9th day of November 1592"
+- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-1a20bf4` — Rome could not draw men to contemplate itself, but the fame of one man (Titus Livius) brought them there
+  text: "those whom Rome had not drawn to contemplate itself, the fame of one man brought there"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-d48222f` — Lacordaire says Rome with its tribune and wars still pursues us with its invincible image
+  text: "Rome, with its tribune and its wars, still pursues us with its invincible image"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p5-s-e109210` — Rome produced Livy before dying and inspired Tacitus under Nero
+  text: "it was Rome that produced Livy before dying, and it was Rome still that inspired Tacitus"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-a5e60be` — Rome condemns Christ; Paul's chains and blood sanctify Rome's dust
+  text: "Rome at last touches his chains and drinks of his blood upon its glorious dust"
+- `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p51-s-b658841` — John saw idolatrous Rome fall in the Apocalypse
+  text: "saw idolatrous Rome fall"
