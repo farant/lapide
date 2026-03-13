@@ -466,6 +466,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   verse: "Verse",
   bibliography: "Bibliography",
   subject: "Subject",
+  language: "Language",
 };
 
 const SUBCATEGORY_LABELS: Record<string, string> = {
@@ -499,6 +500,9 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   sacraments: "Sacraments",
   devotion: "Devotion",
   "natural-philosophy": "Natural Philosophy",
+  hebrew: "Hebrew",
+  greek: "Greek",
+  aramaic: "Aramaic",
 };
 
 function labelFor(segment: string): string {
@@ -565,6 +569,20 @@ function generateEntryHtml(ref: RefData): string {
   }
   if (fm.lat != null && fm.lon != null) {
     metaParts.push(`    <dt>Coordinates</dt>\n    <dd>${fm.lat}, ${fm.lon}</dd>`);
+  }
+
+  // Language-specific fields
+  if (fm.transliteration) {
+    metaParts.push(`    <dt>Transliteration</dt>\n    <dd><em>${escHtml(String(fm.transliteration))}</em></dd>`);
+  }
+  if (fm.old_hebrew) {
+    metaParts.push(`    <dt>Old Hebrew</dt>\n    <dd class="old-hebrew">${escHtml(String(fm.old_hebrew))}</dd>`);
+  }
+  if (fm.meaning) {
+    metaParts.push(`    <dt>Meaning</dt>\n    <dd>${escHtml(String(fm.meaning))}</dd>`);
+  }
+  if (fm.root) {
+    metaParts.push(`    <dt>Root</dt>\n    <dd>${escHtml(String(fm.root))}</dd>`);
   }
 
   // Verse-specific fields
@@ -711,6 +729,7 @@ ${workItems.join("\n")}
         : relCategory === "places" ? "place"
         : relCategory === "subjects" ? "subject"
         : relCategory === "years" ? "year"
+        : relCategory === "words" ? "language"
         : relCategory;
 
       for (const s of slugs) {

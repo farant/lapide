@@ -13,13 +13,14 @@ A browsable, cross-referenced index/encyclopedia for the Lapide commentary and r
 
 ## Categories
 
-Seven top-level categories, each a subdirectory of `index/`:
+Eight top-level categories, each a subdirectory of `index/`:
 
 | Category | Path | Description |
 |---|---|---|
 | Person | `index/person/` | Church Fathers, biblical figures, popes, classical authors, etc. |
 | Place | `index/place/` | Geographic locations — cities, regions, bodies of water, sacred sites |
 | Organization | `index/organization/` | Institutions, religious orders, councils, governments, publishers |
+| Language | `index/language/` | Hebrew, Greek, and other words discussed in the commentary |
 | Year | `index/year/` | Chronological entries aggregating events/references per year |
 | Verse | `index/verse/` | Bible verse index — every verse referenced in the commentaries |
 | Bibliography | `index/bibliography/` | Works cited in the commentaries |
@@ -500,6 +501,109 @@ index/subject/
 ```
 
 **Taxonomy management during normalization**: The subject hierarchy is the category that requires the most judgment at Stage 2. The normalizer decides for each extracted subject:
+
+### Language
+
+Words and etymologies discussed in the commentary, organized by source language. Only words that Lapide explicitly discusses — etymological analyses, translation comparisons, semantic arguments — get entries. Do not extract words simply because they appear in a quoted verse; extract them when the commentary *comments on the word itself*.
+
+```
+index/language/
+  index.html                          → lists languages
+  hebrew/
+    index.html                        → lists all Hebrew word entries
+    adamah.html                       → אֲדָמָה (earth, ground)
+    adam.html                         → אָדָם (man, humanity)
+    bara.html                         → בָּרָא (to create)
+    tohu.html                         → תֹּהוּ (formless, void)
+    ruach.html                        → רוּחַ (spirit, wind, breath)
+    nephesh.html                      → נֶפֶשׁ (soul, living being)
+    yom.html                          → יוֹם (day)
+    shamayim.html                     → שָׁמַיִם (heavens)
+    eretz.html                        → אֶרֶץ (earth, land)
+    nachash.html                      → נָחָשׁ (serpent)
+  greek/                              → (future, for NT commentary)
+    index.html
+    logos.html
+    agape.html
+  aramaic/                            → (if needed)
+    index.html
+```
+
+**Three renderings**: Every Hebrew (and future Greek/Aramaic) word entry includes three representations of the word:
+
+1. **Modern script** — with full vowel pointing (nikkud for Hebrew, diacritics for Greek): אֲדָמָה
+2. **Transliteration** — scholarly romanization: *adamah*
+3. **Old Hebrew script** — Phoenician Unicode characters (U+10900–U+1091F): 𐤀𐤃𐤌𐤄
+
+All three appear in the entry page heading, the entity panel card, and the directory listing. The Old Hebrew rendering gives a visual connection to the ancient text; Apple platforms (iOS/macOS) render Phoenician Unicode natively.
+
+**Ref file format**:
+
+```yaml
+---
+name: אֲדָמָה
+slug: language/hebrew/adamah
+category: language
+subcategory: hebrew
+transliteration: adamah
+old_hebrew: 𐤀𐤃𐤌𐤄
+meaning: "earth, ground, soil"
+root: אדם
+related:
+  words:
+    - language/hebrew/adam
+  people:
+    - person/biblical/adam
+  subjects:
+    - subject/theology/creation
+---
+
+The Hebrew word for "earth" or "ground" — the substance from which God formed man (Adam). Lapide discusses the etymological connection between אָדָם (adam, "man") and אֲדָמָה (adamah, "earth"), noting that man's name encodes his origin.
+
+## References in Commentary
+
+- `01_genesis_02.html#verse-7-p3-s-a1b2c3d` — Lapide on the wordplay between adam and adamah
+  text: "Adam, that is, man, because he was formed from the adamah, that is, from the red earth"
+```
+
+**Slug convention**: Use the transliterated form, lowercase, no diacritics. `adamah` not `ădāmāh`. Keep it simple and URL-friendly.
+
+**Extraction conventions**:
+
+- **Extract when Lapide comments on a word** — e.g., "The Hebrew *bara* signifies creation from nothing, unlike *asah* which means to fashion from existing material." This is an etymology/word study and gets a Language entry.
+- **Do not extract bare verse quotations** — if Lapide quotes Genesis 1:1 in Hebrew but doesn't discuss the individual words, those words don't get entries.
+- **Proper name etymologies** — when Lapide explains the meaning of a name (e.g., "Eve, that is, *ḥawwāh*, meaning *living*"), create a Language entry for the word and cross-link to the Person entry. The etymology lives in the Language entry; the Person entry references it.
+- **Translation comparisons** — when Lapide compares the Hebrew, LXX, and Vulgate renderings of a word, the Hebrew word gets the primary entry with notes on the Greek and Latin alternatives.
+- **Root connections** — use the `root` field to link words that share a Hebrew root (e.g., אָדָם and אֲדָמָה both from root אדם). The `related.words` list links to other Language entries with the same root.
+
+**Old Hebrew (Phoenician) character mapping**:
+
+| Hebrew | Old Hebrew | Name |
+|---|---|---|
+| א | 𐤀 | Aleph |
+| ב | 𐤁 | Beth |
+| ג | 𐤂 | Gimel |
+| ד | 𐤃 | Daleth |
+| ה | 𐤄 | He |
+| ו | 𐤅 | Waw |
+| ז | 𐤆 | Zayin |
+| ח | 𐤇 | Heth |
+| ט | 𐤈 | Teth |
+| י | 𐤉 | Yodh |
+| כ/ך | 𐤊 | Kaph |
+| ל | 𐤋 | Lamedh |
+| מ/ם | 𐤌 | Mem |
+| נ/ן | 𐤍 | Nun |
+| ס | 𐤎 | Samekh |
+| ע | 𐤏 | Ayin |
+| פ/ף | 𐤐 | Pe |
+| צ/ץ | 𐤑 | Tsade |
+| ק | 𐤒 | Qoph |
+| ר | 𐤓 | Resh |
+| ש | 𐤔 | Shin |
+| ת | 𐤕 | Taw |
+
+When converting to Old Hebrew, strip nikkud (vowel points) from the modern Hebrew — Old Hebrew is consonantal only. Final forms (ך, ם, ן, ף, ץ) map to the same Phoenician character as their medial counterparts.
 
 - **Placement**: Where in the hierarchy does it belong? A narrow topic like "Love of Money as Spiritual Poison" may become an occurrence within `morals/vices/avarice` rather than a standalone entry.
 - **Merging**: Is this the same topic as an existing entry under a different name? "Nolo Episcopari" and "Reluctance to Accept Office" are the same subject.
