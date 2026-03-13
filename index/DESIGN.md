@@ -176,12 +176,12 @@ index/place/
 
 **Modern country aliases**: Every place should be browsable under its modern country in addition to its historical/cultural region. The canonical entry uses the historical grouping (since that's the commentary context); a lightweight alias file under the modern country ensures discoverability. For example, Mechlin is canonical at `low-countries/mechlin` with an alias at `belgium/mechlin`. Modern country directories include `europe/belgium/`, `asia/turkey/`, `middle-east/israel/`, `middle-east/jordan/`, `middle-east/iraq/`, etc. Places already under their modern country (e.g., `europe/france/paris`) need no alias.
 
-**Coordinates**: Every place ref file includes `lat` and `lon` fields in the YAML frontmatter (decimal degrees, WGS84). For cities, use the city center. For regions, use an approximate centroid. For biblical places, use best scholarly estimates of the traditional location. Coordinates enable map-based browsing and visualization in future phases.
+**Coordinates**: Every place ref file includes `lat` and `lon` fields in the YAML frontmatter (decimal degrees, WGS84). For cities, use the city center. For regions, use an approximate centroid. For biblical places, use best scholarly estimates of the traditional location. The generator downloads OpenStreetMap satellite tiles and renders a 3×1 tile grid with a red pin at the coordinates on each place entry page. The entity panel also displays the map when showing a place card.
 
 ```yaml
 # Example place frontmatter with coordinates and alias
 name: Mechlin
-slug: europe/low-countries/mechlin
+slug: place/europe/low-countries/mechlin
 category: place
 subcategory: city
 also_known_as:
@@ -191,7 +191,7 @@ description: City in the Duchy of Brabant; seat of the metropolitan archbishopri
 lat: 51.0259
 lon: 4.4776
 aliases:
-  - europe/belgium/mechlin
+  - place/europe/belgium/mechlin
 ```
 
 ### Organization
@@ -308,19 +308,25 @@ index/verse/
 
 Organized by author. Each work includes a `year` field in the frontmatter — the approximate year of composition or publication. For works with uncertain dates, use `c.` prefix (e.g., `c. 426`) or a range (e.g., `413–426`). For works composed over many years, use the completion or publication date. This enables chronological browsing, cross-linking to Year entries, and timeline visualization.
 
+Each work also includes an `author_slug` field linking to the author's person entry. This enables cross-referencing:
+- **On bibliography entry pages**: the Author field links to the person page
+- **On person entry pages**: a "Works" section lists all bibliography entries with matching `author_slug`
+- **On bibliography directory pages** (e.g., `/index/bibliography/jerome/`): a "Works by [Author]" link to the person page
+
 ```yaml
 # Example bibliography frontmatter
 ---
 name: De Civitate Dei
-slug: augustine/de-civitate-dei
+slug: bibliography/augustine/de-civitate-dei
 category: bibliography
 author: St. Augustine
+author_slug: person/saint/augustine
 year: "413–426"
 related:
   people:
-    - saint/augustine
+    - person/saint/augustine
   subjects:
-    - theology/providence
+    - subject/theology/providence
 ---
 ```
 
@@ -530,7 +536,7 @@ Markdown with YAML frontmatter. Structured fields in the frontmatter, prose desc
 ```markdown
 ---
 name: St. Jerome
-slug: saint/jerome
+slug: person/saint/jerome
 category: person
 subcategory: saint
 also_known_as:
@@ -540,42 +546,43 @@ also_known_as:
 dates: c. 342–420
 role: Church Father, translator of the Vulgate
 aliases:
-  - saint/hieronymus
+  - person/saint/hieronymus
 related:
   people:
-    - saint/augustine
-    - pope/damasus-i
+    - person/saint/augustine
+    - person/pope/damasus-i
   places:
-    - low-countries/bethlehem
-    - italy/rome
+    - place/middle-east/palestine/bethlehem
+    - place/europe/italy/rome
   organizations:
-    - religious-order/...
+    - organization/religious-order/...
   works:
-    - jerome/vulgate
-    - jerome/epistles
+    - bibliography/jerome/vulgate
+    - bibliography/jerome/epistles
   subjects:
-    - exegesis/textual-criticism/jerome-translation
-    - theology/scripture/vulgate
+    - subject/exegesis/textual-criticism/jerome-translation
+    - subject/theology/scripture/vulgate
   years:
-    - ad/4th-century/40s/342
-    - ad/5th-century/20s/420
+    - year/ad/4th-century/40s/342
+    - year/ad/5th-century/20s/420
 ---
 
 One of the four great Latin Doctors of the Church. Best known for his translation of the Bible into Latin (the Vulgate), commissioned by Pope Damasus I. Spent his later years in a monastic cell in Bethlehem.
 
 ## References in Commentary
 
-- `01_Preliminares.html#preface-reader-p3-r4e7a1b2` — his translation praised by Augustine, Gregory, Isidore
+- `01_Preliminares.html#preface-reader-p3-s-fab5457` — his translation praised by Augustine, Gregory, Isidore
   text: "Saint Augustine bears the same testimony, calling Jerome a most learned man and most skilled in three languages, whose translation he judges 'renders everything more truly from the Hebrew speech.'"
-- `01_Preliminares.html#preface-reader-p5-r8c3d9f1` — "greatest Doctor" for Scripture interpretation
-  text: "He is celebrated, in the judgement of all, as the greatest Doctor whom God has given to His Church for the interpretation of the Holy Scriptures."
-- `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus` — throughout
+- `01_Preliminares.html#preface-reader-p8-s-acb6948` — "greatest Doctor" for Scripture interpretation
+  text: "the Catholic Church not undeservedly celebrates St. Jerome as the greatest Doctor and as one divinely raised up for the interpretation of the sacred Scriptures"
 ```
 
 Each reference has three parts:
-1. **Link**: `` `file.html#paragraph-r{hash}` `` — the passage span ID (hash derived from text content)
+1. **Link**: `` `file.html#paragraph-s-{hash}` `` — the sidecar annotation ID (hash derived from text content via SHA-256)
 2. **Synopsis** (after `—`): a human-readable summary of what the passage says about this entity
-3. **`text:`** (indented on next line): the exact quoted text of the passage span, used for verification
+3. **`text:`** (indented on next line): the exact quoted text of the passage, used for verification
+
+**Note**: Slugs in `related:` fields include the category prefix (e.g., `person/saint/augustine`, not just `saint/augustine`). The slug in the frontmatter also includes the category prefix, matching the file path under `index/refs/`.
 
 ### Alias ref file
 
@@ -587,12 +594,13 @@ alias_of: saint/jerome
 
 ### Code generation
 
-A generator script (`bun generate-index.ts` or similar) reads all ref files and produces:
+`bun generate-index.ts` reads all ref files and produces:
 
-1. **Entry HTML pages** — full `<html>` documents with the `<article id="entry">` pattern, styled with `index.css`, including breadcrumb nav, metadata, description, references, cross-links
-2. **Alias HTML pages** — lightweight pages that redirect to or transclude the canonical entry
-3. **Directory index pages** — `index.html` at every directory level listing children (both canonical entries and aliases)
+1. **Entry HTML pages** — full `<html>` documents with the `<article id="entry">` pattern, styled with `index.css`, including breadcrumb nav, metadata, description, references, cross-links, and satellite maps for places with coordinates
+2. **Alias HTML pages** — lightweight redirect pages (`<meta http-equiv="refresh">`) pointing to the canonical entry
+3. **Directory index pages** — `index.html` at every directory level listing children (both canonical entries and aliases). Verse directory uses canonical Bible book ordering (Vulgate, 73 books). Root index includes an introductory note.
 4. **Manifest** — `index/manifest.json` regenerated from the ref file tree
+5. **Map tiles** — downloads and caches OpenStreetMap satellite tiles for place entries with `lat`/`lon` fields (3×1 grid at zoom 10)
 
 The generator is idempotent — safe to run repeatedly. It replaces all manual HTML maintenance for the index, similar to how `bun update-site.ts` handles hreflang and sitemap.
 
@@ -648,7 +656,7 @@ Stage 6 (Generate) can be re-run at any time to regenerate all HTML from the cur
 
 ## Entry Page Format
 
-Each generated entry is a full HTML page with the main content in an `<article id="entry">` for transclusion.
+Each generated entry is a full HTML page with the main content in an `<article id="entry">` for transclusion. All generated pages include a viewport meta tag for mobile rendering.
 
 ### Person entry example
 
@@ -656,13 +664,14 @@ Each generated entry is a full HTML page with the main content in an `<article i
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>St. Augustine of Hippo — Lapide Index</title>
-  <meta name="description" content="St. Augustine of Hippo (354–430), Bishop and Doctor of the Church. References in Cornelius a Lapide's biblical commentary.">
-  <link rel="canonical" href="https://lapide.org/index/person/saint/augustine.html">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/index/index.css">
-  <script src="/index/components.js" type="module"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>St. Jerome — Lapide Index</title>
+<meta name="description" content="St. Jerome (c. 342–420), Doctor of the Church, translator of the Vulgate Bible. References in Cornelius a Lapide's biblical commentary.">
+<link rel="canonical" href="https://lapide.org/index/person/saint/jerome.html">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/index/index.css">
+<script src="/index/components.js" type="module"></script>
 </head>
 <body>
 
@@ -670,58 +679,50 @@ Each generated entry is a full HTML page with the main content in an `<article i
   <a href="/index/">Index</a> ›
   <a href="/index/person/">Person</a> ›
   <a href="/index/person/saint/">Saints</a> ›
-  Augustine
+  St. Jerome
 </nav>
 
-<article id="entry" data-category="person" data-slug="saint/augustine">
+<article id="entry" data-category="person" data-slug="person/saint/jerome">
 
-  <h1>St. Augustine of Hippo</h1>
+  <h1>St. Jerome</h1>
 
   <dl class="entry-meta">
-    <dt>Full name</dt>
-    <dd>Aurelius Augustinus Hipponensis</dd>
-    <dt>Born</dt>
-    <dd><year-ref target="ad/4th-century/50s/354">354</year-ref>, <place-ref target="city/thagaste">Thagaste</place-ref></dd>
-    <dt>Died</dt>
-    <dd><year-ref target="ad/5th-century/30s/430">430</year-ref>, <place-ref target="city/hippo">Hippo Regius</place-ref></dd>
+    <dt>Also known as</dt>
+    <dd>Hieronymus, Eusebius Sophronius Hieronymus</dd>
+    <dt>Dates</dt>
+    <dd>c. 342–420</dd>
     <dt>Role</dt>
-    <dd>Bishop of Hippo, Church Father, Doctor of the Church</dd>
+    <dd>Doctor of the Church, translator of the Vulgate Bible</dd>
   </dl>
 
   <section id="description">
-    <p>One of the most influential theologians in the history of Christianity. His writings on grace, original sin, and the Trinity shaped Western theological tradition for over a millennium. Lapide cites him more frequently than almost any other Church Father.</p>
+    <p>One of the four great Latin Doctors of the Church. Best known for his translation of the Bible into Latin (the Vulgate).</p>
+  </section>
+
+  <section id="works">
+    <h2>Works</h2>
+    <ul>
+      <li><a href="/index/bibliography/jerome/vulgate.html">Vulgate</a></li>
+    </ul>
   </section>
 
   <section id="references">
     <h2>References in Commentary</h2>
     <ul>
       <li>
-        <a href="/01_genesis_01.html#verse-1-p3">Commentary on Genesis, Chapter 1 — Verse 1</a>
-        <span class="ref-context">— on creation <em>ex nihilo</em>, citing <bib-ref target="augustine/confessions">Confessions</bib-ref> XI</span>
+        <a href="/01_Preliminares.html?entity=person%2Fsaint%2Fjerome#preface-reader-p3-s-fab5457" class="source-ref">Preliminares — Preface Reader P3</a>
+        <span class="ref-context">— Testified that in his time there were as many copies as manuscripts</span>
+        <blockquote class="ref-quote">"St. Jerome testified occurred in his time: namely, there were as many copies as there were manuscripts"</blockquote>
       </li>
-      <li>
-        <a href="/01_genesis_03.html#verse-15-p2">Commentary on Genesis, Chapter 3 — Verse 15</a>
-        <span class="ref-context">— on the protoevangelium and enmity between the serpent and the woman</span>
-      </li>
-    </ul>
-  </section>
-
-  <section id="works-cited">
-    <h2>Works Cited</h2>
-    <ul>
-      <li><bib-ref target="augustine/de-civitate-dei">De Civitate Dei</bib-ref></li>
-      <li><bib-ref target="augustine/de-genesi-ad-litteram">De Genesi ad Litteram</bib-ref></li>
-      <li><bib-ref target="augustine/confessions">Confessiones</bib-ref></li>
     </ul>
   </section>
 
   <section id="related">
     <h2>Related</h2>
     <ul>
-      <li><subject-ref target="theology/grace">Grace</subject-ref></li>
-      <li><subject-ref target="theology/original-sin">Original Sin</subject-ref></li>
-      <li><person-ref target="heresiarch/pelagius">Pelagius</person-ref></li>
-      <li><place-ref target="city/hippo">Hippo Regius</place-ref></li>
+      <li><a href="/index/person/saint/augustine.html">St. Augustine of Hippo</a></li>
+      <li><a href="/index/place/middle-east/palestine/bethlehem.html">Bethlehem</a></li>
+      <li><a href="/index/bibliography/jerome/vulgate.html">Vulgate</a></li>
     </ul>
   </section>
 
@@ -731,17 +732,25 @@ Each generated entry is a full HTML page with the main content in an `<article i
 </html>
 ```
 
+**Key details**:
+- `data-slug` includes the full category prefix (e.g., `person/saint/jerome`)
+- Reference links include `?entity=slug` query param so the entity panel auto-opens when navigating from the index
+- Reference links use `#paragraph-s-{hash}` fragment IDs (sidecar annotation IDs) for passage-level highlighting
+- `<blockquote class="ref-quote">` shows the exact quoted text from the passage
+- The `<section id="works">` appears on person pages when the person has entries in the bibliography (via `author_slug` cross-referencing)
+- All cross-references in the generated HTML use plain `<a>` links, not custom web component tags
+
 ### Year entry example
 
 ```html
-<article id="entry" data-category="year" data-slug="ad/4th-century/50s/354">
+<article id="entry" data-category="year" data-slug="year/ad/17th-century/30s/1637">
 
-  <h1>354 AD</h1>
+  <h1>1637</h1>
 
   <section id="events">
     <h2>Events</h2>
     <ul>
-      <li>Birth of <person-ref target="saint/augustine">St. Augustine</person-ref> in <place-ref target="city/thagaste">Thagaste</place-ref>, North Africa</li>
+      <li>Death of <a href="/index/person/cleric/cornelius-a-lapide.html">Cornelius a Lapide</a> in <a href="/index/place/europe/italy/rome.html">Rome</a></li>
     </ul>
   </section>
 
@@ -749,97 +758,99 @@ Each generated entry is a full HTML page with the main content in an `<article i
     <h2>References in Commentary</h2>
     <ul>
       <li>
-        <a href="/01_Preliminares.html#augustine-bio">Preliminares — Augustine biography</a>
+        <a href="/01_Preliminares.html?entity=year%2Fad%2F17th-century%2F30s%2F1637#life-p5-s-abc1234" class="source-ref">Preliminares — Life P5</a>
+        <span class="ref-context">— Death of Lapide in Rome</span>
+        <blockquote class="ref-quote">"quoted passage text"</blockquote>
       </li>
     </ul>
   </section>
 
 </article>
 ```
+
+**Note**: Year entries have no description prose — only events and references. The entity panel extracts events as bullet points for display in the floating card.
 
 ### Verse entry example
 
 ```html
-<article id="entry" data-category="verse" data-slug="genesis/3/15">
+<article id="entry" data-category="verse" data-slug="verse/genesis/3/15">
 
   <h1>Genesis 3:15</h1>
 
-  <section id="text">
-    <h2>Vulgate</h2>
-    <p class="verse-text" lang="la"><em>Inimicitias ponam inter te et mulierem, et semen tuum et semen illius: ipsa conteret caput tuum, et tu insidiaberis calcaneo eius.</em></p>
-    <h2>English</h2>
-    <p class="verse-text">I will put enmities between thee and the woman, and thy seed and her seed: she shall crush thy head, and thou shalt lie in wait for her heel.</p>
+  <section id="description">
+    <p>The protoevangelium — first promise of redemption after the Fall.</p>
   </section>
 
   <section id="references">
-    <h2>Commentary References</h2>
+    <h2>References in Commentary</h2>
     <ul>
       <li>
-        <a href="/01_genesis_03.html#verse-15">Commentary on Genesis, Chapter 3 — Verse 15</a>
-        <span class="ref-context">— extensive discussion of the protoevangelium; Mariological and Christological interpretations</span>
+        <a href="/01_genesis_03.html?entity=verse%2Fgenesis%2F3%2F15#verse-15-p1-s-abc1234" class="source-ref">Commentary on Genesis, Chapter 3 — Verse 15</a>
+        <span class="ref-context">— extensive discussion of the protoevangelium</span>
+        <blockquote class="ref-quote">"quoted passage text"</blockquote>
       </li>
     </ul>
   </section>
 
-  <section id="commentators">
-    <h2>Commentators Cited</h2>
+  <section id="related">
+    <h2>Related</h2>
     <ul>
-      <li><person-ref target="saint/augustine">St. Augustine</person-ref></li>
-      <li><person-ref target="saint/irenaeus">St. Irenaeus</person-ref></li>
-    </ul>
-  </section>
-
-  <section id="subjects">
-    <h2>Subjects</h2>
-    <ul>
-      <li><subject-ref target="theology/protoevangelium">Protoevangelium</subject-ref></li>
-      <li><subject-ref target="theology/mariology">Mariology</subject-ref></li>
+      <li><a href="/index/person/saint/augustine.html">St. Augustine of Hippo</a></li>
+      <li><a href="/index/subject/theology/mariology.html">Mariology</a></li>
     </ul>
   </section>
 
 </article>
 ```
 
+### Verse directory
+
+The top-level verse directory (`/index/verse/`) displays book names in canonical Vulgate Bible order (73 books from Genesis through Revelation), not alphabetically. Books link to their chapter listing; the directory does not nest chapters inline.
+
 ## Web Components
 
-A single base class with subclasses per category. Defined in `index/components.js`.
+Defined in `index/components.js`. A single `<entity-ref>` custom element handles forward linking from commentary text to index entries. An `EntityPanel` singleton manages a floating card/side panel that fetches and displays entity summaries.
 
-```javascript
-class IndexRef extends HTMLElement {
-  static category = '';
+### `<entity-ref>` element
 
-  connectedCallback() {
-    const target = this.getAttribute('target');
-    const link = document.createElement('a');
-    link.href = `/index/${this.constructor.category}/${target}.html`;
-    link.className = `index-ref ${this.constructor.category}-ref`;
-    link.innerHTML = this.innerHTML;
-    this.replaceChildren(link);
-  }
-}
+Used in source HTML (added during Stage 5) to create clickable forward links from commentary text to index entry pages:
 
-class PersonRef extends IndexRef { static category = 'person'; }
-class PlaceRef extends IndexRef { static category = 'place'; }
-class OrgRef extends IndexRef { static category = 'organization'; }
-class YearRef extends IndexRef { static category = 'year'; }
-class VerseRef extends IndexRef { static category = 'verse'; }
-class BibRef extends IndexRef { static category = 'bibliography'; }
-class SubjectRef extends IndexRef { static category = 'subject'; }
-
-customElements.define('person-ref', PersonRef);
-customElements.define('place-ref', PlaceRef);
-customElements.define('org-ref', OrgRef);
-customElements.define('year-ref', YearRef);
-customElements.define('verse-ref', VerseRef);
-customElements.define('bib-ref', BibRef);
-customElements.define('subject-ref', SubjectRef);
+```html
+<entity-ref slug="person/saint/jerome">St. Jerome</entity-ref>
 ```
+
+The element renders as inline text with a dotted underline. Clicking/tapping it opens the entity panel.
+
+### Entity panel (`EntityPanel`)
+
+A singleton floating card that fetches entity entry pages and displays a summary. Behavior differs by viewport width:
+
+- **Desktop (>860px)**: Fixed side panel in the right margin, sticky to viewport
+- **Mobile (≤860px)**: Inserted inline in the DOM directly after the source paragraph
+
+Features:
+- **Card stack**: Multiple entity cards can be open simultaneously, navigable with prev/next buttons
+- **Auto-open**: When navigating to a source page with `?entity=slug` query param (from an index entry's reference link), the panel opens automatically
+- **Fetches and caches**: Loads the entry's `<article>` HTML, extracts name, metadata, description, map, and events
+- **Mobile scroll hint**: When the panel is inserted below the viewport on mobile, a bouncing down-arrow indicator appears at the bottom of the screen. Tapping it scrolls to the panel; it auto-dismisses after 3 seconds.
+
+### Passage highlighting
+
+When a URL fragment matches the `#...-s-{hash}` pattern (a sidecar annotation ID), JavaScript:
+
+1. Reads the JSON sidecar (`<script type="application/json" id="passage-annotations">`)
+2. Finds the annotation by ID
+3. Uses DOM TreeWalker to locate the text node positions for the character offsets
+4. Wraps the text range in a `<mark class="passage-highlight">` element using the Range API
+5. Scrolls to the highlighted text
+6. Fades the highlight out after 5 seconds (background-color transition to transparent)
+
+Falls back to highlighting the entire paragraph if the Range spans multiple elements.
 
 ### Future enhancements
 
-- **Popover on hover**: fetch the entry's `<article>` and display as a tooltip/popover
-- **Transclusion**: a `<index-embed target="person/saint/augustine">` component that inlines the full entry
 - **Language awareness**: components detect `document.documentElement.lang` and append the appropriate suffix to the URL
+- **Transclusion**: a `<index-embed>` component that inlines the full entry article
 
 ## Deep Linking
 
@@ -858,39 +869,27 @@ The commentary text uses section-level anchors (e.g., `id="verse-1"`, `id="helme
 
 These IDs are added during Stage 0 (Prep), *before* extraction agents read the file. This ensures agents reference actual paragraph IDs rather than approximate counts. Existing section-level IDs are preserved.
 
-### Passage spans (Stage 3: Annotate)
+### Passage annotations (Stage 3: Annotate)
 
-After extraction and normalization, passage-level spans are added within paragraphs to mark the exact text that each reference links to:
+After extraction and normalization, passage annotations are recorded in a JSON sidecar embedded in the source HTML (not as inline `<span>` markup — see Stage 3 below for why). The sidecar uses character offsets to identify text ranges within paragraphs.
 
-```html
-<p id="dedicatory-letter-p7">
-<span class="ref-passage" id="dedicatory-letter-p7-ra3f2b1" data-entities="person/saint/basil-the-great">Saint Basil was the Moses of his age, says his peer Blessed Gregory Nazianzen in his Oration in Praise of Saint Basil, and he learned to act like Moses from Moses himself.</span>
-</p>
-```
+**ID convention**: `{paragraph-id}-s-{hash}` where `hash` is the first 7 characters of a hex-encoded SHA-256 hash of the plain text content of the passage (HTML tags stripped, whitespace normalized). The `-s-` prefix distinguishes sidecar annotation IDs from paragraph IDs. This makes every reference self-verifying — if the passage text is edited, the hash no longer matches.
 
-**ID convention**: `{paragraph-id}-r{hash}` where `hash` is the first 7 characters of a hex-encoded hash of the plain text content of the span (HTML tags stripped, whitespace normalized). This makes every reference self-verifying — if the passage text is edited, the hash no longer matches, and stale links surface automatically.
-
-**Hash computation**: Strip HTML tags from the span content, normalize whitespace to single spaces, trim, then take the first 7 hex characters of a SHA-256 hash of the resulting string.
-
-The `data-entities` attribute lists all entity slugs (comma-separated) that reference this passage. This enables bidirectional linking: the passage knows which index entries point to it, and the index entries know which passage they point to.
+**Hash computation**: Strip HTML tags from the passage text, normalize whitespace to single spaces, trim, then take the first 7 hex characters of a SHA-256 hash of the resulting string.
 
 ### Entity-ref tags (Stage 5)
 
-After passage spans are verified, inline entity references are added using web component tags:
+After passage annotations are verified, inline entity references are added using the `<entity-ref>` web component tag:
 
 ```html
-<p id="verse-1-p3"><person-ref target="saint/augustine">St. Augustine</person-ref>, in his <bib-ref target="augustine/de-civitate-dei"><em>De Civitate Dei</em></bib-ref> (lib. XV, cap. 8), argues that...</p>
+<p id="verse-1-p3"><entity-ref slug="person/saint/augustine">St. Augustine</entity-ref>, in his <entity-ref slug="bibliography/augustine/de-civitate-dei"><em>De Civitate Dei</em></entity-ref> (lib. XV, cap. 8), argues that...</p>
 ```
 
-Entity-ref tags create forward links from the commentary text to index entry pages. They are distinct from passage spans (which create backlinks from index entries to the commentary). Both can coexist on the same text:
-
-```html
-<span class="ref-passage" id="dedicatory-letter-p7-r5c8a1e2" data-entities="person/classical/libanius">
-  <entity-ref slug="person/classical/libanius">Libanius</entity-ref> the Sophist
-</span>
-```
+Entity-ref tags create forward links from the commentary text to index entry pages. They are distinct from sidecar passage annotations (which create backlinks from index entries to the commentary). Both can coexist on the same text — the entity-ref is inline in the HTML while the passage annotation is recorded in the JSON sidecar with character offsets.
 
 Entity-ref annotation is conservative — only tag references that can be confidently identified. Ambiguous references are left untagged and can be resolved in later passes.
+
+**Tool**: `bun tag-entity-refs.ts <source.html>` — reads all ref files, builds a name-to-slug index, and wraps matching entity names in the source HTML with `<entity-ref>` tags. The tagger normalizes Unicode apostrophes for matching (U+2018/U+2019/U+02BC → ASCII U+0027).
 
 ## Pipeline
 
@@ -1058,6 +1057,26 @@ This stage is fully automated and idempotent. It can be re-run at any time — a
 
 Output: `index/**/*.html` entry pages, alias pages, directory index pages, and `index/manifest.json`.
 
+### Pipeline tools summary
+
+| Stage | Tool | Command |
+|---|---|---|
+| 0 | Prep | `bun number-paragraphs.ts <source.html>` |
+| 1 | Extract | Manual (agents) |
+| 2 | Normalize | Manual (agents) + `bun validate-refs.ts` |
+| 3 | Annotate | `bun annotate-source.ts <source.html>` |
+| 4 | Verify | `bun validate-refs.ts` |
+| 5 | Entity-ref | `bun tag-entity-refs.ts <source.html>` |
+| 6 | Generate | `bun generate-index.ts` |
+
+Additional utility tools:
+- `bun validate-extractions.ts <source.html> [extraction-dir]` — validates extraction files against source HTML
+- `bun audit-refs.ts` — detailed audit of ref file references
+- `bun lint-annotations.ts` — checks sidecar annotation integrity
+- `bun fix-ref-links.ts` — repairs broken ref file links
+- `bun sync-passage-refs.ts` — syncs passage references across ref files
+- `bun check-index-links.ts` / `bun fix-index-links.ts` — check and repair index page links
+
 ### Pipeline notes
 
 Each stage has a review checkpoint. Documents can be at different stages — e.g., Preliminares may be fully annotated while Genesis 1 is still at the extraction stage.
@@ -1139,15 +1158,32 @@ Multilingual entries are generated alongside multilingual translations of the co
 
 ## CSS
 
-`index/index.css` provides styles for:
+Two CSS sources:
+
+**`index/index.css`** — styles for generated index pages:
 
 - `.index-breadcrumb` — breadcrumb navigation
-- `.entry-meta` — definition list styling for metadata
-- `.ref-context` — muted text for reference context snippets
-- `.index-ref` — base styling for web component links (subtle underline, category-specific color)
-- Directory index pages — card/list layouts for browsing
+- `article#entry h1` — entry page heading
+- `.entry-meta` — definition list styling for metadata (dt/dd pairs)
+- `#description` — description section spacing
+- `#references`, `.ref-context`, `.ref-quote`, `.source-ref` — reference list styling with muted context text and indented blockquotes
+- `#events`, `#works`, `#related` — additional entry sections
+- `.index-note` — introductory note on the root index page
+- `.author-link` — "Works by [Author]" link on bibliography directory pages
+- `.index-listing` — directory listing pages with nested sublists
+- `.osm-map`, `.osm-map-grid`, `.osm-map-pin`, `.osm-map-attr` — satellite map tiles for place entries
 
-Imports `style.css` as a base; adds only index-specific rules.
+**`index/components.js`** (injected styles) — styles for the entity-ref web component and entity panel:
+
+- `entity-ref` — inline styling (dotted underline, pointer cursor)
+- `#entity-panel` — floating card container (fixed sidebar on desktop, inline on mobile)
+- `.ep-header`, `.ep-nav`, `.ep-dismiss`, `.ep-count` — panel chrome
+- `.ep-body`, `.ep-card-*` — card content styling
+- `mark.passage-highlight` — text highlighting with yellow background and gold underline
+- `.passage-highlight-para` — fallback paragraph-level highlight
+- `.ep-scroll-hint` — mobile bouncing down-arrow indicator for off-screen panels
+
+Both import `style.css` as a base.
 
 ## Phased Rollout
 

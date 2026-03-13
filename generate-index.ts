@@ -326,6 +326,92 @@ function escHtml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+// ── Date parsing for person birth/death years ──
+
+interface LifeDate {
+  year: number;
+  bc: boolean;
+  circa: boolean;
+}
+
+interface ParsedDates {
+  birth?: LifeDate;
+  death?: LifeDate;
+}
+
+function parseDates(dates: string): ParsedDates | null {
+  if (!dates) return null;
+  const s = dates.trim();
+
+  // Skip unparseable formats
+  if (/biblical|patriarch|century|fl\.|\/|\bor\b/i.test(s)) return null;
+
+  // Strip parentheticals like "(traditional)"
+  const clean = s.replace(/\s*\(.*?\)\s*/g, "").trim();
+
+  // Death only: "d. 253", "d. c. 674", "d. c. 375"
+  const deathOnly = clean.match(/^d\.\s*(c\.\s*)?(\d+)\s*(BC)?$/i);
+  if (deathOnly) {
+    return {
+      death: {
+        year: parseInt(deathOnly[2]),
+        bc: !!deathOnly[3],
+        circa: !!deathOnly[1],
+      },
+    };
+  }
+
+  // Range: "354–430", "c. 342–420", "c. 625–c. 686", "65–8 BC"
+  const range = clean.match(/^(c\.\s*)?(\d+)\s*[–\-]\s*(c\.\s*)?(\d+)\s*(BC)?$/i);
+  if (range) {
+    const bc = !!range[5];
+    return {
+      birth: {
+        year: parseInt(range[2]),
+        bc,
+        circa: !!range[1],
+      },
+      death: {
+        year: parseInt(range[4]),
+        bc,
+        circa: !!range[3],
+      },
+    };
+  }
+
+  return null;
+}
+
+function ordinalSuffix(n: number): string {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 13) return `${n}th`;
+  if (mod10 === 1) return `${n}st`;
+  if (mod10 === 2) return `${n}nd`;
+  if (mod10 === 3) return `${n}rd`;
+  return `${n}th`;
+}
+
+function yearSlugFromNumber(year: number, bc: boolean): string {
+  const era = bc ? "bc" : "ad";
+  const century = Math.ceil(year / 100);
+  const centuryLabel = `${ordinalSuffix(century)}-century`;
+  const decade = Math.floor((year % 100) / 10) * 10;
+  const decadeLabel = `${String(decade).padStart(2, "0")}s`;
+  return `year/${era}/${centuryLabel}/${decadeLabel}/${year}`;
+}
+
+// ── Life events derived from person dates ──
+
+interface YearLifeEvent {
+  personName: string;
+  personSlug: string;
+  type: "birth" | "death";
+  circa: boolean;
+}
+
+const yearLifeEvents = new Map<string, YearLifeEvent[]>();
+
 // ── Ref lookup for resolving names from slugs ──
 
 const refsBySlug = new Map<string, Record<string, any>>();
@@ -403,6 +489,8 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   publisher: "Publishers",
   university: "Universities",
   church: "Church Institutions",
+  bc: "BC",
+  ad: "AD",
   theology: "Theology",
   exegesis: "Exegesis",
   morals: "Morals",
@@ -439,7 +527,7 @@ function generateEntryHtml(ref: RefData): string {
   let href = "/index";
   for (let i = 0; i < segments.length - 1; i++) {
     href += `/${segments[i]}`;
-    if (segments[0] === "year" && segments[i] === "ad") continue;
+    if (segments[0] === "year" && (segments[i] === "ad" || segments[i] === "bc")) continue;
     breadcrumbParts.push(`<a href="${href}/">${labelFor(segments[i])}</a>`);
   }
   breadcrumbParts.push(escHtml(name));
@@ -504,22 +592,43 @@ function generateEntryHtml(ref: RefData): string {
     ? `<p>${escHtml(descriptionProse)}</p>`
     : "";
 
-  // Events section (for year entries)
+  // Events section (for year entries) — merge manual events with auto-derived life events
+  const manualItems: string[] = [];
   const eventsSection = ref.body.match(/## Events\n([\s\S]*?)(?=\n## |\n*$)/);
-  let eventsHtml = "";
   if (eventsSection) {
     const eventLines = eventsSection[1].split("\n").filter(l => l.startsWith("- "));
-    if (eventLines.length > 0) {
-      const items = eventLines.map(l => `      <li>${escHtml(l.slice(2))}</li>`);
-      eventsHtml = `
+    for (const l of eventLines) {
+      manualItems.push(`      <li>${escHtml(l.slice(2))}</li>`);
+    }
+  }
+
+  // Auto-generated birth/death events from person dates
+  const manualText = manualItems.join(" ");
+  const lifeEvents = (yearLifeEvents.get(fullSlug) || [])
+    .filter(evt => !manualText.includes(escHtml(evt.personName))) // skip if already mentioned
+    .sort((a, b) => {
+      if (a.type !== b.type) return a.type === "birth" ? -1 : 1;
+      return a.personName.localeCompare(b.personName);
+    });
+
+  const autoItems = lifeEvents.map(evt => {
+    const personLink = `<a href="/index/${escHtml(evt.personSlug)}.html">${escHtml(evt.personName)}</a>`;
+    const approx = evt.circa ? " (approximate date)" : "";
+    const label = evt.type === "birth" ? "Birth" : "Death";
+    return `      <li>${label} of ${personLink}${approx}</li>`;
+  });
+
+  const allEventItems = [...manualItems, ...autoItems];
+  let eventsHtml = "";
+  if (allEventItems.length > 0) {
+    eventsHtml = `
   <section id="events">
     <h2>Events</h2>
     <ul>
-${items.join("\n")}
+${allEventItems.join("\n")}
     </ul>
   </section>
 `;
-    }
   }
 
   // References section — parse structurally from body markdown
@@ -709,7 +818,7 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
     let href = "/index";
     for (let i = 0; i < segments.length - 1; i++) {
       href += `/${segments[i]}`;
-      if (segments[0] === "year" && segments[i] === "ad") continue;
+      if (segments[0] === "year" && (segments[i] === "ad" || segments[i] === "bc")) continue;
       breadcrumbParts.push(`<a href="${href}/">${labelFor(segments[i])}</a>`);
     }
     breadcrumbParts.push(escHtml(title));
@@ -717,8 +826,21 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
 
   // Sort: directories first, then by context-appropriate order
   const isVerseDir = segments[0] === "verse";
+  const isYearDir = segments[0] === "year";
   const sorted = [...entries].sort((a, b) => {
     if (a.isDir !== b.isDir) return a.isDir ? -1 : 1;
+    // Year directories: chronological (BC descending, then AD ascending; centuries/decades/years numeric)
+    if (isYearDir) {
+      // Extract leading number from century/decade/year names
+      const aNum = parseInt(a.slug.match(/\d+/)?.[0] || "0", 10);
+      const bNum = parseInt(b.slug.match(/\d+/)?.[0] || "0", 10);
+      const aBC = a.name.includes("BC") || a.href.includes("bc/");
+      const bBC = b.name.includes("BC") || b.href.includes("bc/");
+      // BC comes before AD; within BC higher numbers (earlier) first
+      if (aBC !== bBC) return aBC ? -1 : 1;
+      if (aBC && bBC) return bNum - aNum; // 14th century BC before 1st century BC
+      return aNum - bNum;
+    }
     // Bible books: canonical order; chapters: numeric
     if (isVerseDir) {
       const aOrd = BIBLE_BOOK_ORDER[a.slug] ?? 999;
@@ -849,6 +971,33 @@ async function main() {
     }
   }
 
+  // Build year life events from person dates
+  for (const ref of refs) {
+    const fm = ref.frontmatter;
+    if (fm.alias_of || fm.category !== "person" || !fm.dates) continue;
+
+    const parsed = parseDates(String(fm.dates));
+    if (!parsed) continue;
+
+    const personName = fm.name as string;
+    const personSlug = fm.slug as string;
+
+    if (parsed.birth) {
+      const slug = yearSlugFromNumber(parsed.birth.year, parsed.birth.bc);
+      if (!yearLifeEvents.has(slug)) yearLifeEvents.set(slug, []);
+      yearLifeEvents.get(slug)!.push({
+        personName, personSlug, type: "birth", circa: parsed.birth.circa,
+      });
+    }
+    if (parsed.death) {
+      const slug = yearSlugFromNumber(parsed.death.year, parsed.death.bc);
+      if (!yearLifeEvents.has(slug)) yearLifeEvents.set(slug, []);
+      yearLifeEvents.get(slug)!.push({
+        personName, personSlug, type: "death", circa: parsed.death.circa,
+      });
+    }
+  }
+
   // Separate canonical entries from aliases
   const canonical: RefData[] = [];
   const aliases: RefData[] = [];
@@ -860,7 +1009,28 @@ async function main() {
     }
   }
 
-  console.log(`${canonical.length} canonical entries, ${aliases.length} aliases`);
+  // Create synthetic year entries for years that have life events but no ref file
+  let syntheticCount = 0;
+  for (const [slug] of yearLifeEvents) {
+    if (refsBySlug.has(slug)) continue; // already has a ref file
+
+    const yearNum = slug.split("/").pop()!;
+    const isBc = slug.includes("/bc/");
+    const displayName = isBc ? `${yearNum} BC` : yearNum;
+
+    const fm: Record<string, any> = {
+      name: displayName,
+      slug: slug,
+      category: "year",
+    };
+
+    canonical.push({ frontmatter: fm, body: "", filePath: "" });
+    refsBySlug.set(slug, fm);
+    refsBySlug.set(`year/${slug}`, fm);
+    syntheticCount++;
+  }
+
+  console.log(`${canonical.length} canonical entries (${syntheticCount} virtual year pages), ${aliases.length} aliases`);
 
   // Download map tiles for place entries with coordinates
   const tilesToDownload = new Set<string>();
@@ -1002,13 +1172,17 @@ async function main() {
 
     let dirEntries: DirEntry[];
 
-    // Special case: year/ flattens through ad/ to show centuries directly
+    // Special case: year/ flattens through ad/ and bc/ to show centuries directly
     if (relDir === "year") {
-      dirEntries = await readDirEntries(join(dir, "ad"), "ad/");
-      // Label centuries as "Nth Century AD"
-      for (const entry of dirEntries) {
+      const adEntries = await readDirEntries(join(dir, "ad"), "ad/");
+      for (const entry of adEntries) {
         if (entry.isDir) entry.name += " AD";
       }
+      const bcEntries = await readDirEntries(join(dir, "bc"), "bc/");
+      for (const entry of bcEntries) {
+        if (entry.isDir) entry.name += " BC";
+      }
+      dirEntries = [...bcEntries, ...adEntries];
     } else {
       dirEntries = await readDirEntries(dir, "");
     }
