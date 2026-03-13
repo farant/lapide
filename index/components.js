@@ -265,6 +265,7 @@ class EntityRefElement extends HTMLElement {
 	}
 
 	_activate() {
+		if (!_annotationsVisible) return;
 		const slug = this.getAttribute('slug');
 		if (!slug) return;
 
@@ -289,16 +290,38 @@ const STYLES = `
 /* ── entity-ref inline styling ── */
 
 entity-ref {
+  transition: color 0.15s, border-color 0.15s;
+}
+
+/* Hidden by default — looks like normal text */
+entity-ref {
+  pointer-events: none;
+}
+
+/* Visible when toggled on */
+.annotations-visible entity-ref {
   color: #4a4a8a;
   border-bottom: 1px dotted #4a4a8a;
   cursor: pointer;
-  transition: color 0.15s, border-color 0.15s;
+  pointer-events: auto;
 }
-entity-ref:hover,
-entity-ref:focus {
+.annotations-visible entity-ref:hover,
+.annotations-visible entity-ref:focus {
   color: #2a2a6a;
   border-bottom-color: #2a2a6a;
   outline: none;
+}
+
+/* Toggle link */
+#annotation-toggle {
+  display: block;
+  text-align: right;
+  padding: 0.4em 1em;
+  color: #4a4a8a;
+  text-decoration: none;
+}
+#annotation-toggle:hover {
+  text-decoration: underline;
 }
 
 /* ── Entity panel ── */
@@ -668,6 +691,9 @@ function autoShowEntity() {
 	const entitySlug = params.get('entity');
 	if (!entitySlug) return;
 
+	// Auto-enable annotations when arriving from an index page
+	setAnnotationsVisible(true);
+
 	const hash = location.hash.slice(1);
 	let paragraph = null;
 
@@ -692,9 +718,42 @@ function autoShowEntity() {
 // Run on load and on hash change
 window.addEventListener('hashchange', highlightPassage);
 window.addEventListener('DOMContentLoaded', () => {
+	insertAnnotationToggle();
 	highlightPassage();
 	autoShowEntity();
 });
+
+// ── Annotation toggle ──
+
+let _annotationsVisible = false;
+
+function setAnnotationsVisible(visible) {
+	_annotationsVisible = visible;
+	document.body.classList.toggle('annotations-visible', visible);
+	const toggle = document.getElementById('annotation-toggle');
+	if (toggle) toggle.textContent = visible ? 'Hide annotations' : 'Show annotations';
+	// Dismiss any open panel when hiding
+	if (!visible && _panel) {
+		_panel._dismiss();
+	}
+}
+
+function insertAnnotationToggle() {
+	// Don't insert on index pages (they don't have entity-refs in content)
+	if (!document.querySelector('entity-ref')) return;
+
+	const toggle = document.createElement('a');
+	toggle.id = 'annotation-toggle';
+	toggle.href = '#';
+	toggle.textContent = 'Show annotations';
+	toggle.addEventListener('click', (e) => {
+		e.preventDefault();
+		setAnnotationsVisible(!_annotationsVisible);
+	});
+
+	// Insert at the top of the body, before the first element
+	document.body.insertBefore(toggle, document.body.firstChild);
+}
 
 // ── Inject styles ──
 
