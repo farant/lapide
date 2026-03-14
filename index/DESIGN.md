@@ -304,7 +304,9 @@ Each year page aggregates all events/references for that year. Most years will b
 
 **Auto-generated year pages**: The generator automatically creates year pages from person `dates` fields — if a person has parseable birth/death dates, the corresponding year pages are generated with "Birth of [Person]" / "Death of [Person]" events (with links to the person entry). These virtual year pages require no ref file. When a year has both a ref file (with manually written events/references) and auto-derived life events, the manual events appear first and auto-events are appended, with deduplication by person name.
 
-**Directory sorting**: The top-level year directory lists BC centuries in descending order (earlier centuries first), then AD centuries in ascending order. Century, decade, and year directories all sort chronologically.
+**Directory sorting**: The top-level year directory lists BC centuries in descending order (earlier centuries first), then AD centuries in ascending order. AD directories sort chronologically ascending. BC directories sort chronologically descending at all levels — centuries, decades, and individual years — so that earlier dates (higher numbers) appear first, reading as a natural reverse timeline.
+
+**Inline events**: Century and decade directory pages display events inline as nested bullet lists under each year link, so the page reads as a browsable timeline without clicking through to individual year pages. Events include both manually described events from year ref files and auto-derived birth/death events from person `dates` fields.
 
 ### Verse
 
@@ -1232,6 +1234,44 @@ Apply corrections, then re-run `bun tag-entity-refs.ts` (idempotent — strips a
 
 Output: fully annotated source HTML with entity-ref tags, JSON sidecar, and components.js script tag.
 
+#### Entity-ref overrides
+
+The automated tagger produces correct output for most entities, but some names are ambiguous or have context-dependent meanings that only a human reviewer can resolve. These corrections are stored in a JSON overrides file that the tagger reads at "compile time":
+
+```
+index/extractions/<source-name>/entity-ref-overrides.json
+```
+
+The overrides file supports three mechanisms:
+
+```json
+{
+  "global_exclude_words": ["mark", "the city", "histories"],
+  "exclude": [
+    {
+      "text": "Israel",
+      "slug": "person/biblical/jacob",
+      "paragraph": "moses-virtues-p3",
+      "reason": "nation, not person"
+    }
+  ],
+  "force": [
+    {
+      "text": "Gregory",
+      "slug": "person/pope/gregory-i",
+      "paragraph": "chapter-iv-p26",
+      "reason": "context is Gregory the Great, not Gregory of Nyssa"
+    }
+  ]
+}
+```
+
+- **`global_exclude_words`**: Name forms removed from the name index entirely (case-insensitive). Use for common English words that happen to be entity names ("mark", "grace", "the city").
+- **`exclude`**: Skip a specific text/slug match, optionally scoped to a paragraph. Use for context-dependent false positives (e.g., "Israel" as a nation vs. the person Jacob, "Dionysius" as the pagan deity vs. the saint).
+- **`force`**: Override slug resolution for ambiguous names in a specific paragraph. Use when a name maps to multiple entities and the automated disambiguation picks the wrong one.
+
+The overrides file is checked into git alongside the extraction files. The tagger is idempotent — re-running it always applies the same overrides and produces the same output. Human review corrections persist across re-runs.
+
 ### Stage 6: Generate
 
 Run the code generator (`bun generate-index.ts`) to produce HTML pages from the current ref files. See [Ref Files and Code Generation](#ref-files-and-code-generation) for details.
@@ -1255,13 +1295,22 @@ Output: `index/**/*.html` entry pages, alias pages, directory index pages, and `
 | 6 | Generate | `bun generate-index.ts` |
 
 Additional utility tools:
-- `bun validate-extractions.ts <source.html> [extraction-dir]` — validates extraction files against source HTML
+- `bun validate-extractions.ts [--fix-quotes] <source.html> [extraction-dir]` — validates extraction files against source HTML
 - `bun audit-refs.ts` — detailed audit of ref file references
-- `bun lint-annotations.ts <source.html>` — checks sidecar annotation integrity (orphans, broken slugs, missing script tags, invalid offsets)
+- `bun lint-annotations.ts [--fix-quotes] <source.html>` — checks sidecar annotation integrity (orphans, broken slugs, missing script tags, invalid offsets)
 - `bun annotate-source.ts --check <source.html>` — dry-run annotation comparison (exits 1 if out of sync)
 - `bun fix-ref-links.ts` — repairs broken ref file links
 - `bun sync-passage-refs.ts` — syncs passage references across ref files
 - `bun check-index-links.ts` / `bun fix-index-links.ts` — check and repair index page links
+
+#### `--fix-quotes` flag
+
+Both `lint-annotations.ts` and `validate-extractions.ts` support a `--fix-quotes` flag. When text quotes in ref files or extraction files differ from the HTML source only in quote style (single `'` vs double `"`, curly vs straight, em-dash `—` vs `--`), the tool detects these as cosmetic mismatches and:
+
+- **Without `--fix-quotes`**: reports them as `⚠️` warnings with a suggestion to re-run with the flag
+- **With `--fix-quotes`**: auto-fixes the text fields in the ref/extraction files to match the actual HTML source text
+
+This addresses a systematic issue where agents generate text quotes with different quote characters than what appears in the HTML after entity decoding.
 
 ### Pipeline notes
 
@@ -1279,6 +1328,39 @@ bun lint-annotations.ts <source.html>             # confirm 0 issues (orphans, b
 All four should pass clean before considering a document fully indexed.
 
 Stage 6 (Generate) can also be run independently at any time, since it only reads ref files and produces HTML.
+
+### Shared modules
+
+Pipeline scripts import shared utility functions from two modules rather than defining their own copies:
+
+- **`pipeline-utils.ts`** — Core text processing functions used by `annotate-source.ts`, `validate-refs.ts`, `lint-annotations.ts`, `validate-extractions.ts`, and `tag-entity-refs.ts`. Exports: `stripHtml`, `normalizeForMatch`, `normalizeForPosition`, `computeHash`, `findInPlainText`, `splitSegments`, `getSection`, `stripHashSuffix`, `parseTextLine`, `extractParagraphs`, `parseSidecar`, `generateNameVariants`.
+
+- **`lib/generate-index-utils.ts`** — Pure utility functions used by `generate-index.ts`. Exports: `parseFrontmatter`, `parseYaml`, `unquote`, `escHtml`, `humanizeFilename`, `humanizeSection`, `parseDates`, `ordinalSuffix`, `yearSlugFromNumber`, `latLonToTile`, `labelFor`, `CATEGORY_LABELS`, `SUBCATEGORY_LABELS`, `BIBLE_BOOK_ORDER`.
+
+These modules are the canonical implementations — the unit tests in `tests/` validate them directly. Changes to text processing logic should be made in the shared module, not in individual scripts.
+
+### Multi-document annotation
+
+The annotator (`annotate-source.ts`) processes one source file at a time. When a ref file contains references to multiple source documents (e.g., both `01_Preliminares.html` and `12_Proemium.html`), the annotator only picks up references matching the file being annotated. It clears its parser state when it encounters a reference to a different source file, preventing cross-contamination between documents. References to different source files can appear in any order within a ref file.
+
+### Test suite
+
+The pipeline has a comprehensive test suite run with `bun test` (470+ tests, ~1400 assertions). Test files:
+
+| File | Tests | Coverage |
+|---|---|---|
+| `tests/text-matching.test.ts` | ~110 | stripHtml, normalize, hash, findInPlainText, edge cases |
+| `tests/annotation.test.ts` | ~84 | Sidecar parsing, hash consistency, offsets, malformed detection |
+| `tests/generate-index.test.ts` | ~75 | YAML parsing, date parsing, ordinals, year slugs, Bible book order |
+| `tests/validation.test.ts` | ~50 | Ref validation, fuzzy matching, extraction validation, slugs |
+| `tests/highlighting.test.ts` | ~39 | Fragment detection, offset-to-text mapping, hash verification |
+| `tests/entity-refs.test.ts` | ~37 | splitSegments, name variants, section/hash parsing |
+| `tests/paragraph-numbering.test.ts` | ~12 | Subprocess tests for number-paragraphs.ts |
+| `tests/pipeline-integration.test.ts` | ~62 | Full end-to-end pipeline Stages 0→6 + negative tests |
+
+The integration test copies realistic fixtures to a temp directory and runs every pipeline tool as a subprocess, verifying output at each stage. Negative tests verify that each tool catches specific failure modes (wrong text, bad paragraph IDs, broken slugs, orphaned annotations, missing components.js, etc.) at the right stage.
+
+Test fixtures are at `tests/fixtures/` (unit test fixtures) and `tests/fixtures/pipeline/` (integration test fixtures with a complete mini-pipeline including source HTML, ref files, extraction files, and entity-ref overrides).
 
 ## Extraction Conventions
 
