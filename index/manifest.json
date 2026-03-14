@@ -3075,6 +3075,13 @@
     "path": "person/person/biblical/philemon.html"
   },
   {
+    "name": "Philip the Apostle",
+    "slug": "person/biblical/philip-the-apostle",
+    "category": "person",
+    "subcategory": "biblical",
+    "path": "person/person/biblical/philip-the-apostle.html"
+  },
+  {
     "name": "Philip the Deacon",
     "slug": "person/biblical/philip-the-deacon",
     "category": "person",
@@ -3906,6 +3913,13 @@
     "category": "person",
     "subcategory": "cleric",
     "path": "person/person/cleric/oleastro.html"
+  },
+  {
+    "name": "Paulinus of Milan",
+    "slug": "person/cleric/paulinus-of-milan",
+    "category": "person",
+    "subcategory": "cleric",
+    "path": "person/person/cleric/paulinus-of-milan.html"
   },
   {
     "name": "Philastrius",
@@ -11334,6 +11348,12 @@
     "slug": "year/ad/5th-century/20s/420",
     "category": "year",
     "path": "year/year/ad/5th-century/20s/420.html"
+  },
+  {
+    "name": "422",
+    "slug": "year/ad/5th-century/20s/422",
+    "category": "year",
+    "path": "year/year/ad/5th-century/20s/422.html"
   },
   {
     "name": "424",

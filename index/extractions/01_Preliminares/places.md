@@ -30,10 +30,10 @@
     text: "was then summoned to Rome by his superiors, where he expounded the same subjects for many years"
   - `#life-p2` — Lapide found in Rome what Jerome had sought in Bethlehem
     text: "whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome"
-  - `#life-p2` — Lapide died in Rome on 12 March 1637
+  - `#life-p3` — Lapide died in Rome on 12 March 1637
     text: "he paid at last the debt of nature in the Holy City, where he had always desired to mingle his bones with those of the saints, on 12 March in the year 1637"
   - `#clement-viii-p6` — Clement VIII's bull given at Rome, at St. Peter's
-    text: "Given at Rome, at St. Peter's, under the Fisherman's Ring, on the 9th day of November 1592"
+    text: "Given at Rome, at St. Peter&rsquo;s, under the Fisherman&rsquo;s Ring, on the 9th day of November 1592"
 - **Related people**: cornelius-a-lapide, clement-viii, mutius-vitelleschi
 - **Related organizations**: church/apostolic-see, publisher/vatican-press, religious-order/society-of-jesus
 
@@ -407,7 +407,7 @@
 - **Description**: Marian shrine near Louvain, renowned for miracles. Lapide was almost captured and killed there by Dutch cavalry on the feast of the Nativity of Our Lady in 1604.
 - **Lat/Lon**: 50.9775, 4.9727
 - **Occurrences**:
-  - `#life-p2` — Lapide was staying near the shrine assisting pilgrims when Dutch cavalry attacked on the feast of the Nativity of Our Lady; he was miraculously preserved
+  - `#life-p3` — Lapide was staying near the shrine assisting pilgrims when Dutch cavalry attacked on the feast of the Nativity of Our Lady; he was miraculously preserved
     text: "staying near the shrine of Our Lady of Aspromont, renowned for miracles, not far from Louvain, and assisting the crowds of people who came for religious purposes"
 - **Related people**: cornelius-a-lapide
 - **Related places**: europe/low-countries/louvain
@@ -436,7 +436,7 @@
 - **Lat/Lon**: 41.9022, 12.4539
 - **Occurrences**:
   - `#clement-viii-p6` — Clement VIII's bull given "at Rome, at St. Peter's, under the Fisherman's Ring"
-    text: "Given at Rome, at St. Peter's, under the Fisherman's Ring"
+    text: "Given at Rome, at St. Peter&rsquo;s, under the Fisherman&rsquo;s Ring"
 - **Related people**: clement-viii
 - **Related organizations**: church/apostolic-see
 - **Related places**: europe/italy/rome

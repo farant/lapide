@@ -19,7 +19,7 @@
   - `#trent-decrees-p3` — Trent receives and venerates all books of both Testaments with equal piety, since one God is the author of both.
     text: "receives and venerates with equal affection of piety and reverence all the books both of the Old and of the New Testament — since one God is the author of both"
   - `#trent-decrees-p4` — The Council inserts a list of sacred books to remove any doubt about which books are canonical.
-    text: "It has thought it meet that a list of the sacred books be inserted in this decree, lest any doubt should arise in anyone's mind as to which are the books that are received by this Synod."
+    text: "It has thought it meet that a list of the sacred books be inserted in this decree, lest any doubt should arise in anyone&rsquo;s mind as to which are the books that are received by this Synod."
   - `#trent-decrees-p5` — Full enumeration of the Old Testament canon including deuterocanonical books (Tobit, Judith, Wisdom, Ecclesiasticus, Baruch, Maccabees).
     text: "Of the Old Testament: the five books of Moses, to wit, Genesis, Exodus, Leviticus, Numbers, Deuteronomy; Josue, Judges, Ruth; four books of Kings..."
   - `#trent-decrees-p6` — Full enumeration of the New Testament canon.
@@ -53,7 +53,7 @@
   - `#preface-reader-p11` — The history of the Clementine revision: Sixtus V printed a version but judged it needed further correction before his death; Gregory XIV continued the work.
     text: "Sixtus V... ordered the completed work to be committed to the press. When it had already been printed... observing that not a few things had crept into the sacred Bible by a fault of the press... he judged and decreed that the whole work should be recalled under the hammer."
   - `#preface-reader-p12` — The revision finally completed under Clement VIII.
-    text: "finally at the beginning of the Pontificate of Clement VIII, who now holds the helm of the universal Church, the work at which Sixtus V had aimed was, with God's good help, perfected."
+    text: "finally at the beginning of the Pontificate of Clement VIII, who now holds the helm of the universal Church, the work at which Sixtus V had aimed was, with God&rsquo;s good help, perfected."
   - `#preface-reader-p13` — The restored Vulgate is presented as more emended and purer than all previous editions, though human weakness prevents claiming absolute perfection.
     text: "it is by no means to be doubted that it is more emended and purer than all the others which have appeared up to this day."
   - `#preface-reader-p14` — The revisors' intent was not to produce a new edition but to restore the old Vulgate to its original integrity and purity.
@@ -71,7 +71,7 @@
   - `#preface-reader-p4` — The Vulgate received partly from Jerome's translation or emendation.
     text: "received in part from the translation or emendation of St. Jerome"
   - `#preface-reader-p5` — Augustine's testimony praising the older Italic edition as "more tenacious of the words while preserving the clarity of the meaning."
-    text: "the Italic should be preferred because it was — as he himself says — 'more tenacious of the words while preserving the clarity of the meaning.'"
+    text: "the Italic should be preferred because it was&mdash;as he himself says&mdash;"
   - `#preface-reader-p6` — Multiple Fathers attest to Jerome's excellence: Augustine calls him most learned in three languages; Gregory says his translation rendered everything more truly from Hebrew; Isidore affirms it is commonly received; Sophronius translated Jerome's Psalter and Prophets into Greek.
     text: "St. Augustine calls him a most learned man and most skilled in three languages, and confirms by the testimony even of the Hebrews themselves that his translation is truthful."
   - `#preface-reader-p7` — All the great medieval theologians (Bede, Rabanus, Anselm, Peter Lombard, Aquinas, Bonaventure, etc.) used Jerome's version exclusively, causing other versions to become obsolete.
@@ -233,7 +233,7 @@
   - `#dedicatory-letter-p21` — Van der Burch's courtesy and serene manner drew hearts to love him; his people called him "our angel." His governance imitates divine providence which "orders all things sweetly."
     text: "Your courtesy, Most Illustrious Lord, is marvelled at by all — the courtesy with which you receive everyone graciously, greet them honourably, and show to all a serene face, a ready word, and a generous spirit."
   - `#dedicatory-letter-p41` — St. Lietbert of Cambrai: "most cautiously avoided injuries, bore them most equably, and brought them to an end most swiftly."
-    text: "most cautiously avoided injuries, bore them most equably, and brought them to an end most swiftly"
+    text: "most cautiously avoided injuries," says the author of his Life, "bore them most equably, and brought them to an end most swiftly"
 - **Related people**: Moses, Basil, Van der Burch, Lietbert of Cambrai
 - **Related places**: —
 - **Related subjects**: `morals/virtues/humility`, `morals/virtues/charity`, `ecclesiology/clergy/episcopal-duties`
@@ -269,7 +269,7 @@
   - `#dedicatory-letter-p29` — Moses withstood Pharaoh with marvellous constancy; Basil overcame Julian the Apostate through prayer before an image of Our Lady.
     text: "Moses withstood Pharaoh and his Magicians with marvellous constancy; he sustained, conquered, and subdued the enemies of the people of God on every side."
   - `#dedicatory-letter-p30` — Basil's famous confrontation with the Prefect Modestus: threatened with confiscation, exile, torture, and death, Basil declared none of these touches him — confiscation means nothing to one who has nothing, exile is meaningless to one who knows all earth is God's, torture cannot harm one without bodily substance, and death will send him more quickly to God.
-    text: "'As for exile, I do not know it, for I am bound to no particular place... As for tortures, what can I receive, seeing I lack bodily substance?... Death, moreover, will be a benefit to me: it will send me more quickly to God, for whom I live and in whose service I am engaged'"
+    text: "As for exile, I do not know it, for I am bound to no particular place; I do not even call this land I now inhabit my own, and wherever I may be cast, I count as my own"
   - `#dedicatory-letter-p31` — The Prefect confesses to the Emperor: "We have been vanquished by the Bishop of this Church; he is superior to threats, firmer in argument, stronger than fair words."
     text: "We have been vanquished by the Bishop of this Church; he is superior to threats, firmer in argument, stronger than fair words."
   - `#dedicatory-letter-p34` — Van der Burch's constancy in defence of faith and discipline: he does not desist until discipline is confirmed and the rebellious are gently brought back.
@@ -329,7 +329,7 @@
 - **Description**: The practice of offering food, lodging, and companionship — especially episcopal hospitality extended to clergy and guests.
 - **Occurrences**:
   - `#dedicatory-letter-p3` — Lapide made "free and generous use" of Van der Burch's hospitality and table companionship for many years while serving as confessor.
-    text: "I made free and generous use of your hospitality and table companionship for many years"
+    text: " I made free and generous use of your hospitality and table companionship for many years"
   - `#dedicatory-letter-p9` — Table conversation during Lapide's visits was devoted to reading and discussing Genesis, sometimes ten or twelve chapters at a single meal.
     text: "you recall that at a single meal we would read through ten or twelve chapters of Genesis together, and you put to me many difficult questions concerning them"
   - `#dedicatory-letter-p15` — Van der Burch's works of hospitality and mercy are listed among his priestly virtues.
@@ -350,7 +350,7 @@
     text: "that illustrious Chancellor of England and martyr, Blessed Thomas More, who, having spent fifty years in public life and holding the highest offices, yet did not increase his annual income to seventy gold pieces"
   - `#dedicatory-letter-p30` — Basil's radical indifference to worldly goods in his confrontation with the Prefect: "a man who has nothing is not subject to confiscation of goods — unless perhaps you need these tattered and worn-out rags of mine, and these few books, in which all my wealth and resources consist."
     text: "a man who has nothing is not subject to confiscation of goods — unless perhaps you need these tattered and worn-out rags of mine, and these few books, in which all my wealth and resources consist"
-  - `#life-p2` — Lapide was roused "to contempt for human things and desire for heavenly things" by contemplation of eternity; he "expected nothing from any mortal in this world, desired nothing."
+  - `#life-p3` — Lapide was roused "to contempt for human things and desire for heavenly things" by contemplation of eternity; he "expected nothing from any mortal in this world, desired nothing."
     text: "by the unceasing contemplation of blessed eternity, he was so roused to contempt for human things and desire for heavenly things, that from that time forward he aimed at nothing other than the enduring will, praise, and glory of Christ"
 - **Related people**: Van der Burch's father, Thomas More, Basil, Cornelius a Lapide
 - **Related places**: —
@@ -365,7 +365,7 @@
   - `#dedicatory-letter-p12` — Thomas More's voluntary poverty despite his high office.
     text: "having spent fifty years in public life and holding the highest offices, yet did not increase his annual income to seventy gold pieces"
   - `#dedicatory-letter-p30` — Basil's self-description: possessing only "tattered and worn-out rags" and "a few books" as all his wealth.
-    text: "unless perhaps you need these tattered and worn-out rags of mine, and these few books, in which all my wealth and resources consist"
+    text: " unless perhaps you need these tattered and worn-out rags of mine, and these few books, in which all my wealth and resources consist"
   - `#life-p3` — Lapide refused any exceptional food at meals despite frail health, clinging to the strictness of religious life.
     text: "he refused to have anything exceptional set before him at meals, even though his health was always frail, burdened by age"
 - **Related people**: Thomas More, Basil, Cornelius a Lapide
@@ -423,7 +423,7 @@
   - `#dedicatory-letter-p26` — Basil declared that to envy the monastic enterprise "is nothing other than to have surpassed the devil himself in wickedness."
     text: "to envy this enterprise, he declares in the words that follow, is nothing other than to have surpassed the devil himself in wickedness"
   - `#dedicatory-letter-p22` — Basil taught the people "to build monasteries... to devote themselves to psalms and hymns and prayers, to care for the poor, to establish religious houses for virgins."
-    text: "he brought them... to build monasteries; he taught them to devote themselves to psalms and hymns and prayers, to care for the poor, to establish religious houses for virgins"
+    text: "He brought them, setting aside their vain and worldly cares, to know themselves, to come together as one, to build monasteries; he taught them to devote themselves to psalms and hymns and prayers, to care for the poor, to establish religious houses for virgins"
   - `#dedicatory-letter-p40` — St. Vindicianus of Cambrai "erected monasteries and churches above all else."
     text: "he erected monasteries and churches above all else."
 - **Related people**: Moses, Basil, Vindicianus
@@ -517,7 +517,7 @@
   - `#dedicatory-letter-p2` — Van der Burch's inauguration as Archbishop coincided providentially with the publication of Lapide's commentary: "by God's providential arrangement."
     text: "It happened opportunely, by God's providential arrangement, Most Illustrious Lord, that at the very time you were being inaugurated as Archbishop and Prince of the Holy Roman Empire at Cambrai, this Moses of mine... was brought into the light."
   - `#dedicatory-letter-p21` — Van der Burch's governance imitates the "most wise providence of God which divinely governs the whole world" and "reaches from end to end mightily, and orders all things sweetly."
-    text: "That most wise providence of God which divinely governs the whole world, as the Sage testifies, 'reaches from end to end mightily, and orders all things sweetly.'"
+    text: "That most wise providence of God which divinely governs the whole world, as the Sage testifies, "reaches from end to end mightily, and orders all things sweetly.""
   - `#life-p3` — Lapide was preserved from the attack at Aspromont "by a wonderful providence."
     text: "he himself was preserved unharmed by a wonderful providence"
 - **Related people**: Van der Burch, Cornelius a Lapide
@@ -757,7 +757,7 @@
 - **Description**: Burning pastoral zeal for the conversion of sinners and the salvation of souls — a central apostolic motivation.
 - **Occurrences**:
   - `#dedicatory-letter-p22` — Basil roused "sluggish minds" with his preaching, kindled them, and "in a short time the face of the whole province was transformed."
-    text: "he began to rouse with his words the sluggish minds of that people — little concerned about their future hope — and to kindle them with his preaching"
+    text: "began to rouse with his words the sluggish minds of that people &mdash; little concerned about their future hope &mdash; and to kindle them with his preaching"
   - `#dedicatory-letter-p38` — Van der Burch's zeal to be set ablaze by the scale of his new archdiocese: "your diligence will be sharpened, your charity roused, your zeal set ablaze."
     text: "Here your diligence will be sharpened, your charity roused, your zeal set ablaze"
   - `#dedicatory-letter-p42` — Authbert of Cambrai "burned with such zeal to convert a single sinner that he nearly consumed himself in tears and penances."
@@ -786,7 +786,7 @@
 - **Occurrences**:
   - `#dedicatory-letter-p14` — Cyprian describes Cornelius's character as marked by "the modesty of his virginal conscience."
     text: "out of the modesty of his virginal conscience"
-  - `#dedicatory-letter-p26` — Basil defended monks who "have renounced the world" and taught the people to "make a chaste and pure life almost desirable to all."
+  - `#dedicatory-letter-p22` — Basil defended monks who "have renounced the world" and taught the people to "make a chaste and pure life almost desirable to all."
     text: "to make a chaste and pure life almost desirable to all"
 - **Related people**: Cornelius (Pope), Basil
 - **Related places**: —
@@ -799,7 +799,7 @@
 - **Description**: The possibility of living a de facto religious life without formal religious profession — ordering one's household like a monastery while remaining in the world.
 - **Occurrences**:
   - `#dedicatory-letter-p27` — Van der Burch is praised for living a religious life in the world: "You are not a Religious by formal profession or by belonging to a religious house; but what is more arduous, you live a religious life in the world. Your household, your family are so ordered, so religious, that it seems to be a monastery."
-    text: "you are not a Religious by formal profession or by belonging to a religious house; but what is more arduous, you live a religious life in the world. Your household, your family are so ordered, so religious, that it seems to be a monastery."
+    text: "You, Most Illustrious Lord, are not a Religious by formal profession or by belonging to a religious house; but what is more arduous, you live a religious life in the world. Your household, your family are so ordered, so religious, that it seems to be a monastery."
 - **Related people**: Van der Burch, Basil, Gregory Nazianzen
 - **Related places**: Ghent
 - **Related subjects**: `ecclesiology/religious-life/monasticism`, `ecclesiology/clergy/episcopal-duties`

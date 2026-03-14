@@ -1662,9 +1662,9 @@ describe("Stage 6 — generate-index.ts", () => {
       // h1 with the entity name
       expect(html).toContain("<h1>St. Augustine of Hippo</h1>");
 
-      // References section
+      // References section (grouped by source page)
       expect(html).toContain('<section id="references">');
-      expect(html).toContain("References in Commentary");
+      expect(html).toContain('ref-source-heading');
 
       // Meta description
       expect(html).toContain('<meta name="description"');

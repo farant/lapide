@@ -1,0 +1,7 @@
+{
+  "global_exclude_words": ["mark", "the city", "controversies", "histories", "annals"],
+  "exclude": [
+    {"text": "pilgrimage", "slug": "subject/devotion/pilgrimage", "paragraph": "jerome-to-paulinus-p2", "reason": "metaphorical use in Psalm 119 quotation, not the devotional practice"}
+  ],
+  "force": []
+}

@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_01_bn.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_01_ceb.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.8</priority>
@@ -1291,6 +1296,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_Preliminares_ml.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_Preliminares_nl.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.8</priority>
@@ -2106,6 +2116,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/guigo_i/Meditationes_yo.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/guigo_i/Meditationes_zh.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -2197,6 +2212,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index_lt.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index_ml.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.8</priority>
   </url>

@@ -72,7 +72,7 @@
 - **Year**: ~370s
 - **Occurrences**:
   - `#dedicatory-letter-p26` — Basil quoted defending monastic life against heretical accusers
-    text: "We are accused, he says, of this way of life too, because we have men who are monks devoted to piety, who have renounced the world and all its cares"
+    text: "We are accused," he says, "of this way of life too, because we have men who are monks devoted to piety, who have renounced the world and all its cares"
 - **Related people**: Basil of Caesarea
 - **Related subjects**: Monasticism, religious life
 
@@ -152,8 +152,8 @@
 - **Description**: Satirical verses mocking the Prefect Modestus for his subordination to Basil the Great.
 - **Year**: ~4th century
 - **Occurrences**:
-  - `#dedicatory-letter-p31` — Quoted in full: four lines mocking Modestus for being subject to Basil
-    text: "You are Prefect over all men else, Modestus, / but under Basil the Great you take your place."
+  - `#dedicatory-letter-p32` — Quoted in full: four lines mocking Modestus for being subject to Basil
+    text: "You are Prefect over all men else, Modestus,"
 - **Related people**: Cyrus Theodorus, Modestus (prefect), Basil of Caesarea
 
 ## Gregory of Nyssa
@@ -165,7 +165,7 @@
 - **Year**: ~380s
 - **Occurrences**:
   - `#dedicatory-letter-p23` — Gregory of Nyssa cited as witness that Ephrem saw a dove whispering into Basil's ear while preaching, and that Basil gave away his personal inheritance to the poor
-    text: "a dove, I say, which is the sign and hieroglyph of the Holy Spirit, as Gregory of Nyssa testifies"
+    text: " a dove, I say, which is the sign and hieroglyph of the Holy Spirit, as Gregory of Nyssa testifies"
     text: "Basil's own brother Gregory of Nyssa adds that at that time Saint Basil also gave away his own personal inheritance to the poor."
 - **Related people**: Gregory of Nyssa, Basil of Caesarea, Ephrem the Syrian
 - **Related subjects**: Holy Spirit, charity, preaching
@@ -417,7 +417,7 @@
 - **Year**: ~early 5th century
 - **Occurrences**:
   - `#preface-reader-p6` — Sophronius described as translating Jerome's Psalter and Prophets into elegant Greek
-    text: "Sophronius also, a most erudite man, observing that St. Jerome's translation was highly approved not only by Latins but also by Greeks, valued it so greatly that he translated the Psalter and the Prophets from Jerome's version into elegant Greek."
+    text: "Sophronius also, a most erudite man, observing that St. Jerome&rsquo;s translation was highly approved not only by Latins but also by Greeks, valued it so greatly that he translated the Psalter and the Prophets from Jerome&rsquo;s version into elegant Greek."
 - **Related people**: Sophronius, Jerome
 
 ## Council of Trent
@@ -454,7 +454,7 @@
   - `#clement-viii-p2` — Forbids printing by anyone other than the Vatican Press for ten years; requires conformity to the Vatican copy thereafter
     text: "strictly forbid that for ten years... it be printed by anyone anywhere other than in our Vatican Press"
   - `#clement-viii-p6` — Dated 9 November 1592
-    text: "Given at Rome, at St. Peter's, under the Fisherman's Ring, on the 9th day of November 1592"
+    text: "Given at Rome, at St. Peter&rsquo;s, under the Fisherman&rsquo;s Ring, on the 9th day of November 1592"
 - **Related people**: Pope Clement VIII
 - **Related places**: Rome, Vatican
 - **Related subjects**: Vulgate, printing, Church authority

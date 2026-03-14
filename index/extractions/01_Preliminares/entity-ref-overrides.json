@@ -1,0 +1,7 @@
+{
+  "global_exclude_words": ["mark", "the city", "controversies", "histories", "annals"],
+  "exclude": [],
+  "force": [
+    {"text": "Basil", "slug": "person/other/basil-elder", "paragraph": "dedicatory-letter-p11", "reason": "Basil the Elder (father of Basil the Great), not Basil the Great"}
+  ]
+}

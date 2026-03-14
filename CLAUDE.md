@@ -22,6 +22,8 @@ Catholic theological texts site at lapide.org. Primarily Cornelius a Lapide's bi
 - **Cebuano**: `filename_ceb.html` with `lang="ceb"`
 - **Igbo**: `filename_ig.html` with `lang="ig"`
 - **Tamil**: `filename_ta.html` with `lang="ta"`
+- **Malayalam**: `filename_ml.html` with `lang="ml"`
+- **Kinyarwanda**: `filename_rw.html` with `lang="rw"`
 - Future languages follow the same pattern: `filename_XX.html` with the appropriate ISO 639-1 code (or ISO 639-2/3 for languages without a two-letter code, e.g., Cebuano `ceb`).
 
 Index pages: `index.html`, `index_lt.html`, `index_es.html`, `index_fr.html`, `index_pt.html`
@@ -109,6 +111,7 @@ Keep the same `id` attributes across all language versions (e.g., `id="helmeted-
 - Use the target language's standard forms for biblical proper names (e.g., Spanish: Moisés, Josué, Isaías, Jeremías; not Moses, Joshua, Isaiah, Jeremiah).
 - Use traditional liturgical phrasing for well-known Scripture quotations where such a tradition exists in the target language.
 - Preserve all HTML structure exactly: `<p>`, `<em>`, `<b>`, `<hr />`, anchor IDs. The translated file should have the same number of `<p>` tags as the source.
+- **Strip English-only index markup.** The English source files may contain annotation markup that is used only for the English index system and must NOT be carried into translations. Specifically: (1) `<entity-ref slug="...">text</entity-ref>` tags — replace with just the translated text content; (2) `data-paragraph-number` attributes on `<p>` tags — remove them; (3) `<script type="application/json" id="passage-annotations">` blocks — omit entirely. Translations should have clean HTML matching the style of the Latin (`_lt`) files. When in doubt, compare against the Latin version for the expected markup style.
 - **Diacritics are critical.** When delegating to agents, explicitly instruct them to use proper diacritics for the target language (e.g., French: é, è, ê, à, â, î, ô, û, ç, ù, ë, ï, œ; Portuguese: ã, õ, á, é, í, ó, ú, â, ê, ô, à, ç). Agents may omit them unless strongly prompted.
 - **Quotations must be translated into the target language.** All quoted text (Scripture, Church Fathers, classical authors, etc.) should be translated into the target language, not left in Latin/Greek/Hebrew. The only exception is when the English source itself keeps the quotation in the original language (e.g., Hebrew etymologies, untranslated Latin technical terms). Match the English file's approach: if the English translates a quote into English, translate it into the target language; if the English preserves it in the original language, preserve it likewise.
 - **Verse headings must be translated into the target language.** Some English chapters use Latin Vulgate incipits in verse headings (e.g., "Verse 1: Cognovit") while others use English translations (e.g., "Verse 1: In the beginning God created heaven and earth"). Regardless of what the English source uses, the target language translation must always translate the verse heading text into the target language (e.g., Spanish: "Versículo 1: Conoció Adán a su mujer Eva"). This ensures consistency across all languages, especially non-Latin-script languages like Arabic, Hindi, and Tagalog. The TOC entries and their corresponding section headings in the body must match exactly.
@@ -130,7 +133,9 @@ Each language has its own conventions file covering proper names, saint names, q
 - **Indonesian** — See `lang_conventions/id.md`
 - **Italian** — See `lang_conventions/it.md`
 - **Japanese** — See `lang_conventions/ja.md`
+- **Kinyarwanda** — See `lang_conventions/rw.md`
 - **Korean** — See `lang_conventions/ko.md`
+- **Malayalam** — See `lang_conventions/ml.md`
 - **Dutch** — See `lang_conventions/nl.md`
 - **Polish** — See `lang_conventions/pl.md`
 - **Portuguese** — See `lang_conventions/pt.md`

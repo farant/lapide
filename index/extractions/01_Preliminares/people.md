@@ -51,19 +51,19 @@
   - `#dedicatory-letter-p11` — Descended from pious parents Basil and Emmelia; his mother followed him into the wilderness
     text: "Saint Basil too was descended from parents illustrious for piety no less than for birth — Basil and Emmelia — and his mother followed her son even when he withdrew into the wilderness."
   - `#dedicatory-letter-p13` — Like Moses, ascended by degrees; ordained priest by Hermogenes, Bishop of Caesarea, per Gregory Nazianzen
-    text: "Saint Basil did the same, of whom Saint Gregory Nazianzen says: 'After he had first read the sacred books and become their interpreter, he was ordained a priest by Hermogenes, Bishop of Caesarea'"
+    text: "After he had first read the sacred books and become their interpreter, he was ordained a priest by Hermogenes, Bishop of Caesarea"
   - `#dedicatory-letter-p16` — Fled bishopric of Neocaesarea; hid after Eusebius of Caesarea's death; reluctantly made bishop
     text: "Saint Basil likewise fled the bishopric of Neocaesarea, as he himself writes in Epistle 164."
   - `#dedicatory-letter-p20` — Called "the Christian Moses"; vanquished adversaries by steady kindness, per Gregory Nazianzen
     text: "Saint Basil, the Christian Moses, vanquished his adversaries by his steady kindness, as Saint Gregory Nazianzen writes of him."
   - `#dedicatory-letter-p22` — Rufinus recounts his zeal: journeyed through Pontus rousing sluggish minds, built monasteries, taught psalms, cared for poor; transformed the whole province
-    text: "Basil, journeying through the cities and countryside of Pontus, began to rouse with his words the sluggish minds of that people"
+    text: "Basil," he says, "journeying through the cities and countryside of Pontus, began to rouse with his words the sluggish minds of that people"
   - `#dedicatory-letter-p23` — While preaching, Ephrem saw a dove (Holy Spirit) whispering into his ear; Gregory Nazianzen testifies he relieved a public famine by opening granaries of the wealthy; Gregory of Nyssa adds he gave away his personal inheritance to the poor
     text: "While Saint Basil was preaching, Saint Ephrem saw a dove whispering the sermon into his ear"
   - `#dedicatory-letter-p26` — Called "the Moses of cenobitic monks"; raised monasteries throughout the East; prescribed monastic constitutions; defended monasticism against heretics in Epistle 63
     text: "Saint Basil, the Moses of cenobitic monks, raised up monasteries throughout the whole East and prescribed monastic constitutions for them."
   - `#dedicatory-letter-p27` — Gregory Nazianzen said "the life of Basil was for all a rule of living"
-    text: "what Gregory Nazianzen says of Saint Basil — 'the life of Basil was for all a rule of living' — applies equally to you."
+    text: "what Gregory Nazianzen says of Saint Basil &mdash; "the life of Basil was for all a rule of living" &mdash; applies equally to you."
   - `#dedicatory-letter-p29` — Overcame and slew Julian the Apostate through prayer before an image of Our Lady, per Damascene from Helladius
     text: "Saint Basil overcame and slew Julian the apostate Emperor"
   - `#dedicatory-letter-p30` — Resisted Prefect Modestus and Emperor Valens; famous dialogue refusing to follow the Emperor's Arian religion; declared confiscation, exile, torture, and death did not touch him
@@ -71,7 +71,7 @@
   - `#dedicatory-letter-p36` — At his death and funeral, so great a gathering of mourners (even Jews and pagans) that several were crushed and killed, per Gregory Nazianzen
     text: "At the death and funeral of Saint Basil, Saint Gregory Nazianzen writes that there was so great a gathering of mourners — even of Jews and pagans — that several were crushed and killed in the crowd."
   - `#dedicatory-letter-p38` — Gregory Nazianzen said "Basil, through the single Church of Caesarea, gave light to the whole world."
-    text: "that saying of Saint Gregory Nazianzen: 'Basil, through the single Church of Caesarea, gave light to the whole world.'"
+    text: "that saying of Saint Gregory Nazianzen: "Basil, through the single Church of Caesarea, gave light to the whole world.""
   - `#dedicatory-letter-p47` — Van der Burch exhorted to "express Basil"; Lapide prays God pour out the spirit of both Moses and Basil upon Van der Burch
     text: "Imitate Moses in all things; express Basil."
   - `#life-p2` — Listed among saints whose company Lapide found in Rome (with Gregory and Jerome)
@@ -95,19 +95,19 @@
   - `#dedicatory-letter-p9` — With Basil, studied eloquence and philosophy at Athens, then devoted thirteen years to Scripture
     text: "Rufinus attests that after Saint Basil and Saint Gregory Nazianzen had studied eloquence and philosophy at Athens, they devoted thirteen years to reading and meditating upon Moses and the Sacred Scriptures."
   - `#dedicatory-letter-p13` — Testifies about Basil's ordination by Hermogenes
-    text: "Saint Gregory Nazianzen says: 'After he had first read the sacred books and become their interpreter, he was ordained a priest by Hermogenes, Bishop of Caesarea'"
+    text: "After he had first read the sacred books and become their interpreter, he was ordained a priest by Hermogenes, Bishop of Caesarea"
   - `#dedicatory-letter-p20` — Testifies Basil vanquished adversaries by kindness
     text: "as Saint Gregory Nazianzen writes of him"
   - `#dedicatory-letter-p23` — Testifies Basil relieved famine by opening granaries; extensive quotation comparing Basil to Joseph
     text: "Saint Gregory Nazianzen testifies that a public famine was relieved by Saint Basil's efforts"
   - `#dedicatory-letter-p27` — Said "the life of Basil was for all a rule of living"
-    text: "what Gregory Nazianzen says of Saint Basil — 'the life of Basil was for all a rule of living'"
+    text: "what Gregory Nazianzen says of Saint Basil &mdash; "the life of Basil was for all a rule of living""
   - `#dedicatory-letter-p30` — Testifies about Modestus pressing Basil; records the dialogue between Basil and the Prefect
     text: "Modestus, the Prefect of Valens, as Gregory Nazianzen testifies, pressed Basil to follow the religion of the Emperor."
   - `#dedicatory-letter-p36` — Writes about crowds at Basil's funeral
     text: "At the death and funeral of Saint Basil, Saint Gregory Nazianzen writes"
   - `#dedicatory-letter-p38` — Said Basil gave light to the whole world through the single Church of Caesarea
-    text: "that saying of Saint Gregory Nazianzen: 'Basil, through the single Church of Caesarea, gave light to the whole world.'"
+    text: "that saying of Saint Gregory Nazianzen: "Basil, through the single Church of Caesarea, gave light to the whole world.""
 - **Related people**: `saint/basil-the-great`
 - **Related places**: Athens, Constantinople, Nazianzus
 - **Related works**: Oration in Praise of Saint Basil
@@ -240,7 +240,7 @@
 - **Role**: Bishop of Cambrai
 - **Occurrences**:
   - `#dedicatory-letter-p41` — Avoided injuries, bore them equably; despised love of money; departed for Jerusalem drawing three thousand pilgrims; his holiness manifested by miracle: grey hairs after death returned to youthful color
-    text: "Saint Lietbert, 'most cautiously avoided injuries,' says the author of his Life, 'bore them most equably, and brought them to an end most swiftly'"
+    text: "most cautiously avoided injuries," says the author of his Life, "bore them most equably, and brought them to an end most swiftly"
 - **Related places**: Cambrai, Jerusalem
 - **Related subjects**: pilgrimage, miracles
 
@@ -418,7 +418,7 @@
 - **Role**: Prophet, Forerunner of Christ
 - **Occurrences**:
   - `#dedicatory-letter-p4` — His words about Christ quoted: "He must increase, but I must decrease"
-    text: "what Saint John the Baptist said of Christ — 'He must increase, but I must decrease'"
+    text: "what Saint John the Baptist said of Christ &mdash; "He must increase, but I must decrease""
 - **Related people**: `biblical/jesus-christ`
 - **Related subjects**: prophecy
 
@@ -624,7 +624,7 @@
   - `#dedicatory-letter-p2` — Lapide calls his commentary "this Moses of mine" and says it was destined for Van der Burch
     text: "this Moses of mine — destined for you from its very first conception and indebted to you on many counts — was brought into the light."
   - `#dedicatory-letter-p5` — Extended comparison: Moses formed, ruled, and directed the Church of the Hebrews; established Church by ceremonial precepts, Commonwealth by judicial precepts; in Moses both supreme powers (prince and priest) were held; transferred priesthood to Aaron; was a shepherd first of sheep then of men
-    text: "just as Moses formed, ruled, and governed the Church of the Hebrews no less than their Commonwealth"
+    text: "Moses formed, ruled, and directed the Church of the Hebrews no less than their Commonwealth... In Moses therefore, just as in Melchizedek, Abraham, Isaac, Jacob, and the other ancient patriarchs, both supreme powers &mdash; that is, of the prince and of the priest &mdash; were held in conjunction"
   - `#dedicatory-letter-p7` — Van der Burch exhorted to be "our Moses of the Low Countries"
     text: "Be therefore, Most Illustrious Lord, our Moses of the Low Countries"
   - `#dedicatory-letter-p8` — Basil "learned to act like Moses from Moses himself"; Basil's Hexaemeron composed as commentary on the Genesis of Moses
@@ -770,7 +770,7 @@
 - **Role**: Son of God, Redeemer
 - **Occurrences**:
   - `#dedicatory-letter-p4` — John the Baptist said of Christ: "He must increase, but I must decrease"
-    text: "what Saint John the Baptist said of Christ — 'He must increase, but I must decrease'"
+    text: "what Saint John the Baptist said of Christ &mdash; "He must increase, but I must decrease""
   - `#dedicatory-letter-p23` — Basil imitated the service of Christ who girded himself and washed disciples' feet
     text: "imitating the service of Christ, who girded himself with a linen cloth and was not at all reluctant to wash the feet of his disciples"
   - `#dedicatory-letter-p52` — Lapide's labor sweats and strains to Christ's honor; hope to be joined in heavenly glory in Christ
@@ -817,7 +817,7 @@
 - **Role**: Righteous sufferer, protagonist of the Book of Job
 - **Occurrences**:
   - `#dedicatory-letter-p24` — His words quoted to describe Van der Burch's charity: "From my infancy compassion grew up with me, and from my mother's womb it came forth with me."
-    text: "truly may you say those words of holy Job: 'From my infancy compassion grew up with me, and from my mother's womb it came forth with me.'"
+    text: "truly may you say those words of holy Job: "From my infancy compassion grew up with me, and from my mother's womb it came forth with me.""
   - `#life-p4` — Lapide left incomplete his commentaries on the books of Job
     text: "He left incomplete his commentaries on the books of Job and Psalms."
 - **Related subjects**: compassion, patience
@@ -1009,7 +1009,7 @@
 - **Role**: Pope (1592–1605)
 - **Occurrences**:
   - `#preface-reader-p12` — Under his pontificate the corrected Vulgate was perfected
-    text: "at the beginning of the Pontificate of Clement VIII, who now holds the helm of the universal Church, the work at which Sixtus V had aimed was, with God's good help, perfected."
+    text: "at the beginning of the Pontificate of Clement VIII, who now holds the helm of the universal Church, the work at which Sixtus V had aimed was, with God&rsquo;s good help, perfected."
   - `#preface-reader-p13` — The corrected Vulgate issued with his approval from the Vatican Press
     text: "Receive therefore, Christian reader, with the approval of the same Clement, Supreme Pontiff, from the Vatican Press"
   - `#clement-viii` — Heading: Bull on the Vulgate issued under his name
@@ -1019,7 +1019,7 @@
   - `#clement-viii-p3` — Prescribes penalties: loss of books, excommunication ipso facto for violators
     text: "he shall incur, besides the loss of all the books and other temporal penalties to be inflicted at Our discretion, also the sentence of major excommunication"
   - `#clement-viii-p6` — Bull dated 9 November 1592, first year of his pontificate, at St. Peter's under the Fisherman's Ring
-    text: "Given at Rome, at St. Peter's, under the Fisherman's Ring, on the 9th day of November 1592, in the first year of Our Pontificate."
+    text: "Given at Rome, at St. Peter&rsquo;s, under the Fisherman&rsquo;s Ring, on the 9th day of November 1592, in the first year of Our Pontificate."
 - **Related people**: `pope/sixtus-v`, `pope/gregory-xiv`, `pope/urban-vii`, `pope/innocent-ix`
 - **Related places**: Rome, Vatican
 - **Related works**: Clementine Vulgate
@@ -1061,7 +1061,7 @@
   - `#preface-reader-p11` — Called by divine Providence to supreme Pontificate; recalled the Vulgate correction work with ardent zeal; ordered the completed work printed; finding errors, judged the whole work should be recalled; died before completing the revision
     text: "Sixtus V, called by divine Providence to the supreme Pontificate, recalled with most ardent zeal, and at length ordered the completed work to be committed to the press."
   - `#preface-reader-p12` — The work he aimed at was perfected under Clement VIII
-    text: "the work at which Sixtus V had aimed was, with God's good help, perfected."
+    text: "the work at which Sixtus V had aimed was, with God&rsquo;s good help, perfected."
 - **Related people**: `pope/clement-viii`, `pope/gregory-xiv`, `pope/urban-vii`
 - **Related subjects**: Sixtine Vulgate, printing
 
@@ -1194,7 +1194,7 @@
 - **Role**: King of the Franks
 - **Occurrences**:
   - `#dedicatory-letter-p42` — Came frequently to receive the counsel of Saint Authbert
-    text: "King Dagobert of the Franks came not infrequently to receive the counsel of Saint Authbert."
+    text: "King Dagobert of the Franks came not infrequently to receive the counsel of Saint Authert."
 - **Related people**: `saint/authbert`
 - **Related places**: Frankish kingdom
 
@@ -1261,7 +1261,7 @@
 - **Role**: Prefect of Valens's imperial kitchen
 - **Occurrences**:
   - `#dedicatory-letter-p33` — Present at the confrontation with Basil; rebuked Basil in barbarian fashion; Basil replied "We have seen an illiterate Demosthenes" and told him to look after seasoning broths
-    text: "a certain man named Demosthenes, prefect of the imperial kitchen, who in a thoroughly barbarian fashion rebuked Basil, master of the whole world. But Saint Basil, smiling, said: 'We have seen an illiterate Demosthenes.'"
+    text: "a certain man named Demosthenes, prefect of the imperial kitchen, who in a thoroughly barbarian fashion rebuked Basil, master of the whole world. But Saint Basil, smiling, said: "We have seen an illiterate Demosthenes.""
 - **Related people**: `saint/basil-the-great`, `ruler/valens`
 - **Related subjects**: wit, confrontation
 
@@ -1276,7 +1276,7 @@
   - `#dedicatory-letter-p31` — Mocked Modestus with verses about him being under Basil's authority
     text: "Rightly therefore did Cyrus Theodorus mock this Prefect... with these verses"
   - `#dedicatory-letter-p32` — His verses quoted: "You are Prefect over all men else, Modestus, / but under Basil the Great you take your place."
-    text: "You are Prefect over all men else, Modestus, / but under Basil the Great you take your place. / However much you crave to be in command, you submit; / an ant you are, though you may roar like a lion."
+    text: "You are Prefect over all men else, Modestus, but under Basil the Great you take your place. However much you crave to be in command, you submit; an ant you are, though you may roar like a lion."
 - **Related people**: `saint/basil-the-great`, `other/modestus`
 
 ---
@@ -1351,7 +1351,7 @@
 - **Role**: Scholar who translated Jerome's Psalter and Prophets into Greek
 - **Occurrences**:
   - `#preface-reader-p6` — A most erudite man who, observing Jerome's translation was highly approved by Latins and Greeks, translated the Psalter and Prophets from Jerome's version into elegant Greek
-    text: "Sophronius also, a most erudite man, observing that St. Jerome's translation was highly approved not only by Latins but also by Greeks, valued it so greatly that he translated the Psalter and the Prophets from Jerome's version into elegant Greek."
+    text: "Sophronius also, a most erudite man, observing that St. Jerome&rsquo;s translation was highly approved not only by Latins but also by Greeks, valued it so greatly that he translated the Psalter and the Prophets from Jerome&rsquo;s version into elegant Greek."
 - **Related people**: `saint/jerome`
 - **Related subjects**: biblical translation, Greek
 
@@ -1620,7 +1620,7 @@
   - `#dedicatory-letter-p30` — Pressed Basil to follow the religion of the Emperor; was told threats of confiscation, exile, torture, and death did not touch Basil
     text: "Modestus, the Prefect of Valens, as Gregory Nazianzen testifies, pressed Basil to follow the religion of the Emperor."
   - `#dedicatory-letter-p31` — Broken by Basil's boldness, went to the Emperor and said "We have been vanquished by the Bishop of this Church"; later, when ill, was compelled to beg for Basil's help
-    text: "Broken by this boldness, the Prefect went to the Emperor and said: 'We have been vanquished by the Bishop of this Church'"
+    text: "Broken by this boldness, the Prefect went to the Emperor and said"
   - `#dedicatory-letter-p32` — Mocked by Cyrus Theodorus's verses: "You are Prefect over all men else, Modestus, / but under Basil the Great you take your place."
     text: "You are Prefect over all men else, Modestus, but under Basil the Great you take your place."
 - **Related people**: `saint/basil-the-great`, `ruler/valens`, `classical/cyrus-theodorus`

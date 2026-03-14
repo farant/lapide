@@ -53,7 +53,7 @@ One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called
   text: "Rufinus attests that after Saint Basil and Saint Gregory Nazianzen had studied eloquence and philosophy at Athens, they devoted thirteen years to reading and meditating upon Moses and the Sacred Scriptures."
 - `01_Preliminares.html#dedicatory-letter-p11-s-028060c` — Descended from pious parents Basil and Emmelia; his mother followed him into the wilderness
   text: "Saint Basil too was descended from parents illustrious for piety no less than for birth — Basil and Emmelia — and his mother followed her son even when he withdrew into the wilderness."
-- `01_Preliminares.html#dedicatory-letter-p13-s-0be5ba2` — Like Moses, ascended by degrees; ordained priest by Hermogenes, Bishop of Caesarea, per Gregory Nazianzen
+- `01_Preliminares.html#dedicatory-letter-p13-s-dbe7cd5` — Like Moses, ascended by degrees; ordained priest by Hermogenes, Bishop of Caesarea, per Gregory Nazianzen
   text: "Saint Basil did the same, of whom Saint Gregory Nazianzen says"
 - `01_Preliminares.html#dedicatory-letter-p16-s-3adbaae` — Fled bishopric of Neocaesarea; hid after Eusebius of Caesarea's death; reluctantly made bishop
   text: "Saint Basil likewise fled the bishopric of Neocaesarea, as he himself writes in Epistle 164."

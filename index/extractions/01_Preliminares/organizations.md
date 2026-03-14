@@ -25,7 +25,7 @@
     text: "This Commentary of the Very Reverend Father Cornelius Cornelii a Lapide, theologian of the Society of Jesus"
   - `#life-p2` — Lapide entered the Society of Jesus on 8 July 1592
     text: "As a young man he entered the Society of Jesus on 8 July in the year of salvation 1592"
-  - `#life-p2` — Lapide was called into the Society by the Blessed Mother of God
+  - `#life-p3` — Lapide was called into the Society by the Blessed Mother of God
     text: "he had been called, unworthy as he was, into the holy Society of her Son"
 - **Related people**: cornelius-a-lapide, mutius-vitelleschi, charles-scribani
 - **Related places**: europe/low-countries/mechlin, europe/low-countries/louvain, europe/low-countries/antwerp, europe/italy/rome

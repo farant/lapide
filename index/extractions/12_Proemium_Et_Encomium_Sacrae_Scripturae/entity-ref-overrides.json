@@ -1,27 +1,25 @@
 {
-  "global_exclude_words": [
-    "mark",
-    "the city"
-  ],
+  "global_exclude_words": ["mark", "the city", "controversies", "histories", "annals"],
   "exclude": [
-    {
-      "text": "Israel",
-      "slug": "person/biblical/jacob",
-      "paragraph": "moses-virtues-p3",
-      "reason": "nation, not person"
-    },
-    {
-      "text": "Dionysius",
-      "slug": "person/saint/dionysius-areopagite",
-      "paragraph": "praises-of-moses-p12",
-      "reason": "pagan deity Dionysus/Bacchus, not the Christian saint"
-    },
-    {
-      "text": "the virgin",
-      "slug": "person/saint/blessed-virgin-mary",
-      "paragraph": "praises-of-moses-p12",
-      "reason": "the goddess Proserpina, not the Blessed Virgin Mary"
-    }
+    {"text": "Israel", "slug": "person/biblical/jacob", "paragraph": "moses-virtues-p3", "reason": "nation, not person"},
+    {"text": "Dionysius", "slug": "person/saint/dionysius-areopagite", "paragraph": "praises-of-moses-p12", "reason": "pagan deity Dionysus/Bacchus, not the Christian saint"},
+    {"text": "the virgin", "slug": "person/saint/blessed-virgin-mary", "paragraph": "praises-of-moses-p12", "reason": "the goddess Proserpina, not the Blessed Virgin Mary"},
+    {"text": "Israel", "slug": "person/biblical/jacob", "paragraph": "section-one-p5", "reason": "nation, not person"},
+    {"text": "Israel", "slug": "person/biblical/jacob", "paragraph": "chapter-iv-p5", "reason": "nation, not person"},
+    {"text": "Israel", "slug": "person/biblical/jacob", "paragraph": "chapter-v-p26", "reason": "nation, not person (Israel's exile)"},
+    {"text": "Israel", "slug": "person/biblical/jacob", "paragraph": "utility-ii-p7", "reason": "nation, not person"},
+    {"text": "Israel", "slug": "person/biblical/jacob", "paragraph": "moses-virtues-p4", "reason": "nation, not person"},
+    {"text": "Israel", "slug": "person/biblical/jacob", "paragraph": "moses-and-christ-p5", "reason": "nation, not person"},
+    {"text": "Cornelius", "slug": "person/pope/cornelius", "paragraph": "utility-ii-p11", "reason": "part of Publius Cornelius Scipio, not Pope Cornelius"},
+    {"text": "Judas", "slug": "person/biblical/judas-iscariot", "paragraph": "utility-ii-p11", "reason": "Judas Maccabeus, not Judas Iscariot"},
+    {"text": "Philip", "slug": "person/biblical/philip-the-deacon", "paragraph": "utility-vi-p3", "reason": "Philip the Apostle, not Philip the Deacon"},
+    {"text": "Greeks", "slug": "organization/government/greek-monarchy", "paragraph": "praises-of-moses-p6", "reason": "generic reference to Greek people, not the monarchy"}
   ],
-  "force": []
+  "force": [
+    {"text": "Gregory", "slug": "person/saint/gregory-thaumaturgus", "paragraph": "chapter-v-p28", "reason": "Gregory Thaumaturgus, not Gregory of Nyssa"},
+    {"text": "Demosthenes", "slug": "person/classical/demosthenes-orator", "paragraph": "chapter-v-p4", "reason": "the orator, not the cook"},
+    {"text": "St. Paulinus", "slug": "person/cleric/paulinus-of-milan", "paragraph": "chapter-v-p30", "reason": "Paulinus of Milan (biographer of Ambrose), not Paulinus of Nola"},
+    {"text": "St. Anthony", "slug": "person/saint/antony-the-great", "paragraph": "chapter-v-p9", "reason": "Desert Father, not Anthony of Padua"},
+    {"text": "Philip", "slug": "person/biblical/philip-the-apostle", "paragraph": "utility-vi-p3", "reason": "Philip the Apostle who called Nathanael"}
+  ]
 }

@@ -32,7 +32,7 @@
 - **Description**: Date of Pope Clement VIII's bull on the Vulgate, given at Rome under the Fisherman's Ring, in the first year of his pontificate.
 - **Occurrences**:
   - `#clement-viii-p6` — Dating of the papal bull
-    text: "Given at Rome, at St. Peter's, under the Fisherman's Ring, on the 9th day of November 1592, in the first year of Our Pontificate."
+    text: "Given at Rome, at St. Peter&rsquo;s, under the Fisherman&rsquo;s Ring, on the 9th day of November 1592, in the first year of Our Pontificate."
 - **Related people**: Pope Clement VIII
 - **Related places**: Rome, St. Peter's
 

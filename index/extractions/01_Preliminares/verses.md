@@ -7,7 +7,7 @@
 - **Description**: "He must increase, but I must decrease" — John the Baptist's words about Christ.
 - **Occurrences**:
   - `#dedicatory-letter-p4` — Lapide applies the Baptist's words to Van der Burch's rising ecclesiastical career and his own diminishing role
-    text: "But what Saint John the Baptist said of Christ — 'He must increase, but I must decrease' — this I long foresaw concerning your Most Illustrious Lordship and myself"
+    text: "But what Saint John the Baptist said of Christ &mdash; "He must increase, but I must decrease" &mdash; this I long foresaw concerning your Most Illustrious Lordship and myself"
 - **Related people**: John the Baptist, Jesus Christ
 
 ## Exodus

@@ -34,7 +34,7 @@ One of the three Cappadocian Fathers and Archbishop of Constantinople. Known as 
   text: "says his peer Blessed Gregory Nazianzen in his Oration in Praise of Saint Basil"
 - `01_Preliminares.html#dedicatory-letter-p9-s-c8111a3` — With Basil, studied eloquence and philosophy at Athens, then devoted thirteen years to Scripture
   text: "Rufinus attests that after Saint Basil and Saint Gregory Nazianzen had studied eloquence and philosophy at Athens, they devoted thirteen years to reading and meditating upon Moses and the Sacred Scriptures."
-- `01_Preliminares.html#dedicatory-letter-p13-s-9e2e8be` — Testifies about Basil's ordination by Hermogenes
+- `01_Preliminares.html#dedicatory-letter-p13-s-7d9b9fa` — Testifies about Basil's ordination by Hermogenes
   text: "Saint Gregory Nazianzen says"
 - `01_Preliminares.html#dedicatory-letter-p20-s-438edc2` — Testifies Basil vanquished adversaries by kindness
   text: "as Saint Gregory Nazianzen writes of him"

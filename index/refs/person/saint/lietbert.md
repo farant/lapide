@@ -25,5 +25,5 @@ Bishop of Cambrai known for his equanimity, contempt for money, and his pilgrima
 
 ## References in Commentary
 
-- `01_Preliminares.html#dedicatory-letter-p41-s-85f5226` — Avoided injuries, bore them equably; despised love of money; departed for Jerusalem drawing three thousand pilgrims; his holiness manifested by miracle: grey hairs after death returned to youthful color
+- `01_Preliminares.html#dedicatory-letter-p41-s-0d18a80` — Avoided injuries, bore them equably; despised love of money; departed for Jerusalem drawing three thousand pilgrims; his holiness manifested by miracle: grey hairs after death returned to youthful color
   text: "On departing for Jerusalem he drew with him three thousand men, who accompanied him on pilgrimage."
