@@ -1806,6 +1806,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_ta.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_th.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.8</priority>
@@ -2266,6 +2271,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/4-ezra/4-ezra.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/4-ezra/chapter-14.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -2286,6 +2296,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/aelian/de-natura-animalium.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/aelian/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/aeschines/against-ctesiphon.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -2296,12 +2316,42 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/alcuin/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/alcuin/quaestiones-in-genesim.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/aldrovandus/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/aldrovandus/ornithology.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/ambrose/commentary-on-psalm-1.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/ambrose/de-cain-et-abel.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/ambrose/de-hexaemeron.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/ambrose/de-paradiso.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2326,7 +2376,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/aristotle/de-generatione-animalium.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/aristotle/history-of-animals.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/aristotle/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/aristotle/on-wisdom-according-to-egyptians.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2346,6 +2411,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/athanasius/de-decretis.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/athanasius/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -2356,12 +2426,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/athanasius/orationes-contra-arianos.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/augustine/city-of-god.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/augustine/confessions.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/augustine/contra-adimantum.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2381,6 +2461,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/augustine/de-genesi-ad-litteram.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/augustine/de-genesi-contra-manichaeos.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/augustine/de-magistro.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -2396,12 +2486,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/augustine/enarrationes-in-psalmos.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/augustine/enchiridion.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/augustine/epistles.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/augustine/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/augustine/meditations.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2416,7 +2521,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/augustine/sentences.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/augustine/soliloquies.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/augustine/tractatus-on-john.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2477,6 +2592,21 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/bernard/letter-to-mont-dieu.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/bernard/sermon-on-annunciation.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/bernard/sermon-on-john-the-baptist.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/bernard/sermon-on-pentecost.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2551,7 +2681,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/chrysostom/homily-man-set-over-every-creature.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/chrysostom/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/cicero/de-natura-deorum.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2576,12 +2716,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/clavius/gnomonics.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/clavius/in-sphaeram.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/clavius/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/clement-of-alexandria/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/clement-of-alexandria/stromata.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/clement-of-rome/apostolic-constitutions.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2686,6 +2846,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/council-of-palestine/decree-on-creation.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/council-of-palestine/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/council-of-trent/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -2736,7 +2906,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/cyril-of-alexandria/glaphyra.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/cyril-of-alexandria/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/cyril-of-alexandria/thesaurus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2781,12 +2961,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/diogenes/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/diogenes/via-plutarch.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/dionysius/de-coelesti-hierarchia.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/dionysius/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/dioscorides/de-materia-medica.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/dioscorides/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2807,6 +3007,21 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/einhard/vita-karoli.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/epictetus/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/epictetus/sayings.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/eucherius/commentary-on-genesis.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2861,6 +3076,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/galen/de-temperamentis.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/galen/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/geoffrey-of-auxerre/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -2892,6 +3117,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/gregory-nazianzen/oration-in-praise-of-st-basil.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/gregory-of-nyssa/de-hominis-opificio.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -2961,6 +3191,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/hilary/de-synodis.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/hilary/de-trinitate.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -3001,6 +3236,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/horus-apollo/hieroglyphica.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/horus-apollo/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/iamblichus/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -3011,7 +3256,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/ignatius-of-loyola/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/ignatius-of-loyola/sayings.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/innocent-iii/decretals.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/innocent-iii/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3036,6 +3301,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/jerome/commentary-on-ezekiel.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/jerome/commentary-on-galatians.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -3056,12 +3326,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/jerome/epistle-15.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/jerome/epistle-53.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/jerome/epistle-83.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/jerome/epistle-to-cyprian.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/jerome/hebrew-questions-on-genesis.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3082,6 +3367,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/jerome/vulgate.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/john-of-damascus/de-fide-orthodoxa.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3151,6 +3441,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/lactantius/de-ira-dei.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/lactantius/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/lamartine/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -3171,12 +3471,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/leo-the-great/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/leo-the-great/sermons.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/livy/ab-urbe-condita.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/livy/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/marius-victor/alethia.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/marius-victor/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3296,6 +3616,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/peter-lombard/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/peter-lombard/sentences.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/peter-the-deacon/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -3312,6 +3642,21 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/petrarch/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/philo/de-monarchia.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/philo/de-opificio-mundi.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/philo/de-plantatione.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3346,6 +3691,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/plato/symposium.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/plato/theaetetus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -3357,6 +3707,21 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/plato/works.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/pliny/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/pliny/natural-history.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/plutarch/de-tranquillitate-animi.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3446,6 +3811,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/bibliography/secundus/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/secundus/sententiae.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/bibliography/seneca/de-constantia-sapientis.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -3472,6 +3847,26 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/shakespeare/romeo-and-juliet.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/sixtus-of-siena/bibliotheca-sancta.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/sixtus-of-siena/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/socrates-scholasticus/ecclesiastical-history.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/socrates-scholasticus/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3512,6 +3907,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/teganus/vita-ludovici.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/tertullian/adversus-hermogenem.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3562,6 +3962,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/bibliography/tostado/commentaries-on-decateuch.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/bibliography/tostado/commentary-on-genesis.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -3901,6 +4306,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/organization/council/council-of-nicaea.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/organization/council/council-of-palestine.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/organization/council/council-of-sirmium.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -4096,6 +4511,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/organization/institution/anthropomorphites.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/organization/institution/arians.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -4122,6 +4542,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/organization/institution/libertines.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/organization/institution/lutherans.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -4157,6 +4582,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/organization/institution/platonic-school.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/organization/institution/priscillianists.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -4371,6 +4801,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/biblical/ana.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/biblical/arphaxad.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -4447,6 +4882,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/biblical/elijah.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/biblical/elisha.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -4721,6 +5161,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/biblical/lucifer.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/biblical/luke.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -4847,6 +5292,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/biblical/philemon.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/biblical/philip-the-apostle.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5006,6 +5456,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/classical/aelian.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/classical/aeneas.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5101,6 +5556,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/classical/chrysippus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/classical/cicero.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5136,7 +5596,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/classical/dioscorides.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/classical/empedocles.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/classical/epictetus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5147,6 +5617,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/classical/euripides.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/classical/galen.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5191,12 +5666,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/classical/horapollo.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/classical/iamblichus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/person/classical/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/classical/lactantius.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5231,6 +5716,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/classical/marius-victor.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/classical/miltiades.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5247,6 +5737,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/classical/orpheus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/classical/ovid.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5287,6 +5782,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/classical/pythagoras.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/classical/secundus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5401,6 +5901,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/cleric/oleastro.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/cleric/paulinus-of-milan.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/cleric/philastrius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/cleric/primasius.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5431,12 +5946,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/heresiarch/arius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/heresiarch/audaeus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/heresiarch/calvin.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/heresiarch/epicurus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/heresiarch/faustus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/heresiarch/flacius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/heresiarch/hermogenes-gnostic.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5471,6 +6011,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/other/alfraganus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/other/andreas-dudecius.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5501,7 +6046,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/other/censorinus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/other/cumanus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/other/dacian.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5541,6 +6096,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/other/franciscus-georgius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/other/fundanus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5566,7 +6126,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/other/jonathan.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/other/macrobius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/other/martin-nutius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/other/mattioli.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5577,6 +6152,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/other/mohammed.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/other/monica.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/other/onkelos.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5611,6 +6196,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/other/sisinnius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/other/strato.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/other/surius.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5637,6 +6232,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/other/theodotion.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/other/theophilus-of-antioch.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5716,6 +6316,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/pope/victor.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/rabbi/aben-ezra.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/rabbi/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/ruler/alexander.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5732,6 +6347,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/ruler/augustus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/ruler/aurelian.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -5946,6 +6566,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/ruler/sesostris.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/ruler/severus-emperor.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -5997,6 +6622,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/saint/antony-the-great.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/saint/apronianus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6151,6 +6781,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/saint/ignatius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/saint/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -6211,6 +6846,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/saint/leo.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/saint/lietbert.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -6232,6 +6872,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/saint/marcian.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/saint/menas.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6291,6 +6936,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/saint/symphorian.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/saint/theodore-the-studite.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -6312,6 +6962,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/saint/victorinus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/saint/vincent-deacon.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6341,12 +6996,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/aldrovandus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/alexander-of-hales.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/anastasius-of-sinai.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/anatolius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/antoninus-of-florence.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6366,12 +7036,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/avicenna.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/burgensis.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/cajetan.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/cassian.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/person/scholar/cassiodorus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/catharinus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/clavius.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6391,12 +7086,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/delrio.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/denis-the-carthusian.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/des-vignoles.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/person/scholar/didymus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/diodorus-of-tarsus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6426,6 +7136,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/eugubinus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/eupolemus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -6436,12 +7151,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/ferus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/festus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/gabriel-biel.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/galatinus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/gesner.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/goropius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/gregory-of-valencia.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6452,6 +7192,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/scholar/henricus-samerius.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/honcala.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6477,6 +7222,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/scholar/ludwig-vives.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/lyra.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/molina.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6507,6 +7262,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/person/scholar/philo.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/pliny.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6546,12 +7306,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/schottus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/scotus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/scrieckius.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/person/scholar/sepp.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/sixtus-of-siena.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/socrates-scholasticus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6576,7 +7356,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/person/scholar/thomas-of-york.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/person/scholar/tostado.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/vatablus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/person/scholar/voellus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/place/africa/africa.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6631,6 +7431,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/place/asia-minor/lampsacus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/place/asia-minor/pontus/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -6667,6 +7472,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/place/biblical/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/place/biblical/judah.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6741,6 +7551,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/place/body-of-water/pontus-euxinus.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/place/body-of-water/red-sea.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -6797,6 +7612,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/place/europe/belgium/mons.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/place/europe/cyprus.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -6992,6 +7812,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/place/europe/italy/alba-longa.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/place/europe/italy/brescia.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -7271,6 +8096,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/place/middle-east/lebanon.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/place/middle-east/mesopotamia.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -7476,6 +8306,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/subject/ecclesiology/authority/two-luminaries.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/subject/ecclesiology/clergy/ecclesiastical-discipline.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -7626,6 +8461,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/subject/exegesis/textual-criticism/hebrew-exegesis.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/subject/exegesis/textual-criticism/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -7666,12 +8506,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/subject/morals/practices/frugality.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/subject/morals/practices/hospitality.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/subject/morals/practices/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/morals/practices/marriage.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -7746,6 +8596,41 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/subject/natural-philosophy/animals.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/natural-philosophy/astronomy.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/natural-philosophy/earth-and-sea.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/natural-philosophy/firmament.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/natural-philosophy/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/natural-philosophy/plants.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/sacraments/baptism.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/subject/sacraments/confession.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -7806,12 +8691,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/subject/spirituality/saints-as-stars.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/subject/spirituality/scholarly-martyrdom.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/subject/spirituality/zeal-for-souls.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/christology/christ-as-light.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -7851,7 +8746,72 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/subject/theology/creation/beginning-of-time.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/dominion.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/empyrean-heaven.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/ex-nihilo.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/goodness.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/holy-spirit.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/image-of-god.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/subject/theology/creation/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/light.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/man-as-microcosm.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/six-days.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/vernal-creation.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/creation/world-as-book.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/eschatology/hell.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -7872,6 +8832,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/subject/theology/god/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/god/nature-of-god.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8031,12 +8996,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/subject/theology/soteriology/free-will.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/subject/theology/soteriology/grace.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/subject/theology/soteriology/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/subject/theology/soteriology/original-justice.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8077,6 +9052,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/1-corinthians/12/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/1-corinthians/15/41.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/1-corinthians/15/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8146,6 +9131,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/1-timothy/3/15.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/1-timothy/3/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/1-timothy/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -8191,6 +9186,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/2-corinthians/4/6.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/2-corinthians/4/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/2-corinthians/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -8212,6 +9217,21 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/2-maccabees.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/2-maccabees/7/28.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/2-maccabees/7/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/2-maccabees/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8296,6 +9316,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/4-ezra/6/38.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/4-ezra/6/40.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/4-ezra/6/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/4-ezra/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -8327,6 +9362,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/acts/13/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/acts/17/28.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/acts/17/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8376,12 +9421,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/baruch/3/24.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/baruch/3/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/verse/baruch/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/colossians/1/16.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/colossians/1/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8571,12 +9631,52 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/1/4.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/1/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/18/1.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/18/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/27/12.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/27/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/ecclesiasticus/39/1-8.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/verse/ecclesiasticus/39/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/43/2.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ecclesiasticus/43/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8607,6 +9707,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/ephesians/4/12-13.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/ephesians/4/23-24.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8662,6 +9767,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/exodus/20.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/exodus/20/1.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8911,7 +10021,112 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/genesis/1/10.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/11-12.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/13.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/14-15.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/genesis/1/14.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/16-19.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/2.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/20.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/21.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/22-23.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/24-25.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/26.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/27.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/28.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/29-30.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/3.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/31.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/4.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/5.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/6-7.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/8.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/1/9.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -8961,6 +10176,56 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/genesis/2/1.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/2/18.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/2/19.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/2/22.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/2/7.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/2/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/21/4.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/21/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/25/26.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/25/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/genesis/26/34.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -8981,6 +10246,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/genesis/3/1.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/genesis/3/14.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -8997,6 +10267,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/genesis/3/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/30/25.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/30/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -9031,6 +10311,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/genesis/36/24.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/genesis/36/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -9061,12 +10346,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/genesis/50/25.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/50/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/genesis/7.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/verse/genesis/8.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/9/1.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/9/3.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/genesis/9/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -9181,12 +10491,67 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/isaiah/18/2.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/18/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/30/26.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/30/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/38/8.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/38/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/40/12.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/isaiah/40/3.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/verse/isaiah/40/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/44/24.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/44/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/47/13.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/isaiah/47/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -9231,6 +10596,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/isaiah/9/2.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/isaiah/9/6.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -9257,6 +10627,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/jeremiah/1/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/jeremiah/10/2.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/jeremiah/10/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -9311,6 +10691,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/jeremiah/8/7.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/jeremiah/8/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/jeremiah/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -9346,12 +10736,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/job/34/18.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/job/34/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/job/37/7.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/verse/job/37/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/job/40/10.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/job/40/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -9372,6 +10782,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/john/1/45.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/john/1/9.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -9451,6 +10866,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/john/5/35.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/john/5/39.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -9467,6 +10887,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/john/5/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/john/8/12.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -9811,6 +11236,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/matthew/17/2.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/matthew/17/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -9851,6 +11281,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/matthew/25/34.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/matthew/25/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/matthew/26/39.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -9887,6 +11327,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/matthew/4/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/matthew/5/14.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10046,6 +11491,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/philippians/2/15.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/philippians/2/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/philippians/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/proverbs/11/2.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10086,12 +11546,42 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/proverbs/6/23.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/proverbs/6/6.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/proverbs/6/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/proverbs/8/27-30.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/proverbs/8/29-30.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/proverbs/8/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/proverbs/9/10.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/proverbs/9/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10117,6 +11607,21 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/psalms/100.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/103/14.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/103/26.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/103/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10186,6 +11691,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/psalms/135/6.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/135/7.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/135/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/psalms/144.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10197,6 +11717,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/psalms/146/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/148.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/18/1.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10236,6 +11766,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/psalms/23/2.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/23/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/32/6.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/32/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/psalms/33/9.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10251,12 +11801,47 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/psalms/36/10.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/36/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/psalms/38/2-3.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/psalms/38/6-7.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/psalms/38/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/4/7.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/4/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/48/15.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/48/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10307,6 +11892,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/verse/psalms/9.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/psalms/94.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10371,12 +11961,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/romans/11/36.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/romans/11/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/romans/15/4.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/verse/romans/15/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/romans/8/29.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/romans/8/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10471,12 +12081,47 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/verse/wisdom/11/18.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/wisdom/11/23.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/wisdom/11/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/verse/wisdom/13/5.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/verse/wisdom/13/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/wisdom/18/24.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/wisdom/18/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/wisdom/2/24.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/verse/wisdom/2/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10521,6 +12166,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/10th-century/80s/980.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/10th-century/80s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/10th-century/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/11th-century/00s/1007.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10556,6 +12216,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/11th-century/30s/1037.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/11th-century/30s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10587,6 +12252,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/11th-century/70s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/11th-century/80s/1089.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/11th-century/80s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10677,6 +12352,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/12th-century/60s/1160.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/12th-century/60s/1167.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10821,6 +12501,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/13th-century/60s/1266.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/13th-century/60s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/13th-century/70s/1270.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/13th-century/70s/1274.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10866,6 +12561,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/14th-century/00s/1308.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/14th-century/00s/1400.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10881,12 +12581,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/14th-century/40s/1349.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/14th-century/40s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/14th-century/50s/1350.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/14th-century/50s/1351.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10911,6 +12621,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/14th-century/80s/1389.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/14th-century/80s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10927,6 +12642,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/14th-century/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/00s/1400.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/00s/1402.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10951,6 +12676,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/20s/1420.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/20s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/30s/1435.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/30s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/15th-century/40s/1445.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -10971,7 +12716,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/50s/1459.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/15th-century/50s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/60s/1460.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/60s/1466.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -10982,6 +12742,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/15th-century/60s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/70s/1471.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11001,12 +12766,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/80s/1484.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/15th-century/80s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/15th-century/90s/1491.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/90s/1495.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/15th-century/90s/1497.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11026,6 +12806,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/00s/1501.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/16th-century/00s/1504.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11041,7 +12826,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/00s/1600.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/16th-century/00s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/10s/1516.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11052,6 +12847,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/16th-century/10s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/20s/1520.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11072,6 +12872,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/16th-century/20s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/30s/1534.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11101,6 +12906,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/40s/1540.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/16th-century/40s/1542.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11116,7 +12926,42 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/40s/1548.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/40s/1549.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/16th-century/40s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/50s/1551.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/50s/1552.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/50s/1553.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/50s/1554.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/50s/1556.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11166,12 +13011,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/60s/1569.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/16th-century/60s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/16th-century/70s/1572.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/70s/1575.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/16th-century/70s/1577.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11246,6 +13106,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/17th-century/00s/1603.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/17th-century/00s/1604.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11256,12 +13121,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/17th-century/00s/1608.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/17th-century/00s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/17th-century/10s/1610.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/17th-century/10s/1612.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11516,6 +13391,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/1st-century/20s/23.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/1st-century/20s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/1st-century/30s/30.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11581,6 +13466,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/1st-century/70s/79.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/1st-century/70s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11641,7 +13531,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/2nd-century/20s/129.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/2nd-century/20s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/2nd-century/30s/135.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11706,6 +13606,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/2nd-century/70s/175.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/2nd-century/70s/178.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/2nd-century/70s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11727,6 +13637,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/2nd-century/90s/192.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/2nd-century/90s/198.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/2nd-century/90s/199.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11766,6 +13686,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/3rd-century/10s/214.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/3rd-century/10s/215.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11792,6 +13717,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/3rd-century/20s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/3rd-century/30s/235.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/3rd-century/30s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11836,6 +13771,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/3rd-century/50s/256.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/3rd-century/50s/258.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -11862,6 +13802,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/3rd-century/70s/274.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/3rd-century/70s/275.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11902,6 +13847,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/4th-century/00s/306.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/4th-century/00s/309.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/4th-century/00s/400.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -11976,7 +13931,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/4th-century/30s/332.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/4th-century/30s/335.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/4th-century/30s/336.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -12091,6 +14056,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/4th-century/80s/380.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/4th-century/80s/384.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -12191,6 +14161,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/5th-century/20s/422.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/5th-century/20s/424.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -12236,6 +14211,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/5th-century/50s/450.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/5th-century/50s/458.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -12252,6 +14232,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/5th-century/60s/460.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/5th-century/60s/461.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -12297,6 +14282,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/5th-century/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/6th-century/00s/600.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/6th-century/00s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -12407,6 +14402,11 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/7th-century/00s/607.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/7th-century/00s/700.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -12621,6 +14621,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/ad/9th-century/00s/805.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/ad/9th-century/00s/806.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -12677,6 +14682,16 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/ad/9th-century/50s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/9th-century/70s/870.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/ad/9th-century/70s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -12956,6 +14971,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/bc/3rd-century/00s/206.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/3rd-century/00s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/bc/3rd-century/30s/234.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
@@ -12997,6 +15022,31 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/bc/3rd-century/50s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/3rd-century/60s/269.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/3rd-century/60s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/3rd-century/70s/270.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/3rd-century/70s/279.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/3rd-century/70s/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -13071,7 +15121,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lapide.org/index/year/bc/4th-century/30s/335.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/index/year/bc/4th-century/30s/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/4th-century/40s/341.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
@@ -13472,6 +15532,26 @@
   </url>
   <url>
     <loc>https://lapide.org/index/year/bc/8th-century/index.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/duration/adam-to-flood.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/duration/adam-to-joseph.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/duration/flood-to-abraham.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/index/year/bc/duration/index.html</loc>
     <lastmod>2026-03-14</lastmod>
     <priority>0.6</priority>
   </url>
