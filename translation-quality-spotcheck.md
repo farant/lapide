@@ -18,6 +18,16 @@ Files that have undergone manual translation quality review (content accuracy, s
 | `guigo_i/Meditationes_it.html` | 2026-03-14 | Clean | Nurse/sparrow passage complete; "periture" grammar correct |
 | `01_Preliminares_it.html` | 2026-03-14 | Fixed | 23 of 27 `<em>` tags missing; added to match Latin |
 
+## Malayalam (ml)
+
+| File | Date | Verdict | Issues Found |
+|------|------|---------|-------------|
+| `01_Preliminares_ml.html` | 2026-03-14 | Noted | All 27 `<em>` tags missing (low priority — italics awkward for Malayalam script); all `<p>` tags have id attributes (non-standard but functional); content complete and accurate |
+
+## Known Systemic Issues
+
+**`01_Preliminares` missing `<em>` tags**: This file appears to have been translated without `<em>` formatting across multiple languages. Fixed for Chinese and Italian (Latin-script). For non-Latin scripts (Malayalam, etc.) this is low priority since italic rendering is typographically awkward. Latin-script languages should be checked and fixed as encountered.
+
 ## Structural comparison method
 
 Tag counts (`<p>`, `<hr>`, `<em>`, `<b>`) compared against Latin (`_lt`) source files. Discrepancies of 1-2 in `<p>` or `<b>` are normal (header formatting differences). `<em>` discrepancies indicate missing scripture/emphasis formatting. `<hr>` discrepancies indicate missing or extra section breaks.
