@@ -564,6 +564,7 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
   // Sort: directories first, then by context-appropriate order
   const isVerseDir = segments[0] === "verse";
   const isYearDir = segments[0] === "year";
+  const isBCDir = isYearDir && segments.includes("bc");
   const isLanguageDir = segments[0] === "language";
   const sorted = [...entries].sort((a, b) => {
     if (a.isDir !== b.isDir) return a.isDir ? -1 : 1;
@@ -576,7 +577,9 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
       const bBC = b.name.includes("BC") || b.href.includes("bc/");
       // BC comes before AD; within BC higher numbers (earlier) first
       if (aBC !== bBC) return aBC ? -1 : 1;
-      if (aBC && bBC) return bNum - aNum; // 14th century BC before 1st century BC
+      if (aBC && bBC) return bNum - aNum;
+      // Within a BC directory, decades and years also sort descending
+      if (isBCDir) return bNum - aNum;
       return aNum - bNum;
     }
     // Bible books: canonical order; chapters: numeric
@@ -627,6 +630,18 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
           const aKey = (a.transliteration || a.slug).toLowerCase();
           const bKey = (b.transliteration || b.slug).toLowerCase();
           return aKey.localeCompare(bKey);
+        }
+        // BC year children: descending numeric order (higher numbers = earlier dates first)
+        if (isBCDir) {
+          const aNum = parseInt(a.slug.match(/\d+/)?.[0] || "0", 10);
+          const bNum = parseInt(b.slug.match(/\d+/)?.[0] || "0", 10);
+          return bNum - aNum;
+        }
+        // AD year children: ascending numeric order
+        if (isYearDir) {
+          const aNum = parseInt(a.slug.match(/\d+/)?.[0] || "0", 10);
+          const bNum = parseInt(b.slug.match(/\d+/)?.[0] || "0", 10);
+          if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum;
         }
         return a.name.localeCompare(b.name);
       });
