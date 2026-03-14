@@ -45,3 +45,5 @@ Greek philosopher. Traveled laboriously through Egypt and to Archytas of Tarentu
   text: "Plato, I say, drew his teachings about God... from Moses"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-e35a496` — Listed among sages preceded by Moses
   text: "preceded by a great span of time all the sages of Greece"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-7294d34` — Called "the broad one" from his broad shoulders; previously called Aristocles
+  text: "The Greeks called Plato, as it were, "the broad one," from his broad shoulders, though he was previously called Aristocles"

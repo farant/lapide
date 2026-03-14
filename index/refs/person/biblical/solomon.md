@@ -34,3 +34,13 @@ King of Israel and author of Proverbs, Ecclesiastes, and Song of Songs. The peac
   text: "says Solomon, Proverbs 11"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-e6e11fd` — Proverbs not collected by Solomon but by others from his writings (Proverbs 25:1)
   text: "the proverbs of Solomon were not collected and arranged by him, but by others"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-5838fb3` — The proverbs of Solomon were gathered and arranged by others, not by him
+  text: "the proverbs of Solomon were not gathered and arranged by him, but by others from his writings"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p14-s-56660fe` — The "curtains of Solomon" referenced in Song of Songs
+  text: "I am beautiful like the embroidered and royal curtains of Solomon"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p16-s-63d8ebc` — Years from the beginning of the world to the temple of Solomon: 3011
+  text: "Years from the beginning of the world to the temple of Solomon: 3011"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p75-s-669659e` — 480 years from Egyptian captivity to building of the Temple in the 4th year of Solomon's reign
+  text: "in the 4th year of Solomon's reign"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p76-s-e9940a9` — Solomon reigned 36 years after building the Temple
+  text: "Solomon moreover reigned 36 years after building the Temple"

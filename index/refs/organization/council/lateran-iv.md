@@ -20,3 +20,5 @@ Ecumenical council held under Pope Innocent III in 1215. Referenced for its decr
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p33-s-9a6ea15` — What was decreed at the Lateran Council under Innocent III concerning the chair of sacred Letters
   text: "what was decreed at the Lateran Council under Innocent III concerning the chair of sacred Letters is to be regarded not as a new decree, but as one renewing and confirming an ancient custom"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-d9cd662` — Chapter Firmiter on the Supreme Trinity concludes two truths from Genesis 1:1
+  text: "this is gathered from the Lateran Council, chapter Firmiter, on the Supreme Trinity"

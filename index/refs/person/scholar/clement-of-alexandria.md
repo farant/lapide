@@ -24,3 +24,5 @@ Christian theologian and head of the Catechetical School of Alexandria. Not offi
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p2-s-0c04155` — Among those who believed the 72 translators worked separately in different cells
   text: "if we believe Justin, Cyril, Clement of Alexandria, and Augustine"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-86ad089` — Stromata, book 6: says Moses used Egyptian hieroglyphic method in his laws
+  text: "Moses, says Clement (Stromata, book 6)"

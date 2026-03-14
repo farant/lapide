@@ -43,3 +43,7 @@ The definitive enumeration of the canonical books of the Old and New Testaments 
   text: "The third order possesses the Hagiographa."
 - `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p28-s-b0f4489` — Summary of twenty-two books yielding an alternative count of twenty-four, linked to the twenty-four elders of the Apocalypse.
   text: "And so the books of the old law come equally to twenty-two: that is, five of Moses, eight of the Prophets, and nine of the Hagiographa. Although some write Ruth and Cinoth among the Hagiographa and think these books should be counted in their own number, and that thereby there are twenty-four books of the ancient law"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p2-s-21d701e` — The threefold Hebrew division of the Old Testament: Torah, Nebiim, Ketubim, with twenty-two books
+  text: "The Hebrews, as St. Jerome attests in his Helmeted Prologue, count as many books of Sacred Scripture — that is, of the Old Testament — as they have letters, namely twenty-two, and divide them into three classes: namely, Torah, that is, the Law; Nebiim, that is, the Prophets; and Ketubim, that is, the Hagiographa."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p5-s-83f09a3` — The Pentateuch as a chronicle of the world, tracing creation through the patriarchs
+  text: "The Pentateuch, that is, this fivefold volume of Moses, is a chronicle of the world."

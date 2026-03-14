@@ -48,5 +48,11 @@ The universal body of Christian believers founded by Christ. Referenced extensiv
   text: "whose version in Daniel the Church received and follows"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p6-s-bd359a1` — The Church publicly follows and approves Jerome's Vulgate for a thousand years
   text: "the Church publicly follows and approves, with few exceptions"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p2-s-890b38b` — The Church condemns the allegories of Origen
+  text: "the Church, which here condemns the allegories of Origen"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p33-s-7340a58` — The Vulgate translator is the best of all by the judgment of the Church
+  text: "who by the judgment of the Church is the best of all"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#prayer-to-moses-p2-s-b706866` — The kingdom of the Church militant and the triumphant choir of the blessed
   text: "glory that is to be proclaimed in the kingdom of His Church now militant"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-5763f0e` — Moses was forming a Church of God from the Synagogue of the Jews
+  text: "was forming and instructing a commonwealth and Church of God from the assembly and Synagogue of the Jews"

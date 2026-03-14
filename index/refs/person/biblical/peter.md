@@ -39,3 +39,7 @@ Apostle and first Pope. Two epistles of Peter are listed in the Tridentine canon
   text: "St. Peter, having mentioned the epistles of St. Paul"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p6-s-b242f03` — Christ elevated Peter to supreme pontificate after himself (parallel 18 of Moses/Christ)
   text: "Christ elevated Peter to the supreme pontificate after himself."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p18-s-0286638` — After being called Cephas by the Lord, he is still called Simon
+  text: "Thus Simon, after he was called Cephas by the Lord, is not infrequently still called Simon afterwards."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p48-s-7ee841d` — Christ slew Peter the idolater and raised up Peter the worshipper of God
+  text: "he slew Peter the idolater, the drunkard, the adulterer, and raised up the same man and made him Peter the worshipper of God"

@@ -25,3 +25,5 @@ Titan of Greek mythology, brother of Atlas and Epimetheus. In Cyril's chronology
   text: "In the seventh year of Moses they say Prometheus and Epimetheus were born"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-dbc25b4` — Contemporary of Atlas and Mercury Trismegistus at time of Moses
   text: "a contemporary of Prometheus"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-6b1a1a0` — Contemporary of Atlas, who flourished at the time when Moses lived
+  text: "a contemporary of Prometheus, flourished at the time when Moses lived"

@@ -30,3 +30,5 @@ Roman lyric poet. Quoted as "the Poet" on blending the useful with the sweet.
   text: "What belongs to physicians, physicians promise; craftsmen handle the work of craftsmen."
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p38-s-d354348` — David is compared to Horace
   text: "our Horace too, Catullus and Serenus"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p5-s-51f9702` — Quoted: "He who knows not how to use a little will serve forever"
+  text: "Thus Horace takes "eternal" when he says:"

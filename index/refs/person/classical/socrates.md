@@ -28,3 +28,5 @@ Greek philosopher. Jerome closes his survey of Scripture by invoking "that Socra
   text: "Homer, Hesiod, Thales, Pythagoras, Socrates"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-i-p2-s-50cc4f2` — Jerome says one should sing "that Socratic saying: I walk on air and look down upon the sun"
   text: "ever sing to oneself that Socratic saying"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-aca51bf` — Listed among the sages of Greece whom Moses preceded
+  text: "Homer, Hesiod, Thales, Pythagoras, Socrates"

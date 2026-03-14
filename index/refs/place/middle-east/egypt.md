@@ -39,3 +39,11 @@ Ancient land, referenced both as the place of Moses' captivity under Pharaoh, fr
   text: "the quantity of gold, silver, and clothing which the Hebrew people carried with them from Egypt"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p5-s-7f71f62` — The Apostle says Moses by faith left Egypt, not fearing the king's fierceness
   text: "By faith he left Egypt, not fearing the fierceness of the king"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p5-s-20d6dc5` — Egypt as the setting of the ten plagues and the departure of the Hebrews
+  text: "the ten plagues of Egypt, the departure of the Hebrews from Egypt"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-003141c` — Moses wrote Genesis for the consolation of the Hebrews oppressed by Pharaoh in Egypt
+  text: "for the consolation of the Hebrews, who were being oppressed by Pharaoh in Egypt"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p48-s-11da565` — The Egyptian liberation as a type prefiguring spiritual liberation by Christ
+  text: "namely the Egyptians in the Red Sea"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p14-s-7a6a439` — Departure of the Israelites from Egypt in the sacred chronology
+  text: "Years from the beginning of the world to the departure of the Israelites from Egypt: 2531"

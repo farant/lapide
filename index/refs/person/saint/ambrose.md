@@ -42,3 +42,5 @@ One of the four great Latin Doctors of the Church. Bishop of Milan who translate
   text: "as St. Ambrose says in Epistle 44, the divine Scripture is a sea"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p4-s-151704a` — In book 1 of On Cain and Abel, chapter 11, praises Moses as figure of the teacher to come; suggests Moses did not die but was translated
   text: "Hear Saint Ambrose, book 1 of On Cain and Abel, chapter 11"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-aee8e9e` — Teaches with Augustine that David's adultery was a type of Christ's love for the Church
+  text: "David's adultery, which St. Augustine, St. Ambrose, and others teach was a type"

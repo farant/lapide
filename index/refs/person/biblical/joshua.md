@@ -33,3 +33,5 @@ Successor of Moses and leader of the Israelite conquest of Canaan. Bears the typ
   text: "Joshua, however, or someone like him, arranged these same annals of Moses in order"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p11-s-1315a8b` — Among military leaders endowed with heavenly strength; sun, moon, and stars fought for him
   text: "the Maccabees, and Joshua, who, endowed not with human but heavenly strength"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-6a4a0be` — Arranged Moses' annals into order, divided them, and added passages; added the death of Moses at the end of Deuteronomy
+  text: "Joshua, or someone like him, arranged these same annals of Moses into order, divided them, and added and interwove certain passages"

@@ -28,3 +28,5 @@ Hellenistic Jewish philosopher of Alexandria. His works include On the Contempla
   text: "as Philo, though a Jew, rightly says"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p10-s-ae05fc8` — "This is the life, this is the death of Moses, king, legislator, pontiff, prophet" — from book 3 of The Life of Moses
   text: "Hear Philo, the most learned of the Hebrews"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p2-s-812ebc8` — Holds the view that Moses divided and named the Pentateuch (Lapide disagrees, attributing this to the Seventy Translators)
+  text: "which were thus divided and named not by Moses, as Philo holds, but by the Seventy Translators"

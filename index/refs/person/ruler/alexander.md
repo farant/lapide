@@ -26,3 +26,5 @@ King of Macedon and conqueror. Lacordaire asks: "What is Alexander or Caesar bef
   text: "They praise the continence of Alexander, who after defeating Darius"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p11-s-4c239a1` — Listed among praised military leaders
   text: "Julius Caesar, Pompey, Publius Cornelius Scipio, Hannibal, and Alexander"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p32-s-4f20fd3` — His death preceded the Seleucid era by 12 years
+  text: "which begin after the death of Alexander the Great in the twelfth year"

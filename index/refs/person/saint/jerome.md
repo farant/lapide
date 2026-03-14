@@ -91,3 +91,11 @@ One of the four great Latin Doctors of the Church. Best known for his translatio
   text: "St. Jerome testifies, volume III, epistle to Cyprian, that Moses composed eleven psalms"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p9-s-cdb2b31` — At beginning of Commentary on Galatians, teaches Moses was not only a Prophet but also an Apostle
   text: "Hear Saint Jerome, who at the beginning of his Commentary on the Epistle to the Galatians teaches that Moses was not only a Prophet but also an Apostle"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p2-s-d3585a6` — Says truly: "Origen made his own intellect the mysteries of the Church."
+  text: "St. Jerome says truly: "Origen made his own intellect the mysteries of the Church.""
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-7fc7949` — On chapter 3 of Galatians, teaches that apparitions were made through angels
+  text: "St. Jerome on chapter 3 of Galatians"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-c669e42` — Against Rufinus, book 3, transmits the riddles of Pythagoras
+  text: "the riddles of Pythagoras, says St. Jerome (Against Rufinus, book 3)"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-fbe005e` — Wishes allegory to be free; on Hosea chapter 5, retracts a contrary view
+  text: "St. Jerome, Gregory, Origen, and others often wish the allegory to be free"

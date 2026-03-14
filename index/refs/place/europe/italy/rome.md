@@ -54,3 +54,7 @@ Seat of the papacy and the Catholic Church. Lapide was summoned here by his Jesu
   text: "so by pooling resources in the city of Rome, accredited Doctors might rather be received into a Christian school"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p5-s-dd53619` — St. Dominic at Rome and elsewhere publicly taught many books of Scripture
   text: "at Rome and elsewhere he publicly taught many of its books"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p19-s-d33a915` — Founding of Rome as a chronological marker: AM 3250
+  text: "Years from the beginning of the world to the founding of Rome: 3250"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p4-s-cb197a3` — Pagans reckon times from the founding of the city of Rome
+  text: "from the founding of the city of Rome, which occurred near the end of the reign of Jotham, king of Judah"

@@ -42,3 +42,7 @@ Early Christian theologian and prolific biblical scholar. Head of the Catechetic
   text: "Origen wrote 46 books on Genesis"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p5-s-57d75e8` — Collected all Greek versions and arranged Tetrapla, Hexapla, and Octapla; corrected corrupt Septuagint; his edition received by all as "common"
   text: "Origen collected all of these and from them arranged his Tetrapla, Hexapla, and Octapla"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p2-s-5c8d950` — Thought Genesis should be expounded allegorically, not historically; all the Fathers and the Church condemn his allegories
+  text: "against Origen, who thought all these things should be expounded allegorically and symbolically, and thus overturned the letter and the literal sense"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-fbe005e` — Wishes allegory to be free in Scripture
+  text: "St. Jerome, Gregory, Origen, and others often wish the allegory to be free"

@@ -25,3 +25,7 @@ The principle that Scripture has a spiritual sense beyond the letter, requiring 
   text: "the individual sacrifices, nay almost every single syllable, and the vestments of Aaron, and the entire Levitical order breathe forth heavenly mysteries."
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p20-s-76b7d4a` — The Books of Kings: surface history vs. hidden meaning, where the Church's struggles and the wars of heretics are narrated.
   text: "If you look at the history, the words are simple; if you examine the hidden meaning in the text, the smallness of the Church and the wars of heretics against the Church are narrated."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p2-s-5ca8267` — Origen's purely allegorical method overturned the letter; Jerome judged Origen made his own intellect the mysteries of the Church
+  text: "This is against Origen, who thought all these things should be expounded allegorically and symbolically, and thus overturned the letter and the literal sense."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-c8ec2ec` — A proper allegory must correspond to the history; David's adultery as a type of Christ's love for the Church
+  text: "a proper and solid allegory ought to correspond to the history"

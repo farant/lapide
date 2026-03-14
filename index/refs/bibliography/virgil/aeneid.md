@@ -31,3 +31,5 @@ Virgil's epic poem, cited by Jerome for lines repurposed in Virgiliocento as pse
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iii-p8-s-8c379d3` — Virgil's Aeneid referenced as the source text for Proba Falconia's Christian cento
   text: "as if someone were to imitate Proba Falconia (who was the Latin Sappho) in adapting Virgil's Aeneid... to Christ"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p46-s-efae58b` — Cited (Book 1) for examples of hendiadys
+  text: "as in Virgil, Aeneid 1"

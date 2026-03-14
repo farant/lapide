@@ -36,3 +36,5 @@ Basil's series of homilies on the six days of creation in Genesis, a foundationa
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p2-s-3dbe774` — Basil wrote Hexaemeron books on Genesis
   text: "Basil and his follower or interpreter St. Ambrose wrote Hexaemeron books on Genesis"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p2-s-59bee69` — Cited (Homilies 3 and 9) for arguing against Origen's allegorical interpretation of Genesis
+  text: "See St. Basil arguing against Origen here, Homilies 3 and 9 on the Hexaemeron"

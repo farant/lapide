@@ -32,3 +32,9 @@ The narrative unity of Scripture as the history of God's plan for the world, fro
   text: "Jesus Christ has come. The Gospel succeeds the law and the prophecies, and truth, fulfilling the figure, shines upon the past, which it explains after having received its testimony. All times meet in Christ, and history takes under His steps its eternal unity."
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p9-s-1a4eef1` — The three periods: prophetic, evangelical, and apostolic times distributed across four thousand years.
   text: "The history of Jesus Christ is thus divided into three periods distributed across four thousand years: the prophetic times, the evangelical times, and the apostolic times."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p5-s-83f09a3` — The Pentateuch as a chronicle of the world, tracing creation through the patriarchs to the death of Moses
+  text: "The Pentateuch, that is, this fivefold volume of Moses, is a chronicle of the world."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-s-20d53a6` — The Sacred Chronology presents a synopsis from Adam to Christ
+  text: "Sacred Chronology"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p34-s-701a52d` — Christ's birth fixed as AM 3950, the culmination of sacred chronology
+  text: "Christ therefore was born in the year of the world 3950."

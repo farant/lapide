@@ -851,6 +851,175 @@ describe("Stage 3 — annotate-source.ts", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Stage 3b: Multi-document annotation — refs to multiple source files
+// ---------------------------------------------------------------------------
+
+describe("Stage 3b — multi-document annotation correctness", () => {
+  test(
+    "annotator only picks up refs for the file being annotated, not other source files",
+    () => {
+      // Copy source-b.html into the tmp dir
+      cpSync(
+        path.join(FIXTURES_DIR, "source-b.html"),
+        path.join(tmpDir, "source-b.html")
+      );
+
+      // Create a ref file that references BOTH source.html and source-b.html
+      const multiRefDir = path.join(tmpDir, "index/refs/person/saint");
+      const multiRefPath = path.join(multiRefDir, "multi-doc-test.md");
+      writeFileSync(
+        multiRefPath,
+        `---
+name: Multi-Doc Test Entity
+slug: person/saint/multi-doc-test
+category: person
+subcategory: saint
+dates: "100-200"
+role: Test entity referencing multiple documents
+---
+
+Test entity for multi-document annotation testing.
+
+## References in Commentary
+
+- \`source.html#introduction\` — First mention in source A
+  text: "St. Augustine teaches in On Christian Doctrine"
+- \`source-b.html#chapter-one\` — Mention in source B
+  text: "also mentions St. Augustine and his great works"
+- \`source.html#authority-of-scripture-p2\` — Second mention in source A
+  text: "St. Augustine confirms this"
+- \`source-b.html#chapter-one-p2\` — Second mention in source B
+  text: "St. Jerome translated the Bible into Latin"
+`
+      );
+
+      // Annotate source.html — should only pick up the 2 source.html refs
+      const resultA = runScript(SCRIPTS.annotateSource, ["source.html"]);
+      expect(resultA.exitCode).toBe(0);
+
+      // Check: should find refs for source.html only
+      const htmlA = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
+      const sidecarA = htmlA.match(
+        /<script type="application\/json" id="passage-annotations">([\s\S]*?)<\/script>/
+      );
+      expect(sidecarA).not.toBeNull();
+      const annotationsA = JSON.parse(sidecarA![1]);
+
+      // Should have annotations for introduction and authority-of-scripture-p2
+      // but NOT for chapter-one or chapter-one-p2 (those are in source-b.html)
+      const multiDocAnnotations = annotationsA.filter(
+        (a: any) => a.entities.includes("person/saint/multi-doc-test")
+      );
+      expect(multiDocAnnotations.length).toBe(2);
+      const annotatedParas = multiDocAnnotations.map((a: any) => a.paragraph).sort();
+      expect(annotatedParas).toContain("introduction");
+      expect(annotatedParas).toContain("authority-of-scripture-p2");
+      expect(annotatedParas).not.toContain("chapter-one");
+      expect(annotatedParas).not.toContain("chapter-one-p2");
+
+      // Now annotate source-b.html — should only pick up the 2 source-b.html refs
+      const resultB = runScript(SCRIPTS.annotateSource, ["source-b.html"]);
+      expect(resultB.exitCode).toBe(0);
+
+      const htmlB = readFileSync(path.join(tmpDir, "source-b.html"), "utf-8");
+      const sidecarB = htmlB.match(
+        /<script type="application\/json" id="passage-annotations">([\s\S]*?)<\/script>/
+      );
+      expect(sidecarB).not.toBeNull();
+      const annotationsB = JSON.parse(sidecarB![1]);
+
+      const multiDocAnnotationsB = annotationsB.filter(
+        (a: any) => a.entities.includes("person/saint/multi-doc-test")
+      );
+      expect(multiDocAnnotationsB.length).toBe(2);
+      const annotatedParasB = multiDocAnnotationsB.map((a: any) => a.paragraph).sort();
+      expect(annotatedParasB).toContain("chapter-one");
+      expect(annotatedParasB).toContain("chapter-one-p2");
+      expect(annotatedParasB).not.toContain("introduction");
+
+      // Clean up
+      unlinkSync(multiRefPath);
+      unlinkSync(path.join(tmpDir, "source-b.html"));
+      // Re-annotate source.html to restore clean state
+      runScript(SCRIPTS.annotateSource, ["source.html"]);
+    },
+    { timeout: 30_000 }
+  );
+
+  test(
+    "interleaved refs to different source files do not cross-contaminate annotations",
+    () => {
+      // Create a ref file where refs to different files are interleaved
+      // This is the exact pattern that caused the parser bug
+      const multiRefDir = path.join(tmpDir, "index/refs/person/saint");
+      const interleavedPath = path.join(multiRefDir, "interleaved-test.md");
+
+      // Copy source-b.html again
+      cpSync(
+        path.join(FIXTURES_DIR, "source-b.html"),
+        path.join(tmpDir, "source-b.html")
+      );
+
+      writeFileSync(
+        interleavedPath,
+        `---
+name: Interleaved Test Entity
+slug: person/saint/interleaved-test
+category: person
+subcategory: saint
+dates: "100-200"
+role: Test entity with interleaved multi-doc references
+---
+
+Test entity for interleaved reference testing.
+
+## References in Commentary
+
+- \`source.html#introduction\` — Ref A1
+  text: "St. Augustine teaches in On Christian Doctrine"
+- \`source-b.html#chapter-one\` — Ref B1 (interleaved between A1 and A2)
+  text: "also mentions St. Augustine and his great works"
+- \`source.html#authority-of-scripture-p3\` — Ref A2
+  text: "St. Jerome likewise affirms"
+- \`source-b.html#chapter-one-p2\` — Ref B2 (comes after A2)
+  text: "St. Jerome translated the Bible into Latin"
+`
+      );
+
+      // Annotate source.html
+      const result = runScript(SCRIPTS.annotateSource, ["source.html"]);
+      expect(result.exitCode).toBe(0);
+      // Should NOT report any MISSes — the parser should correctly skip source-b refs
+      expect(result.stdout).toContain("0 missed");
+
+      const html = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
+      const sidecar = html.match(
+        /<script type="application\/json" id="passage-annotations">([\s\S]*?)<\/script>/
+      );
+      const annotations = JSON.parse(sidecar![1]);
+
+      // Should have exactly 2 annotations for this entity (introduction + authority-p3)
+      const testAnnotations = annotations.filter(
+        (a: any) => a.entities.includes("person/saint/interleaved-test")
+      );
+      expect(testAnnotations.length).toBe(2);
+
+      // The source-b texts should NOT appear as annotations in source.html
+      for (const ann of annotations) {
+        expect(ann.paragraph).not.toBe("chapter-one");
+        expect(ann.paragraph).not.toBe("chapter-one-p2");
+      }
+
+      // Clean up
+      unlinkSync(interleavedPath);
+      unlinkSync(path.join(tmpDir, "source-b.html"));
+      runScript(SCRIPTS.annotateSource, ["source.html"]);
+    },
+    { timeout: 30_000 }
+  );
+});
+
+// ---------------------------------------------------------------------------
 // Stage 3c: Highlighting verification — every annotation offset matches expected text
 // ---------------------------------------------------------------------------
 

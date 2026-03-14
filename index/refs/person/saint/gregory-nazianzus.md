@@ -58,3 +58,7 @@ One of the three Cappadocian Fathers and Archbishop of Constantinople. Known as 
   text: "following Nazianzen's lead (Oration 2, On Easter), that one must proceed by a middle way"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p8-s-75010ac` — In oration 22, compares Basil and Gregory of Nyssa to Moses and Aaron
   text: "Hear Saint Gregory Nazianzen, oration 22, in which he compares Saint Basil and his brother Gregory of Nyssa to Moses and Aaron"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-d878e21` — In the tract On the Faith, thinks God appeared in bodily form to Abraham, Moses, and the Prophets
+  text: "Nazianzen, in the tract On the Faith, think that God appeared in a bodily form"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-a8dc30e` — Named in etymology discussion: "Gregory, as if 'the watchful one'"
+  text: "Gregory, as if "the watchful one""

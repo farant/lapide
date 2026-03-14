@@ -23,3 +23,5 @@ Legendary hero of Greek and Roman mythology, famed for his twelve labors. In Cyr
   text: "Hercules arrived and freed Theseus from the danger of death"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-6370365` — Listed among figures preceded by Moses
   text: "Hercules, Aesculapius, Apollo"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-099e270` — Named among those older than Homer/Socrates whom Moses preceded
+  text: "Orpheus, Linus, Musaeus, Hercules, Aesculapius, Apollo"

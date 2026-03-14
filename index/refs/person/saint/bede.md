@@ -31,3 +31,5 @@ Benedictine monk, Doctor of the Church, and historian. Among the scholars who us
   text: "From England, hear Venerable Bede in his English History: "I," he says, "entered the monastery at the age of seven"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p3-s-c90abce` — Published questions and phrases on the Pentateuch
   text: "St. Augustine, Theodoret, Bede, Procopius, and Jerome published questions and phrases"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-45c4275` — Holds the better view that Genesis was written after the departure from Egypt
+  text: "But Theodoret, Bede, and Tostatus hold a better view"

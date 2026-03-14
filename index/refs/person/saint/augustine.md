@@ -74,3 +74,15 @@ Bishop of Hippo and one of the four great Latin Doctors of the Church. His writi
   text: "Hear Saint Augustine, book 22 Against Faustus, chapter 69"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-1ca8941` — In book 18 of The City of God, chapter 39, identifies Mercury Trismegistus as grandson of the elder Mercury, contemporary of Moses
   text: "says Saint Augustine, in book 18 of The City of God, chapter 39"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-262d016` — Says Mercury Trismegistus was the grandson of the elder Mercury; City of God XVIII.39
+  text: "says St. Augustine, in Book XVIII of the City of God, chapter 39"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p3-s-57e1205` — Philosophy must be adapted to Sacred Scripture; says all number, order, and measure of nature derives from God
+  text: "from whom all number, order, and measure of nature derives, says St. Augustine"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p5-s-5177d0e` — Transmits the canon on "eternal" in Question 31 on Genesis
+  text: "St. Augustine transmits this canon in Question 31 on Genesis"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-f2cc597` — Teaches that there can be multiple literal senses; Confessions XII.18, 25, 26, 31, 32
+  text: "is taught by St. Augustine, Confessions book 12, chapters 18, 25, 26, 31 and 32"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p44-s-20055b2` — Hands down the canon on one thing being a figure of two contrary things; Epistle 99 to Evodius
+  text: "St. Augustine (Epistle 99 to Evodius)"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-a5a30b2` — Teaches that David's adultery was a type of Christ's love for the Church of the Gentiles
+  text: "David's adultery, which St. Augustine, St. Ambrose, and others teach was a type of the love of Christ"

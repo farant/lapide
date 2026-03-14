@@ -26,3 +26,5 @@ Hill in Jerusalem; symbol of the holy city and the people of God. Isaiah prophes
   text: "Jerusalem is founded, Zion rises"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p50-s-0cb690c` — David saw Jesus Christ from the heights of Mount Zion
   text: "David saw Jesus Christ from the heights of Mount Zion"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p11-s-ffeaae4` — "Daughter of Zion" as a catachrestic expression meaning the city and citadel of Zion
+  text: ""daughter of Zion" is the city and citadel of Zion"

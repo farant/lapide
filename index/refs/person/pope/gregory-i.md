@@ -54,3 +54,7 @@ Pope and Doctor of the Church. One of the four great Latin Doctors. Praised Jero
   text: "Hear Saint Gregory, Part 2 of the Pastoral Rule, chapter 5"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p16-s-cf3fd7c` — In book 6 on 1 Kings chapter 3, says Moses was so full of spirit that the Lord shared his spirit with seventy elders; in homily 16 on Ezekiel, places Moses above Abraham in knowledge of God
   text: "The same author, in book 6 on 1 Kings chapter 3, says that Moses was so full of the spirit"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-297d674` — In the preface to the Morals, Book 1, teaches that all apparitions were made through angels
+  text: "Gregory in the preface to the Morals, Book 1, and others throughout"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-fbe005e` — Wishes allegory to be free in Scripture
+  text: "St. Jerome, Gregory, Origen, and others often wish the allegory to be free"

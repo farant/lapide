@@ -30,3 +30,5 @@ Prophet of Israel. Basil says he converses with Moses and Elijah and such blesse
   text: "Moses did not die, but was translated like Elijah and Enoch"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p2-s-043c624` — At Transfiguration of Christ, Moses and Elijah appeared
   text: "at the Transfiguration of Christ, Moses and Elijah appeared"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p23-s-ab6a8e1` — John the Baptist is called Elijah by Malachi
+  text: "Thus John the Baptist is called Elijah by Malachi"

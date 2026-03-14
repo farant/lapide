@@ -39,3 +39,9 @@ The prophetic dimension of Scripture: the prophets as seers who perceived Christ
   text: "The history of Jesus Christ is thus divided into three periods distributed across four thousand years: the prophetic times, the evangelical times, and the apostolic times."
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-18f3ced` — The power of the psalms and prophecies comes from their relationship to Jesus Christ; in them the veil falls and the person of Christ takes shape.
   text: "in the psalms and the prophecies, the veil falls, the mystery clears, the person of Jesus Christ takes shape; one perceives Him being born of a virgin, one follows His steps and His sorrows, one witnesses His death, one sees Him triumph on the third day"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p40-s-33e9189` — The prophets leap from one thing to another because the mind of the Prophet is carried away by prophetic light
+  text: "For the mind of the Prophet is carried away by the most exalted prophetic light, in which all things are close and connected"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p16-s-26568c9` — Scripture promises things to persons fulfilled in their descendants
+  text: "Scripture is accustomed to promise certain things to certain persons that are not fulfilled in themselves but in their descendants"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p47-s-11e1223` — Christ's redemption signified through paired names of slaughter and salvation
+  text: "the Prophets, making no distinction between enemies and citizens, introduce Christ coming to redeem mankind"

@@ -32,3 +32,5 @@ Major port city in Egypt; great center of learning in the ancient world. Apollon
   text: "Philadelphus arrange for this Septuagint version to be deposited, through Demetrius the prefect of the Alexandrian library"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p4-s-133bf14` — St. Jerome went to Alexandria to see Didymus and consult him about Scripture
   text: "very recently, for this above all other reasons, I went to Alexandria, to see Didymus"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p97-s-680dbc2` — Alexandria captured by Augustus in the sacred chronology
+  text: "then 275 years to Alexandria being captured by Augustus"

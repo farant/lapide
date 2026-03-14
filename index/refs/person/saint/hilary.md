@@ -24,3 +24,5 @@ Bishop of Poitiers and Doctor of the Church. Called the "Athanasius of the West"
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p3-s-c026f08` — On Psalm 2, supports the Hebrew tradition that Moses received the explanation of the law on Sinai
   text: "St. Hilary on Psalm 2 and Origen in Homily 5 on Numbers lend their support"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-12e8e8d` — Book IV on the Trinity: thinks God appeared in bodily form to Abraham, Moses, and the Prophets
+  text: "Hilary, Book IV on the Trinity"

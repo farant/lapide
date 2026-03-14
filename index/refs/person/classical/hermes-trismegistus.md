@@ -28,3 +28,5 @@ Legendary Egyptian theologian-sage, called "Trismegistus" (thrice-greatest) by t
   text: "That famous Egyptian Theologian, nearly contemporary with Moses, Mercury, in the opinion of the Gentiles called Trismegistus"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-e973dd0` — The most ancient of all Gentile sages; Augustine says he was grandson of the elder Mercury, contemporary of Prometheus
   text: "even Mercury Trismegistus himself, who was the most ancient of all"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-eaa2692` — Most ancient of all; per Augustine, was grandson of the elder Mercury; his maternal grandfather Atlas was a contemporary of Prometheus who flourished when Moses lived
+  text: "indeed even Mercury Trismegistus himself, who was the most ancient of all"

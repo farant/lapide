@@ -28,3 +28,5 @@ Augustine's autobiographical work recounting his conversion to Christianity, con
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p4-s-f55f0d6` — Confessions XII, 14 quoted on the depth of God's words
   text: "Wondrous," says the same, book XII of the Confessions, chapter 14, "is the depth of Your words, Lord, whose surface, behold, is before us, charming to little ones, but wondrous is the depth, my God, wondrous depth; it is dreadful to gaze into it: a dread of honor, and a trembling of love."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-04fa4a3` — Cited (chapters 18, 25, 26, 31, 32) for the teaching that there can be multiple literal senses of Scripture
+  text: "St. Augustine, Confessions book 12, chapters 18, 25, 26, 31 and 32"

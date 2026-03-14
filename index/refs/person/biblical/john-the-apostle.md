@@ -45,3 +45,5 @@ Apostle, Evangelist, and author of the Apocalypse. His Gospel is listed fourth i
   text: "Saint John, in that famous vision, saw idolatrous Rome fall, the Christian monarchies form from the debris of the Roman Empire"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p28-s-9c3ae56` — In a dream, at the Virgin's command, gave Gregory Thaumaturgus explanation of beginning of his Gospel
   text: "received from St. John an explanation of the beginning of his Gospel"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-b709e05` — St. John narrates the words of Caiaphas, signifying the sense of both Caiaphas and the Holy Spirit
+  text: "St. John narrates and signifies by these words the sense and intention of both, namely of Caiaphas as well as of the Holy Spirit"

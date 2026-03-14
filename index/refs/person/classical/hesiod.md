@@ -22,3 +22,5 @@ Greek poet, author of the Theogony and Works and Days. Listed among ancient sage
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-2287c4b` — Listed among sages preceded by Moses
   text: "Homer, Hesiod, Thales"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-aca51bf` — Listed among the sages of Greece whom Moses preceded
+  text: "Homer, Hesiod, Thales, Pythagoras, Socrates"

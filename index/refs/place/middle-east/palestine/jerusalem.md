@@ -43,3 +43,9 @@ Holy city in Palestine, sacred to Judaism, Christianity, and Islam. St. Lietbert
   text: "the riches they afterwards obtained in Jerusalem, especially under Solomon"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p2-s-3fe83cd` — Moses and Elijah at the Transfiguration spoke of Christ's departure to be accomplished in Jerusalem
   text: "to speak of the departure which He was about to accomplish in Jerusalem"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p43-s-aca9485` — Jerusalem as the reference point for cardinal directions in Scripture
+  text: "must be understood according to the position of Judea, Jerusalem, and the Temple"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p22-s-104d451` — Destruction of Jerusalem by Nebuchadnezzar in the sacred chronology
+  text: "the Babylonian captivity and destruction of Jerusalem by Nebuchadnezzar"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p96-s-986f853` — Jerusalem stormed by Nebuchadnezzar, 166 years after the founding of Rome
+  text: "before Jerusalem was stormed by Nebuchadnezzar"

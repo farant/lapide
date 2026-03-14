@@ -27,3 +27,5 @@ Legendary poet and musician of Greek mythology. Traditionally credited with lear
   text: "The same again"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-099e270` — Listed among sages preceded by Moses
   text: "Orpheus, Linus, Musaeus, Hercules, Aesculapius, Apollo"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-099e270` — Named among those older than Homer/Socrates whom Moses preceded
+  text: "Orpheus, Linus, Musaeus, Hercules, Aesculapius, Apollo"

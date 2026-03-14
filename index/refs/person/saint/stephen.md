@@ -21,3 +21,5 @@ First Christian martyr (protomartyr) and one of the seven deacons; his speech in
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p3-s-9a41cab` — His speech from Acts 7:22, 30 quoted at length praising Moses: "Moses was mighty in his words and in his deeds"; led the people out performing wonders and signs
   text: "Hear Saint Stephen, Acts chapter 7, verses 22 and 30"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-0a1a8ba` — Teaches in Acts 7:30 that the one who appeared to Moses was an angel
+  text: "as St. Stephen teaches in Acts 7:30"

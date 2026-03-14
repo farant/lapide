@@ -131,3 +131,25 @@ Prophet, lawgiver, and leader of the Israelites. Author of the Pentateuch. The c
   text: "For this reason Christ so often appeals to Moses"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#sacred-writers-as-pens-p2-s-d369bc7` — Same truth, authority, reverence must be attributed to Moses as to Paul; both are pens of the Holy Spirit
   text: "the same truth, authority, reverence, zeal, and diligence must be attributed to Moses as to Paul"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p2-s-812ebc8` — Named in the heading as author of the Pentateuch
+  text: "which were thus divided and named not by Moses, as Philo holds, but by the Seventy Translators"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p6-s-5b2239d` — Identified as the author of the Pentateuch, as taught by Greeks, Latins, and Christ
+  text: "The author of the Pentateuch is Moses: so teach all the Greeks and Latins, indeed Christ himself"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-f3fba9d` — More ancient than all the sages of Greece; wrote the Pentateuch in the manner of a diary or annals; his death was added by Joshua or another
+  text: "Moses was more ancient and preceded by far in time all the sages of Greece and the Gentiles"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p8-s-5444dc8` — Learned things by tradition, divine revelation, and personal observation
+  text: "Moses learned and received these things partly by tradition, partly by divine revelation, and partly by personal observation"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-64d6a7c` — Said to have written Genesis while in Midian or after the departure from Egypt; described as leader, high priest, prophet, teacher, and lawgiver
+  text: "both Genesis and the four following books were written by Moses after the departure of the Hebrews from Egypt, when he himself was occupied in the wilderness as a leader, high priest, prophet, teacher, and lawgiver"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p4-s-574fdb0` — Uses prolepsis or anticipation, calling places by later names
+  text: "Moses often uses prolepsis or anticipation"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-d582474` — Scripture imposes a new name; references to God speaking to Moses
+  text: "he who appeared to Moses and said, 'I am the God of Abraham,' was an angel"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-ef0810c` — Clement says Moses used Egyptian hieroglyphic method in his laws
+  text: "Moses, says Clement (Stromata, book 6), because he was educated in all the wisdom of the Egyptians"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p36-s-42d1c9a` — Acts as historian, lawgiver, and prophet in the Pentateuch
+  text: "Moses in the Pentateuch acts first as a historian, second as a lawgiver, third as a prophet"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p38-s-5c41c1a` — God says to Moses "What is it that you hold in your hand?"
+  text: "God says to Moses: "What is it that you hold in your hand?""
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p40-s-6001b1f` — In Deuteronomy 18:18 promises a Prophet after himself, understood as both any prophets and Christ
+  text: "So Moses in Deuteronomy 18:18, by the Prophet whom he promises after himself, understands both any prophets and properly Christ."

@@ -30,3 +30,7 @@ Roman poet, author of the Aeneid, Eclogues, and Georgics. Jerome mentions the Vi
   text: "it surrenders to a passionate admiration that it has known only in reading Homer or Virgil"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-19108c8` — Virgil's songs on the misfortunes of Aeneas are listed among great secular poetry, but set below the psalms and prophets
   text: "those of Virgil on the misfortunes of Aeneas"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p31-s-16f9a28` — Quoted from Georgics book 3: "Who does not know harsh Eurystheus, or the altars of unsung Busiris?"
+  text: "that of Virgil, Georgics book 3:"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p46-s-27f10e7` — Quoted from Aeneid 1 for hendiadys: "He placed a mass and high mountains upon them"
+  text: "as in Virgil, Aeneid 1: 'He placed a mass and high mountains upon them'"

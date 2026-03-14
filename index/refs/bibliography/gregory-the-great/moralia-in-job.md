@@ -25,3 +25,5 @@ Gregory's massive moral and allegorical commentary on the Book of Job, containin
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p6-s-bc2f6aa` — Preface, chapter 41 quoted: Scripture is a river shallow and deep
   text: "The divine discourse of sacred Scripture," he says, "is a river both shallow and deep, in which the lamb may walk and the elephant may swim."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-1f62e5b` — Cited (preface to Book 1) for the view that divine apparitions were made through angels
+  text: "Gregory in the preface to the Morals, Book 1"

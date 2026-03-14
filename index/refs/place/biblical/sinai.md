@@ -30,3 +30,7 @@ Sacred mountain where Moses received the law from God, both the first and second
   text: "there appeared to him in the desert of Mount Sinai an angel, in a flame of fire in a bush"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#prayer-to-moses-p2-s-756da99` — Moses was a spectator of the glory of God from afar on Sinai
   text: "you who from afar on Sinai were once a spectator of the glory of God"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p5-s-8fe22ad` — The Hebrews received the Decalogue and other laws from God at Sinai
+  text: "where at Sinai they received the Decalogue and the other laws from God"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-53adf67` — The Lord delivered the law to Moses at Sinai and is called an angel
+  text: "the Lord who delivered the law to Moses at Sinai, Exodus 19 and 20, is called an angel"

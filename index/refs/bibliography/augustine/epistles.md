@@ -31,3 +31,5 @@ Augustine's correspondence on theological, pastoral, and philosophical matters, 
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p4-s-ec3865f` — Epistle 119 quoted: "I in the Sacred Scriptures know far less than I do not know"
   text: "I," he says, "in the Sacred Scriptures themselves, know far less than I do not know."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p44-s-20055b2` — Epistle 99 to Evodius cited for the canon that one thing can be a figure of two contrary things
+  text: "St. Augustine (Epistle 99 to Evodius)"

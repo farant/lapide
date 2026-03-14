@@ -21,3 +21,5 @@ Jerome's commentary on Paul's Epistle to the Galatians, cited for the teaching t
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p9-s-236c863` — Beginning of commentary cited: Moses was not only a Prophet but also an Apostle (from Hebrew tradition)
   text: "Saint Jerome, who at the beginning of his Commentary on the Epistle to the Galatians teaches that Moses was not only a Prophet but also an Apostle"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-7fc7949` — Cited (on chapter 3) for the view that divine apparitions were made through angels
+  text: "St. Jerome on chapter 3 of Galatians"

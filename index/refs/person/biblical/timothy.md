@@ -28,3 +28,5 @@ Bishop of Ephesus, disciple and companion of Paul. Instructed from infancy in sa
   text: "He instructs Timothy and Titus"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#arguments-for-the-ot-p4-s-fbd74ef` — Paul praises Timothy because from infancy he learned the Sacred Letters (the Old Testament)
   text: "Paul praises Timothy, Second Epistle, chapter 3, verse 14, because from infancy he had learned the Sacred Letters"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p37-s-f6cf4b3` — Paul writes to Timothy in context of Colossians 2:8 on philosophy and empty deceit
+  text: "See that no one deceives you through philosophy, and (that is) empty deceit."

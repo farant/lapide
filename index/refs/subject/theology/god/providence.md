@@ -31,3 +31,5 @@ God's providential governance of the world and human affairs — ordering events
   text: "as for the immortality of the soul, God's providence over men and things beneath the moon, future punishments and rewards, he either flatly denies them or so obscures them"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-i-p2-s-d7ce1d1` — From the succession of so many ages in the Old Testament we acknowledge God's providence.
   text: "Whence did we acknowledge God's providence, unless from the succession of so many ages?"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-6eaf3f9` — All Old Testament theophanies were made through angels bearing God's person
+  text: "it is more true that all these apparitions were made through angels, who in assumed bodies bore the person of God"

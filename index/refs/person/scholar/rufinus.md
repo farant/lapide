@@ -32,3 +32,5 @@ Theologian, historian, and translator of Greek theological works into Latin. Att
   text: "says Rufinus, book XI of his History, chapter IX"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p11-s-f8dec39` — Reports Gregory Nazianzen's dream at Athens of Wisdom and Chastity
   text: "as Rufinus reports"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-21f9bc1` — Jerome's Against Rufinus, book 3, is referenced for the riddles of Pythagoras
+  text: "says St. Jerome (Against Rufinus, book 3)"

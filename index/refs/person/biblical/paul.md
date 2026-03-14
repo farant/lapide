@@ -64,3 +64,5 @@ Apostle to the Gentiles. Fourteen epistles attributed to him in the Tridentine c
   text: "Thus the Apostle in the entire chapter 11 of Hebrews"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#peroration-p2-s-ee63eb8` — Invoked: as Paul assisted Chrysostom, so may Moses assist Lapide
   text: "just as St. Paul assisted St. Chrysostom, so he himself may stand by me"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-5b1dc04` — The Lord who delivered the law to Moses at Sinai is called an angel by Paul in Galatians 3:19
+  text: "is called an angel by Paul in Galatians 3:19"

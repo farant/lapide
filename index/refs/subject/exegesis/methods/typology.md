@@ -48,3 +48,9 @@ The reading of Old Testament persons and events as prefigurations (types) of New
   text: "if you believed Moses, you would perhaps also believe Me: for he wrote about Me; but if you do not believe his writings, how will you believe My words?"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p2-s-0fe06c5` — Moses was an express sign and type of Christ: as the sun illuminates the day and the moon the night, so Christ illuminated Christians and Moses the Jews.
   text: "Moses was an express sign and type of Christ; and therefore just as the sun illuminates the day, and the moon the night, so Christ illuminated Christians in the new law, and Moses the Jews in the old"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p40-s-62da7a7` — Canon 35: Scripture simultaneously embraces both type and antitype, producing a twofold literal sense
+  text: "Scripture, especially in the prophecies, from time to time simultaneously embraces both the type and the antitype"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p44-s-c923b78` — Canon 39: One thing can be a type of two contrary things in different respects (the flood as baptism and punishment)
+  text: "One thing can be a figure of two even contrary things, but in different respects."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-4e7f51f` — Canon 40: In the literal sense all words must be applied to the thing signified; in the allegorical sense this is not necessary
+  text: "In the literal sense, all sentences and all words must be explained and applied to the thing signified; but this is not necessary in the allegorical sense."

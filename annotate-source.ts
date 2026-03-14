@@ -96,6 +96,13 @@ for await (const path of glob.scan(REFS_DIR)) {
       continue;
     }
 
+    // If this line is a ref to a DIFFERENT source file, clear lastParaId
+    // so the next text: line doesn't get associated with our source
+    if (line.match(/- `[^`]+\.html#/)) {
+      lastParaId = "";
+      continue;
+    }
+
     const textMatch = line.match(/^\s*text:\s*"(.+)"$/);
     if (textMatch && lastParaId) {
       refEntries.push({

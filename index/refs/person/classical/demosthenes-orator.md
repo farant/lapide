@@ -27,3 +27,5 @@ Athenian statesman and orator. Jerome calls him "the eloquent Demosthenes" who w
   text: "this the eloquent Demosthenes was ignorant of"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p4-s-9d68da2` — Augustine says as Demosthenes gave first, second, third place to pronunciation in eloquence, so he gives first, second, third to humility in wisdom
   text: "just as Demosthenes gave first, second, and third place in eloquence to pronunciation"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-e80ae40` — Named in etymology discussion: "as if 'the firmament of the people'"
+  text: "Demosthenes, as if "the firmament of the people""

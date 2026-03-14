@@ -36,3 +36,5 @@ Jerome's preface to his translation of Samuel and Kings, which serves as a gener
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p3-s-6448142` — Jerome quoted on the contents of Genesis
   text: "Genesis," says St. Jerome in the Helmeted Prologue, "is the book in which we read of the creation of the world, the origin of the human race, the division of the earth, the confusion of languages and peoples, down to the departure of the Hebrews."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p2-s-a0fca87` — Cited for the Hebrew division of Old Testament books into 22, in three classes
+  text: "The Hebrews, as St. Jerome attests in his Helmeted Prologue, count as many books of Sacred Scripture"

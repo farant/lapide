@@ -23,3 +23,5 @@ Roman dictator and conqueror. Lacordaire asks: "What is Alexander or Caesar befo
 
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p6-s-b5eedaa` — Lacordaire asks: "What is Alexander or Caesar before Jesus Christ?"
   text: "What is Alexander or Caesar before Jesus Christ?"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p20-s-ab0adc1` — Named from the full head of hair with which he was born
+  text: "Caesar from the full head of hair (caesaries) with which he is reported to have been born"

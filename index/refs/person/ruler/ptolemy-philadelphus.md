@@ -31,3 +31,5 @@ Ptolemaic king of Egypt who commissioned the translation of the Hebrew Scripture
   text: "did He put it into the mind of Ptolemy Philadelphus, son of Ptolemy Lagus"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p3-s-35b2716` — Having heard the law of Moses, asked Demetrius why no historian mentioned so great a work
   text: "Ptolemy Philadelphus (as Aristeas testifies in his work on the 72 Translators)"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-3594518` — Aristeas was his envoy
+  text: "the envoy of Ptolemy Philadelphus"

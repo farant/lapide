@@ -41,3 +41,5 @@ Dominican friar and Doctor of the Church. The Angelic Doctor, preeminent theolog
   text: "St. Thomas, the prince of the Scholastics, gave us an illustrious example"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#peroration-p2-s-077d7ee` — From Christ on the cross heard "You have written well of me, Thomas"; responded "No other than You, Lord"
   text: "Who, if like St. Thomas he has sent a farewell to the world, and from Christ on the cross hears:"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-7f42be6` — Cites and follows Augustine on multiple literal senses; Summa Theologiae I, q. 1, art. 10
+  text: "whom St. Thomas cites and follows (Summa Theologiae I, q. 1, art. 10, in the body)"

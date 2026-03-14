@@ -31,3 +31,5 @@ Major prophet. His beginning and end are wrapped in such obscurity that among th
   text: "Ezekiel, in chapter 2, having beheld the form of the four-faced creature"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p27-s-1bc8c49` — With open mouth directed to God, was fed by God from a book of lamentations
   text: "Ezekiel, with open mouth... was fed by God from a book"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p40-s-88c0ad0` — Ezekiel 28 describes the wealth and fall of the king of Tyre after the pattern of a Cherub
+  text: "Ezekiel chapter 28, verses 2 and 14, describes the wealth and fall of the king of Tyre after the pattern of the wealth and fall of some Cherub"

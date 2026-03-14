@@ -33,3 +33,5 @@ Bishop of Cyrrhus, Church historian, and theologian. Controversial theological s
   text: "St. Augustine, Theodoret, Bede, Procopius, and Jerome"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#sacred-writers-as-pens-p2-s-c1662b9` — Rightly says the tongues and hands of sacred Writers were pens of the Holy Spirit
   text: "as Blessed Gregory and Theodoret rightly say"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-45c4275` — Holds the better view that Genesis was written after the departure from Egypt
+  text: "But Theodoret, Bede, and Tostatus hold a better view"

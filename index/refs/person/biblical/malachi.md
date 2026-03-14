@@ -24,3 +24,5 @@ Last of the twelve minor prophets. Openly prophesies the rejection of Israel and
   text: "The prophet Malachi, or rather the Lord through Haggai, says: 'Ask the priests the law.'"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p33-s-8470407` — Openly prophesies the rejection of Israel and calling of the nations; quotes "from the rising of the sun to its setting, my name is great among the nations"
   text: "Malachi, openly, and at the end of all the Prophets, concerning the rejection of Israel and the calling of the nations"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p23-s-e77c88a` — Calls John the Baptist "Elijah"
+  text: "John the Baptist is called Elijah by Malachi"

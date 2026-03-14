@@ -25,3 +25,5 @@ The biblical Holy Land. Referenced as the location of Jerome's Bethlehem and as 
   text: "whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome"
 - `01_Preliminares.html#dedicatory-letter-p26-s-43a9cfe` — Palestine named as full of monastic followers
   text: "Egypt, Palestine, and Mesopotamia are full of those who follow this Christian Philosophy"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p43-s-38b9cc3` — Judea situated in the middle of the inhabited world, the special possession of God
+  text: "Judea, situated as it were in the middle of the inhabited and cultivated world, was the land and special possession of God"

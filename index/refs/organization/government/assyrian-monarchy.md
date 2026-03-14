@@ -17,3 +17,5 @@ One of the four ancient monarchies (Assyrians, Medes, Persians, Greeks, Romans) 
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iii-p19-s-7488e22` — How many monarchies of the Assyrians must be thoroughly learned
   text: "How many monarchies — of the Assyrians, Medes, Persians, Greeks, and Romans — must be thoroughly learned!"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p4-s-8b1c8c9` — Ninus and Semiramis founded the first monarchy of the Assyrians
+  text: "Ninus and Semiramis, who founded the first monarchy of the Assyrians, in whose time Abraham lived"

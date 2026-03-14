@@ -1,0 +1,9 @@
+{
+  "global_exclude_words": [
+    "mark",
+    "the city",
+    "histories"
+  ],
+  "exclude": [],
+  "force": []
+}

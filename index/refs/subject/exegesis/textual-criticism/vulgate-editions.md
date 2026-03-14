@@ -47,3 +47,5 @@ The Latin Vulgate's status as the authentic edition of Scripture for the Catholi
   text: "it is by no means to be doubted that it is more emended and purer than all the others which have appeared up to this day."
 - `01_Preliminares.html#preface-reader-p14-s-b7246ee` — The revisors' intent was not to produce a new edition but to restore the old Vulgate to its original integrity and purity.
   text: "it was not the intention of the sacred congregation... to produce some new edition, or to correct or emend the ancient translator in any part; but rather to restore the Old and Vulgate Latin edition itself... to its original integrity and purity"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p33-s-719c0ac` — The Vulgate translator is the best of all by the judgment of the Church for translating Hebrew proper nouns and animals
+  text: "in this matter the surest rule is to follow the most learned ancient Hebrews, and above all our interpreter [the Vulgate translator], who by the judgment of the Church is the best of all."

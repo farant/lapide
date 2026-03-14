@@ -36,3 +36,5 @@ Ancient Greek epic poet. Calls a king the shepherd of the peoples.
   text: "Orpheus, Homer, Solon, Pythagoras"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-2287c4b` — Listed among sages preceded by Moses
   text: "Homer, Hesiod, Thales"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-0ba2528` — Listed among the sages of Greece whom Moses preceded
+  text: "all the sages of Greece and the Gentiles, namely Homer, Hesiod, Thales, Pythagoras, Socrates"

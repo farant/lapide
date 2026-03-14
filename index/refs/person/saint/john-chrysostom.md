@@ -40,3 +40,7 @@ Archbishop of Constantinople and Doctor of the Church. Known as "the Golden-Mout
   text: "He did not say, comments Chrysostom, "Read the Scriptures," but "Search""
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-virtues-p4-s-3215379` — In homily 40 on First Timothy: "A bishop must be an angel, subject to no human disturbance"
   text: "St. Chrysostom said, homily 40 on the First Epistle to Timothy"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p16-s-806df21` — Transmits the canon that Scripture promises things to certain persons fulfilled in their descendants; Homily 8 on Matthew
+  text: "St. Chrysostom transmits this canon, Homily 8 on Matthew."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-b05c3f2` — Named in the etymology discussion: "golden mouth" from eloquence
+  text: "Chrysostom, as it were, "golden mouth," from his eloquence"

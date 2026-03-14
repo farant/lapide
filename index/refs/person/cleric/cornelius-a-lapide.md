@@ -66,3 +66,7 @@ Jesuit biblical commentator who taught Holy Scripture at Louvain for over twenty
   text: "As for the Rabbis, I will have no dealings with them, except insofar as they agree with Catholic doctors"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#peroration-p2-s-3aa19d2` — Invokes his patrons (the Virgin, St. Jerome, Moses) and asks that Paul assist him as he assisted Chrysostom
   text: "I will ceaselessly entreat all the Saints, and especially my patrons, the Virgin Mother of eternal Wisdom, St. Jerome, and Moses"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p2-s-2546436` — Author of the entire work; named in the title
+  text: "The Torah or Law comprises the Pentateuch, namely Genesis, Exodus, Leviticus, Numbers, and Deuteronomy"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p2-s-bfa01e6` — Received the chronology from Samerius and diligently purged its errors
+  text: "it was not, however, free from errors, from which I diligently purged it"

@@ -21,3 +21,7 @@ Antediluvian patriarch who was translated to heaven without dying; Ambrose sugge
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p4-s-9e7979c` — Ambrose suggests Moses was translated like Elijah and Enoch
   text: "was translated like Elijah and Enoch"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p43-s-664e09a` — Jared begets Enoch
+  text: "Jared, 162 years old, begets Enoch."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p44-s-4f3a428` — Enoch, 65 years old, begets Methuselah
+  text: "Enoch, 65 years old, begets Methuselah."

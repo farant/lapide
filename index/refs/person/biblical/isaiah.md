@@ -39,3 +39,9 @@ Major prophet. The first of the four great prophets; seems to weave not prophecy
   text: "Isaiah, in chapter 6, beheld a Seraph flying toward him"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p23-s-20f748e` — Augustine took up Isaiah after conversion but was frightened by the depth of his utterances
   text: "taking in hand Isaiah the prophet, immediately frightened by the depth of his utterances"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p23-s-b846c6c` — Christ is called Emmanuel and other names in Isaiah 7:14, 8:3, and 9:6
+  text: "in Isaiah 7:14, Christ is called Emmanuel"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p40-s-d0de346` — Isaiah 14:11 describes the fall of the king of Babylon through the fall of Lucifer
+  text: "Isaiah, chapter 14:11 and following, describes the fall of the king of Babylon through the fall of Lucifer"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p47-s-553ef04` — Isaiah 61 describes consolation of Christ; chapter 63 describes his vengeance
+  text: "Isaiah in chapter 61 describes the consolation and redemption of Christ"

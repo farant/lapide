@@ -28,3 +28,5 @@ Eusebius's apologetic work showing that Christianity fulfills the best in pagan 
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p2-s-c26dd92` — Book 9, chapter 4 cited via Eupolemus and Artapanus: Moses transmitted letters to the Egyptians
   text: "Eupolemus and Artapanus, who (as cited by Eusebius in the same place, chapter 4) say that Moses transmitted letters to the Egyptians"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-84252ee` — Cited (Book VII, chapter 11) for the view that Genesis was written after the departure from Egypt
+  text: "Eusebius does not dissent, in Book VII of the Preparation, chapter 11"

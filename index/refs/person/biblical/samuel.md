@@ -29,3 +29,5 @@ Prophet and judge of Israel. In the death of Eli and slaying of Saul, shows the 
   text: "Read therefore first my Samuel and my Melachim -- mine, I say, mine."
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p19-s-b89f2c8` — In the death of Eli and slaying of Saul, shows the old law abolished; in Zadok and David, attests new priesthood and kingdom
   text: "Samuel, in the death of Eli and the slaying of Saul, shows the old law abolished."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p2-s-b557175` — Mentioned in connection with Saul's reign
+  text: "to Saul alone after Samuel he gives 40 years"

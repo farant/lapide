@@ -37,3 +37,7 @@ Prophet whose prophecy about the learned shining as stars is quoted at the concl
   text: "Daniel, in chapter 7 verse 8, keeps the word of God in his heart"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p26-s-7c362f4` — Attained the dreams of the Chaldean king and the 70 years of exile by prayer; taught by Gabriel
   text: "Daniel, that man of desires, attained the dreams of the Chaldean king... by prayer, and was taught by Gabriel"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p24-s-178da5f` — Years from beginning of world to the weeks of Daniel: 3486
+  text: "Years from the beginning of the world to the weeks of Daniel: 3486"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p31-s-98873e3` — Years from beginning of world to the end of the weeks of Daniel: 3984
+  text: "Years from the beginning of the world to the end of the weeks of Daniel: 3984"

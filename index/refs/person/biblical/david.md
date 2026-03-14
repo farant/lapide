@@ -49,3 +49,7 @@ King of Israel and Psalmist. Author of the Psalter.
   text: "Who would not rather praise the courage and strength of David, who in single combat struck down... Goliath"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-i-p5-s-20fc71e` — Calvin cites David: "The Lord commanded him to curse David" to prove God authors evil
   text: "Calvin, from that saying of David"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p40-s-a34faf9` — 2 Samuel 7:12 speaks literally of Solomon yet contains things belonging to Christ alone; David's adultery taught as type of Christ's love for the Church
+  text: "by Israel understands both David and Christ"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p47-s-45d93a9` — Balaam by Israel understands both David and Christ
+  text: "And the Psalmist in Psalm 109:6"

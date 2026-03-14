@@ -90,3 +90,7 @@ One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called
   text: "as St. Basil says: "Let reading follow prayer, and prayer follow reading.""
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p7-s-7ebe155` — In homily 1 on the Hexaemeron, praises Moses as beloved of God from his mother's breast
   text: "Hear Saint Basil, homily 1 on the Hexaemeron"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p2-s-bb0a5a4` — Argues against Origen on the literal sense of Genesis; Homilies 3 and 9 on the Hexaemeron
+  text: "See St. Basil arguing against Origen here, Homilies 3 and 9 on the Hexaemeron."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p44-s-40dea06` — Hands down the canon that one thing can be a figure of two contrary things; on Isaiah chapter 2
+  text: "St. Basil (on Isaiah chapter 2) hand down this canon"

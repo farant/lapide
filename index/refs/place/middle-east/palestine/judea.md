@@ -20,3 +20,7 @@ Southern region of Palestine; where Jesus spoke and lived during his public mini
 
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-fd78bbe` — Paul saw Jesus speak in Judea only through ecstasy, not in person
   text: "Others saw Jesus Christ born in a stable, speak in Judea, die on a cross"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p43-s-aca9485` — Judea as the geographical reference point for Scripture's directions
+  text: "must be understood according to the position of Judea, Jerusalem, and the Temple"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p26-s-6996c83` — Subjection of Judea to the Romans by Pompey
+  text: "Years from the beginning of the world to the subjection of Judea to the Romans by Pompey"

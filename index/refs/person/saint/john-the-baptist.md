@@ -28,3 +28,5 @@ The Forerunner of Christ, greatest of the prophets born of women.
   text: "a voice resounds in the desert: Prepare the way of the Lord and make straight his paths"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p2-s-64bd8e2` — Like Moses and prophets, went before the face of the Lord to prepare His ways
   text: "just as St. John the Baptist did to Christ the Lord: for he, just like Moses and the other prophets"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p23-s-ab6a8e1` — Called Elijah by Malachi
+  text: "Thus John the Baptist is called Elijah by Malachi"

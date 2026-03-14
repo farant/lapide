@@ -32,3 +32,5 @@ Greek philosopher. Lacordaire says Paul is "more rigorous than Aristotle and mor
   text: "Aristotle, or whoever is the author, in his book On the World"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p6-s-e3e971c` — Used to say no great genius existed without admixture of madness
   text: "Aristotle, and following him Seneca, used to say that no great genius existed without an admixture of madness"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-263e747` — Named in etymology discussion: "as if 'the best end'"
+  text: "Aristotle, as if "the best end""

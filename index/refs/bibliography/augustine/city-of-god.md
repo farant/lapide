@@ -25,3 +25,5 @@ Augustine's monumental apologetic and philosophical work on the two cities, cont
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-c20c162` — Book 18, chapter 39 cited: Mercury Trismegistus was contemporary with Moses
   text: "For this Mercury Trismegistus, says Saint Augustine, in book 18 of The City of God, chapter 39, was the grandson of the elder Mercury"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-262d016` — Cited (Book XVIII, chapter 39) for the chronology of Mercury Trismegistus relative to Moses
+  text: "says St. Augustine, in Book XVIII of the City of God, chapter 39"

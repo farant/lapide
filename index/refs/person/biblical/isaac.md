@@ -30,3 +30,15 @@ Patriarch, son of Abraham. Listed among the ancient patriarchs who held both sup
   text: "Abraham and Isaac, those innocents, who resolved to seal the obedience owed to God"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p16-s-f7592b6` — God appeared to Abraham, Isaac, and Jacob
   text: "I appeared to Abraham, Isaac, and Jacob"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p19-s-d41e0b0` — Listed among those given meaningful names
+  text: "That this is so is clear in the names Adam, Eve, Seth, Cain, Noah, Abraham, Ishmael, Isaac, Jacob"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p30-s-15202ad` — God is called the fear of Isaac
+  text: "God is called the fear of Isaac, that is, the one who was feared by Isaac"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p60-s-410e806` — Abraham begets Isaac at 100
+  text: "Abraham, 100 years old, begets Isaac."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p61-s-0c555bd` — Isaac, 40 years old, marries Rebecca
+  text: "Isaac, 40 years old, marries Rebecca."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p62-s-6b80fbe` — Isaac, 60 years old, begets Esau and Jacob
+  text: "Isaac, 60 years old, begets Esau and Jacob."
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p69-s-97ca643` — Isaac, 180 years old, dies
+  text: "Isaac, 180 years old, dies."

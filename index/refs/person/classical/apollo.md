@@ -24,3 +24,5 @@ Greek and Roman god of prophecy, music, and the sun. Invoked as a contrast to th
   text: "Aesculapius, Apollo"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p12-s-873dc87` — "The golden Apollo" at Delphi where Dionysus's tomb is said to be
   text: "whose tomb they say is at Delphi near the golden Apollo"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-099e270` — Named among those older than Homer/Socrates whom Moses preceded
+  text: "Orpheus, Linus, Musaeus, Hercules, Aesculapius, Apollo"

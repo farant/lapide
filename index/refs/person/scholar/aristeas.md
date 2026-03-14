@@ -27,3 +27,5 @@ Author of the Letter of Aristeas, an account of the translation of the Hebrew Sc
   text: "Josephus and Aristeas relate"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p3-s-35b2716` — Testifies Ptolemy Philadelphus asked why no historian or poet mentioned so great a work as the Law of Moses
   text: "Ptolemy Philadelphus (as Aristeas testifies in his work on the 72 Translators)"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-804eb04` — Envoy of Ptolemy Philadelphus who asked Eleazar about Mosaic dietary laws; wrote on the Seventy Interpreters
+  text: "Aristeas (as he himself attests in his treatise On the Seventy Interpreters, volume 2 of the Library of the Holy Fathers), the envoy of Ptolemy Philadelphus"

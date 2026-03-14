@@ -33,3 +33,7 @@ Greek philosopher and mathematician. Jerome cites him as an example of a seeker 
   text: "Numenius... asserts that Plato and Pythagoras followed the teachings of Moses"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-aca51bf` — Listed among sages preceded by Moses
   text: "Homer, Hesiod, Thales, Pythagoras, Socrates"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-aca51bf` — Listed among the sages of Greece whom Moses preceded
+  text: "Homer, Hesiod, Thales, Pythagoras, Socrates"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-c669e42` — His riddles/symbols cited by Jerome: "Do not step over the balance," etc.
+  text: "the riddles of Pythagoras, says St. Jerome (Against Rufinus, book 3)"

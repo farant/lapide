@@ -24,3 +24,5 @@ Pseudo-epigraphic letter describing the translation of the Torah into Greek by s
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p3-s-9f39e9f` — Aristeas cited: Ptolemy Philadelphus asked why no historian or poet mentioned so great a work as the law of Moses
   text: "Ptolemy Philadelphus (as Aristeas testifies in his work on the 72 Translators), having heard the law of Moses, said to Demetrius: "Why has no historian or poet made mention of so great a work?""
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-39a4951` — Cited for Eleazar the high priest's explanation of Mosaic food laws as symbolic
+  text: "Aristeas (as he himself attests in his treatise On the Seventy Interpreters, volume 2 of the Library of the Holy Fathers)"

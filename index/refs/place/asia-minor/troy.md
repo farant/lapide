@@ -22,3 +22,5 @@ Ancient city in northwestern Asia Minor. Its destruction is dated to 410 years a
   text: "In the 410th year after Moses, Ilium was conquered"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p13-s-233a662` — From the birth of Moses to the destruction of Troy, 410 years are reckoned
   text: "Therefore from the birth of Moses to the destruction of Troy, 410 years are reckoned"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p4-s-f74f599` — War and destruction of Troy as a pagan chronological marker
+  text: "from the war and destruction of Troy, which occurred in the time of Samson and the high priest Eli"

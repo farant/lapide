@@ -35,3 +35,5 @@ Bishop of Carthage, Church Father, and martyr. His letter to Antonianus praising
   text: "as St. Jerome records of Cyprian reading Tertullian daily"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p14-s-f2a4694` — Stoned, among other martyrs of the Old Testament pattern
   text: "They were stoned... Moses surely, Jeremiah, and other Saints"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-8e3e4c1` — Thinks God appeared in bodily form to Abraham, Moses, and the Prophets; Book II Against the Jews, chapter 5
+  text: "St. Cyprian, Book II Against the Jews, chapter 5"

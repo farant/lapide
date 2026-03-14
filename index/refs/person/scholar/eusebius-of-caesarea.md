@@ -45,3 +45,5 @@ Church historian and bishop of Caesarea, author of the Ecclesiastical History, D
   text: "Eusebius in his entire book XI of the Preparation for the Gospel"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p2-s-68351ae` — Says throughout the Old Testament the Gospel was promised and prefigured
   text: "a great demonstration of the truth of the Gospel is, says Eusebius"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-b7e0241` — Does not dissent from Theodoret/Bede/Tostatus, in Book VII of the Preparation, chapter 11
+  text: "from whom Eusebius does not dissent, in Book VII of the Preparation, chapter 11"

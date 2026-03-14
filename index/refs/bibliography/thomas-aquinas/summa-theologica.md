@@ -26,3 +26,5 @@ Thomas Aquinas's systematic theological masterwork, cited by Lapide to show that
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p19-s-91afec3` — Thomas cited: what is treated in the First Part concerning God's essence was drawn from Scripture
   text: "those things which are treated in the First Part concerning God's essence and attributes, predestination, the angels, man, and the work of the six days... by St. Thomas and the Scholastics, have been drawn and derived from what we have learned through the revelation of Sacred Scripture"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-0ef2826` — Cited (I, q. 1, art. 10) for the doctrine of multiple literal senses
+  text: "St. Thomas cites and follows (Summa Theologiae I, q. 1, art. 10, in the body)"

@@ -33,3 +33,9 @@ The divine authorship of Scripture: God moved the will of the writers, aroused a
   text: "to one is given through the Spirit the word of wisdom, to another the word of knowledge, to another faith, to another the grace of healing, to another the working of miracles, to another prophecy, to another the discernment of spirits, to another kinds of tongues, to another finally the interpretation of speeches"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p14-s-94c5f98` — St. Peter teaches that no prophecy of Scripture is made by private interpretation, but holy men of God spoke inspired by the Holy Spirit.
   text: "No prophecy of Scripture is made by private interpretation; for prophecy was not brought at any time by the will of man, but the holy men of God spoke, inspired by the Holy Spirit"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p6-s-5b2239d` — Moses is affirmed as the author of the Pentateuch, attested by Christ himself
+  text: "The author of the Pentateuch is Moses: so teach all the Greeks and Latins, indeed Christ himself"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-3191536` — Joshua or someone like him arranged Moses' annals and added passages; Moses preceded all Greek sages in time
+  text: "Moses simply wrote the Pentateuch in the manner of a diary or annals; yet Joshua, or someone like him, arranged these same annals of Moses into order"
+- `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p8-s-5444dc8` — Moses' threefold sources: tradition, divine revelation, and personal observation
+  text: "Moses learned and received these things partly by tradition, partly by divine revelation, and partly by personal observation"
