@@ -25,3 +25,5 @@ Attributed sayings of the legendary Egyptian sage Hermes Trismegistus, described
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-54a2feb` — Mercury Trismegistus identified as the most ancient of all Gentile sages, grandson of the elder Mercury, contemporary of Moses
   text: "For this Mercury Trismegistus, says Saint Augustine, in book 18 of The City of God, chapter 39, was the grandson of the elder Mercury, whose maternal grandfather was Atlas the astrologer, and a contemporary of Prometheus, and he flourished at the time when Moses lived."
+- `01_genesis_01.html#god-elohim-p22-s-15737d5` — Quoted on matter being subtler than air, soul than air, mind than soul, God than mind
+  text: ""Matter is more subtle than air, the soul more than air, the mind more than the soul, God Himself more than the mind," says Hermes Trismegistus."

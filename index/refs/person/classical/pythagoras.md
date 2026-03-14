@@ -37,3 +37,5 @@ Greek philosopher and mathematician. Jerome cites him as an example of a seeker 
   text: "Homer, Hesiod, Thales, Pythagoras, Socrates"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p32-s-c669e42` — His riddles/symbols cited by Jerome: "Do not step over the balance," etc.
   text: "the riddles of Pythagoras, says St. Jerome (Against Rufinus, book 3)"
+- `01_genesis_01.html#god-elohim-p3-s-6747eaa` — Named alongside the Manichaeans for the error of two principles
+  text: "Pythagoras, the Manichaeans, and the Priscillianists err, who say that there are two principles of things"

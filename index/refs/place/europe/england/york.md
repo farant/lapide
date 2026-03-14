@@ -24,3 +24,5 @@ City in northern England. Alcuin publicly taught the sacred Letters at York. St.
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p30-s-1c6f879` — Alcuin publicly taught the sacred Letters at York; St. Ludger came from Frisia to York to hear him
   text: "He publicly taught the sacred Letters at York in England; whence St. Ludger came from Frisia to York to hear him"
+- `01_genesis_01.html#introduction-p8-s-a2b642d` — Thomas the Doctor identified as "the Doctor of York" rather than the Angelic Doctor
+  text: "Thomas the Doctor also wrote -- not the holy Angelic Doctor, but the English one, namely the Doctor of York, around the year of Christ 1400."

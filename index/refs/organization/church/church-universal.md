@@ -56,3 +56,7 @@ The universal body of Christian believers founded by Christ. Referenced extensiv
   text: "glory that is to be proclaimed in the kingdom of His Church now militant"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-5763f0e` — Moses was forming a Church of God from the Synagogue of the Jews
   text: "was forming and instructing a commonwealth and Church of God from the assembly and Synagogue of the Jews"
+- `01_genesis_01.html#verse-2-p12-s-273c575` — The Church sings to the Holy Spirit in the blessing of the fonts
+  text: "the Church, in the blessing of the fonts, sings to the Holy Spirit"
+- `01_genesis_01.html#verse-16-p19-s-8fbaf6b` — The firmament is symbolically the Holy Church, the pillar and ground of truth
+  text: "the firmament is the Holy Church, which is the pillar and ground of truth, as the Apostle says, 1 Timothy 3:15"

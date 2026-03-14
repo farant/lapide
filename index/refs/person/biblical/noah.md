@@ -34,3 +34,9 @@ Patriarch who survived the flood through the ark. The flood through the ark was 
   text: "Noah, 500 years old, begets Shem, Ham, and Japheth."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p48-s-8ef3633` — Noah in his 600th year of life; the flood ceases
   text: "with Noah in his 600th year of life"
+- `01_genesis_01.html#introduction-p2-s-38d8c00` — Named as a Patriarch whose deeds are narrated in Genesis
+  text: "especially of the Patriarchs Noah, Abraham, Isaac, Jacob, and Joseph."
+- `01_genesis_01.html#introduction-p5-s-c26218c` — Named as beginning the second part of Genesis
+  text: "The second contains the deeds from Noah and the flood up to Abraham"
+- `01_genesis_01.html#verse-26-p34-s-4af8469` — Cited for his dominion over all the animals of the ark
+  text: "such as Noah over all the animals of the ark"

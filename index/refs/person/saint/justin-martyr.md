@@ -39,3 +39,5 @@ Early Christian apologist, philosopher, and martyr. Wandered through philosophic
   text: "Finally he adds that Plato learned about God from Moses"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p4-s-091af33` — In his Exhortation to the Greeks, cites Diodorus listing Moses first among six ancient legislators
   text: "Diodorus, the most esteemed of all historians, says Saint Justin in his Exhortation to the Greeks"
+- `01_genesis_01.html#he-created-p7-s-b4f70be` — Cited from the Admonitory on the meaning of "to create"
+  text: "St. Justin, in the Admonitory"

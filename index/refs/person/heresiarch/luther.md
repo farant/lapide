@@ -26,3 +26,5 @@ Protestant reformer against whom Cardinal Hosius contended as a "distinguished s
   text: "a distinguished scourge of Luther"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-i-p6-s-975c301` — "Saxon Lutherologists and babblers" at Regensburg disputation cited Deuteronomy to proscribe traditions
   text: "the Saxon Lutherologists and babblers, in the Regensburg disputation"
+- `01_genesis_01.html#introduction-p11-s-9141011` — Named as a danger regarding extolling faith excessively
+  text: "which on account of Luther and Calvin is dangerous in these times."

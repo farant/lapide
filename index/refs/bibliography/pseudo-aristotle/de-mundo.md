@@ -21,3 +21,5 @@ Treatise on cosmology attributed to Aristotle, containing the famous analogy of 
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p16-s-a5acf89` — Quoted: God in the world is like a helmsman in a ship, charioteer in a chariot, choirmaster in a choir
   text: "God is in the world what the helmsman is in a ship, the charioteer in a chariot, the choirmaster in a choir, the law in a state, the commander in an army"
+- `01_genesis_01.html#god-elohim-p10-s-22802a4` — Quoted on God as helmsman, charioteer, and commander of the world
+  text: ""What the helmsman is in a ship, the charioteer in a chariot, the leader in a chorus, the law in a city, the commander in an army, the same is God in the world""

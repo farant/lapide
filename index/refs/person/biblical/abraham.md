@@ -58,3 +58,9 @@ Patriarch and father of the faith. Listed among the ancient patriarchs who held 
   text: "Abraham, 100 years old, begets Isaac."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p63-s-bcc8af6` — Abraham, 175 years old, dies
   text: "Abraham, 175 years old, dies. Year of the world: 2184."
+- `01_genesis_01.html#introduction-p2-s-38d8c00` — Named as a Patriarch
+  text: "especially of the Patriarchs Noah, Abraham, Isaac, Jacob, and Joseph."
+- `01_genesis_01.html#introduction-p4-s-99d3ada` — Chronology: Isaac born in Abraham's 100th year
+  text: "In the 100th year of Abraham, Isaac was born"
+- `01_genesis_01.html#introduction-p5-s-45fec87` — Named as beginning the third part of Genesis
+  text: "The third contains the deeds of Abraham from chapter 12"

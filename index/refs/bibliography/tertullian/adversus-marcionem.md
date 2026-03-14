@@ -23,3 +23,5 @@ Tertullian's five-book refutation of Marcion's rejection of the Old Testament, d
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p3-s-05b4884` — Tertullian cited: agreement of both Testaments bears testimony to Christ and to truth
   text: "the agreement of both Testaments — that is, the agreement of Moses and Christ, of the Prophets and the Apostles, of the Synagogue and the Church — bears great testimony to Christ and to the truth, as Tertullian teaches everywhere against Marcion"
+- `01_genesis_01.html#verse-24-p10-s-ea54dea` — Quoted (Book I, ch. 14) on God's magnificence in small creatures
+  text: "Hear Tertullian, Book I Against Marcion, chapter 14"

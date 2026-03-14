@@ -43,3 +43,9 @@ Steadfast firmness in defending the faith and the Church against persecution, th
   text: "we also, having so great a cloud of witnesses, let us run with patience the race set before us"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p13-s-4425170` — In public misfortunes and European storms, having the Holy Books for consolation, through patience and consolation of Scripture we may have hope.
   text: "in our own and public misfortunes, in these Belgian and European storms, having the Holy Books for consolation together with the Maccabees, through the patience and consolation of Scripture we may have hope"
+- `01_genesis_01.html#verse-6-p16-s-8ce0c25` — The firmament is the firmness and constancy of the soul fixed upon God and the heavens, sustaining upper waters (prosperities) and lower (adversities).
+  text: "the firmament is the firmness and constancy of the soul fixed upon God and the heavens, which steadfastly sustains the upper waters, that is, prosperities, and the lower, that is, adversities."
+- `01_genesis_01.html#verse-16-p21-s-4aaa755` — Stars teach loftiness and immovability of mind in adversities; Augustine: "whoever has lost patience has fallen from heaven."
+  text: "the stars teach loftiness and immovability of mind in the midst of so many adversities and injuries, so that like stars they look down upon all things, both evil and good, that happen in the world."
+- `01_genesis_01.html#verse-5-p9-s-5550ae5` — Chrysostom: creatures serve man obediently despite his rebellion; the sinner commits a twofold crime — not serving God, and repaying benefits with insult.
+  text: "I obey the rebel; I comply with the insolent; I serve the scorner."

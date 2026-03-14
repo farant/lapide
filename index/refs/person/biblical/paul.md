@@ -66,3 +66,7 @@ Apostle to the Gentiles. Fourteen epistles attributed to him in the Tridentine c
   text: "just as St. Paul assisted St. Chrysostom, so he himself may stand by me"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-5b1dc04` — The Lord who delivered the law to Moses at Sinai is called an angel by Paul in Galatians 3:19
   text: "is called an angel by Paul in Galatians 3:19"
+- `01_genesis_01.html#heaven-and-earth-p9-s-8e76e2d` — Cited for calling the empyrean the "third heaven"
+  text: "Paul calls the third heaven"
+- `01_genesis_01.html#verse-26-p34-s-1fc0dbd` — Cited for dominion over the viper
+  text: "Paul over the viper"

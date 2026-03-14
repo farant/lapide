@@ -19,3 +19,5 @@ First-century magician and heresiarch whose heresy proscribed the Old Testament,
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#heresies-against-the-ot-p2-s-4ca6751` — His heresy proscribed the Old Testament; taught it was produced by a sinister power and evil angels
   text: "It was the heresy of Simon Magus and his followers"
+- `01_genesis_01.html#god-elohim-p3-s-d5eff44` — Listed as erring about God creating the Son
+  text: "Simon Magus, Arius, and others err, who say that God created the Son"

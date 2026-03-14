@@ -23,3 +23,7 @@ Third translator of the Hebrew Scriptures into Greek, with greater fidelity than
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p4-s-8ecdfff` — Third translator with greater fidelity than Aquila; under Commodus; his version of Daniel received by the Church
   text: "After him, with greater fidelity, came Theodotion"
+- `01_genesis_01.html#verse-2-p3-s-5d3a9af` — Cited for translating: "the earth was emptiness and nothingness"
+  text: "Theodotion, the earth was emptiness and nothingness"
+- `01_genesis_01.html#verse-6-p15-s-2cfcac1` — Named among translators lacking the second day formula
+  text: "Theodotion, Aquila, Symmachus"

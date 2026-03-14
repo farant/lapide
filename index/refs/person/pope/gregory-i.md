@@ -58,3 +58,5 @@ Pope and Doctor of the Church. One of the four great Latin Doctors. Praised Jero
   text: "Gregory in the preface to the Morals, Book 1, and others throughout"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-fbe005e` — Wishes allegory to be free in Scripture
   text: "St. Jerome, Gregory, Origen, and others often wish the allegory to be free"
+- `01_genesis_01.html#heaven-and-earth-p15-s-a15d078` — Cited alongside Augustine, Rupert, Bede for angels created simultaneously with the world
+  text: "so with Saint Augustine, Gregory, Rupert, and Bede"

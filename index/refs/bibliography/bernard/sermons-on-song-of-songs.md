@@ -27,3 +27,7 @@ Bernard's famous cycle of 86 sermons on the Canticle of Canticles, cited for tea
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p21-s-8b889c5` — Bernard quoted: true wisdom is taught by anointing, not reading
   text: "This true and genuine wisdom," he says, "is not taught by reading, but by anointing; not by the letter, but by the spirit; not by erudition, but by practice in the commandments of the Lord."
+- `01_genesis_01.html#verse-6-p16-s-dbbc1fc` — Cited (Sermon 27) on man as an image of heaven, with faith as the moon, hope as the evening star, charity as the sun
+  text: "says St. Bernard, sermon 27 on the Canticle."
+- `01_genesis_01.html#verse-26-p25-s-9b23f30` — Cited (Sermon 24) on the body as image of the soul
+  text: "So St. Augustine, Book VI of On Genesis Literally, chapter 12, and Bernard, Sermon 24 on the Song of Songs."

@@ -34,3 +34,7 @@ Roman poet, author of the Aeneid, Eclogues, and Georgics. Jerome mentions the Vi
   text: "that of Virgil, Georgics book 3:"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p46-s-27f10e7` — Quoted from Aeneid 1 for hendiadys: "He placed a mass and high mountains upon them"
   text: "as in Virgil, Aeneid 1: 'He placed a mass and high mountains upon them'"
+- `01_genesis_01.html#verse-2-p14-s-d27d7fc` — Quoted from Aeneid Book VI on the spirit nourishing the world
+  text: "Whence Virgil, in Aeneid Book VI:"
+- `01_genesis_01.html#verse-12-p10-s-4a0c788` — Quoted from Book II of the Georgics on the world's creation in spring
+  text: "as Virgil in book II of the Georgics, speaking of the first origin of the nascent world"

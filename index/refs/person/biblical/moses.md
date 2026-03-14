@@ -153,3 +153,19 @@ Prophet, lawgiver, and leader of the Israelites. Author of the Pentateuch. The c
   text: "God says to Moses: "What is it that you hold in your hand?""
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p40-s-6001b1f` — In Deuteronomy 18:18 promises a Prophet after himself, understood as both any prophets and Christ
   text: "So Moses in Deuteronomy 18:18, by the Prophet whom he promises after himself, understands both any prophets and properly Christ."
+- `01_genesis_01.html#introduction-p2-s-176ede4` — Named as the author whose narrative encompasses 2,310 years
+  text: "For it narrates the generation, that is, the creation or birth of the world and of man, his fall, propagation, and deeds, especially of the Patriarchs Noah, Abraham, Isaac, Jacob, and Joseph."
+- `01_genesis_01.html#he-created-p17-s-1f99d18` — His choice of "created" vs. "said" explained
+  text: "Why then does Moses not say here that God said: Let there be heaven, as he says He said: Let there be light?"
+- `01_genesis_01.html#god-elohim-p6-s-02120dc` — His use of the name Elohim explained
+  text: "Moses uses this name Elohim here"
+- `01_genesis_01.html#god-elohim-p7-s-f476893` — God revealed the name Jehovah to Moses
+  text: "God revealed to Moses His name Jehovah. Before Moses, therefore, God was called Elohim."
+- `01_genesis_01.html#heaven-and-earth-p18-s-d5bff92` — His omission of the creation of angels explained
+  text: "Moses does not mention the creation of the angels, because he was writing for uneducated and dull Jews"
+- `01_genesis_01.html#verse-5-p3-s-9563bea` — His way of naming the day by its terminus (Evening and Morning) explained
+  text: "For Moses here names the day and night by their terminus"
+- `01_genesis_01.html#verse-5-p7-s-77ccddc` — His six-day narrative contrasted with Augustine's view
+  text: "the simple and historical narrative of Moses entirely proves it."
+- `01_genesis_01.html#verse-31-p2-s-d690b7f` — His comprehensive statement after completing creation
+  text: "Moses, in a comprehensive statement embracing all things, says"

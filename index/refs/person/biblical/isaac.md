@@ -42,3 +42,9 @@ Patriarch, son of Abraham. Listed among the ancient patriarchs who held both sup
   text: "Isaac, 60 years old, begets Esau and Jacob."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p69-s-97ca643` — Isaac, 180 years old, dies
   text: "Isaac, 180 years old, dies."
+- `01_genesis_01.html#introduction-p2-s-38d8c00` — Named as a Patriarch
+  text: "especially of the Patriarchs Noah, Abraham, Isaac, Jacob, and Joseph."
+- `01_genesis_01.html#introduction-p4-s-fbac429` — Born in the 100th year of Abraham; Jacob born in his 60th year
+  text: "In the 100th year of Abraham, Isaac was born, Gen. ch. 21, v. 4. In the 60th year of Isaac, Jacob was born"
+- `01_genesis_01.html#introduction-p5-s-818ebaf` — Named in the fourth part of Genesis
+  text: "encompasses the deeds of Isaac, Jacob, and Joseph"

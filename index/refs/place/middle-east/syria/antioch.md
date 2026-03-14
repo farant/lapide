@@ -22,3 +22,5 @@ Major city of the Roman East; one of the first centers of Christianity. Paul was
 
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-43cc59f` — Antioch possesses itself of Paul
   text: "Antioch possesses itself of him"
+- `01_genesis_01.html#introduction-p7-s-10713d0` — Anastasius of Sinai described as "a monk and later Bishop of Antioch and Martyr"
+  text: "Anastasius of Sinai, a monk and later Bishop of Antioch and Martyr, in the year of our Lord 600, wrote eleven books of Hexameron on Genesis"

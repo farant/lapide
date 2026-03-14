@@ -30,3 +30,5 @@ Called "the summit of theologians" and "bird of heaven" by all antiquity. Author
   text: "St. Dionysius, with finger pointing to the sources, opens his Celestial Hierarchy thus"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p21-s-746feac` — As disciple of Paul, teaches Scriptures were handed down to be taught to disciples in continuous succession
   text: "Thus St. Dionysius, the disciple of the Apostle Paul"
+- `01_genesis_01.html#verse-3-p5-s-6e4b287` — Cited from On the Divine Names, Part I, ch. 4, listing thirty-four properties of light and fire; light as a living image of God
+  text: "See St. Dionysius, On the Divine Names, Part I, ch. 4, where he lists thirty-four properties of light and fire"

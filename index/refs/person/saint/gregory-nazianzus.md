@@ -62,3 +62,11 @@ One of the three Cappadocian Fathers and Archbishop of Constantinople. Known as 
   text: "Nazianzen, in the tract On the Faith, think that God appeared in a bodily form"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-a8dc30e` — Named in etymology discussion: "Gregory, as if 'the watchful one'"
   text: "Gregory, as if "the watchful one""
+- `01_genesis_01.html#god-elohim-p19-s-59df7db` — Quoted from Treatise On the Faith on the tenth definition of God
+  text: "God, says Saint Gregory of Nazianzus in his Treatise On the Faith, is that which, when spoken of, cannot be expressed; when appraised, cannot be appraised"
+- `01_genesis_01.html#verse-3-p9-s-a2643fa` — Cited for calling the first light "spiritual" because it was created without a subject
+  text: "Nazianzen calls this light "spiritual.""
+- `01_genesis_01.html#verse-26-p6-s-36804af` — Cited from Oration 43 on God furnishing the world before creating man
+  text: "and Nazianzen, Oration 43"
+- `01_genesis_01.html#heaven-and-earth-p15-s-f6acf32` — Listed among those who thought angels were created before the world
+  text: "so held Origen, Basil, Gregory of Nazianzus, Ambrose, Jerome, Hilary."

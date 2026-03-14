@@ -26,3 +26,9 @@ Bishop of Alexandria and Doctor of the Church. Defender of Nicene orthodoxy agai
   text: "So St. Athanasius writes in his Life."
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p9-s-6796140` — Reports that Anthony said a soul serving God in integrity can know more than demons
   text: "St. Anthony, as reported by Athanasius"
+- `01_genesis_01.html#he-created-p7-s-ef52b60` — Cited for the definition of "to create" meaning to make from nothing; from the epistle on the decrees of the Council of Nicaea against the Arians
+  text: "St. Athanasius, in the epistle inscribed with the decrees of the Council of Nicaea against the Arians"
+- `01_genesis_01.html#verse-2-p9-s-cd563b9` — Cited for the Holy Spirit interpretation
+  text: "So say St. Jerome, Basil, Theodoret, Athanasius, and nearly all the other Fathers"
+- `01_genesis_01.html#verse-3-p2-s-4742738` — Cited from Sermon 3 Against the Arians: God's willing is His doing
+  text: "For God's willing is His doing, says St. Athanasius, Sermon 3 Against the Arians."

@@ -26,3 +26,7 @@ Heretical sect founded by Curbicus the Persian, whom his own people called Manes
   text: "Simon, the Manichaeans, and the Marcionites taught that the Old Testament was produced by a sinister power and evil angels"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p2-s-b3a9c7a` — Augustine wrote 33 books Against Faustus in defense against them
   text: "St. Augustine wrote, in defense of the truth and usefulness of the Pentateuch and the Old Testament, no fewer than 33 books Against Faustus"
+- `01_genesis_01.html#god-elohim-p3-s-5999410` — The Manichaeans err in saying there are two principles or two gods, one good and one evil
+  text: "Pythagoras, the Manichaeans, and the Priscillianists err, who say that there are two principles of things, or two gods: one good, the creator of spirits; the second evil, the creator of bodies."
+- `01_genesis_01.html#verse-4-p2-s-36ec81f` — The phrase "God saw that it was good" is directed against the Manichaeans, showing nothing evil was produced by God
+  text: "against the Manichaeans we may know that nothing evil, but all things good, were produced by God"

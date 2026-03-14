@@ -33,3 +33,7 @@ Virgil's epic poem, cited by Jerome for lines repurposed in Virgiliocento as pse
   text: "as if someone were to imitate Proba Falconia (who was the Latin Sappho) in adapting Virgil's Aeneid... to Christ"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p46-s-efae58b` — Cited (Book 1) for examples of hendiadys
   text: "as in Virgil, Aeneid 1"
+- `01_genesis_01.html#verse-2-p15-s-6e06f44` — Quoted (Book VI) on the spirit nourishing and moving the world
+  text: "A spirit within nourishes, and a mind infused through every limb Moves the whole mass, and mingles with the great body."
+- `01_genesis_01.html#verse-14-p7-s-de0eda2` — Quoted (invocation of the eternal fires)
+  text: "You eternal fires, and inviolable divine power,I call to witness."

@@ -26,3 +26,9 @@ Bishop of Poitiers and Doctor of the Church. Called the "Athanasius of the West"
   text: "St. Hilary on Psalm 2 and Origen in Homily 5 on Numbers lend their support"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-12e8e8d` — Book IV on the Trinity: thinks God appeared in bodily form to Abraham, Moses, and the Prophets
   text: "Hilary, Book IV on the Trinity"
+- `01_genesis_01.html#heaven-and-earth-p10-s-a2976d2` — Listed among supporters of the empyrean heaven interpretation
+  text: "Origen, Theodoret, Alcuin, Rabanus, Lyranus, Philo, Saint Hilary, Theophilus of Antioch, Junilius, Bede"
+- `01_genesis_01.html#heaven-and-earth-p15-s-f6acf32` — Listed among those who thought angels were created before the world
+  text: "so held Origen, Basil, Gregory of Nazianzus, Ambrose, Jerome, Hilary."
+- `01_genesis_01.html#verse-26-p3-s-3722f2a` — His book On the Synods cited for the Council of Sirmium's anathema
+  text: "the Council of Sirmium, cited by Hilary in his book On the Synods, pronounces anathema"

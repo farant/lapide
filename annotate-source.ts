@@ -23,7 +23,7 @@
  */
 
 import { Glob } from "bun";
-import { stripHtml, normalizeForMatch, normalizeForPosition, computeHash, findInPlainText } from "./pipeline-utils";
+import { stripHtml, normalizeForMatch, normalizeForPosition, computeHash, findInPlainText, parseTextLine } from "./pipeline-utils";
 
 const checkMode = Bun.argv.includes("--check");
 const sourceFile = Bun.argv.find(a => a.endsWith(".html"));
@@ -103,12 +103,12 @@ for await (const path of glob.scan(REFS_DIR)) {
       continue;
     }
 
-    const textMatch = line.match(/^\s*text:\s*"(.+)"$/);
-    if (textMatch && lastParaId) {
+    const parsedText = parseTextLine(line);
+    if (parsedText && lastParaId) {
       refEntries.push({
         refFilePath: fullPath,
         paragraphId: lastParaId,
-        quotedText: textMatch[1],
+        quotedText: parsedText,
         entitySlug: slug,
         refLineIndex: lastLineIndex,
       });
@@ -157,20 +157,6 @@ for (const entry of refEntries) {
       if (first && last) {
         result = { start: first.start, end: last.end };
       }
-    }
-  }
-
-  // Prefix fallback: match first 50 normalized chars
-  if (!result) {
-    const prefix = normQuote.slice(0, 50);
-    const prefixResult = findInPlainText(plainText, prefix, 0);
-    if (prefixResult) {
-      // Extend end by approximate remaining length
-      const approxEnd = Math.min(
-        prefixResult.start + entry.quotedText.length + 30,
-        plainText.length
-      );
-      result = { start: prefixResult.start, end: approxEnd };
     }
   }
 

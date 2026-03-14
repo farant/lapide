@@ -30,3 +30,7 @@ Augustine's autobiographical work recounting his conversion to Christianity, con
   text: "Wondrous," says the same, book XII of the Confessions, chapter 14, "is the depth of Your words, Lord, whose surface, behold, is before us, charming to little ones, but wondrous is the depth, my God, wondrous depth; it is dreadful to gaze into it: a dread of honor, and a trembling of love."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-04fa4a3` — Cited (chapters 18, 25, 26, 31, 32) for the teaching that there can be multiple literal senses of Scripture
   text: "St. Augustine, Confessions book 12, chapters 18, 25, 26, 31 and 32"
+- `01_genesis_01.html#he-created-p6-s-c4a9a41` — Quoted (Book I): "You have made us, O Lord, for Yourself, and our heart is restless until it rests in You"
+  text: "the same Augustine beautifully says, Confessions I: "You have made us, O Lord, for Yourself, and our heart is restless until it rests in You;""
+- `01_genesis_01.html#verse-14-p18-s-87c25d0` — Cited (Book IX, ch. 10) on Augustine's conversation with Monica about eternal things
+  text: "See St. Augustine's conversation on this matter with his mother Monica, book IX Confessions, ch. 10."

@@ -16,7 +16,7 @@
  */
 
 import { Glob } from "bun";
-import { stripHtml, normalizeForMatch } from "./pipeline-utils";
+import { stripHtml, normalizeForMatch, parseTextLine } from "./pipeline-utils";
 
 const REFS_DIR = "index/refs";
 const fixQuotes = Bun.argv.includes("--fix-quotes");
@@ -154,8 +154,7 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
       // Extract text: "..." from the next line (if present)
       const textLineIdx = li + 1;
       const nextLine = textLineIdx < lines.length ? lines[textLineIdx] : "";
-      const textMatch = nextLine.match(/^\s*text:\s*"(.+)"$/);
-      const expectedText = textMatch ? textMatch[1] : null;
+      const expectedText = parseTextLine(nextLine);
 
       // Sidecar hash ref: `source.html#paragraph-id-s-XXXXXXX`
       const sidecarMatch = line.match(new RegExp(
@@ -352,8 +351,7 @@ async function main() {
     selected: string;
     expected: string;
     entity: string;
-    startOff: number;
-    endOff: number;
+    diagnosis: string;
     quoteOnly: boolean;
     filePath: string;
     textLineNumber: number;
@@ -378,19 +376,24 @@ async function main() {
     // Check if the only difference is quote/dash style (normalization-only mismatch)
     const quoteOnly = normalizeForMatch(selectedText) === normalizeForMatch(expectedText);
 
-    // Determine how far off the start/end are
-    let startOff = 0;
-    let endOff = 0;
-    if (!quoteOnly) {
-      for (let d = 1; d <= 3; d++) {
-        if (startOff === 0) {
-          const tryStart = plainText.slice(a.start - d, a.end).replace(/\s+/g, " ").trim();
-          if (tryStart === expectedText || tryStart.startsWith(expectedText)) startOff = d;
-        }
-        if (endOff === 0) {
-          const tryEnd = plainText.slice(a.start, a.end + d).replace(/\s+/g, " ").trim();
-          if (tryEnd === expectedText || tryEnd.endsWith(expectedText.slice(-10))) endOff = d;
-        }
+    // Diagnose the mismatch
+    let diagnosis: string;
+    if (selectedText.length !== expectedText.length && normalizeForMatch(selectedText).startsWith(normalizeForMatch(expectedText))) {
+      diagnosis = `span extends ${selectedText.length - expectedText.length} chars beyond ref text (annotation span is longer than text: field)`;
+    } else if (selectedText.length !== expectedText.length && normalizeForMatch(expectedText).startsWith(normalizeForMatch(selectedText))) {
+      diagnosis = `ref text extends ${expectedText.length - selectedText.length} chars beyond span (text: field is longer than annotation span)`;
+    } else {
+      // Find first divergence point
+      let divergeAt = 0;
+      const normSel = normalizeForMatch(selectedText);
+      const normExp = normalizeForMatch(expectedText);
+      while (divergeAt < normSel.length && divergeAt < normExp.length && normSel[divergeAt] === normExp[divergeAt]) {
+        divergeAt++;
+      }
+      if (divergeAt === normSel.length || divergeAt === normExp.length) {
+        diagnosis = `length differs: span=${selectedText.length} vs ref=${expectedText.length}`;
+      } else {
+        diagnosis = `texts diverge at char ${divergeAt}`;
       }
     }
 
@@ -399,8 +402,7 @@ async function main() {
       selected: selectedText,
       expected: expectedText,
       entity: expected.entity,
-      startOff,
-      endOff,
+      diagnosis,
       quoteOnly,
       filePath: expected.filePath,
       textLineNumber: expected.textLineNumber,
@@ -412,28 +414,47 @@ async function main() {
     const realMismatches = textMismatches.filter(m => !m.quoteOnly);
 
     if (realMismatches.length > 0) {
-      // Categorize real mismatches
-      const startOnly = realMismatches.filter(m => m.startOff > 0 && m.endOff === 0);
-      const endOnly = realMismatches.filter(m => m.startOff === 0 && m.endOff > 0);
-      const bothOff = realMismatches.filter(m => m.startOff > 0 && m.endOff > 0);
-      const other = realMismatches.filter(m => m.startOff === 0 && m.endOff === 0);
+      // Categorize by diagnosis type
+      const spanLonger = realMismatches.filter(m => m.diagnosis.includes("span extends"));
+      const refLonger = realMismatches.filter(m => m.diagnosis.includes("ref text extends"));
+      const divergent = realMismatches.filter(m => m.diagnosis.includes("diverge") || m.diagnosis.includes("length differs"));
 
       console.log(`❌ ${realMismatches.length} annotations have text at offsets that doesn't match expected ref text:`);
-      if (startOnly.length > 0) console.log(`   Start offset too high: ${startOnly.length}`);
-      if (endOnly.length > 0) console.log(`   End offset too low: ${endOnly.length}`);
-      if (bothOff.length > 0) console.log(`   Both start+end off: ${bothOff.length}`);
-      if (other.length > 0) console.log(`   Other mismatch: ${other.length}`);
+      if (spanLonger.length > 0) console.log(`   Annotation span longer than ref text: ${spanLonger.length}`);
+      if (refLonger.length > 0) console.log(`   Ref text longer than annotation span: ${refLonger.length}`);
+      if (divergent.length > 0) console.log(`   Texts diverge: ${divergent.length}`);
       console.log();
 
-      const examples = realMismatches.slice(0, 10);
-      for (const m of examples) {
-        const selPreview = m.selected.length > 60 ? m.selected.slice(0, 60) + "..." : m.selected;
-        const expPreview = m.expected.length > 60 ? m.expected.slice(0, 60) + "..." : m.expected;
-        const offDesc = m.startOff > 0 && m.endOff > 0 ? `start+${m.startOff}, end-${m.endOff}`
-          : m.startOff > 0 ? `start+${m.startOff}` : m.endOff > 0 ? `end-${m.endOff}` : "other";
-        console.log(`   ${m.id} (${offDesc})`);
-        console.log(`     selected: "${selPreview}"`);
-        console.log(`     expected: "${expPreview}"`);
+      for (const m of realMismatches.slice(0, 10)) {
+        // Show context around the difference, not just the first 60 chars
+        const normSel = normalizeForMatch(m.selected);
+        const normExp = normalizeForMatch(m.expected);
+        let divergeAt = 0;
+        while (divergeAt < normSel.length && divergeAt < normExp.length && normSel[divergeAt] === normExp[divergeAt]) {
+          divergeAt++;
+        }
+
+        console.log(`   ${m.id}`);
+        console.log(`     ${m.diagnosis}`);
+
+        if (m.diagnosis.includes("span extends") || m.diagnosis.includes("ref text extends")) {
+          // Show where the shorter text ends and what continues
+          const shorter = m.selected.length < m.expected.length ? m.selected : m.expected;
+          const longer = m.selected.length < m.expected.length ? m.expected : m.selected;
+          const label = m.selected.length < m.expected.length ? "ref" : "span";
+          const endContext = shorter.slice(-30);
+          const extraText = longer.slice(shorter.length, shorter.length + 40);
+          console.log(`     match ends: ...${endContext}`);
+          console.log(`     ${label} continues: ${extraText}...`);
+        } else {
+          // Show text around the divergence point
+          const start = Math.max(0, divergeAt - 15);
+          const selContext = m.selected.slice(start, divergeAt + 25);
+          const expContext = m.expected.slice(start, divergeAt + 25);
+          console.log(`     span: ...${selContext}...`);
+          console.log(`      ref: ...${expContext}...`);
+        }
+        console.log(`     in: ${m.filePath.replace(/.*\/refs\//, "")}`);
       }
       if (realMismatches.length > 10) console.log(`   ... and ${realMismatches.length - 10} more`);
       console.log();

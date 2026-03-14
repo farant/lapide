@@ -53,3 +53,5 @@ King of Israel and Psalmist. Author of the Psalter.
   text: "by Israel understands both David and Christ"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p47-s-45d93a9` — Balaam by Israel understands both David and Christ
   text: "And the Psalmist in Psalm 109:6"
+- `01_genesis_01.html#heaven-and-earth-p9-s-9055c14` — Cited for calling it "the heaven of heavens"
+  text: "David the heaven of heavens"

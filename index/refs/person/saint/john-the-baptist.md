@@ -30,3 +30,5 @@ The Forerunner of Christ, greatest of the prophets born of women.
   text: "just as St. John the Baptist did to Christ the Lord: for he, just like Moses and the other prophets"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p23-s-ab6a8e1` — Called Elijah by Malachi
   text: "Thus John the Baptist is called Elijah by Malachi"
+- `01_genesis_01.html#verse-16-p25-s-2a03efb` — Christ's description of him quoted: "He was a burning and shining lamp"; Bernard's sermon cited
+  text: "as Christ says of St. John the Baptist: "He was a burning and shining lamp," not, "shining and burning," as St. Bernard rightly observes"

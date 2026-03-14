@@ -26,3 +26,7 @@ Protestant reformer who misinterpreted Scripture to prove God is the author of e
   text: "Calvin, from that saying of David"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p15-s-203b080` — The apostate Dudecius "fled to the camp of Calvin"
   text: "that apostate fled to the camp of Calvin."
+- `01_genesis_01.html#introduction-p11-s-5dc5b4b` — Named as a danger in these times regarding extolling faith excessively
+  text: "for he greatly extols faith, which on account of Luther and Calvin is dangerous in these times."
+- `01_genesis_01.html#verse-6-p11-s-0a20efd` — Named for laughing at the opinion of waters above the heavens; called foolish
+  text: "Calvin laughs at this; but foolishly"

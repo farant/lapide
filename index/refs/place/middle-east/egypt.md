@@ -47,3 +47,7 @@ Ancient land, referenced both as the place of Moses' captivity under Pharaoh, fr
   text: "namely the Egyptians in the Red Sea"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p14-s-7a6a439` — Departure of the Israelites from Egypt in the sacred chronology
   text: "Years from the beginning of the world to the departure of the Israelites from Egypt: 2531"
+- `01_genesis_01.html#verse-9-p16-s-220c884` — Egypt described as "so much lower than the sea itself," with the Red Sea three cubits higher than Egypt's land
+  text: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt, which is so much lower than the sea itself, if it were not restrained by the command of the Creator?"
+- `01_genesis_01.html#verse-9-p16-s-adf2195` — Sesostris, king of Egypt, conceived of digging a canal from the Red Sea
+  text: "Pliny records that Sesostris, king of Egypt, first conceived of digging a navigable channel from the Red Sea, but was deterred by the fear of flooding, the Red Sea being found to be three cubits higher than the land of Egypt."

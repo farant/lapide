@@ -28,3 +28,5 @@ Kingdom of England. Home of Bl. Thomas More, the illustrious Chancellor and mart
   text: "From England, hear Venerable Bede in his English History"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p6-s-75a43b8` — St. Vincent Ferrer traveled through England converting people
   text: "traveling through Italy, France, Germany, England, and Spain, converted at least a hundred thousand people"
+- `01_genesis_01.html#verse-16-p15-s-e6b309a` — A noble matron condemned to death in England for the faith, who sang joyfully of heaven as she faced execution
+  text: "Likewise in our own age that noble matron, condemned to a horrible death in England for the sake of the faith"

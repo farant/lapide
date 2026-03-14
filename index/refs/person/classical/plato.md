@@ -47,3 +47,23 @@ Greek philosopher. Traveled laboriously through Egypt and to Archytas of Tarentu
   text: "preceded by a great span of time all the sages of Greece"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-7294d34` — Called "the broad one" from his broad shoulders; previously called Aristocles
   text: "The Greeks called Plato, as it were, "the broad one," from his broad shoulders, though he was previously called Aristocles"
+- `01_genesis_01.html#in-the-beginning-p12-s-0262d38` — Named alongside Aristotle for the erroneous view that the world is eternal
+  text: "it is clear against Plato, Aristotle, and others that the world is not eternal."
+- `01_genesis_01.html#he-created-p6-s-9ba4657` — Cited for saying "good works should come from a good God"
+  text: "it was fitting that good works should come from a good God, says Plato, and after Plato, St. Augustine"
+- `01_genesis_01.html#he-created-p12-s-de04ea3` — Named alongside the Stoics for the error of creating from eternal matter
+  text: "Second, the error of Plato and the Stoics, who said that the world was indeed created by God, but from eternal and unbegotten matter"
+- `01_genesis_01.html#he-created-p13-s-0b246d8` — Listed among philosophers who affirm the world was made by God
+  text: "So Plato, the Stoics, Cicero, Plutarch, and Aristotle"
+- `01_genesis_01.html#verse-2-p14-s-9ffcc79` — Cited for saying the spirit giving life to waters was the soul of the world
+  text: "This spirit that gives life to the waters and to all things, Plato said was the soul of the world."
+- `01_genesis_01.html#verse-14-p3-s-dd74138` — Named for asserting that stars are animated
+  text: "although Plato asserts"
+- `01_genesis_01.html#verse-26-p3-s-3bb987f` — Cited from the Timaeus for the view that God commanded angels to fashion the body
+  text: "as Plato wished in the Timaeus"
+- `01_genesis_01.html#verse-26-p4-s-70df5a4` — Cited for calling man "the Horizon of the universe"
+  text: "by Plato he is called the Horizon of the universe"
+- `01_genesis_01.html#verse-26-p9-s-e395250` — Cited through Philo for the abstract/universal man concept
+  text: "as Philo wished following Plato."
+- `01_genesis_01.html#verse-27-p3-s-d6859df` — Cited from the Symposium for the androgynous view
+  text: "Plato in the Symposium held that the first humans were androgynous."

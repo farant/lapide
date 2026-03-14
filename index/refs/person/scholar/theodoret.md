@@ -35,3 +35,21 @@ Bishop of Cyrrhus, Church historian, and theologian. Controversial theological s
   text: "as Blessed Gregory and Theodoret rightly say"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p9-s-45c4275` — Holds the better view that Genesis was written after the departure from Egypt
   text: "But Theodoret, Bede, and Tostatus hold a better view"
+- `01_genesis_01.html#introduction-p7-s-8b2f007` — Listed among those who wrote on Genesis
+  text: "Origen, St. Jerome, Augustine, Theodoret, Procopius, Chrysostom"
+- `01_genesis_01.html#verse-2-p9-s-dceceb5` — Cited for identifying the Spirit of the Lord as a wind or as the Holy Spirit
+  text: "the Hebrews, Theodoret, and Tertullian"
+- `01_genesis_01.html#verse-3-p9-s-171c37d` — Cited alongside Basil and Nazianzen for the quality of light created without a subject
+  text: "St. Basil, Theodoret, and Nazianzen think"
+- `01_genesis_01.html#verse-9-p16-s-365b293` — Cited for noting the sea is restrained by God's command
+  text: "Theodoretus notes that the raging sea is restrained not so much by its shores as by God's command"
+- `01_genesis_01.html#verse-14-p19-s-440d720` — Cited alongside Basil on days and years
+  text: "So Basil and Theodoret."
+- `01_genesis_01.html#verse-21-p4-s-bb681c3` — Cited alongside Basil on great sea creatures
+  text: "say St. Basil and Theodoret."
+- `01_genesis_01.html#verse-26-p3-s-b6f4d35` — Cited for denouncing the idea that angels created man
+  text: "St. Basil, Chrysostom, Theodoret, Cyril in Book I Against Julian"
+- `01_genesis_01.html#verse-26-p17-s-d0a7fa5` — Cited for the (incorrect) view that the image of God is in man alone
+  text: "as Theodoret holds"
+- `01_genesis_01.html#heaven-and-earth-p10-s-d94185c` — Listed among supporters of the empyrean heaven interpretation
+  text: "of Origen, Theodoret, Alcuin"

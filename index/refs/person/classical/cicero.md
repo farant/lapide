@@ -26,3 +26,7 @@ Roman orator, statesman, and philosopher. Lacordaire imagines himself at the bas
   text: "those praises of Cicero for Philosophy, or Ethics, most aptly apply"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#sacred-writers-as-pens-p2-s-bde9ff9` — As the orator must turn over all of Cicero, so the theologian must turn over Scripture
   text: "the orator Cicero"
+- `01_genesis_01.html#he-created-p7-s-d7b557b` — Cited for the pagan meaning of "to create" as "to beget"
+  text: "'To create' in Cicero and among the pagans means 'to beget'"
+- `01_genesis_01.html#he-created-p13-s-accdd10` — Named among philosophers affirming the world was made by God; Aristotle's argument reported in Cicero's Book II of On the Nature of the Gods
+  text: "So Plato, the Stoics, Cicero, Plutarch, and Aristotle, whose argument on this subject is reported by Cicero in book II of On the Nature of the Gods."

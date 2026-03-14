@@ -34,3 +34,11 @@ Patriarch of Alexandria and Doctor of the Church; wrote extensively on the Penta
   text: "Saint Cyril, in book 1 Against Julian, shows that Moses was more ancient"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p12-s-24ced98` — Provides learned chronology comparing Moses's life with Gentile heroes: Prometheus, Atlas, Cecrops, Deucalion, Cadmus, etc.
   text: "Hear his learned chronology of Moses and the Gentiles"
+- `01_genesis_01.html#he-created-p7-s-dce5a2a` — Cited from Book V of the Thesaurus, ch. 4, on the meaning of "to create"
+  text: "So St. Cyril, book V of the Thesaurus, ch. 4"
+- `01_genesis_01.html#introduction-p7-s-dad1007` — Cited for writing five books plus Glaphyra on Genesis
+  text: "Blessed Cyril wrote five books, to which add his Glaphyra"
+- `01_genesis_01.html#verse-20-p7-s-2159fdd` — Listed among Fathers who hold that birds were produced from water
+  text: "the common opinion of St. Jerome, Augustine, Cyril, Damascene, and other Fathers"
+- `01_genesis_01.html#verse-26-p3-s-7021a42` — Cited from Book I Against Julian for denouncing the idea that angels created man
+  text: "Cyril in Book I Against Julian"

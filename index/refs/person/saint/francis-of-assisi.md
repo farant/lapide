@@ -30,3 +30,5 @@ Founder of the Franciscan Order. Though unlettered, responded to Cardinals' ques
   text: "this holiness of life taught Francises, Anthonies, and Pauls — unlettered men"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p8-s-fd9c6b2` — When asked by followers, granted them study of sacred Letters on condition they not extinguish spirit of prayer
   text: "St. Francis, when asked by his followers, granted them the study of sacred Letters"
+- `01_genesis_01.html#verse-26-p34-s-08c2823` — Cited for recovering dominion over fish and birds to which he preached
+  text: "St. Francis over the fish and birds to which he preached -- he obtained dominion over them."

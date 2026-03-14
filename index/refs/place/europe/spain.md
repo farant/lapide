@@ -22,3 +22,5 @@ Westernmost region of Europe; nobles came from the farthest borders of Spain and
   text: "from the farthest borders of Spain and Gaul to Titus Livius"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p6-s-75a43b8` — St. Vincent Ferrer traveled through Spain converting people
   text: "traveling through Italy, France, Germany, England, and Spain, converted at least a hundred thousand people"
+- `01_genesis_01.html#god-elohim-p24-s-d86914a` — Spain mentioned in an example of the royal plural: "We, Philip, King of Spain"
+  text: "as the Latins also do, saying for example "We, Philip, King of Spain.""

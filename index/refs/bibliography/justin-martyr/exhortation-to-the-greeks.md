@@ -33,3 +33,5 @@ Apologetic work attributed to Justin, arguing that the Greeks drew their wisdom 
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p4-s-6a53704` — Justin cited: Diodorus lists six ancient legislators with Moses first
   text: "Diodorus, the most esteemed of all historians, says Saint Justin in his Exhortation to the Greeks, lists six ancient legislators, and first of all Moses"
+- `01_genesis_01.html#he-created-p7-s-b4f70be` — Cited on "to create" meaning to make from nothing
+  text: "St. Justin, in the Admonitory"

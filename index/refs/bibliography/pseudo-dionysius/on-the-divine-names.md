@@ -20,3 +20,5 @@ Mystical-theological treatise on the names attributed to God, attributed to Dion
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p3-s-182fba6` — Dionysius quoted at length from chapter 1 on proceeding from Sacred Scripture as a principle
   text: "ought it be presumed to say or think anything about the super-substantial and most secret divinity, beyond what the sacred oracles have handed down to us"
+- `01_genesis_01.html#verse-3-p5-s-930d876` — Cited (Part I, ch. 4) on thirty-four properties of light fitting for God; light as a living image of God
+  text: "See St. Dionysius, On the Divine Names, Part I, ch. 4, where he lists thirty-four properties of light and fire, wonderfully fitting for God and divine things."

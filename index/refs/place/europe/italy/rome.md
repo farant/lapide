@@ -58,3 +58,7 @@ Seat of the papacy and the Catholic Church. Lapide was summoned here by his Jesu
   text: "Years from the beginning of the world to the founding of Rome: 3250"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p4-s-cb197a3` — Pagans reckon times from the founding of the city of Rome
   text: "from the founding of the city of Rome, which occurred near the end of the reign of Jotham, king of Judah"
+- `01_genesis_01.html#verse-22-p16-s-9747d47` — Geese at Rome protected the Capitol against the Gauls by rousing sleeping guards
+  text: "Hence at Rome, geese once protected the Capitol against the Gauls, enemies creeping in, by rousing the sleeping guards with their cries."
+- `01_genesis_01.html#verse-22-p16-s-3d2a17d` — St. Ambrose addresses Rome, saying it owes its sovereignty to the geese
+  text: "Rightly, he says, to them (the geese), O Rome, you owe your sovereignty."

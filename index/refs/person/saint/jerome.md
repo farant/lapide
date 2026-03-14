@@ -29,6 +29,9 @@ related:
     - subject/biblical-translation
     - subject/vulgate
     - subject/sacred-languages
+    - subject/creation
+    - subject/holy-spirit
+    - subject/image-of-god
 ---
 
 One of the four great Latin Doctors of the Church. Best known for his translation of the Bible into Latin (the Vulgate). Celebrated by the Catholic Church as the greatest Doctor raised up for interpretation of sacred Scriptures.
@@ -99,3 +102,25 @@ One of the four great Latin Doctors of the Church. Best known for his translatio
   text: "the riddles of Pythagoras, says St. Jerome (Against Rufinus, book 3)"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-fbe005e` — Wishes allegory to be free; on Hosea chapter 5, retracts a contrary view
   text: "St. Jerome, Gregory, Origen, and others often wish the allegory to be free"
+- `01_genesis_01.html#verse-2-p9-s-cd563b9` — Cited for the Holy Spirit interpretation of "Spirit of the Lord"
+  text: "So say St. Jerome, Basil, Theodoret, Athanasius, and nearly all the other Fathers"
+- `01_genesis_01.html#verse-2-p11-s-1f8ac3f` — Cited alongside Basil and Diodorus for the Hebrew meaning of merachephet
+  text: "as St. Basil, Diodorus, and Jerome testify in the Hebrew Questions on Genesis"
+- `01_genesis_01.html#verse-2-p17-s-1751b68` — Cited from Epistle 83 to Oceanus on the allegorical meaning of the Spirit over the waters
+  text: "the Holy Spirit is here signified as brooding, as it were, over the waters of baptism, and by them bringing us to birth and regenerating us, says St. Jerome, Epistle 83 to Oceanus."
+- `01_genesis_01.html#verse-4-p2-s-a18b714` — Cited from Epistle 15 on "He saw" meaning "He caused us to see"
+  text: ""He saw," that is, He caused us to see and know, says St. Jerome, Epistle 15."
+- `01_genesis_01.html#verse-6-p2-s-3b508d8` — Cited for the Hebrew meaning of rakia (to spread out, stretch, solidify)
+  text: "whose root, raka, according to St. Jerome and other most learned Hebrews, means to spread out"
+- `01_genesis_01.html#verse-9-p7-s-70511df` — Listed among those who hold that earth and water form one globe
+  text: "This is the common opinion of mathematicians, Molina, Pererius, Cajetan, St. Jerome, Chrysostom, and Damascene."
+- `01_genesis_01.html#verse-14-p3-s-444fca7` — Cited on Isaiah 25, on stars not being rational
+  text: "so St. Jerome on Isaiah 25, and the Fathers and Philosophers generally."
+- `01_genesis_01.html#verse-20-p7-s-2159fdd` — Cited for the common opinion that birds were produced from water
+  text: "the common opinion of St. Jerome, Augustine, Cyril, Damascene, and other Fathers"
+- `01_genesis_01.html#verse-26-p13-s-bfa2bd9` — Quoted from commentary on Ezekiel 28 on image made at creation, likeness completed in baptism
+  text: "St. Jerome, on Ezekiel chapter 28, "You are the seal of likeness," says: "And it should be noted that the image was only made at creation, while the likeness is completed in baptism.""
+- `01_genesis_01.html#he-created-p8-s-2c46d58` — Cited indirectly through Jerome de Oleastro's translation of bara as 'divided'
+  text: "Jerome de Oleastro translates the Hebrew bara as 'divided.'"
+- `01_genesis_01.html#heaven-and-earth-p15-s-f6acf32` — Listed among those who thought angels were created before the world
+  text: "so held Origen, Basil, Gregory of Nazianzus, Ambrose, Jerome, Hilary."

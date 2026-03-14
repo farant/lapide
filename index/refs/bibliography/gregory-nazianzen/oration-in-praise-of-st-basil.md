@@ -50,3 +50,5 @@ Gregory Nazianzen's panegyric on his friend St. Basil of Caesarea, delivered as 
 
 - `01_Preliminares.html#dedicatory-letter-p38-s-60df172` — Gregory Nazianzen quoted on Basil giving light to the whole world through Caesarea
   text: "Basil, through the single Church of Caesarea, gave light to the whole world."
+- `01_genesis_01.html#verse-26-p6-s-36804af` — Cited (Oration 43) on God furnishing the world like a banquet before introducing man
+  text: "and Nazianzen, Oration 43"

@@ -32,3 +32,11 @@ The deliberate rejection of worldly wealth, honors, and comforts in favor of dev
   text: "I ascend to the heavens; I despise this earth, nay heaven itself and the sun. I am enrolled as heir and lord not of earth, but of heaven"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p24-s-ee80036` — Bernard: these words persuaded the whole world to contempt of the world and voluntary poverty.
   text: "These are the words that persuaded the whole world to contempt of the world and voluntary poverty"
+- `01_genesis_01.html#verse-16-p13-s-1c86463` — From the immense heavens, the earth is but a point; who for a particle of gold would sell the vast palaces of the stars? Spur to endure poverty, illness, and persecution for the sake of heaven.
+  text: "If then we were standing on some star, and much more if in the empyrean heaven, and looked down upon this little globe of earth, would we not exclaim: This is the point over which the sons of Adam gape, like ants"
+- `01_genesis_01.html#verse-16-p14-s-07aa256` — St. Symphorian's mother encourages her son going to martyrdom: "Remember eternal life, look up to heaven; life is not taken from you, but changed for the better."
+  text: "My son, my son, remember eternal life, look up to heaven, and behold Him who reigns there: for life is not taken from you, but changed for the better."
+- `01_genesis_01.html#verse-16-p16-s-a283af8` — St. Vincent raised his mind to heaven, conquering and laughing at all torments: "You tire yourself in vain, Dacian."
+  text: "You tire yourself in vain, Dacian: you cannot devise torments so horrible that I am not prepared to endure them. Prison, claws, red-hot plates, and death itself are sport and play for Christians, not torment"
+- `01_genesis_01.html#verse-14-p18-s-701f3fb` — Temporal things are loved more before possessed but become cheap on arrival; eternal things are loved more ardently when attained than when desired.
+  text: "Between temporal and eternal things there is this difference, that temporal things are loved more before they are possessed, but become cheap when they arrive"

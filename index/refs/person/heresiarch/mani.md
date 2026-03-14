@@ -26,3 +26,7 @@ Called Curbicus the Persian, whom his own people called Manes and Manichaeus ("a
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#heresies-against-the-ot-p2-s-e193851` — Called Curbicus the Persian; with Simon and Marcion, taught OT was produced by evil angels
   text: "Curbicus the Persian (whom his own people called Manes and Manichaeus, as if a pourer-out of manna, by way of honor)"
+- `01_genesis_01.html#god-elohim-p3-s-20cbc9c` — Named alongside Pythagoras for the error of two principles
+  text: "Pythagoras, the Manichaeans, and the Priscillianists err"
+- `01_genesis_01.html#verse-4-p2-s-0b3fab9` — Named as opponents against whom Moses teaches all things are good
+  text: "against the Manichaeans we may know that nothing evil, but all things good, were produced by God."

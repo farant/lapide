@@ -43,3 +43,7 @@ Apostle and first Pope. Two epistles of Peter are listed in the Tridentine canon
   text: "Thus Simon, after he was called Cephas by the Lord, is not infrequently still called Simon afterwards."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p48-s-7ee841d` — Christ slew Peter the idolater and raised up Peter the worshipper of God
   text: "he slew Peter the idolater, the drunkard, the adulterer, and raised up the same man and made him Peter the worshipper of God"
+- `01_genesis_01.html#heaven-and-earth-p10-s-bfa992a` — Cited as the source for Clement's opinion on the empyrean heaven
+  text: "the opinion of Blessed Clement, received from the lips of Saint Peter"
+- `01_genesis_01.html#heaven-and-earth-p12-s-d864489` — Cited alongside Clement for the creation narrative
+  text: "This is the opinion of Saint Peter and Clement"

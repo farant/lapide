@@ -33,3 +33,5 @@ Augustine's correspondence on theological, pastoral, and philosophical matters, 
   text: "I," he says, "in the Sacred Scriptures themselves, know far less than I do not know."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p44-s-20055b2` — Epistle 99 to Evodius cited for the canon that one thing can be a figure of two contrary things
   text: "St. Augustine (Epistle 99 to Evodius)"
+- `01_genesis_01.html#verse-31-p16-s-083872d` — Cited (Epistle 28) on the world as a most sweet music of God, citing Isaiah 40 (LXX)
+  text: "Wherefore St. Augustine, Epistle 28, citing that passage of Isaiah 40 according to the Septuagint"

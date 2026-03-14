@@ -27,3 +27,5 @@ Archbishop of Seville and Doctor of the Church. Preferred Jerome's version of Sc
 
 - `01_Preliminares.html#preface-reader-p6-s-0e6cfc5` — Prefers Jerome's version to all others; affirms it is commonly received and approved by Christian churches as clearer in words and truer in meaning
   text: "St. Isidore, moreover, in more than one place prefers the Hieronymian version to all others and affirms that it is commonly received and approved by the Christian churches"
+- `01_genesis_01.html#verse-22-p13-s-f1929ff` — Cited from Book XII on vultures
+  text: "Isidore, Book XII"

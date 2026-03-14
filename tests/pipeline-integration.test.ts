@@ -517,6 +517,39 @@ describe("Stage 2d — validate-extractions.ts (negative tests)", () => {
     },
     { timeout: 30_000 }
   );
+
+  test(
+    "passes with backslash-escaped quotes in text: fields",
+    () => {
+      // The source has: "If," he says, "you perceive that a difficult..."
+      // Agents may write this with \" escapes in the text: field
+      const escapedExtractionPath = path.join(tmpDir, "escaped-extraction.md");
+      writeFileSync(
+        escapedExtractionPath,
+        `# Escaped Quotes Extraction
+
+## Other
+
+### Anonymous Speaker
+- **Occurrences**:
+  - \`#edge-cases\` — Speaks about difficult judgments
+    text: "\\"If,\\" he says, \\"you perceive that a difficult and ambiguous judgment has arisen among you, you shall do whatever those who preside shall say.\\""
+`
+      );
+
+      const result = runScript(SCRIPTS.validateExtractions, [
+        "source.html",
+        "escaped-extraction.md",
+      ]);
+
+      expect(result.exitCode).toBe(0);
+      expect(result.stdout).toContain("Matched: 1/1");
+
+      // Clean up
+      unlinkSync(escapedExtractionPath);
+    },
+    { timeout: 30_000 }
+  );
 });
 
 // ---------------------------------------------------------------------------
@@ -615,6 +648,101 @@ Test entity for multiple MISS reporting.
       // Restore and clean up
       writeFileSync(path.join(tmpDir, "source.html"), sourceBackup);
       unlinkSync(badRefPath);
+    },
+    { timeout: 30_000 }
+  );
+});
+
+describe("Stage 2f — annotate-source.ts (prefix fallback)", () => {
+  test(
+    "does not silently accept prefix-only matches with padded end offsets",
+    () => {
+      // Create a ref file with text that starts correctly but ends differently
+      // from what's in the paragraph. The annotator should report a MISS,
+      // NOT silently use a prefix match with +30 char padding.
+      const badRefDir = path.join(tmpDir, "index/refs/person/other");
+      mkdirSync(badRefDir, { recursive: true });
+      const badRefPath = path.join(badRefDir, "prefix-test.md");
+      writeFileSync(
+        badRefPath,
+        `---
+name: Prefix Test Entity
+slug: person/other/prefix-test
+category: person
+subcategory: other
+related:
+  people: []
+  works: []
+  subjects: []
+---
+
+Test entity for prefix fallback.
+
+## References in Commentary
+
+- \`source.html#introduction\` — Text starts right but ends wrong
+  text: "St. Augustine teaches in On Christian Doctrine COMPLETELY WRONG ENDING that diverges from the actual paragraph text."
+`
+      );
+
+      const sourceBackup = readFileSync(
+        path.join(tmpDir, "source.html"),
+        "utf-8"
+      );
+
+      const result = runScript(SCRIPTS.annotateSource, ["source.html"]);
+
+      // The annotator should report a MISS for this text, not silently match
+      expect(result.stderr).toContain("MISS");
+      expect(result.stdout).toContain("1 missed");
+
+      // Restore and clean up
+      writeFileSync(path.join(tmpDir, "source.html"), sourceBackup);
+      unlinkSync(badRefPath);
+    },
+    { timeout: 30_000 }
+  );
+
+  test(
+    "annotator uses parseTextLine to handle backslash-escaped quotes",
+    () => {
+      // Create ref file with \" escaped quotes
+      const refDir = path.join(tmpDir, "index/refs/person/other");
+      mkdirSync(refDir, { recursive: true });
+      const refPath = path.join(refDir, "escape-ann-test.md");
+      writeFileSync(
+        refPath,
+        `---
+name: Escape Annotate Test
+slug: person/other/escape-ann-test
+category: person
+subcategory: other
+related:
+  people: []
+---
+
+Test entity.
+
+## References in Commentary
+
+- \`source.html#edge-cases\` — Quoted text with escaped inner quotes
+  text: "\\"If,\\" he says, \\"you perceive that a difficult and ambiguous judgment has arisen among you, you shall do whatever those who preside shall say.\\""
+`
+      );
+
+      const sourceBackup = readFileSync(
+        path.join(tmpDir, "source.html"),
+        "utf-8"
+      );
+
+      const result = runScript(SCRIPTS.annotateSource, ["source.html"]);
+
+      // Should successfully match (0 missed), not MISS due to backslash escapes
+      expect(result.stdout).toContain("0 missed");
+
+      // Restore and clean up
+      writeFileSync(path.join(tmpDir, "source.html"), sourceBackup);
+      unlinkSync(refPath);
     },
     { timeout: 30_000 }
   );
@@ -2039,6 +2167,135 @@ describe("lint-annotations.ts (negative tests)", () => {
 
       // Restore
       writeFileSync(htmlPath, backup);
+    },
+    { timeout: 30_000 }
+  );
+
+  test(
+    "diagnoses 'span extends beyond ref text' when annotation is longer than text: field",
+    () => {
+      const htmlPath = path.join(tmpDir, "source.html");
+      const backup = readFileSync(htmlPath, "utf-8");
+
+      // Parse existing sidecar
+      const sidecarMatch = backup.match(
+        /<script type="application\/json" id="passage-annotations">([\s\S]*?)<\/script>/
+      );
+      expect(sidecarMatch).not.toBeNull();
+      const annotations = JSON.parse(sidecarMatch![1]);
+
+      // Add an annotation whose span is deliberately longer than the ref file text
+      // The paragraph "introduction" has text starting with "St. Augustine teaches..."
+      // We'll make the annotation span 200 chars (whole paragraph) but the ref text is only ~120 chars
+      annotations.push({
+        id: "introduction-s-1111111",
+        paragraph: "introduction",
+        start: 0,
+        end: 200,
+        entities: ["person/other/span-test"],
+      });
+
+      const modifiedHtml = backup.replace(
+        /<script type="application\/json" id="passage-annotations">[\s\S]*?<\/script>/,
+        `<script type="application/json" id="passage-annotations">\n${JSON.stringify(annotations, null, 2)}\n</script>`
+      );
+      writeFileSync(htmlPath, modifiedHtml);
+
+      // Create a ref file with a shorter text: field
+      const refDir = path.join(tmpDir, "index/refs/person/other");
+      mkdirSync(refDir, { recursive: true });
+      const refPath = path.join(refDir, "span-test.md");
+      writeFileSync(
+        refPath,
+        `---
+name: Span Test
+slug: person/other/span-test
+category: person
+subcategory: other
+related:
+  people: []
+---
+
+Test entity.
+
+## References in Commentary
+
+- \`source.html#introduction-s-1111111\` — Test
+  text: "St. Augustine teaches in On Christian Doctrine"
+`
+      );
+
+      const result = runScript(SCRIPTS.lintAnnotations, ["source.html"]);
+
+      expect(result.stdout).toContain("annotation span is longer than text: field");
+      expect(result.exitCode).toBe(1);
+
+      // Clean up
+      writeFileSync(htmlPath, backup);
+      unlinkSync(refPath);
+    },
+    { timeout: 30_000 }
+  );
+
+  test(
+    "diagnoses 'texts diverge at char N' when annotation text differs from ref text",
+    () => {
+      const htmlPath = path.join(tmpDir, "source.html");
+      const backup = readFileSync(htmlPath, "utf-8");
+
+      const sidecarMatch = backup.match(
+        /<script type="application\/json" id="passage-annotations">([\s\S]*?)<\/script>/
+      );
+      expect(sidecarMatch).not.toBeNull();
+      const annotations = JSON.parse(sidecarMatch![1]);
+
+      // Add annotation pointing to "introduction" paragraph
+      annotations.push({
+        id: "introduction-s-2222222",
+        paragraph: "introduction",
+        start: 0,
+        end: 50,
+        entities: ["person/other/diverge-test"],
+      });
+
+      const modifiedHtml = backup.replace(
+        /<script type="application\/json" id="passage-annotations">[\s\S]*?<\/script>/,
+        `<script type="application/json" id="passage-annotations">\n${JSON.stringify(annotations, null, 2)}\n</script>`
+      );
+      writeFileSync(htmlPath, modifiedHtml);
+
+      // Create ref file with text that starts the same but diverges
+      const refDir = path.join(tmpDir, "index/refs/person/other");
+      mkdirSync(refDir, { recursive: true });
+      const refPath = path.join(refDir, "diverge-test.md");
+      writeFileSync(
+        refPath,
+        `---
+name: Diverge Test
+slug: person/other/diverge-test
+category: person
+subcategory: other
+related:
+  people: []
+---
+
+Test entity.
+
+## References in Commentary
+
+- \`source.html#introduction-s-2222222\` — Test
+  text: "St. Augustine teaches in WRONG TEXT that does not match the paragraph"
+`
+      );
+
+      const result = runScript(SCRIPTS.lintAnnotations, ["source.html"]);
+
+      expect(result.stdout).toContain("texts diverge at char");
+      expect(result.exitCode).toBe(1);
+
+      // Clean up
+      writeFileSync(htmlPath, backup);
+      unlinkSync(refPath);
     },
     { timeout: 30_000 }
   );

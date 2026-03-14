@@ -38,3 +38,17 @@ Abbot of Clairvaux, Doctor of the Church, and Cistercian reformer. Among the sch
   text: "In a similar way St. Bernard, by meditating, attained an understanding of the Sacred Letters"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p2-s-1db957b` — "Whatever he says, speaks in the words of Scripture"
   text: "I pass over St. Bernard, who whatever he says, speaks in the words of Scripture"
+- `01_genesis_01.html#verse-6-p16-s-dbbc1fc` — Cited from Sermon 27 on the Canticle on man as an image of heaven with virtues as stars
+  text: "says St. Bernard, sermon 27 on the Canticle."
+- `01_genesis_01.html#verse-16-p25-s-64a71d4` — Quoted from Sermon on St. John the Baptist: "to burn and to shine is perfect"
+  text: "as St. Bernard rightly observes and explains, Sermon on St. John the Baptist: \"For,\" he says, \"merely to shine is vain, merely to burn is little, to burn and to shine is perfect.\""
+- `01_genesis_01.html#verse-26-p6-s-63c20f1` — Quoted from Sermon 1 On the Annunciation on what the first man enjoyed
+  text: "St. Bernard, Sermon 1 On the Annunciation: "What, he says, was lacking to the first man, whom mercy guarded, truth taught, justice governed, and peace cherished?""
+- `01_genesis_01.html#verse-26-p13-s-c4727c7` — Quoted from Sermon 1 On the Annunciation on image vs. likeness
+  text: "St. Bernard, Sermon 1 On the Annunciation, where he also adds: \"The image indeed can be burned in hell, but not burned up\""
+- `01_genesis_01.html#verse-26-p25-s-9b23f30` — Cited from Sermon 24 on the Song of Songs on the body as image of the mind
+  text: "So St. Augustine, Book VI of On Genesis Literally, chapter 12, and Bernard, Sermon 24 on the Song of Songs."
+- `01_genesis_01.html#verse-26-p27-s-9f6c52d` — Cited for the perennial spur: "Bernard, say why you are here?"
+  text: "Let this therefore be for us, as for St. Bernard, a perennial spur to a pure and holy life: Bernard, say why you are here?"
+- `01_genesis_01.html#verse-31-p19-s-3643f92` — Quoted from Sermon 3 on Pentecost on the three things to consider in creation
+  text: "St. Bernard, Sermon 3 on Pentecost: "Three things," he says, "we must consider in the great work of this world, namely what it is, how it is, and for what purpose it was established.""

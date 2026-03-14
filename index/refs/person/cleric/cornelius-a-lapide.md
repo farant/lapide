@@ -70,3 +70,9 @@ Jesuit biblical commentator who taught Holy Scripture at Louvain for over twenty
   text: "The Torah or Law comprises the Pentateuch, namely Genesis, Exodus, Leviticus, Numbers, and Deuteronomy"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p2-s-bfa01e6` — Received the chronology from Samerius and diligently purged its errors
   text: "it was not, however, free from errors, from which I diligently purged it"
+- `01_genesis_01.html#preamble-p1-s-9b954fc` — Named as the author
+  text: "Cornelius a Lapide"
+- `01_genesis_01.html#introduction-p11-s-3ae956c` — Pledges brevity and solidity in his approach
+  text: "I shall compress into a few words what others have said at length"
+- `01_genesis_01.html#introduction-p12-s-5c65316` — Explains his method of citing authors
+  text: "when I cite those authors just mentioned, I shall not note the specific passage"

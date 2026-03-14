@@ -20,3 +20,7 @@ Boethius's famous philosophical dialogue written in prison, cited for the teachi
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p14-s-ed68cf6` — Boethius quoted: divine splendor shuns the dark ruins of the soul and follows the shining mind
   text: "that splendor by which heaven is governed and thrives, shuns the dark ruins of the soul, and follows the shining mind."
+- `01_genesis_01.html#he-created-p4-s-03a7792` — Quoted (Book III, metre 9): God bearing the beautiful world in His mind
+  text: ""Bearing the beautiful world in His mind, most beautiful Himself," as Boethius sings, book III of the Consolation of Philosophy, metre 9."
+- `01_genesis_01.html#verse-29-p3-s-1ee4f46` — Quoted (Book II, metre 5) on the frugality of the former age
+  text: "Too happy was the former age,Content with faithful fields,Nor lost in idle luxury,Which used to break its late fastsWith easily gathered acorns."

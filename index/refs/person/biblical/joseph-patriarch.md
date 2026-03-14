@@ -40,3 +40,9 @@ Son of Jacob and steward of Egypt. Gregory Nazianzen compares Basil to Joseph as
   text: "Joseph, 16 years old, is sold by his brothers."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p72-s-d8648bc` — Joseph dies, 110 years old
   text: "Joseph dies, 110 years old."
+- `01_genesis_01.html#introduction-p2-s-38d8c00` — Named as a Patriarch; Genesis ends with his death
+  text: "especially of the Patriarchs Noah, Abraham, Isaac, Jacob, and Joseph."
+- `01_genesis_01.html#introduction-p4-s-0ff06a3` — Born in Jacob's 91st year; lived 110 years
+  text: "In the 91st year of Jacob, Joseph was born, as I shall show at Gen. 30:25. Joseph lived 110 years, Gen. 50:25."
+- `01_genesis_01.html#introduction-p5-s-9edbd17` — Named in the fourth part of Genesis
+  text: "encompasses the deeds of Isaac, Jacob, and Joseph, and ends with the death of Joseph."

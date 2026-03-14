@@ -19,7 +19,7 @@
  */
 
 import { Glob } from "bun";
-import { stripHtml, normalizeForMatch } from "./pipeline-utils";
+import { stripHtml, normalizeForMatch, parseTextLine } from "./pipeline-utils";
 
 const fixQuotes = Bun.argv.includes("--fix-quotes");
 const args = Bun.argv.filter(a => !a.startsWith("--"));
@@ -92,14 +92,14 @@ async function parseExtractionFile(filePath: string) {
     }
 
     // Match: text: "quoted text"
-    const textMatch = line.match(/^\s*text:\s*"(.+)"$/);
-    if (textMatch && lastParaId) {
+    const parsedText = parseTextLine(line);
+    if (parsedText && lastParaId) {
       refs.push({
         file: filePath,
         line: i + 1,
         lineIndex: i,
         paragraphId: lastParaId,
-        text: textMatch[1],
+        text: parsedText,
       });
     }
   }

@@ -29,3 +29,5 @@ Brother of Moses and first High Priest of Israel.
   text: "compares Saint Basil and his brother Gregory of Nyssa to Moses and Aaron"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p12-s-9299819` — Phinehas son of Eleazar son of Aaron assumed priesthood when Aaron died
   text: "Phinehas, the son of Eleazar, the son of Aaron, assumed the priesthood among the Hebrews, Aaron having died"
+- `01_genesis_01.html#verse-26-p7-s-7300249` — Cited for his full-length robe bearing the whole world (Wisdom 18:24)
+  text: ""in the full-length robe which he wore," Aaron the high priest of the Old Testament "bore the whole world," Wisdom 18:24."

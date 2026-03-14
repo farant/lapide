@@ -1464,6 +1464,66 @@ Two CSS sources:
 
 Both import `style.css` as a base.
 
+## Client-Side Search
+
+A search bar on every generated index page, powered by a compact JSON index emitted during Stage 6 (Generate).
+
+### Search index format
+
+`index/search-index.json` — columnar format to minimize file size:
+
+```json
+{
+  "c": ["name", "slug", "cat", "aka", "desc"],
+  "r": [
+    ["St. Jerome", "person/saint/jerome", "person", ["Hieronymus", "Eusebius Sophronius Hieronymus"], "Doctor of the Church, translator of the Vulgate"],
+    ["אֲדָמָה", "language/hebrew/adamah", "language", ["adamah"], "earth, ground, soil"],
+    ["Genesis 3:15", "verse/genesis/3/15", "verse", [], "The protoevangelium"]
+  ]
+}
+```
+
+- `c` — column names (fixed order, known to both generator and client code)
+- `r` — one row per ref file entry (all categories including verses)
+- `aka` — includes `also_known_as` plus `transliteration` for language entries, making Hebrew/Greek searchable by romanized form
+
+The generator produces both this JSON and the JS that consumes it, so the column order is a compile-time contract — no runtime key lookups needed.
+
+### Search UI
+
+The search bar lives in the header of every generated index page, below the breadcrumb nav:
+
+```html
+<nav class="index-breadcrumb">
+  <a href="/index/">Index</a> › ...
+</nav>
+<div class="index-search">
+  <input type="search" id="index-search-input" placeholder="Search index..." autocomplete="off">
+  <ul id="index-search-results"></ul>
+</div>
+```
+
+Behavior:
+
+- **Lazy load** — `search-index.json` is fetched on first focus/keystroke, not on page load
+- **Substring matching** — matches against name, aliases, and description (case-insensitive)
+- **Results dropdown** — filtered list below the input, each item links to the entry page
+- **Category badges** — results show a small category label (Person, Place, Verse, etc.) for disambiguation
+- **Keyboard navigation** — arrow keys to move through results, Enter to navigate
+- **Dismiss** — clicking outside or pressing Escape closes the dropdown
+
+### CSS classes
+
+- `.index-search` — search container (positioned relative for dropdown)
+- `#index-search-input` — search input field
+- `#index-search-results` — dropdown results list (absolute positioned below input)
+- `.search-result` — individual result item
+- `.search-result-cat` — category badge within a result
+
+### Implementation
+
+The search logic lives in `components.js` (or a separate `search.js` if cleaner). The generator auto-inserts the search HTML into every index page template and includes the script tag.
+
 ## Phased Rollout
 
 ### Phase 1: Entity extraction
@@ -1513,6 +1573,15 @@ Each file lists every entity found in the source text with:
 ```
 
 **Key difference from prior format**: Occurrences reference actual paragraph IDs (e.g., `#preface-reader-p3`) that exist in the pre-numbered HTML, not approximate counts (`~p3`). Each occurrence includes both a synopsis (after `—`) and the exact text of the sentence being referenced (on the `text:` line). The exact text is the ground truth for verification — the synopsis is for human readability.
+
+**Common extraction pitfalls**: The `text:` field is validated by stripping HTML from the source paragraph and checking that the quoted text is an exact substring of the result. Agents routinely make these errors:
+
+- **Single paragraph only** — each `text:` must come from exactly one `<p>`. Do not merge text from adjacent paragraphs. A common mistake: an introductory sentence ("Ovid says:") is in paragraph N, and the poem it introduces is in paragraph N+1. These are two separate occurrences, not one.
+- **Poems with `<br />` tags** — when HTML is stripped, `<br />` becomes nothing (no space). So `"line one,<br />\nline two"` becomes `"line one,line two"`. The `text:` field must match this stripped form.
+- **Interjections between `<em>` blocks** — text like `<em>"God,"</em> he says, <em>"is He whom..."</em>` strips to `"God," he says, "is He whom..."`. Agents often drop the `he says,` interjection, producing text that doesn't match.
+- **No premature truncation** — do not cut a quote mid-sentence and add a closing `"` that isn't in the source. Extend to a natural sentence boundary. If the full sentence is very long, include enough to be a unique substring.
+- **Case sensitivity** — `"For God created"` ≠ `"for God created"`. Copy the exact casing from the source.
+- **Bracketed text** — `[Peter Lombard]` and similar editorial insertions in the HTML are part of the plain text. Do not omit them.
 
 This phase is purely extractive — no HTML generation, no source annotation. The markdown files are reviewed and corrected before proceeding.
 

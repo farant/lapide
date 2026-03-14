@@ -15,7 +15,7 @@
  */
 
 import { Glob } from "bun";
-import { stripHtml, normalizeForMatch } from "./pipeline-utils";
+import { stripHtml, normalizeForMatch, parseTextLine } from "./pipeline-utils";
 
 const REFS_DIR = "index/refs";
 
@@ -254,10 +254,10 @@ for await (const path of glob.scan(REFS_DIR)) {
       references.push(lastRef);
       continue;
     }
-    const textMatch = line.match(/^\s*text:\s*"(.+)"$/);
-    if (textMatch && lastRef) {
+    const parsedText = parseTextLine(line);
+    if (parsedText && lastRef) {
       if (!textQuotes.has(lastRef)) textQuotes.set(lastRef, []);
-      textQuotes.get(lastRef)!.push(textMatch[1]);
+      textQuotes.get(lastRef)!.push(parsedText);
     }
   }
 

@@ -26,3 +26,9 @@ Bishop of Paris and theologian. Author of the Sentences, the standard theologica
 
 - `01_Preliminares.html#preface-reader-p7-s-3814744` — Listed among scholars who used Jerome's version
   text: "Rupert, Peter Lombard, Alexander"
+- `01_genesis_01.html#god-elohim-p26-s-a0951b4` — Cited as "the Master" alongside the Scholastics for Elohim implying a plurality of persons
+  text: "the Master [Peter Lombard], and the Scholastics teach"
+- `01_genesis_01.html#verse-3-p9-s-c54ac44` — Cited as "the Master" for the view that light was a luminous body
+  text: "Bede, Hugh, the Master, St. Thomas, St. Bonaventure"
+- `01_genesis_01.html#heaven-and-earth-p15-s-32dab67` — Cited as "the Master" alongside the Scholastics
+  text: "so with Saint Augustine, Gregory, Rupert, and Bede teach the Master and the Scholastics."

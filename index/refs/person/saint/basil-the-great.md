@@ -38,6 +38,9 @@ related:
     - subject/monasticism
     - subject/arianism/resistance
     - subject/charity/famine-relief
+    - subject/creation
+    - subject/hexaemeron
+    - subject/image-of-god
 ---
 
 One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called "the Moses of his age" by Gregory Nazianzen. Best known for his Hexaemeron, his monastic rule, and his courageous resistance to the Arian Emperor Valens.
@@ -94,3 +97,77 @@ One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called
   text: "See St. Basil arguing against Origen here, Homilies 3 and 9 on the Hexaemeron."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p44-s-40dea06` — Hands down the canon that one thing can be a figure of two contrary things; on Isaiah chapter 2
   text: "St. Basil (on Isaiah chapter 2) hand down this canon"
+- `01_genesis_01.html#in-the-beginning-p3-s-d6a2ef6` — Cited for first interpretation of "In the beginning" as the first origin of time; from Homily 1 on the Hexameron
+  text: "Ambrose and Basil, homily 1 on the Hexameron: "In the beginning," they say, that is, in the first origin or start"
+- `01_genesis_01.html#in-the-beginning-p7-s-0887456` — Cited alongside Bede for the view that heaven and earth were created shortly before the first day
+  text: "St. Basil and Bede think that heaven and earth were created not on the first day, but shortly before the first day"
+- `01_genesis_01.html#in-the-beginning-p9-s-446ca5b` — Cited for the second interpretation "In the Son"
+  text: "the same Augustine, Ambrose, and Basil in the same place"
+- `01_genesis_01.html#in-the-beginning-p19-s-e038a63` — Cited for the sixth interpretation "In a moment"; from Homily 1 on the Hexameron
+  text: "Sixthly, St. Ambrose and St. Basil, homily 1 on the Hexameron: \"In the beginning,\" they say, that is, in a moment"
+- `01_genesis_01.html#in-the-beginning-p23-s-5d2a529` — Cited for the eighth interpretation "As foundations"
+  text: "say St. Basil and Procopius."
+- `01_genesis_01.html#he-created-p15-s-3f94bfb` — Cited for the inference that God can create many worlds and annihilate this one
+  text: "from which Saint Basil infers: because God made this world by His power, art, and freedom, by the same He can create many more"
+- `01_genesis_01.html#heaven-and-earth-p9-s-17dc225` — Cited for saying heaven and earth were first laid as foundations of the universe
+  text: "And Saint Basil, homily 1 on the Hexaemeron, says that \"heaven and earth were first laid and constructed as certain foundations and supporting bases of the universe.\""
+- `01_genesis_01.html#heaven-and-earth-p10-s-64493f2` — Listed among supporters of the empyrean heaven interpretation
+  text: "This is the opinion of Blessed Clement, received from the lips of Saint Peter; of Origen, Theodoret, Alcuin, Rabanus, Lyranus, Philo, Saint Hilary, Theophilus of Antioch, Junilius, Bede, Abulensis, Catharinus, and many others"
+- `01_genesis_01.html#heaven-and-earth-p12-s-3df62f4` — Cited for the opinion that the earth, empyrean, and abyss were created first
+  text: "This is the opinion of Saint Peter and Clement, Saint Basil, Bede, Molina, and many others"
+- `01_genesis_01.html#heaven-and-earth-p15-s-cec05fe` — Listed among those who thought angels were created before the world
+  text: "Some thought they were created before the world: so held Origen, Basil, Gregory of Nazianzus, Ambrose, Jerome, Hilary."
+- `01_genesis_01.html#verse-2-p9-s-8b34753` — Cited for identifying the Spirit of the Lord as the Holy Spirit; from which passage the divinity of the Holy Spirit is proved
+  text: "So say St. Jerome, Basil, Theodoret, Athanasius, and nearly all the other Fathers, who from this passage prove the divinity of the Holy Spirit."
+- `01_genesis_01.html#verse-2-p11-s-135ba68` — Cited alongside Diodorus and Jerome on the Hebrew word merachephet referring to birds brooding
+  text: "the Hebrew is merachephet, which, as St. Basil, Diodorus, and Jerome testify in the Hebrew Questions on Genesis"
+- `01_genesis_01.html#verse-3-p7-s-6d0444d` — Quoted from Homily 2 on the Hexaemeron on the beauty light brought to the world
+  text: "St. Basil gives a beautiful comparison in Homily 2 on the Hexaemeron: \"Just as those who pour oil into a deep whirlpool of water give that place clarity and transparency\""
+- `01_genesis_01.html#verse-3-p9-s-68027d3` — Cited alongside Theodoret and Nazianzen for the view that only the quality of light was created without a subject
+  text: "St. Basil, Theodoret, and Nazianzen think that only the quality of light was here created without a subject"
+- `01_genesis_01.html#verse-3-p17-s-dcff0a8` — Quoted from Homily on Penance on Christ bestowing His prerogatives on others
+  text: "On this St. Basil speaks beautifully in his Homily on Penance: \"His own prerogatives Jesus bestows on others.\""
+- `01_genesis_01.html#verse-9-p5-s-bbbd27b` — Cited alongside Burgensis, Catharinus, and Thomas for the view that the sea was made higher than the earth
+  text: "Second, Basil, Burgensis, Catharinus, and St. Thomas think that the sea was here separated from the earth so that it was made higher."
+- `01_genesis_01.html#verse-9-p16-s-5c2ad37` — Quoted on the Red Sea being restrained by God's command
+  text: "St. Basil asks: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt, which is so much lower than the sea itself"
+- `01_genesis_01.html#verse-11-p3-s-cfaedef` — Quoted on God's providence in germination: stalks, ears, beards; symbolic application to man
+  text: "Moreover St. Basil marvels, and rightly so, at God's providence in germination"
+- `01_genesis_01.html#verse-12-p2-s-075331c` — Cited alongside Ambrose for the view that the earth actually brought forth all species on the third day
+  text: "So St. Basil and Ambrose."
+- `01_genesis_01.html#verse-12-p5-s-7aa2067` — Cited for teaching that poisonous herbs and thorns were created before the fall
+  text: "the contrary is taught by St. Basil and St. Ambrose, and this is the truer view"
+- `01_genesis_01.html#verse-14-p16-s-c3f7702` — Cited for the phrase "Let them be for signs" as prognostications of weather
+  text: "says St. Basil, homily 6 on the Hexaemeron"
+- `01_genesis_01.html#verse-16-p3-s-d09e4ad` — Quoted from Homily 6 on the Hexaemeron on the moon as symbol of inconstancy
+  text: "Symbolically, St. Basil, homily 6 on the Hexaemeron: The moon, he says, which perpetually waxes or wanes, is a symbol of inconstancy"
+- `01_genesis_01.html#verse-16-p5-s-cccc1e5` — Quoted on the sun and moon compared to the Creator as a gnat and an ant
+  text: "For the sun and moon compared to the Creator bear the same proportion as a gnat and an ant,\" says St. Basil, homily 6 on the Hexaemeron."
+- `01_genesis_01.html#verse-20-p3-s-c26ad8a` — Cited from Homily 7 on the Hexaemeron on fish being unteachable and stupid
+  text: "fish are unteachable and stupid, and cannot be tamed or domesticated by man, says St. Basil, Homily 7 on the Hexaemeron."
+- `01_genesis_01.html#verse-20-p14-s-d009dba` — Cited from Homily 7 on the marvels of seawater, coral, pearls, the remora
+  text: "All this from St. Basil, Homily 7."
+- `01_genesis_01.html#verse-20-p15-s-1c9a7f6` — Cited for teaching to admire God's power in the theater of the sea
+  text: "from all these things St. Basil teaches, first, to admire God's power, wisdom, and munificence"
+- `01_genesis_01.html#verse-21-p4-s-bb681c3` — Cited on great sea creatures presenting the appearance of a huge island
+  text: "say St. Basil and Theodoret."
+- `01_genesis_01.html#verse-22-p7-s-1238e80` — Cited from Homily 8 on the Hexaemeron on the industry of bees and cranes
+  text: "St. Basil, Homily 8 on the Hexaemeron, and following him St. Ambrose, Book V of the Hexaemeron"
+- `01_genesis_01.html#verse-22-p21-s-4db5a20` — Cited on silkworms as proof and type of the resurrection
+  text: "So says Basil."
+- `01_genesis_01.html#verse-24-p7-s-ba36164` — Cited from Homily 7 as seeming to teach the contrary on animals from putrefaction
+  text: "although St. Basil here in Homily 7 seems to teach the contrary."
+- `01_genesis_01.html#verse-24-p16-s-e80a97c` — Cited from Homily 9 on the Hexaemeron on contemplating species of animals
+  text: "St. Basil enumerates and contemplates these species, Homily 9 on the Hexaemeron"
+- `01_genesis_01.html#verse-26-p3-s-ff5420e` — Cited for denouncing as impious the idea that angels created man
+  text: "For St. Basil, Chrysostom, Theodoret, Cyril in Book I Against Julian, and Augustine in Book XVI of The City of God, chapter 6, denounce this as impious"
+- `01_genesis_01.html#verse-26-p13-s-c31f630` — Quoted from Homily 10 on the Hexameron on image vs. likeness
+  text: "So St. Basil, Homily 10 on the Hexameron: "Through the image impressed on my soul, I obtained the use of reason; but having become a Christian, I am made truly like God.""
+- `01_genesis_01.html#verse-26-p17-s-a12d6d8` — Cited from Homily 10 on the image of God in both man and woman
+  text: "and Basil here in Homily 10"
+- `01_genesis_01.html#verse-26-p19-s-66fcbd5` — Cited for placing the image of God in man's power to preside over and rule all animals
+  text: "St. Basil places it in this."
+- `01_genesis_01.html#verse-26-p31-s-dae5a3a` — Quoted from Homily 10 on the Hexameron on man as an animal born to command
+  text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command. Why do you submit to this wretched slavery of passions?""
+- `01_genesis_01.html#verse-31-p22-s-5cc6e8f` — Quoted from Homily 4 on the Hexaemeron on the world as a book proclaiming God's glory
+  text: "St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters, openly testifying and proclaiming the glory of God, and abundantly declaring to you, the intellectual creature, His most august majesty"

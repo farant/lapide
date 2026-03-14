@@ -27,3 +27,7 @@ Body of water between Egypt and the Sinai Peninsula. Moses divided it for the Is
   text: "by faith they passed through the Red Sea as by dry land, which the Egyptians attempting were devoured"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p48-s-cd93428` — The Egyptians slain in the Red Sea as a type of spiritual liberation
   text: "the blood and slaughter of enemies, namely the Egyptians in the Red Sea"
+- `01_genesis_01.html#verse-9-p16-s-220c884` — St. Basil asks what would prevent the Red Sea from flooding Egypt if not God's command
+  text: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt, which is so much lower than the sea itself, if it were not restrained by the command of the Creator?"
+- `01_genesis_01.html#verse-9-p16-s-adf2195` — Pliny records Sesostris conceived of a navigable channel from the Red Sea but was deterred by the fear of flooding
+  text: "Pliny records that Sesostris, king of Egypt, first conceived of digging a navigable channel from the Red Sea, but was deterred by the fear of flooding, the Red Sea being found to be three cubits higher than the land of Egypt."

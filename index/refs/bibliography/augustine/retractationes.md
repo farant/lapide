@@ -27,3 +27,7 @@ Augustine's systematic review and correction of his earlier writings, demonstrat
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p16-s-1139508` — I Retractations, chapter 4 cited: retracts that there are many roads to truth
   text: "in I Retractations, chapter 4, he retracts what he had said elsewhere, that there are many roads to truth, since there is only one, namely Christ"
+- `01_genesis_01.html#verse-24-p5-s-8cfb6e1` — Cited (Book I, ch. 10) as retracting the view that animals were naturally peaceful before the fall
+  text: "Augustine himself seems to retract this in Book I of the Retractions, chapter 10"
+- `01_genesis_01.html#verse-26-p22-s-f63f446` — Cited (Book II, ch. 24) against Origen on the image of God being indelible
+  text: "against Origen, St. Augustine teaches in Book II of the Retractations, chapter 24."

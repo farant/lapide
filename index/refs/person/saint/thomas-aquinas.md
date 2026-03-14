@@ -19,6 +19,10 @@ related:
   subjects:
     - subject/vulgate
     - subject/biblical-scholarship
+    - subject/creation
+    - subject/image-of-god
+    - subject/dominion
+    - subject/original-justice
 ---
 
 Dominican friar and Doctor of the Church. The Angelic Doctor, preeminent theologian of Scholasticism. Among the scholars who used Jerome's version of Scripture exclusively.
@@ -43,3 +47,23 @@ Dominican friar and Doctor of the Church. The Angelic Doctor, preeminent theolog
   text: "Who, if like St. Thomas he has sent a farewell to the world, and from Christ on the cross hears:"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p41-s-7f42be6` — Cites and follows Augustine on multiple literal senses; Summa Theologiae I, q. 1, art. 10
   text: "whom St. Thomas cites and follows (Summa Theologiae I, q. 1, art. 10, in the body)"
+- `01_genesis_01.html#he-created-p7-s-1d54dc4` — Cited from Part I, question 61, art. 5, on creation from nothing
+  text: "For, as St. Thomas teaches, Part I, question 61, art. 5, the universal emanation of all things could only have come from nothing."
+- `01_genesis_01.html#verse-3-p9-s-53efe72` — Cited for the view that light was the sun itself still unformed
+  text: "Whence St. Thomas says this light was the sun itself, still unformed and imperfect."
+- `01_genesis_01.html#verse-9-p5-s-841471a` — Cited for the view that the sea was made higher than the earth
+  text: "Basil, Burgensis, Catharinus, and St. Thomas think that the sea was here separated from the earth"
+- `01_genesis_01.html#verse-11-p2-s-a2a8364` — Cited from Part I, Question LXX, article 1, on God producing all plants suddenly
+  text: "God by Himself alone actively and efficaciously, and indeed suddenly, produced all plants and vegetation; and these of proper and perfect size, as St. Thomas teaches, I part, Question LXX, article 1."
+- `01_genesis_01.html#verse-20-p13-s-1b46264` — Cited from Part I, Question 71, article 1, on fish from denser water and birds from rarer
+  text: "St. Thomas, Part I, Question 71, article 1"
+- `01_genesis_01.html#verse-24-p5-s-925c896` — Cited from Part I, Question 69, article 1, reply 2, on carnivorous animals before sin
+  text: "So St. Thomas, Part I, Question 69, article 1, reply 2"
+- `01_genesis_01.html#verse-26-p3-s-3f1a623` — Cited alongside Basil for the view on faciamus; the Council of Sirmium cited by Hilary
+  text: "So St. Basil, Rupert, and others cited above"
+- `01_genesis_01.html#verse-28-p2-s-6585962` — Cited for the view that the precept of procreation is given to the species, not individuals
+  text: "So says St. Thomas."
+- `01_genesis_01.html#heaven-and-earth-p16-s-14e4208` — His view noted on the Lateran Council's words
+  text: "Although Saint Thomas and some others think these words can be taken otherwise"
+- `01_genesis_01.html#introduction-p8-s-b143b3f` — Distinguished from "Thomas the Doctor" (Thomas of York); his Summa used commonly
+  text: "Thomas the Doctor also wrote -- not the holy Angelic Doctor, but the English one, namely the Doctor of York"

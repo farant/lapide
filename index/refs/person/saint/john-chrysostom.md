@@ -20,6 +20,9 @@ related:
   subjects:
     - subject/scripture-study
     - subject/preaching
+    - subject/creation
+    - subject/dominion-of-man
+    - subject/image-of-god
 ---
 
 Archbishop of Constantinople and Doctor of the Church. Known as "the Golden-Mouthed" for the power of his preaching. Wrote extensively on Genesis and Paul's Epistles.
@@ -44,3 +47,19 @@ Archbishop of Constantinople and Doctor of the Church. Known as "the Golden-Mout
   text: "St. Chrysostom transmits this canon, Homily 8 on Matthew."
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p21-s-b05c3f2` — Named in the etymology discussion: "golden mouth" from eloquence
   text: "Chrysostom, as it were, "golden mouth," from his eloquence"
+- `01_genesis_01.html#heaven-and-earth-p9-s-9b50321` — Quoted from Homily 2: God first stretched out heaven, then laid earth beneath
+  text: "Saint John Chrysostom here, homily 2: "God, contrary to human custom, in perfecting His building, first stretched out heaven, and afterward laid the earth beneath it: first the roof, and afterward the foundation;""
+- `01_genesis_01.html#verse-5-p9-s-04766b0` — Quoted at length from his Homily That Man Is Set Over Every Creature on nature serving man
+  text: "St. Chrysostom, in his Homily That Man Is Set Over Every Creature, applies keen incentives to man from the day, light, and other creatures"
+- `01_genesis_01.html#verse-9-p7-s-24107f5` — Listed among those who hold that earth and water form one globe
+  text: "Molina, Pererius, Cajetan, St. Jerome, Chrysostom, and Damascene."
+- `01_genesis_01.html#verse-16-p2-s-54757cd` — Cited from Homily 6 on the moon appearing greater due to proximity
+  text: "So St. Chrysostom here, homily 6"
+- `01_genesis_01.html#verse-26-p3-s-b6f4d35` — Cited for denouncing as impious the idea that angels created man
+  text: "St. Basil, Chrysostom, Theodoret, Cyril in Book I Against Julian"
+- `01_genesis_01.html#verse-26-p13-s-0643de3` — Quoted from Homily 9 on Genesis on the distinction between image and likeness
+  text: "And St. Chrysostom, Homily 9 on Genesis: "He said 'image' on account of dominion; 'likeness,' so that by human powers we may become like God in gentleness, mildness, etc.""
+- `01_genesis_01.html#verse-26-p35-s-3571535` — Cited alongside Origen and Eucherius for the tropological interpretation of man's dominion
+  text: "So say Origen, Chrysostom, and Eucherius."
+- `01_genesis_01.html#verse-28-p2-s-e8aca10` — Cited alongside Rupert and Augustine for the view that there is no precept to procreate
+  text: "So say St. Chrysostom, Rupert, and Augustine"

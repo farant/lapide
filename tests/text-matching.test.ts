@@ -514,6 +514,38 @@ describe("parseTextLine", () => {
     );
   });
 
+  test("handles backslash-escaped internal quotes", () => {
+    // Agents sometimes write \" for inner quotes in text: fields
+    const line = '  text: "And Saint Basil says that \\"heaven\\" means the firmament"';
+    expect(parseTextLine(line)).toBe(
+      'And Saint Basil says that "heaven" means the firmament'
+    );
+  });
+
+  test("handles mixed escaped and unescaped internal quotes", () => {
+    const line = '  text: "He says, \\"God is good,\\" and this is true"';
+    expect(parseTextLine(line)).toBe(
+      'He says, "God is good," and this is true'
+    );
+  });
+
+  test("handles curly quotes as outer delimiters", () => {
+    // Agents sometimes write text: with curly quotes wrapping
+    expect(parseTextLine('  text: \u201CWhat the helmsman is in a ship\u201D'))
+      .toBe("What the helmsman is in a ship");
+  });
+
+  test("handles curly quote at start with straight quote at end", () => {
+    expect(parseTextLine('  text: \u201CSome quoted text"'))
+      .toBe("Some quoted text");
+  });
+
+  test("handles single backslash-escaped quote at end of text", () => {
+    // The \" right before the closing " should be unescaped
+    const line = '  text: "the philosopher said \\"truth\\""';
+    expect(parseTextLine(line)).toBe('the philosopher said "truth"');
+  });
+
   test("returns null when text has internal quotes but line does not end with quote", () => {
     // This is the actual bug from commentary-on-isaiah.md:
     // The text field has internal " chars and no closing " at end of line

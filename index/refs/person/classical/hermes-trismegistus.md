@@ -30,3 +30,5 @@ Legendary Egyptian theologian-sage, called "Trismegistus" (thrice-greatest) by t
   text: "even Mercury Trismegistus himself, who was the most ancient of all"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#argumentum-p7-s-eaa2692` — Most ancient of all; per Augustine, was grandson of the elder Mercury; his maternal grandfather Atlas was a contemporary of Prometheus who flourished when Moses lived
   text: "indeed even Mercury Trismegistus himself, who was the most ancient of all"
+- `01_genesis_01.html#god-elohim-p22-s-15737d5` — Quoted for the thirteenth definition of God: matter more subtle than air, etc.
+  text: ""Matter is more subtle than air, the soul more than air, the mind more than the soul, God Himself more than the mind," says Hermes Trismegistus."

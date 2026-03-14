@@ -49,3 +49,9 @@ Patriarch, son of Isaac, father of the twelve tribes of Israel. Listed among the
   text: "Jacob, 130 years old, comes to Egypt"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#sacred-chronology-p71-s-d628e56` — Jacob dies, 147 years old
   text: "Jacob dies, 147 years old."
+- `01_genesis_01.html#introduction-p2-s-38d8c00` — Named as a Patriarch
+  text: "especially of the Patriarchs Noah, Abraham, Isaac, Jacob, and Joseph."
+- `01_genesis_01.html#introduction-p4-s-68dc1d5` — Born in Isaac's 60th year; Joseph born in Jacob's 91st year
+  text: "In the 60th year of Isaac, Jacob was born, Gen. 25:26. In the 91st year of Jacob, Joseph was born"
+- `01_genesis_01.html#introduction-p5-s-818ebaf` — Named in the fourth part of Genesis
+  text: "encompasses the deeds of Isaac, Jacob, and Joseph"

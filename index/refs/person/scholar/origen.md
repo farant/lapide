@@ -46,3 +46,19 @@ Early Christian theologian and prolific biblical scholar. Head of the Catechetic
   text: "against Origen, who thought all these things should be expounded allegorically and symbolically, and thus overturned the letter and the literal sense"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p45-s-fbe005e` — Wishes allegory to be free in Scripture
   text: "St. Jerome, Gregory, Origen, and others often wish the allegory to be free"
+- `01_genesis_01.html#introduction-p7-s-37536ed` — Listed among those who wrote on Genesis
+  text: "Origen, St. Jerome, Augustine, Theodoret, Procopius, Chrysostom, Eucherius, Rupert, and others wrote on Genesis."
+- `01_genesis_01.html#introduction-p11-s-a02fa3c` — Listed among authors recommended for moral teachings
+  text: "to read St. Chrysostom, Ambrose, Origen"
+- `01_genesis_01.html#verse-6-p5-s-c5b1b14` — Cited for the allegorical view that upper waters = angels, lower = demons
+  text: "First, Origen understood by the upper waters the angels, and by the lower the demons; but this is an Origenistic and allegorical fantasy."
+- `01_genesis_01.html#verse-26-p19-s-cadebb7` — Cited for placing the image of God in the soul's eternity and immortality
+  text: "Origen places it in this."
+- `01_genesis_01.html#verse-26-p22-s-46fa5e7` — Named as holding (incorrectly) that the image of God was lost through sin; refuted by Augustine
+  text: "So against Origen, St. Augustine teaches"
+- `01_genesis_01.html#verse-26-p35-s-3571535` — Cited for the tropological interpretation of man's dominion
+  text: "So say Origen, Chrysostom, and Eucherius."
+- `01_genesis_01.html#heaven-and-earth-p10-s-d94185c` — Listed among supporters of the empyrean heaven interpretation
+  text: "of Origen, Theodoret, Alcuin"
+- `01_genesis_01.html#heaven-and-earth-p15-s-90b3221` — Listed among those who thought angels were created before the world
+  text: "so held Origen, Basil, Gregory of Nazianzus"

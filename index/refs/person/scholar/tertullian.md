@@ -35,3 +35,11 @@ Early Church writer and apologist. Cyprian read him daily, calling him "the Mast
   text: "Tertullian in his book On the Apparel of Women, chapter 22"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p3-s-146e64f` — Teaches everywhere against Marcion that agreement of both Testaments bears testimony to Christ
   text: "as Tertullian teaches everywhere against Marcion"
+- `01_genesis_01.html#in-the-beginning-p15-s-2d53bf8` — Cited from the book Against Hermogenes for the fourth interpretation "In sovereignty"
+  text: "God made heaven and earth, says Tertullian, in the book Against Hermogenes."
+- `01_genesis_01.html#he-created-p12-s-1b016aa` — Cited for rightly objecting against Hermogenes
+  text: "as Tertullian rightly objects against Hermogenes."
+- `01_genesis_01.html#verse-2-p9-s-445a5b8` — Cited from Against Hermogenes, ch. 32, for the interpretation that the Spirit of the Lord is a wind
+  text: "the Hebrews, Theodoret, and Tertullian Against Hermogenes, ch. 32, say"
+- `01_genesis_01.html#verse-24-p10-s-ea54dea` — Quoted from Book I Against Marcion, chapter 14, on the greatness of God in small creatures
+  text: "Hear Tertullian, Book I Against Marcion, chapter 14"

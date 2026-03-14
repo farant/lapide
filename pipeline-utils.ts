@@ -153,8 +153,13 @@ export function stripHashSuffix(link: string): string {
 // --- Ref file text line parsing ---
 
 export function parseTextLine(line: string): string | null {
-  const m = line.match(/^\s*text:\s*"(.+)"$/);
-  return m ? m[1] : null;
+  // Accept straight " or curly \u201C / \u201D as outer delimiters
+  const m = line.match(/^\s*text:\s*["\u201C](.+)["\u201D]$/);
+  if (!m) return null;
+  return m[1]
+    .replace(/\\"/g, '"')           // unescape backslash-escaped quotes
+    .replace(/^[\u201C\u201D]+/, '') // strip leading curly quotes (part of quoted text, not content)
+    .replace(/[\u201C\u201D]+$/, ''); // strip trailing curly quotes
 }
 
 // --- Paragraph extraction from HTML ---

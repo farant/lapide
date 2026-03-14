@@ -18,3 +18,5 @@ Kingdom of France. St. Vincent Ferrer traveled through Italy, France, Germany, E
 
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p6-s-75a43b8` — St. Vincent Ferrer traveled through France
   text: "traveling through Italy, France, Germany, England, and Spain, converted at least a hundred thousand people"
+- `01_genesis_01.html#verse-27-p3-s-208fd28` — A certain innovator in France recently asserted that Adam was created a hermaphrodite
+  text: "a certain innovator in France recently asserted ineptly that Adam was created a hermaphrodite and was both female and male"
