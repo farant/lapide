@@ -16,12 +16,14 @@
  */
 
 import { Glob } from "bun";
+import { stripHtml, normalizeForMatch } from "./pipeline-utils";
 
 const REFS_DIR = "index/refs";
+const fixQuotes = Bun.argv.includes("--fix-quotes");
 const sourceFile = Bun.argv.find(a => a.endsWith(".html"));
 
 if (!sourceFile) {
-  console.error("Usage: bun lint-annotations.ts <annotated-file.html>");
+  console.error("Usage: bun lint-annotations.ts [--fix-quotes] <annotated-file.html>");
   process.exit(1);
 }
 
@@ -46,25 +48,6 @@ interface HtmlData {
   entityRefSlugs: Set<string>;
   hasComponentsScript: boolean;
   content: string;
-}
-
-function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
-    .replace(/&rsquo;/g, "\u2019")
-    .replace(/&lsquo;/g, "\u2018")
-    .replace(/&rdquo;/g, "\u201D")
-    .replace(/&ldquo;/g, "\u201C")
-    .replace(/&mdash;/g, "\u2014")
-    .replace(/&ndash;/g, "\u2013")
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
 }
 
 async function parseHtml(): Promise<HtmlData> {
@@ -131,6 +114,7 @@ interface RefLine {
   annotationId: string | null; // e.g., "preface-reader-p2-s-a3f2b1c"
   isSynced: boolean;           // true if using -s-hash, false if old format
   expectedText: string | null; // the text: "..." field from the ref file
+  textLineNumber: number;      // 0-indexed line number of the text: line in the ref file
 }
 
 function escapeRegex(s: string): string {
@@ -168,8 +152,9 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
       if (!line.includes(`\`${fileName}#`)) continue;
 
       // Extract text: "..." from the next line (if present)
-      const nextLine = li + 1 < lines.length ? lines[li + 1] : "";
-      const textMatch = nextLine.match(/^\s*text:\s*"([^"]*)"/);
+      const textLineIdx = li + 1;
+      const nextLine = textLineIdx < lines.length ? lines[textLineIdx] : "";
+      const textMatch = nextLine.match(/^\s*text:\s*"(.+)"$/);
       const expectedText = textMatch ? textMatch[1] : null;
 
       // Sidecar hash ref: `source.html#paragraph-id-s-XXXXXXX`
@@ -185,6 +170,7 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
           annotationId,
           isSynced: true,
           expectedText,
+          textLineNumber: textLineIdx,
         });
         continue;
       }
@@ -200,6 +186,7 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
           annotationId: null,
           isSynced: false,
           expectedText,
+          textLineNumber: textLineIdx,
         });
         continue;
       }
@@ -215,6 +202,7 @@ async function parseRefFiles(): Promise<RefFileEntry[]> {
           annotationId: null,
           isSynced: false,
           expectedText,
+          textLineNumber: textLineIdx,
         });
       }
     }
@@ -345,16 +333,33 @@ async function main() {
 
   // Check 5b: Annotation text at offsets doesn't match ref file's expected text
   // Build a map from annotation ID → expected text from ref files
-  const refExpectedTexts = new Map<string, { text: string; entity: string }>();
+  const refExpectedTexts = new Map<string, { text: string; entity: string; filePath: string; textLineNumber: number }>();
   for (const ref of refFiles) {
     for (const r of ref.references) {
       if (r.annotationId && r.expectedText) {
-        refExpectedTexts.set(r.annotationId, { text: r.expectedText, entity: ref.entitySlug });
+        refExpectedTexts.set(r.annotationId, {
+          text: r.expectedText,
+          entity: ref.entitySlug,
+          filePath: ref.filePath,
+          textLineNumber: r.textLineNumber,
+        });
       }
     }
   }
 
-  const textMismatches: { id: string; selected: string; expected: string; entity: string; startOff: number; endOff: number }[] = [];
+  interface TextMismatch {
+    id: string;
+    selected: string;
+    expected: string;
+    entity: string;
+    startOff: number;
+    endOff: number;
+    quoteOnly: boolean;
+    filePath: string;
+    textLineNumber: number;
+  }
+
+  const textMismatches: TextMismatch[] = [];
   for (const a of html.annotations) {
     const plainText = html.paragraphTexts.get(a.paragraph);
     if (!plainText) continue;
@@ -370,17 +375,22 @@ async function main() {
 
     if (selectedText === expectedText) continue;
 
+    // Check if the only difference is quote/dash style (normalization-only mismatch)
+    const quoteOnly = normalizeForMatch(selectedText) === normalizeForMatch(expectedText);
+
     // Determine how far off the start/end are
     let startOff = 0;
     let endOff = 0;
-    for (let d = 1; d <= 3; d++) {
-      if (startOff === 0) {
-        const tryStart = plainText.slice(a.start - d, a.end).replace(/\s+/g, " ").trim();
-        if (tryStart === expectedText || tryStart.startsWith(expectedText)) startOff = d;
-      }
-      if (endOff === 0) {
-        const tryEnd = plainText.slice(a.start, a.end + d).replace(/\s+/g, " ").trim();
-        if (tryEnd === expectedText || tryEnd.endsWith(expectedText.slice(-10))) endOff = d;
+    if (!quoteOnly) {
+      for (let d = 1; d <= 3; d++) {
+        if (startOff === 0) {
+          const tryStart = plainText.slice(a.start - d, a.end).replace(/\s+/g, " ").trim();
+          if (tryStart === expectedText || tryStart.startsWith(expectedText)) startOff = d;
+        }
+        if (endOff === 0) {
+          const tryEnd = plainText.slice(a.start, a.end + d).replace(/\s+/g, " ").trim();
+          if (tryEnd === expectedText || tryEnd.endsWith(expectedText.slice(-10))) endOff = d;
+        }
       }
     }
 
@@ -391,37 +401,73 @@ async function main() {
       entity: expected.entity,
       startOff,
       endOff,
+      quoteOnly,
+      filePath: expected.filePath,
+      textLineNumber: expected.textLineNumber,
     });
   }
 
   if (textMismatches.length > 0) {
-    // Categorize
-    const startOnly = textMismatches.filter(m => m.startOff > 0 && m.endOff === 0);
-    const endOnly = textMismatches.filter(m => m.startOff === 0 && m.endOff > 0);
-    const bothOff = textMismatches.filter(m => m.startOff > 0 && m.endOff > 0);
-    const other = textMismatches.filter(m => m.startOff === 0 && m.endOff === 0);
+    const quoteOnlyMismatches = textMismatches.filter(m => m.quoteOnly);
+    const realMismatches = textMismatches.filter(m => !m.quoteOnly);
 
-    console.log(`❌ ${textMismatches.length} annotations have text at offsets that doesn't match expected ref text:`);
-    if (startOnly.length > 0) console.log(`   Start offset too high: ${startOnly.length}`);
-    if (endOnly.length > 0) console.log(`   End offset too low: ${endOnly.length}`);
-    if (bothOff.length > 0) console.log(`   Both start+end off: ${bothOff.length}`);
-    if (other.length > 0) console.log(`   Other mismatch: ${other.length}`);
-    console.log();
+    if (realMismatches.length > 0) {
+      // Categorize real mismatches
+      const startOnly = realMismatches.filter(m => m.startOff > 0 && m.endOff === 0);
+      const endOnly = realMismatches.filter(m => m.startOff === 0 && m.endOff > 0);
+      const bothOff = realMismatches.filter(m => m.startOff > 0 && m.endOff > 0);
+      const other = realMismatches.filter(m => m.startOff === 0 && m.endOff === 0);
 
-    // Show a few examples
-    const examples = textMismatches.slice(0, 10);
-    for (const m of examples) {
-      const selPreview = m.selected.length > 60 ? m.selected.slice(0, 60) + "..." : m.selected;
-      const expPreview = m.expected.length > 60 ? m.expected.slice(0, 60) + "..." : m.expected;
-      const offDesc = m.startOff > 0 && m.endOff > 0 ? `start+${m.startOff}, end-${m.endOff}`
-        : m.startOff > 0 ? `start+${m.startOff}` : m.endOff > 0 ? `end-${m.endOff}` : "other";
-      console.log(`   ${m.id} (${offDesc})`);
-      console.log(`     selected: "${selPreview}"`);
-      console.log(`     expected: "${expPreview}"`);
+      console.log(`❌ ${realMismatches.length} annotations have text at offsets that doesn't match expected ref text:`);
+      if (startOnly.length > 0) console.log(`   Start offset too high: ${startOnly.length}`);
+      if (endOnly.length > 0) console.log(`   End offset too low: ${endOnly.length}`);
+      if (bothOff.length > 0) console.log(`   Both start+end off: ${bothOff.length}`);
+      if (other.length > 0) console.log(`   Other mismatch: ${other.length}`);
+      console.log();
+
+      const examples = realMismatches.slice(0, 10);
+      for (const m of examples) {
+        const selPreview = m.selected.length > 60 ? m.selected.slice(0, 60) + "..." : m.selected;
+        const expPreview = m.expected.length > 60 ? m.expected.slice(0, 60) + "..." : m.expected;
+        const offDesc = m.startOff > 0 && m.endOff > 0 ? `start+${m.startOff}, end-${m.endOff}`
+          : m.startOff > 0 ? `start+${m.startOff}` : m.endOff > 0 ? `end-${m.endOff}` : "other";
+        console.log(`   ${m.id} (${offDesc})`);
+        console.log(`     selected: "${selPreview}"`);
+        console.log(`     expected: "${expPreview}"`);
+      }
+      if (realMismatches.length > 10) console.log(`   ... and ${realMismatches.length - 10} more`);
+      console.log();
+      issueCount += realMismatches.length;
     }
-    if (textMismatches.length > 10) console.log(`   ... and ${textMismatches.length - 10} more`);
-    console.log();
-    issueCount += textMismatches.length;
+
+    if (quoteOnlyMismatches.length > 0) {
+      if (fixQuotes) {
+        // Auto-fix: update ref file text to match the HTML source text
+        const fileUpdates = new Map<string, string[]>(); // filePath → lines
+        for (const m of quoteOnlyMismatches) {
+          if (!fileUpdates.has(m.filePath)) {
+            const content = await Bun.file(m.filePath).text();
+            fileUpdates.set(m.filePath, content.split("\n"));
+          }
+          const lines = fileUpdates.get(m.filePath)!;
+          // Replace the text: line with the selected (HTML source) text
+          lines[m.textLineNumber] = `  text: "${m.selected}"`;
+        }
+        // Write updated files
+        let fixedCount = 0;
+        for (const [filePath, lines] of fileUpdates) {
+          await Bun.write(filePath, lines.join("\n"));
+          fixedCount++;
+        }
+        console.log(`✅ Fixed ${quoteOnlyMismatches.length} quote-style mismatches across ${fixedCount} ref files`);
+        console.log();
+      } else {
+        console.log(`⚠️  ${quoteOnlyMismatches.length} annotations differ only in quote/dash style (cosmetic normalization differences)`);
+        console.log(`   Run with --fix-quotes to auto-fix ref files to match the HTML source text.`);
+        console.log();
+        // Don't count quote-only mismatches as errors — they're cosmetic
+      }
+    }
   }
 
   // Check 6: entity-ref tags pointing to slugs with no ref file

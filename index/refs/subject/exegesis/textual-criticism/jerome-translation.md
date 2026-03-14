@@ -29,7 +29,7 @@ Jerome's role as translator of the Vulgate, praised by the Fathers for his maste
 - `01_Preliminares.html#preface-reader-p4-s-da74622` — The Vulgate received partly from Jerome's translation or emendation.
   text: "received in part from the translation or emendation of St. Jerome"
 - `01_Preliminares.html#preface-reader-p5-s-57e8f81` — Augustine's testimony praising the older Italic edition as "more tenacious of the words while preserving the clarity of the meaning."
-  text: "the Italic should be preferred because it was — as he himself says — 'more tenacious of the words while preserving the clarity of the meaning.'"
+  text: "the Italic should be preferred because it was—as he himself says—"
 - `01_Preliminares.html#preface-reader-p6-s-4bc798e` — Multiple Fathers attest to Jerome's excellence: Augustine calls him most learned in three languages; Gregory says his translation rendered everything more truly from Hebrew; Isidore affirms it is commonly received; Sophronius translated Jerome's Psalter and Prophets into Greek.
   text: "St. Augustine calls him a most learned man and most skilled in three languages, and confirms by the testimony even of the Hebrews themselves that his translation is truthful."
 - `01_Preliminares.html#preface-reader-p7-s-b972325` — All the great medieval theologians (Bede, Rabanus, Anselm, Peter Lombard, Aquinas, Bonaventure, etc.) used Jerome's version exclusively, causing other versions to become obsolete.

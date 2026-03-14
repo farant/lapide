@@ -37,3 +37,9 @@ Steadfast firmness in defending the faith and the Church against persecution, th
   text: "he stood firm and unshaken in loyalty to his Prince amid the wondrous and grievous upheavals and storms of these Low Countries"
 - `01_Preliminares.html#dedicatory-letter-p12-s-7a283aa` — Van der Burch's father suffered imprisonment, loss of fortune, and near-death in 1572 and pillage again in 1580 because he remained faithful.
   text: "your father diminished his own estate and suffered grave losses of fortune precisely because he remained faithful and steadfast in his loyalty to his Prince"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p8-s-06226b7` — Scripture sounds forth fortitude and constancy so powerfully that the Maccabees, having only the holy books for consolation, stand firm with unconquered virtue.
+  text: "Who would not strengthen his manly breast for faith and piety against even the mightiest waves of evils, and seek a beautiful death through wounds, when he drinks in... these sacred trumpets sounding forth fortitude and constancy"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p14-s-3e965ba` — The Apostle in Hebrews 11 kindles readers to endurance and martyrdom by the example of the patriarchs: "they were stoned, sawn asunder, tempted, died by the edge of the sword."
+  text: "we also, having so great a cloud of witnesses, let us run with patience the race set before us"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p13-s-4425170` — In public misfortunes and European storms, having the Holy Books for consolation, through patience and consolation of Scripture we may have hope.
+  text: "in our own and public misfortunes, in these Belgian and European storms, having the Holy Books for consolation together with the Maccabees, through the patience and consolation of Scripture we may have hope"

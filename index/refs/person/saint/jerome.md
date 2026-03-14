@@ -61,3 +61,33 @@ One of the four great Latin Doctors of the Church. Best known for his translatio
   text: "I do not say these things because there is anything of the sort in me that you could either wish to hear from me or desire to learn"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-ea33879` — Addresses Paulinus at the close of the letter; offers to study together; mentions brother Eusebius
   text: "I will receive you with open arms, and (to babble something foolish, after the pomposity of Hermagoras) whatever you seek, I will try to know together with you."
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p29-s-648fb01` — In the Helmeted Prologue, reproaches those who teach Scripture without learning it
+  text: "what St. Jerome in the Helmeted Prologue reproaches the men of his century with"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iii-p11-s-7768ccc` — On Hosea chapter 10, teaches it is impious to apply tropologically to Christ what is about the king of Assyria; in prologue to Obadiah, rebukes himself for explaining that prophet allegorically without historical understanding
+  text: "St. Jerome, writing on Hosea chapter 10, teaches that to apply tropologically to Christ what is commonly said of the king of Assyria"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p6-s-66fc899` — Quotes him writing to Paulinus: "If so great a prophet confesses the darkness of his ignorance, with what night of ignorance are we surrounded?"
+  text: "says St. Jerome to Paulinus"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p22-s-d611f01` — Called "the phoenix of his age"; devoted himself entirely to sacred Letters; grew old studying them; bequeathed Latin version from Hebrew; learned Hebrew like Cato learned Greek in old age; went to Bethlehem; read all ancient commentators
+  text: "Among the Latins, the first to be rightly reckoned is St. Jerome, the phoenix of his age"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p27-s-b9602fa` — Listed among Fathers who labored night and day; studied under Gregory Nazianzen and Didymus
+  text: "Jerome studied under Gregory Nazianzen and Didymus"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p31-s-fe3ff08` — Records Cyprian reading Tertullian daily and saying "Give me the Master!"
+  text: "as St. Jerome records of Cyprian reading Tertullian daily"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-authors-method-p2-s-a91a41c` — Quoted: "Where Origen is good, no one is better; where bad, no one is worse"; also says in book V on Isaiah that Origen "makes his own genius the Sacraments of the Church"
+  text: "as Jerome says in book V on Isaiah"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p3-s-b2ffb0d` — Published questions and phrases on the Pentateuch
+  text: "Jerome published questions and phrases"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p4-s-04a2f4d` — In Preface to Epistle to Ephesians, says he never ceased reading or questioning learned men; went to Alexandria to see Didymus
+  text: "St. Jerome, in the Preface to the Epistle to the Ephesians"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#peroration-p2-s-1720b99` — Listed as one of Lapide's patron saints
+  text: "my patrons, the Virgin Mother of eternal Wisdom, St. Jerome, and Moses"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p6-s-ccaee4c` — Translated the Old Scripture from Hebrew into Latin at the command of Damasus; his version called the Vulgate
+  text: "St. Jerome, the sun of the Latin Church, at the command of Blessed Damasus, translated the Old Scripture from Hebrew into Latin"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p3-s-6bd3326` — Quoted from Helmeted Prologue on Genesis as book of creation, origin, division of earth, confusion of languages
+  text: "Genesis," says St. Jerome in the Helmeted Prologue"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-i-p7-s-a5c14e8` — Knowledge of Hebrew "tsava" necessary to escape Calvin's clutches
+  text: "whoever knows the Hebraism, namely that tsava means to ordain"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-virtues-p2-s-50c233b` — Testifies in epistle to Cyprian that Moses composed eleven psalms (Psalms 89–100)
+  text: "St. Jerome testifies, volume III, epistle to Cyprian, that Moses composed eleven psalms"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p9-s-cdb2b31` — At beginning of Commentary on Galatians, teaches Moses was not only a Prophet but also an Apostle
+  text: "Hear Saint Jerome, who at the beginning of his Commentary on the Epistle to the Galatians teaches that Moses was not only a Prophet but also an Apostle"

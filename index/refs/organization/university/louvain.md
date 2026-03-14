@@ -28,3 +28,5 @@ Catholic university in Louvain, one of the foremost in the Spanish Netherlands. 
   text: "the Louvain College, and our whole Society"
 - `01_Preliminares.html#preface-reader-p10-s-4ad6fe0` — Theologians of distinguished Academies labored on the Vulgate
   text: "the theologians of distinguished Academies labored with great praise in restoring the Vulgate edition to its pristine splendor"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p32-s-126c255` — Paris described as the grandmother of Louvain
+  text: "the mother of Cologne and the grandmother of Louvain"

@@ -58,3 +58,11 @@ Jesuit biblical commentator who taught Holy Scripture at Louvain for over twenty
   text: "Absorbed in these pursuits of holiness, after he had passed seventy years of age, he paid at last the debt of nature in the Holy City, where he had always desired to mingle his bones with those of the saints, on 12 March in the year 1637."
 - `01_Preliminares.html#life-p4-s-2f38c83` — Left incomplete commentaries on Job and Psalms
   text: "He left incomplete his commentaries on the books of Job and Psalms."
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#preamble-p1-s-6d14de1` — Named as author of the work
+  text: "Cornelius a Lapide, S.J."
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-authors-method-p2-s-402a961` — Describes his own method of commentary: tracking the historical sense, consulting Greek, Hebrew, Latin, and Fathers, preferring Vulgate per Trent decree
+  text: "As for what concerns me, I know and feel what a burden I bear, and how pathless the road I must tread"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-authors-method-p3-s-df2e5a8` — Discusses his approach to Rabbis and mystical sense; notes the immense labor of consulting Greek, Hebrew, Latin, Syriac, Chaldean sources
+  text: "As for the Rabbis, I will have no dealings with them, except insofar as they agree with Catholic doctors"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#peroration-p2-s-3aa19d2` — Invokes his patrons (the Virgin, St. Jerome, Moses) and asks that Paul assist him as he assisted Chrysostom
+  text: "I will ceaselessly entreat all the Saints, and especially my patrons, the Virgin Mother of eternal Wisdom, St. Jerome, and Moses"

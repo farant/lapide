@@ -1,0 +1,27 @@
+{
+  "global_exclude_words": [
+    "mark",
+    "the city"
+  ],
+  "exclude": [
+    {
+      "text": "Israel",
+      "slug": "person/biblical/jacob",
+      "paragraph": "moses-virtues-p3",
+      "reason": "nation, not person"
+    },
+    {
+      "text": "Dionysius",
+      "slug": "person/saint/dionysius-areopagite",
+      "paragraph": "praises-of-moses-p12",
+      "reason": "pagan deity Dionysus/Bacchus, not the Christian saint"
+    },
+    {
+      "text": "the virgin",
+      "slug": "person/saint/blessed-virgin-mary",
+      "paragraph": "praises-of-moses-p12",
+      "reason": "the goddess Proserpina, not the Blessed Virgin Mary"
+    }
+  ],
+  "force": []
+}

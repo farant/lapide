@@ -28,3 +28,9 @@ King of Israel and author of Proverbs, Ecclesiastes, and Song of Songs. The peac
   text: "the third and fourth book of Kings, from Solomon to Jeconiah"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p39-s-8805b60` — Solomon, the peaceful and beloved of the Lord, corrects morals, teaches nature, joins Church and Christ, sings the wedding song
   text: "Solomon, the peaceful and beloved of the Lord, corrects morals, teaches nature, joins the Church and Christ"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p22-s-2c7e610` — In Proverbs, Ecclesiastes, and Wisdom teaches justice, fortitude, prudence, temperance
+  text: "as does Solomon in Proverbs, Ecclesiastes, and Wisdom"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p5-s-4465ae5` — "Where there is humility, there is wisdom" (Proverbs 11)
+  text: "says Solomon, Proverbs 11"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-e6e11fd` — Proverbs not collected by Solomon but by others from his writings (Proverbs 25:1)
+  text: "the proverbs of Solomon were not collected and arranged by him, but by others"

@@ -21,3 +21,5 @@ Land south of Egypt; home of the gymnosophists and the fabled Table of the Sun. 
   text: "he went on to Ethiopia, to see the gymnosophists and the most famous Table of the Sun in the sand"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-01eb60b` — The eunuch came from Ethiopia (the farthest ends of the world) to the temple
   text: "who came from Ethiopia, that is, from the farthest ends of the world, to the temple"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p12-s-cb16a3a` — In the 67th year of Moses, in Ethiopia the son of the Sun (Phaethon) was consumed by fire
+  text: "and moreover in Ethiopia the son of the Sun, as they say, Phaethon, was consumed by fire"

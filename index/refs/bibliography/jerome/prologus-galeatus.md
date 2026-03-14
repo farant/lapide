@@ -30,3 +30,9 @@ Jerome's preface to his translation of Samuel and Kings, which serves as a gener
   text: "And so the books of the old law come equally to twenty-two"
 - `02_Clemens_Hieronymi_Du_Culte.html#helmeted-prologue-p29-s-e9fe886` — Jerome concludes the prologue, noting it applies to all books he translated from Hebrew, and asks for prayers against his detractors
   text: "This prologue, as a helmeted beginning of the Scriptures, can apply to all the books which we have translated from Hebrew into Latin"
+
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p29-s-9afda71` — Jerome quoted reproaching those who teach Scripture they never learned
+  text: "is one that everyone everywhere claims for themselves, and when they have soothed the people's ears with polished speech, whatever they have said, they consider it to be the law of God"
+
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p3-s-6448142` — Jerome quoted on the contents of Genesis
+  text: "Genesis," says St. Jerome in the Helmeted Prologue, "is the book in which we read of the creation of the world, the origin of the human race, the division of the earth, the confusion of languages and peoples, down to the departure of the Hebrews."

@@ -25,3 +25,17 @@ Ancient land, referenced both as the place of Moses' captivity under Pharaoh, fr
   text: "Egypt, Palestine, and Mesopotamia are full of those who follow this Christian Philosophy"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-14eb755` — Plato traveled laboriously through Egypt seeking knowledge
   text: "Plato most laboriously traveled through Egypt"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-three-periods-p2-s-fa5b760` — Moses raised in the royal court of Egypt, educated in all the wisdom of the Egyptians for 40 years
+  text: "he from his tenderest years was raised in the royal court, as a king's son and destined heir, educated in all the wisdom of the Egyptians, for a full 40 years"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p4-s-53ec051` — Moses performed astonishing plagues and miracles in Egypt; Christ as an infant withdrew into Egypt fleeing Herod
+  text: "Moses established the law with wondrous portents, Christ founded the Gospel with even greater ones"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p3-s-42fc0f5` — Stephen says Moses led them out performing wonders and signs in the land of Egypt
+  text: "this man led them out, performing wonders and signs in the land of Egypt"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p6-s-76d1324` — St. Justin teaches that the Greeks drew their wisdom from the Egyptians, who in turn learned from Moses
+  text: "the Greeks drew their wisdom and knowledge of God from the Egyptians, and these from Moses"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p2-s-047788f` — Eupolemus and Artapanus say Moses transmitted letters to the Egyptians
+  text: "Moses transmitted letters to the Egyptians, and established many other things for the common good"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p6-s-0a41948` — Augustine says the Hebrews carried gold, silver, and clothing from Egypt
+  text: "the quantity of gold, silver, and clothing which the Hebrew people carried with them from Egypt"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p5-s-7f71f62` — The Apostle says Moses by faith left Egypt, not fearing the king's fierceness
+  text: "By faith he left Egypt, not fearing the fierceness of the king"

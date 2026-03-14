@@ -41,3 +41,11 @@ King of Israel and Psalmist. Author of the Psalter.
   text: "But when David wept for his sin, when Jeremiah wept over Jerusalem"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p50-s-3bba81d` — David saw Christ from the heights of Mount Zion; called "the poet of Jehovah"
   text: "David, the poet of Jehovah"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p7-s-4954617` — The Royal Psalmist calls blessed the one who meditates on God's law day and night
+  text: "The Royal Psalmist calls blessed not the one who pours forth the words of God to others, but the one who meditates on his law day and night"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p6-s-eae1d1b` — The royal Prophet recognized hidden shadows within his own writings; Psalm 118: "Unveil my eyes"
+  text: "The royal Prophet, a great part of the sacred writers — that divine instrument of the Holy Spirit"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p7-s-451255d` — In single combat struck down Goliath with a sling; secured Israel's dominion over Philistines
+  text: "Who would not rather praise the courage and strength of David, who in single combat struck down... Goliath"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-i-p5-s-20fc71e` — Calvin cites David: "The Lord commanded him to curse David" to prove God authors evil
+  text: "Calvin, from that saying of David"

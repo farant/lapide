@@ -40,3 +40,11 @@ The virtue of humility, especially as expressed in reluctance to accept ecclesia
   text: "I, knowing my humility, will always remember that saying"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p48-s-9bd66a7` — Jerome refuses to be a master, pledging himself as a companion: "refusing to be a master, I pledge myself as a companion."
   text: "refusing to be a master, I pledge myself as a companion."
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p4-s-fa7f0db` — Augustine to Dioscorus: the first, second, and third requirement for grasping truth is humility, just as Demosthenes gave three places to pronunciation.
+  text: "the first thing is humility, the second is humility, the third is humility; and as often as you ask me, I would say the same thing"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p5-s-8893a13` — Augustine: the student of Scripture should consider that knowledge puffs up but charity builds up; rooted in humble charity we may comprehend the breadth, length, height, and depth of Christ.
+  text: "Let the student of Scripture consider," he says, "that Apostolic saying: Knowledge puffs up, but charity builds up, and that saying of Christ: Learn from me, for I am meek and humble of heart"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p15-s-cd297a5` — Cardinal Hosius warned that pride would lead Bishop Dudecius to apostasy; the prediction came true.
+  text: "When Hosius was asked whence he had foreseen this, he replied: From the man's pride alone; for his mind, perceiving him tenacious of his own judgment, foresaw that he would fall into this pit"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p9-s-c64a3ed` — Victorinus turned from pride to Christian humility through Scripture.
+  text: "Divine Scripture was able to turn Victorinus, then a puffed-up Rhetorician of the city, from pagan superstition and pride to Christian faith and humility"

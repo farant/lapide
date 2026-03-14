@@ -22,3 +22,5 @@ Region in northeastern Asia Minor (modern northern Turkey). St. Basil journeyed 
 
 - `01_Preliminares.html#dedicatory-letter-p22-s-1b483fd` — Basil journeyed through Pontus to rouse the people
   text: "journeying through the cities and countryside of Pontus, began to rouse with his words the sluggish minds of that people"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p3-s-445e9d1` — Aquila of Pontus was the second interpreter of Sacred Scripture from Hebrew into Greek after the Seventy
+  text: "The second interpreter of Sacred Scripture from Hebrew after the Seventy, according to Epiphanius, was Aquila of Pontus"

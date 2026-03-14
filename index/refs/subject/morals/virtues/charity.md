@@ -33,3 +33,7 @@ The virtue of charity expressed through generous almsgiving, care for the poor, 
   text: "there is nothing you do more willingly, nothing more pleasurable, than to visit hospitals and the homes of the poor and the wretched, to comfort them, to assist them with alms"
 - `01_Preliminares.html#dedicatory-letter-p41-s-ee48ac2` — Lietbert of Cambrai "believed the love of money to be the surest poison of all his hopes."
   text: "he believed the love of money to be the surest poison of all his hopes"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p8-s-bce8b17` — What heart is so cold as not to grow warm with charity when it hears Paul burning with love, hurling fiery flames of divine love everywhere?
+  text: "What heart is so cold as not to grow warm with charity, when it hears Paul burning with love, hurling fiery flames of divine love everywhere?"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p21-s-6a75378` — Augustine: all understanding of faith, hope, and charity rests on Scripture; "the end of the commandment is charity from a pure heart."
+  text: "What is disputed in the Secunda Secundae concerning faith, hope, and charity rests so entirely on Sacred Scripture that the whole understanding of them is referred to these three"

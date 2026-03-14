@@ -26,3 +26,5 @@ Town in Palestine, sought by St. Jerome as his place of study and asceticism. La
   text: "whose holy Bethlehem, so earnestly sought by him in Palestine, I have found here in Rome"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p8-s-19c403e` — David passes from the flocks of Bethlehem to the throne of Judah
   text: "who passes from the flocks of Bethlehem to the throne of Judah"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p22-s-1ee168f` — St. Jerome went to Bethlehem and the holy places for his study of Scripture
+  text: "for this reason he went to Bethlehem and the holy places"

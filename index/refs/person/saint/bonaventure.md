@@ -25,3 +25,5 @@ Franciscan friar, Cardinal, and Doctor of the Church. The Seraphic Doctor. Liste
 
 - `01_Preliminares.html#preface-reader-p7-s-1e68b36` — Listed last among named scholars who used Jerome's version
   text: "Thomas, Bonaventure, and all the others who have flourished in the Church over these nine hundred years"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p13-s-adf3909` — Relates that Francis, though unlettered, when asked about difficulties of Scripture and Theology, responded so aptly he surpassed doctors
+  text: "St. Bonaventure relates that St. Francis, unlettered though he was"

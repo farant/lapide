@@ -35,7 +35,7 @@ One of the three Cappadocian Fathers and Archbishop of Constantinople. Known as 
 - `01_Preliminares.html#dedicatory-letter-p9-s-c8111a3` — With Basil, studied eloquence and philosophy at Athens, then devoted thirteen years to Scripture
   text: "Rufinus attests that after Saint Basil and Saint Gregory Nazianzen had studied eloquence and philosophy at Athens, they devoted thirteen years to reading and meditating upon Moses and the Sacred Scriptures."
 - `01_Preliminares.html#dedicatory-letter-p13-s-9e2e8be` — Testifies about Basil's ordination by Hermogenes
-  text: "Saint Gregory Nazianzen says: 'After he had first read the sacred books and become their interpreter, he was ordained a priest by Hermogenes, Bishop of Caesarea'"
+  text: "Saint Gregory Nazianzen says"
 - `01_Preliminares.html#dedicatory-letter-p20-s-438edc2` — Testifies Basil vanquished adversaries by kindness
   text: "as Saint Gregory Nazianzen writes of him"
 - `01_Preliminares.html#dedicatory-letter-p23-s-c1a2414` — Testifies Basil relieved famine by opening granaries; extensive quotation comparing Basil to Joseph
@@ -48,3 +48,13 @@ One of the three Cappadocian Fathers and Archbishop of Constantinople. Known as 
   text: "At the death and funeral of Saint Basil, Saint Gregory Nazianzen writes"
 - `01_Preliminares.html#dedicatory-letter-p38-s-5229306` — Said Basil gave light to the whole world through the single Church of Caesarea
   text: "that saying of Saint Gregory Nazianzen: 'Basil, through the single Church of Caesarea, gave light to the whole world.'"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p18-s-29d18d8` — With Basil, fled to monastery solitude for thirteen years, devoted solely to Scripture; called by Rufinus "that golden pair of Doctors of Greece"
+  text: "Following them in the East was likewise that golden pair of Doctors of Greece, Basil and Gregory the Theologian"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p27-s-0786164` — Jerome studied under Gregory Nazianzen
+  text: "Shall we marvel that Jerome studied under Gregory Nazianzen and Didymus"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p11-s-2aee4bf` — While studying at Athens, saw in a dream two women (Wisdom and Chastity); reported by Rufinus
+  text: "St. Gregory Nazianzen, as Rufinus reports, while he was devoting himself to studies at Athens, saw in a dream"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-authors-method-p2-s-d01a448` — Lapide follows Nazianzen's lead (Oration 2, On Easter) on proceeding by a middle way between literalists and excessive allegorists
+  text: "following Nazianzen's lead (Oration 2, On Easter), that one must proceed by a middle way"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p8-s-75010ac` — In oration 22, compares Basil and Gregory of Nyssa to Moses and Aaron
+  text: "Hear Saint Gregory Nazianzen, oration 22, in which he compares Saint Basil and his brother Gregory of Nyssa to Moses and Aaron"

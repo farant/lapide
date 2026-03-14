@@ -51,7 +51,7 @@ One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called
 - `01_Preliminares.html#dedicatory-letter-p11-s-028060c` — Descended from pious parents Basil and Emmelia; his mother followed him into the wilderness
   text: "Saint Basil too was descended from parents illustrious for piety no less than for birth — Basil and Emmelia — and his mother followed her son even when he withdrew into the wilderness."
 - `01_Preliminares.html#dedicatory-letter-p13-s-0be5ba2` — Like Moses, ascended by degrees; ordained priest by Hermogenes, Bishop of Caesarea, per Gregory Nazianzen
-  text: "Saint Basil did the same, of whom Saint Gregory Nazianzen says: 'After he had first read the sacred books and become their interpreter, he was ordained a priest by Hermogenes, Bishop of Caesarea'"
+  text: "Saint Basil did the same, of whom Saint Gregory Nazianzen says"
 - `01_Preliminares.html#dedicatory-letter-p16-s-3adbaae` — Fled bishopric of Neocaesarea; hid after Eusebius of Caesarea's death; reluctantly made bishop
   text: "Saint Basil likewise fled the bishopric of Neocaesarea, as he himself writes in Epistle 164."
 - `01_Preliminares.html#dedicatory-letter-p20-s-72ca7c3` — Called "the Christian Moses"; vanquished adversaries by steady kindness, per Gregory Nazianzen
@@ -76,3 +76,17 @@ One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called
   text: "Imitate Moses in all things; express Basil."
 - `01_Preliminares.html#life-p2-s-11f70e9` — Listed among saints whose company Lapide found in Rome (with Gregory and Jerome)
   text: "I pursue a solitude and retreat that is pleasant to me and not unprofitable to others, in company with Saint Basil, Gregory, and Jerome"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p23-s-6492c80` — Compared Sacred Scripture to a fully stocked workshop supplying medicines for every disease
+  text: "so that St. Basil rightly compares it to a most fully stocked workshop"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p18-s-f5496da` — With Gregory the Theologian, spent thirteen years in monastery devoted to Scripture; Rufinus says they studied "from the writings and authority of the elders"
+  text: "Basil and Gregory the Theologian, who fleeing to the solitude"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p19-s-befbcba` — A contemporary of Ephrem the Syrian
+  text: "A contemporary of St. Basil was St. Ephrem the Syrian"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p3-s-2067791` — In prologue to Isaiah, says constant exercise in Scripture imprints its majesty on the mind
+  text: "And St. Basil in his prologue to Isaiah"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p2-s-3dbe774` — Wrote Hexaemeron books on Genesis; along with Ambrose
+  text: "Basil and his follower or interpreter St. Ambrose wrote Hexaemeron books on Genesis"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p7-s-99c8e68` — Quoted on alternation of prayer and reading: "Let reading follow prayer, and prayer follow reading"
+  text: "as St. Basil says: "Let reading follow prayer, and prayer follow reading.""
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p7-s-7ebe155` — In homily 1 on the Hexaemeron, praises Moses as beloved of God from his mother's breast
+  text: "Hear Saint Basil, homily 1 on the Hexaemeron"

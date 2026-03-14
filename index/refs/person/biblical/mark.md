@@ -25,3 +25,5 @@ Evangelist. His Gospel is listed second in the Tridentine canon.
   text: "according to Matthew, Mark, Luke, and John"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p44-s-fc7aaa7` — Named as one of the four evangelists
   text: "Matthew, Mark, Luke, and John -- the four-horse chariot of the Lord and the true Cherubim"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p17-s-a650e72` — Instituted Christian study of sacred Letters at Alexandria in the apostolic age
+  text: "St. Mark instituted this Christian study of the sacred Letters at Alexandria."

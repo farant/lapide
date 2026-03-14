@@ -33,3 +33,9 @@ Apostle and first Pope. Two epistles of Peter are listed in the Tridentine canon
   text: "Soon Peter, the fisherman, all illuminated by the stirrings of the Holy Spirit, descends to the gates of the upper room and addresses the multitude"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-a4bce16` — Peter will weep for Christ
   text: "Peter will weep for him, Judas will betray him, all will flee"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p6-s-d14eb92` — Quoted: "We have the more sure prophetic word, to which you do well to attend as to a lamp shining in a dark place" (1 Peter 1:19)
+  text: "says Blessed Peter, First Epistle, chapter 1, verse 19"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p14-s-7e0ee9a` — Mentions Paul's epistles contain "certain things difficult to understand" which the unlearned distort (2 Peter 3)
+  text: "St. Peter, having mentioned the epistles of St. Paul"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p6-s-b242f03` — Christ elevated Peter to supreme pontificate after himself (parallel 18 of Moses/Christ)
+  text: "Christ elevated Peter to the supreme pontificate after himself."

@@ -28,3 +28,6 @@ Virgil's epic poem, cited by Jerome for lines repurposed in Virgiliocento as pse
   text: "Such things he kept recalling, and remained fixed."
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-19108c8` — Lacordaire lists "those of Virgil on the misfortunes of Aeneas" as among the greatest works of human genius, still inferior to the psalms and prophecies
   text: "those of Virgil on the misfortunes of Aeneas"
+
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iii-p8-s-8c379d3` — Virgil's Aeneid referenced as the source text for Proba Falconia's Christian cento
+  text: "as if someone were to imitate Proba Falconia (who was the Latin Sappho) in adapting Virgil's Aeneid... to Christ"

@@ -28,4 +28,7 @@ Theologian, historian, and translator of Greek theological works into Latin. Att
 - `01_Preliminares.html#dedicatory-letter-p9-s-d12cf31` — Attests that Basil and Gregory Nazianzen devoted thirteen years to reading Moses and Sacred Scriptures after studying at Athens
   text: "Rufinus attests that after Saint Basil and Saint Gregory Nazianzen had studied eloquence and philosophy at Athens"
 - `01_Preliminares.html#dedicatory-letter-p22-s-cc08105` — Recounts (Book II, chapter ix) Basil's zeal and benefactions in Pontus: rousing sluggish minds, building monasteries, teaching psalms, transforming the province
-  text: "Rufinus recounts the zeal and benefactions of Saint Basil toward his own people, Book II, chapter ix"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p18-s-ec61419` — In book XI of his History, chapter IX: Basil and Gregory studied Scripture "from the writings and authority of the elders" in apostolic succession
+  text: "says Rufinus, book XI of his History, chapter IX"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p11-s-f8dec39` — Reports Gregory Nazianzen's dream at Athens of Wisdom and Chastity
+  text: "as Rufinus reports"

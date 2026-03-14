@@ -20,3 +20,7 @@ The virtue of obedience to religious superiors and divine commands — valued ab
   text: "Obedience was always dearer to him than life, and the love of truth."
 - `01_Preliminares.html#dedicatory-letter-p17-s-8e77d40` — Van der Burch submitted to his Provincial's persuasion and "bowed his neck again to the pious burden" of the vicariate.
   text: "had not our Reverend Father Provincial... drawn you back from this resolve and persuaded you to bow your neck again to the pious burden."
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p6-s-a5860c0` — Abraham and Isaac resolved to seal obedience to God with a father's sacrifice; the Maccabean mother offered herself with her seven children for her country's laws.
+  text: "Who would not rather praise Abraham and Isaac, those innocents, who resolved to seal the obedience owed to God with a father's slaying and sacrifice, and the Maccabean mother, offering herself with her seven children to God for her country's laws?"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-virtues-p4-s-f59f232` — Moses's charity: he devoted himself as an expiatory offering for Israel, called heaven and earth to witness, and bore the burden of the entire people.
+  text: "Why, Lord, have You laid the burden of this entire people upon me? Did I conceive this whole multitude, or beget them, that You should say to me: Carry them in your bosom, as a nurse is accustomed to carry an infant"

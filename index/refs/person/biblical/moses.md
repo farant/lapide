@@ -83,3 +83,51 @@ Prophet, lawgiver, and leader of the Israelites. Author of the Pentateuch. The c
   text: "the books of Moses surpass them not only by the antiquity of their composition, but by the simplicity of the narrative"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p13-s-ca83dcd` — Lacordaire urges the reader to read the books of Moses
   text: "Read, then, the books of Moses and the historical books of the Old Testament"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#section-one-p5-s-e3eb18f` — Marveled at God's condescension in giving Israel the law, quoting Deuteronomy 4:7
+  text: "This is what Moses, about to dictate the law of God to Israel, marveled at this, Deuteronomy 4:7"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#section-one-p12-s-92b060a` — Jews store the law of Moses magnificently in a tabernacle
+  text: "the Jews in their synagogues store the law of Moses, as an oracle, magnificently in a tabernacle"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p3-s-2031a9b` — Hebrew tradition: received on Sinai not only the law but also the explanation of the law; commanded to write the law but reveal mysteries to Joshua
+  text: "Moses received on Mount Sinai from God not only the law but also the explanation of the law"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p5-s-7fcc794` — Repeatedly in Deuteronomy directed doubtful questions to priests
+  text: "For this reason Moses repeatedly — especially in Deuteronomy — directed that every doubtful and difficult question"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#section-three-s-0005d5c` — Section heading: "Who, and How Great, Was Moses?"
+  text: "Who, and How Great, Was Moses?"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-three-periods-p2-s-043cedf` — Three periods of forty years: royal court, Midian contemplation, leadership; supreme pontiff, commander, lawgiver, teacher, prophet, type of Christ
+  text: "Truly I say, for many thousands of years the sun has not looked upon a greater man"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-three-periods-p3-s-b5af82c` — Led three million people through arid deserts for 40 years; fed with manna; maintained in peace and justice
+  text: "he led three million people... through arid deserts for 40 years"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-virtues-p2-s-11ddf46` — Musician and psalmist; Jerome testifies he composed eleven psalms (89–100); received tablets of the law from God
+  text: "You would marvel at the innumerable virtues of Moses"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-virtues-p3-s-1d00223` — Guide on journey was pillar of cloud/archangel; twice fasted 40 days on Sinai; horns of light; called God's secretary of secrets
+  text: "Moses had as his guide on the journey a pillar of cloud"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-virtues-p4-s-a7e8438` — Excellent political prudence; charity for people; devoted himself as expiatory offering
+  text: "Who does not see the excellent political and domestic prudence of the best prince"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-humility-p2-s-5c03e0e` — Profound humility and meekness despite being assailed by murmuring; Numbers 12:3: "the meekest man upon the face of the earth"
+  text: "I marvel most of all at his profound humility and meekness"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-beatific-vision-p2-s-3e1b11f` — Many hold he was granted the beatific vision in this life
+  text: "many hold that Moses was granted in this life the vision of the divine essence"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-beatific-vision-p3-s-2739729` — Buried by angels on Mount Abarim; no man knew his sepulchre; Michael disputed with devil about his body
+  text: "Moses, having died, was buried by angels on Mount Abarim"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p2-s-5661526` — Sirach praises Moses as beloved of God and men; glorified in sight of kings
+  text: "Beloved of God and men was Moses, whose memory is in blessing"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-and-christ-p2-s-d11d3c3` — Express type of Christ; like sun/moon comparison; nineteen parallels listed
+  text: "Moreover Moses was an express sign and type of Christ"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p2-s-47b0e6d` — Eupolemus and Artapanus say Moses transmitted letters to Egyptians; called Mercury; worshipped as a god
+  text: "Moses transmitted letters to the Egyptians"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-3f628cc` — More ancient than all sages of Greece; wrote Pentateuch as diary; Joshua arranged it
+  text: "Moses was more ancient, and preceded by a great span of time all the sages of Greece"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p7-s-50b045d` — Learned partly by tradition, partly by divine revelation, partly by eyewitness
+  text: "Moses learned and received these things partly by tradition, partly by divine revelation"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p8-s-f12ef13` — Martyrdoms and miracles illustrated veneration for his books
+  text: "this veneration was illustrated both by martyrdoms and by miracles"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#prayer-to-moses-p2-s-d47f121` — Addressed in prayer: spectator of glory on Sinai and Tabor; asked to extend hand, channel rivers of wisdom
+  text: "Look upon us, we beseech you, holy Moses"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#peroration-p2-s-1720b99` — Named as one of Lapide's patron saints
+  text: "my patrons, the Virgin Mother of eternal Wisdom, St. Jerome, and Moses"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#arguments-for-the-ot-p2-s-3826984` — Deuteronomy 17:8 quoted as authority for resolving controversies
+  text: "With Moses, Deuteronomy 17:8"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p3-s-38ff3d5` — Christ appeals to Moses: "The law was given through Moses" (John 1:17)
+  text: "For this reason Christ so often appeals to Moses"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#sacred-writers-as-pens-p2-s-d369bc7` — Same truth, authority, reverence must be attributed to Moses as to Paul; both are pens of the Holy Spirit
+  text: "the same truth, authority, reverence, zeal, and diligence must be attributed to Moses as to Paul"

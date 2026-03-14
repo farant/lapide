@@ -25,3 +25,5 @@ Athenian statesman and orator. Jerome calls him "the eloquent Demosthenes" who w
   text: "that oration of Demosthenes was read which he had delivered against him"
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p2-s-5fa2bd3` — Contrasted with John's knowledge of the Word
   text: "this the eloquent Demosthenes was ignorant of"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p4-s-9d68da2` — Augustine says as Demosthenes gave first, second, third place to pronunciation in eloquence, so he gives first, second, third to humility in wisdom
+  text: "just as Demosthenes gave first, second, and third place in eloquence to pronunciation"

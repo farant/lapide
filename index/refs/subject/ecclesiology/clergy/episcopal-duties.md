@@ -40,3 +40,9 @@ The obligations of bishops as shepherds of souls — gradual ascent through eccl
   text: "he would count himself most blessed if he could at least render a proper account on the Day of the Lord for this small flock entrusted to him"
 - `01_Preliminares.html#dedicatory-letter-p38-s-1a75be0` — The scale of Van der Burch's pastoral responsibility at Cambrai: nearly eight hundred parishes and thousands of souls.
   text: "A great harvest rises up before you here, to be reaped with great labour: nearly eight hundred parishes to be administered; how many thousands of the faithful to be pastured? how many thousands of souls to be saved?"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#arguments-for-the-ot-p6-s-f1d624c` — The Church compels bishops before consecration to pledge knowledge of both the Old and New Testament; some wiser men refused the episcopate lest they bind themselves with a false pledge.
+  text: "She compels Bishops, as future bishops of the Church, before consecration, to pledge that they know both the Old and the New Testament"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-virtues-p4-s-6708e78` — Chrysostom: a bishop must be like an angel; he who undertakes governance must excel in virtue like the sun obscuring the stars.
+  text: "A bishop must be an angel, subject to no human disturbance or vice... It befits him who undertakes the governance of others to excel in such glory of virtue that, like the sun, he may obscure all others"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p2-s-5ee320d` — The Council of Trent commands that reading of divine Scriptures be mixed in at the tables of bishops.
+  text: "the Council of Trent at the very beginning of Session II commands that the reading of divine Scriptures be mixed in at the tables of bishops"

@@ -35,3 +35,7 @@ Major prophet. The first of the four great prophets; seems to weave not prophecy
   text: "all that is nothing beside the Miserere of David, the Lamentations of Jeremiah and the fifty-third chapter of Isaiah"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-13994b4` — "Isaiah prophesied" — listed among the prophets' modes of expression
   text: "Isaiah prophesied"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p8-s-d196778` — In chapter 6, beheld a Seraph flying toward him with burning coal opening his mouth for prophesying
+  text: "Isaiah, in chapter 6, beheld a Seraph flying toward him"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p23-s-20f748e` — Augustine took up Isaiah after conversion but was frightened by the depth of his utterances
+  text: "taking in hand Isaiah the prophet, immediately frightened by the depth of his utterances"

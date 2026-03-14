@@ -23,6 +23,7 @@
  */
 
 import { Glob } from "bun";
+import { stripHtml, normalizeForMatch, normalizeForPosition, computeHash, findInPlainText } from "./pipeline-utils";
 
 const checkMode = Bun.argv.includes("--check");
 const sourceFile = Bun.argv.find(a => a.endsWith(".html"));
@@ -32,64 +33,6 @@ if (!sourceFile) {
 }
 
 const REFS_DIR = "index/refs";
-
-// --- Utilities ---
-
-function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
-    .replace(/&rsquo;/g, "\u2019")
-    .replace(/&lsquo;/g, "\u2018")
-    .replace(/&rdquo;/g, "\u201D")
-    .replace(/&ldquo;/g, "\u201C")
-    .replace(/&mdash;/g, "\u2014")
-    .replace(/&ndash;/g, "\u2013")
-    .replace(/&oelig;/g, "\u0153")
-    .replace(/&aelig;/g, "\u00E6")
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-// Normalize for fuzzy matching (same as validate-refs.ts / validate-extractions.ts)
-function normalizeForMatch(s: string): string {
-  return s
-    .replace(/\u0153/g, "oe")
-    .replace(/\u00E6/g, "ae")
-    .replace(/[\u2018\u2019\u0060\u00B4']/g, "'")
-    .replace(/[\u201C\u201D\u00AB\u00BB"]/g, "'")
-    .replace(/\s*[\u2014]\s*/g, " -- ")
-    .replace(/\s*--\s*/g, " -- ")
-    .replace(/[\u2013]/g, "-")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-// Same as normalizeForMatch but without .trim() — preserves monotonic length
-// for prefix-based offset mapping in findInPlainText
-function normalizeForPosition(s: string): string {
-  return s
-    .replace(/\u0153/g, "oe")
-    .replace(/\u00E6/g, "ae")
-    .replace(/[\u2018\u2019\u0060\u00B4']/g, "'")
-    .replace(/[\u201C\u201D\u00AB\u00BB"]/g, "'")
-    .replace(/\s*[\u2014]\s*/g, " -- ")
-    .replace(/\s*--\s*/g, " -- ")
-    .replace(/[\u2013]/g, "-")
-    .replace(/\s+/g, " ");
-}
-
-function computeHash(text: string): string {
-  const normalized = text.replace(/\s+/g, " ").trim();
-  const data = new TextEncoder().encode(normalized);
-  const hash = new Bun.CryptoHasher("sha256").update(data).digest("hex");
-  return hash.slice(0, 7);
-}
 
 // --- Parse source HTML ---
 
@@ -169,34 +112,6 @@ for await (const path of glob.scan(REFS_DIR)) {
 console.log(`Found ${refEntries.length} text references to ${sourceBasename}`);
 
 // --- Find each quote in its paragraph ---
-
-// Helper: find where a normalized target starts in the original plain text
-function findInPlainText(plainText: string, normTarget: string, searchFrom: number): { start: number; end: number } | null {
-  const normPlain = normalizeForPosition(plainText);
-
-  // Find position in normalized space
-  const normIdx = normPlain.indexOf(normTarget, searchFrom > 0 ? normalizeForPosition(plainText.slice(0, searchFrom)).length : 0);
-  if (normIdx < 0) return null;
-
-  // Map normalized offset back to original offset
-  // Walk through the original text, tracking normalized length
-  let origStart = -1;
-  let origEnd = -1;
-
-  for (let i = 0, normLen = 0; i <= plainText.length; i++) {
-    const normSoFar = normalizeForPosition(plainText.slice(0, i));
-    if (origStart < 0 && normSoFar.length >= normIdx) {
-      origStart = i;
-    }
-    if (origStart >= 0 && normSoFar.length >= normIdx + normTarget.length) {
-      origEnd = i;
-      break;
-    }
-  }
-
-  if (origStart < 0 || origEnd < 0) return null;
-  return { start: origStart, end: origEnd };
-}
 
 interface PendingAnnotation {
   paragraph: string;

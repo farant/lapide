@@ -31,3 +31,5 @@ University city in the Duchy of Brabant, part of the Spanish Netherlands. Cornel
   text: "He taught the Sacred Language and Holy Scripture publicly at Louvain for more than twenty years"
 - `01_Preliminares.html#dedicatory-letter-p52-s-5b88491` — The Louvain College's esteem for Van der Burch
   text: "this token and pledge of the love and esteem which I, the Louvain College, and our whole Society bear toward you"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p32-s-02ab6a0` — Louvain described as the granddaughter academy of Paris
+  text: "so ancient is this academy, which is the mother of Cologne and the grandmother of Louvain"

@@ -26,3 +26,5 @@ Bishop of Ephesus, disciple and companion of Paul. Instructed from infancy in sa
   text: "He writes to Timothy, instructed from infancy in the sacred letters, and exhorts him to the study of reading, lest he neglect the grace which was given him by the laying on of hands of the presbytery."
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p45-s-a9dcb20` — Paul instructs Timothy and Titus
   text: "He instructs Timothy and Titus"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#arguments-for-the-ot-p4-s-fbd74ef` — Paul praises Timothy because from infancy he learned the Sacred Letters (the Old Testament)
+  text: "Paul praises Timothy, Second Epistle, chapter 3, verse 14, because from infancy he had learned the Sacred Letters"

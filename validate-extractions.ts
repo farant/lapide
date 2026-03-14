@@ -15,6 +15,7 @@
  */
 
 import { Glob } from "bun";
+import { stripHtml, normalizeForMatch } from "./pipeline-utils";
 
 const sourceFile = Bun.argv[2];
 if (!sourceFile) {
@@ -25,42 +26,6 @@ if (!sourceFile) {
 // Infer extraction directory from source filename
 const baseName = sourceFile.replace(/\.html$/, "").replace(/^.*\//, "");
 const extractionArg = Bun.argv[3] || `index/extractions/${baseName}/`;
-
-// --- Shared normalization (same as validate-refs.ts) ---
-
-function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
-    .replace(/&rsquo;/g, "\u2019")
-    .replace(/&lsquo;/g, "\u2018")
-    .replace(/&rdquo;/g, "\u201D")
-    .replace(/&ldquo;/g, "\u201C")
-    .replace(/&mdash;/g, "\u2014")
-    .replace(/&ndash;/g, "\u2013")
-    .replace(/&oelig;/g, "\u0153")
-    .replace(/&aelig;/g, "\u00E6")
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function normalize(s: string): string {
-  return s
-    .replace(/\u0153/g, "oe")
-    .replace(/\u00E6/g, "ae")
-    .replace(/[\u2018\u2019\u0060\u00B4']/g, "'")
-    .replace(/[\u201C\u201D\u00AB\u00BB"]/g, "'")
-    .replace(/\s*[\u2014]\s*/g, " -- ")
-    .replace(/\s*--\s*/g, " -- ")
-    .replace(/[\u2013]/g, "-")
-    .replace(/\s+/g, " ")
-    .trim();
-}
 
 // --- Parse source HTML paragraphs ---
 
@@ -162,8 +127,8 @@ for (const ref of refs) {
     continue;
   }
 
-  const normQuote = normalize(ref.text);
-  const normPara = normalize(paraText);
+  const normQuote = normalizeForMatch(ref.text);
+  const normPara = normalizeForMatch(paraText);
 
   if (normPara.includes(normQuote)) {
     matched++;

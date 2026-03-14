@@ -11,6 +11,8 @@
  *   where the ref file explicitly references that entity
  * - Text inside <a> tags is skipped (already linked)
  * - Names are matched as whole words, longest match first
+ * - Reads entity-ref-overrides.json from the extractions folder (if present)
+ *   to apply human-reviewed exclusions and forced slug resolutions
  *
  * Idempotent — strips existing <entity-ref> tags before re-tagging.
  *
@@ -18,6 +20,7 @@
  */
 
 import { Glob } from "bun";
+import { splitSegments, getSection } from "./pipeline-utils";
 
 const sourceFile = Bun.argv[2];
 if (!sourceFile) {
@@ -178,6 +181,99 @@ if (ambiguousNameMap.size > 0) {
   }
 }
 
+// --- Step 2b: Load entity-ref overrides ---
+
+interface OverrideExclude {
+  text: string;
+  slug: string;
+  paragraph?: string;
+  reason?: string;
+}
+
+interface OverrideForce {
+  text: string;
+  slug: string;
+  paragraph: string;
+  reason?: string;
+}
+
+interface Overrides {
+  exclude?: OverrideExclude[];
+  force?: OverrideForce[];
+  global_exclude_words?: string[];
+}
+
+const sourceName = sourceBasename.replace(/\.html$/, "");
+const overridesPath = `index/extractions/${sourceName}/entity-ref-overrides.json`;
+let overrides: Overrides = {};
+
+try {
+  const overridesFile = Bun.file(overridesPath);
+  if (await overridesFile.exists()) {
+    overrides = await overridesFile.json();
+    console.log(`Loaded overrides from ${overridesPath}`);
+    if (overrides.global_exclude_words?.length) {
+      console.log(`  Global exclude words: ${overrides.global_exclude_words.join(", ")}`);
+    }
+    if (overrides.exclude?.length) {
+      console.log(`  Exclusions: ${overrides.exclude.length}`);
+    }
+    if (overrides.force?.length) {
+      console.log(`  Forced resolutions: ${overrides.force.length}`);
+    }
+  }
+} catch (e) {
+  // No overrides file — that's fine
+}
+
+// Apply global_exclude_words: remove these names from the name index entirely
+// Uses case-insensitive matching since ref file aliases may use different casing
+if (overrides.global_exclude_words) {
+  const excludeLower = new Set(overrides.global_exclude_words.map(w => w.toLowerCase()));
+  for (const name of [...unambiguousNames.keys()]) {
+    if (excludeLower.has(name.toLowerCase())) {
+      unambiguousNames.delete(name);
+    }
+  }
+  for (const name of [...ambiguousNameMap.keys()]) {
+    if (excludeLower.has(name.toLowerCase())) {
+      ambiguousNameMap.delete(name);
+    }
+  }
+}
+
+// Build exclude lookup: Set of "text|slug" or "text|slug|paragraph" keys
+const excludeSet = new Set<string>();
+if (overrides.exclude) {
+  for (const ex of overrides.exclude) {
+    if (ex.paragraph) {
+      excludeSet.add(`${ex.text}|${ex.slug}|${ex.paragraph}`);
+    } else {
+      excludeSet.add(`${ex.text}|${ex.slug}`);
+    }
+  }
+}
+
+// Build force lookup: Map of "text|paragraph" → slug
+const forceMap = new Map<string, string>();
+if (overrides.force) {
+  for (const f of overrides.force) {
+    forceMap.set(`${f.text}|${f.paragraph}`, f.slug);
+  }
+}
+
+function isExcluded(matchedText: string, slug: string, paraId: string): boolean {
+  // Check paragraph-specific exclusion
+  if (excludeSet.has(`${matchedText}|${slug}|${paraId}`)) return true;
+  // Check global exclusion (any paragraph)
+  if (excludeSet.has(`${matchedText}|${slug}`)) return true;
+  return false;
+}
+
+function getForcedSlug(matchedText: string, paraId: string): string | null {
+  return forceMap.get(`${matchedText}|${paraId}`) || null;
+}
+
 // --- Step 3: Read and prepare HTML ---
 
 let html = await Bun.file(sourceFile).text();
@@ -187,35 +283,6 @@ html = html.replace(/<entity-ref[^>]*>/g, "");
 html = html.replace(/<\/entity-ref>/g, "");
 
 // --- Step 4: Tag entities ---
-
-// Split HTML into text and tag segments
-function splitSegments(html: string): { type: "text" | "tag"; content: string }[] {
-  const segments: { type: "text" | "tag"; content: string }[] = [];
-  let pos = 0;
-  while (pos < html.length) {
-    const tagStart = html.indexOf("<", pos);
-    if (tagStart < 0) {
-      if (pos < html.length) segments.push({ type: "text", content: html.slice(pos) });
-      break;
-    }
-    if (tagStart > pos) {
-      segments.push({ type: "text", content: html.slice(pos, tagStart) });
-    }
-    const tagEnd = html.indexOf(">", tagStart);
-    if (tagEnd < 0) {
-      segments.push({ type: "text", content: html.slice(tagStart) });
-      break;
-    }
-    segments.push({ type: "tag", content: html.slice(tagStart, tagEnd + 1) });
-    pos = tagEnd + 1;
-  }
-  return segments;
-}
-
-// Extract section name from paragraph ID
-function getSection(paraId: string): string {
-  return paraId.replace(/-p\d+$/, "");
-}
 
 // Build paragraph → known entities map
 const paragraphKnownEntities = new Map<string, Set<string>>();
@@ -308,13 +375,23 @@ html = html.replace(pPattern, (_, openTag, paraId, innerHtml, closeTag) => {
       // Always consume the span (prevents shorter matches here)
       consumed.push({ start: matchStart, end: matchEnd });
 
+      // Check for forced slug override (human-reviewed disambiguation)
+      let effectiveSlug = slug;
+      const forced = getForcedSlug(match[0], paraId);
+      if (forced) {
+        effectiveSlug = forced;
+      }
+
+      // Check exclusion rules (human-reviewed false positives)
+      if (isExcluded(match[0], effectiveSlug, paraId)) continue;
+
       // Only tag if not consume-only AND not yet tagged in this section
       // (sectionTagged may have been updated by an earlier segment in this paragraph)
-      if (!consumeOnly && !sectionTagged.has(slug)) {
-        tagged.push({ start: matchStart, end: matchEnd, matchedText: match[0], slug });
-        sectionTagged.add(slug);
+      if (!consumeOnly && !sectionTagged.has(effectiveSlug)) {
+        tagged.push({ start: matchStart, end: matchEnd, matchedText: match[0], slug: effectiveSlug });
+        sectionTagged.add(effectiveSlug);
         totalTagged++;
-        tagReport.push({ paraId, name: match[0], slug });
+        tagReport.push({ paraId, name: match[0], slug: effectiveSlug });
       }
     }
 

@@ -1,0 +1,26 @@
+---
+name: Necessity and Fruit of Sacred Scripture
+slug: subject/theology/scripture/necessity
+category: subject
+description: Sacred Scripture is necessary both for salvation and for sound theology, supplying the principles of faith from which theology draws its conclusions
+related:
+  people:
+    - person/saint/thomas-aquinas
+  subjects:
+    - subject/theology/scripture/excellence
+    - subject/theology/scripture/scripture-and-theology
+    - subject/ecclesiology/councils/trent
+---
+
+Sacred Scripture is necessary both for salvation and for sound theology; it supplies the principles of faith from which theology draws its conclusions, and its reading bears transformative spiritual fruit. Whoever separates scholastic theology from Scripture imagines offspring without a mother, a house without foundations.
+
+## References in Commentary
+
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p2-s-204a5f0` — Sacred Scripture contains all the beginnings of theology; whoever separates scholastic theology from Scripture imagines offspring without a mother, a house without foundations.
+  text: "Sacred Scripture lays the foundations of Theology, from which the Theologian, by the reasoning of the mind, as a mother begets offspring, generates and brings forth new demonstrations. Therefore whoever thinks he can separate Scholastic theology from Sacred Scripture by serious study, imagines offspring without a mother, a house without foundations"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p7-s-cea1474` — The Psalmist calls blessed not the one who pours forth God's words to others but the one who meditates on His law day and night; such a one is like a tree planted beside running waters.
+  text: "The Royal Psalmist calls blessed not the one who pours forth the words of God to others, but the one who meditates on his law day and night; such a one, he says, is like a tree planted beside running waters"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p8-s-6c07373` — Scripture breathes a vital spirit into readers; the Maccabees, having only the holy books for consolation, stand firm with unconquered virtue.
+  text: "I know not what vital spirit the divine words breathe into readers by a hidden influence, so that if you compare them with the writings of the most learned and holiest men, however ardent, you would judge these to be lifeless and those to be living and breathing life"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p25-s-8e188f1` — The Council of Trent begins the reform of the Church from Sacred Scripture.
+  text: "the holy Council of Trent begins the reform of the Church from Sacred Scripture, and in its entire first decree On Reform, prescribes as carefully as it does at length that the reading of Sacred Scripture be either established or restored everywhere"

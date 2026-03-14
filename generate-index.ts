@@ -15,6 +15,23 @@
 
 import { readdir, readFile, writeFile, mkdir, stat } from "fs/promises";
 import { join, dirname, relative, basename } from "path";
+import {
+  parseFrontmatter,
+  parseYaml,
+  unquote,
+  escHtml,
+  humanizeFilename,
+  humanizeSection,
+  parseDates,
+  ordinalSuffix,
+  yearSlugFromNumber,
+  latLonToTile,
+  labelFor,
+  CATEGORY_LABELS,
+  SUBCATEGORY_LABELS,
+  BIBLE_BOOK_ORDER,
+} from "./lib/generate-index-utils";
+import type { LifeDate, ParsedDates } from "./lib/generate-index-utils";
 
 const ROOT = import.meta.dir;
 const REFS_DIR = join(ROOT, "index/refs");
@@ -27,19 +44,7 @@ const TILE_SIZE = 256;
 const MAP_ZOOM = 4;
 const TILES_DIR = join(INDEX_DIR, "tiles");
 
-function latLonToTile(lat: number, lon: number, zoom: number) {
-  const n = Math.pow(2, zoom);
-  const xFloat = (lon + 180) / 360 * n;
-  const latRad = lat * Math.PI / 180;
-  const yFloat = (1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2 * n;
-  const x = Math.floor(xFloat);
-  const y = Math.floor(yFloat);
-  return {
-    x, y,
-    px: Math.floor((xFloat - x) * TILE_SIZE),
-    py: Math.floor((yFloat - y) * TILE_SIZE),
-  };
-}
+// latLonToTile imported from lib/generate-index-utils
 
 async function downloadTile(zoom: number, x: number, y: number): Promise<void> {
   const dir = join(TILES_DIR, String(zoom), String(x));
@@ -77,128 +82,12 @@ ${tiles.join("\n")}
   </div>`;
 }
 
-// ── YAML frontmatter parser (handles our subset) ──
+// parseFrontmatter, parseYaml, unquote imported from lib/generate-index-utils
 
 interface RefData {
   frontmatter: Record<string, any>;
   body: string;
   filePath: string;
-}
-
-function parseFrontmatter(content: string): { frontmatter: Record<string, any>; body: string } {
-  const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-  if (!match) return { frontmatter: {}, body: content };
-
-  const yamlStr = match[1];
-  const body = match[2].trim();
-  const frontmatter = parseYaml(yamlStr);
-  return { frontmatter, body };
-}
-
-function parseYaml(str: string): Record<string, any> {
-  const result: Record<string, any> = {};
-  const lines = str.split("\n");
-  let i = 0;
-
-  while (i < lines.length) {
-    const line = lines[i];
-
-    // Skip empty lines
-    if (line.trim() === "") { i++; continue; }
-
-    // Match top-level key
-    const keyMatch = line.match(/^(\w[\w_]*)\s*:\s*(.*)$/);
-    if (!keyMatch) { i++; continue; }
-
-    const key = keyMatch[1];
-    let value = keyMatch[2].trim();
-
-    if (value === "") {
-      // Could be a nested object or list
-      const nextLine = lines[i + 1] || "";
-      const nextIndent = nextLine.match(/^(\s*)/)?.[1].length || 0;
-
-      if (nextIndent > 0 && nextLine.trim().startsWith("-")) {
-        // It's a list
-        const items: any[] = [];
-        i++;
-        while (i < lines.length) {
-          const l = lines[i];
-          if (l.trim() === "") { i++; continue; }
-          const indent = l.match(/^(\s*)/)?.[1].length || 0;
-          if (indent === 0) break;
-
-          if (l.trim().startsWith("- ")) {
-            items.push(unquote(l.trim().slice(2).trim()));
-            i++;
-          } else {
-            break;
-          }
-        }
-        result[key] = items;
-      } else if (nextIndent > 0) {
-        // Nested object
-        const obj: Record<string, any> = {};
-        i++;
-        while (i < lines.length) {
-          const l = lines[i];
-          if (l.trim() === "") { i++; continue; }
-          const indent = l.match(/^(\s*)/)?.[1].length || 0;
-          if (indent === 0) break;
-
-          const nestedKeyMatch = l.trim().match(/^(\w[\w_]*)\s*:\s*(.*)$/);
-          if (nestedKeyMatch) {
-            const nKey = nestedKeyMatch[1];
-            let nValue = nestedKeyMatch[2].trim();
-
-            if (nValue === "") {
-              // Nested list
-              const items: string[] = [];
-              i++;
-              while (i < lines.length) {
-                const nl = lines[i];
-                if (nl.trim() === "") { i++; continue; }
-                const nIndent = nl.match(/^(\s*)/)?.[1].length || 0;
-                if (nIndent <= indent) break;
-                if (nl.trim().startsWith("- ")) {
-                  items.push(unquote(nl.trim().slice(2).trim()));
-                  i++;
-                } else {
-                  break;
-                }
-              }
-              obj[nKey] = items;
-            } else {
-              obj[nKey] = unquote(nValue);
-              i++;
-            }
-          } else {
-            i++;
-          }
-        }
-        result[key] = obj;
-      } else {
-        result[key] = "";
-        i++;
-      }
-    } else {
-      result[key] = unquote(value);
-      i++;
-    }
-  }
-
-  return result;
-}
-
-function unquote(s: string): string | number {
-  if ((s.startsWith('"') && s.endsWith('"')) || (s.startsWith("'") && s.endsWith("'"))) {
-    return s.slice(1, -1);
-  }
-  // Try number
-  if (/^-?\d+(\.\d+)?$/.test(s)) return parseFloat(s);
-  if (s === "true") return true as any;
-  if (s === "false") return false as any;
-  return s;
 }
 
 // ── Collect ref files ──
@@ -298,108 +187,8 @@ function formatInline(s: string): string {
   return s;
 }
 
-function humanizeFilename(file: string): string {
-  // "01_Preliminares.html" → "Preliminares"
-  // "01_genesis_01.html" → "Genesis 1"
-  // "02_Clemens_Hieronymi_Du_Culte.html" → "Clemens Hieronymi Du Culte"
-  let name = file.replace(/\.html$/, "");
-  // Strip leading number prefix
-  name = name.replace(/^\d+_/, "");
-  // Handle genesis chapters: "genesis_01" → "Genesis 1"
-  const genMatch = name.match(/^genesis_(\d+)(.*)$/i);
-  if (genMatch) {
-    const ch = parseInt(genMatch[1], 10);
-    const suffix = genMatch[2] ? genMatch[2].replace(/_/g, " ") : "";
-    return `Genesis ${ch}${suffix}`;
-  }
-  // Replace underscores with spaces
-  return name.replace(/_/g, " ");
-}
-
-function humanizeSection(section: string): string {
-  // "preface-reader" → "Preface Reader"
-  // "dedicatory-letter" → "Dedicatory Letter"
-  return section.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-}
-
-function escHtml(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
-
-// ── Date parsing for person birth/death years ──
-
-interface LifeDate {
-  year: number;
-  bc: boolean;
-  circa: boolean;
-}
-
-interface ParsedDates {
-  birth?: LifeDate;
-  death?: LifeDate;
-}
-
-function parseDates(dates: string): ParsedDates | null {
-  if (!dates) return null;
-  const s = dates.trim();
-
-  // Skip unparseable formats
-  if (/biblical|patriarch|century|fl\.|\/|\bor\b/i.test(s)) return null;
-
-  // Strip parentheticals like "(traditional)"
-  const clean = s.replace(/\s*\(.*?\)\s*/g, "").trim();
-
-  // Death only: "d. 253", "d. c. 674", "d. c. 375"
-  const deathOnly = clean.match(/^d\.\s*(c\.\s*)?(\d+)\s*(BC)?$/i);
-  if (deathOnly) {
-    return {
-      death: {
-        year: parseInt(deathOnly[2]),
-        bc: !!deathOnly[3],
-        circa: !!deathOnly[1],
-      },
-    };
-  }
-
-  // Range: "354–430", "c. 342–420", "c. 625–c. 686", "65–8 BC"
-  const range = clean.match(/^(c\.\s*)?(\d+)\s*[–\-]\s*(c\.\s*)?(\d+)\s*(BC)?$/i);
-  if (range) {
-    const bc = !!range[5];
-    return {
-      birth: {
-        year: parseInt(range[2]),
-        bc,
-        circa: !!range[1],
-      },
-      death: {
-        year: parseInt(range[4]),
-        bc,
-        circa: !!range[3],
-      },
-    };
-  }
-
-  return null;
-}
-
-function ordinalSuffix(n: number): string {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 13) return `${n}th`;
-  if (mod10 === 1) return `${n}st`;
-  if (mod10 === 2) return `${n}nd`;
-  if (mod10 === 3) return `${n}rd`;
-  return `${n}th`;
-}
-
-function yearSlugFromNumber(year: number, bc: boolean): string {
-  const era = bc ? "bc" : "ad";
-  const century = Math.ceil(year / 100);
-  const centuryLabel = `${ordinalSuffix(century)}-century`;
-  const decade = Math.floor((year % 100) / 10) * 10;
-  const decadeLabel = `${String(decade).padStart(2, "0")}s`;
-  return `year/${era}/${centuryLabel}/${decadeLabel}/${year}`;
-}
+// humanizeFilename, humanizeSection, escHtml imported from lib/generate-index-utils
+// parseDates, ordinalSuffix, yearSlugFromNumber imported from lib/generate-index-utils
 
 // ── Life events derived from person dates ──
 
@@ -431,84 +220,7 @@ function lookupName(category: string, slug: string): string {
   return last.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
-// ── Canonical Bible book order (Vulgate) ──
-
-const BIBLE_BOOK_ORDER: Record<string, number> = {
-  "genesis": 1, "exodus": 2, "leviticus": 3, "numbers": 4, "deuteronomy": 5,
-  "joshua": 6, "judges": 7, "ruth": 8,
-  "1-kings": 9, "2-kings": 10, "3-kings": 11, "4-kings": 12,
-  "1-chronicles": 13, "2-chronicles": 14,
-  "ezra": 15, "nehemiah": 16, "tobit": 17, "judith": 18, "esther": 19,
-  "1-maccabees": 20, "2-maccabees": 21,
-  "job": 22, "psalms": 23, "proverbs": 24, "ecclesiastes": 25,
-  "song-of-songs": 26, "wisdom": 27, "sirach": 28,
-  "isaiah": 29, "jeremiah": 30, "lamentations": 31, "baruch": 32,
-  "ezekiel": 33, "daniel": 34,
-  "hosea": 35, "joel": 36, "amos": 37, "obadiah": 38, "jonah": 39,
-  "micah": 40, "nahum": 41, "habakkuk": 42, "zephaniah": 43,
-  "haggai": 44, "zechariah": 45, "malachi": 46,
-  "matthew": 47, "mark": 48, "luke": 49, "john": 50, "acts": 51,
-  "romans": 52, "1-corinthians": 53, "2-corinthians": 54,
-  "galatians": 55, "ephesians": 56, "philippians": 57, "colossians": 58,
-  "1-thessalonians": 59, "2-thessalonians": 60,
-  "1-timothy": 61, "2-timothy": 62, "titus": 63, "philemon": 64, "hebrews": 65,
-  "james": 66, "1-peter": 67, "2-peter": 68,
-  "1-john": 69, "2-john": 70, "3-john": 71, "jude": 72, "revelation": 73,
-};
-
-// ── Category display names ──
-
-const CATEGORY_LABELS: Record<string, string> = {
-  person: "Person",
-  place: "Place",
-  organization: "Organization",
-  year: "Year",
-  verse: "Verse",
-  bibliography: "Bibliography",
-  subject: "Subject",
-  language: "Language",
-};
-
-const SUBCATEGORY_LABELS: Record<string, string> = {
-  saint: "Saints",
-  blessed: "Blessed",
-  biblical: "Biblical Figures",
-  pope: "Popes",
-  ruler: "Rulers",
-  classical: "Classical Authors",
-  cleric: "Clergy",
-  scholar: "Scholars",
-  other: "Other",
-  city: "Cities",
-  region: "Regions",
-  "sacred-site": "Sacred Sites",
-  "body-of-water": "Bodies of Water",
-  "religious-order": "Religious Orders",
-  council: "Councils",
-  government: "Governments",
-  diocese: "Dioceses",
-  publisher: "Publishers",
-  university: "Universities",
-  church: "Church Institutions",
-  bc: "BC",
-  ad: "AD",
-  theology: "Theology",
-  exegesis: "Exegesis",
-  morals: "Morals",
-  spirituality: "Spirituality",
-  ecclesiology: "Ecclesiology",
-  sacraments: "Sacraments",
-  devotion: "Devotion",
-  "natural-philosophy": "Natural Philosophy",
-  hebrew: "Hebrew",
-  greek: "Greek",
-  aramaic: "Aramaic",
-};
-
-function labelFor(segment: string): string {
-  return SUBCATEGORY_LABELS[segment] || CATEGORY_LABELS[segment] ||
-    segment.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-}
+// BIBLE_BOOK_ORDER, CATEGORY_LABELS, SUBCATEGORY_LABELS, labelFor imported from lib/generate-index-utils
 
 // ── Related link helper ──
 
@@ -825,6 +537,7 @@ interface DirEntry {
   transliteration?: string;
   meaning?: string;
   category?: string;
+  events?: string[];  // HTML strings for year entry events (displayed inline on directory pages)
   children?: DirEntry[];
 }
 
@@ -899,6 +612,13 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
     // Only show folder icon for dirs that are NOT expanded (no children)
     const icon = (e.isDir && (!e.children || e.children.length === 0)) ? "📁 " : "";
     let html = `${pad}<li>${icon}<a href="${e.href}">${label}</a>`;
+    if (e.events && e.events.length > 0) {
+      html += `\n${pad}  <ul class="year-events">`;
+      for (const evt of e.events) {
+        html += `\n${pad}    <li>${evt}</li>`;
+      }
+      html += `\n${pad}  </ul>`;
+    }
     if (e.children && e.children.length > 0) {
       const childSorted = [...e.children].sort((a, b) => {
         if (a.isDir !== b.isDir) return a.isDir ? -1 : 1;
@@ -1099,7 +819,7 @@ async function main() {
   }
 
   // Track all generated HTML paths for directory indexes
-  const generatedPaths = new Map<string, { name: string; slug: string; description?: string; dates?: string; transliteration?: string; meaning?: string; category?: string }>();
+  const generatedPaths = new Map<string, { name: string; slug: string; description?: string; dates?: string; transliteration?: string; meaning?: string; category?: string; events?: string[] }>();
 
   // Generate canonical entry pages
   let entryCount = 0;
@@ -1117,6 +837,35 @@ async function main() {
     await writeFile(outPath, html, "utf-8");
     entryCount++;
 
+    // For year entries, collect event descriptions for directory listing
+    let entryEvents: string[] | undefined;
+    if (fm.category === "year") {
+      const fullSlug = String(fm.slug).startsWith("year/") ? String(fm.slug) : `year/${fm.slug}`;
+      entryEvents = [];
+      // Manual events from ref body
+      const evtMatch = ref.body.match(/## Events\n([\s\S]*?)(?=\n## |\n*$)/);
+      if (evtMatch) {
+        for (const l of evtMatch[1].split("\n").filter((l: string) => l.startsWith("- "))) {
+          entryEvents.push(escHtml(l.slice(2)));
+        }
+      }
+      // Auto-derived life events
+      const manualText = entryEvents.join(" ");
+      const lifeEvts = (yearLifeEvents.get(fullSlug) || [])
+        .filter(evt => !manualText.includes(escHtml(evt.personName)))
+        .sort((a, b) => {
+          if (a.type !== b.type) return a.type === "birth" ? -1 : 1;
+          return a.personName.localeCompare(b.personName);
+        });
+      for (const evt of lifeEvts) {
+        const personLink = `<a href="/index/${escHtml(evt.personSlug)}.html">${escHtml(evt.personName)}</a>`;
+        const approx = evt.circa ? " (approximate date)" : "";
+        const label = evt.type === "birth" ? "Birth" : "Death";
+        entryEvents.push(`${label} of ${personLink}${approx}`);
+      }
+      if (entryEvents.length === 0) entryEvents = undefined;
+    }
+
     // Track for directory listing
     generatedPaths.set(outPath, {
       name: fm.name,
@@ -1126,6 +875,7 @@ async function main() {
       transliteration: fm.transliteration ? String(fm.transliteration) : undefined,
       meaning: fm.meaning ? String(fm.meaning) : undefined,
       category: fm.category ? String(fm.category) : undefined,
+      events: entryEvents,
     });
   }
   console.log(`Generated ${entryCount} entry pages`);
@@ -1208,6 +958,7 @@ async function main() {
           transliteration: info?.transliteration,
           meaning: info?.meaning,
           category: info?.category,
+          events: info?.events,
         });
       }
     }

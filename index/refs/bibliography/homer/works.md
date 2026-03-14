@@ -30,3 +30,6 @@ Homer's epic poems, referenced in the dedicatory letter as characterizing kings 
   text: "if it is capable of opening itself, it surrenders to a passionate admiration that it has known only in reading Homer or Virgil"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-3dc65e4` — Lacordaire lists "Homer's songs on the wrath of Achilles" as the pinnacle of nature's poetry, inferior to David's Miserere
   text: "Homer's songs on the wrath of Achilles"
+
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iii-p8-s-e731426` — Homer's Iliad referenced as source text for Empress Eudocia's Christian cento
+  text: "or the Empress Eudocia in adapting Homer's Iliad, to Christ"

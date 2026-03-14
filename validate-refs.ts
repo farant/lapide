@@ -15,6 +15,7 @@
  */
 
 import { Glob } from "bun";
+import { stripHtml, normalizeForMatch } from "./pipeline-utils";
 
 const REFS_DIR = "index/refs";
 
@@ -297,28 +298,6 @@ for (const [key, ref] of allFiles) {
 
 // --- Validate paragraph IDs and quoted text in source HTML ---
 
-// Strip HTML tags and normalize whitespace for text comparison
-function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, "")  // remove tags
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
-    .replace(/&rsquo;/g, "\u2019")
-    .replace(/&lsquo;/g, "\u2018")
-    .replace(/&rdquo;/g, "\u201D")
-    .replace(/&ldquo;/g, "\u201C")
-    .replace(/&mdash;/g, "\u2014")
-    .replace(/&ndash;/g, "\u2013")
-    .replace(/&oelig;/g, "\u0153")
-    .replace(/&aelig;/g, "\u00E6")
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")        // collapse whitespace
-    .trim();
-}
-
 // Cache: htmlFile -> Map<paragraphId, plain text content>
 const htmlParaCache: Map<string, Map<string, string>> = new Map();
 
@@ -387,23 +366,8 @@ for (const [key, ref] of allFiles) {
       }
       for (const quote of quotes) {
         textChecked++;
-        // Normalize both sides for comparison:
-        // - collapse whitespace
-        // - expand ligatures (œ→oe, æ→ae)
-        // - normalize quotes/dashes
-        const normalize = (s: string) =>
-          s.replace(/\u0153/g, "oe")   // œ → oe
-            .replace(/\u00E6/g, "ae")   // æ → ae
-            .replace(/[\u2018\u2019\u0060\u00B4']/g, "'")  // all single-quote variants → '
-            .replace(/[\u201C\u201D\u00AB\u00BB"]/g, "'")  // all double-quote variants → ' too (unify for matching)
-            .replace(/\s*[\u2014]\s*/g, " -- ")   // em dash (with any surrounding space) → " -- "
-            .replace(/\s*--\s*/g, " -- ")          // normalize existing -- spacing
-            .replace(/[\u2013]/g, "-")             // en dash → hyphen
-            .replace(/\s+/g, " ")
-            .trim();
-
-        const normQuote = normalize(quote);
-        const normPara = normalize(paraText);
+        const normQuote = normalizeForMatch(quote);
+        const normPara = normalizeForMatch(paraText);
 
         if (normPara.includes(normQuote)) {
           textMatched++;

@@ -33,3 +33,7 @@ Prophet whose prophecy about the learned shining as stars is quoted at the concl
   text: "The fourth indeed, the last among the four prophets, conscious of the times and of the stone of the whole world cut from the mountain without hands"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p49-s-2472f0d` — Lacordaire lists Daniel among the prophets who prepared the way: "Daniel calculated the hour of the promise"
   text: "Daniel calculated the hour of the promise"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p10-s-4f3ae86` — In chapter 7, keeps word of God in heart; troubled in thoughts; astonished at vision for lack of interpreter
+  text: "Daniel, in chapter 7 verse 8, keeps the word of God in his heart"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p26-s-7c362f4` — Attained the dreams of the Chaldean king and the 70 years of exile by prayer; taught by Gabriel
+  text: "Daniel, that man of desires, attained the dreams of the Chaldean king... by prayer, and was taught by Gabriel"

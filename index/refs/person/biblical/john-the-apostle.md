@@ -43,3 +43,5 @@ Apostle, Evangelist, and author of the Apocalypse. His Gospel is listed fourth i
   text: "not even Saint John, the eagle of God; if he has neither the lyre of the first nor the wing-beat of the second"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p51-s-5b82a74` — In the Apocalypse, he saw idolatrous Rome fall, Christian monarchies form, persecutions, and the second coming of Christ
   text: "Saint John, in that famous vision, saw idolatrous Rome fall, the Christian monarchies form from the debris of the Roman Empire"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p28-s-9c3ae56` — In a dream, at the Virgin's command, gave Gregory Thaumaturgus explanation of beginning of his Gospel
+  text: "received from St. John an explanation of the beginning of his Gospel"

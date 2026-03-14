@@ -36,3 +36,17 @@ The universal body of Christian believers founded by Christ. Referenced extensiv
   text: "the Holy Spirit will descend to complete the edifice of the Church"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p51-s-0cd4d8e` — John announces to the Church its transfigurations in suffering and glory until the end of ages
   text: "the prophecy of the New Testament and of the entire future of the Church on earth"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-iv-p5-s-a248155` — The Church in the Sacred Liturgy selects readings from the Old Testament and pairs them with the Gospel
+  text: "the Church in the Sacred Liturgy everywhere selects readings from the Old Testament, and during the sacred season of fasting always pairs an Epistle from the Old Testament fittingly with the Gospel"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p25-s-24dbf13` — The Council of Trent begins the reform of the Church from Sacred Scripture
+  text: "the holy Council of Trent begins the reform of the Church from Sacred Scripture"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p27-s-6bc1b98` — Schools of sacred Letters established from the very birth of the Church
+  text: "from the very birth of the Church schools of sacred Letters were established"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#arguments-for-the-ot-p6-s-819a04e` — The Church sets forth both Testaments equally in rites, libraries, and professorial chairs
+  text: "she, in sacred rites, at table, in libraries, in professorial chairs, sets forth and proposes the Old Testament equally with the New, as their most faithful guardian"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p4-s-c9ba29b` — The Church received Theodotion's version in Daniel and follows it
+  text: "whose version in Daniel the Church received and follows"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-septuagint-p6-s-bd359a1` — The Church publicly follows and approves Jerome's Vulgate for a thousand years
+  text: "the Church publicly follows and approves, with few exceptions"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#prayer-to-moses-p2-s-b706866` — The kingdom of the Church militant and the triumphant choir of the blessed
+  text: "glory that is to be proclaimed in the kingdom of His Church now militant"

@@ -50,3 +50,17 @@ Apostle to the Gentiles. Fourteen epistles attributed to him in the Tridentine c
   text: "Paul has a language of his own, a sort of Greek wholly steeped in Hebraism, abrupt turns, bold, brief"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p51-s-77bfb7a` — Lacordaire says once Paul is studied and savored, the Scriptures are the reader's
   text: "Once Saint Paul has been studied and savored, my dear Emmanuel, the Scriptures are yours."
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p8-s-f56cf47` — "Burning with love, hurling fiery flames of divine love everywhere"; arms faithful with patience and consolation of Scripture (Romans 15:4)
+  text: "For who would not clothe himself in chaste purity of soul... when it hears Paul burning with love"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p9-s-4a09686` — Reading of Paul converted heretic Augustine to orthodoxy and continence
+  text: "The reading of Paul was able not only to join the heretic Augustine to the orthodox"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p15-s-26d3dbf` — Attributes ability to discern to distributions of graces (1 Corinthians 12); learned law at feet of Gamaliel
+  text: "St. Paul, attributes the ability not to natural powers of intellect but to the distributions of graces"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p29-s-f51327a` — Appeared in likeness to Chrysostom as he dictated commentaries, whispering into his ear
+  text: "someone appearing in the likeness of St. Paul was seen standing beside him"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#sacred-writers-as-pens-p2-s-d369bc7` — Same authority as Moses; both pens of Holy Spirit
+  text: "the same truth, authority, reverence, zeal, and diligence must be attributed to Moses as to Paul"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-ii-p14-s-d516266` — In Hebrews 11, by example of fathers kindles martyrdom: "They were stoned, sawn asunder"
+  text: "Thus the Apostle in the entire chapter 11 of Hebrews"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#peroration-p2-s-ee63eb8` — Invoked: as Paul assisted Chrysostom, so may Moses assist Lapide
+  text: "just as St. Paul assisted St. Chrysostom, so he himself may stand by me"

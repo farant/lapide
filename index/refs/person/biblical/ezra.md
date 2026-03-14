@@ -28,3 +28,5 @@ Scribe, priest, and doctor of the Law. After the capture of Jerusalem and the re
   text: "The eighth, Ezra, which likewise among the Greeks and Latins is divided into two books."
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p42-s-e5e5f03` — With Nehemiah, restores the temple and builds the walls; the multitude returning to the fatherland
   text: "Ezra and Nehemiah -- that is, helper and consoler from the Lord -- are compressed into one volume"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p4-s-fe4f63e` — Or whoever is author of 4 Ezra, relates command given to Moses to publish some words openly and keep others hidden; Ezra dictated 204 books by inspiration of God
+  text: "And Ezra, or whoever is the author of 4 Ezra"

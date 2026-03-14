@@ -26,3 +26,9 @@ The deliberate rejection of worldly wealth, honors, and comforts in favor of dev
   text: "a man who has nothing is not subject to confiscation of goods — unless perhaps you need these tattered and worn-out rags of mine, and these few books, in which all my wealth and resources consist"
 - `01_Preliminares.html#life-p3-s-abbc2d4` — Lapide was roused "to contempt for human things and desire for heavenly things" by contemplation of eternity.
   text: "by the unceasing contemplation of blessed eternity, he was so roused to contempt for human things and desire for heavenly things, that from that time forward he aimed at nothing other than the enduring will, praise, and glory of Christ"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-i-p8-s-75ee6d3` — Whose mind would not leap at the reading of heavenly goods in the Scriptures, so as to scorn and disdain these lowly goods?
+  text: "Whose mind would not leap at the reading of heavenly goods in the Scriptures, so as to scorn and disdain these lowly goods?"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-i-p2-s-d49220e` — From the hope of heavenly things one may trample all earthly things underfoot; "I walk on air and look down upon the sun."
+  text: "I ascend to the heavens; I despise this earth, nay heaven itself and the sun. I am enrolled as heir and lord not of earth, but of heaven"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p24-s-ee80036` — Bernard: these words persuaded the whole world to contempt of the world and voluntary poverty.
+  text: "These are the words that persuaded the whole world to contempt of the world and voluntary poverty"

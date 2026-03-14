@@ -26,3 +26,5 @@ The Forerunner of Christ, greatest of the prophets born of women.
   text: "Jesus Christ who says to his precursor Saint John the Baptist, who wished to dissuade him from receiving the baptism of penance"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-6fd5e2d` — His voice resounds in the desert calling to prepare the way of the Lord; baptizes Jesus in the Jordan
   text: "a voice resounds in the desert: Prepare the way of the Lord and make straight his paths"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p2-s-64bd8e2` — Like Moses and prophets, went before the face of the Lord to prepare His ways
+  text: "just as St. John the Baptist did to Christ the Lord: for he, just like Moses and the other prophets"

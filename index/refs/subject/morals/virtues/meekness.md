@@ -25,3 +25,9 @@ The virtue of meekness as exemplified by Moses ("the meekest of all mortals") an
   text: "Your courtesy, Most Illustrious Lord, is marvelled at by all — the courtesy with which you receive everyone graciously, greet them honourably, and show to all a serene face, a ready word, and a generous spirit."
 - `01_Preliminares.html#dedicatory-letter-p41-s-c04b7e6` — St. Lietbert of Cambrai: "most cautiously avoided injuries, bore them most equably, and brought them to an end most swiftly."
   text: "most cautiously avoided injuries," says the author of his Life, "bore them most equably, and brought them to an end most swiftly"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-humility-p2-s-aa7393a` — God celebrates Moses: "Moses was the meekest man upon the face of the earth" (Numbers 12:3). His meekness came from dwelling magnanimously in heaven and despising earthly reproaches.
+  text: "For Moses was the meekest man upon the face of the earth." Whence so meek? Because, dwelling magnanimously in heaven, he despised all the reproaches and injuries of men as earthly and trifling things."
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p7-s-0bd35a7` — From humility follows gentleness and peace of mind, most receptive of all wisdom; the mind free from passions sees with acuteness and perceives truth undisturbed.
+  text: "From this humility follows gentleness and peace of mind, most receptive of all wisdom; for just as waters, if they are stirred by no blast of wind or air, but remain motionless, are most limpid"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-beatific-vision-p2-s-56d42fe` — On account of this meekness, many hold Moses was granted the beatific vision.
+  text: "On account of this meekness, many hold that Moses was granted in this life the vision of the divine essence"

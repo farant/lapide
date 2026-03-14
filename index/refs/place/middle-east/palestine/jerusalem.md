@@ -37,3 +37,9 @@ Holy city in Palestine, sacred to Judaism, Christianity, and Islam. St. Lietbert
   text: "when Jeremiah wept over Jerusalem"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p47-s-abf1d9d` — Jesus's last week begins in Jerusalem amid hosannas of triumph
   text: "It begins in Jerusalem, palm in hand, amid the Hosannas of triumph"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-authors-method-p3-s-83e585c` — Since the destruction of Jerusalem, the Rabbis have been stripped of kingdom, city, governance, temple, and letters
+  text: "ever since the destruction of Jerusalem, by which the whole nation lies stripped and abandoned of kingdom, city, governance, temple, and letters"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p6-s-4818ce8` — Augustine compares the riches obtained in Jerusalem under Solomon to the knowledge of the divine Scriptures
+  text: "the riches they afterwards obtained in Jerusalem, especially under Solomon"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-vi-p2-s-3fe83cd` — Moses and Elijah at the Transfiguration spoke of Christ's departure to be accomplished in Jerusalem
+  text: "to speak of the departure which He was about to accomplish in Jerusalem"

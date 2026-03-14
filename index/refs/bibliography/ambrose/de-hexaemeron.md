@@ -25,3 +25,6 @@ Ambrose's adaptation and translation of Basil's Hexaemeron for Latin audiences, 
 
 - `01_Preliminares.html#dedicatory-letter-p8-s-104e74a` — Described as Ambrose's translation of Basil's Hexaemeron
   text: "Saint Ambrose translated them, and gave to Latin ears not so much his own work as that of Saint Basil, in his treatise On the Work of the Six Days."
+
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#the-fathers-p2-s-3dbe774` — Ambrose wrote Hexaemeron books following Basil
+  text: "Basil and his follower or interpreter St. Ambrose wrote Hexaemeron books on Genesis"

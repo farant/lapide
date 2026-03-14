@@ -48,3 +48,9 @@ Seat of the papacy and the Catholic Church. Lapide was summoned here by his Jesu
   text: "Rome at last touches his chains and drinks of his blood upon its glorious dust"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p51-s-b17c841` — John saw idolatrous Rome fall in the Apocalypse
   text: "saw idolatrous Rome fall"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p20-s-647767e` — Pope Agapetus endeavored to introduce at Rome schools of sacred Scripture like those at Alexandria and Nisibis
+  text: "together with the most blessed Agapetus of the city of Rome"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-iv-p20-s-f471cfb` — Cassiodorus strove to have accredited Doctors received into a Christian school at Rome
+  text: "so by pooling resources in the city of Rome, accredited Doctors might rather be received into a Christian school"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#saintly-examples-p5-s-dd53619` — St. Dominic at Rome and elsewhere publicly taught many books of Scripture
+  text: "at Rome and elsewhere he publicly taught many of its books"

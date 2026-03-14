@@ -19,3 +19,5 @@ Capital of the Assyrian Empire; Jonah called it to repentance and under its name
 
 - `02_Clemens_Hieronymi_Du_Culte.html#jerome-to-paulinus-p26-s-ebd497d` — Jonah calls the world to repentance and under the name of Nineveh announces salvation to the nations
   text: "under the name of Nineveh announces salvation to the nations"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#utility-v-p2-s-312fd05` — Christ recalls the Ninevites to strike the obstinate minds of the Jews
+  text: "He terrifies and strikes the obstinate minds of the Jews by recalling Sodom, the Ninevites, and the Queen of the South"

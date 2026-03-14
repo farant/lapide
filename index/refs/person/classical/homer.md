@@ -32,3 +32,7 @@ Ancient Greek epic poet. Calls a king the shepherd of the peoples.
   text: "it surrenders to a passionate admiration that it has known only in reading Homer or Virgil"
 - `02_Clemens_Hieronymi_Du_Culte.html#du-culte-p15-s-3dc65e4` — Homer's songs on the wrath of Achilles are set beside but below the Miserere, Lamentations, and Isaiah 53
   text: "Homer's songs on the wrath of Achilles"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#praises-of-moses-p7-s-e39925e` — Listed among those who learned from Moses through Egypt
+  text: "Orpheus, Homer, Solon, Pythagoras"
+- `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#moses-most-ancient-p6-s-2287c4b` — Listed among sages preceded by Moses
+  text: "Homer, Hesiod, Thales"
