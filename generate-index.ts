@@ -361,21 +361,24 @@ ${allEventItems.join("\n")}
 `;
   }
 
-  // References section — parse structurally from body markdown
+  // References section — parse structurally from body markdown, grouped by source file
   const refSection = ref.body.match(/## References in Commentary\n([\s\S]*?)(?=\n## |\n*$)/);
   let refsHtml = "";
   if (refSection) {
     const refLines = refSection[1].split("\n");
-    const refItems: string[] = [];
+    interface ParsedRef {
+      file: string;
+      anchor: string;
+      synopsis: string;
+      textQuote: string;
+    }
+    const parsedRefs: ParsedRef[] = [];
     for (let ri = 0; ri < refLines.length; ri++) {
       const line = refLines[ri];
       const refMatch = line.match(/^- `([^#]+)#([^`]+)` — (.+)$/);
       if (!refMatch) continue;
 
       const [, refFile, refAnchor, synopsis] = refMatch;
-      const displayName = humanizeFilename(refFile);
-      // Strip -s-{hash} from anchor for display
-      const displayAnchor = humanizeSection(refAnchor.replace(/-s-[a-f0-9]{7}$/, ""));
 
       // Peek at next line for text: "..."
       let textQuote = "";
@@ -383,27 +386,45 @@ ${allEventItems.join("\n")}
         const textMatch = refLines[ri + 1].match(/^\s+text:\s*"(.+)"$/);
         if (textMatch) {
           textQuote = textMatch[1];
-          ri++; // skip the text line
+          ri++;
         }
       }
 
-      const entityParam = encodeURIComponent(fullSlug);
-      let item = `      <li>
-        <a href="/${refFile}?entity=${entityParam}#${refAnchor}" class="source-ref">${escHtml(displayName)} — ${escHtml(displayAnchor)}</a>
-        <span class="ref-context">— ${escHtml(synopsis)}</span>`;
-      if (textQuote) {
-        item += `\n        <blockquote class="ref-quote">"${escHtml(textQuote)}"</blockquote>`;
-      }
-      item += `\n      </li>`;
-      refItems.push(item);
+      parsedRefs.push({ file: refFile, anchor: refAnchor, synopsis, textQuote });
     }
-    if (refItems.length > 0) {
+
+    if (parsedRefs.length > 0) {
+      // Group by source file, preserving order of first appearance
+      const fileGroups: Map<string, ParsedRef[]> = new Map();
+      for (const pr of parsedRefs) {
+        if (!fileGroups.has(pr.file)) fileGroups.set(pr.file, []);
+        fileGroups.get(pr.file)!.push(pr);
+      }
+
+      let groupsHtml = "";
+      const entityParam = encodeURIComponent(fullSlug);
+
+      for (const [file, refs] of fileGroups) {
+        const displayName = lookupSourceTitle(file);
+        groupsHtml += `\n    <h3 class="ref-source-heading">${escHtml(displayName)}</h3>`;
+        groupsHtml += `\n    <ul>`;
+        for (const pr of refs) {
+          const cleanAnchor = pr.anchor.replace(/-s-[a-f0-9]{7}$/, "");
+          const displayAnchor = lookupSectionLabel(pr.file, cleanAnchor);
+          let item = `\n      <li>
+        <a href="/${pr.file}?entity=${entityParam}#${pr.anchor}" class="source-ref">${escHtml(displayAnchor)}</a>
+        <span class="ref-context">— ${escHtml(pr.synopsis)}</span>`;
+          if (pr.textQuote) {
+            item += `\n        <blockquote class="ref-quote">"${escHtml(pr.textQuote)}"</blockquote>`;
+          }
+          item += `\n      </li>`;
+          groupsHtml += item;
+        }
+        groupsHtml += `\n    </ul>`;
+      }
+
       refsHtml = `
-  <section id="references">
-    <h2>References in Commentary</h2>
-    <ul>
-${refItems.join("\n")}
-    </ul>
+  <section id="references">${groupsHtml}
   </section>
 `;
     }
@@ -720,7 +741,39 @@ ${listItems.join("\n")}
 
 // ── Main ──
 
+// Source labels lookup — maps filenames and section IDs to human-readable names
+let sourceLabels: Record<string, { title: string; sections: Record<string, string> }> = {};
+
+function lookupSourceTitle(filename: string): string {
+  return sourceLabels[filename]?.title || humanizeFilename(filename);
+}
+
+function lookupSectionLabel(filename: string, sectionId: string): string {
+  // Strip paragraph suffix (e.g., "verse-1-p3" → "verse-1", "preface-reader-p5" → "preface-reader")
+  // Walk backwards from the full ID, trying progressively shorter prefixes
+  const sections = sourceLabels[filename]?.sections;
+  if (sections) {
+    // Try exact match first
+    if (sections[sectionId]) return sections[sectionId];
+    // Try stripping -pN suffix
+    const stripped = sectionId.replace(/-p\d+$/, "");
+    if (sections[stripped]) return sections[stripped];
+    // Try stripping -pN-s-XXXXXXX suffix
+    const strippedHash = sectionId.replace(/-p\d+(-s-[a-f0-9]{7})?$/, "");
+    if (sections[strippedHash]) return sections[strippedHash];
+  }
+  return humanizeSection(sectionId);
+}
+
 async function main() {
+  // Load source labels
+  try {
+    const labelsContent = await readFile(join(INDEX_DIR, "source-labels.json"), "utf-8");
+    sourceLabels = JSON.parse(labelsContent);
+  } catch {
+    // No labels file — fall back to humanize functions
+  }
+
   console.log("Reading ref files...");
   const refs = await collectRefFiles();
   console.log(`Found ${refs.length} ref files`);

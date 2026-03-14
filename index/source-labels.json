@@ -1,0 +1,305 @@
+{
+  "01_Preliminares.html": {
+    "title": "Preliminaries",
+    "sections": {
+      "preamble-p1": "Cornelius a Lapide, S.J.",
+      "dedicatory-letter": "TO THE MOST REVEREND AND MOST ILLUSTRIOUS LORD HENRY FRANCIS VAN DER BURCH, ARCHBISHOP AND DUKE OF CAMBRAI, PRINCE OF THE HOLY ROMAN EMPIRE, COUNT OF CAMBRAI.",
+      "life": "THE LIFE OF CORNELIUS A LAPIDE.",
+      "trent-decrees": "DECREES OF THE COUNCIL OF TRENT (SESSION IV).",
+      "preface-reader": "PREFACE TO THE READER (1)",
+      "clement-viii": "POPE CLEMENT VIII. FOR A PERPETUAL MEMORIAL OF THE MATTER."
+    }
+  },
+  "02_Clemens_Hieronymi_Du_Culte.html": {
+    "title": "Pope Clement VIII, Jerome's Prefaces, On Worship",
+    "sections": {
+      "preamble-p1": "St. Jerome / Fr. H. D. Lacordaire, O.P.",
+      "helmeted-prologue": "I. THE HELMETED PROLOGUE.",
+      "jerome-to-paulinus": "II. JEROME TO PAULINUS.",
+      "du-culte": "ON THE WORSHIP OF JESUS CHRIST IN THE SCRIPTURES."
+    }
+  },
+  "12_Proemium_Et_Encomium_Sacrae_Scripturae.html": {
+    "title": "Preface and Praise of Sacred Scripture",
+    "sections": {
+      "preamble-p1": "Cornelius a Lapide, S.J.",
+      "section-one": "Section One",
+      "chapter-i": "Chapter I: On the Excellence, Necessity, and Fruit of Sacred Scripture",
+      "chapter-ii": "Chapter II: On the Object and Breadth of Sacred Scripture",
+      "chapter-iii": "Chapter III: On the Difficulty of Sacred Scripture",
+      "chapter-iv": "Chapter IV: The Judgments and Examples of the Fathers",
+      "chapter-v": "Chapter V: On the Dispositions Required for This Study",
+      "the-authors-method": "The Author's Method (paragraph 48)",
+      "peroration": "Peroration and Conclusion of Section One",
+      "section-two": "Section Two: On the Use and Fruit of the Pentateuch and the Old Testament",
+      "heresies-against-the-ot": "Heresies Proscribing the Old Testament",
+      "arguments-for-the-ot": "Arguments for the Old Testament",
+      "the-septuagint": "The Septuagint Translation and Greek Translators",
+      "the-fathers": "The Fathers' Defense of the Old Testament",
+      "saintly-examples": "Saintly Examples of Scripture Study",
+      "sacred-writers-as-pens": "Sacred Writers as Pens of the Holy Spirit",
+      "six-utilities": "The Six Utilities of the Old Testament",
+      "utility-i": "I. The Old Testament Establishes Faith",
+      "utility-ii": "II. The Richness of the Old Testament",
+      "utility-iii": "III. The New Testament Cannot Be Understood Without the Old",
+      "utility-iv": "IV. The Old Testament Surpasses the New in Allegorical Richness",
+      "utility-v": "V. Figures, Examples, and Maxims from the Old Testament",
+      "utility-vi": "VI. The Old Testament as Forerunner to the New",
+      "section-three": "Section Three: Who, and How Great, Was Moses?",
+      "moses-three-periods": "Moses's Three Periods of Forty Years",
+      "moses-virtues": "The Virtues of Moses",
+      "moses-humility": "Moses's Humility and Meekness",
+      "moses-beatific-vision": "Moses and the Beatific Vision",
+      "praises-of-moses": "Praises of Moses from Scripture and the Fathers",
+      "moses-and-christ": "Moses and Christ: Nineteen Parallels",
+      "moses-most-ancient": "Moses as the Most Ancient Theologian, Philosopher, Poet, and Historian",
+      "prayer-to-moses": "Prayer to Moses"
+    }
+  },
+  "14_Commentaria_In_Pentateuchum_Mosis_Canones.html": {
+    "title": "Commentary on the Pentateuch of Moses",
+    "sections": {
+      "preamble-p1": "Cornelius a Lapide, S.J.",
+      "argumentum": "Argumentum",
+      "canons": "Canons Bearing a Torch Before the Pentateuch",
+      "sacred-chronology": "Sacred Chronology"
+    }
+  },
+  "01_genesis_01.html": {
+    "title": "Chapter I (The Six Days of Creation)",
+    "sections": {
+      "preamble-p1": "Cornelius a Lapide",
+      "introduction": "Introduction",
+      "chapter-one": "Chapter One",
+      "synopsis": "Synopsis of the Chapter",
+      "vulgate-text": "Vulgate Text: Genesis 1:1-31",
+      "verse-1": "Verse 1: In the beginning God created heaven and earth",
+      "in-the-beginning": "In the Beginning: Nine Interpretations",
+      "he-created": "He Created",
+      "god-elohim": "God (Elohim): Thirteen Definitions",
+      "heaven-and-earth": "Heaven and Earth: Four Interpretations",
+      "verse-2": "Verse 2: And the earth was without form and void",
+      "verse-3": "Verse 3: And God said: Let there be light",
+      "verse-4": "Verse 4: And God saw the light that it was good",
+      "verse-5": "Verse 5: And He called the light Day",
+      "second-day": "On the Work of the Second Day",
+      "verse-6": "Verse 6: Let there be a firmament",
+      "verse-8": "Verse 8: And God called the firmament Heaven",
+      "third-day": "On the Work of the Third Day",
+      "verse-9": "Verse 9: Let the waters be gathered together",
+      "verse-10": "Verse 10: And God called the dry land Earth",
+      "verse-11": "Verse 11: Let the earth bring forth",
+      "verse-12": "Verse 12: And the earth brought forth",
+      "fourth-day": "On the Work of the Fourth Day",
+      "verse-14": "Verse 14: Let There Be Lights in the Firmament",
+      "verse-16": "Verse 16: And God Made Two Great Lights",
+      "fifth-day": "On the Work of the Fifth Day",
+      "verse-20": "Verse 20: Let the Waters Bring Forth",
+      "verse-21": "Verse 21: And God Created the Great Sea Creatures",
+      "verse-22": "Verse 22: And He Blessed Them, Saying: Increase and Multiply",
+      "sixth-day": "On the Work of the Sixth Day",
+      "verse-24": "Verse 24: Let the Earth Bring Forth the Living Creature",
+      "verse-26": "Verse 26: Let Us Make Man in Our Image and Likeness",
+      "verse-27": "Verse 27: Male and Female He Created Them",
+      "verse-28": "Verse 28: Increase and Multiply",
+      "verse-29": "Verse 29: Behold I Have Given You Every Herb for Food",
+      "verse-31": "Verse 31: And God Saw All Things That He Had Made, and They Were Very Good"
+    }
+  },
+  "01_genesis_02.html": {
+    "title": "Chapter II (Paradise and the Formation of Eve)",
+    "sections": {}
+  },
+  "01_genesis_03.html": {
+    "title": "Chapter III (The Fall of Man)",
+    "sections": {}
+  },
+  "01_genesis_04.html": {
+    "title": "Chapter IV (Cain and Abel)",
+    "sections": {}
+  },
+  "01_genesis_05.html": {
+    "title": "Chapter V (The Patriarchs from Adam to Noah)",
+    "sections": {}
+  },
+  "01_genesis_06.html": {
+    "title": "Chapter VI (The Corruption of Man and the Ark)",
+    "sections": {}
+  },
+  "01_genesis_07.html": {
+    "title": "Chapter VII (The Flood)",
+    "sections": {}
+  },
+  "01_genesis_08.html": {
+    "title": "Chapter VIII (The Recession of the Waters)",
+    "sections": {}
+  },
+  "01_genesis_09.html": {
+    "title": "Chapter IX (The Covenant with Noah)",
+    "sections": {}
+  },
+  "01_genesis_10.html": {
+    "title": "Chapter X (The Table of Nations)",
+    "sections": {}
+  },
+  "01_genesis_11.html": {
+    "title": "Chapter XI (The Tower of Babel)",
+    "sections": {}
+  },
+  "01_genesis_12.html": {
+    "title": "Chapter XII (The Call of Abram)",
+    "sections": {}
+  },
+  "01_genesis_13.html": {
+    "title": "Chapter XIII (Abram and Lot)",
+    "sections": {}
+  },
+  "01_genesis_14.html": {
+    "title": "Chapter XIV (The War of the Kings and Melchisedech)",
+    "sections": {}
+  },
+  "01_genesis_15.html": {
+    "title": "Chapter XV (The Covenant of the Pieces)",
+    "sections": {}
+  },
+  "01_genesis_16.html": {
+    "title": "Chapter XVI (Hagar and Ishmael)",
+    "sections": {}
+  },
+  "01_genesis_17.html": {
+    "title": "Chapter XVII (The Covenant of Circumcision)",
+    "sections": {}
+  },
+  "01_genesis_18.html": {
+    "title": "Chapter XVIII (The Three Angels and the Intercession for Sodom)",
+    "sections": {}
+  },
+  "01_genesis_19.html": {
+    "title": "Chapter XIX (The Destruction of Sodom)",
+    "sections": {}
+  },
+  "01_genesis_20.html": {
+    "title": "Chapter XX (Abraham and Abimelech)",
+    "sections": {}
+  },
+  "01_genesis_21.html": {
+    "title": "Chapter XXI (The Birth of Isaac)",
+    "sections": {}
+  },
+  "01_genesis_22.html": {
+    "title": "Chapter XXII (The Sacrifice of Isaac)",
+    "sections": {}
+  },
+  "01_genesis_23.html": {
+    "title": "Chapter XXIII (The Death of Sarah)",
+    "sections": {}
+  },
+  "01_genesis_24.html": {
+    "title": "Chapter XXIV (Rebecca and the Marriage of Isaac)",
+    "sections": {}
+  },
+  "01_genesis_25.html": {
+    "title": "Chapter XXV (Keturah, Death of Abraham, Esau and Jacob)",
+    "sections": {}
+  },
+  "01_genesis_26.html": {
+    "title": "Chapter XXVI (Isaac and Abimelech, the Wells)",
+    "sections": {}
+  },
+  "01_genesis_27.html": {
+    "title": "Chapter XXVII (Jacob Obtains the Blessing)",
+    "sections": {}
+  },
+  "01_genesis_28.html": {
+    "title": "Chapter XXVIII (Jacob's Ladder at Bethel)",
+    "sections": {}
+  },
+  "01_genesis_29.html": {
+    "title": "Chapter XXIX (Jacob, Rachel, and Laban)",
+    "sections": {}
+  },
+  "01_genesis_30.html": {
+    "title": "Chapter XXX (The Sons of Jacob and the Peeled Rods)",
+    "sections": {}
+  },
+  "01_genesis_31.html": {
+    "title": "Chapter XXXI (Jacob's Flight from Laban)",
+    "sections": {}
+  },
+  "01_genesis_32.html": {
+    "title": "Chapter XXXII (Jacob Wrestles with the Angel)",
+    "sections": {}
+  },
+  "01_genesis_33.html": {
+    "title": "Chapter XXXIII (Jacob's Reconciliation with Esau)",
+    "sections": {}
+  },
+  "01_genesis_34.html": {
+    "title": "Chapter XXXIV (The Violation of Dinah)",
+    "sections": {}
+  },
+  "01_genesis_35.html": {
+    "title": "Chapter XXXV (Jacob's Return to Bethel)",
+    "sections": {}
+  },
+  "01_genesis_36.html": {
+    "title": "Chapter XXXVI (The Descendants of Esau)",
+    "sections": {}
+  },
+  "01_genesis_37.html": {
+    "title": "Chapter XXXVII (Joseph Sold by His Brothers)",
+    "sections": {}
+  },
+  "01_genesis_38.html": {
+    "title": "Chapter XXXVIII (Judah and Tamar)",
+    "sections": {}
+  },
+  "01_genesis_39.html": {
+    "title": "Chapter XXXIX (Joseph and Potiphar's Wife)",
+    "sections": {}
+  },
+  "01_genesis_40.html": {
+    "title": "Chapter XL (Joseph Interprets Dreams in Prison)",
+    "sections": {}
+  },
+  "01_genesis_41.html": {
+    "title": "Chapter XLI (Joseph Interprets Pharaoh's Dreams)",
+    "sections": {}
+  },
+  "01_genesis_42.html": {
+    "title": "Chapter XLII (Joseph's Brothers Come to Egypt)",
+    "sections": {}
+  },
+  "01_genesis_43.html": {
+    "title": "Chapter XLIII (The Second Journey to Egypt)",
+    "sections": {}
+  },
+  "01_genesis_44.html": {
+    "title": "Chapter XLIV (The Silver Cup in Benjamin's Sack)",
+    "sections": {}
+  },
+  "01_genesis_45.html": {
+    "title": "Chapter XLV (Joseph Reveals Himself)",
+    "sections": {}
+  },
+  "01_genesis_46.html": {
+    "title": "Chapter XLVI (Jacob's Journey to Egypt)",
+    "sections": {}
+  },
+  "01_genesis_47.html": {
+    "title": "Chapter XLVII (Jacob in Egypt)",
+    "sections": {}
+  },
+  "01_genesis_48.html": {
+    "title": "Chapter XLVIII (Jacob Blesses Ephraim and Manasseh)",
+    "sections": {}
+  },
+  "01_genesis_49.html": {
+    "title": "Chapter XLIX (Jacob's Deathbed Blessings)",
+    "sections": {}
+  },
+  "01_genesis_50.html": {
+    "title": "Chapter L (Jacob's Burial and the Death of Joseph)",
+    "sections": {}
+  }
+}

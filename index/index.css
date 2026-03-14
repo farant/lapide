@@ -147,6 +147,12 @@ article#entry h1 {
 .source-ref {
   color: #4a4a8a;
 }
+.ref-source-heading {
+  font-size: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+  color: #444;
+}
 
 /* ── Events section ── */
 
