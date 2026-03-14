@@ -69,7 +69,7 @@
 - **Lat/Lon**: 40.4637, -3.7492
 - **Occurrences**:
   - `#god-elohim-p24` — Spain mentioned in an example of the royal plural: "We, Philip, King of Spain"
-    text: " as the Latins also do, saying for example "We, Philip, King of Spain.""
+    text: "as the Latins also do, saying for example "We, Philip, King of Spain.""
 - **Related people**: philip-ii
 
 ### The Indies

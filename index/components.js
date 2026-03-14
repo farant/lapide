@@ -763,3 +763,155 @@ if (!document.getElementById('entity-panel-styles')) {
 	style.textContent = STYLES;
 	document.head.appendChild(style);
 }
+
+// ── Index Search ──
+
+(function initSearch() {
+	const input = document.getElementById('index-search-input');
+	const resultsList = document.getElementById('index-search-results');
+	if (!input || !resultsList) return;
+
+	let searchData = null;
+	let debounceTimer = null;
+
+	async function ensureLoaded() {
+		if (searchData) return;
+		try {
+			const res = await fetch('/index/search-index.json');
+			searchData = await res.json();
+		} catch (e) {
+			console.warn('Could not load search index:', e);
+		}
+	}
+
+	function search(query) {
+		if (!searchData || !query) return [];
+		const q = query.toLowerCase();
+		const results = [];
+
+		for (const row of searchData.r) {
+			const name = (row[0] || '').toLowerCase();
+			const desc = (row[4] || '').toLowerCase();
+			const aka = row[3] || [];
+
+			let score = 0;
+
+			if (name.includes(q)) {
+				score = name === q ? 100 : name.startsWith(q) ? 80 : 60;
+			} else {
+				for (const a of aka) {
+					if (a.toLowerCase().includes(q)) { score = 40; break; }
+				}
+			}
+
+			if (!score && desc.includes(q)) score = 20;
+
+			if (score) results.push({ row, score });
+		}
+
+		results.sort((a, b) => b.score - a.score);
+		return results;
+	}
+
+	const CAT_ORDER = ['person', 'verse', 'subject', 'bibliography', 'place', 'organization', 'language', 'year'];
+	const CAT_LABELS = {
+		person: 'People', verse: 'Verses', subject: 'Subjects',
+		bibliography: 'Bibliography', place: 'Places', organization: 'Organizations',
+		language: 'Language', year: 'Years'
+	};
+
+	function render(results) {
+		resultsList.innerHTML = '';
+
+		if (results.length === 0) {
+			resultsList.classList.remove('active');
+			return;
+		}
+
+		// Group by category
+		const groups = new Map();
+		for (const { row } of results) {
+			const cat = row[2];
+			if (!groups.has(cat)) groups.set(cat, []);
+			groups.get(cat).push(row);
+		}
+
+		const count = document.createElement('li');
+		count.className = 'search-result-count';
+		count.textContent = `${results.length} result${results.length === 1 ? '' : 's'}`;
+		resultsList.appendChild(count);
+
+		// Render groups in category order
+		const cats = [...groups.keys()].sort((a, b) =>
+			(CAT_ORDER.indexOf(a) === -1 ? 99 : CAT_ORDER.indexOf(a)) -
+			(CAT_ORDER.indexOf(b) === -1 ? 99 : CAT_ORDER.indexOf(b))
+		);
+
+		for (const cat of cats) {
+			const rows = groups.get(cat);
+
+			const header = document.createElement('li');
+			header.className = 'search-group-header';
+			header.textContent = `${CAT_LABELS[cat] || cat} (${rows.length})`;
+			resultsList.appendChild(header);
+
+			for (const row of rows) {
+				const li = document.createElement('li');
+				li.className = 'search-result';
+
+				const a = document.createElement('a');
+				a.href = '/index/' + row[1] + '.html';
+
+				const nameSpan = document.createElement('span');
+				nameSpan.className = 'search-result-name';
+				nameSpan.textContent = row[0];
+				a.appendChild(nameSpan);
+
+				// Language entries: show transliteration in parentheses
+				if (cat === 'language' && row[3] && row[3].length > 0) {
+					const translit = document.createElement('span');
+					translit.className = 'search-result-translit';
+					translit.textContent = ' (' + row[3][0] + ')';
+					a.appendChild(translit);
+				}
+
+				if (row[4]) {
+					const descDiv = document.createElement('div');
+					descDiv.className = 'search-result-desc';
+					descDiv.textContent = row[4];
+					a.appendChild(descDiv);
+				}
+
+				li.appendChild(a);
+				resultsList.appendChild(li);
+			}
+		}
+
+		resultsList.classList.add('active');
+	}
+
+	input.addEventListener('focus', ensureLoaded);
+
+	input.addEventListener('input', () => {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(() => {
+			const q = input.value.trim();
+			if (q.length < 2) {
+				resultsList.classList.remove('active');
+				resultsList.innerHTML = '';
+				return;
+			}
+			const results = search(q);
+			render(results);
+		}, 150);
+	});
+
+	input.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			input.value = '';
+			resultsList.classList.remove('active');
+			resultsList.innerHTML = '';
+			input.blur();
+		}
+	});
+})();

@@ -98,18 +98,18 @@ Bishop of Hippo and one of the four great Latin Doctors of the Church. His writi
   text: "David's adultery, which St. Augustine, St. Ambrose, and others teach was a type of the love of Christ"
 - `01_genesis_01.html#in-the-beginning-p3-s-b4b663d` — Cited as first interpreter of "In the beginning" meaning "in the first origin of time"; from Book I of On the Literal Interpretation of Genesis, ch. 1
   text: "First, St. Augustine, book I of On the Literal Interpretation of Genesis, ch. 1; Ambrose and Basil, homily 1 on the Hexameron: \"In the beginning,\" they say, that is, in the first origin or start, not of eternity, not of aeviternity, but of time and of the world"
-- `01_genesis_01.html#in-the-beginning-p5-s-61da540` — Quoted from his Sentences, number 280, on the origin of time from creation
-  text: "Whence St. Augustine in his Sentences, number 280: \"Once creatures were made,\" he says, \"times began to run in their motions.\""
+- `01_genesis_01.html#in-the-beginning-p5-s-75fdd48` — Quoted from his Sentences, number 280, on the origin of time from creation
+  text: "Whence St. Augustine in his Sentences, number 280: "Once creatures were made," he says, "times began to run in their motions. "
 - `01_genesis_01.html#in-the-beginning-p9-s-692b47d` — Cited again for second interpretation "In the Son"; and the Lateran Council chapter Firmiter
   text: "Secondly, and better according to the letter, the same Augustine, Ambrose, and Basil in the same place, and the Lateran Council, chapter Firmiter"
 - `01_genesis_01.html#in-the-beginning-p11-s-04f2ec5` — Cited for third interpretation "Before all things"
   text: "St. Augustine also brings forth this meaning above."
-- `01_genesis_01.html#he-created-p6-s-c9c41a3` — Cited for the reason God created: because He is good, after Plato; from Book XI of The City of God, ch. 21; also quoted from Confessions I
-  text: "it was fitting that good works should come from a good God, says Plato, and after Plato, St. Augustine, book XI of The City of God, ch. 21. Wherefore the same Augustine beautifully says, Confessions I: \"You have made us, O Lord, for Yourself, and our heart is restless until it rests in You\""
-- `01_genesis_01.html#he-created-p13-s-ac52b2f` — Quoted at length from Book XI of The City of God, chapter III, on the world proclaiming that it was made by God
-  text: "Saint Augustine speaks admirably, in book XI of The City of God, chapter III: \"The world itself, by its most orderly mutability and mobility, and by the most beautiful appearance of all visible things, proclaims in a certain silent manner both that it was made and that it could not have been made except by God\""
-- `01_genesis_01.html#god-elohim-p13-s-035ddd4` — Quoted from Book III of On the Trinity, chapter iv, on God as providence over all things
-  text: "as Saint Augustine says, book III of On the Trinity, chapter iv: \"Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler\""
+- `01_genesis_01.html#he-created-p6-s-29f621f` — Cited for the reason God created: because He is good, after Plato; from Book XI of The City of God, ch. 21; also quoted from Confessions I
+  text: "it was fitting that good works should come from a good God, says Plato, and after Plato, St. Augustine, book XI of The City of God, ch. 21. Wherefore the same Augustine beautifully says, Confessions I: "You have made us, O Lord, for Yourself, and our heart is restless until it rests in You;"
+- `01_genesis_01.html#he-created-p13-s-5627540` — Quoted at length from Book XI of The City of God, chapter III, on the world proclaiming that it was made by God
+  text: "Saint Augustine speaks admirably, in book XI of The City of God, chapter III: "The world itself, by its most orderly mutability and mobility, and by the most beautiful appearance of all visible things, proclaims in a certain silent manner both that it was made and that it could not have been made except by God,"
+- `01_genesis_01.html#god-elohim-p13-s-21e3a9f` — Quoted from Book III of On the Trinity, chapter iv, on God as providence over all things
+  text: "as Saint Augustine says, book III of On the Trinity, chapter iv: "Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler,"
 - `01_genesis_01.html#god-elohim-p14-s-c35069f` — Cited for the fifth definition of God: take away created things and what remains is the essence of good things
   text: "The same Saint Augustine: If you see, he says, a good angel, a good human being, a good heaven; take away the angel, the human being, the heaven; and what remains is the essence of good things, that is, God."
 - `01_genesis_01.html#god-elohim-p18-s-8b563f9` — Quoted from Meditations on the ninth definition of God as incomprehensible
@@ -128,16 +128,16 @@ Bishop of Hippo and one of the four great Latin Doctors of the Church. His writi
   text: "Furthermore, light is knowledge and wisdom. Whence St. Augustine says: \"Light was created first,\" that is, \"wisdom was created before all things\""
 - `01_genesis_01.html#verse-3-p16-s-b75a7ac` — Cited for the symbolic interpretation: "let there be light" means "let there be an Angel"; also for the Word of God interpretation
   text: "Symbolically, "let there be light" means "let there be an Angel," says St. Augustine."
-- `01_genesis_01.html#verse-4-p2-s-4a32188` — Cited from Sentences, no. 144, on the three things about creation
-  text: "Learnedly St. Augustine says in the Sentences, no. 144: \"Three things especially about the condition of creation we needed to be told\""
+- `01_genesis_01.html#verse-4-p2-s-d3c2a3f` — Cited from Sentences, no. 144, on the three things about creation
+  text: "Learnedly St. Augustine says in the Sentences, no. 144: "Three things especially about the condition of creation we needed to be told:"
 - `01_genesis_01.html#verse-5-p2-s-024017a` — Cited from Book I of On Genesis Against the Manichaeans, ch. 9 and 10, on the meaning of "called"
   text: "So St. Augustine, Book I of On Genesis Against the Manichaeans, ch. 9 and 10."
 - `01_genesis_01.html#verse-5-p7-s-bf0ea4c` — Cited from Book IV of On Genesis Literally and Book XI of The City of God for the view that all things were created simultaneously
   text: "Note that St. Augustine, Book IV of On Genesis Literally, and Book XI of The City of God, ch. 7, wants these days to be understood mystically"
 - `01_genesis_01.html#verse-6-p12-s-b70e305` — Quoted on the authority of Scripture being greater than human genius
   text: "the authority of this Scripture is greater, says St. Augustine, than all the capacity of human genius."
-- `01_genesis_01.html#verse-8-p2-s-5c51f3e` — Cited on the etymology of "coelum" from "celare"
-  text: "so St. Augustine; or, as St. Ambrose says, 'coelum' is called as if 'caelatum'"
+- `01_genesis_01.html#verse-8-p2-s-f687369` — Cited on the etymology of "coelum" from "celare"
+  text: "so St. Augustine; or, as St. Ambrose says, 'coelum' is called as if 'caelatum,"
 - `01_genesis_01.html#verse-14-p3-s-6eddcc0` — Cited from Enchiridion ch. 58, questioning whether stars are animated
   text: "St. Augustine, Enchiridion ch. 58, questions whether the sun, moon, and stars are animated"
 - `01_genesis_01.html#verse-14-p18-s-987ebbb` — Quoted from Book XIII On Genesis Literally, ch. 13, on time as a sign of eternity; also his conversation with Monica from Confessions Book IX
@@ -176,8 +176,8 @@ Bishop of Hippo and one of the four great Latin Doctors of the Church. His writi
   text: "says St. Augustine (Tract. 9 on John), the four regions of the world are contained in the name Adam in Greek"
 - `01_genesis_01.html#verse-31-p4-s-c5213bc` — Cited from Book 3 of On the Literal Meaning of Genesis, ch. 24, giving reasons why "it was good" was not said of man
   text: "St. Augustine brings two other reasons in Book 3 of On the Literal Meaning of Genesis, ch. 24."
-- `01_genesis_01.html#verse-31-p7-s-2f36db1` — Quoted at length from Book 1, On Genesis Against the Manichees, ch. 21, on the beauty of the whole world
-  text: "St. Augustine, Book 1, On Genesis Against the Manichees, ch. 21: \"When He was treating of individual things, He would only say: 'God saw that it was good'\""
+- `01_genesis_01.html#verse-31-p7-s-37f0cbb` — Quoted at length from Book 1, On Genesis Against the Manichees, ch. 21, on the beauty of the whole world
+  text: " St. Augustine, Book 1, On Genesis Against the Manichees, ch. 21: "When He was treating of individual things, He would only say: 'God saw that it was good'"
 - `01_genesis_01.html#verse-31-p16-s-3780a29` — Cited from Epistle 28, on the world as music of God; also from Book 11 of the City of God, ch. 18
   text: "St. Augustine, Epistle 28, citing that passage of Isaiah 40 according to the Septuagint"
 - `01_genesis_01.html#verse-31-p19-s-de4a9a5` — Quoted from Sentences, no. 141 and 440

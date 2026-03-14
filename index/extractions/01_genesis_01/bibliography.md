@@ -44,7 +44,7 @@
   - `#verse-5-p2` — Cited (Book I, ch. 9 and 10) on God calling the light Day
     text: "So St. Augustine, Book I of On Genesis Against the Manichaeans, ch. 9 and 10."
   - `#verse-31-p7` — Cited (Book I, ch. 21) on "very good" applied to all things together
-    text: "St. Augustine, Book 1, On Genesis Against the Manichees, ch. 21"
+    text: " St. Augustine, Book 1, On Genesis Against the Manichees, ch. 21"
   - `#verse-24-p6` — Cited (Book I, ch. 16) on reasons God created venomous creatures
     text: "See St. Augustine, Book I On Genesis Against the Manicheans, 16."
 - **Related people**: Augustine of Hippo
@@ -110,7 +110,7 @@
 - **Year**: various (compiled)
 - **Occurrences**:
   - `#in-the-beginning-p5` — Cited (no. 280) on time beginning from the creature
-    text: "St. Augustine in his Sentences, number 280: "Once creatures were made," he says, "times began to run in their motions.""
+    text: "Whence St. Augustine in his Sentences, number 280: "Once creatures were made," he says, "times began to run in their motions. "
   - `#verse-4-p2` — Cited (no. 144) on the three things about creation: who, through what, and why
     text: "Learnedly St. Augustine says in the Sentences, no. 144"
   - `#verse-14-p18` — Cited (Sent. 270) on the difference between temporal and eternal things
@@ -228,7 +228,7 @@
   - `#verse-3-p17` — Cited (Homily on Penance) on Christ bestowing His prerogatives on others
     text: "On this St. Basil speaks beautifully in his Homily on Penance"
   - `#verse-9-p16` — Cited on the Red Sea being restrained by God's command
-    text: "St. Basil asks: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt""
+    text: "St. Basil asks: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt, which is so much lower than the sea itself"
   - `#verse-11-p3` — Cited on God's providence in germination
     text: "Moreover St. Basil marvels, and rightly so, at God's providence in germination"
   - `#verse-14-p16` — Cited (Homily 6) on the moon as sign of weather
@@ -254,9 +254,9 @@
   - `#verse-26-p13` — Cited (Homily 10) on distinguishing image and likeness
     text: "So St. Basil, Homily 10 on the Hexameron: "Through the image impressed on my soul, I obtained the use of reason; but having become a Christian, I am made truly like God.""
   - `#verse-26-p31` — Cited (Homily 10) on man as an animal born to command
-    text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command.""
+    text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command. Why do you submit to this wretched slavery of passions? "
   - `#verse-31-p22` — Cited (Homily 4) on the world as a book testifying to God's glory
-    text: "St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters""
+    text: "St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters, openly testifying and proclaiming the glory of God, and abundantly declaring to you, the intellectual creature, His most august majesty"
 - **Related people**: Basil of Caesarea
 - **Related subjects**: Genesis, creation, patristic exegesis, natural history
 
@@ -285,7 +285,7 @@
   - `#verse-22-p16` — Cited (Book V, ch. 13) on geese defending the Capitol; mocking Roman gods
     text: "Wherefore St. Ambrose, Book V of the Hexaemeron, chapter 13"
   - `#verse-22-p22` — Cited (Book V, ch. 20) on the voices of parrots, blackbirds, nightingales
-    text: "about which St. Ambrose says, Book V of the Hexaemeron, chapter 20"
+    text: " about which St. Ambrose says, Book V of the Hexaemeron, chapter 20"
   - `#verse-24-p16` — Cited (Book VI, ch. 4) on the she-bear shaping her young with her tongue
     text: "and following him St. Ambrose, Book VI of the Hexaemeron, chapter 4"
   - `#verse-26-p32` — Cited (Book VI, beginning) on nature taming elephants, lions, and tigers for man's service
@@ -358,7 +358,7 @@
   - `#verse-29-p5` — Quoted (Book I) on the ancient fathers gathering wild fruits
     text: ""They gathered strawberries,And cornelian cherries, and blackberries clinging to thorny brambles,And acorns that had fallen from the broad tree of Jupiter.""
   - `#verse-24-p27` — Quoted (Book I) on man as a holier creature born to rule
-    text: ""A holier creature than these, more capable of lofty mind, / Was still lacking, one that could rule over all the rest: / Man was born.""
+    text: ""A holier creature than these, more capable of lofty mind,Was still lacking, one that could rule over all the rest:Man was born.""
 - **Related people**: Ovid
 - **Related subjects**: Creation, chaos, golden age, dignity of man
 
@@ -371,7 +371,7 @@
 - **Year**: ~29 BC
 - **Occurrences**:
   - `#verse-12-p11` — Quoted (Book II) on spring as the season of the world's creation
-    text: ""Spring, he says, it was: great spring the world was keeping, / And the East winds were sparing their wintry blasts.""
+    text: ""Spring, he says, it was: great spring the world was keeping, And the East winds were sparing their wintry blasts.""
 - **Related people**: Virgil
 - **Related subjects**: Creation, spring, cosmogony
 
@@ -421,7 +421,7 @@
 - **Year**: ~1st century BC (pseudo-Aristotle)
 - **Occurrences**:
   - `#god-elohim-p10` — Quoted on God as helmsman, charioteer, and commander of the world
-    text: ""What the helmsman is in a ship, the charioteer in a chariot, the leader in a chorus, the law in a city, the commander in an army, the same is God in the world""
+    text: ""What the helmsman is in a ship, the charioteer in a chariot, the leader in a chorus, the law in a city, the commander in an army, the same is God in the world,"
 - **Related people**: Aristotle (attributed)
 - **Related subjects**: Divine governance, cosmology
 
@@ -432,7 +432,7 @@
 - **Year**: uncertain (pseudo-Aristotle)
 - **Occurrences**:
   - `#god-elohim-p12` — Quoted (Book XII, ch. XIX) on God as the center from whom all natures depend
-    text: ""God is He from whom come perpetuity, place, and time, and by whose benefit all things endure; and just as the center of a circle exists in itself""
+    text: ""God is He from whom come perpetuity, place, and time, and by whose benefit all things endure; and just as the center of a circle exists in itself,"
 - **Related people**: Aristotle (attributed)
 - **Related subjects**: Theology, cosmology, Egyptian wisdom
 
@@ -517,7 +517,7 @@
 - **Year**: ~370s–380s
 - **Occurrences**:
   - `#verse-4-p2` — Cited on "He saw" meaning "He caused us to see and know"
-    text: ""He saw," that is, He caused us to see and know, says St. Jerome, Epistle 15."
+    text: " "He saw," that is, He caused us to see and know, says St. Jerome, Epistle 15."
 - **Related people**: Jerome
 - **Related subjects**: Exegesis, divine vision
 
@@ -552,11 +552,11 @@
 - **Year**: ~386–388
 - **Occurrences**:
   - `#heaven-and-earth-p9` — Cited (Homily 2) on God building heaven first as a roof before laying the earth
-    text: "Saint John Chrysostom here, homily 2: "God, contrary to human custom, in perfecting His building, first stretched out heaven""
+    text: "Saint John Chrysostom here, homily 2: "God, contrary to human custom, in perfecting His building, first stretched out heaven, and afterward laid the earth beneath it: first the roof, and afterward the foundation;""
   - `#verse-16-p2` — Cited (Homily 6) on the moon appearing greater due to proximity
     text: "So St. Chrysostom here, homily 6, Pererius, and Fr. Clavius"
   - `#verse-26-p13` — Cited (Homily 9) on "image" meaning dominion, "likeness" meaning moral imitation of God
-    text: "And St. Chrysostom, Homily 9 on Genesis: "He said 'image' on account of dominion; 'likeness,' so that by human powers we may become like God""
+    text: "And St. Chrysostom, Homily 9 on Genesis: "He said 'image' on account of dominion; 'likeness,' so that by human powers we may become like God in gentleness, mildness, etc.,"
 - **Related people**: John Chrysostom
 - **Related subjects**: Genesis, creation, image of God
 
@@ -677,7 +677,7 @@
   - `#verse-26-p3` — Cited on God commanding angels to fashion man's body
     text: "Philo in his book On the Creation of the Six Days"
   - `#verse-26-p9` — Cited on "man" as the abstract universal idea of man (following Plato)
-    text: ""Man" here is not the idea of abstract and universal man, which would be the cause and exemplar of all individual men, as Philo wished following Plato."
+    text: " "Man" here is not the idea of abstract and universal man, which would be the cause and exemplar of all individual men, as Philo wished following Plato."
   - `#verse-20-p7` — Cited on birds being relatives of fish
     text: "Hence Philo calls birds the relatives of fish."
 - **Related people**: Philo of Alexandria
@@ -763,7 +763,7 @@
 - **Year**: ~4th century
 - **Occurrences**:
   - `#god-elohim-p19` — Quoted on God as that which cannot be expressed, appraised, or defined
-    text: ""God, says Saint Gregory of Nazianzus in his Treatise On the Faith, is that which, when spoken of, cannot be expressed; when appraised, cannot be appraised; when defined, grows by the very definition""
+    text: "God, says Saint Gregory of Nazianzus in his Treatise On the Faith, is that which, when spoken of, cannot be expressed; when appraised, cannot be appraised; when defined, grows by the very definition"
 - **Related people**: Gregory Nazianzen
 - **Related subjects**: Apophatic theology, divine attributes
 
@@ -958,7 +958,7 @@
 - **Year**: ~mid 5th century
 - **Occurrences**:
   - `#verse-2-p13` — Quoted on the Holy Spirit hovering over the waters and animating them
-    text: "And the sacred Spirit, hovering over the outstretched waves, / Animated the nurturing waters, giving the seeds of things."
+    text: "And the sacred Spirit, hovering over the outstretched waves, Animated the nurturing waters, giving the seeds of things."
 - **Related people**: Claudius Marius Victor
 - **Related subjects**: Creation, Holy Spirit, biblical poetry
 
@@ -1136,7 +1136,7 @@
 - **Year**: ~2nd century AD
 - **Occurrences**:
   - `#heaven-and-earth-p19` — Quoted on what is the world, God, the ocean, and the earth
-    text: "the philosopher Secundus, when questioned by the emperor Hadrian: "What is the world?" He responded: "An unceasing circuit, an eternal course.""
+    text: "the philosopher Secundus, when questioned by the emperor Hadrian: "What is the world?" He responded: "An unceasing circuit, an eternal course. "
   - `#verse-16-p2` — Quoted on the sun and moon: "The eye of heaven, a splendor without setting"
     text: "The philosopher Secundus, cleverly questioned by the Emperor Hadrian, "What is the sun?" replied"
 - **Related people**: Secundus, Emperor Hadrian

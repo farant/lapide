@@ -18,5 +18,5 @@ Pope Innocent III's symbolic reading of the two great luminaries as the Pontific
 
 ## References in Commentary
 
-- `01_genesis_01.html#verse-14-p14-s-b75a81c` — Innocent III: in the firmament of the universal Church, God made two great luminaries — the Pontifical authority and the royal power; the former presides over spiritual things, the latter over carnal.
-  text: ""In the firmament of heaven," he says, "that is, of the universal Church, God made two great luminaries, that is, He established two dignities, which are the Pontifical authority and the royal power.""
+- `01_genesis_01.html#verse-14-p14-s-8f67642` — Innocent III: in the firmament of the universal Church, God made two great luminaries — the Pontifical authority and the royal power; the former presides over spiritual things, the latter over carnal.
+  text: ""In the firmament of heaven," he says, "that is, of the universal Church, God made two great luminaries, that is, He established two dignities, which are the Pontifical authority and the royal power. "

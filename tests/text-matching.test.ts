@@ -6,6 +6,7 @@ import {
   computeHash,
   findInPlainText,
   parseTextLine,
+  encodeForRefFile,
   extractParagraphs,
 } from "../pipeline-utils";
 
@@ -553,6 +554,83 @@ describe("parseTextLine", () => {
       '  text: "makes his own genius" — indeed, too preeminent — "the Sacraments of the Church," as Jerome says in book V on Isaiah.';
     // Line ends with "Isaiah." not " — so the regex "(.+)"$ cannot match
     expect(parseTextLine(line)).toBeNull();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// 6b. parseTextLine — HTML entity decoding
+// ---------------------------------------------------------------------------
+describe("parseTextLine — HTML entity decoding", () => {
+  test("decodes &ldquo; and &rdquo; to curly double quotes", () => {
+    expect(parseTextLine('  text: "He said, &ldquo;Hello&rdquo;"'))
+      .toBe('He said, \u201CHello\u201D');
+  });
+
+  test("decodes &lsquo; and &rsquo; to curly single quotes", () => {
+    expect(parseTextLine('  text: "the Church&rsquo;s teaching"'))
+      .toBe("the Church\u2019s teaching");
+  });
+
+  test("decodes &mdash; to em dash", () => {
+    expect(parseTextLine('  text: "first &mdash; second"'))
+      .toBe("first \u2014 second");
+  });
+
+  test("decodes &ndash; to en dash", () => {
+    expect(parseTextLine('  text: "pages 10&ndash;15"'))
+      .toBe("pages 10\u201315");
+  });
+
+  test("decodes multiple entities in one line", () => {
+    expect(parseTextLine('  text: "&ldquo;Sacred&rdquo; &mdash; the Church&rsquo;s word"'))
+      .toBe('\u201CSacred\u201D \u2014 the Church\u2019s word');
+  });
+
+  test("decodes &amp; to ampersand", () => {
+    expect(parseTextLine('  text: "faith &amp; reason"'))
+      .toBe("faith & reason");
+  });
+
+  test("passes through text without entities unchanged", () => {
+    expect(parseTextLine('  text: "plain text here"'))
+      .toBe("plain text here");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// 6c. encodeForRefFile
+// ---------------------------------------------------------------------------
+describe("encodeForRefFile", () => {
+  test("encodes curly double quotes to entities", () => {
+    expect(encodeForRefFile('\u201CHello\u201D'))
+      .toBe("&ldquo;Hello&rdquo;");
+  });
+
+  test("encodes curly single quotes to entities", () => {
+    expect(encodeForRefFile("Church\u2019s"))
+      .toBe("Church&rsquo;s");
+  });
+
+  test("encodes em dash to entity", () => {
+    expect(encodeForRefFile("first \u2014 second"))
+      .toBe("first &mdash; second");
+  });
+
+  test("encodes en dash to entity", () => {
+    expect(encodeForRefFile("pages 10\u201315"))
+      .toBe("pages 10&ndash;15");
+  });
+
+  test("leaves plain ASCII unchanged", () => {
+    expect(encodeForRefFile("plain text here"))
+      .toBe("plain text here");
+  });
+
+  test("round-trips: parseTextLine(encode(text)) matches original", () => {
+    const original = '\u201CHello,\u201D he said \u2014 the Church\u2019s teaching';
+    const encoded = encodeForRefFile(original);
+    const line = `  text: "${encoded}"`;
+    expect(parseTextLine(line)).toBe(original);
   });
 });
 

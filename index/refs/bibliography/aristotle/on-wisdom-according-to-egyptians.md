@@ -19,5 +19,5 @@ A pseudonymous treatise attributed to Aristotle on Egyptian wisdom and the natur
 
 ## References in Commentary
 
-- `01_genesis_01.html#god-elohim-p12-s-3d9b25d` — Quoted (Book XII, ch. XIX) on God as the center from whom all natures depend
-  text: ""God is He from whom come perpetuity, place, and time, and by whose benefit all things endure; and just as the center of a circle exists in itself""
+- `01_genesis_01.html#god-elohim-p12-s-eb378f2` — Quoted (Book XII, ch. XIX) on God as the center from whom all natures depend
+  text: ""God is He from whom come perpetuity, place, and time, and by whose benefit all things endure; and just as the center of a circle exists in itself,"

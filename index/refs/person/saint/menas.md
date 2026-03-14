@@ -22,5 +22,5 @@ Egyptian soldier and Christian martyr. When subjected to atrocious tortures, dec
 
 ## References in Commentary
 
-- `01_genesis_01.html#verse-16-p17-s-a18b4a0` — Quoted saying nothing can be compared with the kingdom of heaven
-  text: "So St. Menas, the Egyptian Martyr, when subjected to atrocious tortures, said: \"There is nothing that can be compared with the kingdom of heaven\""
+- `01_genesis_01.html#verse-16-p17-s-bf55142` — Quoted saying nothing can be compared with the kingdom of heaven
+  text: "So St. Menas, the Egyptian Martyr, when subjected to atrocious tortures, said: "There is nothing that can be compared with the kingdom of heaven;"

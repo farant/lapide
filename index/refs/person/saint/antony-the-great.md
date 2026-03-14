@@ -32,5 +32,5 @@ Desert Father and founder of Christian monasticism. Set ablaze by a single voice
   text: "St. Anthony, as reported by Athanasius: If anyone, he says, is held by a desire of knowing even future things, let him have a pure heart"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-v-p22-s-9032e93` — Listed among unlettered men taught loftiest mysteries by holiness of life
   text: "this holiness of life taught Francises, Anthonies, and Pauls — unlettered men"
-- `01_genesis_01.html#verse-31-p20-s-aac2f98` — Quoted: his book is the nature of things created by God
-  text: "when someone asked St. Anthony how he could live in the desert without books, he replied: \"My book, O Philosopher, is the nature of things created by God\""
+- `01_genesis_01.html#verse-31-p20-s-56306b9` — Quoted: his book is the nature of things created by God
+  text: "when someone asked St. Anthony how he could live in the desert without books, he replied: "My book, O Philosopher, is the nature of things created by God,"

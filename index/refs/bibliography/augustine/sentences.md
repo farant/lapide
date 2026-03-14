@@ -20,8 +20,8 @@ A collection of sententious passages drawn from Augustine's works, organized the
 
 ## References in Commentary
 
-- `01_genesis_01.html#in-the-beginning-p5-s-e91626e` — Cited (no. 280) on time beginning from the creature
-  text: "St. Augustine in his Sentences, number 280: "Once creatures were made," he says, "times began to run in their motions.""
+- `01_genesis_01.html#in-the-beginning-p5-s-1807f3f` — Cited (no. 280) on time beginning from the creature
+  text: "St. Augustine in his Sentences, number 280: "Once creatures were made," he says, "times began to run in their motions. "
 - `01_genesis_01.html#verse-4-p2-s-ca6dec7` — Cited (no. 144) on the three things about creation: who, through what, and why
   text: "Learnedly St. Augustine says in the Sentences, no. 144"
 - `01_genesis_01.html#verse-14-p18-s-2ecfcd4` — Cited (Sent. 270) on the difference between temporal and eternal things

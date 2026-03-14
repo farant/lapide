@@ -13,21 +13,21 @@
   - `#in-the-beginning-p3` — Cited as first interpreter of "In the beginning" meaning "in the first origin of time"; from Book I of On the Literal Interpretation of Genesis, ch. 1
     text: " First, St. Augustine, book I of On the Literal Interpretation of Genesis, ch. 1; Ambrose and Basil, homily 1 on the Hexameron: "In the beginning," they say, that is, in the first origin or start, not of eternity, not of aeviternity, but of time and of the world"
   - `#in-the-beginning-p5` — Quoted from his Sentences, number 280, on the origin of time from creation
-    text: "Whence St. Augustine in his Sentences, number 280: \"Once creatures were made,\" he says, \"times began to run in their motions.\""
+    text: "Whence St. Augustine in his Sentences, number 280: "Once creatures were made," he says, "times began to run in their motions. "
   - `#in-the-beginning-p9` — Cited again for second interpretation "In the Son"; and the Lateran Council chapter Firmiter
     text: "Secondly, and better according to the letter, the same Augustine, Ambrose, and Basil in the same place, and the Lateran Council, chapter Firmiter"
   - `#in-the-beginning-p11` — Cited for third interpretation "Before all things"
     text: "St. Augustine also brings forth this meaning above."
   - `#he-created-p6` — Cited for the reason God created: because He is good, after Plato; from Book XI of The City of God, ch. 21; also quoted from Confessions I
-    text: "it was fitting that good works should come from a good God, says Plato, and after Plato, St. Augustine, book XI of The City of God, ch. 21. Wherefore the same Augustine beautifully says, Confessions I: \"You have made us, O Lord, for Yourself, and our heart is restless until it rests in You\""
+    text: "it was fitting that good works should come from a good God, says Plato, and after Plato, St. Augustine, book XI of The City of God, ch. 21. Wherefore the same Augustine beautifully says, Confessions I: "You have made us, O Lord, for Yourself, and our heart is restless until it rests in You;"
   - `#he-created-p13` — Quoted at length from Book XI of The City of God, chapter III, on the world proclaiming that it was made by God
-    text: "Saint Augustine speaks admirably, in book XI of The City of God, chapter III: \"The world itself, by its most orderly mutability and mobility, and by the most beautiful appearance of all visible things, proclaims in a certain silent manner both that it was made and that it could not have been made except by God\""
+    text: "Saint Augustine speaks admirably, in book XI of The City of God, chapter III: "The world itself, by its most orderly mutability and mobility, and by the most beautiful appearance of all visible things, proclaims in a certain silent manner both that it was made and that it could not have been made except by God,"
   - `#god-elohim-p13` — Quoted from Book III of On the Trinity, chapter iv, on God as providence over all things
-    text: "as Saint Augustine says, book III of On the Trinity, chapter iv: \"Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler\""
+    text: "God is providence itself over all things; for, as Saint Augustine says, book III of On the Trinity, chapter iv: "Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler,"
   - `#god-elohim-p14` — Cited for the fifth definition of God: take away created things and what remains is the essence of good things
     text: "The same Saint Augustine: If you see, he says, a good angel, a good human being, a good heaven; take away the angel, the human being, the heaven; and what remains is the essence of good things, that is, God."
   - `#god-elohim-p18` — Quoted from Meditations on the ninth definition of God as incomprehensible
-    text: " "God, says Saint Augustine in his Meditations, is He whom neither the mind reaches, because He is incomprehensible; nor the intellect, because He is unsearchable; nor the senses perceive, because He is invisible"
+    text: ""God, says Saint Augustine in his Meditations, is He whom neither the mind reaches, because He is incomprehensible; nor the intellect, because He is unsearchable; nor the senses perceive, because He is invisible"
   - `#heaven-and-earth-p3` — Cited for first opinion on "heaven and earth" as prime matter; from Book I of On Genesis Against the Manichaeans, chapter VII; and Book I of On Genesis Literally, chapter XIV
     text: "First, Saint Augustine, book I of On Genesis Against the Manichaeans, chapter VII: Heaven and earth, he says, are here called prime matter"
   - `#heaven-and-earth-p5` — Cited for second opinion on "heaven and earth": heaven = angels, earth = prime matter; from Book XI of The City of God, chapter IX
@@ -43,23 +43,23 @@
   - `#verse-3-p16` — Cited for the symbolic interpretation: "let there be light" means "let there be an Angel"; also for the Word of God interpretation
     text: "Symbolically, "let there be light" means "let there be an Angel," says St. Augustine."
   - `#verse-4-p2` — Cited from Sentences, no. 144, on the three things about creation
-    text: "Learnedly St. Augustine says in the Sentences, no. 144: \"Three things especially about the condition of creation we needed to be told\""
+    text: "Learnedly St. Augustine says in the Sentences, no. 144: "Three things especially about the condition of creation we needed to be told:"
   - `#verse-5-p2` — Cited from Book I of On Genesis Against the Manichaeans, ch. 9 and 10, on the meaning of "called"
     text: "So St. Augustine, Book I of On Genesis Against the Manichaeans, ch. 9 and 10."
   - `#verse-5-p7` — Cited from Book IV of On Genesis Literally and Book XI of The City of God for the view that all things were created simultaneously
     text: "Note that St. Augustine, Book IV of On Genesis Literally, and Book XI of The City of God, ch. 7, wants these days to be understood mystically"
   - `#verse-6-p12` — Quoted on the authority of Scripture being greater than human genius
-    text: " "the authority of this Scripture is greater, says St. Augustine, than all the capacity of human genius.""
+    text: ""the authority of this Scripture is greater, says St. Augustine, than all the capacity of human genius.""
   - `#verse-8-p2` — Cited on the etymology of "coelum" from "celare"
-    text: "so St. Augustine; or, as St. Ambrose says, 'coelum' is called as if 'caelatum'"
+    text: "so St. Augustine; or, as St. Ambrose says, 'coelum' is called as if 'caelatum,"
   - `#verse-14-p3` — Cited from Enchiridion ch. 58, questioning whether stars are animated
     text: "St. Augustine, Enchiridion ch. 58, questions whether the sun, moon, and stars are animated"
   - `#verse-14-p18` — Quoted from Book XIII On Genesis Literally, ch. 13, on time as a sign of eternity; also his conversation with Monica from Confessions Book IX
-    text: " St. Augustine, book XIII On Genesis Literally, ch. 13, in the Unfinished Work: "Let them be for signs and seasons," that is, let them distinguish the seasons"
+    text: "St. Augustine, book XIII On Genesis Literally, ch. 13, in the Unfinished Work: "Let them be for signs and seasons," that is, let them distinguish the seasons"
   - `#verse-16-p20` — Quoted extensively from his commentary on Psalm 94 on the patience of the stars/Saints
     text: "Hence the stars teach us patience, says St. Augustine on Psalm 94."
   - `#verse-16-p21` — Quoted again on the constancy of saints like stars, from the same passage
-    text: " For, as Augustine says in the same place: "So many evils are committed, yet the stars do not deviate from above, fixed in heaven"
+    text: "For, as Augustine says in the same place: "So many evils are committed, yet the stars do not deviate from above, fixed in heaven"
   - `#verse-20-p13` — Cited from Book III On the Literal Meaning of Genesis, chapter 3, on fish made from denser water, birds from rarer water
     text: "St. Augustine responds, Book III On the Literal Meaning of Genesis, chapter 3"
   - `#verse-22-p4` — Cited from Book III On the Literal Meaning of Genesis, chapter 13, on God's blessing understood in similar cases
@@ -83,7 +83,7 @@
   - `#verse-26-p22` — Cited from Book II of the Retractations, chapter 24, against Origen, on the image of God being indelible
     text: "So against Origen, St. Augustine teaches in Book II of the Retractations, chapter 24."
   - `#verse-26-p23` — Quoted: "grace is the soul of the soul"
-    text: " "For grace is the soul of the soul," says St. Augustine."
+    text: ""For grace is the soul of the soul," says St. Augustine."
   - `#verse-26-p33` — Cited from Book XIX of The City of God, chapter 14, on civil dominion in the state of innocence
     text: "So St. Augustine, Book XIX of The City of God, chapter 14."
   - `#verse-28-p3` — Cited from Tract. 9 on John, on the name Adam containing the four regions of the world
@@ -91,11 +91,11 @@
   - `#verse-31-p4` — Cited from Book 3 of On the Literal Meaning of Genesis, ch. 24, giving reasons why "it was good" was not said of man
     text: "St. Augustine brings two other reasons in Book 3 of On the Literal Meaning of Genesis, ch. 24."
   - `#verse-31-p7` — Quoted at length from Book 1, On Genesis Against the Manichees, ch. 21, on the beauty of the whole world
-    text: "St. Augustine, Book 1, On Genesis Against the Manichees, ch. 21: \"When He was treating of individual things, He would only say: 'God saw that it was good'\""
+    text: " St. Augustine, Book 1, On Genesis Against the Manichees, ch. 21: "When He was treating of individual things, He would only say: 'God saw that it was good'"
   - `#verse-31-p16` — Cited from Epistle 28, on the world as music of God; also from Book 11 of the City of God, ch. 18
     text: "St. Augustine, Epistle 28, citing that passage of Isaiah 40 according to the Septuagint"
   - `#verse-31-p19` — Quoted from Sentences, no. 141 and 440
-    text: " And St. Augustine in the Sentences, no. 141: "Three things especially we needed to be told about the condition of creation: who made it, through what He made it, why He made it."
+    text: "And St. Augustine in the Sentences, no. 141: "Three things especially we needed to be told about the condition of creation: who made it, through what He made it, why He made it."
 - **Related people**: `saint/ambrose`, `saint/basil-the-great`, `saint/jerome`, `saint/thomas-aquinas`, `classical/plato`, `saint/bernard-of-clairvaux`
 - **Related places**: Hippo
 - **Related works**: On the Literal Interpretation of Genesis, The City of God, Confessions, On the Trinity, On Genesis Against the Manichaeans, Sentences, Meditations, Enchiridion, Retractations
@@ -110,7 +110,7 @@
 - **Role**: Bishop of Caesarea, Doctor of the Church, Church Father
 - **Occurrences**:
   - `#in-the-beginning-p3` — Cited for first interpretation of "In the beginning" as the first origin of time; from Homily 1 on the Hexameron
-    text: " Ambrose and Basil, homily 1 on the Hexameron: "In the beginning," they say, that is, in the first origin or start"
+    text: "Ambrose and Basil, homily 1 on the Hexameron: "In the beginning," they say, that is, in the first origin or start"
   - `#in-the-beginning-p7` — Cited alongside Bede for the view that heaven and earth were created shortly before the first day
     text: "St. Basil and Bede think that heaven and earth were created not on the first day, but shortly before the first day"
   - `#in-the-beginning-p9` — Cited for the second interpretation "In the Son"
@@ -126,15 +126,15 @@
   - `#verse-2-p11` — Cited alongside Diodorus and Jerome on the Hebrew word merachephet referring to birds brooding
     text: "the Hebrew is merachephet, which, as St. Basil, Diodorus, and Jerome testify in the Hebrew Questions on Genesis"
   - `#verse-3-p7` — Quoted from Homily 2 on the Hexaemeron on the beauty light brought to the world
-    text: "St. Basil gives a beautiful comparison in Homily 2 on the Hexaemeron: \"Just as those who pour oil into a deep whirlpool of water give that place clarity and transparency\""
+    text: "St. Basil gives a beautiful comparison in Homily 2 on the Hexaemeron: "Just as those who pour oil into a deep whirlpool of water give that place clarity and transparency,"
   - `#verse-3-p9` — Cited alongside Theodoret and Nazianzen for the view that only the quality of light was created without a subject
     text: "St. Basil, Theodoret, and Nazianzen think that only the quality of light was here created without a subject"
   - `#verse-3-p17` — Quoted from Homily on Penance on Christ bestowing His prerogatives on others
-    text: "On this St. Basil speaks beautifully in his Homily on Penance: \"His own prerogatives Jesus bestows on others.\""
+    text: "On this St. Basil speaks beautifully in his Homily on Penance: "His own prerogatives Jesus bestows on others. "
   - `#verse-9-p5` — Cited alongside Burgensis, Catharinus, and Thomas for the view that the sea was made higher than the earth
     text: "Second, Basil, Burgensis, Catharinus, and St. Thomas think that the sea was here separated from the earth so that it was made higher."
   - `#verse-9-p16` — Quoted on the Red Sea being restrained by God's command
-    text: " St. Basil asks: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt, which is so much lower than the sea itself"
+    text: "St. Basil asks: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt, which is so much lower than the sea itself"
   - `#verse-11-p3` — Quoted on God's providence in germination: stalks, ears, beards; symbolic application to man
     text: "Moreover St. Basil marvels, and rightly so, at God's providence in germination"
   - `#verse-12-p2` — Cited alongside Ambrose for the view that the earth actually brought forth all species on the third day
@@ -146,7 +146,7 @@
   - `#verse-16-p3` — Quoted from Homily 6 on the Hexaemeron on the moon as symbol of inconstancy
     text: "Symbolically, St. Basil, homily 6 on the Hexaemeron: The moon, he says, which perpetually waxes or wanes, is a symbol of inconstancy"
   - `#verse-16-p5` — Quoted on the sun and moon compared to the Creator as a gnat and an ant
-    text: " "For the sun and moon compared to the Creator bear the same proportion as a gnat and an ant," says St. Basil, homily 6 on the Hexaemeron."
+    text: ""For the sun and moon compared to the Creator bear the same proportion as a gnat and an ant," says St. Basil, homily 6 on the Hexaemeron."
   - `#verse-14-p16` — Cited for the phrase "Let them be for signs" as prognostications of weather
     text: "says St. Basil, homily 6 on the Hexaemeron"
   - `#verse-20-p3` — Cited from Homily 7 on the Hexaemeron on fish being unteachable and stupid
@@ -168,7 +168,7 @@
   - `#verse-26-p3` — Cited for denouncing as impious the idea that angels created man
     text: "For St. Basil, Chrysostom, Theodoret, Cyril in Book I Against Julian, and Augustine in Book XVI of The City of God, chapter 6, denounce this as impious"
   - `#verse-26-p13` — Quoted from Homily 10 on the Hexameron on image vs. likeness
-    text: " So St. Basil, Homily 10 on the Hexameron: "Through the image impressed on my soul, I obtained the use of reason; but having become a Christian, I am made truly like God.""
+    text: "So St. Basil, Homily 10 on the Hexameron: "Through the image impressed on my soul, I obtained the use of reason; but having become a Christian, I am made truly like God.""
   - `#verse-26-p17` — Cited from Homily 10 on the image of God in both man and woman
     text: "and Basil here in Homily 10"
   - `#verse-26-p19` — Cited for placing the image of God in man's power to preside over and rule all animals
@@ -176,9 +176,9 @@
   - `#verse-26-p31` — Quoted from Homily 10 on the Hexameron on man as an animal born to command
     text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command. Why do you submit to this wretched slavery of passions?"
   - `#verse-31-p22` — Quoted from Homily 4 on the Hexaemeron on the world as a book proclaiming God's glory
-    text: " St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters, openly testifying and proclaiming the glory of God, and abundantly declaring to you, the intellectual creature, His most august majesty"
+    text: "St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters, openly testifying and proclaiming the glory of God, and abundantly declaring to you, the intellectual creature, His most august majesty"
   - `#heaven-and-earth-p9` — Cited for saying heaven and earth were first laid as foundations of the universe
-    text: " And Saint Basil, homily 1 on the Hexaemeron, says that "heaven and earth were first laid and constructed as certain foundations and supporting bases of the universe.""
+    text: "And Saint Basil, homily 1 on the Hexaemeron, says that "heaven and earth were first laid and constructed as certain foundations and supporting bases of the universe.""
   - `#heaven-and-earth-p10` — Listed among supporters of the empyrean heaven interpretation
     text: "This is the opinion of Blessed Clement, received from the lips of Saint Peter; of Origen, Theodoret, Alcuin, Rabanus, Lyranus, Philo, Saint Hilary, Theophilus of Antioch, Junilius, Bede, Abulensis, Catharinus, and many others"
   - `#heaven-and-earth-p12` — Cited for the opinion that the earth, empyrean, and abyss were created first
@@ -207,7 +207,7 @@
   - `#in-the-beginning-p21` — Cited for the seventh interpretation "As principal things"
     text: "So St. Ambrose, Procopius, and Bede."
   - `#verse-3-p7` — Quoted from Book I of the Hexaemeron, ch. 9, on light as the first grace of a dwelling
-    text: "St. Ambrose gives another in Book I of the Hexaemeron, ch. 9: \"From what other source should the adornment of the world take its beginning but from light?\""
+    text: "St. Ambrose gives another in Book I of the Hexaemeron, ch. 9: "From what other source should the adornment of the world take its beginning but from light? "
   - `#verse-6-p16` — Cited from sermon 27 on the Canticle (attributed to Bernard) on man as an image of heaven
     text: "says St. Bernard, sermon 27 on the Canticle."
   - `#verse-8-p2` — Cited on the etymology of "coelum" as "caelatum" (engraved with stars)
@@ -217,21 +217,21 @@
   - `#verse-12-p5` — Cited for teaching that poisonous herbs and thorns were created before the fall
     text: "the contrary is taught by St. Basil and St. Ambrose"
   - `#verse-16-p8` — Quoted on time: "You sleep and your time walks"
-    text: " "You sleep," says St. Ambrose on Psalm 1, "and your time" does not sleep, but "walks;""
+    text: ""You sleep," says St. Ambrose on Psalm 1, "and your time" does not sleep, but "walks;""
   - `#verse-20-p8` — Cited from Book V of the Hexaemeron, chapter 14, on the kinship between birds and fish
     text: "as St. Ambrose rightly teaches, Book V of the Hexaemeron, chapter 14."
   - `#verse-22-p7` — Cited from Book V of the Hexaemeron for descriptions of bees, cranes
     text: "and following him St. Ambrose, Book V of the Hexaemeron"
   - `#verse-22-p8` — Cited on storks cherishing their aging parents
-    text: " "This is the conveyance of filial piety," says St. Ambrose."
+    text: ""This is the conveyance of filial piety," says St. Ambrose."
   - `#verse-22-p13` — Cited from Book V of the Hexaemeron, chapter 20, on vultures reproducing without mating
     text: "St. Ambrose says the same, Book V of the Hexaemeron, chapter 20."
   - `#verse-22-p16` — Quoted from Book V of the Hexaemeron, chapter 13, on geese protecting the Capitol
-    text: "St. Ambrose, Book V of the Hexaemeron, chapter 13: \"Rightly, he says, to them (the geese), O Rome, you owe your sovereignty.\""
+    text: "St. Ambrose, Book V of the Hexaemeron, chapter 13: "Rightly, he says, to them (the geese), O Rome, you owe your sovereignty. "
   - `#verse-22-p22` — Quoted from Book V of the Hexaemeron, chapter 20, on the nightingale and coots
-    text: "St. Ambrose says, Book V of the Hexaemeron, chapter 20: \"Whence, he says, comes the voice of the parrot, and the sweetness of blackbirds?\""
+    text: "St. Ambrose says, Book V of the Hexaemeron, chapter 20: "Whence, he says, comes the voice of the parrot, and the sweetness of blackbirds? "
   - `#verse-24-p16` — Quoted from Book VI of the Hexaemeron, chapter 4, on the she-bear shaping her young
-    text: "St. Ambrose, Book VI of the Hexaemeron, chapter 4, where among other things he says: \"The she-bear, although crafty, as Scripture says\""
+    text: "St. Ambrose, Book VI of the Hexaemeron, chapter 4, where among other things he says: "The she-bear, although crafty, as Scripture says "
   - `#verse-26-p6` — Cited from Letter 38 to Horontianus on God furnishing the world before creating man
     text: "See St. Ambrose, Letter 38 to Horontianus"
   - `#verse-26-p8` — Quoted from Letter 38 on man as last created, as king of the elements
@@ -241,7 +241,7 @@
   - `#verse-26-p19` — Referenced for placing the image of God in free will
     text: "St. Ambrose places it in this."
   - `#verse-26-p32` — Quoted from beginning of Book VI of the Hexameron on man's dominion over elephants, lions, tigers
-    text: "Hear St. Ambrose at the beginning of Book VI of the Hexameron: \"Nature seemed to have nothing taller or stronger than elephants\""
+    text: "Hear St. Ambrose at the beginning of Book VI of the Hexameron: "Nature seemed to have nothing taller or stronger than elephants,"
   - `#verse-31-p5` — Cited from his book On Paradise, ch. 10, on why God did not say "it was good" of Adam alone before Eve
     text: "St. Ambrose gives the fourth reason in his book On Paradise, ch. 10"
   - `#heaven-and-earth-p15` — Listed among those who thought angels were created before the world
@@ -276,7 +276,7 @@
   - `#verse-20-p7` — Cited for the common opinion that birds were produced from water
     text: "the common opinion of St. Jerome, Augustine, Cyril, Damascene, and other Fathers"
   - `#verse-26-p13` — Quoted from commentary on Ezekiel 28 on image made at creation, likeness completed in baptism
-    text: " St. Jerome, on Ezekiel chapter 28, "You are the seal of likeness," says: "And it should be noted that the image was only made at creation, while the likeness is completed in baptism.""
+    text: "St. Jerome, on Ezekiel chapter 28, "You are the seal of likeness," says: "And it should be noted that the image was only made at creation, while the likeness is completed in baptism.""
   - `#he-created-p8` — Cited indirectly through Jerome de Oleastro's translation of bara as 'divided'
     text: "Jerome de Oleastro translates the Hebrew bara as 'divided.'"
   - `#heaven-and-earth-p15` — Listed among those who thought angels were created before the world
@@ -295,7 +295,7 @@
 - **Role**: Archbishop of Constantinople, Doctor of the Church
 - **Occurrences**:
   - `#heaven-and-earth-p9` — Quoted from Homily 2: God first stretched out heaven, then laid earth beneath
-    text: " Saint John Chrysostom here, homily 2: "God, contrary to human custom, in perfecting His building, first stretched out heaven, and afterward laid the earth beneath it: first the roof, and afterward the foundation;""
+    text: "Saint John Chrysostom here, homily 2: "God, contrary to human custom, in perfecting His building, first stretched out heaven, and afterward laid the earth beneath it: first the roof, and afterward the foundation;""
   - `#verse-5-p9` — Quoted at length from his Homily That Man Is Set Over Every Creature on nature serving man
     text: "St. Chrysostom, in his Homily That Man Is Set Over Every Creature, applies keen incentives to man from the day, light, and other creatures"
   - `#verse-9-p7` — Listed among those who hold that earth and water form one globe
@@ -305,7 +305,7 @@
   - `#verse-26-p3` — Cited for denouncing as impious the idea that angels created man
     text: "St. Basil, Chrysostom, Theodoret, Cyril in Book I Against Julian"
   - `#verse-26-p13` — Quoted from Homily 9 on Genesis on the distinction between image and likeness
-    text: " And St. Chrysostom, Homily 9 on Genesis: "He said 'image' on account of dominion; 'likeness,' so that by human powers we may become like God in gentleness, mildness, etc., which Christ also says:"
+    text: "And St. Chrysostom, Homily 9 on Genesis: "He said 'image' on account of dominion; 'likeness,' so that by human powers we may become like God in gentleness, mildness, etc., which Christ also says:"
   - `#verse-26-p35` — Cited alongside Origen and Eucherius for the tropological interpretation of man's dominion
     text: "So say Origen, Chrysostom, and Eucherius."
   - `#verse-28-p2` — Cited alongside Rupert and Augustine for the view that there is no precept to procreate
@@ -393,7 +393,7 @@
   - `#god-elohim-p19` — Quoted from Treatise On the Faith on the tenth definition of God
     text: "God, says Saint Gregory of Nazianzus in his Treatise On the Faith, is that which, when spoken of, cannot be expressed; when appraised, cannot be appraised"
   - `#verse-3-p9` — Cited for calling the first light "spiritual" because it was created without a subject
-    text: " Nazianzen calls this light "spiritual.""
+    text: "Nazianzen calls this light "spiritual.""
   - `#verse-26-p6` — Cited from Oration 43 on God furnishing the world before creating man
     text: "and Nazianzen, Oration 43"
   - `#heaven-and-earth-p15` — Listed among those who thought angels were created before the world
@@ -463,7 +463,7 @@
 - **Role**: Pope, Doctor of the Church
 - **Occurrences**:
   - `#god-elohim-p11` — Quoted from Sermon 2 On the Passion for the second definition of God
-    text: " Saint Leo, Sermon 2 On the Passion: "God is He whose nature is goodness, whose will is power, whose work is mercy.""
+    text: "Saint Leo, Sermon 2 On the Passion: "God is He whose nature is goodness, whose will is power, whose work is mercy.""
 - **Related works**: Sermon 2 On the Passion
 - **Related subjects**: definition of God
 
@@ -518,17 +518,17 @@
   - `#verse-6-p16` — Cited from Sermon 27 on the Canticle on man as an image of heaven with virtues as stars
     text: "says St. Bernard, sermon 27 on the Canticle."
   - `#verse-16-p25` — Quoted from Sermon on St. John the Baptist: "to burn and to shine is perfect"
-    text: " as St. Bernard rightly observes and explains, Sermon on St. John the Baptist: "For," he says, "merely to shine is vain, merely to burn is little, to burn and to shine is perfect.""
+    text: "as St. Bernard rightly observes and explains, Sermon on St. John the Baptist: "For," he says, "merely to shine is vain, merely to burn is little, to burn and to shine is perfect.""
   - `#verse-26-p6` — Quoted from Sermon 1 On the Annunciation on what the first man enjoyed
-    text: " St. Bernard, Sermon 1 On the Annunciation: "What, he says, was lacking to the first man, whom mercy guarded, truth taught, justice governed, and peace cherished?""
+    text: "St. Bernard, Sermon 1 On the Annunciation: "What, he says, was lacking to the first man, whom mercy guarded, truth taught, justice governed, and peace cherished?""
   - `#verse-26-p13` — Quoted from Sermon 1 On the Annunciation on image vs. likeness
-    text: "St. Bernard, Sermon 1 On the Annunciation, where he also adds: \"The image indeed can be burned in hell, but not burned up\""
+    text: "St. Bernard, Sermon 1 On the Annunciation, where he also adds: "The image indeed can be burned in hell, but not burned up;"
   - `#verse-26-p25` — Cited from Sermon 24 on the Song of Songs on the body as image of the mind
     text: "So St. Augustine, Book VI of On Genesis Literally, chapter 12, and Bernard, Sermon 24 on the Song of Songs."
   - `#verse-26-p27` — Cited for the perennial spur: "Bernard, say why you are here?"
     text: "Let this therefore be for us, as for St. Bernard, a perennial spur to a pure and holy life: Bernard, say why you are here?"
   - `#verse-31-p19` — Quoted from Sermon 3 on Pentecost on the three things to consider in creation
-    text: " St. Bernard, Sermon 3 on Pentecost: "Three things," he says, "we must consider in the great work of this world, namely what it is, how it is, and for what purpose it was established."
+    text: "St. Bernard, Sermon 3 on Pentecost: "Three things," he says, "we must consider in the great work of this world, namely what it is, how it is, and for what purpose it was established."
 - **Related works**: Sermons on the Canticle, Sermon on St. John the Baptist, Sermons on the Annunciation, Sermons on Pentecost
 - **Related subjects**: image of God, virtues, creation, man as image of heaven
 
@@ -558,7 +558,7 @@
   - `#heaven-and-earth-p12` — Cited alongside Peter and Basil for the creation of empyrean, earth, and abyss
     text: "This is the opinion of Saint Peter and Clement, Saint Basil, Bede, Molina"
   - `#verse-26-p4` — Quoted from Book VII of the Apostolic Constitutions, chapter 35, on man as the culmination of creation
-    text: "St. Clement, Book VII of the Apostolic Constitutions, chapter 35: \"The culmination of Your work, a living being partaking of reason, a citizen of the world\""
+    text: "St. Clement, Book VII of the Apostolic Constitutions, chapter 35: "The culmination of Your work, a living being partaking of reason, a citizen of the world,"
 - **Related people**: `biblical/peter`
 - **Related works**: Apostolic Constitutions
 - **Related subjects**: empyrean heaven, creation of man
@@ -572,7 +572,7 @@
 - **Role**: Christian martyr
 - **Occurrences**:
   - `#verse-16-p14` — Described as a young martyr under Emperor Aurelian, encouraged by his mother to look to heaven
-    text: "So the young St. Symphorian, when under the Emperor Aurelian he was being dragged to martyrdom, was encouraged by his mother with these words: \"My son, my son, remember eternal life, look up to heaven\""
+    text: "So the young St. Symphorian, when under the Emperor Aurelian he was being dragged to martyrdom, was encouraged by his mother with these words: "My son, my son, remember eternal life, look up to heaven,"
 - **Related people**: `ruler/aurelian`
 - **Related subjects**: martyrdom, heaven
 
@@ -597,7 +597,7 @@
 - **Role**: Egyptian soldier, Christian martyr
 - **Occurrences**:
   - `#verse-16-p17` — Quoted saying nothing can be compared with the kingdom of heaven
-    text: "So St. Menas, the Egyptian Martyr, when subjected to atrocious tortures, said: \"There is nothing that can be compared with the kingdom of heaven\""
+    text: "So St. Menas, the Egyptian Martyr, when subjected to atrocious tortures, said: "There is nothing that can be compared with the kingdom of heaven;"
 - **Related subjects**: martyrdom, heaven
 
 ---
@@ -621,7 +621,7 @@
 - **Role**: Founder of the Society of Jesus
 - **Occurrences**:
   - `#verse-14-p18` — Quoted: "How the earth seems vile to me when I look upon heaven!"
-    text: " say with St. Ignatius: "How the earth seems vile to me when I look upon heaven!""
+    text: "say with St. Ignatius: "How the earth seems vile to me when I look upon heaven!""
 - **Related subjects**: contempt of earthly things, heavenly contemplation
 
 ---
@@ -633,7 +633,7 @@
 - **Role**: Desert Father, founder of monasticism
 - **Occurrences**:
   - `#verse-31-p20` — Quoted: his book is the nature of things created by God
-    text: "when someone asked St. Anthony how he could live in the desert without books, he replied: \"My book, O Philosopher, is the nature of things created by God\""
+    text: "when someone asked St. Anthony how he could live in the desert without books, he replied: "My book, O Philosopher, is the nature of things created by God,"
 - **Related subjects**: desert life, contemplation of nature
 
 ---
@@ -787,13 +787,13 @@
   - `#introduction-p5` — Named as beginning the first part of Genesis
     text: "The first encompasses the deeds from Adam up to the flood"
   - `#verse-10-p3` — God formed Adam and endowed him with Hebrew on the sixth day
-    text: "on the sixth day, when He formed Adam and endowed him with the Hebrew language, then God called the dry land 'erets'"
+    text: "on the sixth day, when He formed Adam and endowed him with the Hebrew language, then God called the dry land 'erets,"
   - `#verse-26-p4` — Named as the first man and microcosm
     text: "man is the first image of the uncreated world"
   - `#verse-26-p5` — Named in connection with original justice and dominion
     text: "just as the world was created for man and with man, so too in the resurrection it will be renewed."
   - `#verse-26-p9` — "Man" in Genesis is Adam himself, the first man and parent of all others
-    text: " "man" is Adam himself, the first man and parent of all others"
+    text: ""man" is Adam himself, the first man and parent of all others"
   - `#verse-26-p24` — Original justice given to Adam in the first instant of creation
     text: "to Adam, in the first instant of his creation, along with grace, all the theological and moral virtues were simultaneously infused"
   - `#verse-27-p3` — Created as male; Eve as female
@@ -890,7 +890,7 @@
 - **Role**: High Priest of Israel
 - **Occurrences**:
   - `#verse-26-p7` — Cited for his full-length robe bearing the whole world (Wisdom 18:24)
-    text: " "in the full-length robe which he wore," Aaron the high priest of the Old Testament "bore the whole world," Wisdom 18:24."
+    text: ""in the full-length robe which he wore," Aaron the high priest of the Old Testament "bore the whole world," Wisdom 18:24."
 - **Related subjects**: priesthood, vestments
 
 ---
@@ -1072,7 +1072,7 @@
 - **Role**: Legendary sage, author of Hermetic writings
 - **Occurrences**:
   - `#god-elohim-p22` — Quoted for the thirteenth definition of God: matter more subtle than air, etc.
-    text: " "Matter is more subtle than air, the soul more than air, the mind more than the soul, God Himself more than the mind," says Hermes Trismegistus."
+    text: ""Matter is more subtle than air, the soul more than air, the mind more than the soul, God Himself more than the mind," says Hermes Trismegistus."
 - **Related subjects**: definition of God, Hermetic philosophy
 
 ---
@@ -1083,9 +1083,9 @@
 - **Role**: Pythagorean philosopher
 - **Occurrences**:
   - `#heaven-and-earth-p19` — Questioned by Emperor Hadrian on the nature of the world, God, the Ocean, the Earth
-    text: "the philosopher Secundus, when questioned by the emperor Hadrian: \"What is the world?\" He responded: \"An unceasing circuit, an eternal course.\""
+    text: "the philosopher Secundus, when questioned by the emperor Hadrian: "What is the world?" He responded: "An unceasing circuit, an eternal course. "
   - `#verse-16-p2` — Quoted on the sun and moon; cleverly questioned by Hadrian
-    text: "The philosopher Secundus, cleverly questioned by the Emperor Hadrian, \"What is the sun?\" replied: \"The eye of heaven, a splendor without setting\""
+    text: "The philosopher Secundus, cleverly questioned by the Emperor Hadrian, "What is the sun?" replied: "The eye of heaven, a splendor without setting,"
 - **Related people**: `ruler/hadrian`
 - **Related subjects**: philosophy, definitions
 
@@ -1098,9 +1098,9 @@
 - **Role**: Stoic philosopher
 - **Occurrences**:
   - `#heaven-and-earth-p19` — Quoted on the earth as the granary of Ceres
-    text: " And Epictetus says: "The earth is the granary of Ceres, the storehouse of life.""
+    text: "And Epictetus says: "The earth is the granary of Ceres, the storehouse of life.""
   - `#verse-16-p2` — Quoted to Hadrian on the moon and stars
-    text: " But Epictetus said to the same Hadrian: "The moon is the helper of the day, the eye of the night; the stars are the fates of men.""
+    text: "But Epictetus said to the same Hadrian: "The moon is the helper of the day, the eye of the night; the stars are the fates of men.""
 - **Related people**: `ruler/hadrian`
 - **Related subjects**: Stoic philosophy, nature
 
@@ -1135,7 +1135,7 @@
 - **Role**: Christian author, apologist
 - **Occurrences**:
   - `#verse-26-p7` — Quoted from his book On the Wrath of God, chapter 14, on man as God's high priest
-    text: "Hear Lactantius, book On the Wrath of God, chapter 14: \"It follows that I should show why God made man.\""
+    text: "Hear Lactantius, book On the Wrath of God, chapter 14: "It follows that I should show why God made man. "
 - **Related works**: On the Wrath of God
 - **Related subjects**: man as high priest, purpose of creation
 
@@ -1295,7 +1295,7 @@
   - `#introduction-p7` — Listed among those who wrote on Genesis
     text: "Procopius, Chrysostom, Eucherius"
   - `#in-the-beginning-p15` — Quoted on God calling forth the universe by His own will
-    text: " So also Procopius: "God," he says, "who is the King of kings, and most entirely His own master"
+    text: "So also Procopius: "God," he says, "who is the King of kings, and most entirely His own master"
   - `#in-the-beginning-p21` — Cited for the seventh interpretation "As principal things"
     text: "So St. Ambrose, Procopius, and Bede."
   - `#in-the-beginning-p23` — Cited for the eighth interpretation "As foundations"
@@ -1333,7 +1333,7 @@
   - `#verse-26-p4` — Cited for marveling at God's deliberation about creating man
     text: "so Rupert."
   - `#verse-26-p12` — Cited for the mystical interpretation of image as the Son and likeness as the Holy Spirit
-    text: " However, secondly, "image" can properly be taken here as a Hebraism"
+    text: "However, secondly, "image" can properly be taken here as a Hebraism"
   - `#verse-28-p2` — Cited alongside Chrysostom and Augustine for no precept of procreation
     text: "So say St. Chrysostom, Rupert, and Augustine"
   - `#heaven-and-earth-p15` — Cited for angels created simultaneously with the world
@@ -1372,7 +1372,7 @@
   - `#in-the-beginning-p25` — Cited for the ninth interpretation: "in the beginning" denotes God's eternity and omnipotence
     text: "Junilius here says: the phrase 'in the beginning' denotes God's eternity and omnipotence."
   - `#verse-24-p5` — Quoted for the view that all creatures fed on herbs before sin
-    text: " Junilius also expressly teaches the same: "From the fact, he says, that God said: Behold I have given you every herb, it is clear that the earth brought forth nothing harmful, no poisonous herb, and no barren tree."
+    text: "Junilius also expressly teaches the same: "From the fact, he says, that God said: Behold I have given you every herb, it is clear that the earth brought forth nothing harmful, no poisonous herb, and no barren tree."
   - `#verse-24-p26` — Cited for applying the six days to the six ages of the world
     text: "Symbolically, Junilius applies these six days to the six ages of the world."
   - `#heaven-and-earth-p10` — Listed among supporters of the empyrean heaven interpretation
@@ -1574,7 +1574,7 @@
 - **Role**: Swiss naturalist
 - **Occurrences**:
   - `#verse-21-p2` — Cited for the name "cete" being common to all great cetacean fish
-    text: " Thus the name "cete" is common to all great and cetacean fish, as Gesner teaches."
+    text: "Thus the name "cete" is common to all great and cetacean fish, as Gesner teaches."
 - **Related subjects**: natural history, sea creatures
 
 ---
@@ -1590,7 +1590,7 @@
   - `#verse-22-p6` — Cited as the latest and most exact naturalist on birds; demonstrates the phoenix is a fable
     text: "the latest and most exact is Ulysses Aldrovandus, consider the phoenix a fable"
   - `#verse-22-p13` — Cited for reporting that vultures reproduce without mating (and Albertus Magnus for showing it is fabulous)
-    text: " others whom Aldrovandus cites under "vulture," report that all vultures are female"
+    text: "others whom Aldrovandus cites under "vulture," report that all vultures are female"
 - **Related works**: Ornithology
 - **Related subjects**: natural history, phoenix, vultures
 
@@ -2401,7 +2401,7 @@
 - **Role**: Prophet, Forerunner of Christ
 - **Occurrences**:
   - `#verse-16-p25` — Christ's description of him quoted: "He was a burning and shining lamp"; Bernard's sermon cited
-    text: " as Christ says of St. John the Baptist: "He was a burning and shining lamp," not, "shining and burning," as St. Bernard rightly observes"
+    text: "as Christ says of St. John the Baptist: "He was a burning and shining lamp," not, "shining and burning," as St. Bernard rightly observes"
 - **Related people**: `saint/bernard-of-clairvaux`
 - **Related subjects**: preaching, burning and shining
 

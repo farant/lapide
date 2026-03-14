@@ -10,7 +10,7 @@
   - `#in-the-beginning-p12` — The Lateran Council teaches that angels were created simultaneously with the corporeal world
     text: "the angels were not created before the corporeal world, but simultaneously with it by God, as the Lateran Council teaches"
   - `#heaven-and-earth-p16` — The Lateran Council under Innocent III defines that God created spiritual and corporeal creatures simultaneously at the beginning of time
-    text: " the Lateran Council, under Innocent III: "It must be firmly believed that God from the beginning of time created from nothing both creatures at once: the spiritual and the corporeal, the angelic and the worldly.""
+    text: "the Lateran Council, under Innocent III: "It must be firmly believed that God from the beginning of time created from nothing both creatures at once: the spiritual and the corporeal, the angelic and the worldly.""
 - **Related people**: innocent-iii
 - **Related organizations**: church/apostolic-see
 
@@ -51,7 +51,7 @@
 - **Description**: Council held under Pope Victor around A.D. 198. Defined that the world was created in spring at the vernal equinox, and that the first day of the world was March 25.
 - **Occurrences**:
   - `#verse-12-p12` — The Council of Palestine defined that the world was created at the vernal equinox and that the first day was March 25
-    text: " the Council of Palestine, held under Pope Victor in the year of Christ 198, defined this very thing. This Council proves its opinion from the word "let it germinate": for in spring the earth begins to germinate. It also teaches that the world was created at the vernal equinox"
+    text: "the Council of Palestine, held under Pope Victor in the year of Christ 198, defined this very thing. This Council proves its opinion from the word "let it germinate": for in spring the earth begins to germinate. It also teaches that the world was created at the vernal equinox"
   - `#verse-14-p11` — The Council of Palestine defined that the moon was produced at the full, opposite the sun
     text: "as the Council of Palestine defined above"
 - **Related people**: pope-victor
@@ -64,7 +64,7 @@
   - `#verse-2-p3` — The Seventy translate "tohu vevohu" as "invisible and unordered"
     text: "Hence the Seventy [LXX] here translate, the earth was invisible and unordered"
   - `#verse-4-p5` — The Septuagint reads "He divided between the light and the darkness"
-    text: "The Hebrew and the Septuagint have: He divided between the light and the darkness."
+    text: " The Hebrew and the Septuagint have: He divided between the light and the darkness."
   - `#verse-6-p15` — The Septuagint includes "and God saw that it was good" on the second day, unlike the Hebrew and Vulgate
     text: "The Septuagint here, as on the other days, does have "and God saw that it was good;" yet in the Hebrew, Chaldean, Theodotion, Aquila, Symmachus, and the Vulgate, this is lacking."
 

@@ -54,8 +54,8 @@ Basil's series of homilies on the six days of creation in Genesis, a foundationa
   text: "St. Basil, Theodoret, and Nazianzen think that only the quality of light was here created without a subject"
 - `01_genesis_01.html#verse-3-p17-s-95bd690` — Cited (Homily on Penance) on Christ bestowing His prerogatives on others
   text: "On this St. Basil speaks beautifully in his Homily on Penance"
-- `01_genesis_01.html#verse-9-p16-s-395736f` — Cited on the Red Sea being restrained by God's command
-  text: "St. Basil asks: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt""
+- `01_genesis_01.html#verse-9-p16-s-3abfdde` — Cited on the Red Sea being restrained by God's command
+  text: "St. Basil asks: "What would prevent the Red Sea from bursting with its overflowing flood into all of Egypt,"
 - `01_genesis_01.html#verse-11-p3-s-cfaedef` — Cited on God's providence in germination
   text: "Moreover St. Basil marvels, and rightly so, at God's providence in germination"
 - `01_genesis_01.html#verse-14-p16-s-c3f7702` — Cited (Homily 6) on the moon as sign of weather
@@ -80,7 +80,7 @@ Basil's series of homilies on the six days of creation in Genesis, a foundationa
   text: "St. Basil enumerates and contemplates these species, Homily 9 on the Hexaemeron"
 - `01_genesis_01.html#verse-26-p13-s-c31f630` — Cited (Homily 10) on distinguishing image and likeness
   text: "So St. Basil, Homily 10 on the Hexameron: "Through the image impressed on my soul, I obtained the use of reason; but having become a Christian, I am made truly like God.""
-- `01_genesis_01.html#verse-26-p31-s-2091377` — Cited (Homily 10) on man as an animal born to command
-  text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command.""
-- `01_genesis_01.html#verse-31-p22-s-831a439` — Cited (Homily 4) on the world as a book testifying to God's glory
-  text: "St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters""
+- `01_genesis_01.html#verse-26-p31-s-6e41f09` — Cited (Homily 10) on man as an animal born to command
+  text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command. "
+- `01_genesis_01.html#verse-31-p22-s-33bc68a` — Cited (Homily 4) on the world as a book testifying to God's glory
+  text: "St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters,"

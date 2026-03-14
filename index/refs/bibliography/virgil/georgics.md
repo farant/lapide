@@ -21,4 +21,4 @@ Virgil's didactic poem on agriculture and rural life, cited by Lapide for exampl
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p31-s-7956ff0` — Cited (Book 3) for an example of litotes
   text: "that of Virgil, Georgics book 3"
 - `01_genesis_01.html#verse-12-p11-s-6e419c5` — Quoted (Book II) on spring as the season of the world's creation
-  text: ""Spring, he says, it was: great spring the world was keeping, / And the East winds were sparing their wintry blasts.""
+  text: ""Spring, he says, it was: great spring the world was keeping, And the East winds were sparing their wintry blasts.""

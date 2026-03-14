@@ -121,12 +121,12 @@ One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called
   text: "So say St. Jerome, Basil, Theodoret, Athanasius, and nearly all the other Fathers, who from this passage prove the divinity of the Holy Spirit."
 - `01_genesis_01.html#verse-2-p11-s-135ba68` — Cited alongside Diodorus and Jerome on the Hebrew word merachephet referring to birds brooding
   text: "the Hebrew is merachephet, which, as St. Basil, Diodorus, and Jerome testify in the Hebrew Questions on Genesis"
-- `01_genesis_01.html#verse-3-p7-s-6d0444d` — Quoted from Homily 2 on the Hexaemeron on the beauty light brought to the world
-  text: "St. Basil gives a beautiful comparison in Homily 2 on the Hexaemeron: \"Just as those who pour oil into a deep whirlpool of water give that place clarity and transparency\""
+- `01_genesis_01.html#verse-3-p7-s-049bb67` — Quoted from Homily 2 on the Hexaemeron on the beauty light brought to the world
+  text: "St. Basil gives a beautiful comparison in Homily 2 on the Hexaemeron: "Just as those who pour oil into a deep whirlpool of water give that place clarity and transparency,"
 - `01_genesis_01.html#verse-3-p9-s-68027d3` — Cited alongside Theodoret and Nazianzen for the view that only the quality of light was created without a subject
   text: "St. Basil, Theodoret, and Nazianzen think that only the quality of light was here created without a subject"
-- `01_genesis_01.html#verse-3-p17-s-dcff0a8` — Quoted from Homily on Penance on Christ bestowing His prerogatives on others
-  text: "On this St. Basil speaks beautifully in his Homily on Penance: \"His own prerogatives Jesus bestows on others.\""
+- `01_genesis_01.html#verse-3-p17-s-7cdda9e` — Quoted from Homily on Penance on Christ bestowing His prerogatives on others
+  text: "On this St. Basil speaks beautifully in his Homily on Penance: "His own prerogatives Jesus bestows on others. "
 - `01_genesis_01.html#verse-9-p5-s-bbbd27b` — Cited alongside Burgensis, Catharinus, and Thomas for the view that the sea was made higher than the earth
   text: "Second, Basil, Burgensis, Catharinus, and St. Thomas think that the sea was here separated from the earth so that it was made higher."
 - `01_genesis_01.html#verse-9-p16-s-5c2ad37` — Quoted on the Red Sea being restrained by God's command
@@ -167,7 +167,7 @@ One of the three Cappadocian Fathers and a pillar of Eastern monasticism. Called
   text: "and Basil here in Homily 10"
 - `01_genesis_01.html#verse-26-p19-s-66fcbd5` — Cited for placing the image of God in man's power to preside over and rule all animals
   text: "St. Basil places it in this."
-- `01_genesis_01.html#verse-26-p31-s-dae5a3a` — Quoted from Homily 10 on the Hexameron on man as an animal born to command
-  text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command. Why do you submit to this wretched slavery of passions?""
+- `01_genesis_01.html#verse-26-p31-s-6b6d99c` — Quoted from Homily 10 on the Hexameron on man as an animal born to command
+  text: "Hear St. Basil in Homily 10 on the Hexameron: "You are, therefore, O man, an animal born to command. Why do you submit to this wretched slavery of passions? "
 - `01_genesis_01.html#verse-31-p22-s-5cc6e8f` — Quoted from Homily 4 on the Hexaemeron on the world as a book proclaiming God's glory
   text: "St. Basil, Homily 4 on the Hexaemeron: "This entire mass of the world," he says, "is like a book written with letters, openly testifying and proclaiming the glory of God, and abundantly declaring to you, the intellectual creature, His most august majesty"

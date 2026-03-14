@@ -484,6 +484,10 @@ ${items.join("\n")}
 <nav class="index-breadcrumb">
   ${breadcrumb}
 </nav>
+<div class="index-search">
+  <input type="search" id="index-search-input" placeholder="Search index..." autocomplete="off">
+  <ul id="index-search-results"></ul>
+</div>
 
 <article id="entry" data-category="${escHtml(category)}" data-slug="${escHtml(slug)}">
 
@@ -678,6 +682,10 @@ function generateDirIndexHtml(dirPath: string, entries: DirEntry[]): string {
 <nav class="index-breadcrumb">
   ${breadcrumbParts.join(" › ")}
 </nav>
+<div class="index-search">
+  <input type="search" id="index-search-input" placeholder="Search index..." autocomplete="off">
+  <ul id="index-search-results"></ul>
+</div>
 
 <h1>${escHtml(title)}</h1>
 ${(() => {
@@ -1049,6 +1057,43 @@ async function main() {
     "utf-8"
   );
   console.log(`Manifest: ${manifest.length} entries written to index/manifest.json`);
+
+  // Generate search index (columnar format for compact file size)
+  const searchRows: any[][] = [];
+  for (const ref of canonical) {
+    const fm = ref.frontmatter;
+    if (!fm.category || !fm.slug) continue;
+    const aka: string[] = [];
+    if (Array.isArray(fm.also_known_as)) {
+      for (const a of fm.also_known_as) aka.push(String(a));
+    }
+    if (fm.transliteration) aka.push(String(fm.transliteration));
+    const desc = fm.role || fm.description || fm.meaning || "";
+    searchRows.push([
+      String(fm.name || ""),
+      String(fm.slug),
+      String(fm.category),
+      aka,
+      String(desc).slice(0, 120),
+    ]);
+  }
+  // Also include virtual year pages
+  for (const ref of canonical) {
+    const fm = ref.frontmatter;
+    if (fm.category !== "person" || !fm.dates) continue;
+    // Virtual year pages are generated from person dates — already in canonical
+  }
+  searchRows.sort((a, b) => String(a[0]).localeCompare(String(b[0])));
+  const searchIndex = {
+    c: ["name", "slug", "cat", "aka", "desc"],
+    r: searchRows,
+  };
+  await writeFile(
+    join(INDEX_DIR, "search-index.json"),
+    JSON.stringify(searchIndex) + "\n",
+    "utf-8"
+  );
+  console.log(`Search index: ${searchRows.length} entries written to index/search-index.json`);
 
   console.log("Done.");
 }

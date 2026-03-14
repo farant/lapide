@@ -57,8 +57,8 @@ Archbishop of Constantinople and Doctor of the Church. Known as "the Golden-Mout
   text: "So St. Chrysostom here, homily 6"
 - `01_genesis_01.html#verse-26-p3-s-b6f4d35` — Cited for denouncing as impious the idea that angels created man
   text: "St. Basil, Chrysostom, Theodoret, Cyril in Book I Against Julian"
-- `01_genesis_01.html#verse-26-p13-s-0643de3` — Quoted from Homily 9 on Genesis on the distinction between image and likeness
-  text: "And St. Chrysostom, Homily 9 on Genesis: "He said 'image' on account of dominion; 'likeness,' so that by human powers we may become like God in gentleness, mildness, etc.""
+- `01_genesis_01.html#verse-26-p13-s-d183982` — Quoted from Homily 9 on Genesis on the distinction between image and likeness
+  text: "And St. Chrysostom, Homily 9 on Genesis: "He said 'image' on account of dominion; 'likeness,' so that by human powers we may become like God in gentleness, mildness, etc.,"
 - `01_genesis_01.html#verse-26-p35-s-3571535` — Cited alongside Origen and Eucherius for the tropological interpretation of man's dominion
   text: "So say Origen, Chrysostom, and Eucherius."
 - `01_genesis_01.html#verse-28-p2-s-e8aca10` — Cited alongside Rupert and Augustine for the view that there is no precept to procreate

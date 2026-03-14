@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saints — Lapide Index</title>
 <link rel="canonical" href="https://lapide.org/index/person/saint/">
-<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/index/index.css">
 <script src="/index/components.js" type="module"></script>
@@ -15,6 +15,10 @@
 <nav class="index-breadcrumb">
   <a href="/index/">Index</a> › <a href="/index/person/">Person</a> › Saints
 </nav>
+<div class="index-search">
+  <input type="search" id="index-search-input" placeholder="Search index..." autocomplete="off">
+  <ul id="index-search-results"></ul>
+</div>
 
 <h1>Saints</h1>
 
@@ -29,6 +33,7 @@
     <li><a href="anselm.html">St. Anselm of Canterbury <span class="entry-dates">(c. 1033–1109)</span> <span class="entry-desc">— Archbishop of Canterbury, Doctor of the Church, philosopher-theologian</span></a></li>
     <li><a href="anthony-of-padua.html">St. Anthony of Padua <span class="entry-dates">(1195–1231)</span> <span class="entry-desc">— Franciscan friar, Doctor of the Church, preacher</span></a></li>
     <li><a href="antony-the-great.html">St. Antony the Great <span class="entry-dates">(c. 251–356)</span> <span class="entry-desc">— Desert Father, founder of Christian monasticism</span></a></li>
+    <li><a href="apronianus.html">St. Apronianus <span class="entry-desc">— Martyr</span></a></li>
     <li><a href="athanasius.html">St. Athanasius of Alexandria <span class="entry-dates">(c. 296–373)</span> <span class="entry-desc">— Bishop of Alexandria, Doctor of the Church</span></a></li>
     <li><a href="augustine.html">St. Augustine of Hippo <span class="entry-dates">(354–430)</span> <span class="entry-desc">— Bishop of Hippo, Doctor of the Church, Church Father</span></a></li>
     <li><a href="authbert.html">St. Authbert of Cambrai <span class="entry-dates">(d. c. 674)</span> <span class="entry-desc">— Bishop of Cambrai and Arras</span></a></li>
@@ -54,6 +59,7 @@
     <li><a href="gregory-of-nyssa.html">St. Gregory of Nyssa <span class="entry-dates">(c. 335–c. 395)</span> <span class="entry-desc">— Bishop of Nyssa, Church Father, brother of Basil the Great</span></a></li>
     <li><a href="gregory-thaumaturgus.html">St. Gregory Thaumaturgus <span class="entry-dates">(c. 213–c. 270)</span> <span class="entry-desc">— Bishop of Neocaesarea, wonder-worker</span></a></li>
     <li><a href="hilary.html">St. Hilary of Poitiers <span class="entry-dates">(c. 310–367)</span> <span class="entry-desc">— Bishop of Poitiers, Doctor of the Church</span></a></li>
+    <li><a href="ignatius.html">St. Ignatius of Loyola <span class="entry-dates">(1491–1556)</span> <span class="entry-desc">— Founder of the Society of Jesus</span></a></li>
     <li><a href="isidore-of-seville.html">St. Isidore of Seville <span class="entry-dates">(c. 560–636)</span> <span class="entry-desc">— Archbishop of Seville, Doctor of the Church</span></a></li>
     <li><a href="jerome.html">St. Jerome <span class="entry-dates">(c. 342–420)</span> <span class="entry-desc">— Doctor of the Church, translator of the Vulgate Bible</span></a></li>
     <li><a href="hieronymus.html">St. Jerome (alias)</a></li>
@@ -66,11 +72,13 @@
     <li><a href="jordan-of-saxony.html">St. Jordan of Saxony <span class="entry-dates">(c. 1190–1237)</span> <span class="entry-desc">— Second Master General of the Dominican Order after St. Dominic</span></a></li>
     <li><a href="justin-martyr.html">St. Justin Martyr <span class="entry-dates">(c. 100–c. 165)</span> <span class="entry-desc">— Early Christian apologist, philosopher, martyr</span></a></li>
     <li><a href="landelin.html">St. Landelin <span class="entry-dates">(c. 625–c. 686)</span> <span class="entry-desc">— Founder of monasteries in Frankish territory</span></a></li>
+    <li><a href="leo.html">St. Leo the Great <span class="entry-dates">(c. 400–461)</span> <span class="entry-desc">— Pope, Doctor of the Church</span></a></li>
     <li><a href="lietbert.html">St. Lietbert of Cambrai <span class="entry-dates">(c. 1010–1076)</span> <span class="entry-desc">— Bishop of Cambrai</span></a></li>
     <li><a href="lucian.html">St. Lucian <span class="entry-dates">(d. 312)</span> <span class="entry-desc">— Priest, martyr, biblical scholar who made a new Greek edition of the Old Testament from Hebrew</span></a></li>
     <li><a href="ludger.html">St. Ludger <span class="entry-dates">(c. 742–809)</span> <span class="entry-desc">— Apostle of the Frisians, Bishop of Munster</span></a></li>
     <li><a href="macarius-of-antioch.html">St. Macarius of Antioch <span class="entry-dates">(d. c. 1012)</span> <span class="entry-desc">— Archbishop of Antioch in Armenia, pilgrim saint whose relics were venerated in Flanders</span></a></li>
     <li><a href="marcian.html">St. Marcian <span class="entry-dates">(d. c. 387)</span> <span class="entry-desc">— Holy monk, cited in Theodoret's Philotheos</span></a></li>
+    <li><a href="menas.html">St. Menas <span class="entry-dates">(d. c. 309)</span> <span class="entry-desc">— Egyptian soldier, Christian martyr</span></a></li>
     <li><a href="mercury.html">St. Mercury <span class="entry-dates">(d. c. 250)</span> <span class="entry-desc">— Roman soldier, Christian martyr</span></a></li>
     <li><a href="odo-of-cambrai.html">St. Odo of Cambrai <span class="entry-dates">(c. 1050–1113)</span> <span class="entry-desc">— Bishop of Cambrai</span></a></li>
     <li><a href="paulinus-of-nola.html">St. Paulinus of Nola <span class="entry-dates">(c. 354–431)</span> <span class="entry-desc">— Bishop of Nola, correspondent of Jerome</span></a></li>
@@ -82,10 +90,12 @@
     <li><a href="saturninus.html">St. Saturninus <span class="entry-dates">(d. c. 304)</span> <span class="entry-desc">— Martyr</span></a></li>
     <li><a href="simeon-stylite.html">St. Simeon the Stylite <span class="entry-dates">(c. 388–459)</span> <span class="entry-desc">— Ascetic, pillar-saint</span></a></li>
     <li><a href="stephen.html">St. Stephen <span class="entry-dates">(d. c. 34 AD)</span> <span class="entry-desc">— First Christian martyr, deacon</span></a></li>
+    <li><a href="symphorian.html">St. Symphorian <span class="entry-dates">(d. c. 178)</span> <span class="entry-desc">— Christian martyr</span></a></li>
     <li><a href="theodore-the-studite.html">St. Theodore the Studite <span class="entry-dates">(759–826)</span> <span class="entry-desc">— Monastic reformer, defender of icons</span></a></li>
     <li><a href="theodoric-of-cambrai.html">St. Theodoric of Cambrai <span class="entry-dates">(fl. 7th century)</span> <span class="entry-desc">— Bishop of Cambrai</span></a></li>
     <li><a href="thomas-aquinas.html">St. Thomas Aquinas <span class="entry-dates">(1225–1274)</span> <span class="entry-desc">— Dominican friar, Doctor of the Church, philosopher-theologian</span></a></li>
     <li><a href="thomas-more.html">St. Thomas More <span class="entry-dates">(1478–1535)</span> <span class="entry-desc">— Lord Chancellor of England, martyr; canonized 1935</span></a></li>
+    <li><a href="vincent-deacon.html">St. Vincent <span class="entry-dates">(d. 304)</span> <span class="entry-desc">— Deacon, martyr at Valencia</span></a></li>
     <li><a href="vincent-ferrer.html">St. Vincent Ferrer <span class="entry-dates">(c. 1350–1419)</span> <span class="entry-desc">— Dominican friar, itinerant preacher</span></a></li>
     <li><a href="vincent-of-hainault.html">St. Vincent Madelgarius <span class="entry-dates">(c. 607–c. 677)</span> <span class="entry-desc">— Count of Hainault, later monk and saint</span></a></li>
     <li><a href="vindicianus.html">St. Vindicianus of Cambrai <span class="entry-dates">(d. c. 712)</span> <span class="entry-desc">— Bishop of Cambrai and Arras</span></a></li>

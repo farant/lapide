@@ -15,7 +15,7 @@
   - `#in-the-beginning-p7` — God created heaven and earth in the first instant of time, not before the first day
     text: "Note that God created heaven and earth not in time, but in the beginning of time, that is, in the first moment of time, namely in the first instant of the world."
   - `#in-the-beginning-p9` — Second interpretation: "In the Son," i.e. in Christ as wisdom of the Father
-    text: " "In the beginning," they say, that is, in the Son; for the Apostle teaches that all things were created through the Son as the idea and wisdom of the Father, Col. 1:16."
+    text: ""In the beginning," they say, that is, in the Son; for the Apostle teaches that all things were created through the Son as the idea and wisdom of the Father, Col. 1:16."
   - `#he-created-p3` — "He created" means from nothing, as the mother of the Maccabees teaches
     text: "HE CREATED -- properly, that is, from nothing, from no pre-existing matter."
   - `#god-elohim-p5` — Explanation of the word "Elohim" as the name for God the creator
@@ -260,11 +260,11 @@
   - `#verse-26-p10` — Image of God in man: not according to the body (against Anthropomorphites)
     text: "IN OUR IMAGE AND LIKENESS. — You will ask, in what does this image of God, expressed in man, consist?"
   - `#verse-26-p13` — Are image and likeness distinguished? Many Fathers say image pertains to nature, likeness to virtues
-    text: " Note secondly, many distinguish "image" here from "likeness," namely so that "image" pertains to nature, and "likeness" to virtues."
+    text: "Note secondly, many distinguish "image" here from "likeness," namely so that "image" pertains to nature, and "likeness" to virtues."
   - `#verse-26-p18` — Image of God situated in the mind of man: man is intellectual, rational
     text: "I say first: this image of God is situated in the mind of man, that is, in the fact that man occupies the highest rank of things"
   - `#verse-26-p30` — "And let him rule": man is an animal born to command
-    text: " AND LET HIM RULE. — In Hebrew veiirdu, that is, "and let them rule" or "have dominion," namely both Adam and Eve and their descendants."
+    text: "AND LET HIM RULE. &mdash; In Hebrew veiirdu, that is, "and let them rule" or "have dominion," namely both Adam and Eve and their descendants."
 - **Related people**: Basil, Chrysostom, Theodoret, Cyril, Augustine, Ambrose, Clement, Bernard, Damascene, Origen
 - **Related subjects**: Image of God, Trinity, man as microcosm, dominion, free will, original justice
 
@@ -303,7 +303,7 @@
   - `#verse-29-p2` — Men up to the flood ate herbs and fruits, abstaining from meat and wine; lived 900 years
     text: "29. BEHOLD I HAVE GIVEN YOU EVERY HERB FOR FOOD. — "I have given," that is, "I give": for the Hebrews use the past tense for the present"
   - `#verse-24-p5` — Junilius says that since God gave herbs for food, the earth brought forth nothing harmful originally
-    text: " "From the fact, he says, that God said: Behold I have given you every herb, it is clear that the earth brought forth nothing harmful, no poisonous herb, and no barren tree. Second, that not even birds lived by seizing weaker birds"
+    text: ""From the fact, he says, that God said: Behold I have given you every herb, it is clear that the earth brought forth nothing harmful, no poisonous herb, and no barren tree. Second, that not even birds lived by seizing weaker birds"
 - **Related people**: Boethius, Ovid
 - **Related subjects**: Food, frugality, vegetarianism before the flood
 
@@ -314,7 +314,7 @@
   - `#vulgate-text-p2` — Full Vulgate text quoted
     text: "31. And God saw all the things that He had made, and they were very good. And the evening and the morning were the sixth day."
   - `#verse-31-p2` — Why "it was good" is omitted after the creation of man; the comprehensive statement applies especially to man
-    text: " One may ask: Why, when after each individual work of creation it is said, "And God saw that it was good," is this omitted after the creation of man?"
+    text: "One may ask: Why, when after each individual work of creation it is said, "And God saw that it was good," is this omitted after the creation of man?"
   - `#verse-31-p7` — Augustine: individual works praiseworthy, but all together even more so; beauty consists in wholeness and unity
     text: "AND GOD SAW ALL THE THINGS THAT HE HAD MADE, AND THEY WERE VERY GOOD."
   - `#verse-31-p9` — Nine reasons for the beauty of the world enumerated
@@ -327,7 +327,7 @@
 - **Description**: "Thus the heavens were finished, and all their ornament" — reference to a later verse regarding the creation of the angels.
 - **Occurrences**:
   - `#heaven-and-earth-p18` — Moses tacitly implies the angels in the "ornament" of the heavens
-    text: " he tacitly implies them in chapter II, 1, when he says: "Thus the heavens were finished, and all their ornament:" for the ornament of the heavens consists of stars and angels."
+    text: "he tacitly implies them in chapter II, 1, when he says: "Thus the heavens were finished, and all their ornament:" for the ornament of the heavens consists of stars and angels."
 - **Related subjects**: Angels, creation
 
 ### Genesis 2:7
@@ -344,7 +344,7 @@
 - **Description**: "It is not good for man to be alone; let Us make him a helper like himself."
 - **Occurrences**:
   - `#verse-31-p5` — Reason why God did not say "it was good" of Adam alone before Eve's formation
-    text: " for in chapter 2, verse 18, He says: "It is not good for man to be alone; let Us make him a helper like himself.""
+    text: "for in chapter 2, verse 18, He says: "It is not good for man to be alone; let Us make him a helper like himself.""
 - **Related people**: Adam, Eve, Ambrose
 - **Related subjects**: Marriage, creation of woman
 
@@ -481,7 +481,7 @@
 - **Description**: The elephant is called Behemoth — reference to the Hebrew plural as honorific.
 - **Occurrences**:
   - `#god-elohim-p24` — Example of Hebrew honorific plural: elephant called Behemoth (beasts) because of its size
-    text: " Thus in Job XL, 10, the elephant is called Behemoth, that is "beasts," because on account of the greatness of its body and strength, it is the equivalent of many beasts"
+    text: "Thus in Job XL, 10, the elephant is called Behemoth, that is "beasts," because on account of the greatness of its body and strength, it is the equivalent of many beasts"
 - **Related subjects**: Hebrew language, plural of majesty
 
 ## Psalms
@@ -635,7 +635,7 @@
 - **Description**: "The holy man abides in wisdom like the sun; for the fool changes like the moon."
 - **Occurrences**:
   - `#verse-16-p3` — Moon as symbol of inconstancy, sun as symbol of constancy
-    text: " "The holy man," he says, "abides in wisdom like the sun; for the fool changes like the moon,""
+    text: ""The holy man," he says, "abides in wisdom like the sun; for the fool changes like the moon,""
 - **Related subjects**: Constancy, wisdom, sun and moon symbolism
 
 ### Sirach 43:2 (and following)
@@ -643,7 +643,7 @@
 - **Description**: "The sun is a vessel admirable of the Most High, burning the mountains, breathing forth fiery rays."
 - **Occurrences**:
   - `#verse-16-p2` — Description of sun, moon, and stars from Sirach as instruments of God
-    text: " "The sun," he says, "is a vessel," that is, an instrument, a tool, "admirable of the Most High, burning the mountains, breathing forth fiery rays. The moon, an indicator of the season and a sign of the age."
+    text: ""The sun," he says, "is a vessel," that is, an instrument, a tool, "admirable of the Most High, burning the mountains, breathing forth fiery rays. The moon, an indicator of the season and a sign of the age."
 - **Related subjects**: Sun, moon, stars as instruments of God
 
 ## Wisdom
@@ -653,7 +653,7 @@
 - **Description**: "In the image of likeness" — reference to the hendiadys of image and likeness.
 - **Occurrences**:
   - `#verse-26-p14` — Image and likeness are not distinguished; it is a hendiadys as in Wisdom 2:24
-    text: " "in the image of likeness," as is found in Wisdom chapter 2, verse 24"
+    text: ""in the image of likeness," as is found in Wisdom chapter 2, verse 24"
 - **Related subjects**: Image of God, likeness
 
 ### Wisdom 8:1
@@ -681,7 +681,7 @@
 - **Description**: "God created the world from invisible matter" — reference to formless matter.
 - **Occurrences**:
   - `#verse-2-p2` — Cited on the formless, unordered state of original matter
-    text: " God "created the world from invisible matter," in Greek amorpho, that is, formless, unadorned, unordered."
+    text: "God "created the world from invisible matter," in Greek amorpho, that is, formless, unadorned, unordered."
 - **Related subjects**: Creation, formless matter
 
 ### Wisdom 18:24
@@ -689,7 +689,7 @@
 - **Description**: "In the full-length robe which he wore, he bore the whole world" — Aaron the high priest.
 - **Occurrences**:
   - `#verse-26-p7` — Aaron's vestments symbolize the world; man is priest of creation
-    text: " "in the full-length robe which he wore," Aaron the high priest of the Old Testament "bore the whole world,""
+    text: ""in the full-length robe which he wore," Aaron the high priest of the Old Testament "bore the whole world,""
 - **Related people**: Aaron
 - **Related subjects**: High priesthood, man as priest of creation
 
@@ -743,7 +743,7 @@
 - **Description**: God created alone, by Himself and His own omnipotence, not through angels.
 - **Occurrences**:
   - `#he-created-p3` — "He created" alone, as Isaiah says, by Himself
-    text: " "He created," namely alone, as Isaiah says, ch. 44, v. 24, by Himself and His own omnipotence, not through angels"
+    text: ""He created," namely alone, as Isaiah says, ch. 44, v. 24, by Himself and His own omnipotence, not through angels"
 - **Related subjects**: Creation, divine omnipotence
 
 ### Isaiah 47:25 (likely Isaiah 47:13)
@@ -789,7 +789,7 @@
 - **Description**: "Those who are learned will shine like the splendor of the firmament, and those who instruct many to justice, like stars for all eternity."
 - **Occurrences**:
   - `#verse-16-p26` — Saints will shine like stars in heavenly glory
-    text: " "Those who are learned," he says, "will shine like the splendor of the firmament, and those who instruct many to justice, like stars for all eternity.""
+    text: ""Those who are learned," he says, "will shine like the splendor of the firmament, and those who instruct many to justice, like stars for all eternity.""
 - **Related people**: Daniel
 - **Related subjects**: Heavenly glory, saints, stars
 
@@ -966,7 +966,7 @@
 - **Description**: "From His treasures He brought forth a luminous light, that His work might appear."
 - **Occurrences**:
   - `#verse-3-p5` — Light brought forth from God's treasures so His work might be visible
-    text: " "From His treasures," says Esdras, Book IV, ch. 6, v. 40, "He brought forth a luminous light, that His work might appear.""
+    text: ""From His treasures," says Esdras, Book IV, ch. 6, v. 40, "He brought forth a luminous light, that His work might appear.""
 - **Related subjects**: Light, creation
 
 ## Genesis 3:1 (cross-reference)
@@ -976,7 +976,7 @@
 - **Description**: "Why has God commanded you?" — the serpent called God Elohim.
 - **Occurrences**:
   - `#god-elohim-p7` — Even the serpent called God Elohim; from the beginning Adam and Eve called God Elohim
-    text: " Hence even the serpent called God thus, saying: "Why has God commanded you?" in Hebrew, Elohim."
+    text: "Hence even the serpent called God thus, saying: "Why has God commanded you?" in Hebrew, Elohim."
 - **Related subjects**: Elohim, serpent, fall
 
 ## Psalms (additional)

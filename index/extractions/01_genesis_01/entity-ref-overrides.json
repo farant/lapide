@@ -1,0 +1,25 @@
+{
+  "global_exclude_words": ["mark", "histories"],
+  "exclude": [
+    {"text": "Victor", "slug": "person/pope/victor", "paragraph": "verse-3-p13", "reason": "Part of 'Hugh of St. Victor'"},
+    {"text": "LXX", "slug": "organization/institution/septuagint-translators", "paragraph": "verse-11-p2", "reason": "Roman numeral 70, not Septuagint"},
+    {"text": "Philip", "slug": "person/biblical/philip-the-deacon", "paragraph": "god-elohim-p24", "reason": "Philip II of Spain, not the deacon"}
+  ],
+  "force": [
+    {"text": "the Poet", "slug": "person/classical/virgil", "paragraph": "verse-14-p6", "reason": "Aeneid II.154 quote"},
+    {"text": "the Poet", "slug": "person/classical/ovid", "paragraph": "verse-26-p25", "reason": "Metamorphoses I.84 quote"},
+    {"text": "Gabriel", "slug": "person/scholar/gabriel-biel", "paragraph": "verse-2-p5", "reason": "Gabriel Biel the scholastic, not the Archangel"},
+    {"text": "Hexaemeron", "slug": "bibliography/basil-of-caesarea/hexaemeron", "paragraph": "verse-3-p7", "reason": "Basil's Hexaemeron, not Ambrose's"},
+    {"text": "Hexaemeron", "slug": "bibliography/basil-of-caesarea/hexaemeron", "paragraph": "verse-22-p7", "reason": "Basil Homily 8"},
+    {"text": "Hexaemeron", "slug": "bibliography/basil-of-caesarea/hexaemeron", "paragraph": "verse-24-p16", "reason": "Basil Homily 9"},
+    {"text": "St. Anthony", "slug": "person/saint/antony-the-great", "paragraph": "verse-31-p20", "reason": "Desert Father, not Anthony of Padua"},
+    {"text": "Socrates", "slug": "person/scholar/socrates-scholasticus", "paragraph": "verse-31-p20", "reason": "Church historian, not the philosopher"},
+    {"text": "On the Faith", "slug": "bibliography/john-of-damascus/de-fide-orthodoxa", "paragraph": "verse-24-p6", "reason": "Damascene's De Fide Orthodoxa"},
+    {"text": "On the Faith", "slug": "bibliography/john-of-damascus/de-fide-orthodoxa", "paragraph": "verse-26-p13", "reason": "Damascene's De Fide Orthodoxa"},
+    {"text": "Oration 2", "slug": "bibliography/gregory-of-nyssa/de-hominis-opificio", "paragraph": "verse-24-p5", "reason": "Gregory of Nyssa's On the Making of Man"},
+    {"text": "Greeks", "slug": "organization/institution/septuagint-translators", "paragraph": "verse-24-p24", "reason": "Greek translators of Scripture"},
+    {"text": "Sentences", "slug": "bibliography/peter-lombard/sentences", "paragraph": "god-elohim-p26", "reason": "Peter Lombard's Sentences, not Augustine's"},
+    {"text": "Sentences", "slug": "bibliography/peter-lombard/sentences", "paragraph": "introduction-p12", "reason": "Peter Lombard's Sentences, not Augustine's"},
+    {"text": "Questions on Genesis", "slug": "bibliography/alcuin/quaestiones-in-genesim", "paragraph": "introduction-p7", "reason": "Alcuin's work, not Augustine's"}
+  ]
+}

@@ -157,9 +157,29 @@ export function parseTextLine(line: string): string | null {
   const m = line.match(/^\s*text:\s*["\u201C](.+)["\u201D]$/);
   if (!m) return null;
   return m[1]
-    .replace(/\\"/g, '"')           // unescape backslash-escaped quotes
-    .replace(/^[\u201C\u201D]+/, '') // strip leading curly quotes (part of quoted text, not content)
-    .replace(/[\u201C\u201D]+$/, ''); // strip trailing curly quotes
+    .replace(/\\"/g, '"')             // unescape backslash-escaped quotes
+    .replace(/^[\u201C\u201D]+/, '')  // strip leading curly quotes (part of quoted text, not content)
+    .replace(/[\u201C\u201D]+$/, '')  // strip trailing curly quotes
+    // Decode HTML entities for characters LLM agents cannot emit
+    .replace(/&ldquo;/g, "\u201C")
+    .replace(/&rdquo;/g, "\u201D")
+    .replace(/&lsquo;/g, "\u2018")
+    .replace(/&rsquo;/g, "\u2019")
+    .replace(/&mdash;/g, "\u2014")
+    .replace(/&ndash;/g, "\u2013")
+    .replace(/&amp;/g, "&");
+}
+
+// Encode Unicode characters that LLM agents cannot emit into HTML entities
+// for use in ref file text: fields. Inverse of the decoding in parseTextLine.
+export function encodeForRefFile(text: string): string {
+  return text
+    .replace(/\u201C/g, "&ldquo;")
+    .replace(/\u201D/g, "&rdquo;")
+    .replace(/\u2018/g, "&lsquo;")
+    .replace(/\u2019/g, "&rsquo;")
+    .replace(/\u2014/g, "&mdash;")
+    .replace(/\u2013/g, "&ndash;");
 }
 
 // --- Paragraph extraction from HTML ---

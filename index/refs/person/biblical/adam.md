@@ -36,8 +36,8 @@ First man, created by God. Central figure in the creation narrative of Genesis.
   text: "From Adam to the flood there elapsed 1,656 years."
 - `01_genesis_01.html#introduction-p5-s-e75f454` — Named as beginning the first part of Genesis
   text: "The first encompasses the deeds from Adam up to the flood"
-- `01_genesis_01.html#verse-10-p3-s-ff66edb` — God formed Adam and endowed him with Hebrew on the sixth day
-  text: "on the sixth day, when He formed Adam and endowed him with the Hebrew language, then God called the dry land 'erets'"
+- `01_genesis_01.html#verse-10-p3-s-c040e01` — God formed Adam and endowed him with Hebrew on the sixth day
+  text: "on the sixth day, when He formed Adam and endowed him with the Hebrew language, then God called the dry land 'erets,"
 - `01_genesis_01.html#verse-26-p9-s-2578901` — "Man" in Genesis is Adam himself, the first man and parent of all others
   text: ""man" is Adam himself, the first man and parent of all others"
 - `01_genesis_01.html#verse-26-p24-s-f836b9e` — Original justice given to Adam in the first instant of creation

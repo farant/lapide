@@ -17,7 +17,7 @@
   - `#he-created-p13` — The world itself, by its orderly mutability and beauty, proclaims that it was made by God.
     text: "The world itself, by its most orderly mutability and mobility, and by the most beautiful appearance of all visible things, proclaims in a certain silent manner both that it was made and that it could not have been made except by God, who is ineffably and invisibly great, ineffably and invisibly beautiful."
   - `#he-created-p15` — God created by commanding and saying; by the same power He could create many more worlds or annihilate this one.
-    text: " God created heaven and earth by commanding and saying: Let there be heaven and earth, as is expressly stated in IV Esdras, vi, 38, and Psalm xxxii, verse 6: "By the Word of the Lord the heavens were established;""
+    text: "God created heaven and earth by commanding and saying: Let there be heaven and earth, as is expressly stated in IV Esdras, vi, 38, and Psalm xxxii, verse 6: "By the Word of the Lord the heavens were established;""
 - **Related people**: Moses, Augustine, Plato, Basil, Ambrose, Tertullian
 - **Related places**: —
 - **Related subjects**: `theology/god/trinity`, `theology/creation/angels`, `theology/god/providence`
@@ -63,7 +63,7 @@
 - **Description**: The nine interpretations of "In the beginning" (bereshit), exploring the relationship between time, eternity, and creation — time began with the world, not before it.
 - **Occurrences**:
   - `#in-the-beginning-p3` — First interpretation: "In the beginning of time" — time began with the world; corporeal things are measured by time, angels by aeviternity, God by eternity.
-    text: " "In the beginning," they say, that is, in the first origin or start, not of eternity, not of aeviternity, but of time and of the world, when indeed the world's duration, namely time, began together with the world."
+    text: ""In the beginning," they say, that is, in the first origin or start, not of eternity, not of aeviternity, but of time and of the world, when indeed the world's duration, namely time, began together with the world."
   - `#in-the-beginning-p5` — Augustine: times began to run with the motion of creatures; before creation, times are sought in vain.
     text: "Once creatures were made," he says, "times began to run in their motions. Hence before creation, times are sought in vain, as if they could be found before time itself."
   - `#in-the-beginning-p7` — God created not in time, but in the first moment of time, the first instant of the world; heaven and earth were created on the very first day.
@@ -87,7 +87,7 @@
   - `#verse-26-p3` — In "Let Us make man," God the Father addresses the Son and Holy Spirit as colleagues of the same nature, power, and operation; the Council of Sirmium pronounces anathema on those who explain this otherwise.
     text: "by these words God the Father addresses not the angels, as though He were commanding them to fashion the human body and sensitive soul, reserving to Himself alone the making of the rational soul, as Plato wished in the Timaeus, and Philo in his book On the Creation of the Six Days, and the Jews. For St. Basil, Chrysostom, Theodoret, Cyril in Book I Against Julian, and Augustine in Book XVI of The City of God, chapter 6, denounce this as impious"
   - `#verse-3-p2` — "God said" — by the essential Word common to the three Persons; the word "said" is appropriated to the Son as the Word and idea; power to the Father, goodness to the Holy Spirit.
-    text: " "He said," therefore, means: He conceived in His mind, willed, decreed, commanded efficaciously, and by commanding actually made and produced -- God, that is, the most holy Trinity itself, produced light."
+    text: ""He said," therefore, means: He conceived in His mind, willed, decreed, commanded efficaciously, and by commanding actually made and produced -- God, that is, the most holy Trinity itself, produced light."
   - `#verse-26-p21` — Man represents the Trinity: as God the Father produces the Word by knowing Himself and the Holy Spirit by loving, so man produces an intelligible word and from it proceeds love.
     text: "just as God the Father, by knowing Himself through intellect, produces the Word, that is, the Son, and by loving Him produces the Holy Spirit: so man, by understanding himself, produces in his mind an intelligible word, expressive of himself and similar to himself, and from this proceeds love in his will: for thus man clearly represents the Most Holy Trinity."
 - **Related people**: Basil, Augustine, Chrysostom, Peter Lombard, Lyranus
@@ -121,7 +121,7 @@
 - **Description**: God's providential governance of the world, ordering all things wisely and sweetly for the good of creation.
 - **Occurrences**:
   - `#god-elohim-p13` — God is providence itself over all things; nothing happens without being commanded or permitted from His interior court.
-    text: "God is providence itself over all things; for, as Saint Augustine says, book III of On the Trinity, chapter iv: \"Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler\""
+    text: "God is providence itself over all things; for, as Saint Augustine says, book III of On the Trinity, chapter iv: "Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler,"
   - `#verse-11-p3` — St. Basil marvels at God's providence in germination: stalks equal in number to roots, joints strengthening wheat to bear ears, husks hiding grain from birds.
     text: "Basil marvels, and rightly so, at God's providence in germination, which sends up stalks equal in number to the roots."
   - `#verse-9-p16` — The raging sea is restrained not by its shores but by God's command as by a bridle; He set for the sea its boundary which it cannot transgress.
@@ -203,13 +203,13 @@
   - `#verse-26-p23` — The supernatural image in grace and justification, by which man becomes a sharer in the divine nature; lost by sin, repaired by grace.
     text: "there is also another image of God in man, namely a supernatural one, which is situated in grace and man's justification, by which he becomes a sharer in the divine nature"
   - `#verse-26-p15` — The Hebrew tselem signifies a shadow: man in relation to God is merely a shadow or shadowy image, with a fleeting essence compared to God's solid and constant one.
-    text: " "image" the Hebrew is tselem, which signifies a shadow, or a shadowing-forth of a thing. For the root tsalal signifies to cast a shadow"
+    text: ""image" the Hebrew is tselem, which signifies a shadow, or a shadowing-forth of a thing. For the root tsalal signifies to cast a shadow"
   - `#verse-26-p25` — In the body there shines forth a certain reflection of the image: the upright stature and face raised to heaven indicate a soul sprung from heavenly origin.
     text: "in the body of man there is not properly the image of God, but nevertheless in it there shines forth in a certain way and glows, because the body of man is the image of the mind: for the upright stature and the face raised to heaven indicate a soul that rules the body, sprung from a heavenly origin"
   - `#verse-26-p29` — Morally, God sealed man with His indelible image: man bears it as son to father (love), slave to master (fear), soldier to commander (fidelity), steward to lord (right use of creatures).
     text: "God willed all things to be man's, but man to be God's, as His own special possession, and therefore He sealed him with the seal of His image -- and that a most tenacious and indelible one"
   - `#verse-26-p13` — Image vs. likeness: many Fathers distinguish them (image = nature, likeness = virtues); through sin, likeness perishes but not the image.
-    text: " St. Basil, Homily 10 on the Hexameron: "Through the image impressed on my soul, I obtained the use of reason; but having become a Christian, I am made truly like God.""
+    text: "St. Basil, Homily 10 on the Hexameron: "Through the image impressed on my soul, I obtained the use of reason; but having become a Christian, I am made truly like God.""
 - **Related people**: Augustine, Basil, Chrysostom, Jerome, Damascene, Ambrose, Origen, Gregory of Nyssa, Bernard
 - **Related places**: —
 - **Related subjects**: `theology/god/trinity`, `theology/creation`, `theology/soteriology/grace`, `morals/virtues/humility`
@@ -275,7 +275,7 @@
 - **Description**: The doctrine that Scripture expresses at least four meanings: literal/historical, allegorical, tropological (moral), and anagogical. Genesis 1 is a prime example of Lapide's use of all four senses.
 - **Occurrences**:
   - `#verse-3-p13` — Tropological reading of light: the right intention, faith, knowledge, law and Gospel that illuminate the mind.
-    text: "Tropologically, the Apostle says in 2 Corinthians 4:6: \"God, who said that light should shine out of darkness, has Himself shone in our hearts\""
+    text: "Tropologically, the Apostle says in 2 Corinthians 4:6: "God, who said that light should shine out of darkness, has Himself shone in our hearts,"
   - `#verse-3-p16` — Symbolic/allegorical: "let there be light" means "let there be an Angel" (Augustine); or the eternal generation of the Word. But these are symbolic, not literal.
     text: "Symbolically, "let there be light" means "let there be an Angel," says St. Augustine. But this cannot be the literal sense, because the Angels were created before light, together with heaven and earth."
   - `#verse-3-p17` — Allegorical: Christ incarnate is the light of the world.
@@ -359,7 +359,7 @@
   - `#verse-4-p2` — "God saw that it was good": God is introduced as a craftsman contemplating his work; against the Manichaeans, nothing evil but all things good were produced by God.
     text: "God is here introduced by Moses through a kind of literary characterization, in the manner of men, as a craftsman who, having completed his work, contemplates it and sees that it is beautiful and fine -- and this to this end: that against the Manichaeans we may know that nothing evil, but all things good, were produced by God."
   - `#verse-31-p2` — Why "God saw that it was good" is omitted after man's creation: the comprehensive "very good" applies especially to man as the end and synthesis of all creatures.
-    text: " in a comprehensive statement embracing all things, says: "And God saw all the things that He had made, and they were very good." This comprehensive statement applies especially to man"
+    text: "in a comprehensive statement embracing all things, says: "And God saw all the things that He had made, and they were very good." This comprehensive statement applies especially to man"
   - `#verse-31-p7` — Augustine: the beauty of parts is praiseworthy, but more so in the whole; the word "universe" derives from "unity."
     text: "all beauty that consists of parts is much more praiseworthy in the whole than in the part."
   - `#verse-31-p10` — Nine reasons for the beauty of the world: (1) variety, (2) order, (3) universality/fullness, (4) connection of parts, (5) antipathy and sympathy, (6) proportion, (7) divine administration, (8) all things serve man, (9) evils ordered toward good.
@@ -423,7 +423,7 @@
 - **Description**: The creation of fish, birds, and land animals with extensive moral symbolism — bees, cranes, storks, the kingfisher, the turtle-dove, ants, dogs, and many others as mirrors of human virtue and vice.
 - **Occurrences**:
   - `#verse-20-p3` — Fish: the Hebrew iisretsu signifies marvelous fecundity; fish are unteachable and stupid from excess moisture, and the smaller is the food of the larger.
-    text: "In Hebrew iisretsu, that is, let them bubble up and gush forth in great abundance. This is the proper word for fish and frogs, and signifies their marvelous fecundity, propagation, and prolific nature."
+    text: " In Hebrew iisretsu, that is, let them bubble up and gush forth in great abundance. This is the proper word for fish and frogs, and signifies their marvelous fecundity, propagation, and prolific nature."
   - `#verse-20-p4` — Moral lessons from sea creatures: the crab and the oyster (cunning thieves), the octopus (hypocrites who take on the color of whatever they cling to).
     text: "The crab, in order to devour the flesh of the oyster, when the oyster opens its shell to the sun, throws a small stone into it so that it cannot close, and so invades and feeds upon it. Crabs are cunning thieves and robbers."
   - `#verse-22-p7` — Basil and Ambrose on the industry of bees, the sentry watches of cranes, and the filial piety of storks.
@@ -531,7 +531,7 @@
   - `#verse-2-p17` — The Holy Spirit brooding over the waters of baptism, bringing us to birth and regenerating us.
     text: "Allegorically, the Holy Spirit is here signified as brooding, as it were, over the waters of baptism, and by them bringing us to birth and regenerating us, says St. Jerome, Epistle 83 to Oceanus."
   - `#verse-3-p9` — Nazianzen called the first light "spiritual" because it was quality without a subject — proof against heretics who deny accidents without a subject in the Eucharist.
-    text: " St. Basil, Theodoret, and Nazianzen think that only the quality of light was here created without a subject -- for which reason Nazianzen calls this light "spiritual." Note this against heretics who deny that accidents can exist without a subject in the Eucharist."
+    text: "St. Basil, Theodoret, and Nazianzen think that only the quality of light was here created without a subject -- for which reason Nazianzen calls this light "spiritual." Note this against heretics who deny that accidents can exist without a subject in the Eucharist."
 - **Related people**: Jerome, Gregory of Nazianzus
 - **Related places**: —
 - **Related subjects**: `theology/creation/holy-spirit`, `sacraments/eucharist`
@@ -545,7 +545,7 @@
   - `#verse-28-p2` — "Increase and multiply" is not a precept for each individual but a blessing on the species, granting the power and fecundity for procreation; otherwise Christ would be the first violator.
     text: "if there is any precept here, it is given not to individual persons, but to the whole species, that is, to all mankind in common, lest they allow the human species to die out."
   - `#verse-27-p3` — "Male and female He created them" — not a hermaphrodite, but Adam as male and Eve as female; said by anticipation.
-    text: " Scripture does not say "He created him" but "them," namely Adam and Eve -- that is, He created Adam as male and Eve as female."
+    text: "Scripture does not say "He created him" but "them," namely Adam and Eve -- that is, He created Adam as male and Eve as female."
   - `#verse-31-p5` — God did not say "it was good" of Adam alone before Eve's formation, lest He contradict "It is not good for man to be alone"; He preferred many whom He could save.
     text: "For He preferred," he says, "that there be many whom He could save and to whom He could forgive sin, rather than one Adam alone who would be free from guilt."
 - **Related people**: Chrysostom, Rupert, Augustine
@@ -605,7 +605,7 @@
 - **Description**: Pope Innocent III's symbolic reading of the two great luminaries as the Pontifical authority (sun/spiritual) and royal power (moon/carnal), with the difference between them as great as between sun and moon.
 - **Occurrences**:
   - `#verse-14-p14` — Innocent III: in the firmament of the universal Church, God made two great luminaries — the Pontifical authority and the royal power; the former presides over spiritual things, the latter over carnal.
-    text: " "In the firmament of heaven," he says, "that is, of the universal Church, God made two great luminaries, that is, He established two dignities, which are the Pontifical authority and the royal power."
+    text: ""In the firmament of heaven," he says, "that is, of the universal Church, God made two great luminaries, that is, He established two dignities, which are the Pontifical authority and the royal power."
 - **Related people**: Innocent III
 - **Related places**: Constantinople
 - **Related subjects**: `ecclesiology/papacy/papal-authority`, `theology/creation/six-days`
@@ -639,7 +639,7 @@
   - `#verse-2-p11` — Hebrew merachephet: St. Basil, Diodorus, and Jerome testify it refers to birds hovering over eggs.
     text: "the Hebrew is merachephet, which, as St. Basil, Diodorus, and Jerome testify in the Hebrew Questions on Genesis, refers to birds when, hovering over their eggs and chicks"
   - `#god-elohim-p5` — The etymology of Elohim: from el (strong) and ala (he adjured, bound).
-    text: " "God" in Hebrew is elohim, which is derived from el, that is "strong," and ala, that is "he adjured, obligated, bound""
+    text: ""God" in Hebrew is elohim, which is derived from el, that is "strong," and ala, that is "he adjured, obligated, bound""
   - `#verse-10-p5` — Etymology of erets (earth): from ratsats (to trample), ratsa (to will/desire), or ruts (to run); and iammim (seas) from maim (waters) or hama (to roar).
     text: "'Earth' in Hebrew is called 'erets,' either from the root 'ratsats,' that is, to trample, because it is trodden upon and inhabited by men and beasts"
 - **Related people**: Jerome, Aquila, Symmachus, Theodotion, Onkelos

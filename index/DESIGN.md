@@ -1286,46 +1286,102 @@ Output: `index/**/*.html` entry pages, alias pages, directory index pages, and `
 |---|---|---|
 | 0 | Prep | `bun number-paragraphs.ts <source.html>` |
 | 1 | Extract | Manual (agents) |
-| 2 | Normalize | Manual (agents) + `bun validate-refs.ts` |
+| 1✓ | Verify | `bun lint.ts <source.html>` |
+| 2 | Normalize | Manual (agents) |
+| 2✓ | Verify | `bun lint.ts <source.html>` |
 | 3 | Annotate | `bun annotate-source.ts <source.html>` |
-| 3✓ | Verify | `bun annotate-source.ts --check <source.html>` + `bun lint-annotations.ts <source.html>` |
-| 4 | Verify | `bun validate-refs.ts` |
+| 3✓ | Verify | `bun lint.ts <source.html>` |
+| 4 | Verify | `bun lint.ts <source.html>` |
 | 5 | Entity-ref | `bun tag-entity-refs.ts <source.html>` |
-| 5✓ | Verify | `bun lint-annotations.ts <source.html>` |
+| 5✓ | Verify | `bun lint.ts <source.html>` |
 | 6 | Generate | `bun generate-index.ts` |
 
+`bun lint.ts` is the single verification command used at every stage. It runs all applicable checks and exits 0 if clean, 1 if any errors. See [Consolidated lint tool](#consolidated-lint-tool) for details.
+
 Additional utility tools:
-- `bun validate-extractions.ts [--fix-quotes] <source.html> [extraction-dir]` — validates extraction files against source HTML
 - `bun audit-refs.ts` — detailed audit of ref file references
-- `bun lint-annotations.ts [--fix-quotes] <source.html>` — checks sidecar annotation integrity (orphans, broken slugs, missing script tags, invalid offsets)
-- `bun annotate-source.ts --check <source.html>` — dry-run annotation comparison (exits 1 if out of sync)
 - `bun fix-ref-links.ts` — repairs broken ref file links
 - `bun sync-passage-refs.ts` — syncs passage references across ref files
 - `bun check-index-links.ts` / `bun fix-index-links.ts` — check and repair index page links
 
-#### `--fix-quotes` flag
+### Consolidated lint tool
 
-Both `lint-annotations.ts` and `validate-extractions.ts` support a `--fix-quotes` flag. When text quotes in ref files or extraction files differ from the HTML source only in quote style (single `'` vs double `"`, curly vs straight, em-dash `—` vs `--`), the tool detects these as cosmetic mismatches and:
+`bun lint.ts` replaces the separate `validate-refs.ts`, `lint-annotations.ts`, `validate-extractions.ts`, and `annotate-source.ts --check` tools. One command, all checks, zero tolerance for approximate matches.
 
-- **Without `--fix-quotes`**: reports them as `⚠️` warnings with a suggestion to re-run with the flag
-- **With `--fix-quotes`**: auto-fixes the text fields in the ref/extraction files to match the actual HTML source text
+**Usage**:
+```
+bun lint.ts                      # global ref file checks only
+bun lint.ts <source.html>        # global + source-file checks (refs, sidecar, extractions)
+bun lint.ts --fix <source.html>  # auto-fix text: fields in ref and extraction files
+```
 
-This addresses a systematic issue where agents generate text quotes with different quote characters than what appears in the HTML after entity decoding.
+**Global checks** (always run):
+1. Valid YAML frontmatter (required fields: `name`, `slug`, `category`)
+2. Slug matches file path
+3. No duplicate slugs
+4. Cross-references in `related:` point to existing ref files
+5. Alias files (`alias_of:`) point to valid canonical entries
+
+**Source-file checks** (when `<source.html>` provided):
+6. Paragraph IDs in ref files exist in the HTML
+7. `text:` quotes match actual HTML paragraph text — **zero tolerance**, exact substring match after entity decoding, no prefix fallback
+8. Sidecar annotations in sync with current ref files
+9. Sidecar annotation offsets valid (paragraph exists, start/end in bounds)
+10. No orphaned sidecar annotations
+11. Entity-ref slugs resolve to existing ref files
+12. `components.js` script tag present (if entity-ref tags exist)
+13. Extraction file `text:` quotes match HTML paragraph text
+
+**`--fix` mode** auto-corrects:
+- Ref file `text:` fields → exact HTML text, with HTML entities for unemittable characters
+- Extraction `text:` fields → exact HTML text via `findInPlainText`
+- Extraction `text:` fields with no direct match → propagated from corrected ref files (word-overlap heuristic matches the right ref entry for the same paragraph)
+
+**Exit codes**: 0 if no errors, 1 if any errors found.
+
+#### HTML entities in `text:` fields
+
+LLM agents cannot emit certain Unicode characters — the tokenizer normalizes them to ASCII. The `text:` field in ref and extraction files supports HTML entity references for these characters:
+
+| Entity | Character | Unicode | Note |
+|---|---|---|---|
+| `&ldquo;` | " | U+201C | Left double curly quote |
+| `&rdquo;` | " | U+201D | Right double curly quote |
+| `&lsquo;` | ' | U+2018 | Left single curly quote |
+| `&rsquo;` | ' | U+2019 | Right single curly quote (apostrophe) |
+| `&mdash;` | — | U+2014 | Em dash |
+| `&ndash;` | – | U+2013 | En dash |
+| `&amp;` | & | U+0026 | Ampersand |
+
+`parseTextLine` decodes these entities before comparison, so the decoded text matches what `stripHtml` produces from the source HTML. The `--fix` mode uses `encodeForRefFile` to write these entities back when correcting `text:` fields.
+
+Example: if the HTML has `&ldquo;God is good,&rdquo; he says`, the ref file `text:` field should be:
+```
+  text: "&ldquo;God is good,&rdquo; he says"
+```
+
+Agents can also write straight quotes (`"God is good," he says`) — `--fix` will correct them to entity-encoded form.
+
+#### Zero tolerance policy
+
+No approximate or prefix-based matching. The `text:` field, after entity decoding, must be an exact substring of the paragraph's plain text (HTML stripped). If it doesn't match:
+
+- **`bun lint.ts`**: reports a clear error with the divergence point and surrounding context
+- **`bun lint.ts --fix`**: auto-corrects to the exact HTML text
+
+The old prefix fallback (match first 50 chars and guess the end) has been removed from the annotator. Mismatches that previously produced silent approximate annotations now surface as explicit errors.
 
 ### Pipeline notes
 
 Each stage has a review/verify checkpoint. Documents can be at different stages — e.g., Preliminares may be fully annotated while Genesis 1 is still at the extraction stage.
 
-**Full verification chain** (run after completing Stages 3–5 for a document):
+**Verification at any stage** — run `bun lint.ts <source.html>` after any pipeline step. It checks everything that's applicable (skips checks for stages not yet completed — e.g., no sidecar checks if the file hasn't been annotated yet, no extraction checks if no extraction directory exists).
 
+**After completing Stages 3–5**, all checks should pass clean:
 ```
-bun validate-refs.ts                              # text: fields match HTML
-bun annotate-source.ts <source.html>              # re-derive sidecar + update ref hashes
-bun annotate-source.ts --check <source.html>      # confirm 0 changes needed
-bun lint-annotations.ts <source.html>             # confirm 0 issues (orphans, broken slugs, offsets)
+bun annotate-source.ts <source.html>   # re-derive sidecar + update ref hashes
+bun lint.ts <source.html>              # confirm 0 errors, 0 warnings
 ```
-
-All four should pass clean before considering a document fully indexed.
 
 Stage 6 (Generate) can also be run independently at any time, since it only reads ref files and produces HTML.
 
@@ -1333,7 +1389,7 @@ Stage 6 (Generate) can also be run independently at any time, since it only read
 
 Pipeline scripts import shared utility functions from two modules rather than defining their own copies:
 
-- **`pipeline-utils.ts`** — Core text processing functions used by `annotate-source.ts`, `validate-refs.ts`, `lint-annotations.ts`, `validate-extractions.ts`, and `tag-entity-refs.ts`. Exports: `stripHtml`, `normalizeForMatch`, `normalizeForPosition`, `computeHash`, `findInPlainText`, `splitSegments`, `getSection`, `stripHashSuffix`, `parseTextLine`, `extractParagraphs`, `parseSidecar`, `generateNameVariants`.
+- **`pipeline-utils.ts`** — Core text processing functions used by `annotate-source.ts`, `lint.ts`, `tag-entity-refs.ts`, and other pipeline tools. Exports: `stripHtml`, `normalizeForMatch`, `normalizeForPosition`, `computeHash`, `findInPlainText`, `splitSegments`, `getSection`, `stripHashSuffix`, `parseTextLine`, `encodeForRefFile`, `extractParagraphs`, `parseSidecar`, `generateNameVariants`.
 
 - **`lib/generate-index-utils.ts`** — Pure utility functions used by `generate-index.ts`. Exports: `parseFrontmatter`, `parseYaml`, `unquote`, `escHtml`, `humanizeFilename`, `humanizeSection`, `parseDates`, `ordinalSuffix`, `yearSlugFromNumber`, `latLonToTile`, `labelFor`, `CATEGORY_LABELS`, `SUBCATEGORY_LABELS`, `BIBLE_BOOK_ORDER`.
 

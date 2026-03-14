@@ -33,8 +33,8 @@ God's providential governance of the world and human affairs — ordering events
   text: "Whence did we acknowledge God's providence, unless from the succession of so many ages?"
 - `14_Commentaria_In_Pentateuchum_Mosis_Canones.html#canons-p17-s-6eaf3f9` — All Old Testament theophanies were made through angels bearing God's person
   text: "it is more true that all these apparitions were made through angels, who in assumed bodies bore the person of God"
-- `01_genesis_01.html#god-elohim-p13-s-74d0840` — God is providence itself over all things; nothing happens without being commanded or permitted from His interior court.
-  text: "God is providence itself over all things; for, as Saint Augustine says, book III of On the Trinity, chapter iv: \"Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler\""
+- `01_genesis_01.html#god-elohim-p13-s-c2df482` — God is providence itself over all things; nothing happens without being commanded or permitted from His interior court.
+  text: "God is providence itself over all things; for, as Saint Augustine says, book III of On the Trinity, chapter iv: "Nothing happens visibly and perceptibly that is not either commanded or permitted from the interior, invisible, and intelligible court of the supreme ruler,"
 - `01_genesis_01.html#verse-11-p3-s-68405fa` — St. Basil marvels at God's providence in germination: stalks equal in number to roots, joints strengthening wheat to bear ears, husks hiding grain from birds.
   text: "Basil marvels, and rightly so, at God's providence in germination, which sends up stalks equal in number to the roots."
 - `01_genesis_01.html#verse-9-p16-s-b65c812` — The raging sea is restrained not by its shores but by God's command as by a bridle; He set for the sea its boundary which it cannot transgress.

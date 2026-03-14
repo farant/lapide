@@ -19,8 +19,8 @@ The doctrine that Scripture expresses at least four meanings in a single phrase 
   text: "while other writings express only one meaning in a single phrase, this one expresses at least four meanings. For it has significance not only of words but also of the things signified by them; whence it follows that the literal sense conveys the understanding of the historical event... the allegorical sense, portends something prophetic about Christ the Lord; in the tropological sense, recommends something suited to the formation of morals; and rising still higher in a third way, through anagogy proposes the heavenly Mysteries"
 - `12_Proemium_Et_Encomium_Sacrae_Scripturae.html#chapter-ii-p2-s-5c89784` — Origen maps the four senses to four cosmic elements: history to earth, tropological to water, allegorical to air, anagogical to fire.
   text: "just as you fit the historical sense to earth and the tropological to water, so rightly you may fit the allegorical to air, and the anagogical to fire and the ether"
-- `01_genesis_01.html#verse-3-p13-s-d1a2f9a` — Tropological reading of light: the right intention, faith, knowledge, law and Gospel that illuminate the mind.
-  text: "Tropologically, the Apostle says in 2 Corinthians 4:6: \"God, who said that light should shine out of darkness, has Himself shone in our hearts\""
+- `01_genesis_01.html#verse-3-p13-s-773b034` — Tropological reading of light: the right intention, faith, knowledge, law and Gospel that illuminate the mind.
+  text: "Tropologically, the Apostle says in 2 Corinthians 4:6: "God, who said that light should shine out of darkness, has Himself shone in our hearts,"
 - `01_genesis_01.html#verse-3-p16-s-8120b47` — Symbolic/allegorical: "let there be light" means "let there be an Angel" (Augustine); or the eternal generation of the Word. But these are symbolic, not literal.
   text: "Symbolically, "let there be light" means "let there be an Angel," says St. Augustine. But this cannot be the literal sense, because the Angels were created before light, together with heaven and earth."
 - `01_genesis_01.html#verse-3-p17-s-248059a` — Allegorical: Christ incarnate is the light of the world.

@@ -30,5 +30,5 @@ Pope, disciple of St. Peter, and Church Father. Taught that the Scriptures were 
   text: "This is the opinion of Blessed Clement, received from the lips of Saint Peter"
 - `01_genesis_01.html#heaven-and-earth-p12-s-6580d90` — Cited alongside Peter and Basil for the creation of empyrean, earth, and abyss
   text: "This is the opinion of Saint Peter and Clement, Saint Basil, Bede, Molina"
-- `01_genesis_01.html#verse-26-p4-s-4933e86` — Quoted from Book VII of the Apostolic Constitutions, chapter 35, on man as the culmination of creation
-  text: "St. Clement, Book VII of the Apostolic Constitutions, chapter 35: \"The culmination of Your work, a living being partaking of reason, a citizen of the world\""
+- `01_genesis_01.html#verse-26-p4-s-278e7a0` — Quoted from Book VII of the Apostolic Constitutions, chapter 35, on man as the culmination of creation
+  text: "St. Clement, Book VII of the Apostolic Constitutions, chapter 35: "The culmination of Your work, a living being partaking of reason, a citizen of the world,"

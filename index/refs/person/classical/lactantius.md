@@ -23,5 +23,5 @@ Early Christian apologist, sometimes called "the Christian Cicero." Author of th
 
 ## References in Commentary
 
-- `01_genesis_01.html#verse-26-p7-s-318f45f` — Quoted from his book On the Wrath of God, chapter 14, on man as God's high priest
-  text: "Hear Lactantius, book On the Wrath of God, chapter 14: \"It follows that I should show why God made man.\""
+- `01_genesis_01.html#verse-26-p7-s-8269b09` — Quoted from his book On the Wrath of God, chapter 14, on man as God's high priest
+  text: "Hear Lactantius, book On the Wrath of God, chapter 14: "It follows that I should show why God made man. "

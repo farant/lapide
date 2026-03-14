@@ -22,5 +22,5 @@ Early Christian martyr who was executed under Emperor Aurelian. His mother encou
 
 ## References in Commentary
 
-- `01_genesis_01.html#verse-16-p14-s-31fdf46` — Described as a young martyr under Emperor Aurelian, encouraged by his mother to look to heaven
-  text: "So the young St. Symphorian, when under the Emperor Aurelian he was being dragged to martyrdom, was encouraged by his mother with these words: \"My son, my son, remember eternal life, look up to heaven\""
+- `01_genesis_01.html#verse-16-p14-s-ca328ff` — Described as a young martyr under Emperor Aurelian, encouraged by his mother to look to heaven
+  text: "So the young St. Symphorian, when under the Emperor Aurelian he was being dragged to martyrdom, was encouraged by his mother with these words: "My son, my son, remember eternal life, look up to heaven,"
