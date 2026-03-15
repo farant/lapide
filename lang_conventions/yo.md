@@ -292,6 +292,18 @@ Yoruba religious texts are predominantly Protestant (Yoruba Bible translation hi
 - **Wúndíá Maria** (Virgin Mary — Catholic devotional), not just "Maria" alone in theological contexts referring to the Blessed Virgin
 - **Ìjẹ́wọ́** (Confession — Catholic sacramental sense)
 
+### 9. Èṣù ≠ Satan — CRITICAL
+
+**Never use Èṣù (or èṣù) to translate "Satan," "the devil," or "demon."** Èṣù is a Yoruba orisha (deity of crossroads, communication, and divine law) — not an embodiment of evil. The conflation originated in Bishop Ajayi Crowther's 1842 *Vocabulary of the Yoruba*, not in the Yoruba Bible itself. Of 56 references to Satan in the English Bible, 55 are translated as **Sátánì** in the Yoruba Bible (Bíbélì Mímọ́).
+
+Correct terms:
+- **Satan** → **Sátánì**
+- **the devil** → **Bìlísì** (from Arabic *iblīs*) or **Èṣú-ọ̀run** if a distinctly Yoruba Christian coinage is needed, but **Sátánì/Bìlísì** are standard
+- **demon(s)** → **ànjọ̀nú** / **ẹ̀mí búburú** (evil spirit)
+- **Èṣù** → remains Èṣù only when referring to the Yoruba orisha
+
+This is an active cultural and religious issue in Nigeria (#EsuIsNotSatan movement). Using Èṣù for the Christian devil is both theologically incorrect and culturally offensive.
+
 ## Number handling
 
 In formal/scholarly Yoruba (Yorùbá ìwé), follow these conventions for numbers:
