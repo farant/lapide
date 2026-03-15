@@ -352,8 +352,8 @@ async function buildGenesis(langSuffix = "") {
   const genesisFiles = (await readdir(SRC_DIR))
     .filter((f) => pattern.test(f))
     .sort((a, b) => {
-      const numA = parseInt(a.match(/(\d+)/)?.[1] || "0");
-      const numB = parseInt(b.match(/(\d+)/)?.[1] || "0");
+      const numA = parseInt(a.match(/genesis_(\d+)/)?.[1] || "0");
+      const numB = parseInt(b.match(/genesis_(\d+)/)?.[1] || "0");
       return numA - numB;
     });
 
@@ -363,7 +363,7 @@ async function buildGenesis(langSuffix = "") {
     const num = parseInt(file.match(/genesis_(\d+)/)?.[1] || "0");
     const chapterId = `chapter-${num}`;
     const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
-    const title = `Génesis ${ROMAN[num]}`;
+    const title = `${langSuffix === "_es" ? "Génesis" : "Genesis"} ${ROMAN[num]}`;
 
     const html = await Bun.file(join(SRC_DIR, file)).text();
     const body = extractBody(html);
