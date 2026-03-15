@@ -25,7 +25,8 @@ const SUFFIX_TO_LANG: Record<string, string> = {
   "_nl": "nl", "_tr": "tr", "_sv": "sv", "_vi": "vi", "_ar": "ar",
   "_hi": "hi", "_hu": "hu", "_id": "id", "_it": "it", "_ko": "ko",
   "_ja": "ja", "_ru": "ru", "_pl": "pl", "_tl": "tl", "_fa": "fa",
-  "_th": "th",
+  "_th": "th", "_ceb": "ceb", "_ig": "ig", "_sw": "sw", "_yo": "yo",
+  "_bn": "bn", "_ta": "ta", "_ml": "ml", "_rw": "rw",
 };
 
 let bookLang = "en";
