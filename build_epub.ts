@@ -317,6 +317,13 @@ const GENESIS_FRONT_MATTER_TITLES: Record<string, { preliminares: string; hieron
     canones: "Comentario al Pentateuco de Moisés",
     bookTitle: "Comentario sobre el Génesis — Cornelius a Lapide",
   },
+  "_fr": {
+    preliminares: "Préliminaires",
+    hieronymi: "Préfaces de Jérôme / Du culte du Christ dans l'Écriture",
+    proemium: "Préface et Éloge de la Sainte Écriture",
+    canones: "Commentaire sur le Pentateuque de Moïse",
+    bookTitle: "Commentaire sur la Genèse — Cornelius a Lapide",
+  },
 };
 
 async function buildGenesis(langSuffix = "") {
@@ -364,7 +371,8 @@ async function buildGenesis(langSuffix = "") {
     const num = parseInt(file.match(/genesis_(\d+)/)?.[1] || "0");
     const chapterId = `chapter-${num}`;
     const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
-    const title = `${langSuffix === "_es" ? "Génesis" : "Genesis"} ${ROMAN[num]}`;
+    const genesisWord = langSuffix === "_es" ? "Génesis" : langSuffix === "_fr" ? "Genèse" : "Genesis";
+    const title = `${genesisWord} ${ROMAN[num]}`;
 
     const html = await Bun.file(join(SRC_DIR, file)).text();
     const body = extractBody(html);
