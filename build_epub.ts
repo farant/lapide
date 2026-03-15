@@ -300,18 +300,41 @@ async function parseAuthors(): Promise<AuthorInfo[]> {
 
 // ---------- Build Functions ----------
 
-async function buildGenesis() {
-  console.log("Building Genesis EPUB...");
+// Front matter titles per language
+const GENESIS_FRONT_MATTER_TITLES: Record<string, { preliminares: string; hieronymi: string; proemium: string; canones: string; bookTitle: string }> = {
+  "": {
+    preliminares: "Preliminares",
+    hieronymi: "Jerome's Prefaces / On the Worship of Christ in Scripture",
+    proemium: "Preface and Praise of Sacred Scripture",
+    canones: "Commentary on the Pentateuch of Moses",
+    bookTitle: "Commentary on Genesis — Cornelius a Lapide",
+  },
+  "_es": {
+    preliminares: "Preliminares",
+    hieronymi: "Prefacios de Jerónimo / Sobre el culto de Cristo en la Escritura",
+    proemium: "Prefacio y Elogio de la Sagrada Escritura",
+    canones: "Comentario al Pentateuco de Moisés",
+    bookTitle: "Comentario sobre el Génesis — Cornelius a Lapide",
+  },
+};
+
+async function buildGenesis(langSuffix = "") {
+  const lang = SUFFIX_TO_LANG[langSuffix] || "en";
+  const label = langSuffix ? ` [${lang}]` : "";
+  console.log(`Building Genesis EPUB${label}...`);
+  bookLang = lang;
   await resetBuildDir();
 
   const chapters: Chapter[] = [];
 
+  const titles = GENESIS_FRONT_MATTER_TITLES[langSuffix] || GENESIS_FRONT_MATTER_TITLES[""];
+
   // Front matter
   const FRONT_MATTER = [
-    { file: "01_Preliminares.html", id: "preliminares", epubFile: "preliminares.xhtml", title: "Preliminares" },
-    { file: "02_Clemens_Hieronymi_Du_Culte.html", id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml", title: "Jerome's Prefaces / On the Worship of Christ in Scripture" },
-    { file: "12_Proemium_Et_Encomium_Sacrae_Scripturae.html", id: "proemium", epubFile: "proemium.xhtml", title: "Preface and Praise of Sacred Scripture" },
-    { file: "14_Commentaria_In_Pentateuchum_Mosis_Canones.html", id: "canones", epubFile: "canones.xhtml", title: "Commentary on the Pentateuch of Moses" },
+    { file: `01_Preliminares${langSuffix}.html`, id: "preliminares", epubFile: "preliminares.xhtml", title: titles.preliminares },
+    { file: `02_Clemens_Hieronymi_Du_Culte${langSuffix}.html`, id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml", title: titles.hieronymi },
+    { file: `12_Proemium_Et_Encomium_Sacrae_Scripturae${langSuffix}.html`, id: "proemium", epubFile: "proemium.xhtml", title: titles.proemium },
+    { file: `14_Commentaria_In_Pentateuchum_Mosis_Canones${langSuffix}.html`, id: "canones", epubFile: "canones.xhtml", title: titles.canones },
   ];
 
   for (const fm of FRONT_MATTER) {
@@ -322,21 +345,25 @@ async function buildGenesis() {
   }
 
   // Genesis chapters
+  const pattern = langSuffix
+    ? new RegExp(`^01_genesis_\\d+${langSuffix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\.html$`)
+    : /^01_genesis_\d+\.html$/;
+
   const genesisFiles = (await readdir(SRC_DIR))
-    .filter((f) => /^01_genesis_\d+\.html$/.test(f))
+    .filter((f) => pattern.test(f))
     .sort((a, b) => {
-      const numA = parseInt(a.match(/(\d+)\.html$/)![1]);
-      const numB = parseInt(b.match(/(\d+)\.html$/)![1]);
+      const numA = parseInt(a.match(/(\d+)/)?.[1] || "0");
+      const numB = parseInt(b.match(/(\d+)/)?.[1] || "0");
       return numA - numB;
     });
 
   console.log(`  ${FRONT_MATTER.length} front matter + ${genesisFiles.length} chapters`);
 
   for (const file of genesisFiles) {
-    const num = parseInt(file.match(/(\d+)\.html$/)![1]);
+    const num = parseInt(file.match(/genesis_(\d+)/)?.[1] || "0");
     const chapterId = `chapter-${num}`;
     const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
-    const title = `Genesis ${ROMAN[num]}`;
+    const title = `Génesis ${ROMAN[num]}`;
 
     const html = await Bun.file(join(SRC_DIR, file)).text();
     const body = extractBody(html);
@@ -344,13 +371,15 @@ async function buildGenesis() {
     chapters.push({ id: chapterId, file: chapterFile, title });
   }
 
+  const epubName = langSuffix ? `lapide_genesis${langSuffix}.epub` : "lapide_genesis.epub";
   await writeEpub(
-    join(SRC_DIR, "lapide_genesis.epub"),
+    join(SRC_DIR, epubName),
     chapters,
-    "lapide-genesis-commentary",
-    "Commentary on Genesis — Cornelius a Lapide",
+    `lapide-genesis-commentary${langSuffix ? `-${lang}` : ""}`,
+    titles.bookTitle,
     "Cornelius a Lapide"
   );
+  bookLang = "en"; // reset
 }
 
 async function buildAuthor(author: AuthorInfo, langSuffix = "") {
@@ -410,11 +439,12 @@ async function main() {
   const arg = args[0];
 
   if (!arg) {
-    // Default: build Genesis
-    await buildGenesis();
+    // Default: build Genesis (with optional --lang)
+    await buildGenesis(langSuffix);
   } else if (arg === "--all") {
     // Build Genesis + all authors (English only, or specified lang)
     if (!langSuffix) await buildGenesis();
+    else await buildGenesis(langSuffix);
     const authors = await parseAuthors();
     console.log(`\nFound ${authors.length} authors`);
     for (const author of authors) {
