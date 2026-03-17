@@ -331,6 +331,20 @@ const GENESIS_FRONT_MATTER_TITLES: Record<string, { preliminares: string; hieron
     canones: "Comentário ao Pentateuco de Moisés",
     bookTitle: "Comentário ao Génesis — Cornelius a Lapide",
   },
+  "_it": {
+    preliminares: "Preliminari",
+    hieronymi: "Prefazioni di Girolamo / Sul culto di Cristo nella Scrittura",
+    proemium: "Proemio e Encomio della Sacra Scrittura",
+    canones: "Commentario al Pentateuco di Mosè",
+    bookTitle: "Commentario sulla Genesi — Cornelius a Lapide",
+  },
+  "_id": {
+    preliminares: "Pendahuluan",
+    hieronymi: "Kata Pengantar Hieronimus / Tentang Pemujaan Kristus dalam Kitab Suci",
+    proemium: "Pengantar dan Pujian bagi Kitab Suci",
+    canones: "Tafsir atas Pentateukh Musa",
+    bookTitle: "Tafsir Kitab Kejadian — Cornelius a Lapide",
+  },
 };
 
 async function buildGenesis(langSuffix = "") {
@@ -378,7 +392,7 @@ async function buildGenesis(langSuffix = "") {
     const num = parseInt(file.match(/genesis_(\d+)/)?.[1] || "0");
     const chapterId = `chapter-${num}`;
     const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
-    const genesisWord = langSuffix === "_es" ? "Génesis" : langSuffix === "_fr" ? "Genèse" : langSuffix === "_pt" ? "Génesis" : "Genesis";
+    const genesisWord = langSuffix === "_es" ? "Génesis" : langSuffix === "_fr" ? "Genèse" : langSuffix === "_pt" ? "Génesis" : langSuffix === "_it" ? "Genesi" : langSuffix === "_id" ? "Kejadian" : "Genesis";
     const title = `${genesisWord} ${ROMAN[num]}`;
 
     const html = await Bun.file(join(SRC_DIR, file)).text();
