@@ -45,11 +45,14 @@ const ROMAN = [
 
 // ---------- Pentateuch Book Definitions ----------
 
+type ExtraDef = { file: string; id: string };
+
 type BookDef = {
   key: string;
   filePrefix: string;
   maxChapter: number;
-  extras: { file: string; id: string }[];
+  preExtras?: ExtraDef[];  // before chapters (introductions, argumenta)
+  extras: ExtraDef[];      // after chapters (doxologies, synopses)
 };
 
 const BIBLE_BOOKS: BookDef[] = [
@@ -101,6 +104,15 @@ const BIBLE_BOOKS: BookDef[] = [
     maxChapter: 24,
     extras: [],
   },
+  {
+    key: "judges",
+    filePrefix: "07_judicum",
+    maxChapter: 21,
+    preExtras: [
+      { file: "07_Judicum_Argumentum", id: "judges-argumentum" },
+    ],
+    extras: [],
+  },
 ];
 
 // Per-language labels for the Pentateuch EPUB
@@ -114,7 +126,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "Front Matter",
     bookNames: {
       genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
-      numbers: "Numbers", deuteronomy: "Deuteronomy", joshua: "Joshua",
+      numbers: "Numbers", deuteronomy: "Deuteronomy", joshua: "Joshua", judges: "Judges",
     },
   },
   la: {
@@ -122,7 +134,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "Prolegomena",
     bookNames: {
       genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
-      numbers: "Numeri", deuteronomy: "Deuteronomium", joshua: "Josue",
+      numbers: "Numeri", deuteronomy: "Deuteronomium", joshua: "Josue", judges: "Judicum",
     },
   },
   es: {
@@ -130,7 +142,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "Preliminares",
     bookNames: {
       genesis: "Génesis", exodus: "Éxodo", leviticus: "Levítico",
-      numbers: "Números", deuteronomy: "Deuteronomio", joshua: "Josué",
+      numbers: "Números", deuteronomy: "Deuteronomio", joshua: "Josué", judges: "Jueces",
     },
   },
   fr: {
@@ -138,7 +150,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "Préliminaires",
     bookNames: {
       genesis: "Genèse", exodus: "Exode", leviticus: "Lévitique",
-      numbers: "Nombres", deuteronomy: "Deutéronome", joshua: "Josué",
+      numbers: "Nombres", deuteronomy: "Deutéronome", joshua: "Josué", judges: "Juges",
     },
   },
   pt: {
@@ -146,7 +158,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "Preliminares",
     bookNames: {
       genesis: "Génesis", exodus: "Êxodo", leviticus: "Levítico",
-      numbers: "Números", deuteronomy: "Deuteronómio", joshua: "Josué",
+      numbers: "Números", deuteronomy: "Deuteronómio", joshua: "Josué", judges: "Juízes",
     },
   },
   it: {
@@ -154,7 +166,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "Preliminari",
     bookNames: {
       genesis: "Genesi", exodus: "Esodo", leviticus: "Levitico",
-      numbers: "Numeri", deuteronomy: "Deuteronomio", joshua: "Giosuè",
+      numbers: "Numeri", deuteronomy: "Deuteronomio", joshua: "Giosuè", judges: "Giudici",
     },
   },
   ar: {
@@ -162,7 +174,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "مُقَدِّمَاتٌ",
     bookNames: {
       genesis: "التَّكْوِينُ", exodus: "الخُرُوجُ", leviticus: "اللَّاوِيِّينَ",
-      numbers: "العَدَدُ", deuteronomy: "التَّثْنِيَةُ", joshua: "يَشُوعُ",
+      numbers: "العَدَدُ", deuteronomy: "التَّثْنِيَةُ", joshua: "يَشُوعُ", judges: "الْقُضَاةُ",
     },
   },
   id: {
@@ -170,7 +182,7 @@ const BIBLE_I18N: Record<string, {
     frontMatterLabel: "Pendahuluan",
     bookNames: {
       genesis: "Kejadian", exodus: "Keluaran", leviticus: "Imamat",
-      numbers: "Bilangan", deuteronomy: "Ulangan", joshua: "Yosua",
+      numbers: "Bilangan", deuteronomy: "Ulangan", joshua: "Yosua", judges: "Hakim-Hakim",
     },
   },
 };
@@ -491,6 +503,20 @@ async function buildBible(langSuffix = "") {
   for (const book of BIBLE_BOOKS) {
     const bookName = i18n.bookNames[book.key] || book.key;
     const bookChapters: Chapter[] = [];
+
+    // Pre-extras (introductions, argumenta — before chapters)
+    for (const extra of book.preExtras || []) {
+      const srcFile = `${extra.file}${langSuffix}.html`;
+      const srcPath = join(SRC_DIR, srcFile);
+      if (!(await Bun.file(srcPath).exists())) continue;
+
+      const html = await Bun.file(srcPath).text();
+      const title = extractTitle(html);
+      const body = extractBody(html);
+      const epubFile = `${extra.id}.xhtml`;
+      await Bun.write(join(BUILD_DIR, "OEBPS", epubFile), buildXhtml(body, title));
+      bookChapters.push({ id: extra.id, file: epubFile, title });
+    }
 
     // Numbered chapters
     for (let num = 1; num <= book.maxChapter; num++) {
