@@ -4,15 +4,16 @@
  * Zero npm dependencies — uses Bun APIs + system `zip`.
  *
  * Usage:
- *   bun run build_epub.ts                  — build Genesis EPUB
+ *   bun run build_epub.ts                  — build Pentateuch EPUB (English)
+ *   bun run build_epub.ts --lang es        — build Pentateuch EPUB (Spanish)
  *   bun run build_epub.ts beda_venerabilis — build EPUB for an author
- *   bun run build_epub.ts --all            — build all author EPUBs
+ *   bun run build_epub.ts --all            — build Pentateuch + all author EPUBs
  *
- * Output: lapide_genesis.epub or epub/<author>.epub
+ * Output: lapide_pentateuch.epub or epub/<author>.epub
  */
 
-import { readdir, mkdir, rm } from "node:fs/promises";
-import { join, basename } from "node:path";
+import { mkdir, rm } from "node:fs/promises";
+import { join } from "node:path";
 
 const SRC_DIR = import.meta.dir;
 const BUILD_DIR = join(SRC_DIR, ".epub_build");
@@ -33,7 +34,7 @@ let bookLang = "en";
 
 const RTL_LANGS = new Set(["ar", "he", "fa"]);
 
-// Roman numerals for Genesis chapter titles
+// Roman numerals for chapter titles (max 50 = Genesis)
 const ROMAN = [
   "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
   "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
@@ -41,6 +42,132 @@ const ROMAN = [
   "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
   "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L",
 ];
+
+// ---------- Pentateuch Book Definitions ----------
+
+type BookDef = {
+  key: string;
+  filePrefix: string;
+  maxChapter: number;
+  extras: { file: string; id: string }[];
+};
+
+const PENTATEUCH_BOOKS: BookDef[] = [
+  {
+    key: "genesis",
+    filePrefix: "01_genesis",
+    maxChapter: 50,
+    extras: [
+      { file: "01_Genesis_Synopsis_Historiae_Chronologiae_Doxologia", id: "genesis-synopsis" },
+    ],
+  },
+  {
+    key: "exodus",
+    filePrefix: "02_exodus",
+    maxChapter: 40,
+    extras: [
+      { file: "02_Exodus_Doxologia_Dei_Salvatoris", id: "exodus-doxologia" },
+      { file: "02_Dissertatiunculae_Tres", id: "dissertatiunculae" },
+    ],
+  },
+  {
+    key: "leviticus",
+    filePrefix: "03_leviticus",
+    maxChapter: 27,
+    extras: [
+      { file: "03_Leviticus_Doxologia", id: "leviticus-doxologia" },
+    ],
+  },
+  {
+    key: "numbers",
+    filePrefix: "04_numeri",
+    maxChapter: 36,
+    extras: [
+      { file: "04_Numeri_Doxologia", id: "numbers-doxologia" },
+    ],
+  },
+  {
+    key: "deuteronomy",
+    filePrefix: "05_deuteronomium",
+    maxChapter: 34,
+    extras: [
+      { file: "05_Deuteronomium_Doxologia", id: "deuteronomy-doxologia" },
+      { file: "05_Synopsis_Omnium_Praeceptorum", id: "synopsis-praeceptorum" },
+    ],
+  },
+];
+
+// Per-language labels for the Pentateuch EPUB
+const PENTATEUCH_I18N: Record<string, {
+  bookTitle: string;
+  frontMatterLabel: string;
+  bookNames: Record<string, string>;
+}> = {
+  en: {
+    bookTitle: "Commentary on the Pentateuch — Cornelius a Lapide",
+    frontMatterLabel: "Front Matter",
+    bookNames: {
+      genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
+      numbers: "Numbers", deuteronomy: "Deuteronomy",
+    },
+  },
+  la: {
+    bookTitle: "Commentaria in Pentateuchum Mosis — Cornelius a Lapide",
+    frontMatterLabel: "Prolegomena",
+    bookNames: {
+      genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
+      numbers: "Numeri", deuteronomy: "Deuteronomium",
+    },
+  },
+  es: {
+    bookTitle: "Comentario sobre el Pentateuco — Cornelius a Lapide",
+    frontMatterLabel: "Preliminares",
+    bookNames: {
+      genesis: "Génesis", exodus: "Éxodo", leviticus: "Levítico",
+      numbers: "Números", deuteronomy: "Deuteronomio",
+    },
+  },
+  fr: {
+    bookTitle: "Commentaire sur le Pentateuque — Cornelius a Lapide",
+    frontMatterLabel: "Préliminaires",
+    bookNames: {
+      genesis: "Genèse", exodus: "Exode", leviticus: "Lévitique",
+      numbers: "Nombres", deuteronomy: "Deutéronome",
+    },
+  },
+  pt: {
+    bookTitle: "Comentário ao Pentateuco — Cornelius a Lapide",
+    frontMatterLabel: "Preliminares",
+    bookNames: {
+      genesis: "Génesis", exodus: "Êxodo", leviticus: "Levítico",
+      numbers: "Números", deuteronomy: "Deuteronómio",
+    },
+  },
+  it: {
+    bookTitle: "Commentario sul Pentateuco — Cornelius a Lapide",
+    frontMatterLabel: "Preliminari",
+    bookNames: {
+      genesis: "Genesi", exodus: "Esodo", leviticus: "Levitico",
+      numbers: "Numeri", deuteronomy: "Deuteronomio",
+    },
+  },
+  ar: {
+    bookTitle: "تَفْسِيرُ أَسْفَارِ مُوسَى الْخَمْسَةِ — كُورْنِيلِيُوسْ آ لَابِيدِي",
+    frontMatterLabel: "مُقَدِّمَاتٌ",
+    bookNames: {
+      genesis: "التَّكْوِينُ", exodus: "الخُرُوجُ", leviticus: "اللَّاوِيِّينَ",
+      numbers: "العَدَدُ", deuteronomy: "التَّثْنِيَةُ",
+    },
+  },
+  id: {
+    bookTitle: "Tafsir Pentateukh — Cornelius a Lapide",
+    frontMatterLabel: "Pendahuluan",
+    bookNames: {
+      genesis: "Kejadian", exodus: "Keluaran", leviticus: "Imamat",
+      numbers: "Bilangan", deuteronomy: "Ulangan",
+    },
+  },
+};
 
 // ---------- HTML Processing ----------
 
@@ -70,14 +197,15 @@ function extractBody(html: string): string {
   return body.trim();
 }
 
-/** Extract the <title> from an HTML file (text before the em dash). */
+/** Extract the <title> from an HTML file (text before the em dash), XML-escaped. */
 function extractTitle(html: string): string {
   const match = html.match(/<title>([^<]+)<\/title>/i);
   if (!match) return "Untitled";
   // Title format is "Work Title — Author Name", we want just the work title
   const full = match[1].trim();
   const dashIdx = full.indexOf(" — ");
-  return dashIdx > 0 ? full.substring(0, dashIdx) : full;
+  const title = dashIdx > 0 ? full.substring(0, dashIdx) : full;
+  return title.replace(/&(?!amp;|lt;|gt;|quot;|apos;)/g, "&amp;");
 }
 
 /** Build an XHTML content file. */
@@ -133,6 +261,7 @@ a {
 // ---------- EPUB Scaffolding ----------
 
 type Chapter = { id: string; file: string; title: string };
+type Section = { title: string; chapters: Chapter[] };
 
 function buildOpf(bookId: string, bookTitle: string, bookAuthor: string, chapters: Chapter[]): string {
   const manifest = chapters
@@ -160,8 +289,23 @@ ${spine}
 </package>`;
 }
 
-function buildNav(chapters: Chapter[]): string {
-  const items = chapters.map((ch) => `      <li><a href="${ch.file}">${ch.title}</a></li>`).join("\n");
+function buildNav(sections: Section[]): string {
+  let tocBody: string;
+
+  if (sections.length === 1 && !sections[0].title) {
+    // Flat TOC (author EPUBs)
+    tocBody = sections[0].chapters
+      .map((ch) => `      <li><a href="${ch.file}">${ch.title}</a></li>`)
+      .join("\n");
+  } else {
+    // Nested TOC (Pentateuch)
+    tocBody = sections.map((section) => {
+      const children = section.chapters
+        .map((ch) => `          <li><a href="${ch.file}">${ch.title}</a></li>`)
+        .join("\n");
+      return `      <li><span>${section.title}</span>\n        <ol>\n${children}\n        </ol>\n      </li>`;
+    }).join("\n");
+  }
 
   const dir = RTL_LANGS.has(bookLang) ? ' dir="rtl"' : '';
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -175,7 +319,7 @@ function buildNav(chapters: Chapter[]): string {
 <nav epub:type="toc" id="toc">
   <h1>Table of Contents</h1>
   <ol>
-${items}
+${tocBody}
   </ol>
 </nav>
 </body>
@@ -193,12 +337,14 @@ function buildContainer(): string {
 
 // ---------- ZIP and Write ----------
 
-async function writeEpub(outputPath: string, chapters: Chapter[], bookId: string, bookTitle: string, bookAuthor: string) {
+async function writeEpub(outputPath: string, chapters: Chapter[], bookId: string, bookTitle: string, bookAuthor: string, sections?: Section[]) {
+  const navSections = sections || [{ title: "", chapters }];
+
   // Write scaffolding
   await Bun.write(join(BUILD_DIR, "mimetype"), "application/epub+zip");
   await Bun.write(join(BUILD_DIR, "META-INF", "container.xml"), buildContainer());
   await Bun.write(join(BUILD_DIR, "OEBPS", "content.opf"), buildOpf(bookId, bookTitle, bookAuthor, chapters));
-  await Bun.write(join(BUILD_DIR, "OEBPS", "nav.xhtml"), buildNav(chapters));
+  await Bun.write(join(BUILD_DIR, "OEBPS", "nav.xhtml"), buildNav(navSections));
   await Bun.write(join(BUILD_DIR, "OEBPS", "style.css"), buildStylesheet());
 
   // Build ZIP
@@ -301,120 +447,95 @@ async function parseAuthors(): Promise<AuthorInfo[]> {
 
 // ---------- Build Functions ----------
 
-// Front matter titles per language
-const GENESIS_FRONT_MATTER_TITLES: Record<string, { preliminares: string; hieronymi: string; proemium: string; canones: string; bookTitle: string }> = {
-  "": {
-    preliminares: "Preliminares",
-    hieronymi: "Jerome's Prefaces / On the Worship of Christ in Scripture",
-    proemium: "Preface and Praise of Sacred Scripture",
-    canones: "Commentary on the Pentateuch of Moses",
-    bookTitle: "Commentary on Genesis — Cornelius a Lapide",
-  },
-  "_es": {
-    preliminares: "Preliminares",
-    hieronymi: "Prefacios de Jerónimo / Sobre el culto de Cristo en la Escritura",
-    proemium: "Prefacio y Elogio de la Sagrada Escritura",
-    canones: "Comentario al Pentateuco de Moisés",
-    bookTitle: "Comentario sobre el Génesis — Cornelius a Lapide",
-  },
-  "_fr": {
-    preliminares: "Préliminaires",
-    hieronymi: "Préfaces de Jérôme / Du culte du Christ dans l'Écriture",
-    proemium: "Préface et Éloge de la Sainte Écriture",
-    canones: "Commentaire sur le Pentateuque de Moïse",
-    bookTitle: "Commentaire sur la Genèse — Cornelius a Lapide",
-  },
-  "_pt": {
-    preliminares: "Preliminares",
-    hieronymi: "Prefácios de Jerónimo / Do Culto de Cristo na Escritura",
-    proemium: "Prefácio e Elogio da Sagrada Escritura",
-    canones: "Comentário ao Pentateuco de Moisés",
-    bookTitle: "Comentário ao Génesis — Cornelius a Lapide",
-  },
-  "_it": {
-    preliminares: "Preliminari",
-    hieronymi: "Prefazioni di Girolamo / Sul culto di Cristo nella Scrittura",
-    proemium: "Proemio e Encomio della Sacra Scrittura",
-    canones: "Commentario al Pentateuco di Mosè",
-    bookTitle: "Commentario sulla Genesi — Cornelius a Lapide",
-  },
-  "_id": {
-    preliminares: "Pendahuluan",
-    hieronymi: "Kata Pengantar Hieronimus / Tentang Pemujaan Kristus dalam Kitab Suci",
-    proemium: "Pengantar dan Pujian bagi Kitab Suci",
-    canones: "Tafsir atas Pentateukh Musa",
-    bookTitle: "Tafsir Kitab Kejadian — Cornelius a Lapide",
-  },
-  "_ar": {
-    preliminares: "مُقَدِّمَاتٌ",
-    hieronymi: "مُقَدِّمَاتُ إِيرُونِيمُوسَ / فِي عِبَادَةِ الْمَسِيحِ فِي الْكِتَابِ الْمُقَدَّسِ",
-    proemium: "تَمْهِيدٌ وَثَنَاءٌ عَلَى الْكِتَابِ الْمُقَدَّسِ",
-    canones: "تَفْسِيرُ أَسْفَارِ مُوسَى الْخَمْسَةِ",
-    bookTitle: "تَفْسِيرُ سِفْرِ التَّكْوِينِ — كُورْنِيلِيُوسْ آ لَابِيدِي",
-  },
-};
+const FRONT_MATTER_FILES = [
+  { file: "01_Preliminares", id: "preliminares", epubFile: "preliminares.xhtml" },
+  { file: "02_Clemens_Hieronymi_Du_Culte", id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml" },
+  { file: "12_Proemium_Et_Encomium_Sacrae_Scripturae", id: "proemium", epubFile: "proemium.xhtml" },
+  { file: "14_Commentaria_In_Pentateuchum_Mosis_Canones", id: "canones", epubFile: "canones.xhtml" },
+];
 
-async function buildGenesis(langSuffix = "") {
+async function buildPentateuch(langSuffix = "") {
   const lang = SUFFIX_TO_LANG[langSuffix] || "en";
   const label = langSuffix ? ` [${lang}]` : "";
-  console.log(`Building Genesis EPUB${label}...`);
+  console.log(`Building Pentateuch EPUB${label}...`);
   bookLang = lang;
   await resetBuildDir();
 
-  const chapters: Chapter[] = [];
+  const i18n = PENTATEUCH_I18N[lang] || PENTATEUCH_I18N["en"];
+  const sections: Section[] = [];
 
-  const titles = GENESIS_FRONT_MATTER_TITLES[langSuffix] || GENESIS_FRONT_MATTER_TITLES[""];
-
-  // Front matter
-  const FRONT_MATTER = [
-    { file: `01_Preliminares${langSuffix}.html`, id: "preliminares", epubFile: "preliminares.xhtml", title: titles.preliminares },
-    { file: `02_Clemens_Hieronymi_Du_Culte${langSuffix}.html`, id: "hieronymi-du-culte", epubFile: "hieronymi_du_culte.xhtml", title: titles.hieronymi },
-    { file: `12_Proemium_Et_Encomium_Sacrae_Scripturae${langSuffix}.html`, id: "proemium", epubFile: "proemium.xhtml", title: titles.proemium },
-    { file: `14_Commentaria_In_Pentateuchum_Mosis_Canones${langSuffix}.html`, id: "canones", epubFile: "canones.xhtml", title: titles.canones },
-  ];
-
-  for (const fm of FRONT_MATTER) {
-    const html = await Bun.file(join(SRC_DIR, fm.file)).text();
+  // Front matter section
+  const frontMatterChapters: Chapter[] = [];
+  for (const fm of FRONT_MATTER_FILES) {
+    const srcFile = `${fm.file}${langSuffix}.html`;
+    const srcPath = join(SRC_DIR, srcFile);
+    if (!(await Bun.file(srcPath).exists())) {
+      console.warn(`  Warning: missing ${srcFile}, skipping`);
+      continue;
+    }
+    const html = await Bun.file(srcPath).text();
+    const title = extractTitle(html);
     const body = extractBody(html);
-    await Bun.write(join(BUILD_DIR, "OEBPS", fm.epubFile), buildXhtml(body, fm.title));
-    chapters.push({ id: fm.id, file: fm.epubFile, title: fm.title });
+    await Bun.write(join(BUILD_DIR, "OEBPS", fm.epubFile), buildXhtml(body, title));
+    frontMatterChapters.push({ id: fm.id, file: fm.epubFile, title });
+  }
+  sections.push({ title: i18n.frontMatterLabel, chapters: frontMatterChapters });
+
+  // Each book of the Pentateuch
+  for (const book of PENTATEUCH_BOOKS) {
+    const bookName = i18n.bookNames[book.key] || book.key;
+    const bookChapters: Chapter[] = [];
+
+    // Numbered chapters
+    for (let num = 1; num <= book.maxChapter; num++) {
+      const paddedNum = String(num).padStart(2, "0");
+      const srcFile = `${book.filePrefix}_${paddedNum}${langSuffix}.html`;
+      const srcPath = join(SRC_DIR, srcFile);
+      if (!(await Bun.file(srcPath).exists())) {
+        console.warn(`  Warning: missing ${srcFile}, skipping`);
+        continue;
+      }
+
+      const chapterId = `${book.key}-${num}`;
+      const chapterFile = `${book.key}_${paddedNum}.xhtml`;
+      const title = `${bookName} ${ROMAN[num]}`;
+
+      const html = await Bun.file(srcPath).text();
+      const body = extractBody(html);
+      await Bun.write(join(BUILD_DIR, "OEBPS", chapterFile), buildXhtml(body, title));
+      bookChapters.push({ id: chapterId, file: chapterFile, title });
+    }
+
+    // Extra files (Doxologia, Synopsis, Dissertatiunculae)
+    for (const extra of book.extras) {
+      const srcFile = `${extra.file}${langSuffix}.html`;
+      const srcPath = join(SRC_DIR, srcFile);
+      if (!(await Bun.file(srcPath).exists())) continue; // silently skip missing extras
+
+      const html = await Bun.file(srcPath).text();
+      const title = extractTitle(html);
+      const body = extractBody(html);
+      const epubFile = `${extra.id}.xhtml`;
+      await Bun.write(join(BUILD_DIR, "OEBPS", epubFile), buildXhtml(body, title));
+      bookChapters.push({ id: extra.id, file: epubFile, title });
+    }
+
+    sections.push({ title: bookName, chapters: bookChapters });
   }
 
-  // Genesis chapters
-  const pattern = langSuffix
-    ? new RegExp(`^01_genesis_\\d+${langSuffix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\.html$`)
-    : /^01_genesis_\d+\.html$/;
+  // Summary
+  const totalChapters = sections.reduce((sum, s) => sum + s.chapters.length, 0);
+  console.log(`  ${sections.length} sections, ${totalChapters} total files`);
 
-  const genesisFiles = (await readdir(SRC_DIR))
-    .filter((f) => pattern.test(f))
-    .sort((a, b) => {
-      const numA = parseInt(a.match(/genesis_(\d+)/)?.[1] || "0");
-      const numB = parseInt(b.match(/genesis_(\d+)/)?.[1] || "0");
-      return numA - numB;
-    });
-
-  console.log(`  ${FRONT_MATTER.length} front matter + ${genesisFiles.length} chapters`);
-
-  for (const file of genesisFiles) {
-    const num = parseInt(file.match(/genesis_(\d+)/)?.[1] || "0");
-    const chapterId = `chapter-${num}`;
-    const chapterFile = `chapter_${String(num).padStart(2, "0")}.xhtml`;
-    const genesisWord = langSuffix === "_es" ? "Génesis" : langSuffix === "_fr" ? "Genèse" : langSuffix === "_pt" ? "Génesis" : langSuffix === "_it" ? "Genesi" : langSuffix === "_id" ? "Kejadian" : langSuffix === "_ar" ? "التَّكْوِينُ" : "Genesis";
-    const title = `${genesisWord} ${ROMAN[num]}`;
-
-    const html = await Bun.file(join(SRC_DIR, file)).text();
-    const body = extractBody(html);
-    await Bun.write(join(BUILD_DIR, "OEBPS", chapterFile), buildXhtml(body, title));
-    chapters.push({ id: chapterId, file: chapterFile, title });
-  }
-
-  const epubName = langSuffix ? `lapide_genesis${langSuffix}.epub` : "lapide_genesis.epub";
+  const allChapters = sections.flatMap((s) => s.chapters);
+  const epubName = langSuffix ? `lapide_pentateuch${langSuffix}.epub` : "lapide_pentateuch.epub";
   await writeEpub(
     join(SRC_DIR, epubName),
-    chapters,
-    `lapide-genesis-commentary${langSuffix ? `-${lang}` : ""}`,
-    titles.bookTitle,
-    "Cornelius a Lapide"
+    allChapters,
+    `lapide-pentateuch${langSuffix ? `-${lang}` : ""}`,
+    i18n.bookTitle,
+    "Cornelius a Lapide",
+    sections
   );
   bookLang = "en"; // reset
 }
@@ -476,12 +597,11 @@ async function main() {
   const arg = args[0];
 
   if (!arg) {
-    // Default: build Genesis (with optional --lang)
-    await buildGenesis(langSuffix);
+    // Default: build Pentateuch
+    await buildPentateuch(langSuffix);
   } else if (arg === "--all") {
-    // Build Genesis + all authors (English only, or specified lang)
-    if (!langSuffix) await buildGenesis();
-    else await buildGenesis(langSuffix);
+    // Build Pentateuch + all authors
+    await buildPentateuch(langSuffix);
     const authors = await parseAuthors();
     console.log(`\nFound ${authors.length} authors`);
     for (const author of authors) {
