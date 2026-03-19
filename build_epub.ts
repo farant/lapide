@@ -4,12 +4,12 @@
  * Zero npm dependencies — uses Bun APIs + system `zip`.
  *
  * Usage:
- *   bun run build_epub.ts                  — build Pentateuch EPUB (English)
- *   bun run build_epub.ts --lang es        — build Pentateuch EPUB (Spanish)
+ *   bun run build_epub.ts                  — build Lapide EPUB (English)
+ *   bun run build_epub.ts --lang es        — build Lapide EPUB (Spanish)
  *   bun run build_epub.ts beda_venerabilis — build EPUB for an author
- *   bun run build_epub.ts --all            — build Pentateuch + all author EPUBs
+ *   bun run build_epub.ts --all            — build Lapide + all author EPUBs
  *
- * Output: lapide_pentateuch.epub or epub/<author>.epub
+ * Output: lapide.epub or epub/<author>.epub
  */
 
 import { mkdir, rm } from "node:fs/promises";
@@ -52,7 +52,7 @@ type BookDef = {
   extras: { file: string; id: string }[];
 };
 
-const PENTATEUCH_BOOKS: BookDef[] = [
+const BIBLE_BOOKS: BookDef[] = [
   {
     key: "genesis",
     filePrefix: "01_genesis",
@@ -95,76 +95,82 @@ const PENTATEUCH_BOOKS: BookDef[] = [
       { file: "05_Synopsis_Omnium_Praeceptorum", id: "synopsis-praeceptorum" },
     ],
   },
+  {
+    key: "joshua",
+    filePrefix: "06_josue",
+    maxChapter: 24,
+    extras: [],
+  },
 ];
 
 // Per-language labels for the Pentateuch EPUB
-const PENTATEUCH_I18N: Record<string, {
+const BIBLE_I18N: Record<string, {
   bookTitle: string;
   frontMatterLabel: string;
   bookNames: Record<string, string>;
 }> = {
   en: {
-    bookTitle: "Commentary on the Pentateuch — Cornelius a Lapide",
+    bookTitle: "Commentaries on the Bible — Cornelius a Lapide",
     frontMatterLabel: "Front Matter",
     bookNames: {
       genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
-      numbers: "Numbers", deuteronomy: "Deuteronomy",
+      numbers: "Numbers", deuteronomy: "Deuteronomy", joshua: "Joshua",
     },
   },
   la: {
-    bookTitle: "Commentaria in Pentateuchum Mosis — Cornelius a Lapide",
+    bookTitle: "Commentaria in Sacram Scripturam — Cornelius a Lapide",
     frontMatterLabel: "Prolegomena",
     bookNames: {
       genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
-      numbers: "Numeri", deuteronomy: "Deuteronomium",
+      numbers: "Numeri", deuteronomy: "Deuteronomium", joshua: "Josue",
     },
   },
   es: {
-    bookTitle: "Comentario sobre el Pentateuco — Cornelius a Lapide",
+    bookTitle: "Comentarios a la Biblia — Cornelius a Lapide",
     frontMatterLabel: "Preliminares",
     bookNames: {
       genesis: "Génesis", exodus: "Éxodo", leviticus: "Levítico",
-      numbers: "Números", deuteronomy: "Deuteronomio",
+      numbers: "Números", deuteronomy: "Deuteronomio", joshua: "Josué",
     },
   },
   fr: {
-    bookTitle: "Commentaire sur le Pentateuque — Cornelius a Lapide",
+    bookTitle: "Commentaires sur la Bible — Cornelius a Lapide",
     frontMatterLabel: "Préliminaires",
     bookNames: {
       genesis: "Genèse", exodus: "Exode", leviticus: "Lévitique",
-      numbers: "Nombres", deuteronomy: "Deutéronome",
+      numbers: "Nombres", deuteronomy: "Deutéronome", joshua: "Josué",
     },
   },
   pt: {
-    bookTitle: "Comentário ao Pentateuco — Cornelius a Lapide",
+    bookTitle: "Comentários à Bíblia — Cornelius a Lapide",
     frontMatterLabel: "Preliminares",
     bookNames: {
       genesis: "Génesis", exodus: "Êxodo", leviticus: "Levítico",
-      numbers: "Números", deuteronomy: "Deuteronómio",
+      numbers: "Números", deuteronomy: "Deuteronómio", joshua: "Josué",
     },
   },
   it: {
-    bookTitle: "Commentario sul Pentateuco — Cornelius a Lapide",
+    bookTitle: "Commentari sulla Bibbia — Cornelius a Lapide",
     frontMatterLabel: "Preliminari",
     bookNames: {
       genesis: "Genesi", exodus: "Esodo", leviticus: "Levitico",
-      numbers: "Numeri", deuteronomy: "Deuteronomio",
+      numbers: "Numeri", deuteronomy: "Deuteronomio", joshua: "Giosuè",
     },
   },
   ar: {
-    bookTitle: "تَفْسِيرُ أَسْفَارِ مُوسَى الْخَمْسَةِ — كُورْنِيلِيُوسْ آ لَابِيدِي",
+    bookTitle: "تَفَاسِيرُ الْكِتَابِ الْمُقَدَّسِ — كُورْنِيلِيُوسْ آ لَابِيدِي",
     frontMatterLabel: "مُقَدِّمَاتٌ",
     bookNames: {
       genesis: "التَّكْوِينُ", exodus: "الخُرُوجُ", leviticus: "اللَّاوِيِّينَ",
-      numbers: "العَدَدُ", deuteronomy: "التَّثْنِيَةُ",
+      numbers: "العَدَدُ", deuteronomy: "التَّثْنِيَةُ", joshua: "يَشُوعُ",
     },
   },
   id: {
-    bookTitle: "Tafsir Pentateukh — Cornelius a Lapide",
+    bookTitle: "Tafsir Alkitab — Cornelius a Lapide",
     frontMatterLabel: "Pendahuluan",
     bookNames: {
       genesis: "Kejadian", exodus: "Keluaran", leviticus: "Imamat",
-      numbers: "Bilangan", deuteronomy: "Ulangan",
+      numbers: "Bilangan", deuteronomy: "Ulangan", joshua: "Yosua",
     },
   },
 };
@@ -454,14 +460,14 @@ const FRONT_MATTER_FILES = [
   { file: "14_Commentaria_In_Pentateuchum_Mosis_Canones", id: "canones", epubFile: "canones.xhtml" },
 ];
 
-async function buildPentateuch(langSuffix = "") {
+async function buildBible(langSuffix = "") {
   const lang = SUFFIX_TO_LANG[langSuffix] || "en";
   const label = langSuffix ? ` [${lang}]` : "";
-  console.log(`Building Pentateuch EPUB${label}...`);
+  console.log(`Building Lapide EPUB${label}...`);
   bookLang = lang;
   await resetBuildDir();
 
-  const i18n = PENTATEUCH_I18N[lang] || PENTATEUCH_I18N["en"];
+  const i18n = BIBLE_I18N[lang] || BIBLE_I18N["en"];
   const sections: Section[] = [];
 
   // Front matter section
@@ -482,7 +488,7 @@ async function buildPentateuch(langSuffix = "") {
   sections.push({ title: i18n.frontMatterLabel, chapters: frontMatterChapters });
 
   // Each book of the Pentateuch
-  for (const book of PENTATEUCH_BOOKS) {
+  for (const book of BIBLE_BOOKS) {
     const bookName = i18n.bookNames[book.key] || book.key;
     const bookChapters: Chapter[] = [];
 
@@ -528,11 +534,11 @@ async function buildPentateuch(langSuffix = "") {
   console.log(`  ${sections.length} sections, ${totalChapters} total files`);
 
   const allChapters = sections.flatMap((s) => s.chapters);
-  const epubName = langSuffix ? `lapide_pentateuch${langSuffix}.epub` : "lapide_pentateuch.epub";
+  const epubName = langSuffix ? `lapide${langSuffix}.epub` : "lapide.epub";
   await writeEpub(
     join(SRC_DIR, epubName),
     allChapters,
-    `lapide-pentateuch${langSuffix ? `-${lang}` : ""}`,
+    `lapide-commentaries${langSuffix ? `-${lang}` : ""}`,
     i18n.bookTitle,
     "Cornelius a Lapide",
     sections
@@ -598,10 +604,10 @@ async function main() {
 
   if (!arg) {
     // Default: build Pentateuch
-    await buildPentateuch(langSuffix);
+    await buildBible(langSuffix);
   } else if (arg === "--all") {
     // Build Pentateuch + all authors
-    await buildPentateuch(langSuffix);
+    await buildBible(langSuffix);
     const authors = await parseAuthors();
     console.log(`\nFound ${authors.length} authors`);
     for (const author of authors) {
