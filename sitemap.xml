@@ -296,6 +296,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_02_ta.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_02_th.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
@@ -452,6 +457,11 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_03_sw.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_03_ta.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3396,12 +3406,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_exodus_29_es.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_exodus_29_lt.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_exodus_29.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_exodus_30_es.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3416,12 +3436,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_exodus_31_es.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_exodus_31_lt.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_exodus_31.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_exodus_32_es.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3436,12 +3466,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_exodus_33_es.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_exodus_33_lt.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_exodus_33.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_exodus_34_es.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3456,12 +3496,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_exodus_35_es.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_exodus_35_lt.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_exodus_35.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_exodus_36_es.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3476,12 +3526,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_exodus_37_es.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_exodus_37_lt.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_exodus_37.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_exodus_38_es.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3496,12 +3556,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_exodus_39_es.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_exodus_39_lt.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/02_exodus_39.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/02_exodus_40_es.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -8216,7 +8286,57 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/22_proverbia_08_lt.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/22_proverbia_08.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_09_lt.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_09.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_10_lt.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_10.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_11_lt.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_11.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_12.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_13_lt.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_13.html</loc>
     <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
