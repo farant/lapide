@@ -113,6 +113,102 @@ const BIBLE_BOOKS: BookDef[] = [
     ],
     extras: [],
   },
+  {
+    key: "ruth",
+    filePrefix: "08_ruth",
+    maxChapter: 4,
+    preExtras: [
+      { file: "08_Ruth_Argumentum", id: "ruth-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "1samuel",
+    filePrefix: "09_i_regum",
+    maxChapter: 31,
+    preExtras: [
+      { file: "09_I_Regum_Argumentum", id: "1samuel-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "2samuel",
+    filePrefix: "10_ii_regum",
+    maxChapter: 24,
+    preExtras: [
+      { file: "10_II_Regum_Argumentum", id: "2samuel-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "1kings",
+    filePrefix: "11_iii_regum",
+    maxChapter: 22,
+    preExtras: [
+      { file: "11_III_Regum_Argumentum", id: "1kings-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "2kings",
+    filePrefix: "12_iv_regum",
+    maxChapter: 25,
+    preExtras: [
+      { file: "12_IV_Regum_Argumentum", id: "2kings-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "1chronicles",
+    filePrefix: "13_i_paralipomenon",
+    maxChapter: 29,
+    preExtras: [
+      { file: "13_I_Paralipomenon_Argumentum", id: "1chronicles-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "2chronicles",
+    filePrefix: "14_ii_paralipomenon",
+    maxChapter: 36,
+    extras: [],
+  },
+  {
+    key: "ezra",
+    filePrefix: "15_i_esdrae",
+    maxChapter: 10,
+    preExtras: [
+      { file: "15_I_Esdrae_Argumentum", id: "ezra-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "nehemiah",
+    filePrefix: "16_ii_esdrae",
+    maxChapter: 13,
+    preExtras: [
+      { file: "16_II_Esdrae_Argumentum", id: "nehemiah-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "tobit",
+    filePrefix: "17_tobiae",
+    maxChapter: 14,
+    preExtras: [
+      { file: "17_Tobiae_Argumentum", id: "tobit-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "judith",
+    filePrefix: "18_judith",
+    maxChapter: 16,
+    preExtras: [
+      { file: "18_Judith_Argumentum", id: "judith-argumentum" },
+    ],
+    extras: [],
+  },
 ];
 
 // Per-language labels for the Pentateuch EPUB
@@ -127,6 +223,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
       numbers: "Numbers", deuteronomy: "Deuteronomy", joshua: "Joshua", judges: "Judges",
+      ruth: "Ruth", "1samuel": "I Samuel", "2samuel": "II Samuel",
+      "1kings": "I Kings", "2kings": "II Kings",
+      "1chronicles": "I Chronicles", "2chronicles": "II Chronicles",
+      ezra: "Ezra", nehemiah: "Nehemiah", tobit: "Tobit", judith: "Judith",
     },
   },
   la: {
@@ -135,6 +235,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "Genesis", exodus: "Exodus", leviticus: "Leviticus",
       numbers: "Numeri", deuteronomy: "Deuteronomium", joshua: "Josue", judges: "Judicum",
+      ruth: "Ruth", "1samuel": "I Regum", "2samuel": "II Regum",
+      "1kings": "III Regum", "2kings": "IV Regum",
+      "1chronicles": "I Paralipomenon", "2chronicles": "II Paralipomenon",
+      ezra: "I Esdrae", nehemiah: "II Esdrae", tobit: "Tobiae", judith: "Judith",
     },
   },
   es: {
@@ -143,6 +247,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "Génesis", exodus: "Éxodo", leviticus: "Levítico",
       numbers: "Números", deuteronomy: "Deuteronomio", joshua: "Josué", judges: "Jueces",
+      ruth: "Rut", "1samuel": "I Samuel", "2samuel": "II Samuel",
+      "1kings": "I Reyes", "2kings": "II Reyes",
+      "1chronicles": "I Crónicas", "2chronicles": "II Crónicas",
+      ezra: "Esdras", nehemiah: "Nehemías", tobit: "Tobías", judith: "Judit",
     },
   },
   fr: {
@@ -151,6 +259,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "Genèse", exodus: "Exode", leviticus: "Lévitique",
       numbers: "Nombres", deuteronomy: "Deutéronome", joshua: "Josué", judges: "Juges",
+      ruth: "Ruth", "1samuel": "I Samuel", "2samuel": "II Samuel",
+      "1kings": "I Rois", "2kings": "II Rois",
+      "1chronicles": "I Chroniques", "2chronicles": "II Chroniques",
+      ezra: "Esdras", nehemiah: "Néhémie", tobit: "Tobie", judith: "Judith",
     },
   },
   pt: {
@@ -159,6 +271,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "Génesis", exodus: "Êxodo", leviticus: "Levítico",
       numbers: "Números", deuteronomy: "Deuteronómio", joshua: "Josué", judges: "Juízes",
+      ruth: "Rute", "1samuel": "I Samuel", "2samuel": "II Samuel",
+      "1kings": "I Reis", "2kings": "II Reis",
+      "1chronicles": "I Crónicas", "2chronicles": "II Crónicas",
+      ezra: "Esdras", nehemiah: "Neemias", tobit: "Tobias", judith: "Judite",
     },
   },
   it: {
@@ -167,6 +283,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "Genesi", exodus: "Esodo", leviticus: "Levitico",
       numbers: "Numeri", deuteronomy: "Deuteronomio", joshua: "Giosuè", judges: "Giudici",
+      ruth: "Rut", "1samuel": "I Samuele", "2samuel": "II Samuele",
+      "1kings": "I Re", "2kings": "II Re",
+      "1chronicles": "I Cronache", "2chronicles": "II Cronache",
+      ezra: "Esdra", nehemiah: "Neemia", tobit: "Tobia", judith: "Giuditta",
     },
   },
   ar: {
@@ -175,6 +295,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "التَّكْوِينُ", exodus: "الخُرُوجُ", leviticus: "اللَّاوِيِّينَ",
       numbers: "العَدَدُ", deuteronomy: "التَّثْنِيَةُ", joshua: "يَشُوعُ", judges: "الْقُضَاةُ",
+      ruth: "رَاعُوثُ", "1samuel": "صَمُوئِيلُ الأَوَّلُ", "2samuel": "صَمُوئِيلُ الثَّانِي",
+      "1kings": "الْمُلُوكُ الأَوَّلُ", "2kings": "الْمُلُوكُ الثَّانِي",
+      "1chronicles": "أَخْبَارُ الأَيَّامِ الأَوَّلُ", "2chronicles": "أَخْبَارُ الأَيَّامِ الثَّانِي",
+      ezra: "عَزْرَا", nehemiah: "نَحَمْيَا", tobit: "طُوبِيَّا", judith: "يَهُودِيت",
     },
   },
   id: {
@@ -183,6 +307,10 @@ const BIBLE_I18N: Record<string, {
     bookNames: {
       genesis: "Kejadian", exodus: "Keluaran", leviticus: "Imamat",
       numbers: "Bilangan", deuteronomy: "Ulangan", joshua: "Yosua", judges: "Hakim-Hakim",
+      ruth: "Rut", "1samuel": "I Samuel", "2samuel": "II Samuel",
+      "1kings": "I Raja-Raja", "2kings": "II Raja-Raja",
+      "1chronicles": "I Tawarikh", "2chronicles": "II Tawarikh",
+      ezra: "Ezra", nehemiah: "Nehemia", tobit: "Tobit", judith: "Yudit",
     },
   },
 };
