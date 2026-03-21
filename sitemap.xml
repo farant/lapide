@@ -6716,6 +6716,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_ml.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/14_Commentaria_In_Pentateuchum_Mosis_Canones_nl.html</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.8</priority>
@@ -8352,6 +8357,16 @@
   </url>
   <url>
     <loc>https://lapide.org/22_proverbia_13.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_14_lt.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/22_proverbia_14.html</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.8</priority>
   </url>
