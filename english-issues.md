@@ -471,6 +471,50 @@ Ch 2: duplicate verses 54-66 commentary removed, Vulgate `<em>` fixed. Ch 8: dup
 ---
 ---
 
+# Proverbs
+
+## Proverbs 5-8, 31
+No significant issues found. Clean.
+
+## Proverbs 1-4
+### P1. ~69 fixes — FIXED
+Mid-sentence breaks, hyphen splits, Vulgate `<em>` repair (ch 4), truncated Bede quote recovered from source.
+
+## Proverbs 9-15
+### P2. ~139 fixes — FIXED
+Mid-sentence breaks, 20 hyphen reconnections, orphaned continuation relocated (ch 13), garbled text corrected.
+
+## Proverbs 16-20
+### P3. ~156 fixes — FIXED
+Mid-sentence breaks, hyphen splits, scrambled verse 10 enumeration reordered (ch 16), scrambled verse 21/22 content fixed (ch 16), duplicate sentences removed.
+
+## Proverbs 21-25
+### P4. 134 fixes — FIXED
+Mid-sentence breaks and hyphen reconnections across all 5 files.
+
+## Proverbs 26-30
+### P5. ~117 fixes — FIXED
+Mid-sentence breaks, hyphen splits, duplicate verse 26 paragraphs removed (ch 29).
+
+---
+
+# Ecclesiastes
+
+## Ecclesiastes 1-4
+### E1. ~162 fixes — FIXED
+Mid-sentence breaks, 24 hyphen reconnections, duplicate text block removed (ch 1), truncated text recovered from source (ch 1).
+
+## Ecclesiastes 5-8
+### E2. ~41 fixes — FIXED
+Mid-sentence breaks, hyphen splits, duplicate paragraphs removed (ch 8), footnotes reordered.
+
+## Ecclesiastes 9-12
+### E3. ~79 fixes — FIXED
+Mid-sentence breaks, hyphen splits, truncated words completed from source (ch 10, 12), Crampon footnotes handled (ch 9).
+
+---
+---
+
 # Exodus
 
 ---
