@@ -296,6 +296,130 @@ Fixed the main disruptive footnote in ch 33 (lines 55-59) that split a sentence.
 ---
 ---
 
+# Joshua
+
+## Joshua 1-10, 14
+No significant issues found. Clean.
+
+## Joshua 11-13
+### J1. Missing meta tags — NOT AN ERROR
+Review agent reported missing tags but verification shows all meta tags (description, canonical, og:title, og:description, og:type, og:url) are present in chapters 11-13.
+
+## Joshua 15
+### J2. Truncated Vulgate text — FIXED
+Restored complete Vulgate text for Joshua 15:22-63 (city lists for Judah's territory) in both EN and LT. Translation agent had omitted the long enumeration.
+
+## Joshua 16-24
+### J3. Missing bottom navigation — FIXED
+Added `<div class="nav">` with prev/next links to all 9 files (ch 16-24).
+Nine files lack the closing `<div class="nav">` block with prev/next links.
+
+---
+
+# Judges
+
+## Judges 1-5, 12-21
+No significant issues found. Clean.
+
+## Judges 6
+### JG1a. Mid-sentence paragraph breaks — FIXED
+4 breaks fixed including split word "fl-"/"flee" and bonus Ambrose quote split.
+
+## Judges 7
+### JG1b. Mid-sentence paragraph breaks — FIXED
+6 breaks fixed plus recovered truncated Homily On Virginity quote from source.
+
+## Judges 8
+### JG1c. Scrambled text + mid-sentence breaks — FIXED
+9 fixes: unscrambled verse 2 reading order, removed Crampon footnote + "to be deleted" editorial note, restored displaced verse 18 content, fixed Vulgate `<em>`, merged 5 split paragraphs.
+
+## Judges 9
+### JG1d. Mid-sentence paragraph breaks + Vulgate `<em>` — FIXED
+7 merges + Vulgate `<em>` wrapping for all 57 verses.
+
+## Judges 10
+### JG1e. Vulgate `<em>` + mid-sentence breaks — FIXED
+Vulgate `<em>` extended to all 18 verses, Crampon footnote removed, 2 merges.
+
+## Judges 11
+### JG1f. Vulgate `<em>` + mid-sentence breaks — FIXED
+Vulgate `<em>` for all 40 verses, duplicate stutter fixed, split words "Apo-stle" and "gra-" fixed. 6 merges total.
+
+---
+
+# Ruth
+
+## Ruth 1, 4
+No significant issues found. Clean.
+
+## Ruth 2
+### R1. Garbled/duplicate text at verse 22 — FIXED
+Merged duplicate "so that by this service" passage and cleaned garbled fragment.
+
+## Ruth 3
+### R2. Premature `</em>` in Jerome quote — FIXED
+Removed premature `</em>` closure in St. Jerome quote about Ruth.
+
+---
+
+# 1 Samuel (I Regum)
+
+## 1 Samuel 1
+### S1. Split word across paragraphs — FIXED
+"esti-" / "mated" merged into "estimated".
+
+## 1 Samuel 3
+### S2. Entire commentary duplicated — FIXED
+Merged two overlapping versions into one clean commentary. 13 verse sections with unique content from both preserved. No duplicate anchor IDs.
+Two overlapping versions of the verse-by-verse commentary (from adjacent source sections). Being merged.
+
+## 1 Samuel 2, 4-31
+No significant issues found. Clean.
+
+---
+
+# 2 Samuel (II Regum)
+
+## 2 Samuel 1-8
+### S3a. 2 Samuel 1-4 severe issues — FIXED
+Ch 1: Orphaned Gilboa block moved under verse 21, "le-gions" merged, 3 mid-sentence breaks fixed.
+Ch 2: Displaced military quotations moved from verse 18 to verse 26.
+Ch 3: Vulgate verses 35-39 moved from commentary to Vulgate block, "Joab feared" break and spindle passage fixed.
+Ch 4: Duplicate verses 4-6 commentary removed (kept first fuller version).
+
+### S3b. 2 Samuel 5-8 severe issues — FIXED
+Ch 5: Removed all chapter 4 contamination, rebuilt clean Vulgate, fixed 6 mid-sentence breaks.
+Ch 6: Removed full chapter duplication, fixed 9 mid-sentence breaks.
+Ch 7: Removed misplaced ch 6 content + full chapter duplication, fixed 3 breaks.
+Ch 8: Removed full chapter duplication, added Vulgate `<em>`, added verse section headers.
+
+## 2 Samuel 9-24
+No significant issues found. Clean.
+
+---
+
+# 1-2 Kings (III-IV Regum)
+
+## 1 Kings (III Regum) 1-2, 16, 21-22
+No significant issues found. Clean.
+
+## 1 Kings 3-20
+### K1a. 1 Kings 3-7 mid-sentence breaks — FIXED
+29 fixes across 5 files: 10 split-word merges, 15 mid-sentence merges, 2 displaced paragraphs repositioned, 2 deduplicates.
+
+### K1b. 1 Kings 8-20 mid-sentence breaks — FIXED
+42 fixes across 10 files: split words, mid-sentence merges, displaced paragraphs repositioned, truncated quotes completed, Crampon footnotes relocated.
+
+## 2 Kings (IV Regum)
+### K2. Scattered mid-sentence breaks — FIXED
+15 paragraph merges across 10 files (ch 1-5, 10, 13-14, 21, 23). Split words fixed ("Pag-ninus", "doc-trine", "Jero-boam", etc.).
+
+### K3. Stray "t" in heading — FIXED
+2 Kings 6, line 57: removed stray "t" from "Alas, Alas, Alas, my Lord. t"
+
+---
+---
+
 # Exodus
 
 ---
