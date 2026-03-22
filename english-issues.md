@@ -420,6 +420,57 @@ No significant issues found. Clean.
 ---
 ---
 
+# 1 Chronicles
+
+## 1 Chronicles 1-13, 16-19, 21, 25
+No significant issues found. Clean.
+
+## 1 Chronicles 14-15, 20, 22-23, 26-29
+### C1. Various fixes — FIXED
+Ch 14: Vulgate `<em>` added, mid-sentence break merged. Ch 15: mid-sentence break merged. Ch 20, 27, 29: mid-sentence breaks merged. Ch 22: scrambled Villalpando passage deduplicated and reordered. Ch 23: split sentence across verse sections rejoined. Ch 26: chapter 25 contamination removed. Ch 28: mid-sentence break merged, duplicate concluding sentences removed.
+
+---
+
+# 2 Chronicles
+
+## 2 Chronicles 1-19, 21, 23-25, 27-28, 33
+No significant issues found. Clean.
+
+## 2 Chronicles 20, 22, 26, 29-32, 34-35
+### C2. Various fixes — FIXED
+10 fixes across 9 files: mid-sentence breaks merged, split words ("Zecha-riah", "Ju-dea") reconnected, ch 20 structural repair (Vulgate text relocated, duplicate Philo quote removed).
+
+---
+
+# Tobit
+
+### T1. ~38 mid-sentence breaks across 12 files — FIXED
+Split words ("sis-ter", "Jero-boam", "blind-ness", "alms-", "accu-sations", "mem-bers", "gath-ered", "admo-nitions", "Me-des"), mid-sentence breaks, Vulgate `<em>` splits (ch 9, 10, 13), truncated heading completed (ch 14), page-boundary duplicates removed, interleaved content reordered.
+
+---
+
+# Judith
+
+### JU1. ~26 fixes across 14 files — FIXED
+Mid-sentence breaks, split words ("Dio-Diodorus"), Vulgate `<em>` splits merged (ch 4, 7, 8, 9, 10, 11, 13, 14, 15, 16), misformatted commentary `<em>` removed (ch 2, 3, 6, 7), duplicate "He deserved this" removed (ch 1), orphaned fragments relocated (ch 8).
+
+---
+
+# 1 Maccabees
+
+### M1. Critical + Vulgate fixes across 11 files — FIXED
+Ch 2: duplicate verses 54-66 commentary removed, Vulgate `<em>` fixed. Ch 8: duplicate text blocks removed. Ch 10: 4 hyphen splits fixed, orphaned fragments removed. Ch 3-6, 13-16: Vulgate `<em>` breaks fixed. Ch 13: large duplicate block removed.
+
+---
+
+# 2 Maccabees
+
+### M2. Vulgate `<em>` + splits across 15 files — FIXED
+32 Vulgate `<em>` wrappings added across 10 files. 6 hyphen-split words fixed (ch 7: "machi-", "cut-"; ch 9: "pyra-"; ch 10: "heat-", "att-"; ch 14: "Ambro-se").
+
+---
+---
+
 # Exodus
 
 ---
