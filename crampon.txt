@@ -1525,11 +1525,26 @@ No Crampon footnotes found.
   Explanatory note on Judges 7:16.
 
 
+07_judicum_08_lt.html (Latin only)
+--------------------
+
+- Line 120: "(1) Soccoth civitas erat sita prope Jordanem, ad meridiem torrentis Jaboc."
+  Geographic gloss on Succoth. Spliced mid-paragraph in Latin file. No English counterpart.
+
+
 07_judicum_09.html
 --------------------
 
 - Line 176: "(1) Gaal was of the race of the Canaanites."
   Brief identification on Judges 9:42.
+
+
+07_judicum_10_lt.html (Latin only)
+--------------------
+
+- Line 54: "(1) Phua erat frater uterinus Gedeonis, qui erat de tribu Manasse."
+  Gloss identifying Phua as Gideon's uterine brother. Spliced mid-paragraph in Latin
+  file. No English counterpart.
 
 
 11_III_Regum_Argumentum.html
