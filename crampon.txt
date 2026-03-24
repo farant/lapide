@@ -766,3 +766,861 @@ Endnote cluster at lines 266-276 under "Footnotes" heading:
 - Line 276: "(5) Verse 25. 'In a coffin,' regarding which coffins Herodotus, book
   II..." Note on Egyptian coffins/mummies. Cites de Saulcy (History of Jewish
   Art).
+
+
+02_exodus_*.html
+------------------
+No Crampon footnotes found.
+
+
+03_leviticus_02.html
+------------------
+
+- Line 158: "(1) More correctly, 'it shall be of fine flour' — that is, they shall be made from fine flour..."
+  Explains Hebrew text of Lev 2:4 on unleavened cakes. Cites Arvieux.
+
+- Line 175: "(1) A flat vessel, such as is called in French a poele (frying pan)."
+  Brief gloss on cooking vessel.
+
+
+03_leviticus_05.html
+------------------
+
+- Line 94: "(1) Maurer and Allioli: when anyone has sinned, because (the particle כי before אלה is used here causally...)..."
+  Alternative translation of Lev 5:1. Cites Maurer and Allioli.
+
+- Line 106: "(2) Others: if he does not reveal it and bears his guilt..."
+  Alternative grammatical reading of Lev 5:1.
+
+- Line 138: "(3) Allioli: if anyone has sworn to afflict himself with some penance..."
+  Alternative readings of Lev 5:4. Cites Allioli and Clericus.
+
+- Line 152: "(1) Verses 5 and 6 in Hebrew read thus..."
+  Provides Hebrew text of Lev 5:5-6.
+
+- Line 222: "(1) After 'expiating' the Hebrew adds: the sin which he committed..."
+  Brief note on Hebrew addition at Lev 5:13.
+
+- Line 244: "(2) More correctly: 'Silver of shekels' does not differ from 'a shekel of silver'; it is a hypallage..."
+  Corrects shekel interpretation at Lev 5:15.
+
+- Line 268: "(1) Moreover, since Moses in chapter 4 imposed sacrifices on those who sinned through ignorance of the law..."
+  Distinguishes ignorance of law (ch. 4) from ignorance of fact (ch. 5).
+
+
+03_leviticus_07.html
+------------------
+
+- Line 84: "(1) Hesychius explains plemmeles as epimeles..."
+  Etymological note on Greek "plemmeles."
+
+- Line 196: "(1) For 'of separation' the Hebrew has 'of elevation'..."
+  Corrects Vulgate's "separation" to "elevation."
+
+- Line 198: "(2) For 'anointing' it should be translated from the Hebrew as 'measure, portion'..."
+  Corrects "anointing" to "measure/portion."
+
+
+04_numeri_*.html
+------------------
+No Crampon footnotes found.
+
+
+05_deuteronomium_33.html
+------------------
+
+- Line 77: "(1) The Hebrew is, and He came from myriads of holiness..."
+  Hebrew reading of Deut 33:2.
+
+- Line 111: "(3) Or, bring him back safe and unharmed from war to his own people."
+  Alternative reading of Deut 33:7.
+
+- Line 113: "(5) The Hebrew is: of Levi he said."
+  Brief note on Hebrew formula at Deut 33:8.
+
+- Line 139: "(2) In the Hebrew it is, 'of Benjamin.' The prefix ל is not here a sign of the dative."
+  Grammatical note on Hebrew preposition at Deut 33:12.
+
+- Line 159: "(1) The Hebrew should be translated: The Lord will protect him daily..."
+  Extended note on Deut 33:12 about Benjamin's territory.
+
+- Line 193: "(1) Properly, Blessed be, namely the Lord, who enlarges Gad."
+  Clarifies grammar of Deut 33:20.
+
+- Line 195: "(2) Properly, he saw that the first-fruits were for himself..."
+  Note on Deut 33:21 about Gad's portion.
+
+- Line 223: "(1) For 'he shall possess,' in the Hebrew it is 'possess' — an imperative with a paragogic ending."
+  Grammatical note on Hebrew verb at Deut 33:23.
+
+
+05_deuteronomium_34.html
+------------------
+
+- Line 123: "(1) Others translate: who knew, or had seen Him, the Lord, face to face."
+  Alternative translation of Deut 34:10.
+
+
+22_proverbia_01.html
+--------------------
+
+- Line 91: "(1) More correctly, as it seems, the primary meaning of the word is, as the cognate Arabic teaches, to press, to impress..."
+  Philological note on "meshalim"; cites cognate Arabic.
+
+- Line 696: "(1) For aspiceret, namely the hand, as Jerome scrupulously translates it..."
+  Translation correction on Jerome's rendering.
+
+- Line 824: "(1) For prosperitas, in the Hebrew it is tranquility, or carelessness..."
+  Hebrew lexical note; cites Greek Venetian translation.
+
+
+22_proverbia_03.html
+--------------------
+
+- Line ~: "(1) That is, when I was most dear to my father..."
+  Alternative translation of father-son relationship. (Located in ch 4 section of commentary.)
+
+- Line ~: "(1) Or: at the price of all your possessions, acquire understanding..."
+  Brief alternative translation note.
+
+
+22_proverbia_04.html
+--------------------
+
+- Line 86: "(1) That is, when I was most dear to my father..."
+  Alternative translation.
+
+- Line 168: "(1) Or: at the price of all your possessions, acquire understanding..."
+  Brief alternative translation.
+
+- Line 300: "(1) The proper sense is: The condition of the upright always becomes happier..."
+  Note on light as symbol of happiness.
+
+
+22_proverbia_09.html
+--------------------
+
+- Line 92: "(1) Others translate 'mixed' as 'seasoned with spices...'"
+  Alternative translation of "mixed" wine.
+
+- Line 121: "(1) But less fittingly. For the logic of the allegory required..."
+  Editorial critique of alternative interpretation.
+
+- Line 195: "(1) In the Hebrew it is: woman of folly; the foolish one is noisy..."
+  Hebrew lexical note.
+
+- Line 239: "(1) Correct: to the dead of whom he himself..."
+  Brief affirmation.
+
+
+22_proverbia_10.html
+--------------------
+
+- Line 164: "(1) The Hebrew is: he who perverts his ways will be made known..."
+  Hebrew translation; cites Ewald.
+
+- Line 173: "(1) He who winks with the eye, covertly and maliciously..."
+  Proverb explanation.
+
+- Line 184: "(1) Which more closely approaches the Hebrew..."
+  Brief Hebrew note.
+
+- Line 240: "(1) So Maurer and Rosenmuller."
+  Brief attribution. Cites Maurer, Rosenmuller.
+
+- Line 241: "(2) Maurer: the way to life is..."
+  Alternative translation. Cites Maurer.
+
+- Line 252: "(1) Or, to use flattering words while meanwhile plotting evil..."
+  Hebrew translation.
+
+- Line 275: "(1) And Cato, Distichs, book I, distich 3..."
+  Literary parallel from Cato.
+
+
+22_proverbia_11.html
+--------------------
+
+- Line 124: "(1) The Hebrew is: by the mouth a profane man..."
+  Hebrew lexical note.
+
+- Line 148: "(1) More correctly: he who goes about slandering reveals a secret..."
+  Alternative translation.
+
+
+22_proverbia_12.html
+--------------------
+
+- Line 217: "(1) Others render it: and what anyone has brought about by his hands..."
+  Alternative translation.
+
+- Line 244: "(1) Properly: but a false witness announces, brings forth deceit."
+  Brief correction.
+
+- Line 262: "(1) The lip of truth — a man who loves truth..."
+  Extended paraphrase.
+
+- Line 350: "(1) More correctly, 'it' (illud). With a feminine suffix."
+  Hebrew grammatical note.
+
+- Line 358: "(1) So also Rosenmuller. Maurer: leads around, leads forth..."
+  Cites Rosenmuller, Maurer.
+
+- Line 378: "(1) Seventhly: but the wealth, the precious riches of a man..."
+  Alternative interpretation.
+
+
+22_proverbia_13.html
+--------------------
+
+- Line 73: "(1) But more precisely. The word hears, which is suppressed..."
+  Grammatical note on Hebrew parallelism.
+
+- Line 80: "(1) Maurer: but the desire of the treacherous feeds on injury..."
+  Cites Maurer.
+
+- Line 88: "(2) Properly: he desires, but nothing is at hand..."
+  Hebrew translation.
+
+- Line 100: "(1) That is, the wicked man makes himself abominable..."
+  Paraphrase.
+
+- Line 151: "(1) A metaphor drawn from the light of the sun..."
+  Note on sun/light metaphor.
+
+- Line 159: "(1) Or: by pride nothing but quarrel is given..."
+  Hebrew grammatical note.
+
+- Line 174: "(1) Maurer: riches shall be diminished more quickly than a breath..."
+  Cites Maurer.
+
+- Line 261: "(1) The wicked messenger, the faithless one..."
+  Extended paraphrase.
+
+- Line 276: "(1) Jarchi: When desired things happen to someone..."
+  Cites Jarchi (Rashi).
+
+- Line 321: "(1) Hebrew: But the just are rewarded with good..."
+  Brief Hebrew note.
+
+
+22_proverbia_14.html
+--------------------
+
+- Line 95: "(1) So also Maurer, who translates: in the mouth of the fool is a rod of arrogance..."
+  Cites Maurer.
+
+- Line 177: "(1) Rightly. The anxiety by which we are consumed..."
+  Affirmation and paraphrase.
+
+
+22_proverbia_15.html
+--------------------
+
+- Line 156: "(1) Maurer: but the heart of fools scatters what is not right..."
+  Cites Maurer.
+
+- Line 235: "(1) Rightly. The man here afflicted in spirit..."
+  Note on afflicted spirit.
+
+- Line 290: "(1) The meaning is: Either, to the lazy man whatever he undertakes seems difficult..."
+  Two alternative meanings.
+
+- Line 303: "(1) Properly, a fool of a man. Thus the Germans say, ein Thor von Menschen..."
+  Lexical note with German and French parallels.
+
+- Line 322: "(1) When, consulted by others, he has prudently answered..."
+  Brief gloss.
+
+- Line 330: "(1) Rightly: not without labor do we strive toward the blessed life..."
+  Note on spiritual ascent.
+
+- Line 343: "(1) But pure, clean, and acceptable to God are words of pleasantness..."
+  Alternative translation.
+
+- Line 369: "(1) Rightly."
+  Minimal affirmation.
+
+- Line 392: "(1) Maurer, the light of the eyes affects the heart with gladness..."
+  Cites Maurer.
+
+- Line 404: "(1) Maurer, of life, that is, of morals."
+  Cites Maurer.
+
+- Line 411: "(2) More literally, he acquires a heart for himself..."
+  Brief literal translation.
+
+
+22_proverbia_16.html
+--------------------
+
+- Line 82: "(1) Maurer: To man belong the counsels of the mind..."
+  Extended alternative. Cites Maurer.
+
+
+22_proverbia_19.html
+--------------------
+
+- Line 443: "(1) Tsallachat undoubtedly means a serving dish or platter..."
+  Lexical note on "tsallachat."
+
+- Line 473: "(1) In this sense: If you strike the buffoon..."
+  Extended paraphrase.
+
+- Line 480: "(1) It is better, by transposition of subject and predicate..."
+  Grammatical note.
+
+- Line 487: "(1) So Ewald..."
+  Brief attribution. Cites Ewald.
+
+
+22_proverbia_20.html
+--------------------
+
+- Line 76: "(1) The sense is: wine is a mocker, strong drink is raging..."
+  Rhetorical note on metonymy.
+
+- Line 219: "(1) So the majority of modern interpreters."
+  Brief attribution.
+
+- Line 258: "(1) The writer wishes to show how dangerous it is to promise..."
+  Note on surety.
+
+- Line 277: "(1) Plans are made firm by applying counsel..."
+  Hebrew grammatical note.
+
+- Line 286: "(1) More correctly: he who reveals a secret goes about as a slanderer..."
+  Alternative translation.
+
+- Line 371: "(1) The sense is: it is a snare for man..."
+  Paraphrase on rash vows.
+
+- Line 412: "(1) The lamp of Jehovah, the light kindled by Jehovah..."
+  Paraphrase.
+
+- Line 477: "(1) The welts of a wound..."
+  Extended paraphrase.
+
+
+22_proverbia_21.html
+--------------------
+
+- Line 195: "(1) Translate from the Hebrew: when they punish the mocker..."
+  Alternative Hebrew translation.
+
+
+22_proverbia_22.html
+--------------------
+
+- Line 215: "(1) The Hebrew is: He who loves purity of heart..."
+  Hebrew translation.
+
+
+22_proverbia_23.html
+--------------------
+
+- Line 324: "(1) Whence there is no way out."
+  Brief gloss.
+
+- Line 331: "(1) That is, and she multiplies transgressors among men."
+  Brief paraphrase.
+
+- Line 332: "(2) Modern translators render it: to whom is alas?..."
+  Cites modern translators.
+
+- Line 340: "(1) Maurer: to whom is complaint? Rosenmuller: to whom is anxiety?"
+  Cites Maurer, Rosenmuller.
+
+- Line 355: "(1) Both the Greeks and the ancient Orientals were accustomed to drink only wine diluted..."
+  Cultural note.
+
+- Line 356: "(2) More correctly: The ancients valued red wine more highly than white."
+  Cultural note.
+
+- Line 362: "(1) In Hebrew it reads: lest He rebuke you."
+  Hebrew translation.
+
+
+22_proverbia_24.html
+--------------------
+
+- Line 64: "(1) More correctly, afflictions, which namely they create for others."
+  Brief correction.
+
+- Line 199: "(1) Others: would that you hold back, restrain from death..."
+  Alternative translation.
+
+- Line 212: "(1) Translate the Hebrew thus: if you say: Behold, we did not know this man..."
+  Extended Hebrew translation.
+
+- Line 250: "(1) In the Hebrew it is: do not lie in wait, O wicked one..."
+  Cites Maurer.
+
+- Line 299: "(1) Correctly and genuinely."
+  Minimal affirmation.
+
+- Line 305: "(1) Compare these words of Sophocles in the Ajax..."
+  Literary parallel from Sophocles.
+
+- Line 306: "(2) Others: Of both, meaning whoever does not revere either God or the king..."
+  Alternative translation.
+
+- Line 318: "(1) Add, so that Vatablus's opinion may be true..."
+  Note referencing Vatablus.
+
+- Line 327: "(1) Verse 25. But for those who rebuke the wicked, it shall be sweet..."
+  Paraphrase.
+
+- Line 348: "(1) 'Build your house' is to be understood not only of external structure..."
+  Extended note.
+
+- Line 373: "(1) The Hebrew is: do not be a rash, reckless witness..."
+  Extended Hebrew translation.
+
+- Line 374: "(2) For 'to each one' the Hebrew can be translated as 'to that man'..."
+  Hebrew translation note.
+
+- Line 381: "(1) Verse 31. The Hebrew should be translated word for word thus..."
+  Detailed Hebrew word-for-word translation.
+
+
+22_proverbia_25.html
+--------------------
+
+- Line 69: "(1) The genuine sense is: these also that follow are parables of Solomon..."
+  Extended note on the heading of chapters 25-29.
+
+- Line 226: "(1) A golden ring and a golden necklace..."
+  Extended note on earrings of wisdom; cites Arabschiades.
+
+
+22_proverbia_26.html
+--------------------
+
+- Line 357: "(1) A fourth and truer reason..."
+  Note on sluggard's self-satisfaction.
+
+- Line 369: "(1) Maurer is correct: as a madman..."
+  Cites Maurer, Gesenius.
+
+- Line 392: "(1) For 'simple' the Hebrew should be rendered as morsels..."
+  Hebrew translation.
+
+- Line 393: "(2) Burning, that is, which testify to a burning love."
+  Brief gloss.
+
+- Line 416: "(1) In Hebrew: the hater feigns with his lips..."
+  Hebrew translation.
+
+- Line 435: "(1) Or rather, his crushed ones, as in French ses victimes..."
+  Alternative with French parallel.
+
+- Line 436: "(2) That is, one who chastises: so Gesenius..."
+  Cites Gesenius.
+
+
+22_proverbia_27.html
+--------------------
+
+- Line 113: "(2) The sense is: a monstrous thing is the weight of blazing wrath..."
+  Extended note on wrath and jealousy.
+
+- Line 133: "(1) Cicero, Laelius, chapter 25..."
+  Literary parallel from Cicero.
+
+- Line 152: "(1) Horace, Book I, Satire 2, line 38..."
+  Literary parallel from Horace.
+
+- Line 204: "(1) Ointment and incense cheer the heart..."
+  Extended paraphrase.
+
+- Line 254: "(1) And I will have something to answer him who reproaches..."
+  Brief paraphrase.
+
+
+22_proverbia_28.html
+--------------------
+
+- Line 95: "(1) In the defection or rebellion of some land..."
+  Extended note on political rebellion.
+
+- Line 113: "(1) It should be understood as referring to a man who has work done through poor laborers..."
+  Extended note.
+
+- Line 122: "(1) That each person praises his like..."
+  Note; cites Umbreit.
+
+- Line 137: "(1) Evil men do not understand right..."
+  Paraphrase.
+
+- Line 138: "(2) Add from the Hebrew: twisting himself so that he may walk on a double path."
+  Hebrew addition.
+
+- Line 154: "(1) For 'feeds' the Hebrew has: he who delights in..."
+  Hebrew lexical note.
+
+- Line 155: "(2) He who increases his wealth by usury and interest..."
+  Extended paraphrase.
+
+- Line 234: "(1) 'Poor,' that is weak, who cannot resist tyranny."
+  Brief gloss.
+
+- Line 254: "(1) A man burdened with the blood of a soul..."
+  Extended paraphrase.
+
+- Line 273: "(1) This is the genuine meaning. Compare Juvenal, Satire XIV..."
+  Literary parallel from Juvenal.
+
+- Line 286: "(2) Or rather it is a mere addition..."
+  Note; cites Gellius.
+
+- Line 305: "(1) That is, he is to be equated with a most wicked man..."
+  Paraphrase.
+
+- Line 319: "(1) Correctly."
+  Minimal affirmation.
+
+
+22_proverbia_29.html
+--------------------
+
+- Line 66: "(1) That is, one who is often reproved for his vices..."
+  Alternative translations; cites Gesenius.
+
+- Line 101: "(1) More correctly: he delights in harlots."
+  Brief correction.
+
+- Line 132: "(1) Understand: linguam [tongue]."
+  Brief grammatical note.
+
+- Line 146: "(1) Others render: in the sin of a man, evil is itself a snare..."
+  Alternative translation.
+
+- Line 147: "(2) More correctly: he shall prevail, that is, he shall flourish."
+  Brief correction.
+
+- Line 318: "(1) Reference is made to the law found in Leviticus 5:1."
+  Brief cross-reference.
+
+
+22_proverbia_30.html
+--------------------
+
+- Line 71: "(1) In so uncertain a matter, let me be permitted to set forth what I think..."
+  Extended speculative note on Agur and Ithiel.
+
+- Line 120: "(1) Namely, of human affairs. (2) For 'of the holy ones' better translate 'of the Most Holy One'..."
+  Combined note on Hebrew alternatives.
+
+- Line 178: "(1) In Hebrew it reads: lest He rebuke you."
+  Brief Hebrew note.
+
+
+22_proverbia_31.html
+--------------------
+
+- Line 394: "(1) The sense is: If at any time she decides to buy a field..."
+  Paraphrase of virtuous woman buying a field.
+
+- Line 417: "(1) The sense is: She approaches the tasks with eagerness and energy..."
+  Note on girding garments for work.
+
+- Line 471: "(1) Kiscor means uprightness, erectness; specifically the distaff; in French, quenouille."
+  Lexical note with French equivalent.
+
+- Line 584: "(1) As a commentary, consider this passage of Columella..."
+  Literary parallel from Columella.
+
+
+23_ecclesiastes_03.html
+--------------------
+
+- Line 151: "(1) Rightly Saint Jerome says: 'He taught in the preceding section...'"
+  Gloss on 3:2. Alternate reading of Jerome.
+
+- Line 392: "(1) Among more recent commentators, Rosenmuller renders it: eternity..."
+  Gloss on 3:11. Cites Rosenmuller, Gesenius, Maurer.
+
+- Line 411: "(1) Instead of enim, from the Hebrew it is better to translate atque etiam."
+  Hebrew translation note on 3:13.
+
+- Line 542: "(1) From the Hebrew translate: I said in my heart concerning the condition..."
+  Gloss on 3:18. Hebrew translation alternative.
+
+
+23_ecclesiastes_04.html
+--------------------
+
+- Line 73: "(1) The beginning of this chapter is to be connected with the end of the preceding..."
+  Structural note connecting ch. 4 to ch. 3.
+
+- Line 293: "(1) This should be understood more generally: There is someone who is alone..."
+  Gloss on 4:8.
+
+- Line 513: "(1) The Hebrew reads: for that wise youth went out from the house of prisoners..."
+  Hebrew translation on 4:14.
+
+- Line 642: "(1) Guard your foot when you go to the house of God..."
+  Gloss on 4:17. Alternative Hebrew translation.
+
+
+23_ecclesiastes_05.html
+--------------------
+
+- Line 408: "(1) The Hebrew is: and he who loves an abundance of silver, for him there is no income."
+  Hebrew translation on 5:10.
+
+- Line 410: "(2) Many are those who eat them..."
+  Continuation on 5:10.
+
+- Line 521: "(1) By a bad occupation, or by a bad business..."
+  Gloss on 5:13.
+
+- Line 552: "(1) 'His' -- of the father or of the son?..."
+  Grammatical note on 5:15.
+
+- Line 554: "(2) The Hebrew is: just as man went forth..."
+  Hebrew translation on 5:15. Cites Propertius.
+
+- Line 584: "(1) Read hlj, sickness of mind, and k`m, indignation..."
+  Textual-critical note on 5:16.
+
+- Line 632: "(1) And, in French: ENCORE cela est-il un don de Dieu."
+  French translation on 5:18.
+
+- Line 662: "(1) Such a tranquil mind is indeed a great gift of God..."
+  Extended gloss on 5:19.
+
+
+23_ecclesiastes_06.html
+--------------------
+
+- Line 144: "(1) The Hebrew should be translated: he did not even see the sun..."
+  Hebrew translation on 6:5.
+
+- Line 182: "(1) In verse 6 the thought of verse 5 is not continued but repeated..."
+  Structural note on 6:6.
+
+- Line 200: "(1) The meaning: Since all labor only tends to our nourishment..."
+  Gloss on 6:7.
+
+- Line 220: "(1) Verses 8 and 9. What indeed is the advantage for the wise poor man..."
+  Extended gloss on 6:8-9. Cites Horace, La Fontaine.
+
+- Line 311: "(1) The meaning from the Hebrew: Where there are many words, vanity is multiplied..."
+  Gloss on 6:11. Cites Rosenmuller.
+
+
+23_ecclesiastes_07.html
+--------------------
+
+- Line 87: "(1) For who knows what is good for man in this life..."
+  Extended Hebrew translation on 7:1.
+
+- Line 142: "(1) This verse has two separate sentences not connected by any linking..."
+  Structural note on 7:2. Cites Maurer.
+
+- Line 211: "(1) The Hebrew is: sadness is better than laughter..."
+  Hebrew translation on 7:4.
+
+- Line 213: "(2) Understand: it is engaged in constant meditation."
+  Brief gloss on 7:4.
+
+- Line 301: "(1) It can happen that a wise man is drawn to base pursuits..."
+  Gloss on 7:7.
+
+- Line 338: "(1) Rightly so. At the beginning it cannot be known where a matter will end..."
+  Gloss on 7:8.
+
+
+23_ecclesiastes_08.html
+--------------------
+
+- Line 299: "(1) Thus Campensis translates: I saw the wicked buried, honored..."
+  Gloss on 8:10. Cites Campensis.
+
+- Line 332: "(1) More correctly: is carried out, the sentence against the evil work."
+  Brief correction on 8:11.
+
+- Line 359: "(1) He repeats the reason why men dare to venture into crimes..."
+  Structural gloss on 8:12.
+
+- Line 386: "(1) But it will not be well for the wicked..."
+  Alternative translation of 8:13.
+
+- Line 399: "(1) Properly: according to the work, the merit of the wicked."
+  Brief note on 8:14.
+
+- Line 431: "(1) And this faculty of happily enjoying the goods of life adheres in his labor..."
+  Gloss on 8:15.
+
+- Line 433: "(2) Since day and night he sees no sleep..."
+  Gloss on 8:16. Cites Rosenmuller, Terence.
+
+
+23_ecclesiastes_09.html
+--------------------
+
+- Line 64: "(1) How could anyone think himself able to grasp the reason for these works of God..."
+  Extended gloss on 9:1.
+
+- Line 127: "(1) Maurer: yet if someone is joined to the living, there is hope..."
+  Gloss on 9:4. Cites Maurer, Rosenmuller.
+
+- Line 185: "(1) Because God gives you these goods as a reward..."
+  Brief gloss on 9:7.
+
+- Line 281: "(1) They do not always enjoy a successful race..."
+  Gloss on 9:11.
+
+- Line 333: "(1) Matsa is used impersonally. From miseken, 'poor'..."
+  Linguistic note on 9:15. Etymology of "mesquin."
+
+- Line 365: "(1) Correctly."
+  Minimal approval.
+
+
+23_ecclesiastes_10.html
+--------------------
+
+- Line 84: "(1) This verse coheres with the latter half of the last verse..."
+  Structural note on 10:1.
+
+- Line 168: "(1) Even on the way when the fool walks, his heart fails..."
+  Hebrew translation on 10:3.
+
+- Line 181: "(2) Do not allow yourself to be moved from tranquil state of mind."
+  Brief gloss on 10:4.
+
+- Line 183: "(3) Rightly. Great sins, that is, great calamities."
+  Brief note on 10:4.
+
+- Line 209: "(1) Like an error that proceeds from the face of the ruler..."
+  Gloss on 10:5-6.
+
+- Line 270: "(1) If the iron has been blunted..."
+  Gloss on 10:10. Cites Maurer.
+
+- Line 301: "(1) Nearly all modern interpreters translate: if the serpent has bitten..."
+  Gloss on 10:11. Cites Bochart.
+
+
+07_judicum_06.html
+--------------------
+
+- Line 92: "(1) 'Do not fear' means 'do not think they are gods.'"
+  Brief gloss on Judges 6:10.
+
+- Line 143: "(1) Among the ancients it was a great display of magnificence..."
+  Cultural note on Judges 6:19-21.
+
+- Line 160: "(1) Most probably Gideon took two bulls..."
+  Interpretive note on Judges 6:25-26.
+
+
+07_judicum_07.html
+--------------------
+
+- Line 97: "(1) These torches were certain brands coated with bitumen..."
+  Explanatory note on Judges 7:16.
+
+
+07_judicum_09.html
+--------------------
+
+- Line 176: "(1) Gaal was of the race of the Canaanites."
+  Brief identification on Judges 9:42.
+
+
+11_III_Regum_Argumentum.html
+--------------------
+
+- Line 39: "(1) This third book is the last of the books the Hebrews call Nebi'im Rishonim..."
+  Note on Hebrew canonical categorization.
+
+- Line 57: "(1) It is held as certain that the author did not live at the time of the events..."
+  Note on authorship of Kings favoring Ezra.
+
+
+11_iii_regum_02.html
+--------------------
+
+- Line 172: "(1) Such as the Anglicans and Pufendorf..."
+  Polemical note. Cites Pufendorf.
+
+
+11_iii_regum_04.html
+--------------------
+
+- Line 147: "(1) And they came from all peoples to hear the wisdom of Solomon..."
+  Note on Chinese Emperor Mu-wang. Cites "Gauldi."
+
+
+11_iii_regum_07.html
+--------------------
+
+- Line 266: "(1) Indeed it can simply be said that here is added what was omitted..."
+  Note on bronze sea capacity discrepancy.
+
+
+11_iii_regum_10.html
+--------------------
+
+- Line 84: "(1) The Abyssinian Annals contain very much about the journey of the queen of Sheba..."
+  Note on Queen of Sheba. Cites Bruce.
+
+
+11_iii_regum_11.html
+--------------------
+
+- Line 159: "(1) But the matter does not seem to have turned out as he wished..."
+  Historical note on Hadad and Edom.
+
+
+11_iii_regum_12.html
+--------------------
+
+- Line 138: "(1) Rehoboam and his successors also reigned over foreigners from other tribes..."
+  Note on tribe of Judah.
+
+
+11_iii_regum_13.html
+--------------------
+
+- Line 118: "(1) Nevertheless, many consider this man, though a true prophet, to have been wicked..."
+  Note on old prophet's moral character.
+
+
+11_iii_regum_14.html
+--------------------
+
+- Line 150: "(1) Mr. Champollion-Figeac, visiting in 1839 the ancient palace of Karnak..."
+  Archaeological note. Cites Champollion-Figeac, Wiseman.
+
+
+19_Esther_Argumentum.html
+--------------------
+
+- Line 26: "(1) The first ten chapters are protocanonical..."
+  Note on canonical status of Esther additions. References Council of Trent.
+
+
+19_esther_09.html
+--------------------
+
+- Line 67: "(1) Even now the Jews celebrate these days with profuse merriment..."
+  Note on Purim customs. Cites Allioli.
+
+
+19_esther_10.html
+--------------------
+
+- Line 50: "(1) Even now in Ecbatana, today called Hamadan, the tomb of Esther and Mordecai..."
+  Archaeological note. Cites Sir Robert Ker Porter.
+
+
+20_I_Machabaeorum_Argumentum.html
+--------------------
+
+- Line 92: "(1) It suffices to note the reason for this discrepancy. The era of the Greek kingdom..."
+  Chronological note on Seleucid era. Cites Scaliger.
