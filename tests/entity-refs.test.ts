@@ -71,14 +71,14 @@ describe("splitSegments", () => {
     ]);
   });
 
-  test("handles entity-ref tags with attributes", () => {
+  test("handles entity-ref span tags with attributes", () => {
     const result = splitSegments(
-      '<entity-ref slug="person/saint/jerome">St. Jerome</entity-ref>'
+      '<span class="entity-ref" data-slug="person/saint/jerome">St. Jerome</span>'
     );
     expect(result).toEqual([
-      { type: "tag", content: '<entity-ref slug="person/saint/jerome">' },
+      { type: "tag", content: '<span class="entity-ref" data-slug="person/saint/jerome">' },
       { type: "text", content: "St. Jerome" },
-      { type: "tag", content: "</entity-ref>" },
+      { type: "tag", content: "</span>" },
     ]);
   });
 

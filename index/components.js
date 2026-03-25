@@ -1,8 +1,8 @@
 /**
- * components.js — Entity reference web component + Xanadu-style side panel
+ * components.js — Entity reference panel + Xanadu-style side panel
  *
  * Markup in source pages:
- *   <entity-ref slug="person/cleric/cornelius-a-lapide">Cornelius a Lapide</entity-ref>
+ *   <span class="entity-ref" data-slug="person/cleric/cornelius-a-lapide">Cornelius a Lapide</span>
  *
  * Desktop (>860px): Card panel appears in right margin, sticky to viewport
  * Mobile (<=860px): Card inserts inline after the source paragraph
@@ -245,36 +245,26 @@ class EntityPanel {
 	}
 }
 
-// ── <entity-ref> Custom Element ──
+// ── Entity-ref click handler (event delegation) ──
 
-class EntityRefElement extends HTMLElement {
-	connectedCallback() {
-		this.setAttribute('role', 'button');
-		this.setAttribute('tabindex', '0');
+document.addEventListener('click', (e) => {
+	const ref = e.target.closest('.entity-ref');
+	if (!ref || !_annotationsVisible) return;
+	e.preventDefault();
+	const slug = ref.getAttribute('data-slug');
+	if (!slug) return;
+	getPanel().show(slug, ref.closest('p'));
+});
 
-		this.addEventListener('click', (e) => {
-			e.preventDefault();
-			this._activate();
-		});
-		this.addEventListener('keydown', (e) => {
-			if (e.key === 'Enter' || e.key === ' ') {
-				e.preventDefault();
-				this._activate();
-			}
-		});
-	}
-
-	_activate() {
-		if (!_annotationsVisible) return;
-		const slug = this.getAttribute('slug');
-		if (!slug) return;
-
-		const paragraph = this.closest('p');
-		getPanel().show(slug, paragraph);
-	}
-}
-
-customElements.define('entity-ref', EntityRefElement);
+document.addEventListener('keydown', (e) => {
+	if (e.key !== 'Enter' && e.key !== ' ') return;
+	const ref = e.target.closest('.entity-ref');
+	if (!ref || !_annotationsVisible) return;
+	e.preventDefault();
+	const slug = ref.getAttribute('data-slug');
+	if (!slug) return;
+	getPanel().show(slug, ref.closest('p'));
+});
 
 // ── Singleton accessor ──
 
@@ -289,24 +279,24 @@ function getPanel() {
 const STYLES = `
 /* ── entity-ref inline styling ── */
 
-entity-ref {
+.entity-ref {
   transition: color 0.15s, border-color 0.15s;
 }
 
 /* Hidden by default — looks like normal text */
-entity-ref {
+.entity-ref {
   pointer-events: none;
 }
 
 /* Visible when toggled on */
-.annotations-visible entity-ref {
+.annotations-visible .entity-ref {
   color: #4a4a8a;
   border-bottom: 1px dotted #4a4a8a;
   cursor: pointer;
   pointer-events: auto;
 }
-.annotations-visible entity-ref:hover,
-.annotations-visible entity-ref:focus {
+.annotations-visible .entity-ref:hover,
+.annotations-visible .entity-ref:focus {
   color: #2a2a6a;
   border-bottom-color: #2a2a6a;
   outline: none;
@@ -638,7 +628,7 @@ function highlightPassage() {
 	}
 
 	// Wrap matching text nodes in <mark> elements using TreeWalker
-	// (handles ranges that span across inline elements like <entity-ref>)
+	// (handles ranges that span across inline elements like .entity-ref spans)
 	const range = document.createRange();
 	range.setStart(startPos.node, startPos.offset);
 	range.setEnd(endPos.node, endPos.offset);
@@ -732,6 +722,16 @@ function setAnnotationsVisible(visible) {
 	document.body.classList.toggle('annotations-visible', visible);
 	const toggle = document.getElementById('annotation-toggle');
 	if (toggle) toggle.textContent = visible ? 'Hide annotations' : 'Show annotations';
+	// Make entity-refs focusable when visible, inert when hidden
+	document.querySelectorAll('.entity-ref').forEach(el => {
+		if (visible) {
+			el.setAttribute('role', 'button');
+			el.setAttribute('tabindex', '0');
+		} else {
+			el.removeAttribute('role');
+			el.removeAttribute('tabindex');
+		}
+	});
 	// Dismiss any open panel when hiding
 	if (!visible && _panel) {
 		_panel._dismiss();
@@ -740,7 +740,7 @@ function setAnnotationsVisible(visible) {
 
 function insertAnnotationToggle() {
 	// Don't insert on index pages (they don't have entity-refs in content)
-	if (!document.querySelector('entity-ref')) return;
+	if (!document.querySelector('.entity-ref')) return;
 
 	const toggle = document.createElement('a');
 	toggle.id = 'annotation-toggle';

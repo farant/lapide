@@ -716,7 +716,7 @@ async function runSourceChecks(
   }
 
   // ── Check 11: Entity-ref slugs resolve ──
-  const entityRefRe = /<entity-ref\s+slug="([^"]+)"/g;
+  const entityRefRe = /<span class="entity-ref" data-slug="([^"]+)"/g;
   const entityRefSlugs = new Set<string>();
   let entityRefMatch;
   while ((entityRefMatch = entityRefRe.exec(html)) !== null) {
@@ -726,7 +726,7 @@ async function runSourceChecks(
   let brokenEntityRefCount = 0;
   for (const slug of entityRefSlugs) {
     if (!allSlugs.has(slug)) {
-      errors.push({ message: `Entity-ref slug not found: <entity-ref slug="${slug}"> has no matching ref file` });
+      errors.push({ message: `Entity-ref slug not found: data-slug="${slug}" has no matching ref file` });
       brokenEntityRefCount++;
     }
   }

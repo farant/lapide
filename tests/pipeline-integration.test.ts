@@ -1364,7 +1364,7 @@ describe("Stage 4 — validate-refs.ts (post-annotation)", () => {
 
 describe("Stage 5 — tag-entity-refs.ts", () => {
   test(
-    "adds <entity-ref> tags to source HTML",
+    "adds entity-ref spans to source HTML",
     () => {
       const result = runScript(SCRIPTS.tagEntityRefs, ["source.html"]);
 
@@ -1375,16 +1375,15 @@ describe("Stage 5 — tag-entity-refs.ts", () => {
 
       const html = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
 
-      // Verify entity-ref tags are present
-      expect(html).toContain("<entity-ref");
-      expect(html).toContain("</entity-ref>");
+      // Verify entity-ref spans are present
+      expect(html).toContain('class="entity-ref"');
 
-      // Verify specific entity slugs appear in entity-ref tags
+      // Verify specific entity slugs appear in entity-ref spans
       expect(html).toMatch(
-        /entity-ref slug="person\/saint\/augustine"/
+        /data-slug="person\/saint\/augustine"/
       );
       expect(html).toMatch(
-        /entity-ref slug="person\/saint\/jerome"/
+        /data-slug="person\/saint\/jerome"/
       );
 
       // Verify components.js script tag was inserted
@@ -1409,17 +1408,17 @@ describe("Stage 5 — tag-entity-refs.ts", () => {
 
       // St. Basil should be tagged
       expect(p5Content).toMatch(
-        /entity-ref slug="person\/saint\/basil-the-great"/
+        /data-slug="person\/saint\/basil-the-great"/
       );
 
       // Gregory the Theologian should be tagged
       expect(p5Content).toMatch(
-        /entity-ref slug="person\/saint\/gregory-nazianzus"/
+        /data-slug="person\/saint\/gregory-nazianzus"/
       );
 
       // Rufinus should be tagged
       expect(p5Content).toMatch(
-        /entity-ref slug="person\/scholar\/rufinus"/
+        /data-slug="person\/scholar\/rufinus"/
       );
     },
     { timeout: 30_000 }
@@ -1448,15 +1447,15 @@ describe("Stage 5 — tag-entity-refs.ts", () => {
   );
 
   test(
-    "is idempotent — running again produces same entity-ref tags",
+    "is idempotent — running again produces same entity-ref spans",
     () => {
       const before = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
-      const beforeEntityRefs = (before.match(/<entity-ref[^>]*>/g) || []).sort();
+      const beforeEntityRefs = (before.match(/<span class="entity-ref"[^>]*>/g) || []).sort();
 
       runScript(SCRIPTS.tagEntityRefs, ["source.html"]);
 
       const after = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
-      const afterEntityRefs = (after.match(/<entity-ref[^>]*>/g) || []).sort();
+      const afterEntityRefs = (after.match(/<span class="entity-ref"[^>]*>/g) || []).sort();
 
       expect(afterEntityRefs).toEqual(beforeEntityRefs);
     },
@@ -1475,7 +1474,7 @@ describe("Stage 5b — entity-ref-overrides.json", () => {
       // First, tag without overrides and confirm "Rufinus" is tagged
       runScript(SCRIPTS.tagEntityRefs, ["source.html"]);
       const beforeHtml = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
-      expect(beforeHtml).toMatch(/entity-ref slug="person\/scholar\/rufinus"/);
+      expect(beforeHtml).toMatch(/data-slug="person\/scholar\/rufinus"/);
 
       // Now create overrides that exclude the word "Rufinus"
       const extractionsDir = path.join(tmpDir, "index/extractions/source");
@@ -1496,10 +1495,10 @@ describe("Stage 5b — entity-ref-overrides.json", () => {
 
       // "Rufinus" should NOT be tagged (the name form is excluded, and it has no aliases)
       const html = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
-      expect(html).not.toMatch(/entity-ref slug="person\/scholar\/rufinus"/);
+      expect(html).not.toMatch(/data-slug="person\/scholar\/rufinus"/);
 
       // Other entities should still be tagged
-      expect(html).toMatch(/entity-ref slug="person\/saint\/augustine"/);
+      expect(html).toMatch(/data-slug="person\/saint\/augustine"/);
 
       // Clean up — remove overrides and re-tag
       unlinkSync(path.join(extractionsDir, "entity-ref-overrides.json"));
@@ -1541,7 +1540,7 @@ describe("Stage 5b — entity-ref-overrides.json", () => {
       );
       expect(introMatch).not.toBeNull();
       expect(introMatch![1]).not.toMatch(
-        /entity-ref slug="person\/saint\/augustine"/
+        /data-slug="person\/saint\/augustine"/
       );
 
       // But Augustine SHOULD still be tagged in other paragraphs (e.g., authority-of-scripture-p2)
@@ -1550,7 +1549,7 @@ describe("Stage 5b — entity-ref-overrides.json", () => {
       );
       expect(authMatch).not.toBeNull();
       expect(authMatch![1]).toMatch(
-        /entity-ref slug="person\/saint\/augustine"/
+        /data-slug="person\/saint\/augustine"/
       );
 
       // Clean up
@@ -1576,8 +1575,8 @@ describe("Stage 5b — entity-ref-overrides.json", () => {
 
       // Should still tag normally
       const html = readFileSync(path.join(tmpDir, "source.html"), "utf-8");
-      expect(html).toMatch(/entity-ref slug="person\/saint\/augustine"/);
-      expect(html).toMatch(/entity-ref slug="person\/classical\/aristotle"/);
+      expect(html).toMatch(/data-slug="person\/saint\/augustine"/);
+      expect(html).toMatch(/data-slug="person\/classical\/aristotle"/);
     },
     { timeout: 30_000 }
   );
@@ -2089,7 +2088,7 @@ describe("lint-annotations.ts (negative tests)", () => {
         'id="introduction-p3"'
       ).replace(
         /(<p\s[^>]*id="introduction-p3"[^>]*>)([\s\S]*?)(<\/p>)/,
-        '$1<entity-ref slug="person/saint/nonexistent-saint">Nonexistent</entity-ref> $2$3'
+        '$1<span class="entity-ref" data-slug="person/saint/nonexistent-saint">Nonexistent</span> $2$3'
       );
       writeFileSync(htmlPath, modifiedHtml);
 
@@ -2393,8 +2392,8 @@ describe("Final validation — full pipeline integrity", () => {
       // Has the three pipeline additions:
       // 1. Sidecar JSON
       expect(html).toContain('id="passage-annotations"');
-      // 2. Entity-ref tags
-      expect(html).toContain("<entity-ref");
+      // 2. Entity-ref spans
+      expect(html).toContain('class="entity-ref"');
       // 3. Components script
       expect(html).toContain("components.js");
     },

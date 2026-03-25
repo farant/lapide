@@ -1,9 +1,9 @@
 /**
- * tag-entity-refs.ts — Stage 5: Add <entity-ref> tags to source HTML
+ * tag-entity-refs.ts — Stage 5: Add entity-ref spans to source HTML
  *
  * Reads all ref files to identify entities and their names/aliases.
  * Scans the source HTML for entity name mentions and wraps them with
- * <entity-ref slug="...">Name</entity-ref> web component tags.
+ * <span class="entity-ref" data-slug="...">Name</span> tags.
  *
  * - Tags first mention of each entity per section (not every occurrence)
  * - Unambiguous names (mapping to a single entity) are tagged in all paragraphs
@@ -14,7 +14,7 @@
  * - Reads entity-ref-overrides.json from the extractions folder (if present)
  *   to apply human-reviewed exclusions and forced slug resolutions
  *
- * Idempotent — strips existing <entity-ref> tags before re-tagging.
+ * Idempotent — strips existing entity-ref spans before re-tagging.
  *
  * Usage: bun tag-entity-refs.ts <source.html>
  */
@@ -279,8 +279,10 @@ function getForcedSlug(matchedText: string, paraId: string): string | null {
 let html = await Bun.file(sourceFile).text();
 
 // Strip existing entity-ref tags (idempotent)
-html = html.replace(/<entity-ref[^>]*>/g, "");
-html = html.replace(/<\/entity-ref>/g, "");
+html = html.replace(
+  /<span class="entity-ref" data-slug="[^"]*">([\s\S]*?)<\/span>/g,
+  "$1"
+);
 
 // --- Step 4: Tag entities ---
 
@@ -402,7 +404,7 @@ html = html.replace(pPattern, (_, openTag, paraId, innerHtml, closeTag) => {
       const original = newText.slice(m.start, m.end);
       newText =
         newText.slice(0, m.start) +
-        `<entity-ref slug="${m.slug}">${original}</entity-ref>` +
+        `<span class="entity-ref" data-slug="${m.slug}">${original}</span>` +
         newText.slice(m.end);
     }
     segments[i] = { type: "text", content: newText };

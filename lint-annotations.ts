@@ -85,7 +85,7 @@ async function parseHtml(): Promise<HtmlData> {
 
   // Entity-ref slugs
   const entityRefSlugs = new Set<string>();
-  const entityRefRe = /<entity-ref\s+slug="([^"]+)"/g;
+  const entityRefRe = /<span class="entity-ref" data-slug="([^"]+)"/g;
   while ((m = entityRefRe.exec(content)) !== null) {
     entityRefSlugs.add(m[1]);
   }
@@ -515,7 +515,7 @@ async function main() {
   if (brokenEntityRefs.length > 0) {
     console.log(`❌ ${brokenEntityRefs.length} entity-ref tags point to non-existent ref files:`);
     for (const s of brokenEntityRefs) {
-      console.log(`   <entity-ref slug="${s}">`);
+      console.log(`   data-slug="${s}"`);;
     }
     console.log();
     issueCount += brokenEntityRefs.length;

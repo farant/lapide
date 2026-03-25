@@ -134,9 +134,9 @@ describe("Text spanning em tags (HTML stripping)", () => {
     expect(plain).toBe("\u201CIgnorance of the Scriptures is ignorance of Christ.\u201D");
   });
 
-  test("entity-ref custom elements are stripped", () => {
+  test("entity-ref spans are stripped", () => {
     const rawHtml =
-      '<entity-ref slug="person/saint/augustine">St. Augustine</entity-ref> wrote';
+      '<span class="entity-ref" data-slug="person/saint/augustine">St. Augustine</span> wrote';
     const plain = stripHtml(rawHtml);
     expect(plain).toBe("St. Augustine wrote");
   });
