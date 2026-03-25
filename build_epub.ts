@@ -34,16 +34,17 @@ let bookLang = "en";
 
 const RTL_LANGS = new Set(["ar", "he", "fa"]);
 
-// Roman numerals for chapter titles (max 50 = Genesis)
+// Roman numerals for chapter titles
 const ROMAN = [
   "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
   "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
   "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX",
   "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
   "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L",
+  "LI",
 ];
 
-// ---------- Pentateuch Book Definitions ----------
+// ---------- Book Definitions ----------
 
 type ExtraDef = { file: string; id: string };
 
@@ -209,9 +210,85 @@ const BIBLE_BOOKS: BookDef[] = [
     ],
     extras: [],
   },
+  {
+    key: "esther",
+    filePrefix: "19_esther",
+    maxChapter: 16,
+    preExtras: [
+      { file: "19_Esther_Argumentum", id: "esther-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "1maccabees",
+    filePrefix: "20_i_machabaeorum",
+    maxChapter: 16,
+    preExtras: [
+      { file: "20_I_Machabaeorum_Argumentum", id: "1maccabees-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "2maccabees",
+    filePrefix: "21_ii_machabaeorum",
+    maxChapter: 15,
+    preExtras: [
+      { file: "21_II_Machabaeorum_Argumentum", id: "2maccabees-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "proverbs",
+    filePrefix: "22_proverbia",
+    maxChapter: 31,
+    preExtras: [
+      { file: "22_Proverbia_Argumentum", id: "proverbs-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "ecclesiastes",
+    filePrefix: "23_ecclesiastes",
+    maxChapter: 12,
+    preExtras: [
+      { file: "23_Ecclesiastes_Argumentum", id: "ecclesiastes-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "songofsolomon",
+    filePrefix: "24_canticum",
+    maxChapter: 8,
+    preExtras: [
+      { file: "24_Canticum_Argumentum", id: "songofsolomon-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "wisdom",
+    filePrefix: "25_sapientia",
+    maxChapter: 19,
+    preExtras: [
+      { file: "25_Sapientia_Argumentum", id: "wisdom-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "sirach",
+    filePrefix: "26_ecclesiasticus",
+    maxChapter: 51,
+    preExtras: [
+      { file: "26_Ecclesiasticus_Canones", id: "sirach-canones" },
+      { file: "26_Ecclesiasticus_Encomium", id: "sirach-encomium" },
+      { file: "26_Ecclesiasticus_Preliminares", id: "sirach-preliminares" },
+      { file: "26_Ecclesiasticus_Prolegomena", id: "sirach-prolegomena" },
+      { file: "26_Ecclesiasticus_Prologus", id: "sirach-prologus" },
+    ],
+    extras: [],
+  },
 ];
 
-// Per-language labels for the Pentateuch EPUB
+// Per-language labels for the EPUB
 const BIBLE_I18N: Record<string, {
   bookTitle: string;
   frontMatterLabel: string;
@@ -227,6 +304,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "I Kings", "2kings": "II Kings",
       "1chronicles": "I Chronicles", "2chronicles": "II Chronicles",
       ezra: "Ezra", nehemiah: "Nehemiah", tobit: "Tobit", judith: "Judith",
+      esther: "Esther", "1maccabees": "I Maccabees", "2maccabees": "II Maccabees",
+      proverbs: "Proverbs", ecclesiastes: "Ecclesiastes",
+      songofsolomon: "Song of Solomon", wisdom: "Wisdom", sirach: "Ecclesiasticus",
     },
   },
   la: {
@@ -239,6 +319,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "III Regum", "2kings": "IV Regum",
       "1chronicles": "I Paralipomenon", "2chronicles": "II Paralipomenon",
       ezra: "I Esdrae", nehemiah: "II Esdrae", tobit: "Tobiae", judith: "Judith",
+      esther: "Esther", "1maccabees": "I Machabaeorum", "2maccabees": "II Machabaeorum",
+      proverbs: "Proverbia", ecclesiastes: "Ecclesiastes",
+      songofsolomon: "Canticum Canticorum", wisdom: "Sapientia", sirach: "Ecclesiasticus",
     },
   },
   es: {
@@ -251,6 +334,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "I Reyes", "2kings": "II Reyes",
       "1chronicles": "I Crónicas", "2chronicles": "II Crónicas",
       ezra: "Esdras", nehemiah: "Nehemías", tobit: "Tobías", judith: "Judit",
+      esther: "Ester", "1maccabees": "I Macabeos", "2maccabees": "II Macabeos",
+      proverbs: "Proverbios", ecclesiastes: "Eclesiastés",
+      songofsolomon: "Cantar de los Cantares", wisdom: "Sabiduría", sirach: "Eclesiástico",
     },
   },
   fr: {
@@ -263,6 +349,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "I Rois", "2kings": "II Rois",
       "1chronicles": "I Chroniques", "2chronicles": "II Chroniques",
       ezra: "Esdras", nehemiah: "Néhémie", tobit: "Tobie", judith: "Judith",
+      esther: "Esther", "1maccabees": "I Maccabées", "2maccabees": "II Maccabées",
+      proverbs: "Proverbes", ecclesiastes: "Ecclésiaste",
+      songofsolomon: "Cantique des Cantiques", wisdom: "Sagesse", sirach: "Ecclésiastique",
     },
   },
   pt: {
@@ -275,6 +364,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "I Reis", "2kings": "II Reis",
       "1chronicles": "I Crónicas", "2chronicles": "II Crónicas",
       ezra: "Esdras", nehemiah: "Neemias", tobit: "Tobias", judith: "Judite",
+      esther: "Ester", "1maccabees": "I Macabeus", "2maccabees": "II Macabeus",
+      proverbs: "Provérbios", ecclesiastes: "Eclesiastes",
+      songofsolomon: "Cântico dos Cânticos", wisdom: "Sabedoria", sirach: "Eclesiástico",
     },
   },
   it: {
@@ -287,6 +379,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "I Re", "2kings": "II Re",
       "1chronicles": "I Cronache", "2chronicles": "II Cronache",
       ezra: "Esdra", nehemiah: "Neemia", tobit: "Tobia", judith: "Giuditta",
+      esther: "Ester", "1maccabees": "I Maccabei", "2maccabees": "II Maccabei",
+      proverbs: "Proverbi", ecclesiastes: "Ecclesiaste",
+      songofsolomon: "Cantico dei Cantici", wisdom: "Sapienza", sirach: "Ecclesiastico",
     },
   },
   ar: {
@@ -299,6 +394,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "الْمُلُوكُ الأَوَّلُ", "2kings": "الْمُلُوكُ الثَّانِي",
       "1chronicles": "أَخْبَارُ الأَيَّامِ الأَوَّلُ", "2chronicles": "أَخْبَارُ الأَيَّامِ الثَّانِي",
       ezra: "عَزْرَا", nehemiah: "نَحَمْيَا", tobit: "طُوبِيَّا", judith: "يَهُودِيت",
+      esther: "أَسْتِير", "1maccabees": "الْمَكَابِيِّينَ الأَوَّلُ", "2maccabees": "الْمَكَابِيِّينَ الثَّانِي",
+      proverbs: "الأَمْثَالُ", ecclesiastes: "الْجَامِعَةُ",
+      songofsolomon: "نَشِيدُ الأَنَاشِيدِ", wisdom: "الْحِكْمَةُ", sirach: "يَشُوعُ بْنُ سِيرَاخَ",
     },
   },
   id: {
@@ -311,6 +409,9 @@ const BIBLE_I18N: Record<string, {
       "1kings": "I Raja-Raja", "2kings": "II Raja-Raja",
       "1chronicles": "I Tawarikh", "2chronicles": "II Tawarikh",
       ezra: "Ezra", nehemiah: "Nehemia", tobit: "Tobit", judith: "Yudit",
+      esther: "Ester", "1maccabees": "I Makabe", "2maccabees": "II Makabe",
+      proverbs: "Amsal", ecclesiastes: "Pengkhotbah",
+      songofsolomon: "Kidung Agung", wisdom: "Kebijaksanaan", sirach: "Sirakh",
     },
   },
 };
