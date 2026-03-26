@@ -3761,12 +3761,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/03_leviticus_10_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/03_leviticus_10_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/03_leviticus_10.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/03_leviticus_11_es.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3781,12 +3791,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/03_leviticus_12_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/03_leviticus_12_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/03_leviticus_12.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/03_leviticus_13_es.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -10286,7 +10306,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/27_isaias_65_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/27_isaias_65.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_66_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -10342,6 +10372,11 @@
   </url>
   <url>
     <loc>https://lapide.org/27_Isaias_Hieroglyphica.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_Isaias_Jubilus_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
