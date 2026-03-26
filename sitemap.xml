@@ -3656,12 +3656,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/03_leviticus_03_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/03_leviticus_03_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/03_leviticus_03.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/03_leviticus_04_es.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3676,12 +3686,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/03_leviticus_05_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/03_leviticus_05_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/03_leviticus_05.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/03_leviticus_06_es.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -3696,6 +3716,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/03_leviticus_07_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/03_leviticus_07_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
@@ -3706,12 +3731,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/03_leviticus_08_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/03_leviticus_08_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/03_leviticus_08.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/03_leviticus_09_es.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -10251,6 +10286,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/27_isaias_65.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_66.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/27_Isaias_Aenigmata_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
@@ -10297,6 +10342,11 @@
   </url>
   <url>
     <loc>https://lapide.org/27_Isaias_Hieroglyphica.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_Isaias_Jubilus.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
