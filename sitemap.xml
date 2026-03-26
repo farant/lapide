@@ -3611,6 +3611,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_Exodus_Doxologia_Dei_Salvatoris_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_Exodus_Doxologia_Dei_Salvatoris_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
@@ -3621,12 +3626,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/03_leviticus_01_es.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/03_leviticus_01_lt.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lapide.org/03_leviticus_01.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/03_leviticus_02_es.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
@@ -10112,6 +10127,126 @@
   </url>
   <url>
     <loc>https://lapide.org/27_isaias_52.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_53_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_53.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_54_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_54.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_55_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_55.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_56_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_56.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_57_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_57.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_58_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_58.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_59_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_59.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_60_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_60.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_61_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_61.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_62_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_62.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_63_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_63.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_64_lt.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/27_isaias_64.html</loc>
     <lastmod>2026-03-26</lastmod>
     <priority>0.8</priority>
   </url>
