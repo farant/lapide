@@ -41,7 +41,8 @@ const ROMAN = [
   "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX",
   "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
   "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L",
-  "LI",
+  "LI", "LII", "LIII", "LIV", "LV", "LVI", "LVII", "LVIII", "LIX", "LX",
+  "LXI", "LXII", "LXIII", "LXIV", "LXV", "LXVI",
 ];
 
 // ---------- Book Definitions ----------
@@ -286,6 +287,187 @@ const BIBLE_BOOKS: BookDef[] = [
     ],
     extras: [],
   },
+  {
+    key: "isaiah",
+    filePrefix: "27_isaias",
+    maxChapter: 66,
+    preExtras: [
+      { file: "27_Isaias_Preliminares", id: "isaiah-preliminares" },
+      { file: "27_Isaias_Prooemium", id: "isaiah-prooemium" },
+      { file: "27_Isaias_Canones", id: "isaiah-canones" },
+      { file: "27_Isaias_Argumentum", id: "isaiah-argumentum" },
+      { file: "27_Isaias_Aenigmata", id: "isaiah-aenigmata" },
+      { file: "27_Isaias_Hieroglyphica", id: "isaiah-hieroglyphica" },
+      { file: "27_Isaias_Harmonia", id: "isaiah-harmonia" },
+      { file: "27_Isaias_Jubilus", id: "isaiah-jubilus" },
+    ],
+    extras: [],
+  },
+  {
+    key: "jeremiah",
+    filePrefix: "28_jeremias",
+    maxChapter: 52,
+    preExtras: [
+      { file: "28_Jeremias_Preliminares", id: "jeremiah-preliminares" },
+      { file: "28_Jeremias_Prolegomena", id: "jeremiah-prolegomena" },
+      { file: "28_Jeremias_Argumentum", id: "jeremiah-argumentum" },
+      { file: "28_Jeremias_Synopsis_Et_Gemma", id: "jeremiah-synopsis" },
+    ],
+    extras: [],
+  },
+  {
+    key: "lamentations",
+    filePrefix: "29_threni",
+    maxChapter: 5,
+    preExtras: [
+      { file: "29_Threni_Prolegomena", id: "lamentations-prolegomena" },
+    ],
+    extras: [],
+  },
+  {
+    key: "baruch",
+    filePrefix: "30_baruch",
+    maxChapter: 6,
+    preExtras: [
+      { file: "30_Baruch_Argumentum", id: "baruch-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "ezekiel",
+    filePrefix: "31_ezechiel",
+    maxChapter: 48,
+    preExtras: [
+      { file: "31_Ezechiel_Prooemium", id: "ezekiel-prooemium" },
+    ],
+    extras: [
+      { file: "31_Ezechiel_Epinicion", id: "ezekiel-epinicion" },
+    ],
+  },
+  {
+    key: "daniel",
+    filePrefix: "32_daniel",
+    maxChapter: 14,
+    preExtras: [
+      { file: "32_Daniel_Preliminares", id: "daniel-preliminares" },
+      { file: "32_Daniel_Prolegomena", id: "daniel-prolegomena" },
+    ],
+    extras: [
+      { file: "32_Daniel_Conclusio", id: "daniel-conclusio" },
+    ],
+  },
+  {
+    key: "hosea",
+    filePrefix: "34_osee",
+    maxChapter: 14,
+    preExtras: [
+      { file: "33_Prophetae_Minores_Canones", id: "minor-prophets-canones" },
+      { file: "33_Prophetae_Minores_Harmonia", id: "minor-prophets-harmonia" },
+      { file: "33_Prophetae_Minores_Prooemium", id: "minor-prophets-prooemium" },
+      { file: "34_Osee_Argumentum", id: "hosea-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "joel",
+    filePrefix: "35_joel",
+    maxChapter: 3,
+    preExtras: [
+      { file: "35_Joel_Argumentum", id: "joel-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "amos",
+    filePrefix: "36_amos",
+    maxChapter: 9,
+    preExtras: [
+      { file: "36_Amos_Argumentum", id: "amos-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "obadiah",
+    filePrefix: "37_abdias",
+    maxChapter: 1,
+    preExtras: [
+      { file: "37_Abdias_Preliminares", id: "obadiah-preliminares" },
+      { file: "37_Abdias_Argumentum", id: "obadiah-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "jonah",
+    filePrefix: "38_jonas",
+    maxChapter: 4,
+    preExtras: [
+      { file: "38_Jonas_Argumentum", id: "jonah-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "micah",
+    filePrefix: "39_micheas",
+    maxChapter: 7,
+    preExtras: [
+      { file: "39_Micheas_Argumentum", id: "micah-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "nahum",
+    filePrefix: "40_nahum",
+    maxChapter: 3,
+    preExtras: [
+      { file: "40_Nahum_Argumentum", id: "nahum-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "habakkuk",
+    filePrefix: "41_habacuc",
+    maxChapter: 3,
+    preExtras: [
+      { file: "41_Habacuc_Argumentum", id: "habakkuk-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "zephaniah",
+    filePrefix: "42_sophonias",
+    maxChapter: 3,
+    preExtras: [
+      { file: "42_Sophonias_Argumentum", id: "zephaniah-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "haggai",
+    filePrefix: "43_aggaeus",
+    maxChapter: 2,
+    preExtras: [
+      { file: "43_Aggaeus_Argumentum", id: "haggai-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "zechariah",
+    filePrefix: "44_zacharias",
+    maxChapter: 14,
+    preExtras: [
+      { file: "44_Zacharias_Argumentum", id: "zechariah-argumentum" },
+    ],
+    extras: [],
+  },
+  {
+    key: "malachi",
+    filePrefix: "45_malachias",
+    maxChapter: 4,
+    preExtras: [
+      { file: "45_Malachias_Argumentum", id: "malachi-argumentum" },
+    ],
+    extras: [],
+  },
 ];
 
 // Per-language labels for the EPUB
@@ -307,6 +489,11 @@ const BIBLE_I18N: Record<string, {
       esther: "Esther", "1maccabees": "I Maccabees", "2maccabees": "II Maccabees",
       proverbs: "Proverbs", ecclesiastes: "Ecclesiastes",
       songofsolomon: "Song of Solomon", wisdom: "Wisdom", sirach: "Ecclesiasticus",
+      isaiah: "Isaiah", jeremiah: "Jeremiah", lamentations: "Lamentations",
+      baruch: "Baruch", ezekiel: "Ezekiel", daniel: "Daniel",
+      hosea: "Hosea", joel: "Joel", amos: "Amos", obadiah: "Obadiah",
+      jonah: "Jonah", micah: "Micah", nahum: "Nahum", habakkuk: "Habakkuk",
+      zephaniah: "Zephaniah", haggai: "Haggai", zechariah: "Zechariah", malachi: "Malachi",
     },
   },
   la: {
@@ -322,6 +509,11 @@ const BIBLE_I18N: Record<string, {
       esther: "Esther", "1maccabees": "I Machabaeorum", "2maccabees": "II Machabaeorum",
       proverbs: "Proverbia", ecclesiastes: "Ecclesiastes",
       songofsolomon: "Canticum Canticorum", wisdom: "Sapientia", sirach: "Ecclesiasticus",
+      isaiah: "Isaias", jeremiah: "Jeremias", lamentations: "Threni",
+      baruch: "Baruch", ezekiel: "Ezechiel", daniel: "Daniel",
+      hosea: "Osee", joel: "Joel", amos: "Amos", obadiah: "Abdias",
+      jonah: "Jonas", micah: "Micheas", nahum: "Nahum", habakkuk: "Habacuc",
+      zephaniah: "Sophonias", haggai: "Aggaeus", zechariah: "Zacharias", malachi: "Malachias",
     },
   },
   es: {
@@ -337,6 +529,11 @@ const BIBLE_I18N: Record<string, {
       esther: "Ester", "1maccabees": "I Macabeos", "2maccabees": "II Macabeos",
       proverbs: "Proverbios", ecclesiastes: "Eclesiastés",
       songofsolomon: "Cantar de los Cantares", wisdom: "Sabiduría", sirach: "Eclesiástico",
+      isaiah: "Isaías", jeremiah: "Jeremías", lamentations: "Lamentaciones",
+      baruch: "Baruc", ezekiel: "Ezequiel", daniel: "Daniel",
+      hosea: "Oseas", joel: "Joel", amos: "Amós", obadiah: "Abdías",
+      jonah: "Jonás", micah: "Miqueas", nahum: "Nahúm", habakkuk: "Habacuc",
+      zephaniah: "Sofonías", haggai: "Ageo", zechariah: "Zacarías", malachi: "Malaquías",
     },
   },
   fr: {
@@ -352,6 +549,11 @@ const BIBLE_I18N: Record<string, {
       esther: "Esther", "1maccabees": "I Maccabées", "2maccabees": "II Maccabées",
       proverbs: "Proverbes", ecclesiastes: "Ecclésiaste",
       songofsolomon: "Cantique des Cantiques", wisdom: "Sagesse", sirach: "Ecclésiastique",
+      isaiah: "Isaïe", jeremiah: "Jérémie", lamentations: "Lamentations",
+      baruch: "Baruch", ezekiel: "Ézéchiel", daniel: "Daniel",
+      hosea: "Osée", joel: "Joël", amos: "Amos", obadiah: "Abdias",
+      jonah: "Jonas", micah: "Michée", nahum: "Nahum", habakkuk: "Habacuc",
+      zephaniah: "Sophonie", haggai: "Aggée", zechariah: "Zacharie", malachi: "Malachie",
     },
   },
   pt: {
@@ -367,6 +569,11 @@ const BIBLE_I18N: Record<string, {
       esther: "Ester", "1maccabees": "I Macabeus", "2maccabees": "II Macabeus",
       proverbs: "Provérbios", ecclesiastes: "Eclesiastes",
       songofsolomon: "Cântico dos Cânticos", wisdom: "Sabedoria", sirach: "Eclesiástico",
+      isaiah: "Isaías", jeremiah: "Jeremias", lamentations: "Lamentações",
+      baruch: "Baruc", ezekiel: "Ezequiel", daniel: "Daniel",
+      hosea: "Oseias", joel: "Joel", amos: "Amós", obadiah: "Abdias",
+      jonah: "Jonas", micah: "Miqueias", nahum: "Naum", habakkuk: "Habacuc",
+      zephaniah: "Sofonias", haggai: "Ageu", zechariah: "Zacarias", malachi: "Malaquias",
     },
   },
   it: {
@@ -382,6 +589,11 @@ const BIBLE_I18N: Record<string, {
       esther: "Ester", "1maccabees": "I Maccabei", "2maccabees": "II Maccabei",
       proverbs: "Proverbi", ecclesiastes: "Ecclesiaste",
       songofsolomon: "Cantico dei Cantici", wisdom: "Sapienza", sirach: "Ecclesiastico",
+      isaiah: "Isaia", jeremiah: "Geremia", lamentations: "Lamentazioni",
+      baruch: "Baruc", ezekiel: "Ezechiele", daniel: "Daniele",
+      hosea: "Osea", joel: "Gioele", amos: "Amos", obadiah: "Abdia",
+      jonah: "Giona", micah: "Michea", nahum: "Naum", habakkuk: "Abacuc",
+      zephaniah: "Sofonia", haggai: "Aggeo", zechariah: "Zaccaria", malachi: "Malachia",
     },
   },
   ar: {
@@ -397,6 +609,11 @@ const BIBLE_I18N: Record<string, {
       esther: "أَسْتِير", "1maccabees": "الْمَكَابِيِّينَ الأَوَّلُ", "2maccabees": "الْمَكَابِيِّينَ الثَّانِي",
       proverbs: "الأَمْثَالُ", ecclesiastes: "الْجَامِعَةُ",
       songofsolomon: "نَشِيدُ الأَنَاشِيدِ", wisdom: "الْحِكْمَةُ", sirach: "يَشُوعُ بْنُ سِيرَاخَ",
+      isaiah: "أَشَعْيَاء", jeremiah: "إِرْمِيَا", lamentations: "مَرَاثِي إِرْمِيَا",
+      baruch: "بَارُوخ", ezekiel: "حِزْقِيَال", daniel: "دَانِيَال",
+      hosea: "هُوشَع", joel: "يُوئِيل", amos: "عَامُوس", obadiah: "عُوبَدْيَا",
+      jonah: "يُونَان", micah: "مِيخَا", nahum: "نَاحُوم", habakkuk: "حَبَقُّوق",
+      zephaniah: "صَفَنْيَا", haggai: "حَجَّي", zechariah: "زَكَرِيَّا", malachi: "مَلَاخِي",
     },
   },
   id: {
@@ -412,6 +629,11 @@ const BIBLE_I18N: Record<string, {
       esther: "Ester", "1maccabees": "I Makabe", "2maccabees": "II Makabe",
       proverbs: "Amsal", ecclesiastes: "Pengkhotbah",
       songofsolomon: "Kidung Agung", wisdom: "Kebijaksanaan", sirach: "Sirakh",
+      isaiah: "Yesaya", jeremiah: "Yeremia", lamentations: "Ratapan",
+      baruch: "Barukh", ezekiel: "Yehezkiel", daniel: "Daniel",
+      hosea: "Hosea", joel: "Yoel", amos: "Amos", obadiah: "Obaja",
+      jonah: "Yunus", micah: "Mikha", nahum: "Nahum", habakkuk: "Habakuk",
+      zephaniah: "Zefanya", haggai: "Hagai", zechariah: "Zakharia", malachi: "Maleakhi",
     },
   },
 };
