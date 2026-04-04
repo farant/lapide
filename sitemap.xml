@@ -6486,6 +6486,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/05_deuteronomium_33_pt.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/05_deuteronomium_33.html</loc>
     <lastmod>2026-04-04</lastmod>
     <priority>0.8</priority>
@@ -6531,6 +6536,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/05_Deuteronomium_Doxologia_pt.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/05_Deuteronomium_Doxologia.html</loc>
     <lastmod>2026-04-04</lastmod>
     <priority>0.8</priority>
@@ -6547,6 +6557,11 @@
   </url>
   <url>
     <loc>https://lapide.org/05_Synopsis_Omnium_Praeceptorum_lt.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/05_Synopsis_Omnium_Praeceptorum_pt.html</loc>
     <lastmod>2026-04-04</lastmod>
     <priority>0.8</priority>
   </url>
