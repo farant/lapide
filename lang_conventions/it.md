@@ -16,7 +16,20 @@ Note: "Sant'" is used before vowels (Sant'Agostino, Sant'Ambrogio); "San" before
 
 ## Quotation marks
 
-Use Italian angular quotation marks «...» (virgolette caporali/sergenti) for quotations and "..." for nested quotes. This is the standard convention in formal Italian publishing.
+Use Italian angular quotation marks «...» (virgolette caporali/sergenti) for outer quotations. For nested quotes inside guillemets, use typographic curly double quotes U+201C `"` and U+201D `"` (NOT ASCII straight quotes U+0022 `"`). This is the standard convention in formal Italian publishing.
+
+## Historical theological commentators
+
+Cornelius a Lapide cites many post-medieval commentators by Latin name. Italianize them consistently:
+
+- **Cajetanus** (Tommaso de Vio, Cardinal Cajetan, 1469–1534) → **Gaetano** (from Gaeta, his birthplace) or the older form **Caietano**. The form **Gaetano** is most common in the existing Italian Exodus translations and should be preferred. NEVER use "Caetano" — that is the Portuguese/Spanish form, not Italian.
+- **Tostatus / Abulensis** → **l'Abulense** (Alonso Fernández de Madrigal, "the Abulensean")
+- **Lyranus** → **Lirano** or **Lira** (Nicholas of Lyra)
+- **Pererius** → **Pererio** (Benito Pereira)
+- **Vatablus** → **Vatablo** (François Vatable)
+- **Lipomanus** → **Lipomano** (Luigi Lippomano)
+- **Oleaster** → **Oleaster** (Jerónimo de Azambuja)
+- **Rabanus** → **Rabano** (Rabanus Maurus)
 
 ## Theological terminology
 
@@ -33,6 +46,8 @@ Formal scholarly Italian suitable for theological commentary — registro elevat
 ## Agent pitfalls
 
 - **English-style quotes**: Agents default to English "..." quotation marks instead of guillemets «...». Must be explicitly instructed.
+- **ASCII straight quotes in nested quotations**: Agents may use ASCII straight quotes (U+0022 `"`) instead of curly typographic quotes (U+201C `"` and U+201D `"`) for nested quotes inside guillemets. Explicitly instruct agents to use curly quotes for nested quotations.
 - **Accent confusion**: Agents may confuse è (grave, open — used for "is" and most words) with é (acute, closed — used for perché, poiché, affinché, né, sé). Italian uses grave accents on à, è, ì, ò, ù in most cases; acute only on specific words ending in -ché and on né, sé.
 - **Missing accents on monosyllables**: Agents may omit required accents on è (is), già (already), più (more), può (can), ciò (this), là (there), sì (yes), né (neither). These are mandatory to distinguish from unaccented homographs.
 - **Gender agreement with Latin-form adjectives**: Agents may use masculine Latin participial forms where Italian requires feminine agreement — e.g., "cose perituri" (masculine) instead of "cose periture" (feminine, agreeing with the feminine noun "cose"). Watch for this with adjectives derived from Latin participles.
+- **"Caetano" instead of "Gaetano"**: Agents (especially those primed by Portuguese/Spanish exposure) may render Latin "Cajetanus" as "Caetano", which is the Portuguese/Spanish form. The correct Italian form is **Gaetano** (from Gaeta, the cardinal's birthplace). See the Historical theological commentators section.
