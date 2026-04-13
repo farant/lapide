@@ -1546,6 +1546,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_18_ja.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_18_lt.html</loc>
     <lastmod>2026-04-13</lastmod>
     <priority>0.8</priority>
@@ -1596,6 +1601,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/01_genesis_19_ja.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/01_genesis_19_lt.html</loc>
     <lastmod>2026-04-13</lastmod>
     <priority>0.8</priority>
@@ -1642,6 +1652,11 @@
   </url>
   <url>
     <loc>https://lapide.org/01_genesis_20_it.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/01_genesis_20_ja.html</loc>
     <lastmod>2026-04-13</lastmod>
     <priority>0.8</priority>
   </url>
