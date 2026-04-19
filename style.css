@@ -107,4 +107,13 @@ hr + .nav {
   margin-right: auto;
 }
 
-
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  a,
+  a:visited {
+    color: #8ab4f8;
+  }
+}
