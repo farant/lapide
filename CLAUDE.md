@@ -24,6 +24,7 @@ Catholic theological texts site at lapide.org. Primarily Cornelius a Lapide's bi
 - **Tamil**: `filename_ta.html` with `lang="ta"`
 - **Malayalam**: `filename_ml.html` with `lang="ml"`
 - **Kinyarwanda**: `filename_rw.html` with `lang="rw"`
+- **Gujarati**: `filename_gu.html` with `lang="gu"`
 - Future languages follow the same pattern: `filename_XX.html` with the appropriate ISO 639-1 code (or ISO 639-2/3 for languages without a two-letter code, e.g., Cebuano `ceb`).
 
 Index pages: `index.html`, `index_lt.html`, `index_es.html`, `index_fr.html`, `index_pt.html`
@@ -125,6 +126,7 @@ Each language has its own conventions file covering proper names, saint names, q
 - **Arabic** — See `lang_conventions/ar.md`
 - **German** — See `lang_conventions/de.md`
 - **Greek (Modern)** — See `lang_conventions/el.md`
+- **Gujarati** — See `lang_conventions/gu.md`
 - **Spanish** — See `lang_conventions/es.md`
 - **French** — See `lang_conventions/fr.md`
 - **Hebrew (Modern)** — See `lang_conventions/he.md`
