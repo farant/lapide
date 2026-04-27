@@ -3621,6 +3621,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_gu.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lapide.org/02_Clemens_Hieronymi_Du_Culte_he.html</loc>
     <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
@@ -16432,6 +16437,26 @@
   </url>
   <url>
     <loc>https://lapide.org/52_lucas_01.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/52_lucas_02_lt.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/52_lucas_02.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/52_lucas_03_lt.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapide.org/52_lucas_03.html</loc>
     <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>
   </url>
