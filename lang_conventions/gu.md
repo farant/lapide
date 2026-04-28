@@ -4,7 +4,7 @@ Use formal/literary શિષ્ટ ગુજરાતી (modern standard Gujar
 
 ## Biblical proper names
 
-Follow standard Gujarati Bible tradition: મૂસા (Moses), ઇબ્રાહિમ (Abraham), ઇસહાક (Isaac), યાકૂબ (Jacob), હારુન (Aaron), દાઉદ (David), યહોશુઆ (Joshua), યશાયા (Isaiah), યર્મિયા (Jeremiah), નૂહ (Noah), આદમ (Adam), હવા (Eve), ઈસુ (Jesus), પિતર (Peter), યોહાન (John).
+Follow standard Gujarati Bible tradition: મૂસા (Moses), ઇબ્રાહિમ (Abraham), ઇસહાક (Isaac), યાકૂબ (Jacob), હારુન (Aaron), દાઉદ (David), યહોશુઆ (Joshua), યશાયા (Isaiah), યર્મિયા (Jeremiah), નૂહ (Noah), આદમ (Adam), હવા (Eve), ઈસુ (Jesus), પિતર (Peter), યોહાન (John), **શલોમન** (Solomon — NOT સુલેમાન, which is the Persian/Urdu-derived form common in vernacular Gujarati but inappropriate for the project's Catholic/Latinized register).
 
 For Paul, use the Latinized form **પૌલુસ** (matching Lapide's Latin scholarly prose, which always uses Paulus). This avoids the inconsistency of having two forms for the same person; modern Gujarati Bibles use પાઉલ but Lapide's preface and commentary contexts always reference Paul in Latin, so પૌલુસ is preferred here.
 
@@ -68,6 +68,8 @@ Locked transliterations (avoid factual misidentification by sound-alike):
 - **માર્ટિન નુતિયુસ** (Martinus Nutius / Maarten van der Schurre, Antwerp printer, predecessor partner to the Plantin house).
 - **મુતિયુસ વિતેલ્લેસ્કુસ** (Mutius Vitelleschus, Jesuit Father General 1615–1645).
 - **મારો** (Publius Vergilius Maro = Virgil; Jerome and Lapide refer to him by the cognomen *Maro*). NOT માવો, which is a વ/ર slip producing a non-name. Form may also appear in Latin accusative (*Maronem* → મારોને).
+- **વર્જિલિયુસ** (full Latinized name = Vergilius/Virgil) — used when the source text uses *Vergilius/Virgilius* rather than the cognomen *Maro*. NOT the anglicized વર્જિલ (without -ius ending). Both forms (મારો, વર્જિલિયુસ) refer to the same person; preserve whichever the source uses.
+- **બેદા** (Venerable Bede, c. 673–735) — house style uses dental દ for intervocalic Latin -d-, NOT retroflex ડ (NOT બેડા). Title prefix: આદરણીય બેદા (matching *Beda Venerabilis*; not a canonized saint, so no સંત prefix).
 
 ## Place names
 
@@ -119,6 +121,12 @@ Gujarati script uses conjuncts (જોડાક્ષર) that must be correctly
 ## Quote-file consistency
 
 Quote files (`quotes_gu/N.html`) cite into translated content pages with a section label like `પ્રારંભિક સામગ્રી — સમર્પણપત્ર`. The label MUST match the on-page TOC entry character-for-character (including hyphenation choices). When changing a section label on a content page, audit any quote files that reference it; when adding a new quote, copy the label verbatim from the destination page's TOC.
+
+## HTML structure pitfalls
+
+- **Never nest `<em>` inside `<em>`**. When a Latin source has the structure `<em>«quote part 1,</em> ait, lib. X, <em>quote part 2.»</em>` (split italic with non-italic narration in the middle), preserve that split — do NOT collapse into one outer `<em>` and then add an inner `<em>` for a work title. If a quote already inside `<em>` mentions a work title (Confessions, Timaeus, etc.), keep the title in plain (non-italic) text. Nested `<em>` produces invalid HTML and often unbalances closing tags.
+- **TOC ↔ body heading parity**: every TOC entry must match its corresponding section heading character-for-character (same wording, same punctuation, same conjugation). If you reword one, reword the other.
+- **Anchor verification**: every anchor used in a quote-file `<cite>` link MUST exist on the destination page. Before writing a quote that cites `#some-anchor`, grep the destination page to confirm `id="some-anchor"` is present. Pseudo-anchors like `#chapter-v-continued` (when the page only has `#chapter-v`) silently break the link.
 
 ## Agent pitfalls
 
