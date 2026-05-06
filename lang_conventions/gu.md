@@ -4,7 +4,9 @@ Use formal/literary શિષ્ટ ગુજરાતી (modern standard Gujar
 
 ## Biblical proper names
 
-Follow standard Gujarati Bible tradition: મૂસા (Moses), ઇબ્રાહિમ (Abraham), ઇસહાક (Isaac), યાકૂબ (Jacob), હારુન (Aaron), દાઉદ (David), યહોશુઆ (Joshua), યશાયા (Isaiah), યર્મિયા (Jeremiah), નૂહ (Noah), આદમ (Adam), હવા (Eve), ઈસુ (Jesus), પિતર (Peter), યોહાન (John), **શલોમન** (Solomon — NOT સુલેમાન, which is the Persian/Urdu-derived form common in vernacular Gujarati but inappropriate for the project's Catholic/Latinized register).
+Follow standard Gujarati Bible tradition: મૂસા (Moses), ઇબ્રાહિમ (Abraham), ઇસહાક (Isaac), યાકૂબ (Jacob), હારુન (Aaron), દાઉદ (David), યહોશુઆ (Joshua), યશાયા (Isaiah), યર્મિયા (Jeremiah), નૂહ (Noah), આદમ (Adam), હવા (Eve), ઈસુ (Jesus), પિતર (Peter), **યોહાન** (John — NOT જોન, which is the anglicized form), **શલોમન** (Solomon — NOT સુલેમાન, which is the Persian/Urdu-derived form common in vernacular Gujarati but inappropriate for the project's Catholic/Latinized register).
+
+**Genesis-specific names** (Cain & Abel onwards): કાઇન (Cain), આબેલ (Abel), શેત (Seth — NOT શેથ), એનોશ (Enos / Enosh), હેનોક (Enoch — NOT હેનોખ), લામેક (Lamech — NOT લામેખ), તુબાલ-કાઇન (Tubalcain, with hyphen — NOT તુબાલકાઇન). The -ખ ending variants (શેથ, હેનોખ, લામેખ) are a recurring **Vulgate-paraphrase** pitfall: when an agent translates the running Vulgate text block at the head of a chapter without consulting the locked name table, it tends to produce -ખ (kha) endings while the body commentary correctly uses -ક (ka). Lock to -ક forms across both. Locked from `01_genesis_04_gu.html` review.
 
 For Paul, use the Latinized form **પૌલુસ** (matching Lapide's Latin scholarly prose, which always uses Paulus). This avoids the inconsistency of having two forms for the same person; modern Gujarati Bibles use પાઉલ but Lapide's preface and commentary contexts always reference Paul in Latin, so પૌલુસ is preferred here.
 
@@ -29,6 +31,16 @@ Use standard double quotation marks "..." for quotations.
 Modern Gujarati Bibles use Hebrew/modern psalm numbering (not Vulgate). Convert Vulgate numbers accordingly (e.g., Vulgate Psalm 89 → Psalm 90).
 
 Gospel references use the standard Gujarati Bible name યોહાન (e.g., "યોહાન ૮:૧૨").
+
+## Numerals
+
+In **body content** (text outside HTML tags/attributes), use **Gujarati digits** ૦૧૨૩૪૫૬૭૮૯ — for Bible references (મથ્થી ૨૩:૩૫), years (ઈ.સ. ૪૦૭), chapter/verse references (અધ્યાય ૫, શ્લોક ૩), heresy numbers, etc.
+
+Western Arabic digits (0123456789) are reserved for HTML attributes and URLs (`href="01_genesis_04_gu.html"`, `hreflang="..."`, etc.) — these MUST NOT be converted.
+
+The verse-heading word is **શ્લોક N** (using Gujarati digit), matching the convention in Genesis 1–3. Avoid પદ for headings; પદ may legitimately appear in prose meaning "step" / "rank" / "verse-line" inside running text.
+
+Multi-agent splits often produce a mix where the Vulgate paraphrase block uses Western digits while the verse headings use Gujarati. Run a post-stitch sweep that converts all Western digits OUTSIDE tags to Gujarati. Locked from `01_genesis_04_gu.html` review.
 
 ## Theological terminology
 
