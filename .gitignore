@@ -1,3 +1,4 @@
 tmp_*
 spawn-translators.sh
 .DS_Store
+*.bak
