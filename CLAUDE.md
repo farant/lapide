@@ -267,7 +267,9 @@ searchable iff it is English Lapide commentary (root-level, no language suffix,
 2. `bun pagefind-pages.ts --check` — audit the marker set (lists MISSING/EXTRA).
 3. `bun pagefind-pages.ts --fix` — add the marker + highlight script to new English
    Lapide pages; strip it from everything else.
-4. `bunx pagefind --site . --glob "*.html"` — rebuild the committed `pagefind/` index.
+4. `rm -rf pagefind && bunx pagefind --site . --glob "*.html"` — rebuild the committed
+   `pagefind/` index. **Purge first**: `bunx pagefind` does not clear stale output, so
+   without the `rm -rf` each rebuild leaves ~1,250 orphaned fragment files behind.
 
 Then commit, including `pagefind/`. The `--glob "*.html"` restricts the crawl to
 root-level files; do not remove it (it keeps `quotes_*/` and author subdirectories
