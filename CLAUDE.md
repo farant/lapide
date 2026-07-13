@@ -276,6 +276,11 @@ root-level files; do not remove it (it keeps `quotes_*/` and author subdirectori
 out of the index). Translations must NOT carry `data-pagefind-body` — `--fix`
 strips it, but avoid copying it when creating new translated files.
 
+**Shortcut** for the common case (you edited content on pages that are already
+searchable): run `./pagefind-rebuild-existing-english-pages.sh` — it runs `--fix`,
+purges, rebuilds, and verifies no drift in one step. Then commit the changed pages
+and `pagefind/`.
+
 The committed `pagefind/` assets are what GitHub Pages serves. The index was last built with Pagefind 1.5.0-beta.2 (whatever `bunx pagefind` resolves at run time); a rebuild should use a matching or newer Pagefind to keep the index and committed UI assets compatible.
 
 ## Crampon Footnotes
