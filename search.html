@@ -10,6 +10,9 @@
 <meta name="description" content="Search Cornelius a Lapide's English biblical commentary.">
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <style>
+  .search-order { margin-bottom: 1.5em; }
+  .search-order .hint { opacity: 0.6; font-size: 0.9em; }
+
   /* Pagefind's UI ships no dark theme; match the site's dark palette (style.css).
      Must load AFTER pagefind-ui.css so this :root override wins on source order. */
   @media (prefers-color-scheme: dark) {
@@ -26,11 +29,32 @@
 <body>
 <h1>Search the Commentary</h1>
 <p><a href="index.html">← Back to index</a></p>
+
+<p class="search-order">
+  <label><input type="checkbox" id="sort-biblical"> Sort results in biblical order</label>
+  <span class="hint">— otherwise ranked by relevance</span>
+</p>
+
 <div id="search"></div>
 <script src="/pagefind/pagefind-ui.js"></script>
 <script>
+  // Relevance is the default. Toggling re-mounts the UI with Pagefind's sort
+  // applied (sort REPLACES relevance ranking, so it has to be opt-in), and
+  // re-runs the current query so the box doesn't clear.
+  let ui;
+  const mount = (biblicalOrder) => {
+    const input = document.querySelector('#search .pagefind-ui__search-input');
+    const term = input ? input.value : '';
+    document.getElementById('search').innerHTML = '';
+    const opts = { element: "#search", showSubResults: true, highlightParam: "highlight" };
+    if (biblicalOrder) opts.sort = { order: "asc" };
+    ui = new PagefindUI(opts);
+    if (term) ui.triggerSearch(term);
+  };
   window.addEventListener('DOMContentLoaded', () => {
-    new PagefindUI({ element: "#search", showSubResults: true, highlightParam: "highlight" });
+    mount(false);
+    document.getElementById('sort-biblical')
+      .addEventListener('change', (e) => mount(e.target.checked));
   });
 </script>
 </body>

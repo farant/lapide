@@ -32,6 +32,25 @@ export function isEnglishLapidePage(relPath: string): boolean {
   return true;
 }
 
+/**
+ * Numeric sort key giving biblical order: book * 1000 + chapter.
+ * The NN_ filename prefix already encodes canonical book order (01 Genesis …
+ * 81 Apocalypse). Front-matter pages (Argumentum, Preliminares, …) have no
+ * trailing chapter number and sort as chapter 0, i.e. ahead of chapter 1.
+ *   01_genesis_01.html          -> 1001
+ *   52_lucas_15.html            -> 52015
+ *   27_Isaias_Argumentum.html   -> 27000
+ * Returns null for non-canonical pages.
+ */
+export function sortKeyFor(relPath: string): number | null {
+  if (!isEnglishLapidePage(relPath)) return null;
+  const base = relPath.slice(0, -5);
+  const book = parseInt(base.slice(0, 2), 10);
+  const ch = base.match(/_([0-9]+)$/);
+  const chapter = ch ? parseInt(ch[1], 10) : 0;
+  return book * 1000 + chapter;
+}
+
 async function collectHtml(): Promise<string[]> {
   const out: string[] = [];
   async function walk(dir: string) {
@@ -112,6 +131,20 @@ export function setNavIgnore(html: string, present: boolean): string {
   return html.replace(re, present ? '<div class="nav" data-pagefind-ignore>' : '<div class="nav">');
 }
 
+/**
+ * Stamp the biblical-order sort key on <body>. Pass null to remove it.
+ * NOTE: Pagefind omits a page from results entirely if a sort is applied and
+ * the page lacks that sort key — so every indexed page must carry this.
+ */
+export function setSortKey(html: string, key: number | null): string {
+  return html.replace(/<body\b([^>]*)>/i, (_m, attrs: string) => {
+    const cleaned = attrs.replace(/\s+data-pagefind-sort="[^"]*"/i, "");
+    return key === null
+      ? `<body${cleaned}>`
+      : `<body${cleaned} data-pagefind-sort="order:${key}">`;
+  });
+}
+
 async function fix() {
   const files = await collectHtml();
   let changed = 0;
@@ -119,7 +152,10 @@ async function fix() {
     const rel = relative(ROOT, full);
     const canonical = isEnglishLapidePage(rel);
     const before = await readFile(full, "utf-8");
-    const after = setNavIgnore(setHighlightScript(setBodyMarker(before, canonical), canonical), canonical);
+    const after = setSortKey(
+      setNavIgnore(setHighlightScript(setBodyMarker(before, canonical), canonical), canonical),
+      sortKeyFor(rel)
+    );
     if (after !== before) { await writeFile(full, after, "utf-8"); changed++; }
   }
   console.log(`Normalized ${changed} file(s).`);

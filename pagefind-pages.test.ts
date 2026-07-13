@@ -56,3 +56,31 @@ test("highlight script is gated behind the highlight param", () => {
   expect(on).toContain("URLSearchParams");
   expect(on).toContain("mark.pagefind-highlight");
 });
+
+import { sortKeyFor, setSortKey } from "./pagefind-pages";
+
+test("sortKeyFor gives biblical order: book*1000 + chapter", () => {
+  expect(sortKeyFor("01_genesis_01.html")).toBe(1001);
+  expect(sortKeyFor("01_genesis_50.html")).toBe(1050);
+  expect(sortKeyFor("02_exodus_01.html")).toBe(2001);
+  expect(sortKeyFor("52_lucas_15.html")).toBe(52015);
+  expect(sortKeyFor("81_apocalypsis_22.html")).toBe(81022);
+  // front matter has no trailing chapter -> chapter 0, sorts ahead of chapter 1
+  expect(sortKeyFor("27_Isaias_Argumentum.html")).toBe(27000);
+  expect(sortKeyFor("27_Isaias_Argumentum.html")!).toBeLessThan(sortKeyFor("27_isaias_01.html")!);
+  // ordering across books holds
+  expect(sortKeyFor("01_genesis_50.html")!).toBeLessThan(sortKeyFor("02_exodus_01.html")!);
+  expect(sortKeyFor("52_lucas_15.html")!).toBeLessThan(sortKeyFor("81_apocalypsis_22.html")!);
+  // non-canonical pages get no key
+  expect(sortKeyFor("01_genesis_01_lt.html")).toBeNull();
+  expect(sortKeyFor("index.html")).toBeNull();
+  expect(sortKeyFor("guigo_i/Meditationes.html")).toBeNull();
+});
+
+test("setSortKey stamps/removes on <body>, idempotent, preserves other attrs", () => {
+  const on = setSortKey("<body data-pagefind-body>\nx", 52015);
+  expect(on).toBe('<body data-pagefind-body data-pagefind-sort="order:52015">\nx');
+  expect(setSortKey(on, 52015)).toBe(on);                      // idempotent
+  expect(setSortKey(on, 1001)).toBe('<body data-pagefind-body data-pagefind-sort="order:1001">\nx'); // re-key
+  expect(setSortKey(on, null)).toBe("<body data-pagefind-body>\nx");  // removed, marker preserved
+});
