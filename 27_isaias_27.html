@@ -171,5 +171,19 @@
 
 <p>Anagogically, understand these things of the trumpet of the Archangel, which will summon the elect from among the Jews as well as the Gentiles to the last judgment and to the eternal worship of God in the heavenly Jerusalem.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

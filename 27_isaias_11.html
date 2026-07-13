@@ -199,5 +199,19 @@
 
 <p>AND HE SHALL LIFT UP HIS HAND OVER THE RIVER. -- In the might of His spirit, He will send a mighty wind, which will divide that river into seven streams (that is, many -- a definite number for an indefinite one), so that the faithful may cross over dry-shod. That is: God will make every way smooth and passable for the preaching of the Gospel.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

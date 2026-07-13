@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="en" href="https://lapide.org/80_judae_argumentum.html">
 <link rel="alternate" hreflang="la" href="https://lapide.org/80_judae_argumentum_lt.html">
 </head>
-<body>
+<body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum on the Epistle of St. Jude</h1>
 <div class="nav">
@@ -64,5 +64,19 @@
     <div class="prev"><a href="79_iii_joannis_01.html">Previous Chapter</a></div>
     <div class="next"><a href="80_judae_01.html">Next Chapter</a></div>
 </div>
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

@@ -30,5 +30,19 @@
 
 <p>The first book described the deeds of Samuel and King Saul; but this second book describes the deeds of King David. For the fall of Saul was the rise of David. For on the same day on which Saul died, David arose, like a new sun rising for Israel, who accordingly soon succeeded Saul in the kingdom of Judah.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

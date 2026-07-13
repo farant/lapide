@@ -157,5 +157,19 @@ Relying on you as my companion, O Goddess, and helper.</p>
 <p>Tropologically, St. Bernard, in his sermon on St. Benedict: "Blessed are those who sow upon all waters, even those which are above the heavens, which are the angelic virtues and the heavenly peoples. So indeed: for we have been made a spectacle to both Angels and men. Let us therefore sow for men a good example through open works; let us sow for the Angels great joy through hidden sighs." And shortly after: "O race of Adam, how many have sown in you, and how precious the seed! How badly will you perish, and how deservedly, if so great a seed perishes in you, and the labor of those who sowed! The whole Trinity sowed in our land; Angels sowed equally with Apostles; Martyrs and Confessors and Virgins sowed. The Son also sowed: for He it is who went out to sow His seed. Thus the whole Trinity sowed: the Father, bread from heaven; the Son, truth; the Holy Spirit, charity."</p>
 <p>St. Basil, on chapter 1 of Isaiah, interprets differently: Blessed, he says, is he who stirs up the ox, that is, the generous part, to the endurance of labors, and the donkey, that is, the greedy and carnal part, so that he may trample and conquer his desires. And St. Ambrose, writing to Irenaeus, interprets differently still: "The ox, he says, having horns, has fierceness; the donkey has meekness; because blessed is he who tempers both severity and meekness, so that by the one discipline is maintained, and by the other innocence is not oppressed."</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

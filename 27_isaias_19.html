@@ -201,5 +201,19 @@
 
 <p>A BLESSING IN THE MIDST OF THE EARTH. Just as Israel was situated between the Egyptians and the Assyrians, so from it, as the people of God, blessing will be poured out through Christ upon the Egyptians and other nations. Hence, although other nations are to be blessed by Me, yet My inheritance is, and will be, Israel; for just as Israel was formerly the people peculiarly chosen by God, so it will be now also. For from it will be born Christ, the Blessed Virgin, the Apostles, the first Christians, indeed Christianity itself and the Church of God, "the work of My hands (namely, you are, God will say) for the Assyrian."</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

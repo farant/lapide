@@ -245,5 +245,19 @@ For the face is accustomed to redden and as it were burn with the blood which sh
 
 <p>Apply therefore to these all the individual judgments and threats of Isaiah in this chapter and the next against Babylon, and especially that one in chapter xiv, 11: 'Your carcass has fallen, the moth is spread under you, and worms are your covering. Your pride has been dragged down to hell. How have you fallen from heaven, O Lucifer, who did rise in the morning,' etc.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

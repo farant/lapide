@@ -219,5 +219,19 @@
 	<div class="prev"><a href="01_genesis_49.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_Genesis_Synopsis_Historiae_Chronologiae_Doxologia.html">Next: Synopsis &amp; Doxology</a></div>
 </div>
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

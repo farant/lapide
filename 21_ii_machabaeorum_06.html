@@ -99,5 +99,19 @@ For whose love I gladly choose to die a virgin.</p>
     <div class="prev"><a href="21_ii_machabaeorum_05.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_07.html">Next Chapter</a></div>
 </div>
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

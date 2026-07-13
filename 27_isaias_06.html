@@ -436,5 +436,19 @@ The mutual Love of Both.</p>
 <p>Note: זרע zera, that is, seed, the Hebrews call not only the grains of seed, but also the stalks, shoots, and sprouts themselves, from which, as from seed, leaves, foliage, and fruits are produced. Therefore not the trunk of the tree itself, but the branches or stalks in the trunk are called seed here: for the trunk is the tree itself in which this seed stands, that is, the stalks and branches, which he therefore calls in Hebrew mattsebet, as the prop or support of future germination and propagation, as our Translator renders it.</p>
 
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

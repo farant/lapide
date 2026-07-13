@@ -5060,5 +5060,19 @@ Given at <span class="entity-ref" data-slug="place/europe/italy/rome">Rome</span
     <div class="next"><a href="02_Clemens_Hieronymi_Du_Culte.html">Next: Jerome's Prefaces</a></div>
 </div>
 
-	</body>
+	<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
+</body>
 </html>

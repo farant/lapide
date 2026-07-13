@@ -96,5 +96,19 @@
 
 <p>Note: This entire chapter is a brief but magnificent canticle, worthy to be placed alongside the canticle of Moses in Exodus 15, the canticle of Deborah in Judges 5, and the Magnificat of the Blessed Virgin in Luke 1. It is the fitting conclusion to the great messianic prophecy that began in chapter 7 with the promise of Emmanuel and has now reached its climax in the vision of universal salvation and the song of the redeemed.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

@@ -125,5 +125,19 @@ The madmen killed the innocent one by a cruel death.&quot;</em></p>
 <p>Finally, there exists in Rome, in the Vatican and Medici Libraries, a Syriac version of the Bible; likewise an Arabic version by an anonymous author, both of them ancient. Of the Arabic there are two copies: one brought from Antioch, which they call the Antiochene; the other from Egypt, which they call the Alexandrine. Both were translated into Latin by the Most Reverend Lord Ser-</p>
 
 <p>of our Society, public professor of the Syriac language at the Roman College. I shall cite both versions in the more notable passages, where they either shed light or offer a new meaning, for the sake of fulness. Let the reader attribute and assess them to those authors.</p>
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

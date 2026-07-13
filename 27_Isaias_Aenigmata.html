@@ -208,5 +208,19 @@
 <p>IX. "Blessed is he who waits and arrives at 1335 days," for after the death of the Antichrist, at least 45 days shall be given to the faithful who fell under him, for repentance.</p>
 <p>X. Verse 13. "But you (Daniel), go to the appointed end (to death, which is appointed and determined for all): and you shall rest, and shall stand in your lot (among the elect and the blessed) at the end of days, on the day of judgment.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

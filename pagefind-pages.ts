@@ -68,6 +68,57 @@ async function audit() {
   return missing.length + extra.length;
 }
 
+export function setBodyMarker(html: string, present: boolean): string {
+  return html.replace(/<body\b([^>]*)>/i, (_m, attrs: string) => {
+    const cleaned = attrs.replace(/\s+data-pagefind-body(?:="[^"]*")?/i, "");
+    return present ? `<body${cleaned} data-pagefind-body>` : `<body${cleaned}>`;
+  });
+}
+
+const HL_START = "<!-- pagefind-highlight:start -->";
+const HL_END = "<!-- pagefind-highlight:end -->";
+const HL_BLOCK = `${HL_START}
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+${HL_END}`;
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+export function setHighlightScript(html: string, present: boolean): string {
+  const re = new RegExp(`\\n?${escapeRegExp(HL_START)}[\\s\\S]*?${escapeRegExp(HL_END)}`, "i");
+  let out = html.replace(re, "");
+  if (present) {
+    const idx = out.lastIndexOf("</body>");
+    if (idx !== -1) out = out.slice(0, idx) + HL_BLOCK + "\n" + out.slice(idx);
+  }
+  return out;
+}
+
+async function fix() {
+  const files = await collectHtml();
+  let changed = 0;
+  for (const full of files) {
+    const rel = relative(ROOT, full);
+    const canonical = isEnglishLapidePage(rel);
+    const before = await readFile(full, "utf-8");
+    const after = setHighlightScript(setBodyMarker(before, canonical), canonical);
+    if (after !== before) { await writeFile(full, after, "utf-8"); changed++; }
+  }
+  console.log(`Normalized ${changed} file(s).`);
+}
+
 if (import.meta.main) {
   const mode = process.argv.includes("--fix") ? "fix" : "check";
   if (mode === "check") {
@@ -75,6 +126,5 @@ if (import.meta.main) {
     console.log(`\n${drift === 0 ? "OK: no drift" : `DRIFT: ${drift} file(s)`}`);
     process.exit(drift === 0 ? 0 : 1);
   }
-  // --fix implemented in Task 3
-  console.log("--fix not yet implemented");
+  await fix();
 }

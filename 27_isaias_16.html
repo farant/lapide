@@ -219,5 +219,19 @@
 
 <p>See here in Moab the vanity of kingdoms, and of all pomp and pride. For in a short time, when God punishes, their glory is changed to disgrace, their multitude to fewness, power to weakness, wisdom to foolishness, wealth to poverty, magnificence to squalor, excellence to humiliation, favor to hatred, security to distress, peace to a thousand dangers.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

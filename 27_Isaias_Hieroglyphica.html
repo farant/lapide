@@ -661,5 +661,19 @@
 <p>XII. Chapter 22, verse 18. "Son of man, the house of Israel has become dross to Me: all these are bronze, and tin, and iron, and lead in the midst of the furnace: they have become the dross of silver. Therefore behold, I will gather you into the midst of Jerusalem, and I will kindle a fire in her for smelting."</p>
 <p>XIII. Verse 24. "Son of man, say to her: You are an unclean land, not rained upon in the day of fury. The conspiracy of her prophets in her midst is like a roaring lion seizing prey; they have devoured souls, they have taken riches and valuables: they have multiplied her widows."</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

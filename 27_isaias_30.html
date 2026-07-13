@@ -268,5 +268,19 @@
 <p>St. Mary of Oignies saw her deceased mother, saying that she was damned for the unjust goods she had possessed; and because, she said, I refused to notice what was being done against God in my household and by my subjects. Hearing this, Mary immediately conformed herself to God's will and blessed the just judgment of God, as Cardinal Vitriaco reports in book III of her Life, chapter XI.</p>
 <p>Remember your last things, remember hell, and you will never sin. O Topheth! O hell! How fierce you are! How vast! How everlasting!</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

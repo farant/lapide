@@ -123,5 +123,19 @@
 
 <p>13. LIKE A WHIRLWIND BEFORE THE STORM. — The Septuagint translates, like the dust of a wheel of the driving storm; Vatablus, like a ball before the whirlwind. For the Hebrew גלגל galgal signifies something that rolls, such as a whirlwind, a wheel, and a ball, which, once caught by a whirlwind, is entirely spun and hurled by its force. The army of the Damascenes therefore seemed to be a vast mountain, proud and immovable: but behold, before God it was like a wheel and a ball, not only movable but also spinning and unstable.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

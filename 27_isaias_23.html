@@ -241,5 +241,19 @@ Or the Venetians bear the name and omen of the goddess.</em></p>
 
 <p>I respond: they are the profits of a harlot, that is of a trader, as was said. Secondly, they are the profits of one who was formerly a harlot, that is an idolater: but now through Christ she has been made chaste and a virgin, in the faith and worship of the true God, of whom the Apostle says: <em>"I have espoused you to one husband, to present you as a chaste virgin to Christ,"</em> hence her offering, formerly displeasing, is now pleasing and acceptable to God.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="en" href="https://lapide.org/77_i_joannis_argumentum.html">
 <link rel="alternate" hreflang="la" href="https://lapide.org/77_i_joannis_argumentum_lt.html">
 </head>
-<body>
+<body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum on the First Epistle of St. John</h1>
 <div class="nav">
@@ -107,5 +107,19 @@
     <div class="prev"><a href="76_ii_petri_03.html">Previous Chapter</a></div>
     <div class="next"><a href="77_i_joannis_01.html">Next Chapter</a></div>
 </div>
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

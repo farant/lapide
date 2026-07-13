@@ -216,5 +216,19 @@
 
 <p>Allegorically and tropologically, Gregory of Nyssa, homily 14 on the Song of Songs, notes that there are two Lebanons: one chosen and precious, whose elegance is mentioned in praise of the Bride; the other opposed to God and His people, which deserves to be cut down. The former Lebanon represents the Church and the souls of the just; the latter, the proud powers of this world, which God will overthrow.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

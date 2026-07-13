@@ -518,5 +518,19 @@ The space of heaven is open no more than three cubits.</p>
 
 <p>"Let the Reader know, says St. Jerome on Ezekiel 40, that nearly all Hebrew words and names which have been placed in the Greek and Latin translations, corrupted by extreme age and depraved by the fault of copyists, have — as they were copied from uncorrected texts into even more uncorrected ones — been made from Hebrew words into Sarmatian words, or rather words of no nation at all; since they have ceased to be Hebrew without having begun to be anything else. So in Ezekiel 40:7 and following, for the Hebrew taim, that is 'chambers,' one reads corruptly in the Septuagint the. In Genesis 41:44, for the Hebrew, or rather Egyptian, Tsophnath Paneach, that is 'savior of the world' (which name Pharaoh gave to Joseph), corruptly in the Septuagint Psonthomphanech. So for the Hebrew Pascha, for Yeshua or Yehoshua we say Jesus, for Mashiach we say Messias, for Tsor we say Tyrus, for Kasdim we say Chaldaei."</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

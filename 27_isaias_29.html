@@ -172,5 +172,19 @@ Thus Christ says: 'I confess to You, Father, Lord of heaven and earth, because Y
 
 Jacob shall not now be confounded. — First, Cyril and St. Thomas explain, that is: 'He shall not now be confounded,' that is, Israel will do penance for his sins and for the slaying of Christ, but at the end of the world, when the fullness of the Gentiles has entered the Church: for then, recognizing his crimes, he will be confounded and will repent.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="en" href="https://lapide.org/81_apocalypsis_02.html">
 <link rel="alternate" hreflang="la" href="https://lapide.org/81_apocalypsis_02_lt.html">
 </head>
-<body>
+<body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse II</h1>
 <div class="nav">
@@ -334,5 +334,19 @@
     <div class="prev"><a href="81_apocalypsis_01.html">Previous: Apocalypse Chapter I</a></div>
     <div class="next"><a href="81_apocalypsis_03.html">Next: Apocalypse Chapter III</a></div>
 </div>
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

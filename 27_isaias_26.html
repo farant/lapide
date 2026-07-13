@@ -307,5 +307,19 @@
 
 <p>Thus our Jerome Prado in fact concluded his Commentary on Ezekiel chapter 26 together with his life with this saying of Isaiah: <em>"Go then, my people, enter into your chambers, shut your doors upon you, hide yourself a little for a moment, until the indignation passes."</em></p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

@@ -272,5 +272,19 @@
 <p id="verse-29"><b>Verse 29: If You Are Christ's, Then You Are the Seed of Abraham</b></p>
 <p>29. And if you are Christ's (namely as members of Him as Head, and as the mystical body of Him as Soul, already spoken of), then (just as Christ, so also you) are the seed (that is, the sons) of Abraham, — and consequently you are heirs of the blessing promised to Abraham, that is, of justice and salvation. Hence Ambrose reads the preceding words more clearly and openly thus: <em>"If therefore you are one in Christ, then you are the seed of Abraham."</em></p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

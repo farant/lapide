@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import { isEnglishLapidePage } from "./pagefind-pages";
+import { isEnglishLapidePage, setBodyMarker, setHighlightScript } from "./pagefind-pages";
 
 test("canonical English Lapide pages are included", () => {
   expect(isEnglishLapidePage("01_genesis_01.html")).toBe(true);
@@ -21,4 +21,22 @@ test("index, related works, subdirs, tmp are excluded", () => {
   expect(isEnglishLapidePage("guigo_i/Meditationes.html")).toBe(false);
   expect(isEnglishLapidePage("tmp_gen19_ar_part1.html")).toBe(false);
   expect(isEnglishLapidePage("search.html")).toBe(false);
+});
+
+test("setBodyMarker adds/removes idempotently", () => {
+  const on = setBodyMarker("<body>\nx", true);
+  expect(on).toBe("<body data-pagefind-body>\nx");
+  expect(setBodyMarker(on, true)).toBe(on);                 // idempotent add
+  expect(setBodyMarker(on, false)).toBe("<body>\nx");        // remove
+  expect(setBodyMarker('<body class="a">\nx', true)).toBe('<body class="a" data-pagefind-body>\nx');
+});
+
+test("setHighlightScript injects before </body> and removes cleanly", () => {
+  const base = "<body>\nhi\n</body></html>";
+  const on = setHighlightScript(base, true);
+  expect(on).toContain("pagefind-highlight.js");
+  expect(on).toContain("mark.pagefind-highlight");
+  expect(on.indexOf("pagefind-highlight:start")).toBeLessThan(on.indexOf("</body>"));
+  expect(setHighlightScript(on, true)).toBe(on);            // idempotent
+  expect(setHighlightScript(on, false)).toBe(base);         // full removal
 });

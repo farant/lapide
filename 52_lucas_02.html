@@ -649,5 +649,19 @@ Being annulled, shall free the earth from perpetual fear."</em></p>
 
 <p><em>WITH GOD AND MEN.</em> — "For first one must please God, and then men," say Theophylact and Bede. For if we please God, He Himself will bring it about that we please men also, and will make us pleasing to them. It is not enough to please men, because this is often feigned and simulated; nor God alone, because this is private and secret: but "God and men," so that we may show to men also the grace by which we please God, and so attract them to the same: "for to God we owe our conscience, to our neighbours our reputation," says St. Bernard. For more moral applications see St. Ambrose; Barradius, Didacus Stella, and Vincentius Regius here.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

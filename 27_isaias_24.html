@@ -254,5 +254,19 @@ That nothing born shall remain.</em></p>
 
 <p>WHEN THE LORD SHALL REIGN — when He begins to reign in the Valley of Josaphat near Mount Sion, judging and condemning the wicked, but glorifying the Saints. AND SHALL BE GLORIFIED IN THE SIGHT OF HIS ELDERS — that is, in the sight of the Patriarchs, Prophets, Apostles, and all the elect: for on the day of judgment the glory of the Lord shall shine forth most brilliantly, to the admiration and supreme joy of the Blessed.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

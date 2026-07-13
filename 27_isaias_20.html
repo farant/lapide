@@ -120,5 +120,19 @@
 
 <p>6. AND THE INHABITANT OF THIS ISLAND WILL SAY. Judea is here metaphorically called an island. First, because it was situated between the Dead Sea and the Mediterranean. Second, because it was small in comparison with Babylon, which is called a sea in the next chapter, verse 1. Third, and more likely, because, as St. Jerome explains, it was battered by the waves and wars of neighboring nations, especially the Assyrians and Egyptians, just as an island is battered on all sides by the waves of the sea. Fourth, because just as an island alone rises above the sea and lifts its head while the rest is submerged by the sea, so Jerusalem alone raised its head and escaped when Sennacherib overwhelmed the cities of Judea like a sea with his forces: for this is what he said in chapter 8, verse 8: "He will pass through Judah, flooding and overflowing, he will reach even to the neck," that is to say: Sennacherib will overwhelm Judea up to the neck, so that only Jerusalem, which is the head, will rise above and be saved. So says Sanchez. These last two meanings are the most fitting and genuine.</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>

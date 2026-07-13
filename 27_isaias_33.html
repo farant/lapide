@@ -274,5 +274,19 @@ This sense is probable and fitting, and yields to the former only in the explana
 Wherefore the Author of the Opus Imperfectum, in St. Chrysostom, Volume II, Homily 23 on Matthew, at the end, by this ship of the sea, that is, not of God but of the world, understands the church of the heretics. "Which," he says, "although it has the preaching of the Lord's Cross, nevertheless shows this mast of theirs to be weak; because where there is no truth of faith, the assertion of the Cross is feeble; whence its sails are inclined and loosened,</p>
 <p>not spread, because they are directed by no breath of the Holy Spirit. And therefore this ship, having lost the rudder of true faith, with hostile spirits prevailing, is plunged into the shipwreck of eternal death — a ship that does not deserve to be steered by Christ the Lord, and becomes the prey of demons and of Gehenna."</p>
 
+<!-- pagefind-highlight:start -->
+<script type="module">
+await import('/pagefind/pagefind-highlight.js');
+new PagefindHighlight({ highlightParam: 'highlight' });
+if (new URLSearchParams(location.search).has('highlight')) {
+  const scrollToFirst = (t = 0) => {
+    const m = document.querySelector('mark.pagefind-highlight');
+    if (m) return m.scrollIntoView({ block: 'center' });
+    if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
+  };
+  scrollToFirst();
+}
+</script>
+<!-- pagefind-highlight:end -->
 </body>
 </html>
