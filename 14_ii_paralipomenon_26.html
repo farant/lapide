@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Paralipomenon (2 Chronicles) XXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_ii_paralipomenon_25.html">Previous Chapter</a></div>
     <div class="next"><a href="14_ii_paralipomenon_27.html">Next Chapter</a></div>
 </div>
@@ -88,17 +88,18 @@ Josephus adds, in book 9, chapter 11, two other prodigious plagues inflicted by 
 <p>23. THEY BURIED HIM IN THE FIELD OF THE ROYAL TOMBS, BECAUSE HE WAS A LEPER. — For lepers, as in life, so also in death, are separated from the company of others; for leprosy infects and consumes even corpses. This is the fifth punishment of Uzziah for invading the priesthood: that he was buried outside the tombs of the kings, though near them, whether outside the city or within the city, that is, in Zion, the City of David.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_ii_paralipomenon_25.html">Previous Chapter</a></div>
     <div class="next"><a href="14_ii_paralipomenon_27.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

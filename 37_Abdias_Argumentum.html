@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Abdiam</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_09.html">Previous Chapter</a></div>
     <div class="next"><a href="37_abdias_01.html">Next Chapter</a></div>
 </div>
@@ -34,17 +34,18 @@
 <p>Furthermore, Obadiah is the briefest and smallest of all the Prophets, "in the count of verses, not of meanings," says St. Jerome, and after him Ribera. Small men, he says, so excel in talent and skill that a place has been given to the proverb, anous ho makros, that is, "foolish is he who is tall." Aristotle, in his Physiognomics, says: "The very small are very keen, for since the motion of the blood occupies a small space, their impulses also very quickly reach understanding. But those who are very large are slow: for since the motion of the blood occupies a large space, their impulses reach understanding slowly." From which rightly Ecclesiasticus ch. XI, 2: "Do not praise a man for his appearance, nor despise a man for his looks. The bee is small among flying creatures, yet its fruit holds the first place among sweets." What shall I say of silkworms, of flies and bees? Indeed St. Augustine, in his book On the Two Souls against the Manichees, ch. III and IV, does not hesitate to assert that the fly is more excellent than the sun: because it has a soul, life, movement, and all the organs of living things, which the sun lacks. Thus small things have more life and vigor than great ones. Why should I mention the remora, which, though it is a tiny fish, stops and holds back great ships driven by a strong wind, if it attaches and fastens itself to them? Thus the most high God displays His power, wisdom, and greatness in small things. Obadiah, says Hugh of St. Victor (who wrote on Obadiah in his characteristically keen and subtle, but mystical, manner), "is simple in speech and manifold in meaning: sparing in words but rich in thoughts, according to that saying of Ecclesiasticus XX: The wise man makes himself known by few words. He directs his prophecy literally against Idumea, allegorically against the world, tropologically against the flesh he sharpens his pen. Bearing the type of the Savior, he subtly introduces His coming by whom the world is destroyed, by whom the flesh is worn down, by whom liberty is restored." Wherefore Isidore rightly says, in his book of Allegories of Sacred Scripture: "Obadiah, that is, servant of the Lord, is shorter than all the Prophets in number of words, but equal in the grace of mysteries." Hence Jeremiah imitates Obadiah almost word for word in ch. XLIX, 23 and following.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_09.html">Previous Chapter</a></div>
     <div class="next"><a href="37_abdias_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

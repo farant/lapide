@@ -27,7 +27,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XLIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_48.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_50.html">Next Chapter</a></div>
 </div>
@@ -396,17 +396,18 @@
 <p>Note the span of Jacob's life: Jacob was born in the year 452 after the flood. Fleeing Esau he went to Haran to Laban, in the 77th year of his age; thence after 20 years, that is, in his 97th year, he returned to Canaan. After 10 years, that is, in his 107th year, Rachel died and Benjamin was born, and Joseph was sold into Egypt. Thence Jacob remained still in Canaan for 23 years. For in the 130th year of his age, summoned by Joseph, he went with his whole family into Egypt, and there he lived 17 years, and died in the 147th year of his age, which was the year of the world 2256. For the epitaph and eulogies of Jacob, see the book of Wisdom, chapter 10, verse 10, and Ecclesiasticus chapter 44, verse 25.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_48.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_50.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

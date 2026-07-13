@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_11.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_13.html">Next Chapter</a></div>
 </div>
@@ -380,17 +380,18 @@ To whom in turn the count replied:<br />
 <p>He adds the example of St. Felicitas, who brought forth in the Spirit to God the seven sons whom she had borne in the flesh to the world, when she strengthened them in persecution and roused them to martyrdom. And St. Augustine, <em>On Holy Virginity</em>, chapter III: "The mother of Christ," he says, "is every pious soul doing the will of His Father, by a most fruitful charity in those whom she gives birth to, until He Himself be formed in them. Mary therefore, doing the will of God, is bodily the mother of Christ only, but spiritually both His sister and mother. And by this one woman alone is both mother and virgin not only in spirit but also in body." He subjoins the reason: "But she is plainly mother of His members, which we are, because she cooperated by charity, so that faithful ones might be born in the Church, who are the members of that Head — while bodily she is the mother of the Head Himself." Following this oracle of Christ, St. Victoria, virgin and martyr under the Emperor Diocletian, when the proconsul asked her: "Do you wish to go with Fortunatianus your brother?" (who was a Gentile), answered: "I do not wish to, because I am a Christian, and they are my brethren who keep the commandments of God." Wherefore, being shut up in prison with other martyrs, and there starved to death, she obtained the laurel of martyrdom. So her Acts record, in Surius, the 11th day of February.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_11.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_13.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

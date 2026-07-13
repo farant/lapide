@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Kings (1 Samuel) XVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="09_i_regum_15.html">Previous Chapter</a></div>
     <div class="next"><a href="09_i_regum_17.html">Next Chapter</a></div>
 </div>
@@ -239,18 +239,19 @@
 <p>Moreover, David, dismissed by Saul, returned to his father and his sheep; not because war with the Philistines was threatening Saul, as Josephus and Abulensis say, but because Saul, now cured, no longer needed David, and David loved the sheepfold more than the court, that is, the private life more than the courtly one. Then, says Chrysostom in his Homily on Psalm 50: <em>"David as a young man, fleeing cities and crowds, lived as a philosopher in the desert, having nothing in common with worldly affairs — no business dealings, no money-lending, nothing burdensome of this world — but even at a young age he dwelt in the desert of silence; and as if in a tranquil harbor, sitting in the wilderness and caring for his sheep, he meditated on the heavenly kingdom; and not by bodily strength but by the virtue of faith he killed bears and lions that attacked his flock,"</em> as he himself says in the following chapter, vv. 35 and 36.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="09_i_regum_15.html">Previous Chapter</a></div>
     <div class="next"><a href="09_i_regum_17.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Threni V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="29_threni_04.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_01.html">Next Chapter</a></div>
 </div>
@@ -118,17 +118,18 @@
 <p id="verse-22"><b>Verse 22: BUT YOU HAVE UTTERLY REJECTED US.</b></p>
 <p>22. BUT YOU HAVE UTTERLY REJECTED US. — This is another reason for which he ought to be heard, which the Septuagint, the Chaldean, and Vatablus express more clearly; for they translate: Because You have rejected us enough, namely by exercising the utmost vengeance and captivity upon us, as if to say: We have now suffered enough punishment, and have satisfied Your anger; therefore restore Your clemency to us, and convert us to You. For this petition he suppresses out of shame and affliction. For the same reason the Hebrew and our Interpreter add the little word "but," as if to say: I prayed, saying: Convert us; but behold, I do not obtain it, and we are far from this conversion, because behold You have hitherto utterly rejected us; therefore, silent and confused, I groan, and by this groan of mine I silently and reverently implore Your mercy, that You may at last spare Your anger, restrain Your scourges, and have mercy on me. This sense is most fitting. For it is an aposiopesis aimed at pathos, such as is common among the deeply afflicted who beg for pardon; for in such cases grief and shame suppress much. Second, Maldonatus thinks these words correspond to verse 20 and should be joined with it, as if to say: "Why do You forget us forever? but" — that is, and so — "You have utterly rejected us." Third, others translate: Although You have rejected us, yet we have already suffered enough punishment from Your anger poured out upon us. Fourth, Sanchez explains it thus, as if to say: But why do I insist on prayers, why do I press with petitions, that You restore the Jewish nation as quickly as possible, when You, vehemently angry, have cast off the people until the seventieth year, and consigned them to the Babylonian captivity? This sense is also appropriate (2).</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="29_threni_04.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

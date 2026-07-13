@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_13.html">Previous: Luke XIII</a></div>
     <div class="next"><a href="52_lucas_15.html">Next: Luke XV</a></div>
 </div>
@@ -226,17 +226,18 @@ Languor from the pale body.</em></p>
 <p><em>35. HE THAT HAS EARS TO HEAR, LET HIM HEAR.</em> — "Ears," both of the body and still more of the mind. "To hear," that is, ears suited, ready, and inclined for hearing and understanding: "let him hear," and weigh the things that I say and teach. For He arouses attention from the gravity and difficulty of the matter He proposes. See what was said at Matt. xiii, 9 and 13.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_13.html">Previous: Luke XIII</a></div>
     <div class="next"><a href="52_lucas_15.html">Next: Luke XV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Prooemium in XII Prophetas Minores</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="32_Daniel_Conclusio.html">Previous</a></div>
     <div class="next"><a href="33_Prophetae_Minores_Canones.html">Next</a></div>
 </div>
@@ -212,17 +212,18 @@ To make fables that would please the people.'</p>
 <p>we may season the earthly and tasteless minds of men and impart incorruption to them; that whoever reads these things, from the knowledge of Your holy oracles, from the weight and gravity of Your promises and threats, may despise the alluring delicacies of earth, and be kindled with love of heavenly goods, and with the desire and effective pursuit of blessed eternity. This one thing I aim at, this one thing I ask, to this all my reading and writing, to this all my labor sweats, that Your holy name may be sanctified, and Your holy will may be done on earth as it is in heaven; and that Your holy kingdom of grace, of glory, and of everlasting happiness, where You will be all in all, may come to us. Amen.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="32_Daniel_Conclusio.html">Previous</a></div>
     <div class="next"><a href="33_Prophetae_Minores_Canones.html">Next</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

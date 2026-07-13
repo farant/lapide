@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_10.html">Previous: Luke X</a></div>
     <div class="next"><a href="52_lucas_12.html">Next: Luke XII</a></div>
 </div>
@@ -184,17 +184,18 @@ And in every place be my greatest salvation.</p>
 <p><em>LYING IN WAIT FOR HIM, AND SEEKING TO CATCH SOMETHING</em> (in Greek <em>θηρεῦσαι</em>, that is, to hunt) <em>FROM HIS MOUTH, THAT THEY MIGHT ACCUSE HIM</em> — before Caiaphas the high priest, or before Pilate, the governor for Caesar. For, as Euthymius says, "they thought suddenly and unexpectedly to lead Him entirely into error; but most wisely He dissolved everything and easily answered," because He answered nothing except what was well premeditated, and because He spoke with a settled mind, without anger or any other passion: for the Scribes were stinging Him with various questions, that He might grow angry, or at least from the passion of His mind say something too freely or boldly which they could cavil at — just as many are carried, in the fervor of disputing, beyond the bounds of truth or discretion, and say things they had not previously thought of, of which they later repent, and which they are often compelled to retract or atone for. But Christ tempered the fervor of His mind with the utmost moderation, prudence, and peace, so that He spoke nothing except what was true, solid, tranquil, and holy.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_10.html">Previous: Luke X</a></div>
     <div class="next"><a href="52_lucas_12.html">Next: Luke XII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

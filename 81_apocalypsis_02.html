@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_01.html">Previous: Apocalypse Chapter I</a></div>
     <div class="next"><a href="81_apocalypsis_03.html">Next: Apocalypse Chapter III</a></div>
 </div>
@@ -330,17 +330,18 @@
 <p>Note: <em>"The crown of life,"</em> which Christ promises to the angel of Smyrna in verse 10; the same, in verse 7, He promises to the angel of Ephesus, and calls it <em>"the tree of life;"</em> the same He promises to the angel of Pergamum, and calls it <em>"a white stone,"</em> verse 17; the same again He here promises to the angel of Thyatira, and calls it <em>"the morning star;"</em> the same, in chapter 3, He promises to the angel of Sardis, and calls it <em>"the book of life,"</em> verse 5; and to the angel of Philadelphia, verse 12, calling it <em>"a pillar in the temple of God;"</em> and to the angel of Laodicea, verse 21, calling it <em>"a seat on Christ's throne."</em> Where note: This glory changes its names, that it may suggest the various endowments and excellencies which it includes, and which the names themselves signify: for He will give these to each suitably and proportionately to his struggle and victory. To the Ephesian, because, broken by old age, he had departed from his first fervor, if he resume it, this glory is promised under the name of the tree of life, which restored strengths growing weary with age, and brought them back to their pristine vigor. To the Smyrnean, because he was of tried and perfect virtue, this glory is given and called a crown, which is a full circle, hedged about and closed on every side with gems, roses, lilies, etc. The Pergamene had to struggle against timidity: hence, if he conquers, the same glory is promised to him under the name of a white stone. For the stone, because solid, and brightness, because it dissipates darkness, are rightly opposed to timidity, which vacillates, and pours darkness over the soul. The Thyatiran had to struggle against imprudence: hence, if he conquers it, the same glory is promised under the name of a bright star illuminating all things. The Sardian was spiritually dead: whence, if he rises again to the life of grace, the book of life is promised to him. The Philadelphian was weak and of moderate virtue: hence, if he overcomes these things, a pillar in heaven is promised to him. The Laodicean was sluggish and slothful: hence, if he rises up and labors strenuously, a seat on Christ's throne is promised to him. So Alcazar after his manner at length, which I have done concisely or briefly.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_01.html">Previous: Apocalypse Chapter I</a></div>
     <div class="next"><a href="81_apocalypsis_03.html">Next: Apocalypse Chapter III</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

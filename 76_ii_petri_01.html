@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Peter I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="76_ii_petri_argumentum.html">Previous: 2 Peter Introduction</a></div>
     <div class="next"><a href="76_ii_petri_02.html">Next: 2 Peter Chapter II</a></div>
 </div>
@@ -360,18 +360,19 @@
 <p>Morally: Hence let Doctors and Interpreters and students of Sacred Scripture learn, first, not to interpret it by their own ingenuity and sense, but according to the mind of the Church and of the Fathers, as the Council of Trent decrees, session IV. Therefore let them shun the commentaries of the Rabbis, as being human, unlearned, fabulous, hostile to Christ, since for the most part they twist the oracles concerning Christ to David or Solomon. Secondly, that to study they should join purity of life, holiness, and prayers, by which they may obtain from God light for understanding and explaining them. So did Sts. Augustine, Jerome, Chrysostom, Basil, Nazianzen, and St. Thomas Aquinas, who in the more difficult places used to add fasting to prayer, and openly kept saying that his knowledge had been gained more by God's enlightenment than by labor and study. Indeed even the royal Psalmist: <em>"Open thou,"</em> he says, <em>"my eyes, and I shall consider the wondrous things of Thy law,"</em> Psalm 118:18. Excellently St. Athanasius, book On the Incarnation of the Word, near the end: <em>"For the searching out of Scripture,"</em> he says, <em>"and for true understanding, there is need of an upright life, a pure mind, and the virtue which is according to Christ, that the mind, running along its track, may be able to attain what it seeks, insofar as it is permitted to human nature to understand divine things: for without a pure mind and the imitation of the Saints no one comprehends the words of the Saints."</em> And St. Bernard to the Brethren of Mount of God: <em>"By what Spirit,"</em> he says, <em>"the Scriptures were composed, by that same Spirit they desire to be read, by Him also they are to be understood."</em> And Procopius of Gaza, Preface to Genesis: <em>"If any place,"</em> he says, <em>"presents itself more obscure than that the powers of your ingenuity can master it, either the Fathers are to be consulted, or the God of the sciences is to be wearied with prayers."</em> Abbot Theodore in Cassian, Conference V, chapter 34, teaches that the understanding of the Scriptures is to be sought not so much by turning over the Commentaries of the Interpreters, as by cleansing the heart through the cleansing-out of carnal vices: <em>"With which expelled,"</em> he says, <em>"immediately the eyes of the heart, the veil of the passions being taken away, begin as it were naturally to contemplate the mysteries of the Scriptures."</em> See the same, Conference XIV, chapters 10 and 11.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="76_ii_petri_argumentum.html">Previous: 2 Peter Introduction</a></div>
     <div class="next"><a href="76_ii_petri_02.html">Next: 2 Peter Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

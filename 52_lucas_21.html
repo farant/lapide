@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_20.html">Previous: Luke XX</a></div>
     <div class="next"><a href="52_lucas_22.html">Next: Luke XXII</a></div>
 </div>
@@ -83,17 +83,18 @@
 <p><em>AND ALL THE PEOPLE CAME EARLY IN THE MORNING TO HIM IN THE TEMPLE TO HEAR HIM.</em> — <em>Manicabat</em> (Greek <em>orthrize</em>, that is, he came early, he went at dawn; hence Emmanuel Sa thinks it should be read <em>manitabat</em>; but the Romans here and elsewhere read <em>manicabat</em>). For just as from the Greek <em>orthron</em>, one says <em>orthrizon</em>, so from the Latin <em>mane</em> one says <em>manicare</em>; for the ancients called the morning "clear" (<em>clarum</em>), says Nonius. Servius, however, says: "The ancients, he says, called <em>manum</em> good; hence <em>mane</em> is also derived from it: for what is better?" For in the morning the senses are vigorous; and therefore the morning, as the best and first part of the day, should be given to God.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_20.html">Previous: Luke XX</a></div>
     <div class="next"><a href="52_lucas_22.html">Next: Luke XXII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

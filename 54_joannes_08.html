@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_07.html">Previous: John VII</a></div>
     <div class="next"><a href="54_joannes_09.html">Next: John IX</a></div>
 </div>
@@ -540,17 +540,18 @@
 <p>Morally: We are taught by this example, says St. Gregory, humbly to avoid the wrath of the proud, even when we are able to resist. Hence the Arabic translates: "And Jesus withdrew, and went out of the temple, and passed through the midst of them, hastening on with such steps that He went before and ahead."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_07.html">Previous: John VII</a></div>
     <div class="next"><a href="54_joannes_09.html">Next: John IX</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

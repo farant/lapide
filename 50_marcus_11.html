@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_10.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_12.html">Next Chapter</a></div>
 </div>
@@ -47,17 +47,18 @@
 <p id="verse-22"><b>Verse 22: Have the Faith of God</b></p>
 <p>22. HAVE THE FAITH OF GOD. — That is, faith in God that is full, perfect, ardent and efficacious, like a mustard seed. See what is said at Matthew chapter XXI, verse 21.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_10.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

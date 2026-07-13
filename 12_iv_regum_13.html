@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_14.html">Next Chapter</a></div>
 </div>
@@ -134,17 +134,18 @@ Hence Julian the Apostate, mixing the bones of Elisha and the Baptist with the b
 <p>21. And when it had touched the bones of Elisha, the man came back to life — Remarkable was Elisha's virtue and holiness, that while dead he raised a dead man to life. He was in this a type of Christ, by whose grace and the touch of whose merits, though He died on the cross, we shall all rise again. So Angelomus, Eucherius, and others. Hence Ecclesiasticus gives this praise to Elisha, ch. xlviii, 14: "And his dead body prophesied. Prophesied," that is, he worked a miracle by raising a dead man. For miracles were the works of the Prophets, that is, of the holy men and Teachers of Israel.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

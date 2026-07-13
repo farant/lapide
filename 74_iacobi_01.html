@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>James I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_argumentum.html">Previous: James Introduction</a></div>
     <div class="next"><a href="74_iacobi_02.html">Next: James Chapter II</a></div>
 </div>
@@ -835,18 +835,19 @@ He who remains in the world, how shall he be clean?</p>
 <p>Finally St. Augustine, on Psalm LXVIII: <em>"Who,"</em> he says, <em>"shall not despise the sweetness of the world, longing for the sweetness of eternal life?"</em> For, as the same says on Psalm CXXIII: <em>"The sweetness of this world sweetens a few for a time, but afterwards will be turned into great bitterness. But the sweetness of eternal life is constant;"</em> and therefore being free from all bitterness as well as from end, it fills and satisfies the mind. Wherefore St. Gregory Nazianzen, in the Distichs: <em>"Let this,"</em> he says, <em>"be your perpetual endeavor, that you build up your mind as a temple for God: for thus you will have Him as a spiritual statue in the inmost heart."</em> And after some interposed words: <em>"Come now, having forsaken this whole world, and having shaken off the world's burdens, spread your sails to the heavenly life: let the Trinity especially be your care. Let others prize gold, others silver, others delicate tables, that is, the trifles of this life; but I count Christ as the equivalent of the most ample wealth: whom O may it sometime be granted me to behold with a pure mind; but as for the rest, let the world have them."</em> He gave the reason a little before: <em>"Our man is the Word of the Father, that by this mingling He might mingle God with men: He is one and the same God on both sides, having become man only so far that He might make me from a mortal a God."</em> And St. Eucherius, in the epistle to Valerian: <em>"True blessedness,"</em> he says, <em>"is to scorn the blessedness of the world, and, neglecting earthly things, to burn for divine ones."</em> Again Nazianzen, epist. 57, otherwise 63, exhorting Eudoxius that, having forsaken rhetoric and the world, he give himself to a pure and perfect life: <em>"Let us migrate hence,"</em> he says, <em>"let us become men, let us cast away dreams, let us pass over shadows: let envy, time, and fortune hold others occupied, toss them about, and mock them. Farewell to thrones, principalities, riches, splendors, this vile and contemptible little glory, and finally the trifles of this great stage, and the theatrical nonsense. Let us most closely embrace the Word, and let us choose to have God in place of all things: that, I say, is the only enduring good, and ours; because the reward of virtue is to become God. Strive and fly toward these things. Never set your hopes anywhere until you have arrived at that supremely desirable and blessed good."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_argumentum.html">Previous: James Introduction</a></div>
     <div class="next"><a href="74_iacobi_02.html">Next: James Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

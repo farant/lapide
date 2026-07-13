@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias LVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_57.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_59.html">Next Chapter</a></div>
 </div>
@@ -332,17 +332,18 @@ And the hard oaks will sweat dewy honey.</p>
 <p>Symbolically, Christ feeds us with Himself in the Eucharist. For this is His inheritance, left by testament to the Church, which, as St. Bernard says, sermon On the Lord&#x27;s Supper, is &quot;Jesus, sweet, Jesus delightful, endowed with every virtue, adorned with every beauty; sweeter than honey and the honeycomb, fairer in form than the sons of men; with whose sweetness the Angels are inebriated, whose beauty the sun and moon admire. He, so great and so mighty, said to His disciples, and through them to all His faithful: Abide in me, and I will abide in you.&quot; Wherefore he exclaims: &quot;O how great the sublimity, O the authority of such great sublimity, that man should dwell with Angels, that earth and dust should be raised to the heavens, that man should be lifted from the dung of beasts, and gathered into the company of Angels, nay that the creature should remain in the Creator, the made in the Maker, the redeemed in the Redeemer, the servant in the Lord, the sinner in the Just One, the one made from clay in Him who made all things from nothing, the transitory in the Eternal, the wretched in the supremely Blessed; indeed in Him who makes all blessed things blessed, and sanctifies all holy things, who is the truth and the life, and the everlasting glory, the joy of the world, the delight of heaven, the sweetness of paradise, blessed eternity, and eternal blessedness, namely Christ the Lord Jesus!&quot;</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_57.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_59.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

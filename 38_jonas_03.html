@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jonas III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="38_jonas_02.html">Previous Chapter</a></div>
     <div class="next"><a href="38_jonas_04.html">Next Chapter</a></div>
 </div>
@@ -142,17 +142,18 @@ death, and the wild mountains and woods proclaim it."</p>
 <p>10. And God had mercy with regard to the evil. — "Evil," that is, affliction. The Hebrew reads: He repented of the evil which He had decreed to inflict upon them, that is, He revoked the sentence of punishment and destruction pronounced against them; because seeing their repentance, He had mercy on them. Tropologically, Abbot Joseph in Cassian, Conference XVII, chapter XXV, says that by this example of God, "we are taught that we ought not to persist obstinately in our decisions, but to soften with clement compassion the threat proposed out of necessity." So that when our subjects sin, if they acknowledge their fault and ask pardon, we may spare them; just as God spared the Ninevites.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="38_jonas_02.html">Previous Chapter</a></div>
     <div class="next"><a href="38_jonas_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

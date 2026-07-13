@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_02.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_04.html">Next Chapter</a></div>
 </div>
@@ -148,17 +148,18 @@ Third, Vatablus explains, meaning: Few will escape the Assyrian disaster, namely
 <p>AND THE IVORY HOUSES WILL PERISH. — "We read that Ahab, king of Israel, abounded in such luxury that he built himself an ivory house," III Kings XXII, 39, says St. Jerome, not that he made it of solid ivory — for where would he have had so much ivory? — but that he inlaid it with ivory; for this is called an ivory house, as Pliny testifies in Book XVI, chapter XLIII. See Sanchez.</p>
 <p>God threatens the Israelites that the Assyrians will lift them up on poles, and their remnants in boiling cauldrons. Then, on account of their impure and sacrilegious sacrifices, He says He struck them with six plagues, namely famine, drought, scorching wind, blight, caterpillar, and pestilence; and finally nearly overthrew them like Sodom, yet they were made no better by these plagues, nor did they return to their senses. Wherefore He threatens them with the most dire and extreme punishments and adds: Prepare to meet your God, who creates the mountains, the winds, the clouds, etc.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_02.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

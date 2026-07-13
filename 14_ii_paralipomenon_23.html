@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Paralipomenon (2 Chronicles) XXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_ii_paralipomenon_22.html">Previous Chapter</a></div>
     <div class="next"><a href="14_ii_paralipomenon_24.html">Next Chapter</a></div>
 </div>
@@ -66,17 +66,18 @@
 <p>20. THE UPPER GATE. — This was the gate of the temple which led to the king&#x27;s palace. It is called &#x27;upper&#x27; because from the palace, which was situated in a lower place, one ascended through this gate into the temple, as is clear from 4 Kings (2 Kings) 11:6 and 19. The same gate is called in verse 5 the gate &#x27;of the Foundation,&#x27; because it was erected on the very foundations of the temple, that is, on the Millo. So Vilalpandus, page 219. This gate above all others was ordered to be guarded, because through it Athaliah would come from the palace into the temple with her soldiers and bodyguard.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_ii_paralipomenon_22.html">Previous Chapter</a></div>
     <div class="next"><a href="14_ii_paralipomenon_24.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

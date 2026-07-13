@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_24.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_26.html">Next Chapter</a></div>
 </div>
@@ -266,7 +266,7 @@
 <p>So finally fled the great St. John the Anchorite, who predicted victory for Emperor Theodosius. For, as Palladius narrates in the Lausiac History, ch. xliii, he saw no woman for 40 years. And when he was 90 years old, earnestly entreated by a Tribune that he allow his wife, who was importunately requesting it, to see him, he replied: <em>"This night I will appear to her in a dream, and let her no longer persist in seeing my face in the flesh."</em> Therefore he appeared to her in a dream as a phantom, and did not allow himself to be seen by her in any other way; and in chapter xliv, he relates the sorrowful fall of a certain hermit through a woman. I gave more examples at Genesis ch. xxxiv, verse 1.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_24.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_26.html">Next Chapter</a></div>
 </div>
@@ -274,11 +274,12 @@
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

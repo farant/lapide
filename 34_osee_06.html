@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_05.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_07.html">Next Chapter</a></div>
 </div>
@@ -205,17 +205,18 @@ Wretched citizens! See for whom we sowed our fields!</p>
 <p>you, O Judah, when you had received so great a benefit from God, were ungrateful to Him, you scorned Him, and adopted for yourself the gods of the nations.</p>
 <p>WHEN I SHALL BRING BACK (until I bring back: for in Hebrew it is בשוב beshube, that is, in or at the restoration of the captivity) THE CAPTIVITY OF MY PEOPLE, — that is, your captivity, O Judah. This is a Hebraism: for the Hebrews often address the person they are speaking to in the third person, as the Germans also do when out of respect they say: May the Lord say or do this, meaning: may you, O Lord, say or do this.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_05.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

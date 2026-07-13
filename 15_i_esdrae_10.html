@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Esdrae (Ezra) X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="15_i_esdrae_09.html">Previous Chapter</a></div>
     <div class="next"><a href="16_II_Esdrae_Argumentum.html">Argumentum</a></div>
 </div>
@@ -82,17 +82,18 @@
 <p>44. All these had married foreign wives, and some of them were women who had borne children. — For "had borne," the Hebrew has iasimu, that is, "they placed"; which some explain thus, meaning: Some of the foreign women presented their sons, whom they had conceived from Jewish men, to the judgment and will of the judges, to cast them out or retain them. But this matter did not pertain to the women, but to the husbands and to the judges, who here dealt with the matter and the case with the men, not with the wives. Therefore, for the women "to place" sons is the same as to bear sons, as our translator, the Septuagint, Vatablus, and others render it.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="15_i_esdrae_09.html">Previous Chapter</a></div>
     <div class="next"><a href="16_II_Esdrae_Argumentum.html">Argumentum</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

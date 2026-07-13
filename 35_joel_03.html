@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joel III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_joel_02.html">Previous Chapter</a></div>
     <div class="next"><a href="36_Amos_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -227,17 +227,18 @@
 <p>Let them remember the divine oracle threatened against King Ahab: "Because you have let go out of your hand a man worthy of death (Benhadad king of Syria, murderer and enemy of Israel), your life shall be for his life, and your people for his people," 3 Kings 20:42. Indeed, as Seneca says: "The impunity of offenses makes people bolder for evil"; and as Cicero says, On Duties Book 3: "The impunity of sinning is the greatest enticement"; for by tolerating an old injury, you invite a new one. Wherefore Socrates, according to Plato, Laws Book 2, asserts that "cities are best governed when the unjust pay penalties." Solon said the same, as Cicero reports, to Brutus; Theophrastus, according to Stobaeus, chapter 41, when asked what preserves human life, answered: "Beneficence, honor, and punishment." Lycurgus, according to Cicero at the cited place, holds that Sparta and all republics stand by punishment and reward. Indeed Democritus believed in only two gods, punishment and beneficence, says Pliny, Book 2, chapter 17. More modestly, Pope Pius IV had as his emblem a laurel and a rod, with this motto: "Punishment and reward." Finally, the Wise Man in chapter 14:7: "Blessed," he says, "is the wood through which justice is done."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_joel_02.html">Previous Chapter</a></div>
     <div class="next"><a href="36_Amos_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_05.html">Previous: Romans V</a></div>
     <div class="next"><a href="59_romanos_07.html">Next Chapter</a></div>
 </div>
@@ -211,18 +211,19 @@ And from a snow-white flock the Shepherd has His joys.</em></p>
 <p>Hear also the author of the book <em>On the Spirit and the Soul</em>, vol. III of the works of St. Augustine, ch. LX, addressing this life: <em>"In you there is no corruption, nor defect, nor old age, nor wrath; but perennial peace, solemn glory, everlasting gladness, continual solemnity. Truly so great joy and exultation, the flower and glory of youth, and of perfect salvation. In you there is no yesterday, nor day-before, but it is the same today. In you is salvation, in you is life, in you is infinite peace, in you is God all things. Glorious things are said of you, City of God; for the dwelling of all who rejoice is in you. In you is no fear, no sadness: every desire passes into joy, since whatever is wished is at hand, and whatever is desired abounds."</em> And below: <em>"But they themselves who shall have been redeemed by the Lord, how devoutly will they confess and say: How good is Israel's God! for His mercy endures forever. Indeed, everlasting gladness shall be in them, and the exaltations of God in their throat unto eternity, and unto the age of the age, in perpetual eternities. Blessed are all who dwell in Your house, O Lord, they shall praise You forever and ever. They shall be inebriated from the abundance of Your house, and You shall give them to drink from the torrent of Your delight. For with You is the fountain of life, and in Your light we shall see light: when we shall see You in Yourself, and us in You, and You in us, with continual vision and perpetual happiness."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_05.html">Previous: Romans V</a></div>
     <div class="next"><a href="59_romanos_07.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import { isEnglishLapidePage, setBodyMarker, setHighlightScript } from "./pagefind-pages";
+import { isEnglishLapidePage, setBodyMarker, setHighlightScript, setNavIgnore } from "./pagefind-pages";
 
 test("canonical English Lapide pages are included", () => {
   expect(isEnglishLapidePage("01_genesis_01.html")).toBe(true);
@@ -39,4 +39,20 @@ test("setHighlightScript injects before </body> and removes cleanly", () => {
   expect(on.indexOf("pagefind-highlight:start")).toBeLessThan(on.indexOf("</body>"));
   expect(setHighlightScript(on, true)).toBe(on);            // idempotent
   expect(setHighlightScript(on, false)).toBe(base);         // full removal
+});
+
+test("setNavIgnore adds/removes on nav divs, idempotent", () => {
+  const src = '<div class="nav">\n<a>prev</a>\n</div>';
+  const on = setNavIgnore(src, true);
+  expect(on).toBe('<div class="nav" data-pagefind-ignore>\n<a>prev</a>\n</div>');
+  expect(setNavIgnore(on, true)).toBe(on);
+  expect(setNavIgnore(on, false)).toBe(src);
+  const two = '<div class="nav">a</div>x<div class="nav">b</div>';
+  expect(setNavIgnore(two, true)).toBe('<div class="nav" data-pagefind-ignore>a</div>x<div class="nav" data-pagefind-ignore>b</div>');
+});
+
+test("highlight script is gated behind the highlight param", () => {
+  const on = setHighlightScript("<body>\n</body>", true);
+  expect(on).toContain("URLSearchParams");
+  expect(on).toContain("mark.pagefind-highlight");
 });

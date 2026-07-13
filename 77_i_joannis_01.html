@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 John I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_argumentum.html">Previous: 1 John Argumentum</a></div>
     <div class="next"><a href="77_i_joannis_02.html">Next: 1 John Chapter II</a></div>
 </div>
@@ -370,17 +370,18 @@
 <p>WE MAKE HIM A LIAR (because God in the Scriptures asserts that all men are sinners, and do not live without sin, as in Eccles. VII, 21; Proverbs XXIV, 16; Psalm CXLI, 2; James III, 2, and elsewhere. And He teaches us to pray daily: <em>"Forgive us our debts."</em> Wherefore) HIS WORD IS NOT IN US. — As if to say: We do not understand, do not embrace, do not retain His true doctrine, or certainly we forget it; we do not believe the Scriptures and the word of God, which asserts all to be liable to sin, but we make that word, and God Himself, a liar. So Clement, Didymus, Cajetan, Dionysius and Catharinus. Otherwise the Gloss: <em>"The Word of God,"</em> it says, that is Christ through whom the remission of sins is made, does not remain in us, since we are unbelievers and proud, because we overturn the mystery of Christ's redemption, and say that we as just men did not need, nor need, the Redeemer Himself. Or <em>"the word"</em> which God spoke in Ecclesiasticus III, 20: <em>"The greater you are, humble yourself in all things,"</em> does not remain in us, because we do the contrary; for since we are small and sinners, we wish to be great and impeccable.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_argumentum.html">Previous: 1 John Argumentum</a></div>
     <div class="next"><a href="77_i_joannis_02.html">Next: 1 John Chapter II</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

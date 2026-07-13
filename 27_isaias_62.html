@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias LXII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_61.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_63.html">Next Chapter</a></div>
 </div>
@@ -195,17 +195,18 @@
 <p>12. And they shall call them, A holy people. — &quot;Them,&quot; namely the peoples, flocking to the standard, as preceded, that is, to the banner of the cross of Christ, into Jerusalem, that is, the Church, and enlisting under Christ&#x27;s standard: who are the reward and work of Christ, as if to say: All nations, seeing the piety and holiness of the Christians, will say: These are a holy people, these are the redeemed of the Lord, these are &quot;the seed whom the Lord has blessed,&quot; as he said in the preceding chapter, verse 9, and therefore aspiring to their holy life, they will seek their fellowship, and will desire to be enrolled in the Church: and consequently the Church will be called, that is, will be, and can rightly be called: &quot;The sought-after city, and not Forsaken.&quot; Thus Rome, the head of the Church, is the sought-after city, to which many from all nations flock for the sake of piety and religion. He alludes to Psalm 107, verse 2: &quot;Let those who have been redeemed by the Lord now say so, whom He has redeemed from the hand of the enemy, and gathered from the regions.&quot;</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_61.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_63.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_14.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_16.html">Next Chapter</a></div>
 </div>
@@ -274,17 +274,18 @@ Expediunt, tonsisque ferunt mantilia villis.</em></p>
 <p>39. And Having Dismissed the Multitude, He Went Up Into a Boat, and Came Into the Coasts of Magedan. — In Greek Magdala; the Arabic, Magedal. For often the letters M and N liquefy into L, as I showed at Canticles 6:12, in the word "Shunammite" and "Shulammite." Magedan is a town beyond the Sea of Galilee, situated near Gerasa; it is now called the region of "Magdena," says St. Jerome in <em>On the Places of the Hebrews</em>. Mark 8:10, instead of Magedan, has Dalmanutha — either because one and the same place was known by two names, as St. Augustine holds (whence certain codices in Mark have Magedan in place of Dalmanutha), or rather because these were two places or two towns, but neighboring ones, and Christ came into the borders of both, because He put in at the shore which was near to both towns. Brocardus, in his <em>Itinerary</em>, is mistaken in holding that Magedan is Medan, that is, the waters of Dan — namely, that spring from which the Jordan takes its rise, which Josephus calls Phiala; for Medan and the source of the Jordan are very far removed from the Sea of Galilee, to which Magedan was adjacent. Some are likewise mistaken in holding that Magedan is Mageddo, where Josiah, king of Judah, was slain; for Magedan lies beyond Mageddo on this side of the Sea of Galilee, and is far distant from it: it adjoins the brook Cison, and is near to Caesarea and the Mediterranean Sea. See the Geographical Tables of Adrichomius. This verse looks forward to the following chapter. Hence many begin chapter 16 from it. For it was at Magedan that there occurred the request of the Scribes for a sign from heaven, which follows.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_14.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_16.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

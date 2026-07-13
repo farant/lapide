@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_02.html">Previous: Acts II</a></div>
     <div class="next"><a href="57_acts_04.html">Next Chapter</a></div>
 </div>
@@ -223,18 +223,19 @@ See thou be kindly, that thou mayest have God kindly.</em></p>
 <p>Wherefore Micah, rightly admiring this surpassing gift of Christ, thus concludes his oracles concerning Christ, chapter VII, 18: <em>"Who is a God like unto Thee, who takest away iniquity, and passest by the sin of the remnant of Thy inheritance?"</em> And shortly after: <em>"He will turn again and have mercy on us, and will cast all our sins into the depths of the sea. Thou wilt give truth to Jacob, mercy to Abraham, which Thou hast sworn to our fathers from the days of old."</em> See what is said there.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_02.html">Previous: Acts II</a></div>
     <div class="next"><a href="57_acts_04.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_15.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_17.html">Next Chapter</a></div>
 </div>
@@ -363,17 +363,18 @@
 <p><em>"Perfect charity flourishes in all, one joy for all, one delight."</em> And St. Augustine says: <em>"In the city of God, the king is truth, the law is charity, dignity is equity, peace is happiness, life is eternity."</em> St. Bernard, On the Reward of the Heavenly Fatherland: <em>"The reward is to see God, to live with God, to live from God, to be with God, to be in God, who will be all in all. And where the supreme good is, there is supreme happiness, supreme delight, true liberty, perfect charity, eternal security, and secure eternity: there is true joy, full knowledge, all beauty, and all blessedness. There is peace, piety, goodness, gentle virtue, honesty, joys, sweetness, perennial life, glory, praise, rest, love and sweet concord."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_15.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_17.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_12.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_14.html">Next Chapter</a></div>
 </div>
@@ -138,17 +138,18 @@ To a man who will correct your wicked insolence.</p>
 <p>But I say the "scorching wind" is Christ, meaning: Because hell divided brothers from brothers, therefore God the Father brought Christ like a scorching south wind into the world, when He raised Him from the uncultivated desert of this world, and equally from the unplowed womb of the Blessed Virgin, as from a desert — to dry up and abolish the veins of death, namely the sins by which we tend toward death and hell as toward the common and abundant fountain of evils, and to desolate the fountain itself — namely death and hell — and to plunder the souls of the Holy Fathers and Saints, which death and hell held in their treasuries as the most precious and desirable possessions, and kept under close guard. So St. Cyril, Jerome, Rupert, Haymo, and others.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_12.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

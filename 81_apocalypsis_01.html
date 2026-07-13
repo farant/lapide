@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_Apocalypsis_Prooemiales_Canones.html">Previous: Prologue, Questions, Canons, and Interpreters</a></div>
     <div class="next"><a href="81_apocalypsis_02.html">Next: Apocalypse Chapter II</a></div>
 </div>
@@ -338,17 +338,18 @@
 <p>St. Gregory in the <em>Pastoral Rule</em>: <em>"By unskilled persons,"</em> he says, <em>"with how great rashness is the pastoral office undertaken, since the rule of souls is the art of arts! And the action of the Prelate ought to surpass the action of the people, as much as the life of the shepherd is distant from the flock."</em> Again: <em>"The light of the flock is the flame of the shepherd."</em> Let Bishops and Pastors read the lives of Sts. Martin, Nicholas, Ambrose, Augustine, Basil, Chrysostom, Borromeo, and other Prelates of the Church. For nothing so illumines the spirit, delights, moves, and excites it to a holy life, and one perfect in its own degree, as the lives and examples of similar Saints, as I have learned in fact from many things and the experience of many, and daily learn.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_Apocalypsis_Prooemiales_Canones.html">Previous: Prologue, Questions, Canons, and Interpreters</a></div>
     <div class="next"><a href="81_apocalypsis_02.html">Next: Apocalypse Chapter II</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

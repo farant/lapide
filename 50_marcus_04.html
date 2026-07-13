@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_03.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_05.html">Next Chapter</a></div>
 </div>
@@ -88,17 +88,18 @@
 <p>36. JUST AS HE WAS IN THE SHIP. — As though to say: The disciples took Christ out into the deep, that they might cross over with Him; Christ, I say, just as He was in the ship, namely sitting and teaching the people who stood upon the shore, as is clear from verse 1; for afterwards, in verse 38, He changed that posture, sleeping in the ship. It notes the prompt obedience of the disciples, and, in turn, the ease of Christ accommodating Himself to their readiness, that He might avoid the tumult of the flocking crowd. A little differently, Franciscus Lucas: "Just as He was in the ship," that is, he says, without His going out in any way from the ship in which He was. Whence the Syriac translates, "when He was in the ship"; the Arabic, "they took Him into the ship."</p>
 <p>AND OTHER SHIPS WERE WITH HIM. — It was done by the counsel of God, that the many who were being carried in those ships should be spectators and witnesses of the miracle which Christ was about to perform, namely the stilling of the storm.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_03.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

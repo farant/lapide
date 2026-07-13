@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>3 Kings (1 Kings) XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="11_iii_regum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="11_iii_regum_14.html">Next Chapter</a></div>
 </div>
@@ -154,17 +154,18 @@
 <p>Note here that the true cause of the destruction and ruin of families, even royal ones such as that of Jeroboam, is idolatry, heresy, and the other crimes that follow from it; and this is shown throughout this entire book and the fourth book following, through the examples of all the kings of Israel who followed Jeroboam both in the idolatry of the calves and in the kingdom. Where their remarkable blindness is evident, since although they heard these threats of God and actually saw them fulfilled in Jeroboam and their other predecessors, they themselves, as if demented, followed their idolatry; and therefore they too, together with their families, were cut off by God.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="11_iii_regum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="11_iii_regum_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

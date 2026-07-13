@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XXIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_28.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_30.html">Next Chapter</a></div>
 </div>
@@ -362,17 +362,18 @@
 <p>45. AND I WILL DWELL IN THE MIDST OF THE CHILDREN OF ISRAEL. — Namely, I will dwell in My tabernacle, which is among the children of Israel, and in it, as in My house, I will abide, and there I will show Myself present, directing and protecting My people, whom I led out of Egypt. The Chaldean translates: I will place the presence of My divinity, namely in the tabernacle and the propitiatory; for he and the Hebrews call this the <em>Shekinah,</em> that is, rest, because in it, as in its seat, the majesty of God would rest and reside.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_28.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_30.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

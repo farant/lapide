@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Maccabees V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_04.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_06.html">Next Chapter</a></div>
 </div>
@@ -100,17 +100,18 @@ Foretold the crime.</p>
 <p>HE HAD WITHDRAWN TO A DESERT PLACE, AND THERE AMONG THE WILD BEASTS HE LIVED IN THE MOUNTAINS WITH HIS COMPANIONS; AND FEEDING ON GRASS (that is, on vegetables, herbs, and roots) FOR FOOD, THEY REMAINED THERE SO AS NOT TO BE PARTAKERS OF THE DEFILEMENT — so as not to defile themselves by the companionship, conversation, and familiarity of Apollonius and his pagan soldiers, who most fiercely persecuted the Jews and compelled them to eat their foods sacrificed to idols, and indeed to sacrifice to their idols, as will be clear in chapters 6 and 7.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_04.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

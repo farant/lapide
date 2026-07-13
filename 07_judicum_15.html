@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_14.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_16.html">Next Chapter</a></div>
 </div>
@@ -139,18 +139,19 @@
 <p>20. AND HE JUDGED ISRAEL IN THE DAYS OF THE PHILISTINES FOR TWENTY YEARS — during which the Philistines were oppressing the Hebrews. From this it is clear, first, that Samson's years ran concurrently with the 40 years of servitude, as I said at chapter 13, verse 1. It is clear, second, that Samson truly was a Judge of Israel. However, he was unlike the other Judges, who fought through armies; for he alone fought against armies, routed them, and killed them. It is clear, third, that he judged for 20 years.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_14.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_16.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

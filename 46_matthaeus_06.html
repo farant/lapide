@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_05.html">Matthew V</a></div>
     <div class="next"><a href="46_matthaeus_07.html">Next Chapter</a></div>
 </div>
@@ -328,17 +328,18 @@
 <p>SUFFICIENT FOR THE DAY IS ITS OWN EVIL. — "Evil," that is, trouble, care, and affliction "its own." As if to say: Each day brings its own trouble and anxiety to a man: why then does he needlessly summon upon himself others from the morrow and the future? The Greek kakia, that is, malice, is therefore taken for kakosis, that is, the infliction of evil or affliction. So Jacob says to Pharaoh: "The days of my pilgrimage are one hundred and thirty years, small and evil," that is, miserable. Gen. 47:9. So conversely goodness or good is taken for what is joyful, cheerful and pleasant, as: "Behold how good and how pleasant it is for brethren to dwell together in unity." Psalm 132:1. So St. Jerome, Chrysostom, Theophylact, Euthymius and St. Augustine, Book II On the Lord's Sermon on the Mount, where he expounds this whole sermon of Christ at length. St. Chrysostom gives the reason: "In order that He might rebuke them more sharply, he says, He animated the time itself, and as it were introduced it as afflicted by all, as though it were clamoring superfluously against them concerning the affliction imposed upon it." Hear also St. Augustine: "He calls necessity an evil, because it is penal for us; for it pertains to the mortality which we deserved by sinning. When we see a servant of God providing for necessities, let us not think he is acting against the Lord's precept; for the Lord Himself, for the sake of example, had purses, and in the Acts of the Apostles we read that necessaries were procured for the future because of an impending famine: we are therefore not forbidden to procure things, but to be anxious about them."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_05.html">Matthew V</a></div>
     <div class="next"><a href="46_matthaeus_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

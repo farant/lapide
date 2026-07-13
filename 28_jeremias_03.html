@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_02.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_04.html">Next Chapter</a></div>
 </div>
@@ -171,17 +171,18 @@ That man holds the first place in all shamelessness.</p>
 <p>Hear also Peter Chrysologus: "Who, he says, sinned more enormously in the world than Paul? Who more gravely in religion than Peter? Yet they through repentance merited to attain not only the ministry, but even the mastery of holiness." Emperor Otto IV, excommunicated by Innocent III, found a rival in Frederick II, and was never again fortunate; near the end of his life, struck with unspeakable contrition, absolved by Bishop Sifrid of Hildesheim, he rested in peace, and Pope Honorius ratified the absolution. So great is said to have been the dying man's repentance that he ordered his cooks to press his neck with their heels, and to trample him as the vilest creature. So Crantzius, book 7 of the Saxon Chronicle, chapter 37.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_02.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

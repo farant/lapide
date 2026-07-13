@@ -26,7 +26,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Synopsis of the History, Chronology, and Doxology of Genesis</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_50.html">Previous Chapter</a></div>
 	<div class="next"><a href="02_exodus_01.html">Next: Exodus I</a></div>
 </div>
@@ -311,17 +311,18 @@
 
 <p><em>Glory be to the Father, and to the Son, and to the Holy Spirit: as it was in the beginning, is now, and ever shall be, world without end. Amen.</em></p>
 
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_50.html">Previous Chapter</a></div>
 	<div class="next"><a href="02_exodus_01.html">Next: Exodus I</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

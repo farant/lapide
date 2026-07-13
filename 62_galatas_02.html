@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Galatians II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_01.html">Previous: Galatians Chapter I</a></div>
     <div class="next"><a href="62_galatas_03.html">Next: Galatians Chapter III</a></div>
 </div>
@@ -215,18 +215,19 @@
 <p>For if justification be by the law, then Christ died in vain. — Because Christ died to procure for us righteousness by the price of His death: but He gave this price in vain, He spent it in vain, if from the law we could have the same righteousness. This is the third argument from the impossible, that is to say: No one is so witless as to say that Christ suffered so many and so great things and died in vain; but He suffered all these things and died for the procuring of righteousness for us: therefore this righteousness comes to us not from Moses, but from Christ; not from the law, but from faith.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_01.html">Previous: Galatians Chapter I</a></div>
     <div class="next"><a href="62_galatas_03.html">Next: Galatians Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Malachias I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="45_Malachias_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="45_malachias_02.html">Next Chapter</a></div>
 </div>
@@ -202,17 +202,18 @@
 <p>The Septuagint derives the Hebrew nora not from iare, that is, he terrified; but from raa, that is, he saw, and so translates: epiphanes, that is, my name is illustrious among the nations. This was true in the time of Malachi and the Maccabees, whose heavenly victories made God illustrious and formidable to all nations throughout the world; it is more truly so in Christ and Christians: for all nations celebrate Christ and His God the Father. So Theodoret.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="45_Malachias_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="45_malachias_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

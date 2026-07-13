@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_16.html">Previous: Acts XVI</a></div>
     <div class="next"><a href="57_acts_18.html">Next Chapter</a></div>
 </div>
@@ -418,17 +418,18 @@ has yielded, and you conquer Athens, untaught in doctrine?</em></p>
 <p><em>AND OTHERS WITH THEM.</em> — Many think that one of them was Hierotheus. For the Greeks, and among them Ambrosius Morales in the <em>History of Spain,</em> and Juan Mariana, Book IV <em>On the Affairs of Spain,</em> chap. III, report that he was an Athenian, and that the name itself indicates he was Greek; for in Greek <em>ἱερόθεος</em> is the same as sacred or consecrated to God. Hence also in the Roman Martyrology, on the 4th of October, we read of him thus: "At Athens, of St. Hierotheus, disciple of St. Paul." And on the same day the Menology of the Greeks has: "The birthday [into heaven] of our holy father Hierotheus, who was one of the number of the Areopagites, who was instructed by the apostle Paul together with that great Dionysius, and when he had lived religiously, migrated to the Lord." Some add that Hierotheus was Bishop of Athens; but the Menology has nothing of the sort. The Spanish, however, hold that Hierotheus was a Spaniard, or rather Prefect of Spain; and that he was converted there by Paul: so Morales, and Ribadeneira in the <em>Life of St. Dionysius.</em> Moreover, Hierotheus is marvellously praised throughout by St. Dionysius. For, in chap. II <em>Of the Divine Names,</em> he is called by him "our illustrious teacher, <em>οὐ μόνον μαθὼν, ἀλλὰ καὶ παθὼν τὰ θεῖα,</em> that is, not only learning, but also experiencing divine things, consummate," etc. And in chap. III, that next after the Apostles he was judged the praiseworthy one by all, and therefore he sets him in the place of guarantor: "He surpassed," he says, "all the Doctors, wholly exceeding them, wholly placed outside himself, inspired by divine power, seized by God, divine — that is, a certain sacred God, and our divine teacher."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_16.html">Previous: Acts XVI</a></div>
     <div class="next"><a href="57_acts_18.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

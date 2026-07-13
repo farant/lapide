@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_11.html">Previous: 1 Corinthians XI</a></div>
     <div class="next"><a href="60_i_corinthios_13.html">Next: 1 Corinthians XIII</a></div>
 </div>
@@ -207,18 +207,19 @@
 <p>Note: The Commentary ascribed to Jerome here teaches that charity is separated by the Apostle from the charisms, that is from graces freely given, in that these are given freely by God, but charity is acquired by our labor and the powers of nature. Hence you may gather that this Commentary is not St. Jerome's, but of Pelagius or some Pelagian, as I said at the outset. Primasius corrected this — he transcribed much from this Commentary — and it is clear that charity is the gift of God, Rom. v, 5: <em>"The charity of God is poured forth in our hearts by the Holy Spirit who is given to us."</em> Hence Paul says here: <em>"A more excellent way,"</em> ὁδὸν καθ' ὑπερβολὴν, by hyperbole, by excess, that is, an excessively better and more outstanding way, namely of charity, I show you. Thus Theophylact from Chrysostom. Whence also Cassian, Collation XI, chap. XII, reads thus: <em>"And I show you a more excellent way beyond measure."</em> If therefore the freely-given graces, which are lesser, are given by God; much more must charity, which is excessively better and more eminent than they, be sought from and given by God. In this then the Apostle distinguishes charity from the charisms, that the latter are given freely for the benefit of the Church, not for the sanctification of him to whom they are given: but charity is given for this, that he who has it may become holy and pleasing to God. <em>"He,"</em> says St. Augustine, sermon On the Praises of Charity, <em>"holds both what is manifest and what is hidden in the divine words, who holds charity in his ways."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_11.html">Previous: 1 Corinthians XI</a></div>
     <div class="next"><a href="60_i_corinthios_13.html">Next: 1 Corinthians XIII</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

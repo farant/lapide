@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XLVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_47.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_49.html">Next Chapter</a></div>
 </div>
@@ -271,17 +271,18 @@
 <p>(1) 'Terror, and pit, and snare upon you.' You will be seized by dread, captured by the snare of enemies, and fall into the ditch prepared for your destruction. These are figurative expressions, drawn from hunting. When a large beast is to be captured, such as a stag, boar, or bear, part of the thicket where it hides is surrounded partly with very strong nets, into which the beast is driven, partly with denser cord, with feathers of various colors hung here and there, which, agitated by the wind, terrify the beast and drive it into the nets. Ancient writers everywhere recall this custom. (Calmet, Cursus complet. of Sacred Scripture.) See a similar manner of speaking in Isaiah 24:17.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_47.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_49.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

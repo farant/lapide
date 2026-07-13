@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joshua XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_12.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_14.html">Next Chapter</a></div>
 </div>
@@ -152,18 +152,19 @@ Rejoices in the waters it itself carries and overflows with the Nile.</em></p>
 <p>TO THE HALF OF THE SONS OF MACHIR. — Machir alone, son of Manasseh, survived his father; therefore the tribe of Machir is the same as the tribe of Manasseh: for Machir, as the sole son, was the complete heir of his father Manasseh. To Machir however was added Jair, his grandson through his daughter, although Jair by his father belonged to the tribe of Judah: hence the descendants of Jair lived in Gilead with the descendants of Machir, I Chronicles 2:21 and following.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_12.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_14.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

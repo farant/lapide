@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_20.html">Previous: Acts XX</a></div>
     <div class="next"><a href="57_acts_22.html">Next Chapter</a></div>
 </div>
@@ -244,18 +244,19 @@
 <p>Finally, Paul was captured around Pentecost, as I have said at vers. 17, and perhaps on the very feast of Pentecost — to which he alluded when he said in cap. xx, vers. 22: "Behold, bound in the spirit I am going to Jerusalem, and the Holy Spirit testifies that bonds and tribulations await me at Jerusalem," that is: The Holy Spirit binds and impels me to Jerusalem, that on His feast — namely Pentecost — I might be bound in chains for Him. Hence, just as St. Peter twenty-four years before, on the first Christian Pentecost, delivered the first sermon to the people (Acts ii), so on the same feast Paul here delivers his; but with a different cause and outcome. For Peter, on account of the wonders of Pentecost, had hearers most capable and benevolent, and so by the force of the Spirit and a fiery tongue immediately converted three thousand persons; but Paul preached to enemies most hostile to him, demanding his death: hence he reaped no other fruit than that, by throwing clothes and dust at him, they cried out: Away with him from the earth; for it is not fitting that he should live.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_20.html">Previous: Acts XX</a></div>
     <div class="next"><a href="57_acts_22.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

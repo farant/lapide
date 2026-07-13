@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_23.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_25.html">Next Chapter</a></div>
 </div>
@@ -360,17 +360,18 @@ When the renewed face of God shall flash forth aflame.")</p>
 <p><em>With the hypocrites,</em> — that is, with slothful servants, who like hypocrites serve only before their master's eye, and are otherwise idle: for when set out of their master's sight, they give themselves to sleep and drinking, and therefore are to be sent into the workhouse of hell, where is the place of the slothful. Thus throughout Proverbs "hypocrite" signifies an impious man, who slothfully serves God but fervently serves his own desires, as I have said there. He alludes to Job XX, 29: "This is the portion of the wicked man from God." And chapter VIII, 13: "The hope of the hypocrite shall perish." And chapter XIII, 16: "For no hypocrite shall come before His face." And Isaiah XXXIII, 14: "The sinners in Zion are affrighted, trembling has seized the hypocrites: Who among you shall be able to dwell with devouring fire? who among you shall dwell with everlasting burnings?"</p>
 <p>Christ has proved that every faithful man must always be watchful, so that by good works he may prepare himself for the Lord's certain coming to judgment — since the day of it is uncertain — lest it come upon him unprepared and overwhelm him unprepared, with certain danger of damnation. He proved this, first, in verse 37, by the example of the Flood, which in the time of Noah unexpectedly submerged all; second, in verse 43, by the parable of the master who watches to repel the thief stealing in secretly by night; third, in verse 45, by the parable of the faithful servant and of another unfaithful servant, of whom the former received from his master a great reward, and this one a harsh punishment; fourth, in the following chapter, verse 1, by the parable of the prudent virgins, who took oil in their lamps; fifth, in the same place, verse 14, by the parable of the talents, which the master distributed among his servants, and gloriously rewarded those who traded vigorously with them, but punished the slothful and idle.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_23.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_25.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

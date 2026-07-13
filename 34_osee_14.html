@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_13.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_01.html">Next Chapter</a></div>
 </div>
@@ -76,17 +76,18 @@
 <p>10. WHO IS WISE, AND SHALL UNDERSTAND THESE THINGS? -- namely my oracles: for they are profound and remote from the understanding of carnal and impious men, and accessible only to the just. So say St. Jerome and Rupert. Or rather, "these things" refers to the mysteries and promises of Christ, meaning: How few Jews will there be who believe, understand, love, and practice these mysteries of Christ, who is the way, the truth, and the life!</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_13.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_04.html">Matthew IV</a></div>
     <div class="next"><a href="46_matthaeus_06.html">Next Chapter</a></div>
 </div>
@@ -500,17 +500,18 @@
 <p>Moreover, all perfection in this life is only incipient and imperfect; for concupiscence, like the Jebusite dwelling in our members, can be subdued but cannot be uprooted; but full and perfect perfection will be in heaven, where this corruptible body will put on incorruption, and this mortal body will put on blessed immortality; where concupiscence and death will be swallowed up by glory, and God will be all in all (1 Corinthians 15). For there, there will be no desire, because charity will fill all things. Hence the Apostle, Philippians 3:12, says of himself: <em>"Not that I have already obtained, or am already perfect; but I press on, if somehow I may lay hold of it."</em> And shortly after: <em>"But stretching forth to those things that are ahead, I press on toward the goal, for the prize of the heavenly calling of God in Christ Jesus."</em> St. Augustine wrote on this subject in his book On the Perfection of Justice.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_04.html">Matthew IV</a></div>
     <div class="next"><a href="46_matthaeus_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

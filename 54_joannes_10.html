@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_09.html">Previous: John IX</a></div>
     <div class="next"><a href="54_joannes_11.html">Next: John XI</a></div>
 </div>
@@ -304,17 +304,18 @@
 <p>42. And many believed in Him. — The Greek adds, 'there,' namely in Bethabara, on account of the memory of the testimony of God the Father and of John the Baptist, as I said at verse 40. Doubtless, as St. Augustine says, "they apprehended Him remaining, not as the Jews wished to apprehend Him departing: and so let us also come through the lamp to the day; for John was a lamp, and gave testimony of the day."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_09.html">Previous: John IX</a></div>
     <div class="next"><a href="54_joannes_11.html">Next: John XI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ephesians I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_argumentum.html">Previous: Ephesians Introduction</a></div>
     <div class="next"><a href="63_ephesios_02.html">Next: Ephesians Chapter II</a></div>
 </div>
@@ -250,18 +250,19 @@
 <p>Note: Christ did not Himself accomplish all things, but He left many things to be accomplished by the Apostles and other heralds of the word of God — namely, the procuring of the salvation of all men, that Christ may be completed with all His elect as with members. Therefore those who labor for the salvation of souls, as many souls as they win for Christ, so many members of Christ's body, and Christ Himself, do they perfect and complete. This indeed is a great dignity, a great spur, that each one should expend himself wholly on the conversion of souls, and graft them into Christ, and complete the body of Christ, which in that part is still maimed. So in Col. 1:24 he says: <em>"I fill up those things that are wanting of the sufferings of Christ, in my flesh, for His body, which is the Church."</em> Therefore by suffering and laboring for the salvation of our neighbors, we fill up the sufferings and labors of Christ, and the very body of Christ, and Christ Himself.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_argumentum.html">Previous: Ephesians Introduction</a></div>
     <div class="next"><a href="63_ephesios_02.html">Next: Ephesians Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias LV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_54.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_56.html">Next Chapter</a></div>
 </div>
@@ -177,17 +177,18 @@
 <p>10, 11. As the rain comes down, and the snow from heaven, so shall My word be. — St. Jerome, Cyril, Haymo, and Forerius explain this "word" in three ways, which nevertheless nearly all amount to one and the same thing. For by the word, first, they understand Christ, who, like rain and snow coming from heaven, made the soil of our heart fruitful with good works; second, they understand the Gospel, through which Christ produces these fruits; third, and most plainly, this promise of God, that is: This word of Mine, by which I have promised such magnificent things concerning the new covenant, and concerning the Messiah and grace, and the good things to be given through Him to the world, namely to those who believe in Him and repent — it shall be most firm and most efficacious; for it shall bring it about that people, stirred by hope of pardon, of God's friendship, and of salvation, shall produce fruits worthy of repentance and virtue, by which they shall truly be reconciled to God, allied with Him, and become eternal friends of God, indeed heirs and children. For thus this word of God waters and fertilizes the soul, just as rain and snow water and fertilize the earth.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_54.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_56.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

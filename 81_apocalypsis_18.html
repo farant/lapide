@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_17.html">Previous: Apocalypse Chapter XVII</a></div>
     <div class="next"><a href="81_apocalypsis_19.html">Next: Apocalypse Chapter XIX</a></div>
 </div>
@@ -177,17 +177,18 @@
 <p>See how all pomp goes off into smoke, how glory ends in ignominy, wealth in nothing, applause in lamentation: how luxury turns to mire, indeed to mourning, delights to filth, pleasures to torments: namely, mourning seizes the end of joy. So passes the glory of the world. Babylon falls from heaven into mire, from mire into hell. Where now is her golden cup? where the wine of prostitution with which she made the nations drunk? where the fasces? where the scepters? where the horns? where the ten diadems? They have vanished, all have passed away as a shadow, become food for worms, fodder for demons, bellows and tinder of Gehenna. O how empty, how brief, how deceitful, how filthy, how deadly is every joy of the world! Thou who readest these things, who understandest, who art wise, beware the alluring voluptuous cup of Babylon, flee her honey which turns to gall, laugh at and despise the titles of honors and dignities which she offers, because they are nothing but the rattles and bubbles of children, indeed more vain and empty than bubbles and smoke. Live therefore, not for Babylon, but for the Church; live, not for pleasure, but for virtue; live, not for the world, but for God; live, not for time, but for eternity.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_17.html">Previous: Apocalypse Chapter XVII</a></div>
     <div class="next"><a href="81_apocalypsis_19.html">Next: Apocalypse Chapter XIX</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_03.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_05.html">Next Chapter</a></div>
 </div>
@@ -205,17 +205,18 @@ The fount and end in every work, making good things and preserving what He has m
 <p>Hear St. Jerome: "Prepare yourself," he says, "to meet your God, so that you may receive the Lord coming to you with all eagerness. This is He who establishes the thunder, or confirms the mountains: at whose voice the hinges of heaven and the foundations of the earth are shaken. This is He who creates the spirit." Therefore Timaeus the Pythagorean calls God "the exemplary world." For just as the world with its embrace encircles and binds all things, so also does God. For He Himself is the greatest and most universal nature, present everywhere, seeing and hearing all things, containing everything, yet contained by no circumference. He Himself is the uncreated world of wisdom, holiness, intelligence, life, reasons, forms — the cause, fount, creator, and ruler of all other things. Therefore the Egyptians, says Eusebius, Book 3 of the Preparation for the Gospel, chapter 117, depict God, whom they call Eneph, in human form, of blue color, holding a belt and a scepter, bearing a feather on his head, and producing an egg from his mouth. For the shell of the egg represents the image of the sky encircling all things; the yolk represents fire; the air-spaces in the egg represent air; the white represents water; and the more solid parts are the symbol of earth. Eusebius adds another hieroglyph of God.</p>
 <p>He predicts and laments the extreme and eternal devastation of Samaria, to be brought about by the terrible God who makes Arcturus and Orion, and who laughs at the devastation upon the strong, because of its crimes, especially because of the plundering and oppression of the poor. Then, verse 14, He exhorts it to penance. For, verse 21, He asserts that He does not care about its victims and external ceremonies, indeed He detests them.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_03.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

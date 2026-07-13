@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_argumentum.html">Previous: 1 Corinthians Introduction</a></div>
     <div class="next"><a href="60_i_corinthios_02.html">Next: 1 Corinthians II</a></div>
 </div>
@@ -229,18 +229,19 @@
 <p><em>"He,"</em> says Anselm, <em>"glories in the Lord alone, who recognizes that not what is his own, but what is God's, exists — not only that it exists, but also that it is only well with it from Him from whom it has its being."</em> Again, he who, having something whereby he may please God, does not credit it to his own wisdom, power, works, talent, or merits, but counts it as received from the grace of God alone. Thirdly, he who in all that he does seeks not his own, but the Lord's glory. St. Bernard wrote a notable sermon on these words of the Apostle, De Triplici Gloria (On Threefold Glory). The same, in his 25th sermon on the Canticles: <em>"For this reason, he says, all the glory of the Saints is within, not without — that is, not in the flower of grass, or in the mouth of the crowd, but in the Lord: because God alone is the judge of conscience, whom alone they desire to please, and to please whom is the sole true and highest glory."</em> And in his 13th sermon on the Canticles: <em>"Brothers, let none of you wish to be praised in this life; because whatever favour you snatch here, which you do not refer to God, you steal from Him. For you, putrid dust, whence glory to you, whence?"</em> And in the Sentences: <em>"The Apostle had known that proper glory belongs to the Creator, not to the creature; but he considered that the rational creature so affects glory that it can scarcely or never be restrained from this desire, inasmuch as it has been made in the image of the Creator. Therefore he devised this most healthful counsel, saying: Since we cannot be persuaded not to glory, at least let him that glorieth, glory in the Lord."</em> Let us therefore say continually with the Psalmist: <em>"Not unto us, Lord, not unto us, but unto thy name give glory."</em> And with the twenty-four elders casting their crowns before the throne: <em>"To Him that sitteth on the throne, and to the Lamb, blessing, and honour, and glory, and power, for ever and ever. Amen,"</em> Apocalypse ch. IV, v. 11, and ch. V, v. 13 and 14.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_argumentum.html">Previous: 1 Corinthians Introduction</a></div>
     <div class="next"><a href="60_i_corinthios_02.html">Next: 1 Corinthians II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

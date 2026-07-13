@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Kings (2 Samuel) IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_ii_regum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="10_ii_regum_10.html">Next Chapter</a></div>
 </div>
@@ -71,17 +71,18 @@
 <p>Allegorically, David, raising up the lowly and lame Mephibosheth, represents Christ, who chooses the weak and contemptible things of the world to confound the strong, 1 Corinthians 1, when, as Angelomus says, "He whom He sees to be weak in speech and action for the world's ministries and the carrying out of worldly affairs, He chooses for the divine ministry; because the one whom the world spurns through the pride of haughtiness, God acquires through the devotion of humility. For Mephibosheth is interpreted, beauty of shame. He therefore, whose speech and presence the pride of the world despises, will appear by God's gift useful for the spiritual ministry in the Church."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_ii_regum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="10_ii_regum_10.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on Colossians: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_04.html">Previous: Philippians Chapter IV</a></div>
     <div class="next"><a href="65_colossenses_01.html">Next: Colossians Chapter I</a></div>
 </div>
@@ -43,18 +43,19 @@
 <p>Note fifthly: It was written at Rome in chains, as is clear from chapter IV, verse 18, in the 4th year of his chains, which was the 60th year from Christ's birth. For Timothy (whom in the previous year he had called to him at Rome, as he said in the proem of the Epistle to the Philippians) had already arrived at Rome. Hence Paul also at the beginning of the epistle joins Timothy to himself as if greeting the Colossians together with him. It was sent through Tychicus and Onesimus, as the Greek, Syriac, and Complutensian Latin texts have at the end of the Epistle, and as is gathered from chapter IV, verses 7 and 9.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_04.html">Previous: Philippians Chapter IV</a></div>
     <div class="next"><a href="65_colossenses_01.html">Next: Colossians Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Proverbs X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="22_proverbia_09.html">Previous Chapter</a></div>
     <div class="next"><a href="22_proverbia_11.html">Next Chapter</a></div>
 </div>
@@ -514,17 +514,18 @@
 <p>The speeches of the just are so apt and elegant that they seem filled with graces, and again so firm that they cannot be undone; but the speech of the wicked produces weariness and abomination. This is what the Apostle admonishes, Ephesians IV, 29: <em>"Let no evil speech proceed from your mouth; but if any good speech for the building up of faith, that it may give grace to the hearers."</em> And Colossians IV, 6: <em>"Let your speech be always in grace, seasoned with salt, that you may know how you ought to answer every one."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="22_proverbia_09.html">Previous Chapter</a></div>
     <div class="next"><a href="22_proverbia_11.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

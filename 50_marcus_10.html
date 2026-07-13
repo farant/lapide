@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_09.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_11.html">Next Chapter</a></div>
 </div>
@@ -76,17 +76,18 @@
 <p id="verse-52"><b>Verse 52: And He Followed Him in the Way</b></p>
 <p>52. AND HE FOLLOWED HIM IN THE WAY. — Morally, the Gloss says: Let us consider by what way He walks, and let us follow through humility and labors. For He says "the Way": "I am the Way, the Truth, and the Life." This is the narrow way, which leads to the heights of Jerusalem and Bethany, to the Mount of Olives, which is the mount of light and consolation, nay, to Sion and the heavenly Jerusalem. Therefore the blind man sees and follows, because whoever rightly understands the life of Christ ought to follow and imitate it in deed.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_09.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_11.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

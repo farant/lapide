@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_12.html">Previous: Hebrews Chapter XII</a></div>
     <div class="next"><a href="73_Catholic_Epistles_Argumentum.html">Next: Catholic Epistles Introduction</a></div>
 </div>
@@ -248,18 +248,19 @@
 <p>O Jesus Christ, our Love, by the blood of Your eternal testament, fit us in every good, that always and everywhere we may do Your will, and what is pleasing to You. O Father of the age to come, lead us by the straight path to a happy ETERNITY, that for ages of ages we may sing to the Most Holy Trinity: <em>"You have redeemed us, O Lord God, and You have made us a kingdom and priests, and we shall reign forever."</em> O endless, O glorious, O exceedingly long, high, broad, and deep ETERNITY!</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_12.html">Previous: Hebrews Chapter XII</a></div>
     <div class="next"><a href="73_Catholic_Epistles_Argumentum.html">Next: Catholic Epistles Introduction</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

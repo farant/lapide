@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_01.html">Previous: Hebrews Chapter I</a></div>
     <div class="next"><a href="72_hebraeos_03.html">Next: Hebrews Chapter III</a></div>
 </div>
@@ -185,18 +185,19 @@
 <p>Note here morally, that those who conquer temptations within themselves are justly given this reward by God, that they should help others assailed by the same temptation, and they are apt to overcome it in them. Thus those who have subdued in themselves the spirit of pride, gluttony, anger, will easily make others tame the same. Thus those who have overcome scruples in themselves will easily heal the scrupulous. Indeed, this was the meaning and judgment of the holy anchorites, that whatever demon each one overcame as tempting himself, they would say he would expel from the minds and even from the bodies of others obsessed and possessed by it. To pass over others, abbot Pityrion, disciple of St. Antony and heir of his spirit, mighty and effective in expelling demons, taught his own this very thing when in Palladius's <em>Lausiac History,</em> ch. LXXIV, he speaks thus: <em>"Whoever, O sons, wishes to drive out demons, must first reduce the affections of his soul to servitude: for whatever affection one has overcome, his demon also he expels; but you must little by little conquer the affections, that you may expel their demons. If therefore anyone overcomes gluttony, he expels its demon."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_01.html">Previous: Hebrews Chapter I</a></div>
     <div class="next"><a href="72_hebraeos_03.html">Next: Hebrews Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

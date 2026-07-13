@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on the Catholic Epistles: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_13.html">Previous: Hebrews Chapter XIII</a></div>
     <div class="next"><a href="74_iacobi_argumentum.html">Next: James Introduction</a></div>
 </div>
@@ -45,18 +45,19 @@
 <p>Furthermore, St. Jude is wholly devoted to orthodox faith, St. John to charity, St. James to prayer and patience, and St. Peter to commending Christian holiness to the faithful. Among the works of St. Thomas Aquinas there exist Commentaries on the Canonical Epistles; but our Lorinus and others [hold otherwise]: although Bellarmine and some others suppose them to be genuine works of St. Thomas Aquinas. In truth, however, they are not of St. Thomas the Angelic Doctor, since they are by Thomas the Englishman, just as the Commentaries on Genesis, Isaiah, Jeremiah, and the Apocalypse [also are]; so teach Sixtus of Siena and Possevinus in their Bibliothecae.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_13.html">Previous: Hebrews Chapter XIII</a></div>
     <div class="next"><a href="74_iacobi_argumentum.html">Next: James Introduction</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

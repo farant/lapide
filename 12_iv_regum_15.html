@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_14.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_16.html">Next Chapter</a></div>
 </div>
@@ -138,17 +138,18 @@ This was the first day the walls began to stand.</p>
 <p>Hence also St. Jerome, in chapter 1 of Isaiah, had completed the following works and erected the royal throne there in the fourth year of Ahaz. So also St. Augustine, book XVIII of the City of God, chapter 22: "Whom (Hezekiah)," he says, "it is established to have been a most excellent and most pious king, having reigned in the times of Romulus." says that Hezekiah began to reign in the twelfth year of Romulus: therefore the first year of Romulus falls in the fourth year of Ahaz, since he himself, having laid Rome's foundations in the eleventh year of Jotham, completed the building over the following seven or eight years.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_14.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_16.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_06.html">Previous: Luke VI</a></div>
     <div class="next"><a href="52_lucas_08.html">Next: Luke VIII</a></div>
 </div>
@@ -307,17 +307,18 @@
 <p><em>I myself have seen one who could rein in the savage lion: / I have seen Love who alone could tame hearts.</em> "Love conquers all things." See what is said on Canticles 8, on the words: "Love is strong as death, jealousy as hard as hell."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_06.html">Previous: Luke VI</a></div>
     <div class="next"><a href="52_lucas_08.html">Next: Luke VIII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

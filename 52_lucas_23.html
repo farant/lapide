@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_22.html">Previous: Luke XXII</a></div>
     <div class="next"><a href="52_lucas_24.html">Next: Luke XXIV</a></div>
 </div>
@@ -137,17 +137,18 @@ Path, where paradise lies.</p>
 <p><em>AND SAYING THIS, HE EXPIRED.</em> — The Syriac renders: He said this, and finished — namely, His life. The Arabic: and when He had said this, He delivered His spirit into the hands of the Father, as He had said. This was therefore a certain sign that He was the Son of God the Father whom He had invoked, and that the Father had heard the cry of His Son and received His spirit. For when He had said: "Father, into your hands I commend my spirit," only then did He permit death to approach Him. Euthymius says, on chapter XXVII of Matthew, that since He knew with certainty that the Father would safely keep His spirit delivered into His hands, as a deposit, and would return it to Him on the third day at the resurrection — therefore, certain in this hope, joyful and eager, He delivered His spirit to the Father.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_22.html">Previous: Luke XXII</a></div>
     <div class="next"><a href="52_lucas_24.html">Next: Luke XXIV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joshua XVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_15.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_17.html">Next Chapter</a></div>
 </div>
@@ -72,18 +72,19 @@
 <p>Tropologically, Saint Gregory, Book 4 of his Moralia, chapter 22: <em>"What does the Canaanite, that is, the gentile people, signify except vice? And often we enter the promised land with great virtues, because we are strengthened by intimate hope of eternity; but while amid sublime deeds we retain certain small vices, we allow, as it were, the Canaanite to live in our land. Yet he becomes our tributary, because we humbly turn that very vice which we cannot subdue to the use of our own benefit, so that by it the mind may think lowly of itself even amid the highest things, since by its own strength it cannot overcome even the small things it desires."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_15.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_17.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on 1 Kings (1 Samuel): Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="08_ruth_04.html">Previous: Ruth Chapter IV</a></div>
     <div class="next"><a href="09_i_regum_01.html">Next: 1 Kings Chapter I</a></div>
 </div>
@@ -75,17 +75,18 @@
 <p>In Olympiad 56, Cyrus reigned; Haggai and Zechariah prophesied. All these and more from St. Cyril.</p>
 <p>Note that in this computation of St. Cyril, the Judge "Esebon" is Ibzan. For the Septuagint call him Ebesan, for which the manuscript of Cyril corruptly has Ebeson, under whom Cyril believes Troy was captured, although Eusebius, Salianus, and others think that Troy was captured precisely in the last year of the judge Elon, who immediately succeeded Ibzan. But this is a small difference in such a great number and computation of ancient years, and can be harmonized by saying that Troy was besieged by the Greeks for ten years: so that under Ibzan the siege began, and this is what Cyril means; but under Elon it was captured, and this is what Eusebius, Salianus, and others mean. Again, Cyril counts five years from the fall of Troy to Samson: therefore for "Esebon" in Cyril it seems one should read "Abdon." For he succeeded the judge Elon and governed for eight years (Judges chapter 12:8 ff.). Samson then succeeded Abdon. For this was the order: Ibzan presided over Israel for seven years; after him Elon for ten years; after him Abdon for eight years; after him Samson for 20 years. Cyril attributes to his "Esebon" or Abdon only five years. Hence he again asserts that in the year 65 after the fall of Troy, Eli died and Samuel succeeded him, when in fact this precisely occurred in the year 69 after the fall of Troy, as is clear from what has been said.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="08_ruth_04.html">Previous: Ruth Chapter IV</a></div>
     <div class="next"><a href="09_i_regum_01.html">Next: 1 Kings Chapter I</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

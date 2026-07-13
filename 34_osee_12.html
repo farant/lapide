@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_11.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_13.html">Next Chapter</a></div>
 </div>
@@ -108,17 +108,18 @@
 <p>The same in Psalm L, explaining the words: Behold, for You have loved truth — that is, he says: "You have not left unpunished the sins even of those whom You forgive: You have loved truth; thus You have extended mercy, so as to preserve truth as well. You forgive the one who confesses — You forgive, but the one who punishes himself. Thus mercy and truth are preserved: mercy, because man is freed; truth, because sin is punished." See the same, Epistle 122 to Victorianus, where he teaches that God spares no one who sins, not even a saint; and therefore He permitted the barbarians invading Italy and Spain to afflict even holy men, and to violate consecrated virgins.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_11.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_13.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

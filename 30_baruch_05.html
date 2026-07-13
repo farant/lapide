@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Baruch V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_04.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_06.html">Next Chapter</a></div>
 </div>
@@ -106,17 +106,18 @@ And the suns shine brighter.</p>
 <p>Seventh, all things shall refresh the blessed: God, angels, the elements, the stars, air, earth; indeed even hell and the damned, over whom they shall rejoice to have conquered and to trample underfoot. Rightly, therefore, St. Augustine exclaims in the passage cited: "O life which God has prepared for those who love Him, life-giving life, blessed life, secure life, tranquil life, beautiful life, pure life, chaste life, holy life, life ignorant of death, life that knows no sorrow, life without stain, without pain, without anxiety, without corruption, without change, without disturbance, life most full of all elegance and dignity: where there is no adversary attacking, where there is no enticement of sin, where there is perfect love and no fear, where the day is eternal, and there is one spirit of all! The more I contemplate you, the more I languish with love. O most happy life! O truly blessed kingdom! to which no ages succeed through eternity: where the continuous day without night knows no time: where the victorious soldier, joined to those hymn-singing choirs of angels, sings to God without ceasing a song of the songs of Zion?"</p>
 <p>Eighth, do you want the sun of the blessed? Hear St. John, Revelation 22:5: "And night shall be no more, and they shall not need the light of a lamp, nor the light of the sun, because the Lord God shall illumine them, and they shall reign forever and ever;" and chapter 21, verse 23: "The city has no need of sun or moon to shine upon it: for the glory of God illumines it, and its lamp is the Lamb. And the nations shall walk in its light." Indeed, the sun itself, rejoicing with the saints, shall be far more resplendent than usual. "And the light of the moon shall be as the light of the sun, and the light of the sun shall be sevenfold, as the light of seven days," says Isaiah, chapter 30:26.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_04.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

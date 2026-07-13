@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Baruch II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_01.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_03.html">Next Chapter</a></div>
 </div>
@@ -174,17 +174,18 @@ AND THEY SHALL TURN TO THEIR HEART — they shall come to their senses: for trib
 <p>35. And I will establish. — These words are taken from Jeremiah chapter 31:31. See what was said there.
 ANOTHER EVERLASTING COVENANT — that is, a long-lasting one: or "everlasting," namely that they may quietly possess Judea under this condition, that is, if and as long as they keep My laws, says Dionysius. Secondly, better and more fully, this everlasting covenant is the new one which Christ made with us: for we do not read that God made another and new covenant with the captives returning from Babylon; and if He had, it was truly not everlasting, for the Jews were again expelled from Judea by Titus and the Romans: but the covenant of Christ is properly everlasting, and will be everlasting with the Church. So Hugo, Lyranus, and others.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_01.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

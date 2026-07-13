@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_20.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_22.html">Next Chapter</a></div>
 </div>
@@ -91,17 +91,18 @@ But this seems to be a fable of the Rabbis. For when Hezekiah was sick, Manasseh
 <p>Let young people note this, who indulge in pleasures and luxuries in their youth, and devote it to the devil, promising that they will devote their old age to God: for most of such persons are cut off by the various accidents of human life and die, and by the just judgment of God do not reach old age, and thence do not attain to the amendment of life and eternal salvation.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_20.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_22.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

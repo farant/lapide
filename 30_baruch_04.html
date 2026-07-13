@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Baruch IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_03.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_05.html">Next Chapter</a></div>
 </div>
@@ -137,17 +137,18 @@
 <p id="verse-37"><b>Verse 37: From east to west,</b></p>
 <p>37. From east to west, — that is, from Persia, Media, Babylon, which are to the east of Jerusalem (although Babylon itself properly was to the north of Jerusalem), the Jews will return to Jerusalem. At the word of the Holy One, — that is, according to the promise of God, by which He Himself promised it through the prophets, and which He Himself will carry out and command through Cyrus, to whom He will inspire this, and whom He will make well-disposed toward the Jews. So Theodoret. Allegorically, this is more truly fulfilled in the faithful, who from every part of the world flock to Christ and the Church of Christ.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_03.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

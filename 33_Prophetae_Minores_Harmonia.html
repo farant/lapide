@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Harmonia, Aenigmata et Adagia ex XII Prophetis Minoribus</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="33_Prophetae_Minores_Canones.html">Previous</a></div>
     <div class="next"><a href="34_Osee_Argumentum.html">Next</a></div>
 </div>
@@ -516,17 +516,18 @@ If the times become cloudy, you will be alone.</p>
 <p>Verses 14 and 15. "You have said: He labors in vain who serves God; and what profit is it that we have kept His commandments, and that we have walked sorrowfully before the Lord of hosts? Now therefore we call the proud happy: for they who work wickedness are built up." This is the voice of the impious, denying the deity and providence of God, because they see the pious cast down in this world, and the impious exalted. To these the Prophet responds: "And the Lord attended and heard" these words of the impious attacking the providence of God, and of the pious defending it: "And a book of remembrance," that is, of memorial, "was written before those who fear the Lord and meditate on His name," that is to say: God in His memory and mind, as if in a book, has recorded the words and deeds of all men, and on the day of judgment He will read them and decree for each one a reward or punishment according to merit — a reward, namely, for those who fear and constantly meditate on the Lord. For "these shall be Mine, says the Lord of hosts, in the day that I make," that is, shall make, namely judgment, "My special possession," that is, a peculiar people, specially chosen, beloved and exalted by Me; whom I will bless and glorify with all My goods, "and I will spare," that is, I will have mercy on, I will be indulgent and generous toward "them, as a man spares his son who serves him." Therefore on the day of judgment, "you shall see what the difference is between the just and the wicked, and between him who serves God and him who serves Him not."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="33_Prophetae_Minores_Canones.html">Previous</a></div>
     <div class="next"><a href="34_Osee_Argumentum.html">Next</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

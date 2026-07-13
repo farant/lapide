@@ -27,7 +27,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XL</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_39.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_41.html">Next Chapter</a></div>
 </div>
@@ -143,18 +143,19 @@
 <p>A similar divination was that of St. Athanasius, who, entering Alexandria, when a crow was cawing while flying in the air, being asked by the pagans in jest what the crow was saying, answered: <em>"It sounds 'cras' [tomorrow]; and it signifies that tomorrow, the feast you are celebrating, will be mournful for you."</em> And so it happened, as Nicephorus testifies, book 9, chapter 35. Similarly, that Christian who was asked by Julian the Apostate with sarcasm: "What is your Galilean carpenter doing?" answered: "He is preparing a coffin for you" -- namely a bier -- and truly: for shortly afterwards Julian was slain by a weapon not of man, but of Christ. In like manner, Isaac the hermit predicted defeat and death for the Arian Emperor Valens as he marched against the Goths, as Nicephorus testifies, book 11, chapter 50.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_39.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_41.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

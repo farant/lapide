@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_10.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_12.html">Next Chapter</a></div>
 </div>
@@ -138,18 +138,19 @@
 <p>30. WHICH IS NEAR THE VALLEY EXTENDING AND REACHING FAR OFF. -- For "valley," the Hebrew has <em>elon</em>, a word meaning "holm oak" or a tree of the oak family, as the Septuagint and our translator commonly render it; but our translator here understood "oak grove" to signify, by synecdoche through the oaks, a valley -- namely, a valley full of oaks; for St. Jerome, who carefully surveyed the holy places, knew very well that it was a valley. Again, for "the valley extending," the Hebrew has <em>elon more</em>, that is, "oak grove" or "valley of the instructor," as Masius teaches on Joshua 24. Now the "valley of the instructor" is a valley that is extended, conspicuous, great, beautiful, and, as our translator renders it at Genesis 12:6, "illustrious." This valley is near Shechem, to which Abraham first came when traveling from Chaldea to Canaan. For Josephus, an eyewitness, teaches that these mountains Gerizim and Ebal are near Shechem, and he is to be believed rather than Eusebius: for the latter is the author of the book On Hebrew Places, which is falsely attributed to St. Jerome, as Masius proves from the facts themselves at Joshua 8:30.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_10.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_12.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

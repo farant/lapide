@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_20.html">Previous Chapter</a></div>
     <div class="next"><a href="08_ruth_Argumentum.html">Next: Ruth</a></div>
 </div>
@@ -74,18 +74,19 @@
 <p>Here ends the history of the twelve Judges of Israel, who were a type of the twelve Apostles, and who governed the people from Joshua to Eli, for 299 years; namely Othniel 40 years, Ehud 80, Barak 40, Gideon 40, Abimelech 3, Tola 23, Jair 22, Jephthah 6, Ibzan 7, Elon 10, Abdon 8, Samson 20. Of whom Rupert writes thus, book IV of the Victory of the Word of God, chapter VI: "They were the vicars of the one and true Savior (Jesus Christ). Salvation through them was administered in a twofold manner, namely by judging and by fighting: by judging, indeed, they kept the people from the slavery of idols; by fighting, going at the head themselves, they bravely avenged them against the enemies whom they had served. They were therefore judges in discipline, leaders in battle, saviors in both, prefiguring by their illustrious deeds and mystical victories the Sacraments and victories of the eternal Savior. For just as a mirror placed opposite the sun reflects a similar image, so also the bright faith of those saviors and judges displayed in their deeds a beauty similar to the eternal Savior and Judge, whose vicars they were."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_20.html">Previous Chapter</a></div>
     <div class="next"><a href="08_ruth_Argumentum.html">Next: Ruth</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

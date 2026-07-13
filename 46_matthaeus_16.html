@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_15.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_17.html">Next Chapter</a></div>
 </div>
@@ -245,18 +245,19 @@
 <p>In His Kingdom. — You will ask, what is this kingdom of Christ, and when shall some of the Apostles standing by Christ have seen it? St. Gregory, in Homily 32 on the Gospels, and Bede respond first that this kingdom of Christ is the Church and her propagation throughout all nations, which the Apostles indeed saw, indeed effected. Christ says this, says St. Gregory, so that from the propagation of the kingdom of the Church, which they were to see, they might learn how great would be their glory in the heavenly kingdom, which in this life is invisible; for otherwise men esteem only the visible things, they do not desire the invisible, because they do not even suspect them to exist. God therefore, through the visible things which He displays, confirms the hope of the invisible things promised. Secondly, others think that this will happen at the resurrection and day of judgment, about which Christ spoke in the preceding verse. But I say that this happened in the Transfiguration of Christ: for in that event the three Apostles, namely Peter, James, and John, saw as through a lattice the glorious kingdom of Christ, and had a foretaste of it. And that this is so is plain from what follows: for all the Evangelists who mention this matter, namely Matthew, Mark, and Luke, immediately after this promise of Christ, add that it was fulfilled, namely on the sixth day after. So say St. Hilary, St. Chrysostom, St. Jerome, St. Ambrose, Theophylact, Euthymius, and others commonly. Whence St. Leo, in his sermon <em>On the Transfiguration</em>, says: "In the kingdom, that is, in royal splendor." For in the Transfiguration Christ gave the Apostles a specimen of the glory, brightness, magnificence, joy, and happiness which the Saints shall obtain in the heavenly kingdom, so that through it they might be animated to evangelical labors and sufferings, to the cross and martyrdom, and might animate others to the same. Thus through it St. Jerome in like manner animates Eustochium, in Epistle 18 <em>On the Custody of Virginity</em>, at the end: "Come forth," he says, "for a little while from your prison, and paint before the eyes of your present labor the reward which eye has not seen, nor ear heard, nor has it entered into the heart of man. What a day will that be, when Mary, mother of the Lord, shall run to meet you, accompanied by choirs of virgins! When after the Red Sea, with Pharaoh and his army drowned, holding her timbrel, she shall lead those about to respond: Let us sing to the Lord, for He is gloriously honored: horse and rider He has cast into the sea. Then Thecla shall fly joyfully into your embraces, then even the Bridegroom Himself shall come forth and say: Arise, come, My near one, My beautiful one; for behold, the winter is past, the rain has gone away from you. Then the Angels shall wonder and say: Who is this that looks forth as the dawn, beautiful as the moon, chosen as the sun." And after some intervening words: "Then the little ones, etc., lifting up palms of victory, shall sing with one voice: Hosanna in the highest. Blessed is He who comes in the name of the Lord. Hosanna in the highest. Then one hundred forty-four thousand in sight of the throne and in sight of the elders shall hold harps, and shall sing a new song."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_15.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_17.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

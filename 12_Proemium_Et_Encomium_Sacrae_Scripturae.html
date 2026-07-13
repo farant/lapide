@@ -56,7 +56,7 @@
 <p id="preamble-p1" data-paragraph-number="1"><b><span class="entity-ref" data-slug="person/cleric/cornelius-a-lapide">Cornelius a Lapide</span>, S.J.</b></p>
 <h1>Prooemium et Encomium Sacrae Scripturae</h1>
 <p id="preamble-p2" data-paragraph-number="2"><b>(Preface and Praise of Sacred Scripture)</b></p>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_Clemens_Hieronymi_Du_Culte.html">Previous: Jerome's Prefaces</a></div>
     <div class="next"><a href="14_Commentaria_In_Pentateuchum_Mosis_Canones.html">Next: Commentary on the Pentateuch</a></div>
 </div>
@@ -9614,18 +9614,19 @@ When He created the fabric of the world by His own design.</em></p>
 
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_Clemens_Hieronymi_Du_Culte.html">Previous: Jerome's Prefaces</a></div>
     <div class="next"><a href="14_Commentaria_In_Pentateuchum_Mosis_Canones.html">Next: Commentary on the Pentateuch</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Colossians IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_03.html">Previous: Colossians Chapter III</a></div>
     <div class="next"><a href="66_i_thessalonicenses_argumentum.html">Next: 1 Thessalonians Introduction</a></div>
 </div>
@@ -112,18 +112,19 @@
 <p>Morally, St. Chrysostom: <em>"Are you, he says, gripped by the lust of pleasures? Remember Paul's prison: you are his disciple and fellow-soldier. What sense does it make for your fellow-soldier to be in chains, but you in pleasures? Are you in afflictions? Do you think yourself forsaken? Hear the words of Paul, and see how to be in affliction is no token of being forsaken. Would you be clothed in silks? Remember Paul's chains, and silk garments will seem to you more abject than any stinking rags. Would you be wrapped in golden garments? Remember Paul's chains, and they will show you that those have nothing better than trodden mud. Do you wish to adorn yourself with hair, and to seem beautiful? Consider the squalor of Paul in prison, and you will be inflamed toward that beauty — and you will reckon this very thing to be the extreme deformity, and you will bitterly groan, seized with desire for those chains. Do you wish to apply to yourself perfumes and rouge and whatever is of that sort? Think on his tears. For three nights and days he did not cease from tears. With this adornment adorn your cheeks. Those tears will make them more splendid. I do not say to weep for others; though I would wish even that, and it is more sublime; but I exhort you to do this for your own sins."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_03.html">Previous: Colossians Chapter III</a></div>
     <div class="next"><a href="66_i_thessalonicenses_argumentum.html">Next: 1 Thessalonians Introduction</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

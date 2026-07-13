@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_16.html">Previous: Apocalypse Chapter XVI</a></div>
     <div class="next"><a href="81_apocalypsis_18.html">Next: Apocalypse Chapter XVIII</a></div>
 </div>
@@ -404,17 +404,18 @@ That I am the mother and head of all Churches.</em></p>
 <p>Furthermore, whether the Roman Pontiff, when Rome has been occupied and laid waste by Antichrist, will transfer his seat to another city and province, or whether he can transfer it, is a question. For many, from the fact that St. Peter transferred the chair and pontificate from Antioch to Rome, when there exists no decree of Christ for doing this, hold that the pontificate established by St. Peter at Rome is of human, not divine, right, and therefore that the Pontiff for grave cause (as if the Turk, which God forbid, should occupy Italy and Rome), with the consent of the Cardinals and Bishops, could transfer the pontificate from Rome to another city and province; so judges D. Soto in IV, dist. XXIV, Question II, art. 5, at the end; Antonio of Cordoba, Gaspar Casalius, Waldensis and others, whom Alfonso Mendoza cites and follows, <em>Scholastic. controv.</em>, Question IV, conclusion 3. Although the contrary, namely that the Roman papacy is of divine right, on the ground that Christ commanded Peter to establish it there, and therefore cannot be transferred by the Pontiff, without divine revelation, to another city, is held by Johannes Driedo, book IV, chapter III, part III; Turrecremata in his gloss on the chapter <em>Rogamus</em>, XXIV, Question 1; Cardinal Jacobatius, book VIII <em>On Councils</em>, art. 6, where for this opinion he also cites the Archdeacon, Ockham, Alberic and others; St. Antoninus, III part Schol., tit. 22, chap. IV, §1; Alvarus Pelagius, book I <em>On the Lament of the Church</em>, art. 32. But whatever may be the case as to right and possibility, I judge that in fact this will never come about, as hitherto it has never come about that the pontificate has been transferred from Rome elsewhere (for even when the Pontiffs sat at Avignon for 70 years, they were and were called Roman Pontiffs, not Avignonese). First, because in the time of Antichrist there shall be in all cities and provinces a general persecution of the Pontiff and of the faithful, and therefore it would be useless to transfer the Roman See elsewhere, since the Pontiff would not escape persecution there, but would rather encounter it more. Secondly, because Saint Peter sat at Rome during the most burning persecution of Nero: the same thing all his successors constantly did for three hundred years through ten most grievous persecutions, until the times of Constantine. Thirdly, because the persecution of Antichrist will be brief, namely of three and a half years; and the day of judgment will be at hand: but for so short a time, it will not be worth the trouble to move the See. Fourthly, because the prophecy of Saint Malachy, which I cited at the beginning of the chapter, holds that the Roman Pontiff at the time of Antichrist will be Peter the Roman, and that the Last Judgment will succeed him. Yet the Pontiff, with persecution pressing and the destruction of the city, will be able to flee outside Rome, and to hide himself in other places and cities, as Saint Sylvester did on Mount Soracte, and many others after him. In agreement with this prophecy concerning the ten kings are those things which Saint Francis of Paola, founder of the Order of the Minims, foretold concerning almost the same number of kings. For he himself in various letters, which Father Lucas Montoya recounts word for word in his Chronicles of the same Order toward the end, [Saint Francis of Paola] himself prophesied this very thing, and specifically in one [letter] which he wrote in the year of Christ 1469, on August 13th, to Simon of Limena, Lord of Montalto, which is even now preserved there. He says thus: <em>"From thee (O Simon) shall descend the founder of a new Religion, which shall have three parts: the first shall be of armed knights; the second, of priests; the third, of hospitallers. This shall be the last Religion of all; it shall bring great fruit to the Church, shall extinguish the cursed sect of Mahomet, and indeed all heresies, that there may be one fold and one Pastor. In the whole world there shall be only twelve kings, one Emperor and one Pontiff, and a few Princes, who shall all be holy."</em> The same [Saint] in other letters calls this Order <em>"of the Cross-bearers,"</em> because on their banners they shall display the image of the cross, or of Christ crucified, for which they shall fight, and to which they shall subject both Mahometans, and heretics, and wicked Christians. And he asserts that all these things were revealed to him by God, and shall certainly come to pass; similar prophecies of others are circulated, but they require examination.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_16.html">Previous: Apocalypse Chapter XVI</a></div>
     <div class="next"><a href="81_apocalypsis_18.html">Next: Apocalypse Chapter XVIII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

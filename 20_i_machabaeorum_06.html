@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_05.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_07.html">Next Chapter</a></div>
 </div>
@@ -201,17 +201,18 @@
 <p>63. AND HE FOUGHT AGAINST HIM (Philip who had rebelled against him, and captured and killed him) AND OCCUPIED THE CITY — Antioch, greatly aided by the forces of Judas and the Jews, as Josephus and Gorionides narrate. Now Antioch is the capital of Syria, a most celebrated city, through which the Orontes river flows, later called Theopolis (that is, City of God) by the Emperor Justinian. In it the Apostle Peter first sat, and there the faithful were first called Christians. It was called Antioch from Antiochus, just as Epiphania was named from Epiphanes, Alexandria from Alexander, Rome from Romulus, Constantinople from its founder Constantine. Seleucus Nicator founded Antioch — he who was the first to reign in Asia and Syria after Alexander the Great — and he named it Antioch after his father Antiochus, and established it as the capital of Syria, says St. Isidore, Book 15 of the Origins, chapter 1.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_05.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

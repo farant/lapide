@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Titus I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="70_titum_argumentum.html">Previous: Titus Introduction</a></div>
     <div class="next"><a href="70_titum_02.html">Next: Titus Chapter II</a></div>
 </div>
@@ -185,18 +185,19 @@
 <p>Morally, S. Jerome here teaches that in every sin God is denied, not in word, but in deed: <em>"Christ,"</em> he says, <em>"is wisdom, justice, truth, holiness. Wisdom is denied through foolishness, justice through iniquity, truth through lying, holiness through baseness, fortitude through weakness of soul; and as often as we are conquered by vices, we deny God; on the contrary, as often as we do something good, not with the mouth but with the deed itself, we confess God."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="70_titum_argumentum.html">Previous: Titus Introduction</a></div>
     <div class="next"><a href="70_titum_02.html">Next: Titus Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

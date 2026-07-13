@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>James III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_02.html">Previous: James Chapter II</a></div>
     <div class="next"><a href="74_iacobi_04.html">Next: James Chapter IV</a></div>
 </div>
@@ -328,7 +328,7 @@
 <p>Furthermore, that this peace with God, with ourselves, and with our neighbors may be had, war must be waged against ourselves, that is, against our concupiscences. Whence St. Augustine, sermon 6 <em>On the Words of the Apostle:</em> <em>"And if the spirit," he says, "lusts against the flesh, and if there is now a quarrel in that house, the husband contending seeks not destruction, but concord."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_02.html">Previous: James Chapter II</a></div>
     <div class="next"><a href="74_iacobi_04.html">Next: James Chapter IV</a></div>
 </div>
@@ -336,11 +336,12 @@
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

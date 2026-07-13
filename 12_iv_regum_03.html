@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_04.html">Next Chapter</a></div>
 </div>
@@ -107,17 +107,18 @@
 <p>If it is enough to have seen bulls slain before the altars; Or if the gods will and decree this wickedness; Consume me, me who bore him, with your vows, Why does it please you to strip the Libyan peoples of such a child?</p>
 <p>Moreover against this sacrilegious and parricidal sacrifice the Fathers thunder, such as Tertullian, Apology, chapter IX; Cyril, book IV Against Julian; Lactantius, book I On False Religion, chapter I; St. Augustine, book VII of The City of God, chapter XIX; Theodoret, book VII On Providence.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

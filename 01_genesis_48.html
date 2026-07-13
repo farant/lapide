@@ -27,7 +27,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XLVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_47.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_49.html">Next Chapter</a></div>
 </div>
@@ -179,17 +179,18 @@
 <p>Fifth, and best of all: Jacob first bought the field situated in Shechem with money from Hamor, chapter 33, verse 19. But when, after the slaughter inflicted on Shechem by his sons, fearing that the Canaanites would in turn attack him, he departed from there, then the neighboring Amorites occupied this field of Shechem. When Jacob returned, he expelled them by force and arms, and recovered his field with sword and bow. For this is clearly stated here, even though the event is not narrated elsewhere. So Pererius, following Andreas Masius.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_47.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_49.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

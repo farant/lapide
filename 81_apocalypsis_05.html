@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_04.html">Previous: Apocalypse Chapter IV</a></div>
     <div class="next"><a href="81_apocalypsis_06.html">Next: Apocalypse Chapter VI</a></div>
 </div>
@@ -220,17 +220,18 @@
 <p>From this love follows the fifth act, of supreme joy, by which the mind rejoices over the immense attributes and perfections of God its Creator, Lord, Father and Redeemer, namely that our God is best, most powerful, most holy, most glorious, and overflows with all goods on every side. From joy follows the sixth act, of congratulation, by which we congratulate Him, as our God, on so great a majesty, so great riches, so great felicity, saying: In Thee is all glory and dignity, all riches and treasures, all pleasures and consolations, all delights, all joys, all beatitudes. To Thee all these are owed, and if anything were lacking to them, or if I could add anything to them, I would most liberally spend all that is mine on it. For Thou art most worthy of them: these things befit Thy divinity. To Thee therefore I congratulate them, with Thee I rejoice. From congratulation follows the seventh act, of jubilation, by which, exulting with the Blessed over so great a glory of our God, we sing for joy and say: <em>"To Him that sitteth on the throne, and to the Lamb, blessing, and honor, and glory, and power, forever and ever."</em> For the mind jubilates in Him who is infinitely more than all things that are, and that can exist in infinite worlds; who is worthy of infinite love and jubilation: and so it pours out into Him its whole heart in praising and exulting, and would wish, if it were possible, for infinite hearts with which to celebrate Him with infinite loves and praises; finally it invites all angels, all men, all the heavens, all living things, all created things, to jubilate with it to Him, and says: <em>"Bless the Lord, all you works of the Lord, praise and exalt Him above all forever."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_04.html">Previous: Apocalypse Chapter IV</a></div>
     <div class="next"><a href="81_apocalypsis_06.html">Next: Apocalypse Chapter VI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joel I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_Joel_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_02.html">Next Chapter</a></div>
 </div>
@@ -217,17 +217,18 @@ Tropologically, Rupert says: Those men are like brutes who know not how to groan
 <p><em>(1) An extreme drought is described, which was itself the cause of the greater abundance of locusts. For concerning these Pliny says, Natural History XI.29: 'Spring rains destroy the eggs; in a dry spring there is a greater yield.' That drought favors the production of locusts is also taught with many examples by Ignatius de Asso in his book On Locusts.</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_Joel_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

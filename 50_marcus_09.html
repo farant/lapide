@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_08.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_10.html">Next Chapter</a></div>
 </div>
@@ -106,17 +106,18 @@
 <p>AND HAVE PEACE AMONG YOURSELVES. — As if to say: Whoever speaks wisely should greatly fear lest unity be broken by his speech; for, as Bede says, "to have salt without peace is not a gift of virtue, but a token of damnation; for the better a man is in wisdom, the worse is his transgression." For there are many, says the Gloss, "whom, while greater knowledge exalts them, it also divides from the fellowship of others; and the more wise they grow, the more they become foolish with respect to the virtue of concord." And St. Gregory, Book I, Epistle 24: "By salt," he says, "wisdom is designated. He, therefore, who strives to speak wisely, should greatly fear lest by his speech the unity of his hearers be thrown into confusion."</p>
 <p>Finally, the Gloss explains it thus: "Have salt in yourselves," that is, discretion; "and have peace among yourselves," as if to say: By wisdom and discretion peace is acquired among men, and likewise preserved. For the prudent and discreet man does nothing by which he may offend others and disturb peace. He likewise dissembles and tolerates the infirmities of others, on account of which other impatient men grow angry, quarrel, and fight, because he loves nothing in the world but God, and hence with regard to other things he seems as it were free from pain and insensible. Hear Climacus, Grade 30: "The firmament indeed has the stars for its ornament; but the tranquility of the soul has the virtues. For I consider <em>apatheia</em>, or tranquility of soul, to be nothing other than the heaven of the mind within the heart, which thenceforth holds all the wicked arts of the demons as mere play and mockery." He then adds that the same is "the palace of the supreme King, and, as it were, a kind of mortal immortality of the body."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_08.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_10.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

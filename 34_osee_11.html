@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_10.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_12.html">Next Chapter</a></div>
 </div>
@@ -83,17 +83,18 @@
 <p>12. HE HAS SURROUNDED ME. — Here Hosea returns to his own times and to the earlier threats. Whence Lyranus, Arias, Pagninus, and Vatablus begin chapter 12 from here. The meaning therefore is, as if to say: Do you wish to know the reason why, notwithstanding My so great compassion and love, Ephraim must be condemned to eternal captivity, as I continually proclaim? The reason is at hand: namely because he surrounded Me with his lies (for he denied the worship due to Me), and the remaining tribes with deceit: for he deceitfully seduced them to worship the golden calves, which he cunningly substituted for Me.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_10.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

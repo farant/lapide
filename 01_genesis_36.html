@@ -28,7 +28,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XXXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_35.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_37.html">Next Chapter</a></div>
 </div>
@@ -166,17 +166,18 @@
 <p>THESE THEREFORE ARE THE NAMES OF THE DUKES OF ESAU IN THEIR KINDREDS, AND PLACES, AND BY THEIR NAMES, as if to say: These are the names of the sons of Esau, who were dukes and heads of kindreds and tribes dwelling in Edom, through the places and regions assigned to them, which each named and designated after his own name. So Vatablus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_35.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_37.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

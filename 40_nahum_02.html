@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Nahum II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="40_nahum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="40_nahum_03.html">Next Chapter</a></div>
 </div>
@@ -194,17 +194,18 @@ What remains of Pandionian Athens, but a name?</p>
 <p>Symbolically, the burning and destruction of Nineveh represents the burning and destruction of the world on the day of judgment, which St. John mystically describes under the name of Babylon in Apocalypse chapter 17. For "the world," as the Philosopher used to say, "is nothing other than a marketplace of impostors, a chest of sorrows, a school of vanity, a lair of tyrants, a cave of thieves and the wicked," in which the powerful plunder the poor and the simple. Just as Nineveh was punished by fire, so also the world will be purified by the fire of conflagration, according to that saying: "Fire shall go before Him, and shall burn His enemies round about," Psalm 96:3. By that fire, then, will be burned all the lions and lion cubs, that is, all tyrants, plunderers, and the wicked, and all their messengers, chariots, and pomp, and above all their leader and prince the Antichrist, says St. Jerome.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="40_nahum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="40_nahum_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

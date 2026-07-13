@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_30.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_32.html">Next Chapter</a></div>
 </div>
@@ -301,17 +301,18 @@ Alas! is enclosed in this small tomb.</p>
 <p>Fourth, St. Jerome, Rabanus, St. Thomas, and Hugh want these names to be taken appellatively, that is to say: The Church will be built from the tower of Hananeel, that is, of obedience, or of the grace of God, that is, from the Apostles full of the Holy Spirit, to the gate of the corner, that is, to the joining of Jews and Gentiles; upon the hill of Gareb, that is, of scab, so that it may embrace sinners infected with the scab of sin, and "it shall compass Goatha," that is, its bellowing, so that it may embrace penitents bellowing with contrition: "and the whole valley of dead bodies," that is, all the faithful given over to the flesh; "and of ashes," that is, those who, having turned from the flesh to the spirit, sprinkle ashes on their heads, "and the entire region of death" — of sins — which extends "to the torrent of Kidron," that is, of darkness, and to "the corner of the eastern horse gate," so that it may embrace those who, like horses, compete and rush toward difficult things, that is to say: The Church will embrace all the faithful — both sinners and penitents, both the just and the perfect. See St. Jerome. But this interpretation is more mystical than literal. Finally, if anyone wishes to fully satisfy a Jew who stubbornly insists that all these things must be taken literally as they sound concerning earthly Jerusalem, let him concede that it is so; but let him add that this is to be fulfilled at the end of the world shortly before the second coming of the Messiah, that is, of Christ, for judgment. So Thomas Malvenda, bk. XI On the Antichrist, ch. IX, takes these things as they sound concerning earthly Jerusalem, and holds that it will be rebuilt by the Jews in the time of the Antichrist with such great extent that it will reach all these boundaries which Jeremiah assigns. Where note that by this reasoning and response most of the arguments of the Jews can be satisfied, if namely we say that the prophecies from the Scriptures promising the restoration of Israel, the rebuilding of Jerusalem, the redemption and salvation of the Jews, are to be taken and fulfilled as they sound at the second coming of the Messiah, that is, of Christ — which the Jews think will be the first, because they deny that Christ has come. In this therefore consists all their error and dissension from Christians: that they deny the first coming of Christ, and think that His second coming will be the first, and therefore they interpret the Scriptures that speak of the second coming of Christ as referring to the first; because they deny the first, and think that Christ has not yet come to earth.</p>
 <p>Moreover, that the Prophets speak of the second coming of Christ is clear from the circumstances, which indicate that they are treating of the end of the world, the judgment, the resurrection, etc.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_30.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_32.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

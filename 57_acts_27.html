@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XXVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_26.html">Previous: Acts XXVI</a></div>
     <div class="next"><a href="57_acts_28.html">Next Chapter</a></div>
 </div>
@@ -273,18 +273,19 @@ Dashes upon the shoals, and girds with a rampart of sand.</em></p>
 <p>Excellently St. Augustine, epistle 122, at the end: "What does it matter," he says, "whether fever or sword has loosed the soul from the body? God in His servants attends not by what occasion they go forth, but as what kind of persons they go forth to Him." Lazarus lived wretchedly, died, and was buried; the splendidly rich Epulon likewise; but the latter descended into hell, the former was carried up by the angels into the bosom of Abraham, Luke xvi, on whom see St. Augustine at the end of Psalm xxxiii. The same, book I <em>De Civit.,</em> chap. xi: "A death is not to be thought evil," he says, "which a good life has preceded. For nothing makes a death evil except what follows death. Therefore it is not to be much regarded by those who must necessarily die, what happens to bring about their death, but in dying whither they are forced to go. Since therefore Christians know that the death of the religious poor man among the licking tongues of dogs was far better than that of the impious rich man in purple and fine linen, those horrible kinds of death — how have they harmed the dead who lived well?" For, as the Wise Man says, chap. iv, vers. 7: <em>"The just man, if he be prevented with death, shall be in refreshment."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_26.html">Previous: Acts XXVI</a></div>
     <div class="next"><a href="57_acts_28.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

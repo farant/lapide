@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_06.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_08.html">Next Chapter</a></div>
 </div>
@@ -284,17 +284,18 @@
 <p>for tooth,&quot; etc. Likewise that law of Genesis 9, given by God soon after the flood: &quot;Whoever sheds human blood, his blood shall be shed.&quot; So the brothers, who had delivered Joseph to chains and captivity, were by him justly consigned to an equal imprisonment, Genesis chapter 42:16-17. Similar, but more illustrious, was the example of St. Ephrem, which I reviewed in the same place. So the Jews, who killed Christ like a Paschal lamb at Passover, were likewise at the taking of Jerusalem by Titus at Passover, slaughtered and killed like Paschal victims of divine justice; indeed by the just vengeance of God it came about that, just as they had mocked Christ crowned with a crown of thorns, clothed in a purple cloak, and bearing a reed as a scepter, greeting Him: &quot;Hail, king of the Jews&quot; — so also shortly afterward their king Agrippa, though absent in Alexandria, was publicly mocked in the theater by a comedian who assumed his character, in exactly the same manner as Christ was crowned and mocked, as Philo narrates in his Against Flaccus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_06.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_12.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_14.html">Next Chapter</a></div>
 </div>
@@ -303,17 +303,18 @@
 <p>WE SEEMED LIKE LOCUSTS. -- This is an excessive and deceitful hyperbole, to deter the people from entering Chanaan. Josephus adds, from his own genius and paraphrasing spirit, as it seems, by which he is accustomed to embellish and color the affairs of his nation, that the explorers said the Hebrews could not overcome the Canaanites who were equipped with wealth and arms, because of their own poverty and lack of weapons and resources, and that they would first need to cross impassable rivers and insurmountable mountains. He adds furthermore that the Hebrews were roused to such great murmuring by these words that they wished to kill Moses and Aaron, and so return to Egypt.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_12.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

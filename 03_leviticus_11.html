@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Leviticus XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="03_leviticus_10.html">Previous Chapter</a></div>
     <div class="next"><a href="03_leviticus_12.html">Next Chapter</a></div>
 </div>
@@ -576,17 +576,18 @@ Who utters one thing with his words and turns another in his mind.</em></p>
 
 <p>45. FOR I AM THE LORD (in Hebrew, I am Jehovah, namely in Myself through essence, and Elohim, namely for you through providence, rule, and governance), WHO BROUGHT YOU OUT OF THE LAND OF EGYPT, THAT I MIGHT BE YOUR GOD — as if to say: I brought you out so that you might be a people set apart for Me from other nations and their rites, and especially devoted to My worship. This benefit, because it was the first, the greatest, and the foundation of all the rest, God everywhere emphasizes.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="03_leviticus_10.html">Previous Chapter</a></div>
     <div class="next"><a href="03_leviticus_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

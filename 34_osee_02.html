@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_01.html">Previous</a></div>
     <div class="next"><a href="34_osee_03.html">Next Chapter</a></div>
 </div>
@@ -307,17 +307,18 @@ Note: The word "her" grammatically does not refer to "Jezreel," since that is ma
 
 AND I WILL HAVE MERCY ON HER WHO WAS WITHOUT MERCY. -- These things were explained at chapter 1:6. Only note: For "I will have mercy," etc., the Vatican Bible reads "I will love her who was not loved." For the Hebrew aracham signifies an intimate affection both of love and of compassion and mercy. Hence St. Paul, citing this passage in Romans chapter 9:25, puts both. For he says: "As He says in Hosea: I will call not-my-people, my people; and not-beloved, beloved; and her-who-has-not-obtained-mercy, her-who-has-obtained-mercy." For what Paul says: "I will call not-my-people, my people;" Hosea says: "I will say to not-my-people: You are My people." For Paul puts first what Hosea puts last. Furthermore, what Paul adds: "And it shall be in the place where it was said to them, You are not my people, there they shall be called children of the living God," he took not from this chapter, but from chapter 1:10. For there Hosea said: "And it shall be in the place where it is said to them: You are not my people; it shall be said to them: Children of the living God."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_01.html">Previous</a></div>
     <div class="next"><a href="34_osee_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

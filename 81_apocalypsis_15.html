@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_14.html">Previous: Apocalypse Chapter XIV</a></div>
     <div class="next"><a href="81_apocalypsis_16.html">Next: Apocalypse Chapter XVI</a></div>
 </div>
@@ -165,17 +165,18 @@
 <p><em>"And no one was able to enter into the temple"</em> (to contemplate these depths of the judgments of God, and their causes, modes and reasons), <em>"until the seven plagues should be finished,"</em> — that is, until upon the completion of the seven plagues there would follow the universal judgment, in which God will make all things manifest to the whole world. He alludes to Psalm lxxii, 16: <em>"I considered that I might know this: it is a labor before me; until I go into the sanctuary of God, and understand concerning their last ends,"</em> that is, until I enter into the secret chamber of God's judgments; which will happen when I see the end and outcome of the wicked. So Primasius, Richard and Ansbertus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_14.html">Previous: Apocalypse Chapter XIV</a></div>
     <div class="next"><a href="81_apocalypsis_16.html">Next: Apocalypse Chapter XVI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

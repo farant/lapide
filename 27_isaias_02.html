@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaiah II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="27_isaias_01.html">Previous Chapter</a></div>
 	<div class="next"><a href="27_isaias_03.html">Next Chapter</a></div>
 </div>
@@ -404,11 +404,12 @@ You have a tomb.</em></p>
 <p>Symbolically, St. Gregory, XXXI Morals, chapter XIII: &quot;The spirit of our Redeemer, he says, is said to be in His nostrils; so that by it His knowledge is designated as foreknowledge: because whatever He came to know in the nature of His humanity, this indeed He foreknew before all ages from His divinity.&quot; Hence he adds: &quot;Because He Himself is reputed exalted, as if to say: In lower things He foreknew from above what was to come, because He came down to the lowest from the heavenly realms.&quot;</p>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

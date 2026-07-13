@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXXIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_38.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_40.html">Next Chapter</a></div>
 </div>
@@ -87,17 +87,18 @@ No care for justice, sanctity, piety, faith,
 The kingdom is unstable.</p>
 <p>But where these are present, a kingdom, even if weak, becomes stable. Indeed the Romans, by the faith which they continually kept intact toward both enemies and friends, drew all nations to themselves. Famous among others was the example of Marcus Atilius Regulus the consul, who after many victories and triumphs over the Carthaginians, was captured by the skill of Xanthippus, put in prison, and sent as an ambassador to Rome to negotiate the exchange of prisoners, having sworn an oath that, if he did not succeed, he would return: in the senate he dissuaded the arrangement, and having rejected his wife and children, returned to Carthage: where, thrown into a wooden box with nails driven inward, tormented by sleeplessness and piercings, he preferred to endure a cruel death rather than break the faith given to the enemy. So Pliny, in his book On Famous Men.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_38.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_40.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

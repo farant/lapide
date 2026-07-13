@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_07.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_09.html">Next Chapter</a></div>
 </div>
@@ -135,18 +135,19 @@
 <p>Hence the prayer of David, Psalm 17:2: <em>"I will love You, O Lord, my strength; the Lord is my rock, my refuge, and my deliverer."</em> Following David's example, the holy Fathers in the desert, as Cassian attests in Collation 10, chapter 10, at the very beginning of any temptation or action would immediately pray: <em>"O God, come to my assistance; O Lord, make haste to help me."</em> The Church uses the same verse at the beginning of the Canonical Hours: Cassian there gives the reason. And St. Paul, Philippians 2: <em>"God is He who works in you both to will and to accomplish"</em>; and chapter 4: <em>"I can do all things in Him who strengthens me"</em>; and 2 Corinthians 2: <em>"But thanks be to God, who always makes us triumph in Christ Jesus"</em>; and St. James, chapter 1: <em>"Every best gift and every perfect gift is from above, coming down from the Father of lights."</em> And the Poet: <em>"In Him we live and move and have our being."</em> "For," as St. Augustine says, Book 4 of On Genesis Literally, chapter 12, "the world could not stand even for the blink of an eye if God withdrew His governance from it."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_07.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_09.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

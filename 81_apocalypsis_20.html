@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_19.html">Previous: Apocalypse Chapter XIX</a></div>
     <div class="next"><a href="81_apocalypsis_21.html">Next: Apocalypse Chapter XXI</a></div>
 </div>
@@ -323,17 +323,18 @@
 <p>Plutarch writes of Livius Drusus, tribune of the plebs, that when his house was open in many places to the eyes of the neighbors, and a certain craftsman offered to turn it about and change it for the price of five talents: <em>"Ten,"</em> he said, <em>"I will give if you make my whole house visible, that all the citizens may contemplate what kind of life I lead."</em> For he was a temperate and moderate man. So live, that you may always remember, nay rather desire and rejoice, that you and your inmost things are seen by God, that you are noted by angels, by demons, by men: <em>"For we are made a spectacle to the world, to angels and to men."</em> O how wise is he who continually turns over in his mind that last and censorial day of this world, which will be the horizon of blessed and miserable eternity, and which will separate the Blessed from the damned, those above from those below, angels from demons, heaven from Gehenna for all eternity! O how wise is he in whose ears this trumpet continually sounds: <em>"Arise, ye dead, come to judgment!"</em> O how wise is he who so performs and disposes his individual acts as he will wish to have performed and disposed them on the day of judgment!</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_19.html">Previous: Apocalypse Chapter XIX</a></div>
     <div class="next"><a href="81_apocalypsis_21.html">Next: Apocalypse Chapter XXI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

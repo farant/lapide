@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Timothy V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_04.html">Previous: 1 Timothy Chapter IV</a></div>
     <div class="next"><a href="68_i_timotheum_06.html">Next: 1 Timothy Chapter VI</a></div>
 </div>
@@ -278,18 +278,19 @@
 <p>Fifthly, and genuinely according to the mind of the Apostle: "The manifest sins going before unto judgment," are clear and public sins, condemned by the common voice of men before they are brought into judgment; but the sins which follow sinners into judgment, as it were footmen or shadows, are the occult sins of the impious, which do not appear in public, but lie hidden in the mind or in darkness, when the impious put on the face of the good, so that by external appearance they may seem upright; yet if they are diligently examined and judged, at last their masked impiety will betray itself. It is a prosopopoeia: for sins are here imagined as persons and forerunners or vanguards, who run before the sinner and warn the Church who he is who is soon to come to be ordained — namely, that he is a sinner, and consequently unworthy.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_04.html">Previous: 1 Timothy Chapter IV</a></div>
     <div class="next"><a href="68_i_timotheum_06.html">Next: 1 Timothy Chapter VI</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

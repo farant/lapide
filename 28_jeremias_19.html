@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_18.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_20.html">Next Chapter</a></div>
 </div>
@@ -87,17 +87,18 @@
 <p id="verse-15"><b>Verse 15</b></p>
 <p>15. BECAUSE THEY HAVE HARDENED THEIR NECK, SO AS NOT TO HEAR MY WORDS. — He says "neck" when he should have said ear: for one hears with the ear, not the neck. But he wanted to touch the cause of the evil: for a hardened neck is the cause of a hardened and stopped-up ear, as if to say: Because they hardened their neck and their spirit, they thereby shook off the yoke of God's law, and therefore turned away and stopped their ears, so as not to hear the words and commands of the Prophets: or, if they did hear, not to obey them, but to despise them, indeed to ridicule them. For the Hebrews take the simple verb for the compound (which they lack); 'to hear' for 'to obey.' These Jews therefore had their hand in their ear, their ear in their neck, their neck in their heart, their heart in obstinacy.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_18.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_20.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

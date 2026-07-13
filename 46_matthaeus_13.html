@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_12.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_14.html">Next Chapter</a></div>
 </div>
@@ -419,17 +419,18 @@
 <p>Jansenius and his followers, after this chapter, place the sending forth of the Apostles made by Christ, which Matthew narrated in chapter X; then the beheading of John the Baptist, which Matthew narrates in chapter XIV immediately following; and the return of the Apostles to Christ, and Christ's withdrawal into the desert — following Luke and Mark, who suggest this order, though Maldonatus and others think otherwise. See the Chronotaxis.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_12.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_04.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_06.html">Next Chapter</a></div>
 </div>
@@ -284,17 +284,18 @@ The star at which the crops would rejoice in their fruits.</p>
 <p>27. AND I WILL CAUSE YOU TO MIGRATE BEYOND DAMASCUS — into Assyria: for the ten tribes were led there by the Assyrians from Samaria, as is clear from IV Kings XVII, 6. So St. Jerome, Theodoret, Remigius, Hugo, Arias, and others.</p>
 <p>You will ask: How does St. Stephen, Acts VII, 43, citing this passage, say: "And I will transfer you beyond Babylon"? For Babylon is one thing, Damascus another. Oecumenius and Cajetan respond there that Damascus is taken here not for the city, but for the region and territory of Damascus, which extended as far as Babylon. But this does not seem true, because around Babylon on all sides the Babylonian monarchs ruled widely, not the Damascenes. Again, St. Stephen does not say: I will transfer you to Babylon, but beyond Babylon; but the Damascenes never ruled beyond Babylon. I respond therefore that St. Stephen cites Amos not as to the words, but as to the meaning and the reality. For in fact the ten tribes were led away beyond Damascus into Babylon, and even beyond Babylon into Media, Persia, and other regions, where they were transported and dispersed. For Shalmaneser "carried Israel away into Assyria, and placed them in Halah and in Habor, by the river Gozan, in the cities of the Medes," IV Kings XVII, 6. Hence Tobias, ch. I, 16, visited his fellow tribesmen held captive in Rages, a city of the Medes. Josephus teaches the same, Antiquities IX, last chapter, and XI, ch. V. So St. Jerome, Bede, Rupert, Ribera, a Castro, and others. Furthermore, St. Stephen said this on his own, not from the Septuagint; for the Septuagint here has as our Vulgate does: Beyond Damascus, not beyond Babylon.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_04.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

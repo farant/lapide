@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XLVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_45.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_47.html">Next Chapter</a></div>
 </div>
@@ -206,17 +206,18 @@ What is God? &quot;He is an uncreated good, which the more it is possessed, the 
 <p>13. I HAVE BROUGHT MY JUSTICE NEAR (For behold, Cyrus will soon fly in like a bird, who will fulfill My justice, that is My fidelity, and will free you from Babylon; whence also through him) I WILL GIVE IN SION (or to Sion, that is to the people of Sion, namely the Jews) SALVATION, AND IN ISRAEL (or to Israel) MY GLORY. — For this was a glorious and magnificent liberation of Israel. So St. Jerome, who with others teaches that these things far more truly apply to Christ, the antitype of Cyrus: for Christ brought to Sion, that is to the Church, true and eternal justice, salvation, and glory. Note the expression &quot;I have brought near.&quot; For when Christ draws near, then justice and our salvation also draw near, as well as the glory of God. For these proceed together, and with equal pace either approach or recede together: for as far as you are from Christ, so far are you from justice, salvation, and the glory of God; as much as you approach Him, so much you approach these as well; conversely, as much as you approach justice, so much you approach or recede from Christ: and the same is true of the salvation and glory of God.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_45.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_47.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_04.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_06.html">Next Chapter</a></div>
 </div>
@@ -172,17 +172,18 @@
 <p>31. And the priests clapped their hands. — So also the Septuagint and Theodoret; but Vatablus, Pagninus, Kimchi, and Isidore translate: the priests received gifts in their hands, or, through their hands, namely of the false prophets; because they became sharers in the things donated by the people and exacted by the false prophets. Third, others translate: and the priests exercised dominion</p>
 <p>through their hands, because the false prophets made the people obedient to the priests in every iniquity. WHAT THEN SHALL BE DONE IN THE END THEREOF? — What will be the end, what the reward of such great crimes? Surely the fitting and just reward will be the utter calamity and destruction of the nation by the Chaldeans. So say St. Jerome, Theodoret, Hugo, Rabanus, and others.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_04.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

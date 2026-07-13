@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Philippians II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_01.html">Previous: Philippians Chapter I</a></div>
     <div class="next"><a href="64_philippenses_03.html">Next: Philippians Chapter III</a></div>
 </div>
@@ -331,18 +331,19 @@
 <p>Delivering up his soul (<em>παραβουλευσάμενος τῇ ψυχῇ</em>, that is, ill-considering, or wrongly taking counsel for his own soul (life). Vatablus translates: "taking no account of his life"; the Syriac: "he made nothing of himself," as if to say: he neglected himself, took no care for his own health, but handed it over and exposed it for me), that he might fulfill that which on your part was lacking toward my service. — In Greek, <em>ἵνα ἀναπληρώσῃ τὸ ὑμῶν ὑστέρημα τῆς πρός με λειτουργίας</em>. That is, that he might fully complete your deficiency in ministry concerning, or rather toward, me; as if to say: I have communicated spiritual things to you, it was your part to repay me with temporal things, especially since I am set in chains; and indeed you sent some things to me; but what was lacking from these — and especially the ministry of attending to me and my affairs, since you are absent — Epaphroditus, being present, supplied and fulfilled in your stead.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_01.html">Previous: Philippians Chapter I</a></div>
     <div class="next"><a href="64_philippenses_03.html">Next: Philippians Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

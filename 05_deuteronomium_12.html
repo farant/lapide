@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_11.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_13.html">Next Chapter</a></div>
 </div>
@@ -174,18 +174,19 @@
 <p>32. WHAT I COMMAND YOU, THIS ONLY SHALL YOU DO -- meaning: Do not make, or fashion for yourself in your mind, an idol, as was said above; but in the things and ceremonies of God, do only that which God has commanded either by Himself or through His vicars, namely the priests. See what was said at chapter 4, verse 2.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_11.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_13.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

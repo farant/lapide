@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_10.html">Next Chapter</a></div>
 </div>
@@ -199,18 +199,19 @@ You fall by the right hand of great Aeneas.'</p>
 <p>Morally, Theodoret, Question XVI: 'From these things, he says, which befell Abimelech and the Shechemites, we learn that wicked agreement brings destruction to those who use it, and finally ends in dissension; seeing that those who had killed the sons of Gideon perished by mutual blows.'</p>
 <p>Finally, in Abimelech that saying proved true: 'He entered like a fox, reigned like a lion, and died like a dog' — struck not with a staff but with a stone by a woman.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_10.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

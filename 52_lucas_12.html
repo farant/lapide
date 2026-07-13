@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_11.html">Previous: Luke XI</a></div>
     <div class="next"><a href="52_lucas_13.html">Next: Luke XIII</a></div>
 </div>
@@ -365,17 +365,18 @@ Sought and drank the pyre with her mouth,</em></p>
 <p><em>AND HE SAID ALSO TO THE MULTITUDES: WHEN YOU SEE A CLOUD RISING FROM THE WEST, STRAIGHTWAY YOU SAY</em> (from frequent and continual experience): <em>A STORM IS COMING</em> (Greek <em>&omicron;&mu;&beta;&rho;&omicron;&sigmaf;</em>, that is, a shower, rain); <em>AND SO IT HAPPENS.</em> &mdash; As if to say: When you see a cloud from the west, you say: It will rain. So Elijah in the time of the three-year drought, since from boyhood he had understood that a cloud rising from the west and ascending from all sides (as happens to those who are surrounded by sea on every side), says Valesius in Sacred Philosophy, chapter LXXXVI. See what was said at Matthew XVI. Moreover, conjectures from the stars are necessary for human life, says St. Basil in the Catena, provided they are not pursued beyond the limit of what they indicate. It is useful to foresee the dangers of storms, especially when the sun is likewise setting in the west: for then it is weaker than to be able to dissipate these vapors, so that they do not thicken into cloud and dissolve into rain. But to those for whom the sea is equally to the West and to the South and to the North, He likewise foretold that rain was imminent; and it soon followed, 1 Kings 18:44. The physical cause of this is that Judaea has the Mediterranean Sea to its west, from which, by the power of the sun, many vapors are raised on high, which when condensed into cloud, are resolved by the sun's heat into water and produce rain. For the traveler a change in the weather, for the farmer sowing a sign of the sun's position for sowing so that he may gather an abundant harvest: for God placed them <em>"for signs and for seasons,"</em> Genesis 1:14.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_11.html">Previous: Luke XI</a></div>
     <div class="next"><a href="52_lucas_13.html">Next: Luke XIII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

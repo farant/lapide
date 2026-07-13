@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Micheas II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_01.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_03.html">Next Chapter</a></div>
 </div>
@@ -135,17 +135,18 @@ the inventor of the art, have made these things up.</p>
 <p>Such breakers were all the apostles, all the early monks and anchorites, whose whole pursuit was to tame the passions of the soul, and to accustom the body to hunger, cold, heat, and every labor and penance: whence they were called ascetics, that is, exercisers. Such were the founders of religious Orders: St. Anthony, St. Benedict, St. Bernard, St. Dominic, St. Francis, St. Dominic Loricatus, and of our own order St. Ignatius and St. Francis Xavier, who by a wonderful power of spirit set the world on fire with the divine flame, and thereby cleared all obstacles, so that they might open the way to heaven for their followers and for all others, and go before them.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_01.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

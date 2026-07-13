@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XLII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_41.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_43.html">Next Chapter</a></div>
 </div>
@@ -144,17 +144,18 @@
 <p>devoted, who by their meditations cook the food of Sacred Scripture so that others may be nourished from it, according to Psalm 38: My heart grew hot within me, and in my meditation a fire shall burn. But these kitchens are situated in the small courts, because doctors of sacred eloquence must first be trained in the four cardinal virtues. For it is said in Ethics I that the one who is a follower of passions is not a fitting hearer of moral philosophy; and much less is he a fitting hearer of theology; and still much less a fitting teacher of it, on account of which in the doctors of Sacred Scripture prior exercise in the moral virtues is required: whence the Philosopher says in Physics VII that by sitting still the soul becomes knowing and prudent; because by calming the disturbances of the passions, and resting from their impulses, which is done through the exercise of the moral virtues, knowledge of the Sacred Scriptures is acquired."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_41.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_43.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

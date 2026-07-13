@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on 1 Peter: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_05.html">Previous: James Chapter V</a></div>
     <div class="next"><a href="75_i_petri_01.html">Next: 1 Peter Chapter I</a></div>
 </div>
@@ -110,18 +110,19 @@ thou dost surpass all the beauty of the world."</em></p>
 <p>At Rome therefore, where Peter the martyr fell, there also as victor he rose again, and having overthrown Nero, the Emperors, and idolatry, he as triumpher occupies the city and the world: from the Vatican he watches over, directs, and defends Rome, and the Roman faith and Church, as the mother, mistress, and lady of all Churches; so that hitherto heresy and perfidy have not been able to overthrow her, nor will they ever overthrow her; because, namely, she is built upon the firm rock, so that the gates of hell cannot prevail against her. Look down upon us from on high, St. Peter, and protect thy citizens, indeed clients and sons, and through the storms of this life direct us into the way of eternal salvation, that, the course of this pilgrimage being completed, with thee opening the gates of heaven we may merit to enter, and with thee to enjoy our Lord Jesus Christ for eternity. Amen.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_05.html">Previous: James Chapter V</a></div>
     <div class="next"><a href="75_i_petri_01.html">Next: 1 Peter Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

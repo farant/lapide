@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_03.html">Previous: Acts III</a></div>
     <div class="next"><a href="57_acts_05.html">Next Chapter</a></div>
 </div>
@@ -302,18 +302,19 @@ From which earthly cares come to the breast;</em></p>
 <p>Moreover Sophronius, Patriarch of Jerusalem, in the <em>Fragment on the labors of St. Peter and Paul</em>, which is extant in volume VII of the <em>Library of the Holy Fathers</em>, hands down that the wife of St. Peter was the daughter of Aristobulus, brother of Barnabas, from whom he received a son and a daughter. With Sophronius agrees Helecas, Bishop of Saragossa, in his Additions to the Chronicle of Lucius Dexter and M. Maximus, which was discovered and edited at Saragossa in the year of the Lord 1393. For he writes thus: "St. Peter is held in honor in the Spains, and his wife Concordia suffered at Rome under Nero, not long before he himself suffered. She was (as M. Maximus teaches in the epistle of St. Peter) the daughter of Aristobulus, that is, of Zebedee, and of Salome, the mother-in-law of St. Andrew, who married the other sister of Concordia, and the mother-in-law of James and John. Now Aristobulus, surnamed Zebedee, was the brother of Barnabas the Apostle of the Lord. The same Zebedee and Barnabas were cousins of John, surnamed Mark, and grandsons of Mary, where Christ celebrated the Last Supper, and where the Holy Spirit came upon the Apostles." Thus therefore according to Helecas, Barnabas was the brother of Aristobulus, who by another name was called Zebedee, and was the father of Sts. James and John the Apostles, of whom therefore Barnabas was the paternal uncle, just as also of the wives of St. Peter and St. Andrew: wherefore these chief Apostles were blood-relations or in-laws. Furthermore, concerning Zebedee, the brother of Barnabas, Helecas adds this: "In Britain there is famous memory of many Martyrs, especially St. Aristobulus, one of the seventy-two disciples, who is also called Zebedee, father of James and John, husband of Mary Salome, who went with Peter to Rome: thence, having left his household, sent as Bishop into England, he fell as a martyr in the second year of Nero." And below, concerning his wife: "Celebrated," he says, "is the memory among the Spaniards of S. Mary Salome, mother of S. James and wife of Zebedee, who, having reached her ninetieth year in the year of Christ 42, under James the son of Alphaeus, Bishop of Jerusalem, on the 24th of May most holily passed to heaven in Italy, and is said to rest at Veroli, and her death has been ennobled by many miracles." The same is reported by the people of Veroli. As for the rest, being new and not transmitted by others, let the credit rest with Helecas and Sophronius.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_03.html">Previous: Acts III</a></div>
     <div class="next"><a href="57_acts_05.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

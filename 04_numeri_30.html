@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_29.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_31.html">Next Chapter</a></div>
 </div>
@@ -131,18 +131,19 @@
 <p>From this it is clear that these laws about vows and their annulment are not entirely of natural law, as seemed the case to some; but are in part positive laws, namely ceremonial or judicial laws of the old law, which has now been abolished. For the law of nature does not dictate that a father can annul all the vows of daughters who are of age and advanced in years, especially those which do not prejudice paternal authority: otherwise this would hold also in the new law. But this is false. Second, the law of nature does not dictate that by the silence alone of a parent or husband the vow of a daughter or wife is fully confirmed. Third, the law of nature does not command that a parent or husband must immediately contradict a vow if he intends to annul it; for he may need time to deliberate. Therefore God ordained these things in the old law so that that dull people would not too easily for any cause whatever hinder or retract the pious vows of their own family.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_29.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_31.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

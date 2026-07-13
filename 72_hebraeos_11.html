@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_10.html">Previous: Hebrews Chapter X</a></div>
     <div class="next"><a href="72_hebraeos_12.html">Next: Hebrews Chapter XII</a></div>
 </div>
@@ -386,18 +386,19 @@
 <p>Note: For <em>"that they should be consummated"</em> the Greek is <em>"teleiōthōsi,"</em> which secondly can be translated: <em>"that they should be consecrated, dedicated, and as it were inaugurated,"</em> namely to heaven and the heavenly kingdom. See what was said on chapter II, verse 10.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_10.html">Previous: Hebrews Chapter X</a></div>
     <div class="next"><a href="72_hebraeos_12.html">Next: Hebrews Chapter XII</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

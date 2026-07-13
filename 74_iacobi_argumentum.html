@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on James: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="73_Catholic_Epistles_Argumentum.html">Previous: Catholic Epistles Introduction</a></div>
     <div class="next"><a href="74_iacobi_01.html">Next: James Chapter I</a></div>
 </div>
@@ -87,18 +87,19 @@
 <p>But as to his sepulcher, Jerome adds these things: <em>"His burial had a most well-known monument right up to the siege of Titus, and the last by Hadrian. Some of our own thought him buried on the Mount of Olives; but their opinion is false."</em> St. Jerome adds, in his article on James, from the Gospel according to the Hebrews: <em>"The Lord, he says, when He had given the linen cloth to the servant of the priest, went to James and appeared to him. For James had sworn that he would not eat bread from that hour at which he had drunk the cup of the Lord, until he saw Him risen from the dead. And again a little later: Bring, said the Lord, a table and bread; and immediately is added: He took bread, and blessed and broke it, and gave it to James the Just, and said to him: My brother, eat your bread, for the Son of Man has risen from those who sleep."</em> Adrichomius too, from Bredembachius, Saligniacus and others, in his Description of Jerusalem, no. 210, describes the cave in which James lay hidden fasting for the three days of the Lord's Passion, and adds: <em>"Therefore the Lord also appeared to him here separately after His resurrection. In whose honor Christians afterwards erected a church in that place."</em> But this oath and fast of James is rejected by St. Augustine, in bk. III On the Harmony of the Evangelists, ch. XXV, and others, on this ground, that the appearance of Christ to James, of which the Apostle speaks in 1 Cor. XV, 7, took place after the appearance to the five hundred brethren. For after that Paul adds: <em>"Then He was seen by James."</em> But that appearance of Christ to the five hundred brethren took place long after the resurrection, beyond which the fast of James could not naturally have been extended: unless you say that the deinde (then) signifies number, not the order of the appearances; so that it is the same as moreover, besides, as if to say: Christ appeared to the five hundred brethren, and besides also to James alone.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="73_Catholic_Epistles_Argumentum.html">Previous: Catholic Epistles Introduction</a></div>
     <div class="next"><a href="74_iacobi_01.html">Next: James Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

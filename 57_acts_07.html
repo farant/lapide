@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_06.html">Previous: Acts VI</a></div>
     <div class="next"><a href="57_acts_08.html">Next Chapter</a></div>
 </div>
@@ -348,18 +348,19 @@
 <p>Go now, St. Stephen, go champion of Christ, go to thy Jesus, for whose faith and love thou hast undergone so great a contest. Jesus awaits thee to crown thee, who watched that thou mightest conquer. Thou hast fought the good fight, thou hast finished the course, thou hast kept the faith, receive the crown of glory. Go, most valiant Martyr, into the house of the strong of God. Go, most chaste Virgin, into the heavenly mount Sion; follow with the choirs of the Holy Virgins the Lamb wheresoever He goeth, sing with them the New Song, indeed lead it before the others. Go, Evangelist and herald of Christ, into the heavenly hall of Christ. He will receive thy victorious and happy spirit. He will turn thy stones into gems; for a crown of stones He will place upon thy head a crown of carbuncles, diamonds, emeralds. He will wipe away from thine eyes all tears, from thy face all sweat, from thy body all blood: He will present thee victorious to God the Father, that for a brief time of contest thou mayest receive the diadem of the eternal kingdom. Go, Protomartyr, lead the way to heaven before the others, prepare the way to triumph; innumerable hosts of Martyrs will follow thee as their leader throughout the whole world for all ages to come. By bravely struggling for a few hours, thou hast filled and adorned thyself with merits, the Apostles with joy, the faithful with example, the Church with glory, the world with fame, the angels with exultation, heaven with citizens, paradise with Martyrs. Come now! look down upon us from on high, that we may merit to follow bravely the footsteps of thy contest, and so to obtain the prize of thy glory. Amen.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_06.html">Previous: Acts VI</a></div>
     <div class="next"><a href="57_acts_08.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

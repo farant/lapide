@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Baruch III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_02.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_04.html">Next Chapter</a></div>
 </div>
@@ -203,17 +203,18 @@
 <p>Thus for 34 years the Blessed Virgin associated constantly with Christ, with how much fruit, with how great a sense of piety, of love, and of sweetness? Thus Saint Paul: "I live, he says, yet no longer I: but Christ lives in me." And: "For me to live is Christ, and to die is gain." Thus Saint Mary Magdalene for thirty years in her cave at La Baume did nothing other than associate with Christ, recalling His words, deeds, the benefits bestowed upon her, His passion and death, and continually weeping from the sweetness of heavenly consolations: for which reason Christ visited her from heaven in visible form more than a hundred times, and wonderfully refreshed her. Thus Saint Jerome, in order to keep Christ always vividly before his eyes, withdrew to Bethlehem, and there at the manger of Christ, continually contemplating Him being born, crying, nursing, he spent his life most joyfully and most holily with Christ. Hence he himself writes to Eustochium: "Let us love Christ, he says, and let us always seek His embraces, and everything difficult will seem easy: we will think short all things that are long, and wounded by His dart, through the moments of the hours we will say: Alas for me, that my pilgrimage has been prolonged." Eustochium therefore, Paula, Melania, and the chorus of most noble Roman virgins followed Saint Jerome to Bethlehem. Hear the words with which Paula and Eustochium invite Marcella to the same place, epistle 17, in Saint Jerome: "When with Christ accompanying us through Shiloh and Bethel and the other places in which churches have been raised as standards, as it were, of the Lord's victories, we shall have returned to our cave (of Christ's birth in Bethlehem); we shall sing constantly, weep frequently, pray unceasingly, and wounded by the dart of the Savior"</p>
 <p>we shall say together: I have found Him whom my soul sought, I will hold Him and will not let Him go." Thus Saint Edmund, Archbishop of Canterbury, while still a boy, familiarly associated with the boy Christ who appeared to him bodily in school, and from this he became so great a prelate of the Church. Thus Saint Catherine of Siena constantly dealt with Christ as a bride with her bridegroom, and from Him received both the crown of thorns which He impressed on her head, and a new heart and a new Christ-formed mind. Thus from childhood Blessed Queen Joanna associated with Christ: hence she is also depicted with the boy Jesus who extends to her a ring, and by it betroths her to Himself. The inscription beneath her image from her Life is this: "Blessed Joanna, renowned for holiness, daughter of Louis XI and wife of Louis XII, kings of France, Duchess of Berry, after various revelations received even from her childhood years from the Son of God and His most holy Mother, in the year 1502 founded the most holy Order of the same Virgin Mother of God Mary (of the Annunciation, hence they are commonly called the Annunciatæ, which flourish greatly in France and Belgium, especially at Louvain and Antwerp), approved and confirmed by Popes Alexander VI, Julius II, and Leo X. Finally, illustrious for miracles after death, she departed to her heavenly Spouse at Bourges in the year of the Lord 1504, not yet having entered the fortieth year of her age."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_02.html">Previous Chapter</a></div>
     <div class="next"><a href="30_baruch_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

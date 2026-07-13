@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ephesians IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_03.html">Previous: Ephesians Chapter III</a></div>
     <div class="next"><a href="63_ephesios_05.html">Next: Ephesians Chapter V</a></div>
 </div>
@@ -415,17 +415,18 @@
 <p>Forgiving one another, as God also in Christ has forgiven you. — The Greek <em>χαριζόμενοι ἑαυτοῖς</em> means giving, that is bestowing, gladly giving, or, as Vatablus translates, showing favor to yourselves; as if to say: If you give, bestow, do good, or show favor to another, you do this not so much for him as for yourself: for you accumulate the merit of your beneficence to yourself, which is far more than the gift which the neighbor receives from you. But secondly, the Syriac, Chrysostom, Theophylact, and Œcumenius better translate "giving" as "forgiving," as if to say: Forgive mutual injuries, just as God "in Christ," that is through Christ, "gave," that is forgave, "to you" your offenses and sins against Him. The pagans and ungrateful, as Blessed Thomas More rightly said, write benefits in the dust; if they suffer any evil, they engrave it on marble: but it belongs to a Christian to engrave evil deeds on the dust, and benefits on marble.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_03.html">Previous: Ephesians Chapter III</a></div>
     <div class="next"><a href="63_ephesios_05.html">Next: Ephesians Chapter V</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

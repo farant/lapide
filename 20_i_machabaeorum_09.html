@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_10.html">Next Chapter</a></div>
 </div>
@@ -307,17 +307,18 @@
 <p>AND JONATHAN DWELT IN MICHMASH. The proper seat of Jonathan as Prince and Pontiff was Jerusalem and the temple; but since this was occupied by the forces of Bacchides, Jonathan chose his seat in the town of Michmash, which was situated on the border of the tribes of Benjamin and Ephraim, and there he began to administer justice to the people and to exterminate the apostates from Israel and to organize the entire Republic of Israel, just as Samuel, judge and prince, had done in the same place, I Sam. VII, 5.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_10.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

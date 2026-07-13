@@ -56,7 +56,7 @@
 <p id="preamble-p1" data-paragraph-number="1"><b><span class="entity-ref" data-slug="person/cleric/cornelius-a-lapide">Cornelius a Lapide</span></b></p>
 
 <h1>Genesis I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_Commentaria_In_Pentateuchum_Mosis_Canones.html">Previous: Commentary on the Pentateuch</a></div>
     <div class="next"><a href="01_genesis_02.html">Next Chapter</a></div>
 </div>
@@ -1024,7 +1024,7 @@ And the East winds were sparing their wintry blasts."</em></p>
 <p id="verse-31-p22" data-paragraph-number="22">Finally, <span class="entity-ref" data-slug="person/saint/basil-the-great">St. Basil</span>, Homily 4 on the <span class="entity-ref" data-slug="bibliography/basil-of-caesarea/hexaemeron">Hexaemeron</span>: <em>"This entire mass of the world," he says, "is like a book written with letters, openly testifying and proclaiming the glory of God, and abundantly declaring to you, the intellectual creature, His most august majesty, otherwise hidden and invisible. For the heavens declare the glory of God, and the firmament announces the works of His hands"</em> (Psalm 18, verse 1).</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_Commentaria_In_Pentateuchum_Mosis_Canones.html">Previous: Commentary on the Pentateuch</a></div>
     <div class="next"><a href="01_genesis_02.html">Next Chapter</a></div>
 </div>
@@ -9138,11 +9138,12 @@ And the East winds were sparing their wintry blasts."</em></p>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

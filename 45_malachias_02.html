@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Malachias II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="45_malachias_01.html">Previous Chapter</a></div>
     <div class="next"><a href="45_malachias_03.html">Next Chapter</a></div>
 </div>
@@ -173,17 +173,18 @@
 <p>For the cause of this complaint and blasphemy was that, as St. Jerome says, "the people returned from Babylon, and seeing all the surrounding nations, and the Babylonians themselves who served idols, abounding in riches, flourishing in bodily health, possessing all things that are considered good in this world; while they themselves, who have the knowledge of God, are covered with squalor, hunger, and servitude, they are scandalized and say: There is no providence in human affairs, all things are carried along by uncertain chance, and are not governed by God's judgment; indeed rather evil things please Him, and good things displease Him: or surely if God judges all things, where is His fair and just judgment?" St. Jerome adds: "A mind incredulous of future things daily raises this sort of question against God, when it sees the wicked powerful and the saints humble, etc. As we read of Lazarus in the Gospel, who before the doors of the purple-clad rich man desires to sustain his destitute soul with the crumbs that are cast away from the table scraps; while the rich man is of such ferocity and cruelty that a man does not pity a man, though even the tongues of dogs pity him; not understanding the time of judgment, nor that those goods are true which are everlasting, they say: The wicked please Him, and where is the God of judgment?" A similar complaint is found in Habakkuk 1. See what is said there. Malachi repeats the same in chapter 3:14, and responds to it in verse 16 and following, namely that in this matter they must await the time of vengeance appointed by God.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="45_malachias_01.html">Previous Chapter</a></div>
     <div class="next"><a href="45_malachias_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Prolegomena to Jeremiah</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_Jeremias_Argumentum.html">Introduction</a></div>
     <div class="next"><a href="28_jeremias_01.html">Chapter I</a></div>
 </div>
@@ -39,17 +39,18 @@
 <p>Finally, hear Esdras, or whoever is the author, in 4 Esdras, chapter 2, verse 18: "I will send you help, my servants Isaiah and Jeremiah, by whose counsel I have sanctified and prepared for you twelve trees laden with various fruits, and as many fountains flowing with milk and honey, and seven immense mountains bearing roses and lilies, with which I will fill your children with joy." By the twelve trees and fountains, the twelve Apostles and the twelve articles of their Creed are signified; by the seven mountains, the seven Sacraments of the Church seem to be meant, by which Isaiah and Jeremiah foretold the adorning of Christ's new Church. For even though this book of Esdras is not in the canon of Sacred Scripture, it nevertheless carries its own weight of authority, and indeed greater than the books of other Doctors; whence the Church appends it next after the canonical books.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_Jeremias_Argumentum.html">Introduction</a></div>
     <div class="next"><a href="28_jeremias_01.html">Chapter I</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

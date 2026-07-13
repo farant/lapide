@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>3 Kings (1 Kings) XVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="11_iii_regum_15.html">Previous Chapter</a></div>
     <div class="next"><a href="11_iii_regum_17.html">Next Chapter</a></div>
 </div>
@@ -129,17 +129,18 @@ Kings descend, and tyrants by a dry death.</p>
 <p>Tropologically Eucherius says: "He who, after he had assumed the habit of religion in the Church, returns to commit the sins which the Lord Jesus had forgiven him on the day of baptism, and repeats by luxurious living the pomps of the devil which he himself had anathematized: when he resuscitates the ruins of Jericho, as if going forth from Bethel, with the dogmas of errors or the fables of the pagans, against the ecclesiastical truth with which he was imbued. And deservedly such a one is cursed before the Lord, and loses the first of his children in the foundation of the accursed city, and the last in the setting up of the gates, because he loses both the foundations of faith, from which good buildings ought to begin, and the enclosures of good action, by which they ought to be completed." Angelomus has the same words verbatim.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="11_iii_regum_15.html">Previous Chapter</a></div>
     <div class="next"><a href="11_iii_regum_17.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_04.html">Previous: Acts IV</a></div>
     <div class="next"><a href="57_acts_06.html">Next Chapter</a></div>
 </div>
@@ -298,18 +298,19 @@
 <p>Dexter adds: "The sacred Virgin Mary presides over the Apostolic college by counsel, by the light of doctrine, and by the wonderful example of her life, and they undertake nothing of weight which they do not undertake by her counsel and guidance." And shortly after: "In the thirty-seventh year of Christ, the Blessed Virgin appears in spirit to James, who was pouring forth prayers at Saragossa upon a pillar, with John the Theologian also coming." And a little before: "James erected the first temple or oratory to the Blessed Virgin, by her command and in her presence, upon the pillar at Saragossa." And further down, at the year of Christ 86: "Among the Messinese the memory of the Blessed Virgin Mary is celebrated, a sweet letter having been previously sent by her." And again at the year of Christ 35: "To her (the Blessed Virgin) frequent pilgrimage was made from Spain." For this very reason Christ willed that His mother survive Him, that, as it were His Vicar, she might be the consolation of the Church, the teacher of the Apostles, and the comforter of the faithful. But of these things elsewhere. That after Pentecost the Apostles departed from Jerusalem into their own provinces is held by Gaspar Sanchez, Christopher a Castro, and other learned men; concerning which matter, what seems to be the right view, I shall say in chap. xii.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_04.html">Previous: Acts IV</a></div>
     <div class="next"><a href="57_acts_06.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

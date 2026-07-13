@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Micheas V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_04.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_06.html">Next Chapter</a></div>
 </div>
@@ -280,17 +280,18 @@ Pilumnus, Turnus was sitting in the consecrated valley.</p>
 <p>stroyed? What soothsayers will be removed, whom, since Israel neither has them nor boasts of having them, yet for so long a time the daughter of Zion has been forsaken, and sits without an altar and without priests; and while others eat their produce, they themselves, with dry throats, promise to themselves a future they know nothing of.'</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_04.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

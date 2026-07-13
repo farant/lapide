@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Philippians III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_02.html">Previous: Philippians Chapter II</a></div>
     <div class="next"><a href="64_philippenses_04.html">Next: Philippians Chapter IV</a></div>
 </div>
@@ -251,18 +251,19 @@ You, Corydon, O Alexis: each is drawn by his own pleasure.</em></p>
 <p>Excellently and piously the Manual of St. Augustine, chapter 24: <em>"O my soul,"</em> he says, <em>"marked with the image of God, redeemed by the blood of Christ, betrothed by faith, endowed with the Spirit, adorned with virtues, appointed to be with the angels, love Him by whom you have been so greatly loved. Attend to Him who attends to you, seek Him who seeks you, love your Lover. Be solicitous with the solicitous, at leisure with the one at leisure, clean with the clean, holy with the Holy."</em> And a little below: <em>"Choose Him as your friend before all your friends, because when all things shall have been taken from you, He alone will keep faith with you: on the day of your burial, and when all your friends withdraw from you, He will not abandon you: but He will defend you from the roaring infernal lions prepared for prey, and will lead you through an unknown region, and will bring you to the streets of the heavenly Sion, and there will set you with His angels before the face of His majesty: where you shall hear that angelic song, Holy, holy, holy, etc. There is the song of joy, the voice of exultation and salvation, thanksgiving, the voice of praise and perpetual alleluia. There is the heap of happiness, supereminent glory, superabundant joy and all good things."</em> And finally he concludes: <em>"O my soul, sigh ardently, and desire vehemently, that you may be able to come to that heavenly city, of which such glorious things have been said: in which is, as it were, the dwelling-place of all who rejoice. By love you can ascend: to one who loves, nothing is difficult, nothing impossible. The soul which loves frequently ascends and runs familiarly through the streets of the heavenly Jerusalem, visiting those Patriarchs and Prophets, greeting the Apostles, admiring the armies of Martyrs and Confessors, gazing on the choirs of Virgins, and of all the Saints."</em> Behold, thus the conversation of St. Augustine was in heaven, awaiting from thence the Saviour.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_02.html">Previous: Philippians Chapter II</a></div>
     <div class="next"><a href="64_philippenses_04.html">Next: Philippians Chapter IV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

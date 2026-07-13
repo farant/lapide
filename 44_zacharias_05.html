@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Zacharias V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_04.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_06.html">Next Chapter</a></div>
 </div>
@@ -130,17 +130,18 @@
 <p>But he who is between heaven and earth abandons the lower things and by no means reaches the higher. These women, therefore, lift the jar between heaven and earth, because pride and vainglory so elevate the mind, captured by the avarice for honor, that, despising all their neighbors, they seem to abandon the lower things and seek the lofty things in their boasting. But such people, while they are proud, surpass in their minds those with whom they are, yet are by no means joined to the citizens above. The jar, therefore, is said to be lifted between earth and heaven: because all the avaricious, through pride and vainglory, both despise the neighbors beside them and by no means grasp the higher things that are above them. Therefore they are carried between earth and heaven, because they neither maintain equality of brotherhood with those below through charity, nor are they able to reach the heights by exalting themselves. And I said to the angel who spoke in me: Where do these carry the jar? And he said to me: That a house may be built for it in the land of Shinar. A house is built in the land of Shinar for this same jar: for Shinar is said to mean their stench. And just as a good fragrance comes from virtue, as Paul attests when he says: He manifests the fragrance of His knowledge through us in every place, for we are the good fragrance of Christ to God, so conversely, stench comes from vice. For the root of all evils is covetousness, and since every evil is generated through avarice, it is fitting that the house of avarice be built in stench. It should also be known that Shinar is a very wide valley, in which a tower began to be built by the proud, which was destroyed when the diversity of languages came about: which tower was called Babylon, for the very confusion of minds and languages. And not without reason is the jar of avarice placed there where Babylon, that is, confusion, is built: because since it is certain that all evils arise through avarice and impiety, rightly are this same avarice and impiety said to dwell in confusion.' What St. Gregory said about avarice may with equal right be attributed to lust, gluttony, anger, sloth, and any other vice. For the jar of wine is gluttony; of gall, anger; of torpor, sloth, etc.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_04.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

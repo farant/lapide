@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXXV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_34.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_36.html">Next Chapter</a></div>
 </div>
@@ -69,17 +69,18 @@
 <p>14. WHILE THE WHOLE EARTH REJOICES — as if to say: Just as you rejoiced at the devastation of Judea, so I will cause other nations to rejoice, be glad, and exult at your devastation. For it is fair that with the same measure you measured out to others, the same be measured back to you. This destruction of Idumea was accomplished by Nebuchadnezzar and the Chaldeans, as Josephus testifies.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_34.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_36.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

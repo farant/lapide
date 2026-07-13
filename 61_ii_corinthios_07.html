@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Corinthians VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="61_ii_corinthios_06.html">Previous: 2 Corinthians Chapter VI</a></div>
     <div class="next"><a href="61_ii_corinthios_08.html">Next: 2 Corinthians Chapter VIII</a></div>
 </div>
@@ -149,18 +149,19 @@
 <p>16. I have confidence in you. — Greek θαρρῶ, as if to say: I dare and freely speak and act with you, whether by praising or by accusing; for you always obey me, so that consequently I dare also to think the best of you and to boast of you securely. So Chrysostom, Theophylact, Ambrose. Anselm notes Paul's prudence as that of a physician, who treats now nearly healed wounds with the gentlest medicines of consolation and praise, so that the burning of the prior reproof may be healed.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="61_ii_corinthios_06.html">Previous: 2 Corinthians Chapter VI</a></div>
     <div class="next"><a href="61_ii_corinthios_08.html">Next: 2 Corinthians Chapter VIII</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

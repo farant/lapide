@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Prolegomena in Danielem</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="32_Daniel_Preliminares.html">Previous</a></div>
     <div class="next"><a href="32_daniel_01.html">Next</a></div>
 </div>
@@ -138,17 +138,18 @@
 <p>Moreover, like Daniel, he was formidable to kings on account of his prophecy and miracles: for he freed the Emperor Leo from mortal danger in a fall from a horse when Leo was visiting him. He sucked out and destroyed a horrible serpent, just as Daniel destroyed the dragon in chapter XIV. He predicted to the Emperor Zeno that, like Nebuchadnezzar, he would be expelled from his empire and nourished in exile, and for lack of food would eat herbs, and afterwards would be recalled by those who hated him, and would return to the empire, and would meet the end of his life in it. All these things happened just as he had predicted. He rebuked the heretical Emperor Basiliscus, who was prostrating himself at his feet, but insincerely, calling him a new Diocletian, and predicted that he would be deprived of the empire. He died at eighty years of age, having stood on his pillar for twenty-nine years, in the year of the Lord 489, in the presence of many Saints and Angels visiting him from heaven. Cyrus the prefect, whose wife and daughter he had freed from a demon, inscribed this epigram on his pillar: "Here stands a man who does not fear the winds that assail him from every side; he uses ambrosial nourishment and is free from human thirst. On deep foundations he has built his edifice, upon a double pillar. For the root is Simeon, proclaiming the Son of a mother free from corruption." He mentions Simeon, because Daniel was his imitator, and as it were his disciple and successor. Thus each was a miracle and a wonder to the world. Hence by the holiness and miracles of Daniel the Stylite, the king of the Lazi was converted from idolatry to Christianity, as Baronius teaches, in the year of Christ 522. For he was plainly, like our Daniel, a wonder-worker, and powerful in deed as well as in prayer and speech. Wherefore over his coffin, as he was being buried, three crosses formed by stars appeared, though it was daytime and the sun was shining most brightly; moreover, the whitest doves also appeared. Likewise, the relics of the three youths who had been in Babylon were placed upon him, as the Saint had ordered — lest those approaching should worship his relics rather than those who had been placed upon him: for he fled all human glory. These and more details are found in his Life on December 11.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="32_Daniel_Preliminares.html">Previous</a></div>
     <div class="next"><a href="32_daniel_01.html">Next</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

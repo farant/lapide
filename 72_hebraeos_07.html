@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_06.html">Previous: Hebrews Chapter VI</a></div>
     <div class="next"><a href="72_hebraeos_08.html">Next: Hebrews Chapter VIII</a></div>
 </div>
@@ -268,18 +268,19 @@
 <p>Note: Each word of the Apostle here contains an effective antithesis of Christ and the Aaronic priests. Christ was made pontiff with God's oath, the Aaronic priests without an oath; Christ entered the priesthood after the Law, as though to succeed it and fulfill it, the Aaronic priests with the Law; Christ is a son, they are servants; Christ remains forever, they are temporary and succeed one another; Christ is consummate in grace, glory and beatitude, they lie subject to the infirmity of death, sorrows and sin. So St. Chrysostom.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_06.html">Previous: Hebrews Chapter VI</a></div>
     <div class="next"><a href="72_hebraeos_08.html">Next: Hebrews Chapter VIII</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

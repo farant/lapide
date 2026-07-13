@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argument of the Acts of the Apostles</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="55_Acts_Preliminares.html">Previous: Preliminaries</a></div>
     <div class="next"><a href="57_acts_01.html">Next: Acts I</a></div>
 </div>
@@ -93,18 +93,19 @@ Martyr, et illustris sanguine Nazarius.</em></p>
 <p>Finally in Luke and through Luke that saying of the Psalmist was fulfilled, Psalm 18:5: <em>"Their sound went out into all the earth, and their words to the ends of the world;"</em> so that you may rightly attribute to him what Albertus Magnus said of Thomas Aquinas (whom his fellow disciples on account of his constant silence used to call the dumb ox): "The dumb ox shall utter such a voice that the whole world shall hear." Finally St. Gregory, when he was apocrisiarius at Constantinople, brought the head of St. Luke to Rome, where even now in the basilica of St. Peter it is visited and venerated.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="55_Acts_Preliminares.html">Previous: Preliminaries</a></div>
     <div class="next"><a href="57_acts_01.html">Next: Acts I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Sophonias II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_sophonias_01.html">Previous Chapter</a></div>
     <div class="next"><a href="42_sophonias_03.html">Next Chapter</a></div>
 </div>
@@ -179,17 +179,18 @@ Glory of the Trojans.</p>
 <p>Tropologically, all the more should anyone who sees Nineveh groan and hiss and clap his hands — that is, any Church, congregation, or soul once beautiful in virtues, which was a temple of God and seat of angels, being devastated by sin through the devil, and becoming a lair of lions and dragons, especially when he sees one destined for heaven being condemned and rushing to the abyss. Groaning therefore and stunned, let him say with Isaiah XIV, 11-12: "How have you fallen from heaven, O Lucifer, who rose in the morning? Your pride has been dragged down to hell, your corpse has fallen: beneath you the moth shall be spread, and worms shall be your covering." And with Baruch III, 10: "What is it, O Israel, that you are in the land of your enemies? You have grown old in a foreign land, you are defiled with the dead; you are counted among those who go down to hell." He adds the reason: "You have forsaken the fountain of wisdom. For if you had walked in the way of God, you would indeed have dwelt in everlasting peace. Learn where wisdom is, where strength, where understanding: that you may know at the same time where length of life and sustenance are, where the light of the eyes and peace are. Where are the princes of the nations, and those who rule over the beasts of the earth? Who play among the birds of heaven, who hoard silver and gold, in which men trust, and there is no end to their acquiring? etc. They have been destroyed and have gone down to hell." Ezekiel has similar pathetic laments about the ruin of the king of Tyre, chapter XXVIII, 11; about Pharaoh and the Egyptians, chapter XXXII, 18 ff.; and St. John about the condemnation of Babylon the harlot, Apocalypse XVIII, 10.</p>
 <p>St. Jerome takes all these prophecies about Nineveh as referring to heretics and hypocrites: "Who are, he says, hearers of the law, not doers, who boast in vain that they are beautiful, when there dwell in them flocks, that is, a multitude of vices, and brute animals serving the body, and all the beasts of the earth, which devour their hearts; and chameleons, who do not have one color, but are changed from moment to moment by different sins, now by avarice, now by luxury, now by cruelty, now by lust, now by sadness, now by exultation: and hedgehogs in their mangers, a thorny animal full of briars, wounding whatever it touches. And beasts shall lie in holes, that is, in their hearts: and ravens, unclean birds, at their gates, either in their mouth or in their ears, because they either always speak or always hear evil things. After which is in-</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_sophonias_01.html">Previous Chapter</a></div>
     <div class="next"><a href="42_sophonias_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

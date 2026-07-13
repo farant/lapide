@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_33.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_35.html">Next Chapter</a></div>
 </div>
@@ -108,17 +108,18 @@ And their corpse shall be — that is, the body of one killed: otherwise a "corp
 <p>With a similar and equally just antithesis, St. Chrysostom said, Homily 2 on John: "It is ridiculous that we wish our little servants to be always occupied in our affairs, but we ourselves offer no service to God, especially when all our service contributes nothing to Him." Wherefore by a fitting and just judgment of God it often happens that those who serve God sluggishly, tardily, and disobediently, also find their own servants sluggish, tardy, disobedient, and rebellious in their service.
 So that there is no (that is, so that there will be no) inhabitant.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_33.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_35.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

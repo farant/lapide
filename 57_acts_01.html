@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="56_Acts_Argumentum.html">Previous: Argumentum</a></div>
     <div class="next"><a href="57_acts_02.html">Next Chapter</a></div>
 </div>
@@ -339,18 +339,19 @@
 <p>I saw and venerated at Trier the relics of St. Matthias in the cathedral church, to whom these titles are assigned, which St. Antoninus recounts in the place already cited: "He was most learned in the law of the Lord, pure in body, prudent in mind, sharp in solving questions of Holy Scripture, provident in counsel, ready in discourse, performer of many signs, with hands stretched out to heaven, as a martyr he rendered up his spirit to God." Clement of Alexandria recounts three axioms of St. Matthias. First, book II of the Stromata: "We must admire present things," namely that we should admire the visible works of God, and from them ascend to the invisible, admiring and contemplating in them God's majesty, power, wisdom, and goodness. Second, book III: "If a neighbor has sinned with the elect, the elect has sinned. For if he had so conducted himself as the word or reason commands, his neighbor would have so revered his life that he would not have sinned." Thus the contemporaries of St. Bernardinus, even while he was still young, revered his sanctity so much that in his presence all composed themselves to modesty and said: Be silent, Bernardinus is present. Third, book VII, which Eusebius also cites, book III of the History, chapter 29: "We must fight against the flesh, and yield nothing at all to its pleasure and lust; but the soul must be nourished with the food of wisdom, and with the meals of knowledge always be increased to greater things."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="56_Acts_Argumentum.html">Previous: Argumentum</a></div>
     <div class="next"><a href="57_acts_02.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

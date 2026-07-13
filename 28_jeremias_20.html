@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_19.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_21.html">Next Chapter</a></div>
 </div>
@@ -155,17 +155,18 @@ The mother calls both the gods and the stars cruel.</p>
 <p>Hear also Seneca: "I will despise the whole kingdom of fortune;" and: "I would rather fortune have me in her camp than in her pleasures; I am tortured, but bravely — it is well; I am killed, but bravely — it is well." So he himself, epistle 68. The same in On Remedies of Fortune: "Pain threatens: if it is slight, let us bear it: patience is easy. If it is severe, let us bear it: the glory is not small. Pain is a hard thing: rather, you are soft. Few have been able to bear pain: let us be among the few. We are weak by nature: do not defame nature; she bore us brave. Let us flee from pain: but what of the fact that it follows those who flee?" The same, book 3 On Anger, chapters 5 and 6: "The soul that is bowed by injury is not great. Either one stronger or one weaker than you has injured you. If weaker, spare him: if stronger, spare yourself. There is no surer proof of greatness than that nothing can happen to provoke you. The upper part of the world, more orderly, and near the stars, is neither compressed into cloud, nor driven into storm, nor whirled into a tornado — it is free from all tumult; the lower regions are struck by lightning. In the same way a lofty soul, always at rest and stationed in calm tranquility, pressing within itself those things by which anger is contracted, is modest and venerable." Finally, this is the voice of the wise man: "Misery is the good mother of prudence." And from the Greek, ἔπαθες, ἔμαθες: "By those things by which you were injured, you were taught."</p>
 <p>AND THAT MY DAYS SHOULD BE CONSUMED IN SHAME — that is, that I should end my life ignominiously. Similar is Job chapter 10:18; and 1 Maccabees 2:7.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_19.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_21.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

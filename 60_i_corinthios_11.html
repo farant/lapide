@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_10.html">Previous: 1 Corinthians X</a></div>
     <div class="next"><a href="60_i_corinthios_12.html">Next: 1 Corinthians XII</a></div>
 </div>
@@ -249,18 +249,19 @@
 <p>But it is truer that Christ called <em>"the fruit of the vine,"</em> not what was in the Eucharistic chalice, but what was in the cup of the paschal lamb. For just as He said of the lamb, as Luke has it: <em>"I will not eat of this, until it be fulfilled in the kingdom of God,"</em> so also of the cup of the lamb He said: <em>"I will not drink of this fruit (or generation) of the vine, until the kingdom of God comes."</em> For so expressly, what Matthew and Mark wrap together, St. Luke distinguishes, and recounts that Christ said both before the Eucharist, chapter XXII, verse 17. For Christ wished only to say, that He would not henceforth live with them, and would not take the common supper, as He had hitherto lived and taken, because He was going to death, says Jerome, Theophylact and others on that passage.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_10.html">Previous: 1 Corinthians X</a></div>
     <div class="next"><a href="60_i_corinthios_12.html">Next: 1 Corinthians XII</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

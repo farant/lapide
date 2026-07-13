@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_01.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_03.html">Next Chapter</a></div>
 </div>
@@ -178,17 +178,18 @@
 <p>Note: St. John, in his Apocalyptic visions, often alludes to the vision of Ezekiel and Daniel. Thus he alludes to this vision of Ezekiel in chapters IV and V. For just as John, in chapter IV, saw God sitting on an august throne, surrounded by a rainbow and attended by four living creatures: so Ezekiel saw the same One attended in the same manner by four Cherubim, in chapter I. Second, just as St. John, in chapter V, saw in the right hand of God a sealed book, written inside and outside: so Ezekiel in this chapter II saw a book sent to him by God, in which inside and outside were written "lamentations, a song, and woe."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_01.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

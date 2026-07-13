@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jonas IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="38_jonas_03.html">Previous Chapter</a></div>
     <div class="next"><a href="39_Micheas_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -94,17 +94,18 @@
 <p>So Abraham, commanded to sacrifice his son, drew the sword against him; but when he perceived he was being called back by the angel at God's command, he immediately put the sword back in its sheath; and just as he was not saddened when he received from God the command to sacrifice his son, so neither did he rejoice when he heard God revoking this command and sparing his son — both of which were acts of a great and heroic soul, surrendering itself entirely to God, and therefore indifferent and ready for all things. So St. Louis, by the inspiration of God, crossed to the Holy Land to restore it to God and the Church; but frustrated of all the fruit of his endeavor, indeed taken captive, he tranquilly rested in the good pleasure of God. Certainly this tranquility of acquiescence was equal to, indeed greater than, the magnanimity of so great a work and expedition. St. Francis, having set out for Egypt by the inspiration of God to convert the Sultan, or to be granted by him the laurel of martyrdom, when neither succeeded, returned tranquil, resigning himself entirely to the will of God. Other saints did the same. Wherefore St. Ignatius, the founder of our Society, had so transferred his will to God's will that he said: "If by some chance the Society I had begun and promoted with such great labors were dissolved or destroyed, after half an hour spent in prayer, I would take, with God's help, no distress from that event, than which nothing more sorrowful could happen to me." The saints therefore allow themselves to be turned and turned again by the will of God, just as a horse is turned and turned again by its rider.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="38_jonas_03.html">Previous Chapter</a></div>
     <div class="next"><a href="39_Micheas_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

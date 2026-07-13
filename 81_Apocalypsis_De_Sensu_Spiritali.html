@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>On the Spiritual Sense — First Prefatory Dissertation to the Apocalypse</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_Apocalypsis_Preliminares.html">Previous: Apocalypse Preliminares</a></div>
     <div class="next"><a href="81_Apocalypsis_Varia_Systemata.html">Next: Various Interpretive Systems</a></div>
 </div>
@@ -259,17 +259,18 @@
 <p>82. Nevertheless, those things which are so connected with the meaning of the Scriptures that they are produced by manifest and necessary consequence from it, must be distinguished from those which by another route, namely from the etymologies of names, from the reasons of numbers, and from other similar means, occur to the mind of those reading the Bible, since the former certainly follow from the meaning of the Scriptures, as are, for example, the corollaries of theologians: but not so the latter, which only do so probably with more or less likelihood. Concerning those former corollaries Gregory Nazianzen writes thus: <em>"Is it not obvious that those things, though not stated in the Scriptures, are nevertheless gathered from them, which these necessarily produce and prove?.... For if, when you say twice five or twice seven, I should gather ten or fourteen from your words, or from your saying 'a mortal animal endowed with reason' should conclude it to be a man, would I seem to you to be raving? By no means surely, since I would be saying your own. For the words are not more those of him who speaks than of him who at the same time brings the necessity of speaking. As therefore in this case I would not weigh what is said more than what is understood, in the same way, if I should find anything else of those things which are either in no way, or certainly not openly enough, said, yet to be understood and gathered from the Scripture, I would not so dread you as a sycophant of names, as to flee from the pronouncement itself,"</em> Oration On the Holy Spirit, which is the 5th Of Theology.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_Apocalypsis_Preliminares.html">Previous: Apocalypse Preliminares</a></div>
     <div class="next"><a href="81_Apocalypsis_Varia_Systemata.html">Next: Various Interpretive Systems</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

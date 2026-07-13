@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_03.html">Previous: Apocalypse Chapter III</a></div>
     <div class="next"><a href="81_apocalypsis_05.html">Next: Apocalypse Chapter V</a></div>
 </div>
@@ -282,17 +282,18 @@
 <p>These things are aptly applied, but mystically, not literally, as Alcazar would have it. Add that it is not very fitting that the ark be transformed into a bow, the table into a book: for although grammatically, or as far as letters and characters are concerned, the word arca (ark) easily passes over and is changed into the word arcus (bow), the thing itself does not: for the form and figure of the ark is one thing, and that of the bow, especially of a rainbow, is quite another. Thus we see learned men sometimes, while pursuing more minutely and zealously certain little allusions and elegancies either grammatical or historical, departing from the solid and true sense of holy Scripture. The rest correspond aptly enough to one another: but they are to be taken literally not of the earthly temple, that is, the Church, but of the heavenly. For Solomon's temple, just as it allegorically signified and represented the Church militant, so anagogically it signified and represented heaven, or the Church triumphant, of which St. John here treats literally.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_03.html">Previous: Apocalypse Chapter III</a></div>
     <div class="next"><a href="81_apocalypsis_05.html">Next: Apocalypse Chapter V</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

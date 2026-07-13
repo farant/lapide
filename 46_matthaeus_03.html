@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_02.html">Matthew II</a></div>
     <div class="next"><a href="46_matthaeus_04.html">Next Chapter</a></div>
 </div>
@@ -304,18 +304,19 @@ Let it please you rather to yield than to prevail.</em></p>
 <p>Finally, the baptism of Christ, although already instituted, did not oblige men to receive it until the coming of the Holy Spirit at Pentecost: for until that time it was a counsel; from then on it became a precept. The reason is that at Pentecost the promulgation of the new law took place, whose beginning is baptism. Therefore until Pentecost the old law and circumcision remained binding, which ceased to bind when the new law promulgated at Pentecost succeeded it (Acts 2), as St. Augustine teaches, Epistle 19; St. Thomas and theologians generally. For at Pentecost all the mysteries of Christ and of Christianity were fulfilled; hence then the new law began to bind, while the old law ceased to bind, since it was merely the type and figure of the new, just as a shadow ceases in the presence of truth and light.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_02.html">Matthew II</a></div>
     <div class="next"><a href="46_matthaeus_04.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias LI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_50.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_52.html">Next Chapter</a></div>
 </div>
@@ -249,17 +249,18 @@
 <p>Thus far the words of Jeremiah — namely concerning Babylon; for this is the epilogue of the prophecy against Babylon, corresponding to the title at chapter 50:1: and this because the prophecy about her was rather long. Something similar occurred in the prophecy against Moab, chapter 48:47. Others, however, hold that this is absolutely the end of the entire prophecy of Jeremiah, and this is truer and more fitting; for the following chapter is history, not prophecy, drawn from 4 Kings, the final chapter. It appears that Baruch, Jeremiah's scribe, added this closing note, and thus collected all the prophecies of Jeremiah, issued at various times, into this volume, without however observing the chronological order in which they were issued: which Jeremiah would certainly have preserved, if he had written each one in its own time and order to compile them into a single volume. Therefore the Septuagint and the Alexandrian Arabic immediately before chapter 51, at this place, put last chapter 45 of Jeremiah according to the Vulgate edition, which contains Jeremiah's prophecy to Baruch, and about Baruch, and then they place chapter 52, after which they immediately append the prophecy of Baruch itself, and after it the Lamentations.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_50.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_52.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

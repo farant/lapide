@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Epinicion Ezechielis</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_48.html">Previous Chapter</a></div>
     <div class="next"><a href="32_daniel_01.html">Next Chapter</a></div>
 </div>
@@ -77,17 +77,18 @@
 <p>XLVIII. And these are the exits of the city: On the northern side you shall measure five hundred and four thousand. And the gates of the city shall bear the names of the tribes of Israel: three gates on the north — the gate of Reuben, one; the gate of Judah, one; the gate of Levi, one. Round about, eighteen thousand; and the name of the city from that day shall be: The Lord is there.</p>
 <p>Glory be to the Father, and to the Son, and to the Holy Spirit: as it was in the beginning, is now, and ever shall be, world without end, Amen.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_48.html">Previous Chapter</a></div>
     <div class="next"><a href="32_daniel_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_32.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_34.html">Next Chapter</a></div>
 </div>
@@ -143,18 +143,19 @@
 <p>Thirdly, through a serious and frequent examination of conscience. Whence Saint Augustine, sermon 15 <em>On the Words of the Apostle</em>: "You ask," he says, "what is it to walk? I say briefly: to make progress, lest perhaps you do not understand and walk more sluggishly. Make progress, my brothers, examine yourselves without deceit, without flattery, without soft words. For there is no one within you before whom you should be ashamed or boast. There is One within you, but He to whom humility is pleasing -- let Him test you. Test yourself also. Always be displeased with what you are, if you wish to arrive at what you are not yet. For where you were pleased with yourself, there you remained. But if you said: It is enough, then you have perished: always add, always walk, always make progress. Do not stay on the road, do not go back, do not wander off. He who does not progress stays; he who turns back to the things he had already left goes backward; he who apostatizes wanders off. A lame man going on the road walks better than a runner off the road."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_32.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_34.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

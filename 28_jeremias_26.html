@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_25.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_27.html">Next Chapter</a></div>
 </div>
@@ -115,17 +115,18 @@ Rich with Phrygian blood, luxuriates for the sickle to cut.</p>
 <p id="verse-24"><b>Verse 24</b></p>
 <p>24. THE HAND OF AHIKAM — the patronage and help of Ahikam (who was a great man under Josiah, 2 Kings 22:12) freed Jeremiah, as a brother unjustly condemned to death; whence in Hebrew Ahikam means "brother of the risen one."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_25.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_27.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

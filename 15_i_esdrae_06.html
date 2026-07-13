@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Esdrae (Ezra) VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="15_i_esdrae_05.html">Previous Chapter</a></div>
     <div class="next"><a href="15_i_esdrae_07.html">Next Chapter</a></div>
 </div>
@@ -74,17 +74,18 @@
 <p>22. And He had turned the heart of the king of Assyria to them — This is Darius king of Persia, who is called "king of Assyria" because the Assyrians, formerly lords and monarchs of all things, as well as the Babylonians subdued by Cyrus, were now subject to the Persian monarchy and to Darius.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="15_i_esdrae_05.html">Previous Chapter</a></div>
     <div class="next"><a href="15_i_esdrae_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

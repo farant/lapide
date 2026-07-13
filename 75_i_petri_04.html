@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Peter IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_03.html">Previous: 1 Peter Chapter III</a></div>
     <div class="next"><a href="75_i_petri_05.html">Next: 1 Peter Chapter V</a></div>
 </div>
@@ -367,18 +367,19 @@ Well-shining they are enriched.</em></p>
 <p>The crosses and labors of the faithful therefore do not end except with life. For they keep in mind that saying of Eccles. 9:10: <em>"Whatever thy hand is able to do, do it earnestly: for there shall be neither work, nor reason, nor wisdom, nor knowledge in hell, whither thou art hastening."</em> Pondering this, St. Thomas Aquinas, lying ill of his fatal disease, expounded the Canticle of Canticles to the Cistercians of Fossa Nova, and so, after the manner of a swan singing his swan-song, rendered up his spirit to God, dying as he taught and teaching as he died. Likewise I have known religious men who asked of God that they might die not in bed but in labor — and they obtained it; for they died while preaching: namely, the faithful, with Nazianzen, live and lay up treasure for eternity, and the more so the nearer they approach to it, so that even when they are giving up the spirit they commend and resign their souls to the faithful Creator by good deeds. For there is no greater commendation of the soul before God than that which is made by doing good and exercising the works of the virtues. Therefore let this counsel be given to the dying: that they often elicit effective and intense acts of faith, hope, penance, charity, and religion; that they distribute abundant alms; that they establish pious legacies; that they take counsel for the afflicted, the rude, the needy; that they exhort their household, especially their sons, to concord and to the fear and obedience of God; that they ask pardon of any whom they have injured, and forgive any by whom they have been injured, and remit every wrong; that they assign a portion of their food to the Church and to her ministers; and that they appoint anniversary or monthly and weekly prayers, sacred services, and psalmody for themselves, etc.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_03.html">Previous: 1 Peter Chapter III</a></div>
     <div class="next"><a href="75_i_petri_05.html">Next: 1 Peter Chapter V</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

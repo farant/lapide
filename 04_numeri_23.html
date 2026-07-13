@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_22.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_24.html">Next Chapter</a></div>
 </div>
@@ -337,18 +337,19 @@ As a bull tosses balls placed upon it to the stars.</em></p>
 <p>27. AND BALAK SAID TO HIM: COME, AND I WILL LEAD YOU TO ANOTHER PLACE, IF PERHAPS IT MAY PLEASE GOD THAT FROM THERE YOU CURSE THEM. -- This is the second change of place, by which the superstitious Balak hoped Balaam would curse the Hebrews: whence three times from three different places, Balaam on the contrary blessed the Hebrews, namely: first, from Mount Abarim and the temple of Baal, chapter 22:41; second, from the summit of Pisgah, chapter 23:14; third, here from Mount Peor, as is clear from the following verses. Moreover, Phogor or Peor was an idol, from which Beelpeor was named, as well as this mountain, about which see chapter 25:3.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_22.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_24.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

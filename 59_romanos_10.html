@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_09.html">Previous: Romans IX</a></div>
     <div class="next"><a href="59_romanos_11.html">Next Chapter</a></div>
 </div>
@@ -196,18 +196,19 @@
 <p>ALL THE DAY LONG I HAVE STRETCHED OUT MY HANDS TO AN UNBELIEVING AND CONTRADICTING PEOPLE. &mdash; That is: For the whole time during which I, Christ, lived among the Jews &mdash; but most of all on the cross, says Theodoret on Isaiah 65 &mdash; I have stretched out and daily stretch out My hands, as if pouring out upon them My gifts, that I may draw them to Myself and receive them into the bosom of My faith and grace; for among the Jews Christ spent His whole life teaching, and He Himself and the Apostles worked very many miracles; not to mention the oracles of Scripture by which God constantly called and calls them to Christ, and showed and shows Christ to them. But in vain: for the Jews, presuming on their Moses and attached to their Judaism, refuse to acknowledge Christ, say St. Chrysostom, Ambrose, Origen, and others.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_09.html">Previous: Romans IX</a></div>
     <div class="next"><a href="59_romanos_11.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

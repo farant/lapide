@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Paralipomenon (2 Chronicles) XXII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_ii_paralipomenon_21.html">Previous Chapter</a></div>
     <div class="next"><a href="14_ii_paralipomenon_23.html">Next Chapter</a></div>
 </div>
@@ -81,17 +81,18 @@ But the objection stands, first, that his father Jehoram suffered from this dise
 The rest of this chapter I have explained in 4 Kings (2 Kings) chapter 9.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="14_ii_paralipomenon_21.html">Previous Chapter</a></div>
     <div class="next"><a href="14_ii_paralipomenon_23.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

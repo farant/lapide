@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_06.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_08.html">Next Chapter</a></div>
 </div>
@@ -164,17 +164,18 @@
 <p>15. AS I CAST AWAY, etc., EPHRAIM — that is, the ten tribes, which by the Prophets are called "Ephraim:" first, because among them the mightiest was the tribe of Ephraim; second, because their first king Jeroboam was from Ephraim; third, because he established his royal seat in Samaria, which was in Ephraim.</p>
 <p>Note: God cast away Ephraim, first, when He transferred the Ark with its worship from Shiloh to Judah and Zion, as I said; second, in the 6th year of Hezekiah, which was the 9th year of Hoshea king of Israel, when the ten tribes were captured by the Assyrians, 2 Kings chapter 17, verse 6.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_06.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

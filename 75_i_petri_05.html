@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Peter V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_04.html">Previous: 1 Peter Chapter IV</a></div>
     <div class="next"><a href="76_ii_petri_argumentum.html">Next: 2 Peter Introduction</a></div>
 </div>
@@ -278,18 +278,19 @@
 <p><b>Who are in Christ Jesus.</b> — You who are incorporated into Christ through faith, hope, charity, soon to be incorporated through eternal happiness and glory, as he said in verse 10. Most excellently Eusebius of Emesa, or rather St. Eucherius of Lyons, in the homily On St. Maximus: <em>"O, he says, human frailty! small is whatever you do for the hope of things eternal."</em> For, as Cicero says, Tusculan IV: <em>"What can seem great to him in human affairs, to whom all eternity and the magnitude of the whole world is known?"</em> More sublimely and divinely St. Augustine, book XII of Confessions, chapter XI: <em>"O blessed (creature), He says, by clinging to Thy blessedness, blessed by Thee Thyself, its everlasting inhabitant and its illuminator. Nor do I find what I should more gladly think to be called the heaven of heaven of the Lord, than Thy house contemplating Thy delight without any failing of going forth into another, a pure mind, most harmoniously one by the stability of peace of holy spirits, citizens of Thy city in the heavens, above these heavenly things. Whence let the soul understand, whose pilgrimage has become long, if now she thirsts for Thee, if now her tears have been made her bread, while it is said to her every day: Where is Thy God? if now she asks one thing of Thee, and seeks this, that she may dwell in Thy house all the days of her life. And what is her life unless Thee? And what are Thy days unless Thy eternity, as Thy years which do not fail, because Thou Thyself art the Same? Hence then let my soul understand, what she can, how far above all times Thou art eternal, when Thy house, which has not gone on pilgrimage, although it is not co-eternal with Thee, yet by clinging unceasingly to Thee, suffers no vicissitude of times."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_04.html">Previous: 1 Peter Chapter IV</a></div>
     <div class="next"><a href="76_ii_petri_argumentum.html">Next: 2 Peter Introduction</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

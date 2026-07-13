@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_08.html">Matthew VIII</a></div>
     <div class="next"><a href="46_matthaeus_10.html">Next Chapter</a></div>
 </div>
@@ -313,18 +313,19 @@
 <p>Here ends the childhood of Christ, and the acts of the same from His baptism and first Passover up to the second Passover — that is, the acts of one year and some months. This was the 31st year of the age of Christ: see the Chronotaxis which I have placed before this commentary. On this account Jansenius here ends the first part of his Concordia. Yet it is true that Matthew here, in chapters V, VI, VII, and the beginning of chapter VIII, inserted Christ's Sermon on the Mount, which was delivered later, namely after the second Passover in the 32nd year of Christ, together with some miracles by which Christ confirmed it, such as the healing of the Centurion's servant and the cleansing of the leper — because Matthew wished by anticipation to give at the very outset a summary of the whole doctrine of Christ and of the Evangelical law, as I said at chapter V, verse 1. Wherefore this Sermon of Christ on the Mount, together with the calling of the Apostles in whose presence it was delivered, ought in the right order of time to be placed at the beginning of chapter X which immediately follows.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_08.html">Matthew VIII</a></div>
     <div class="next"><a href="46_matthaeus_10.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

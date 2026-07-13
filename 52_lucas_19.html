@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_18.html">Previous: Luke XVIII</a></div>
     <div class="next"><a href="52_lucas_20.html">Next: Luke XX</a></div>
 </div>
@@ -225,17 +225,18 @@
 <p>Tropologically: All these things, says St. Gregory, Homily 39, happen at death to the soul that has served the pleasures of the flesh. For then demons surround it on all sides, tempt it, press it hard, and drag it to the underworld. Then all that structure of stones, that is, of its own thoughts, is scattered, because it did not recognize the time of its visitation, when God warned it through preachers, confessors, teachers, and through internal inspirations to amend its life and attend to its salvation. St. Gregory recounts the dreadful examples of Chrysaorius, Theodore, King Theodoric, and others in Book 4 of the <em>Dialogues</em>, chapters 30, 38, 46, 52, and following.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_18.html">Previous: Luke XVIII</a></div>
     <div class="next"><a href="52_lucas_20.html">Next: Luke XX</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

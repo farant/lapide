@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_07.html">Previous: Acts VII</a></div>
     <div class="next"><a href="57_acts_09.html">Next Chapter</a></div>
 </div>
@@ -287,18 +287,19 @@
 <p>40. <em>Until he came to Caesarea.</em> — "Caesarea" is a city of Palestine situated between Dora and Joppa; it was formerly called the Tower of Strato, but by Herod the Ascalonite, in honor of Augustus Caesar, to whom he dedicated it, it was called Caesarea. It was distinct from Caesarea Philippi, which was built by Philip, son of Herod, in honor of Tiberius Caesar, at the foot of Lebanon, whence it received both names; and later by Herod Agrippa it was called Neronias in honor of Nero. Moreover, in this our Caesarea this deacon Philip had a house, in which he also dwelt with his four daughters, who were prophetesses, of whom chapter 21. In this same city, Herod Agrippa the elder, while celebrating quinquennial games and failing to restrain the flatterers who acclaimed him as he was speaking, <em>"The voice of a God, not of a man,"</em> was struck by an angel and perished, Acts 12. In this same city Cornelius the Centurion, baptized by St. Peter, is said to have been the first bishop, Acts 10. Here also the prophet Agabus, binding himself with Paul's girdle, foretold his bonds: hence a little later Paul, bound at Jerusalem, was sent to Caesarea, where before King Agrippa and the governor Felix he pleaded his cause, and being detained in chains by Festus he appealed to Caesar, Acts 23 and following. Bishop of this city later was Eusebius, the writer of the Ecclesiastical History, who from this is called Caesareensis; just as St. Basil was bishop of another Caesarea, which is in Cappadocia. So Adrichomius in his <em>Description of the Holy Land.</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_07.html">Previous: Acts VII</a></div>
     <div class="next"><a href="57_acts_09.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

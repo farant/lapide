@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_01.html">Previous: John I</a></div>
     <div class="next"><a href="54_joannes_03.html">Next: John III</a></div>
 </div>
@@ -192,17 +192,18 @@
 <p>25. <em>AND BECAUSE HE DID NOT NEED ANYONE TO BEAR WITNESS ABOUT MAN; FOR HE HIMSELF KNEW WHAT WAS IN MAN.</em> — For He searched the heart of each person, whether it was steadfast, or fickle and inconstant. Therefore, as St. Chrysostom says, "He did not care about outward words, He who enters into their very souls, who breaks into human thoughts, who knew that their fervor would soon grow cold: Jesus had no need of witnesses to know the minds He had formed. The craftsman knew better what was in His work;" St. Augustine adds: "than the work itself knew what was in itself. The Creator of man knew what was in man, which the created man himself did not know. For this dignity, says Cyril, is attributed to the true God alone and to no creature — to be a knower of hearts (καρδιογνώστην), and to know the soul of man without any outward evidence being given." Hence the Psalmist, Psalm 32:15: "He who fashioned their hearts one by one, who understands all their works." So Franciscus Lucas, Jansenius, Barradius, and others.</p>
 <p>Tropologically Bede: "Let us never be secure about our own conscience, but always anxiously fear; for what lies hidden from us cannot lie hidden from the eternal Judge."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_01.html">Previous: John I</a></div>
     <div class="next"><a href="54_joannes_03.html">Next: John III</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

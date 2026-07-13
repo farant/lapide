@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_09.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_11.html">Next Chapter</a></div>
 </div>
@@ -414,17 +414,18 @@
 <p>Finally, Christ here signifies that no work, even the smallest one, bestowed upon a preacher, will lack its reward. Now such are the remiss works which the just perform in great numbers, and therefore they would lose the reward of very many works if remiss works did not increase a more intense grace (for few elicit acts so intense that they equal or exceed their habit) — the contrary of which Christ here teaches.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_09.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_11.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

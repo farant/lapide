@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_07.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_09.html">Next Chapter</a></div>
 </div>
@@ -153,17 +153,18 @@
 <p>Vatablus adds that what is signified here is the zeal of the idolaters, who placed holiness in the length of a journey, and therefore made pilgrimages from one end of Judea to the other, namely from Dan to Beersheba, as if to say: The pilgrimage which begins from Beersheba and ends in Dan lives and thrives. For in Dan and Beersheba, as it were at the two borders of his kingdom, Jeroboam set up golden calves as tutelary gods of Israel. The Arabic translates: They swear by the indulgence of Samaria, and they say that God is your god and Beersheba. See here the insane zeal for idolatry, by which they not only pray for the idol or the temple, but also for the road — indeed, they swear by it as by a divinity.</p>
 <p>THEY SHALL FALL (because of this idolatry), AND SHALL NOT RISE AGAIN — that is, They shall fall completely and irreparably, and perish. And so it happened: for the ten tribes, after Samaria was destroyed, were carried off to Assyria and never returned from there.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_07.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_09.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

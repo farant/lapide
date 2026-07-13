@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Sophonias</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_habacuc_03.html">Previous Chapter</a></div>
     <div class="next"><a href="42_sophonias_01.html">Next Chapter</a></div>
 </div>
@@ -30,17 +30,18 @@
 <p>Seneca writes brilliantly in Epistle 41: "Just as," he says, "the rays of the sun do indeed touch the earth, but are where they are sent from; so a great and holy soul, sent down to earth that we might know divine things more closely, dwells indeed with us, but clings to its origin: it depends upon that source; it looks and strives toward it."</p>
 <p>Still more brilliantly, St. Gregory in Homily 11 on Ezekiel writes: "To whom," he says, "the care of others is committed, is called a watchman, so that he may sit in the height of the mind and draw the meaning of his name from the virtue of his action. For he who is at the bottom is no watchman. A watchman indeed always stands on the heights, so that he may see far off whatever is coming. And whoever is set as a watchman over the people must stand on high through his life, so that he may be of benefit through his foresight. Hence another Prophet admonishes the watchman, saying: Go up to a high mountain, you who bring good tidings to Zion, Isaiah 40 -- so that he who undertakes the office of preaching may rise to the height of good action, may ascend to the heights, and may surpass the works of those entrusted to him."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_habacuc_03.html">Previous Chapter</a></div>
     <div class="next"><a href="42_sophonias_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

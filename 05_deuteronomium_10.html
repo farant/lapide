@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_09.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_11.html">Next Chapter</a></div>
 </div>
@@ -157,18 +157,19 @@
 <p>Hence again we ought to praise God not only with our mouth, but with our whole heart and in our deeds, so that our life may be a continual praise of God; and especially so that we may convert sinners, who by their sins blaspheme God, that by their repentance and pious life they may praise God. Would that I could praise You, O Lord, with a thousand hearts, a thousand tongues, indeed with the voice of all men and angels!</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_09.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_11.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

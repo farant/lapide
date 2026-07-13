@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_Amos_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_02.html">Next Chapter</a></div>
 </div>
@@ -246,17 +246,18 @@ Tropologically, St. Gregory, Pastoral Rule, part 3, chapter 25: "Gilead," he say
 By these seven nations that persecuted Judah, that is, the faithful soul and people, are signified the seven capital vices: first, by Damascus (which in Hebrew means "sack of blood" or "drinker of blood"), gluttony and gluttons, who wallow entirely in flesh and blood; second, by Gaza, avarice and the avaricious, whose whole strength is in gaza, that is, in gold and silver. The same is signified by Ashkelon, that is, as St. Jerome translates in Hebrew Names in Acts, "fire of infamy" -- where correct to "fire of infamy"; for אש is fire, קלון calon is infamy. The same is signified by Ekron, that is, barrenness; and exiliosis, that is, uprooting. Israel represents sloth and the slothful, who, reduced to poverty by laziness, sell the just for silver and the poor for a pair of sandals, as will be discussed in chapter 2:6. The four crimes of each of these are the four stages of each vice: namely, the first is the sin of the will; the second, of action; the third, of habit; the fourth, of glorying, as I said on verse 3, from St. Jerome and Rupert. All of these God will destroy on the day of judgment and send into the fire of Gehenna, because they persecuted the pious and broke the covenant of brothers, by stirring up war between the flesh and the spirit -- indeed by causing the flesh to imprison and oppress the spirit, to which, as a brother, indeed as a servant, it ought to have been subject and obedient.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_Amos_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

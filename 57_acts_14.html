@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_13.html">Previous: Acts XIII</a></div>
     <div class="next"><a href="57_acts_15.html">Next Chapter</a></div>
 </div>
@@ -228,18 +228,19 @@
 <p>27. <em>AND THEY ABODE NO SMALL TIME WITH THE DISCIPLES</em> — at Antioch. Baronius reckons that Paul and Barnabas, after their return to Antioch, remained two years, namely the years of Christ 49 and 50, until the First Council of Jerusalem, which he asserts was celebrated in the year of Christ 51, concerning which in the following chapter.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_13.html">Previous: Acts XIII</a></div>
     <div class="next"><a href="57_acts_15.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

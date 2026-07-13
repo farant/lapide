@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_21.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_23.html">Next Chapter</a></div>
 </div>
@@ -232,17 +232,18 @@ I do not deceive you — you will die within the year you began.
 So he himself writes to Cadalus, book 1, epistle 20, and to the same, epistle 21: "Through Jeremiah it is said, chapter 5: 'Shall I not visit upon these things, says the Lord?' For indeed, just as by way of augmentation we say: 'the Holy of Holies';</p>
 <p>so the Roman Church being sold for a price — that is the sin of sins. When Caesar Augustus died, the grieving Roman people cried out: 'Would that he had either not been born, or not died!' But of you, Cadalus, we rightly say: 'Would that you had either not been born, or had died at once!' The Emperor Diocletian, as Eutropius testifies (book 9), laid aside the insignia of imperial dignity and, not far from Salona, for nearly nine years until his death, lived as a private citizen in the pleasant cultivation of a green little garden. When he was earnestly pressed by Herculius and Galerius to resume the empire, shuddering at it as at some plague, he said: 'If only you could see at Salona the vegetables planted by our own hands, you would certainly never judge that this burden should be placed on our shoulders again.' Kings of the nations flee the pinnacles of imperial dignities, and the priests of God pant after — not the priestly rod, but the royal, nay the tyrannical rod — over the human race."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_21.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_23.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -53,7 +53,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_03.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_05.html">Next Chapter</a></div>
 </div>
@@ -454,17 +454,18 @@
 <p>St. Thomas thinks, II-II, Question XCIV, article 4, reply 2, that there was no idolatry in the first age of the world, on account of the fresh memory of the world's creation. But this reasoning does not entirely hold: for the fresh memory of the flood, and of so great a vengeance of God, did not prevent idolatry from soon creeping in again. Whence Torniellus and others think that there was idolatry even then in other families of Adam; and that therefore Enos opposed to it the public worship of the one God, and thus established the visible form of the Holy Church.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="01_genesis_03.html">Previous Chapter</a></div>
     <div class="next"><a href="01_genesis_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

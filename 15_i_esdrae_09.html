@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Esdrae (Ezra) IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="15_i_esdrae_08.html">Previous Chapter</a></div>
     <div class="next"><a href="15_i_esdrae_10.html">Next Chapter</a></div>
 </div>
@@ -82,17 +82,18 @@
 <p>For no one can stand before You in this matter — that is, this cannot by any reasoning be denied, excused, concealed, or defended; the Hebrew reads: For there is no standing before You in this; without our falling in judgment and being judged sinners, ungrateful, and guilty of offending the divine majesty. Therefore, for shame we cover our faces, indeed we cast them to the ground, begging Your grace and mercy. Such should be the disposition and prayer, the shame and contrition of penitents.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="15_i_esdrae_08.html">Previous Chapter</a></div>
     <div class="next"><a href="15_i_esdrae_10.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

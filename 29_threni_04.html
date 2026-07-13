@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Threni IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="29_threni_03.html">Previous Chapter</a></div>
     <div class="next"><a href="29_threni_05.html">Next Chapter</a></div>
 </div>
@@ -233,17 +233,18 @@
 <p>Judges 2: An Angel went up to the place of weeping, and consoled the weeping Hebrews. God deemed the Ninevites, mourning at the preaching of Jonah, worthy of His pardon and grace. Of the Apostles it is said in Psalm 125: "Going, they went and wept, casting their seeds; but coming, they shall come with joyfulness, carrying their sheaves." And the Bridegroom calls and consoles the mourning Bride: "Now the winter is past, the rain is over and gone, the time of pruning has come, etc.; arise, my love, and come."</p>
 <p>He has uncovered (as if to say: He will reveal) your sins — God will reveal them to the whole world, when He punishes them with public destruction.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="29_threni_03.html">Previous Chapter</a></div>
     <div class="next"><a href="29_threni_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

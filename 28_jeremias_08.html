@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_07.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_09.html">Next Chapter</a></div>
 </div>
@@ -163,17 +163,18 @@
 <p>Moreover, what Hippocrates, at the beginning of his Aphorisms, writes and laments concerning medicine and physicians healing the wounds and diseases of the body: "Life is short, the art is long, the opportunity fleeting, the experiment perilous, the judgment difficult;" this is far more truly said of spiritual medicine and spiritual physicians, who endeavor to cure the wounds and diseases of the soul.</p>
 <p>Finally, St. Augustine speaks admirably in the Sentences, sentence 131: "Just as, he says, there are two functions of medicine, one by which sickness is healed, another by which health is preserved: so there are two gifts of grace, one which takes away the desire of the flesh, another which causes the virtue of the soul to persevere."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_07.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_09.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

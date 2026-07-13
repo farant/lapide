@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>James II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_01.html">Previous: James Chapter I</a></div>
     <div class="next"><a href="74_iacobi_03.html">Next: James Chapter III</a></div>
 </div>
@@ -363,18 +363,19 @@ Will never be carried headlong into graver crimes.</em></p>
 <p>Finally, Paul by works properly understands legal works. For when the Jews thought they were justified by circumcision and by the ceremonies prescribed by the Mosaic law, Paul refutes this very thing, and teaches that all these things without faith and the grace of Christ are ineffectual and useless for justice and salvation. The same is plain in Rom. III, 28, where he expressly says: <em>"We reckon that a man is justified by faith without the works of the law,"</em> and adds: <em>"Or is He the God of the Jews only?"</em> as the Jews thought; <em>"Is He not also of the Gentiles? indeed of the Gentiles also."</em> The same is clear from this, that in Rom. II, III, IV, and in the Epistle <em>to the Galatians,</em> when he names works of the law, he always brings up the example of circumcision, which was the chief legal work of the old law. But James by works understands evangelical and Christian works, which are done from the faith and grace of Christ, by which both Paul and faith teach us to be justified.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_01.html">Previous: James Chapter I</a></div>
     <div class="next"><a href="74_iacobi_03.html">Next: James Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

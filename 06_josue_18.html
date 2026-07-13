@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joshua XVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_17.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_19.html">Next Chapter</a></div>
 </div>
@@ -114,18 +114,19 @@
 <p>21. THE VALLEY OF KEZIZ. — In Hebrew קציץ <em>kasis</em>, which word signifies cutting off or end. It is the proper name of a valley and the city situated in it, because it was divided and as it were cut through. Whence Masius translates, "the broken valley," or "the cut-through plain." Others translate, "the valley of incision," because in it balsam was cut not with iron, but with a sharp piece of glass, bone, or stone; for if it is cut with iron, the shrub dies, says Pliny in Book 12, chapter 25, and Josephus in Antiquities Book 14, chapter 1. For this valley was not far from Jericho, which alone produced balsam, as Josephus teaches in the same passage.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_17.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_19.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

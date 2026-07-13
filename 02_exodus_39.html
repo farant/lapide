@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XXXIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_38.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_40.html">Next Chapter</a></div>
 </div>
@@ -72,17 +72,18 @@
 <p>Tropologically, those who build a tabernacle of God in their soul, through humility, charity, prayer, and other virtues, when it is completed will be blessed by the Lord, because they will be heaped with grace and glory. <em>"The blessing of the Lord is upon the head of the just; but iniquity covers the mouth of the wicked,"</em> says the Wise Man, Proverbs chapter 10. Thus Abraham was blessed: <em>"By My own self I have sworn, says the Lord, because you have done this thing and have not spared your only-begotten son: I will bless you, and in your seed all the nations of the earth shall be blessed,"</em> Genesis chapter 22, verse 16. Hence Ecclesiasticus chapter 11, verse 24: <em>"The blessing of God hastens to reward the just."</em> And chapter 39, verse 27: <em>"His blessing shall overflow like a river,"</em> especially on the day of judgment, when He shall say to His elect: <em>"Come, blessed of My Father, possess the kingdom prepared for you from the foundation of the world."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_38.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_40.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

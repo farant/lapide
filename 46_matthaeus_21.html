@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_20.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_22.html">Next Chapter</a></div>
 </div>
@@ -308,17 +308,18 @@
 <p>45. <b>And when the chief priests and Pharisees had heard His parables, they knew that He spoke of them. 46. And seeking to lay hold on Him, they feared the multitudes: because they held Him as a prophet.</b> — The Scribes recognized, partly from the very words of the psalm, partly from Christ's sayings and gestures, that these things were being said by Him against them; whence, raging and gnashing their teeth at Him, they wished to seize and torment Him, but fearing the crowd, they did not dare to do it. Behold, thus gradually Christ, through His rebukes of the Scribes, paved for Himself the way to the cross and to death: for the Scribes inflicted these upon Him three days later. Thus was fulfilled the counsel of God concerning the redemption of men through the death of Christ.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_20.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_22.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

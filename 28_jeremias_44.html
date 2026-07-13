@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XLIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_43.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_45.html">Next Chapter</a></div>
 </div>
@@ -80,17 +80,18 @@ In the streets of Jerusalem. — Note: The ancients divided cities into larger p
 <p>Wittiza, king of Spain, impure and impious, fearing that his subjects would rise against him on account of his tyranny, followed the evil counsel of a certain man and ordered the walls of the cities and the fortifications of the kingdom to be demolished under the pretense of peace. But it turned out badly for him: for he was deprived of his kingdom and his eyes, died wretchedly, and left a weakened kingdom to his successor Roderic, so that it was easy for the Moors to subjugate it. So says Rodrigo, Archbishop of Toledo, book V, chapter XVI, and Mariana, book VI, chapter XIX.</p>
 <p>Ludovico Sforza, Duke of Milan, having criminally seized the Duchy from his nephew Gian Galeazzo, and fearing Alfonso king of Naples, incited Charles VIII, king of France, against him, who came and stripped Alfonso of his kingdom. Ludovico, then fearing the power of the French and repenting of what he had done, conspired against the king together with the princes of Italy; but he was defeated and captured by the French, confined in an iron cage, and died most wretchedly. So Guicciardini, books III and IV of the History of Italy, and Giovio, book IV of the Eulogies of Military Men.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_43.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_45.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

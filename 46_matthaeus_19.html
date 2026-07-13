@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_18.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_20.html">Next Chapter</a></div>
 </div>
@@ -262,17 +262,18 @@
 <p>Moreover, Christ explains this maxim — "Many that are first shall be last, and the last first" — by the following parable of the workers hired to cultivate a vineyard, in the next chapter. This maxim, then, is a pre-parable — that is, the title and argument of that parable, to which this post-parable (the scope and application of the parable) is appended at chapter XX, verse 16: "So shall the last be first, and the first last: for many are called, but few are chosen." Whence it is clear that the post-parable corresponds to the pre-parable on equal terms — indeed, that it is one and the same with it. Therefore "the chosen" are called "the first," while those who are only "called" but not chosen are called "the last."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_18.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_20.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

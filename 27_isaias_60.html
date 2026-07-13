@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias LX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_59.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_61.html">Next Chapter</a></div>
 </div>
@@ -392,17 +392,18 @@ In like manner the just on earth shall be the shoot of God&#x27;s planting, beca
 <p>I THE LORD IN HIS TIME (that is, at the time appointed by Me for the Church) WILL SUDDENLY DO THIS. — In Hebrew: I will hasten it or I will accelerate it. So Vatablus, that is: Shortly I will provide these things for the Church, and at the same time I will make them, once they have begun, be completed in a short time. For after 700 years the Church of Christ began, and as soon as she began, in the space of a few years she gained the whole world, and she herself attained immense glory, offspring, and strength. This divine promise accomplished this for her — a promise which, as it is efficacious, so also it is swift in working and performing what it promised.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_59.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_61.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

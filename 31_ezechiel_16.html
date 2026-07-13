@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_15.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_17.html">Next Chapter</a></div>
 </div>
@@ -525,17 +525,18 @@
 
 <p>63. AND YOU SHALL NO MORE OPEN YOUR MOUTH — as if to say: You will no longer dare to complain, indeed not even to open your mouth or mutter, when you see your own unworthiness, and My clemency and beneficence toward you, by which I shall, as it were, contend with your impiety, and conquer and overwhelm it. For I will send to you and yours My only-begotten Christ, who will go as light to the blind, life to the dead, way to the wandering, truth to the false and deceitful, salvation to the sick, strength to the fragile, redemption to captives, justice to the unjust, a fountain of living water to the parched, prince of peace to the discordant, bread of life to those laboring with hunger, God to sinners, and He will make them holy, satisfied, harmonious, just, free, healthy, strong, truthful, full of life, vigorous and radiant. The Apostle treats this argument in his epistle to the Romans, especially chapter 3, where he teaches that neither the Jews nor the Gentiles ought to glory in their own justice, but to be confounded for their sins; and to praise and give thanks to God, who freely bestowed grace, justice and salvation on the unworthy through Christ.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_15.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_17.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

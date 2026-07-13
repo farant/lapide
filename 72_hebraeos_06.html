@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_05.html">Previous: Hebrews Chapter V</a></div>
     <div class="next"><a href="72_hebraeos_07.html">Next: Hebrews Chapter VII</a></div>
 </div>
@@ -201,18 +201,19 @@
 <p>Again He sharpens hope, and teaches that it is certain; because Jesus our forerunner has entered into heaven itself, toward which we tend through hope, and that not so much for Himself and His own glory, as for us and our glory: for Christ ran ahead into heaven, that He might lay open and prepare for us the way to the same place, and that we might shortly follow and overtake Him going before us; for he who runs ahead of another to open the gates, or to keep them open, runs only a small interval ahead of him who follows. So Theophylact. Finally, our hope is plainly confirmed and perfected by the title of eternal high priest, which the Apostle here adds to Christ, as if to say: For certain, Hebrews, hope for heaven, because Christ has entered into heaven, that He may there assist the Father as eternal High Priest, and represent and offer to Him His cross and death, and obtain for His faithful all grace and all the means by which they may strive toward heaven.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_05.html">Previous: Hebrews Chapter V</a></div>
     <div class="next"><a href="72_hebraeos_07.html">Next: Hebrews Chapter VII</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

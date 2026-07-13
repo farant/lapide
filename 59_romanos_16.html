@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans XVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_15.html">Previous: Romans XV</a></div>
     <div class="next"><a href="60_i_corinthios_argumentum.html">Next: 1 Corinthians Introduction</a></div>
 </div>
@@ -112,18 +112,19 @@
 <p>O King of the ages, O revealer of the mystery kept silent in eternal times, O eternal God, immortal and invisible, O You who dwell on the lofty mountains of ETERNITY! Who from on high look down upon the narrow span of our life, and the spaces of all times that pass away beneath You; to You be honor, to You be glory for ever and ever! You have unlocked for us, by overcoming death, the entrance to blessed ETERNITY: make us, ever mindful of it, so to live soberly, justly and piously, that we may be made partakers of it; grant us so holily and heroically to pass this moment of life, that for ever and ever we may merit to enjoy You, to praise You, to celebrate You with all the Angels and Saints, O true charity, O dear ETERNITY! My God and my all. Amen.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_15.html">Previous: Romans XV</a></div>
     <div class="next"><a href="60_i_corinthios_argumentum.html">Next: 1 Corinthians Introduction</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

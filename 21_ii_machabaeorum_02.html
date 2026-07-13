@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Maccabees II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_03.html">Next Chapter</a></div>
 </div>
@@ -133,17 +133,18 @@
 <p>32. TO AVOID DETAILED EXECUTION OF MATTERS MUST BE ALLOWED TO THE ABRIDGER. — Greek: To omit the minute treatment of the business must be allowed to one making an abridgment, that is to say: It is the task of the historical author to curiously investigate and narrate each detail minutely; but the abridger's task is to cut away many of these and encompass much in few words. For the Greek exergasian signifies a work done with great diligence and care, that is, what is treated curiously, exactly, fully, and perfectly. And our author calls this 'executions'; and do not think this word un-Latin. For exsequi means to complete and perfect something, and therefore to do it carefully; hence that saying of Cicero in the Orator: 'How divinely he executes all things.' And that of the same in On the Universe: 'There is no doubt therefore that he preferred to execute eternity, since nothing is more beautiful than the world, nor more excellent than its builder.' And that of the same in the book On Old Age: 'To execute all the duties and functions of a king.' Again, and more to the present point, exsequi means to set forth a matter minutely and amply and to pursue it in narration. Thus Livy, Book V: 'He was then pursuing,' he says, 'what the solemn derivation was.' And Cicero, in Marius, Book XXVII: 'I have,' he says, 'many more hidden things which I can scarcely express in words.' And Pliny, Book XXXV, chapter VIII: 'Now I shall run through those famous in that art with the greatest brevity; for such an execution,' that is, a more prolix and fuller narration, 'is not the purpose of the work undertaken.' Thus here 'executions' are opposed to the abbreviation which our Author here set himself to pursue.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

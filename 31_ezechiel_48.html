@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XLVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_47.html">Previous Chapter</a></div>
     <div class="next"><a href="31_Ezechiel_Epinicion.html">Next Chapter</a></div>
 </div>
@@ -115,17 +115,18 @@
 <p>Anagogically, this city with its twelve tribes and gates signifies the Church of the elect triumphant. For alluding to this passage, indeed citing the words of Ezekiel, St. John explains it in Apocalypse 21:10: He showed me, he says, the holy city, Jerusalem, descending from heaven from God, having the glory of God, etc. And it had a great and high wall, having twelve gates, and names inscribed, which are the names of the twelve tribes of the sons of Israel. On the East three gates, and on the North three gates, and on the South three gates, and on the West three gates. The city was set foursquare, and its length was as great as its breadth. And he measured its wall, one hundred forty-four cubits, the measure of a man, which is that of an Angel, etc. See the remarks there, and also what I said on Numbers II, near the end. For the camps of the twelve tribes around the tabernacle were like a mobile and military city, signifying the Church militant, which strives toward the Church triumphant; and this by force of arms, fighting and breaking through the midst of the enemies of the flesh, the world, and the devil. The city of God is paradise, where there is life and eternal joys; the city of the devil is the underworld, where there is death and eternal torments.</p>
 <p>The Rabbis of the Jews confess that the Messiah has not yet come, because He did not build for them the temple and city described here by Ezekiel; yet at last they confess that this city with its temple will be spiritual and mystical, not corporeal. So Rabbi Solomon confesses here and says: All things that are written in Ezekiel about Jerusalem are without doubt to be understood of the holy supernal city of Jerusalem. The Talmudists teach the same, whom Finus cites in book II of the Scourge of the Jews, chapter 8, where he teaches that by Jerusalem is to be understood the congregation of the nations gathered to Christ, or the universal body of Christians; by the temple, the congregation of priests; by the closed gate, the Blessed Virgin: Otherwise, he says, this city would equal, if not surpass, the magnitude of the world. This reasoning is not solid: for these 18,000 of the city that Ezekiel counts here are not leagues, as he with the Rabbis supposes, but measuring reeds. And so this city with its 12 tribes, priests, and Levites symbolically signified the Church with its 12 Apostles, faithful people, priests, and deacons. It is set foursquare because it is most firm, so that the gates of hell cannot prevail against it. On each side it has three gates: because from every quarter, from the four regions of the world, the nations have flocked to it and entered, and this through faith in the Most Holy Trinity. The twelve tribes are all the faithful and Christians; for these are the true Israelites, sons of the Apostles, fellow citizens of the saints, and members of God's household. The name of the city is the Lord (Hebrew: Jehovah) is there, because in the Church is God, who is His own being and the being of all things. There is the Most Holy Trinity: Father, Son, and Holy Spirit. There really and corporally in the sacrament and sacrifice of the Eucharist is Jesus Christ, God and man. How great is this dignity! How great this consolation! How great this protection! For what can be lacking to one who has God!</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_47.html">Previous Chapter</a></div>
     <div class="next"><a href="31_Ezechiel_Epinicion.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

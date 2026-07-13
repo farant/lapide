@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_01.html">Previous: Romans I</a></div>
     <div class="next"><a href="59_romanos_03.html">Next Chapter</a></div>
 </div>
@@ -328,18 +328,19 @@
 <p>Hence tropologically St. Jerome (or rather Paulinus, as Erasmus holds; or certainly Maximus of Turin, as Marianus holds), in the epistle to Terasia, on true circumcision, which is found in vol. IV of the works of St. Jerome, asks why God instituted circumcision not in the ear, finger, or any other open part of the body, but in the member which is hidden. And he answers, and gives this reason: "The Lord prefigured," he says, "that which He afterwards taught, that we should not do our justice before men; but in secret, before Him alone to whom alone nothing is secret, and whom alone we know to be the rewarder of good deeds. Hence we ought to be Jews not in the flesh openly, but in the secret of the heart, not in the letter, but in the spirit. For the letter is subject to our eyes, but the spirit shrinks from our carnal gaze, that praise, according to the Apostle, may be obtained from God, not from men."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_01.html">Previous: Romans I</a></div>
     <div class="next"><a href="59_romanos_03.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

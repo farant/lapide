@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Galatians IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_03.html">Previous: Galatians Chapter III</a></div>
     <div class="next"><a href="62_galatas_05.html">Next: Galatians Chapter V</a></div>
 </div>
@@ -286,18 +286,19 @@
 <p>31. With which liberty Christ has set us free. — In place of <em>"set free"</em> (liberavit) Tertullian reads <em>"manumitted"</em> (manumisit), as if to say: It is not to our merits, lineage, or talents, but to the grace of Christ that it must be ascribed, that we are sons of the New Testament and of the Church as of a free woman — free, and freed from the servitude of the old Law, Testament, and Synagogue as of a bondwoman.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_03.html">Previous: Galatians Chapter III</a></div>
     <div class="next"><a href="62_galatas_05.html">Next: Galatians Chapter V</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XLIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_42.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_44.html">Next Chapter</a></div>
 </div>
@@ -55,17 +55,18 @@
 <p id="verse-13"><b>Verse 13</b></p>
 <p>13. And he will break the obelisks of the House of the Sun. — The Septuagint renders: the obelisks of Heliopolis. For Heliopolis is so called in Greek, meaning: City of the Sun, because in it the Sun was worshipped in its own temple, whose priest was Potiphar, Genesis XLI, 45. Note: The Phoenicians and Egyptians were the first of all peoples to worship the sun, moon, and stars as gods, as the causes of the generation and destruction of all things. 'For, as Catullus says, breezes caress plants' and every living thing, 'the sun strengthens, the rain nourishes.' The Egyptians depicted the Sun in youthful form, with a round face, standing in a ship carried by a crocodile, as Pierius notes, Hieroglyphics XLIX. By the ship they signified the movement of the Sun through the waters, that is, through the heavens made of water; by the crocodile, rainwater, whose cause is the sun. Heliopolis, moreover, was properly devoted to the Sun alone, and because the sun is unique, hence they attributed to the phoenix — which is said to have first appeared in that city and to dwell there — as a unique hieroglyphic to the unique Sun, just as the sun is a hieroglyphic of the one God; and perhaps for this reason the phoenix was invented by them — not a real bird, but a symbolic one — so that by this hieroglyphic they might signify the celestial and swift motion of the unique Sun, as I said on Genesis VII, 2.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_42.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_44.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

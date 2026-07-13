@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_25.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_27.html">Next Chapter</a></div>
 </div>
@@ -695,17 +695,18 @@ Shall press upon midday for three hours.</p>
 <p>St. Clement, the disciple and successor of St. Peter, notes that Peter so repented that throughout the rest of his life, every night, on hearing the cock crow, he would fall on his knees, pour forth bitter tears, and again beg pardon from God and from Christ for his sin, although it had already been remitted. Hence too his eyes, from constant weeping, appeared as if sprinkled with blood, as Nicephorus testifies in Book 2, ch. 37. Finally, Peter compensated for this fall by living austerely until his death, eating lupines (which are bitter peas), as St. Gregory of Nazianzus testifies in his oration <em>On the Love of the Poor</em>; likewise by constant labors, Apostolic persecutions, hardships, and at last by the death of the cross, which he endured most steadfastly and most joyfully for Christ.</p>
 <p>Read Book 4, ch. 5, of the <em>Revelations</em> of St. Bridget, where St. Peter, appearing to St. Bridget, relates that the cause of his fall was the forgetting of his own resolution and of the promise he had made to Christ. Whence he suggests to her this remedy against temptation: "Rise up," he says, "by humility to the Master of memory, and ask of Him memory."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_25.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_27.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

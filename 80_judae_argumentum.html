@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum on the Epistle of St. Jude</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="79_iii_joannis_01.html">Previous Chapter</a></div>
     <div class="next"><a href="80_judae_01.html">Next Chapter</a></div>
 </div>
@@ -60,17 +60,18 @@
 <p><b>XVII.</b> (II Peter) v. 11. <em>"What manner of persons ought you to be in holy conversation and godliness, looking for and hastening unto the coming of the day of the Lord."</em> (Jude) v. 21. <em>"Keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ unto life everlasting."</em></p>
 <p><b>XVIII.</b> (II Peter) v. 18. <em>"To Him be glory both now, and unto the day of eternity. Amen."</em> (Jude) v. 25. <em>"To God alone our Saviour, through Jesus Christ our Lord, be glory and magnificence, dominion and power, before all ages, and now, and unto all ages of ages. Amen."</em></p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="79_iii_joannis_01.html">Previous Chapter</a></div>
     <div class="next"><a href="80_judae_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

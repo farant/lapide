@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Leviticus XX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="03_leviticus_19.html">Previous Chapter</a></div>
     <div class="next"><a href="03_leviticus_21.html">Next Chapter</a></div>
 </div>
@@ -188,17 +188,18 @@
 
 <p>More truly therefore the common punishment for lesser crimes was the sword or the axe, although we find this nowhere expressed and decreed in the old law; for this kind of death is the lightest, and accepted by usage among very many peoples: and so John the Baptist was beheaded by Herod. Finally, Carolus Sigonius notes, in book VI <em>On the Hebrew Commonwealth</em>, last chapter, that these punishments are found decreed in the old law: a fine, retaliation, scourging, exile, sale into slavery, and death; but only three kinds of death, namely stoning here, burning in verse 14, and crucifixion in Deuteronomy XXI. So among the Romans, Cicero wrote that eight kinds of penalties are contained in the laws, namely damage, chains, scourging, retaliation, disgrace, exile, slavery, and death, says Isidore, book II of the Etymologies.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="03_leviticus_19.html">Previous Chapter</a></div>
     <div class="next"><a href="03_leviticus_21.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

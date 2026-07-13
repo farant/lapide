@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_11.html">Previous: John XI</a></div>
     <div class="next"><a href="54_joannes_13.html">Next: John XIII</a></div>
 </div>
@@ -334,17 +334,18 @@
 <p>Symbolically St. Augustine: "If," he says, "eternal life is the Son Himself, but eternal life is the commandment of the Father, what else is said than: I am the commandment of the Father?"</p>
 <p>THE THINGS THEREFORE THAT I SPEAK (that is, I who announce Myself the Word, says the Interlinear Gloss), EVEN AS THE FATHER SAID UNTO ME, SO DO I SPEAK, — that is, says the Interlinear: "As the truthful one begot Me the truth, so I the truth announce the truth." And St. Augustine: "So He said as the truthful one, so He speaks as the truth; the truthful one begot the truth."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_11.html">Previous: John XI</a></div>
     <div class="next"><a href="54_joannes_13.html">Next: John XIII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

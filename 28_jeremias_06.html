@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_05.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_07.html">Next Chapter</a></div>
 </div>
@@ -177,17 +177,18 @@
 <p>Allegorically, Hugo the Cardinal says: The lead is the humanity of Christ, which was consumed in the furnace of the Passion, so that He might separate all the dregs of sins from us; and yet He can most justly complain that wickedness has not been consumed, and that the smelter smelted in vain, because few have been purified. Concerning this He Himself complains through Isaiah, chapter 49:4: 'I have labored in vain, I have spent My strength for nothing and in vain.'</p>
 <p>Tropologically, it is the office of Prelates to test the virtue of their subjects, whether it is genuine or feigned, as St. Gregory teaches, Pastoral Rule, Part 2, chapter 10.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_05.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

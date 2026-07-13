@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_11.html">Previous: Hebrews Chapter XI</a></div>
     <div class="next"><a href="72_hebraeos_13.html">Next: Hebrews Chapter XIII</a></div>
 </div>
@@ -306,18 +306,19 @@
 <p>Apollo also, when asked who he was, and what altogether God was, replied: <em>"Born of Himself, untaught, without mother, immovable, falling neither into reason nor into speech, dwelling in fire, this is God; but we angels are a small portion of God."</em> Finally the Persians worshipped God under the appearance of fire, and erected a temple to fire, as appears in II Maccabees I, 34. The reason why God showed Himself by fire rather than by other things is first, lest if He had appeared under any other appearance than fire, e.g. under the appearance of a man or some animal, the Jews, prone to idols, would make an idol of it and worship it: this reason Moses gives, Deuteronomy ch. IV, 16. Secondly, because fire is the first and most noble element, the purest, most subtle, most efficacious, most sublime, swiftest, most luminous, hottest, simplest, wholly impassible, penetrating all things, consuming all things, interminable, igniting all things and assimilating them to itself. Such also is God, and the grace and charity of God. So St. Dionysius teaches, <em>On the Celestial Hierarchy,</em> ch. XV, and St. Thomas on Isaiah X: although the Apostle here following Moses speaks not of grace but of the vengeance of God, and from it as terrible and most efficacious, calls God a consuming fire, as I said at the beginning of this verse.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_11.html">Previous: Hebrews Chapter XI</a></div>
     <div class="next"><a href="72_hebraeos_13.html">Next: Hebrews Chapter XIII</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

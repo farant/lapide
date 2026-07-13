@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on Philemon: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="70_titum_03.html">Previous: Titus Chapter III</a></div>
     <div class="next"><a href="71_philemonem_01.html">Next: Philemon Chapter I</a></div>
 </div>
@@ -45,18 +45,19 @@
 <p>Learn here, Christians, learn, Pastors, not to neglect the poor, slaves, and maidservants, but to bestow singular care upon them: for they are your sheep, and they have souls as noble as the rich, and redeemed at the same price of the blood of Christ. Whence God will require them again from you on the day of judgment. For on account of them Christ descended from heaven, whose praise this is, foretold and celebrated by Isaiah: <em>"The poor have the Gospel preached to them."</em> Such ones God chooses: for they themselves are more humble, docile, pliable, and therefore more capable of grace and salvation than the rich. <em>"Has not God,"</em> says St. James, chapter II, 5, <em>"chosen the poor in this world, rich in faith, and heirs of the kingdom which God has promised to those who love Him?"</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="70_titum_03.html">Previous: Titus Chapter III</a></div>
     <div class="next"><a href="71_philemonem_01.html">Next: Philemon Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

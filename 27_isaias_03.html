@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaiah III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="27_isaias_02.html">Previous Chapter</a></div>
 	<div class="next"><a href="27_isaias_04.html">Next Chapter</a></div>
 </div>
@@ -456,11 +456,12 @@ Naked love does not love an artificer of beauty.</em></p>
 <p>On the contrary, the ancient simplicity and modesty of dress shines forth among the Germans, which preserves their commonwealths in peace and prosperity. I saw at Nuremberg noble and very wealthy matrons walking in simple cloaks and boots, like the hardy and masculine wives of the ancient chieftains. I saw at Wurzburg all the matrons, even the noblest, wearing mantles or hooded capes not of silk or wool, but of wood. For instead of a hooded cape, they all wear a hotte (such as the charcoal-women wear at Liege), more or less fine according to the person&#x27;s status; so much so that a woman who does not wear a hotte is not considered respectable. When these women are about to enter a church, they set their hottes down before it, and when leaving they take them up again and fit them on their backs. I believe that in this vine-growing region they formerly carried all their grapes in hottes, as they still do, and therefore preserved the custom of wearing them.</p>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

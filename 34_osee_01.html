@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_Osee_Argumentum.html">Previous</a></div>
     <div class="next"><a href="34_osee_02.html">Next Chapter</a></div>
 </div>
@@ -225,17 +225,18 @@
 <p>Tropologically: A great day of Jezreel for the Church is one on which many, converted to her, became Jezreel, that is, seed, that is, children of God. Such was the day when Constantine the Great, converted, converted the world subject to him. A great day for a nation or city is when, freed from the yoke of heretics or Turks, it passed into the freedom of the children of God and into the kingdom of Christ, so that it should continually commemorate it, and gratefully sing with the Psalmist: "This is the day the Lord has made; let us rejoice and be glad in it." So a great day for a faithful soul is when it was baptized and made faithful; when, having relapsed into sin, it returned through repentance to God's grace; when it was called by God from the tumults of the world to the state of perfection, when it made its profession; when it was ordained to the priesthood, etc. For on these days it was made Jezreel, either simply or more excellently, that is, the seed or daughter of God, so that it rightly ought to celebrate those days returning each year with immense thanksgiving, praise, and jubilation, and sing with the Blessed Virgin: "My soul magnifies the Lord. And my spirit has rejoiced in God my Savior. For He who is mighty has done great things for me, and holy is His name. He has shown might with His arm."</p>
 <p>So a great day of Jezreel was when Judith, killing Holofernes, liberated her country, which the Hebrews consequently celebrated with an annual feast, as is evident from Judith, last chapter, verse 31. So great was the day of Jezreel when Esther rescued the Jews destined for death, which posterity consequently recalled with the annual feast of Purim, that is, of lots, Esther ix, 26 and 31. So great was the day of the Dedication, that is, of the dedication of the temple, both as first performed by Solomon, 3 Kings viii, and as restored by Ezra, 1 Ezra vi, and afterwards by Judas Maccabeus, 1 Maccabees iv, 52. So great was the day of Nicanor's slaying by Judas, and the annual feast, 1 Maccabees vii, 49. So great was the day of the sacred fire given from heaven to Aaron and recovered under Judas Maccabeus, with which the victims were to be burned, 2 Maccabees i, 18. So great a day, indeed a year, was the fiftieth, namely the Jubilee, Leviticus xxv.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_Osee_Argumentum.html">Previous</a></div>
     <div class="next"><a href="34_osee_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

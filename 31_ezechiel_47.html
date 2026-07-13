@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XLVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_46.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_48.html">Next Chapter</a></div>
 </div>
@@ -174,17 +174,18 @@
 <p>For which note: Five feet make a pace, 125 paces make a stadium, eight stadia make a mile: for a mile is a thousand paces. Moreover, the sacred reed, as I said in chapter 41:5, contains six cubits, that is, six times a foot and a half (for a cubit is a foot and a half). Therefore, the sacred reed contains 9 feet. Hence a reed contains two paces minus one foot: wherefore, since a thousand paces make a mile, it follows that a thousand reeds make two miles, minus a thousand feet, which make two hundred paces: and 500 reeds make one mile, minus 500 feet, which make a hundred paces. Therefore, 25 thousand reeds make 50 miles, minus 25 thousand feet, which make 5 thousand paces, or 5 miles. Therefore, 25 thousand reeds make precisely 45 miles.</p>
 <p>Where and when did the priests possess a space of 45 miles? Again, the wall of the city, chapter 48 at the end, is said to have been 18 thousand reeds, that is, 32 miles and 400 paces. Who ever saw such great walls, such a great city?</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_46.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_48.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

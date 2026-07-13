@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_08.html">Previous: Acts VIII</a></div>
     <div class="next"><a href="57_acts_10.html">Next Chapter</a></div>
 </div>
@@ -367,18 +367,19 @@
 <p>Excellently St. Leo, sermon 2 <em>On Lent:</em> "To no one," he says, "is his estate small, who has a great spirit, nor does the measure of mercy and piety depend upon the size of one's family means. The opulence of good will never lacks merit even in slender means. This good will is most opulent, because it does not depend on possibility, but is reckoned to have done whatever it efficaciously desires. By it the poor distribute generous alms; the weak, scarcely able to touch themselves because by infirmity they cannot, are wasted by many afflictions of the body; the unlearned preach the Evangelical doctrine throughout the whole world; because for the works which we cannot perform, the efficacious affection of good will is abundantly substituted. And every single person, though one, by the will alone is made manifold, because through it he can embrace the labors and ministries of many. Furthermore, this affection excites ardent prayer, by which we ask of God that He may perform through others what we desire and cannot perform: but ardent prayer obtains what it asks. Hence St. Bernard, serm. 16 on the Psalm <em>Qui habitat:</em> 'Rightly,' he says, 'is he not heard, who feigns to cry out, either not asking at all, or asking lukewarmly and remissly. Indeed in the ears of God a vehement desire is a great cry; but conversely a remiss intention is a low voice.'"</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_08.html">Previous: Acts VIII</a></div>
     <div class="next"><a href="57_acts_10.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

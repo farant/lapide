@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_17.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_19.html">Next Chapter</a></div>
 </div>
@@ -285,17 +285,18 @@
 <p>35. So Also Shall My Heavenly Father Do to You, if You Forgive Not Every One His Brother From Your Hearts, — namely, offences and sins; the Syriac: his errors. "So," that is, just as that master who from the servant demands back not only the cruelty that followed his debts, but even those debts already forgiven which preceded — as I have already shown. "From your hearts," as if to say: from the deepest ground of the heart; for many forgive with their mouth but not with their heart. With the gall of rancour cast out from the depths of the heart, Christ commands the honey of love to be put in its place. Therefore this parable teaches how grievous and hateful to God it is to keep in one's mind anger, rancour and vengeance against a neighbour who has offended us; and on the other hand, how pious and pleasing to God it is to lay these aside and convert them into love — even as God receives the penitent sinner into grace and into the bowels of His charity, and forgets all his past offences as if they had never been committed. Moreover, this must be done not once, but seventy times seven, that is, always and as often as the neighbour repents of his offence. To prove this, Christ brought forward the parable of the ten thousand talents, that is, of a very great and very large debt. Let us therefore, who are little men and homunculi, imitate God, who our daily offences against Him, and those grave and many, every day, and as often as we repent — forgives them from the heart; and therefore every day, nay often throughout the day, He commands us to pray: "Forgive us our debts, as we also forgive our debtors." See the remarks on chapter VI, 12 and 14.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_17.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_19.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

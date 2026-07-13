@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_18.html">Previous: Acts XVIII</a></div>
     <div class="next"><a href="57_acts_20.html">Next Chapter</a></div>
 </div>
@@ -277,18 +277,19 @@
 <p>I answer that he was exposed to the beasts, not through a lawful judge and judgment, but through the fury of the people. Nicephorus recounts the event in book II, chapter 25, from the ancient Acts of Paul, which Origen cites and approves in book I <em>of Periarchon</em>, chapter 2: "But truly indeed," he says, "those who described the journeys of Paul have handed down to memory that he did and suffered very many other things, and this too when he was at Ephesus. When Hieronymus held the chief place there, Paul preached with great freedom: whereupon Hieronymus testified that he spoke well and eloquently, but that his speech was not of those times. The common people, indeed, through insolence and fury, cast fetters upon Paul and shut him in prison, so that he might be exposed to be devoured by lions. Then Eubula and Artemilla, wives of prominent men of Ephesus, having been instructed in the faith by Paul (for they came to him by night), ask from him the grace of the divine bath. And so by divine power and the ministry of an angelic escort, with the darkness of night illuminated by an abundance of splendor, Paul, freed from the iron fetters, initiates them by divine baptism on the seashore, and when none of all those to whose care the guarding was entrusted perceived it, he returns to his chains, in which he was being kept as food for the lions. But when a lion of huge size and unbearable strength was let loose against him, it did indeed run out into the arena, but sat at Paul's feet. And when likewise other savage beasts were let in, not one dared even to touch the sacred body, raised up and composed in prayer. These things being thus done, suddenly with a great crash a certain violent hail falling beyond the order of nature crushed the heads of many men and wild animals together, and cut off the ear of Hieronymus himself: who afterwards, with his own, being reconciled to God through Paul, received the saving bath. That lion, meanwhile, fleeing, escapes to the nearest mountains; and Paul from there crossed over to Macedonia and Greece, and thus at last sets out for Jerusalem. It is not to be wondered at that Luke did not insert this fight of Paul with the beasts among his other acts: for although of the Evangelists only John recalls the raising of Lazarus, yet there is the less doubt of its truth and faithfulness." Thus far Nicephorus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_18.html">Previous: Acts XVIII</a></div>
     <div class="next"><a href="57_acts_20.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

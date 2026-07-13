@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_11.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_13.html">Next Chapter</a></div>
 </div>
@@ -76,17 +76,18 @@
 <p>43. THIS POOR WIDOW PUT IN MORE THAN ALL. — For although in itself and other things being equal, the greater and better alms or offering is that which gives and offers more; nevertheless per accidens, if other things are not equal, the greater alms and offering is that which is given or offered with greater affection of charity and religion, or piety, for God weighs not so much the gift as the affection of the giver. Again, that is greater, not which is in itself of greater value and price, but which is greater and more difficult with respect to the giver: therefore this widow giving a farthing gave more than all, because she gave all that she had, though necessary for her own life; she would have given more if she had had more, trusting in the Lord, that He would in turn be more liberal to one liberal to Him, and would thereafter provide for her need, according to that saying: "Give God an egg, that you may receive a sheep"; but the others gave superfluous things, in which they abounded, as Christ here says; for, as Titus of Bostra says on Luke 21:3: "With such magnanimity and devotion she offered two obols, that is, all that she had, as if she held her own life as nothing." Paul gives the cause a priori, 2 Corinthians 8:12, saying: "For if the will is prompt, it is accepted according to what one has, not according to what one does not have." And Victor of Antioch here: "For God," he says, "does not so much consider the greatness of the gifts as He weighs the eagerness and greatness of the soul." And Bede: "Not the substance of those offering, but their conscience does He weigh; nor does He consider how much is in the sacrifice, but out of how much it is brought forth."</p>
 <p>For, as Saint Thomas says, II II part, Question XXXII, article 4, reply to 3, because the widow gave more according to her proportion, from this is weighed in her a greater affection of charity. Ambrose judged the same, book II of Offices, chapter XXX, saying: "The two coins of that widow He preferred to the gifts of the rich, because she contributed all that she had; but they contributed a small part out of their abundance." Whence he infers: "Affection therefore makes the contribution rich or poor, and sets a price upon things." He held the same in the book <em>On Widows</em>, before the middle, saying: "A coin from a little is more abundant than a treasure from a very great sum, because not how much is given, but how much remains, is reckoned." Whence he concludes below: "Therefore not what you spurn in disdain, but how much you contribute with devotion, is to be esteemed."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_11.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_13.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

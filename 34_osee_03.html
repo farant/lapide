@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_02.html">Previous</a></div>
     <div class="next"><a href="34_osee_04.html">Next Chapter</a></div>
 </div>
@@ -120,17 +120,18 @@ Hence the place or chapel where the teraphim, that is, the Lares and household g
 <p>Hence first, in particular, St. Jerome, Albert, and Hugh take "goodness" to mean Jesus Christ, whom as His only-begotten Son (and consequently all gifts through Him and with Him) God the Father gave to us. Second, Haymo, Albert, and Arias take "goodness" to mean the Holy Spirit; for He is the first and uncreated goodness and gift of the Father and the Son, who, embracing within Himself all created gifts, pours them out abundantly upon us. Third, others take "goodness" to mean the Eucharist; for in this, God the Father and Christ the Lord daily show us and communicate to us the highest goodness, riches, and graces, according to that passage of Zechariah chapter 9, verse 17: "What is His goodness, and what is His beauty, but the grain of the elect, and the wine that makes virgins flourish?"</p>
 <p>IN THE LAST DAYS — at the end of the world, when at the coming of the Antichrist, especially after he is slain, the Israelites and Jews who had adhered to him while he was living and reigning, partly mindful of the sermons and miracles of Elijah and Enoch, partly by the exhortation of other preachers, will be converted to Christ, as I said at Apocalypse chapter 11; for then all Israel shall be saved, Romans chapter 11:25. So say St. Jerome, Haymo, Albert, Hugh, Lyranus, and others generally. Second, Isidore and Castro think these things were fulfilled in the incarnation, and the first coming and preaching of Christ, namely in an initial way, for then a few from Israel began to be converted. Others err who think these things were accomplished in the release of the Jews from Babylon by Cyrus.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_02.html">Previous</a></div>
     <div class="next"><a href="34_osee_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

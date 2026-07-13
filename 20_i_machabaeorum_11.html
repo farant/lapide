@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_12.html">Next Chapter</a></div>
 </div>
@@ -231,17 +231,18 @@
 <p>And immediately, adding greater examples, he continues: 'M. Attilius the consul in the Samnite war, when soldiers were fleeing from the battle line into the camp, arrayed his own line against them, declaring that they would have to fight him and his loyal citizens unless they preferred to fight the enemy; by this means he led them all back into the battle line. L. Sulla, when his legions were already giving way before the Mithridatic army under the command of Archelaus, drew his sword and rushed to the front line, and calling out to the soldiers said: If anyone asks where they left their general, let them answer that he was fighting in Boeotia — shamed by this, they all followed him. Julius Caesar at Munda, when his men were falling back, ordered his horse to be led out of his sight, and sprang on foot into the front line: the soldiers, ashamed to abandon their general, renewed the battle.'</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

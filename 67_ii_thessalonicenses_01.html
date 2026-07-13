@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Thessalonians I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="67_ii_thessalonicenses_argumentum.html">Previous: 2 Thessalonians Introduction</a></div>
     <div class="next"><a href="67_ii_thessalonicenses_02.html">Next: 2 Thessalonians Chapter II</a></div>
 </div>
@@ -116,18 +116,19 @@
 <p>According to the grace of our God, and of the Lord Jesus Christ. — As if to say: This very thing — that you produce works of faith, by which God is glorified in you, and you in God — all this is the work and effect of the grace of Christ. For you do everything by the grace of Christ, not by your own strength.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="67_ii_thessalonicenses_argumentum.html">Previous: 2 Thessalonians Introduction</a></div>
     <div class="next"><a href="67_ii_thessalonicenses_02.html">Next: 2 Thessalonians Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

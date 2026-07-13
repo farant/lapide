@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_04.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_06.html">Next Chapter</a></div>
 </div>
@@ -137,17 +137,18 @@
 <p>The silver therefore which Gehazi unjustly received was infected with poison and pestilential, like garments and coins in a plague-infected house to which the plague clings, so that it invades and infects the one who receives them. For thus the leprosy of Naaman, having as it were clung to the silver, infected Gehazi who received it, and made him a leper.</p>
 <p>Therefore from that point on Gehazi did not associate with Elisha, but as a leper he had to avoid the company of men according to Levitical law, chapters 13 and 14: for Elisha, most zealous for the law, would not have admitted him. So Abulensis, Question 10. Therefore that Gehazi in chapter 8 is said to have conversed with King Joram, and to have narrated to him the miracles of Elisha, seems to have happened before he was struck with leprosy; whence Abulensis, Serarius, Salianus, and others hold that here there is a hysteron proteron, and that Gehazi's leprosy, and consequently Naaman's arrival to Elisha and his healing, happened later, namely in the last year of the reign of Joram, when shortly after he was killed by Jehu: if however anyone wishes to retain the order of Sacred Scripture, he must say that Gehazi did penance, and thus appeased God and Elisha, and repelled the leprosy from himself, if not from all his descendants, says Serarius, and thus already cleansed he conversed with King Joram.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_04.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

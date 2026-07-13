@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_Numeri_Doxologia.html">Previous: Doxology of Numbers</a></div>
     <div class="next"><a href="05_deuteronomium_02.html">Next Chapter</a></div>
 </div>
@@ -213,18 +213,19 @@ Wealth bestows friendships: the poor man lies everywhere prostrate.</em></p>
 <p>Verse 46. SO YOU REMAINED IN KADESH-BARNEA A LONG TIME. -- In the Hebrew it is added, "according to the days in which you stayed." Which Vatablus explains thus, as if to say: You stayed in Kadesh-barnea after the return of the spies for as many days as you had stayed there before their return. Second, the Hebrews in Seder Olam explain it thus, as if to say: You stayed in Kadesh-barnea for as many days as you afterward stayed in all the remaining stations together, namely 19 years: for twice nineteen makes 38; to which add two years elapsed before they came to Kadesh-barnea, and you will have 40 years of pilgrimage in the desert. But nothing of the sort can be gathered from our translation, nor even from the Hebrew: for "according to the days in which you stayed" is nothing other than a repetition and Hebrew explanation of what preceded, namely "a long time." Hence our Translator omitted this Hebrew repetition, as superfluous and unusual to Latin ears.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_Numeri_Doxologia.html">Previous: Doxology of Numbers</a></div>
     <div class="next"><a href="05_deuteronomium_02.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

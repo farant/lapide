@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_28.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_30.html">Next Chapter</a></div>
 </div>
@@ -157,17 +157,18 @@ TO ALL THE EXILES — to all the Jews who migrated to Babylon with Jeconiah.</p>
 <p>32. HE SHALL HAVE NO MAN — there shall be no one from the posterity of Shemaiah who shall be a citizen of Jerusalem at the time when others shall joyfully return from captivity, meaning: Shemaiah shall not return with the others to Jerusalem, but shall perish with his own in the exile of Babylon; because he falsely predicted that this would soon end; so that in the very thing in which he sinned, in the same he may be punished. Thus Elisha, promising wheat in a famine, when mocked by a certain officer, said to him: "You shall see it with your eyes, but you shall not eat of it," 2 Kings 7:2.</p>
 <p>FOR HE HAS SPOKEN REBELLION (that is, false oracles) AGAINST THE LORD. — For by these means he attempted to overturn the oracles of God issued through Jeremiah, and to bring it about that the people, obedient to him, would be disobedient to Jeremiah and to God.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_28.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_30.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

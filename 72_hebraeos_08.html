@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_07.html">Previous: Hebrews Chapter VII</a></div>
     <div class="next"><a href="72_hebraeos_09.html">Next: Hebrews Chapter IX</a></div>
 </div>
@@ -145,18 +145,19 @@
 <p>For <em>"veteravit"</em> in Greek is pepalaioke, that is, He has made antiquated, declared to be ancient and old; as if to say: When God through Jeremiah says: <em>"I will consummate a new testament,"</em> He plainly signifies that the prior Mosaic testament, at this very time of Jeremiah, was little by little being made antiquated, growing old, and falling, and therefore would not endure, but would gradually grow more and more old and perish, until shortly after it would utterly fall and be abolished through the new testament to be introduced by Christ. All these things Paul therefore says, in order to draw the Hebrews from Moses to Christ, and to teach them that they ought not to wonder that God abrogated the old testament given by Himself (as being weak and insufficient for justice and salvation) through the new of the new Messiah Savior, since this was promised and predicted so many ages before by Jeremiah.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_07.html">Previous: Hebrews Chapter VII</a></div>
     <div class="next"><a href="72_hebraeos_09.html">Next: Hebrews Chapter IX</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

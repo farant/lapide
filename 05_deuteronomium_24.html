@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy XXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_23.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_25.html">Next Chapter</a></div>
 </div>
@@ -143,17 +143,18 @@
 <p>Note in this chapter how God is the guardian and avenger of the poor, and how He wills them to be helped and not harmed: <em>"Lest he cry out,"</em> says verse 15, <em>"against you to the Lord, and it be counted to you as sin."</em> A celebrated example, made famous by everyone's lips, exists in Holland: for the wife of the Count of Holland, pushing away a poor beggar woman and accusing her of adultery because she had so numerous an offspring, was cursed by her that she would bear as many children as there are days in a year. God heard the curse and caused the Count's wife to bring forth 365 children in one birth, all of whom were baptized and died shortly after baptism. A painting of this prodigy exists in a convent of nuns between Leiden and The Hague. Crantzius narrates in the History of Wandalia and the annals of Brunswick for the year of the Lord 1313 that exactly the same thing happened to Margaret, wife of the Count of Holstein. Whether this is the same prodigy as the former, so that they were deceived by the similar-sounding names of Holstein and Holland, I do not trouble myself, provided we do not doubt that the thing is most true.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_23.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_25.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

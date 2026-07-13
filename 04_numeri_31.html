@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_30.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_32.html">Next Chapter</a></div>
 </div>
@@ -234,18 +234,19 @@
 <p>Here Lyra lists twelve causes for which we read in Scripture that war was justly waged. The first is, if war is waged against a land in which God is blasphemed through idolatry, as is stated in Deuteronomy XII, 2: <em>"Overthrow all the places in which the Nations whom you shall possess worshipped their gods."</em> The second, if there is a departure from the worship of God, Deuteronomy XIII, 12: <em>"If you hear in one of your cities that some are saying,"</em> etc. The third, if the temporal fidelity owed to one's lord is abandoned, as is clear from 4 Kings III, concerning Joram and Jehoshaphat, who waged war against the king of Moab. The fourth, if rebellion is raised; so David in 2 Kings xx pursued Sheba the son of Bichri. The fifth, if an evildoer is harbored, as is clear from Judges xx, concerning the war waged against Gibeah. The sixth, if a public injury is inflicted upon a ruler, as is clear from 2 Kings x, concerning David's war against the king of Ammon, who had the beards of David's messengers shaved in contempt of him. The seventh, if one's own property is sought to be recovered, as is clear from 2 Kings III, concerning David's war against Ish-bosheth, to recover the kingdom which had been given to him by God. The eighth, that the enemy may be repelled, as is clear from 2 Kings viii, concerning David's war against the Philistines. The ninth, that an enemy who rises up may be attacked in his own territory, as is clear from Numbers xxi, concerning the war of the children of Israel against Sihon and Og, kings of the Amorites. The tenth, against him through whom the enemy is strengthened, as is clear from 2 Kings viii, concerning David's war against Syria of Damascus, because it was giving aid to Hadadezer. The eleventh, that a friend may be rescued from enemies, as is clear from Genesis xiv, concerning Abraham's war against the kings who had captured Lot his nephew. The twelfth, if tyranny is exercised by a ruler, as is clear from 1 Maccabees, concerning the war of the Maccabees against Antiochus Illustrious. Thus far Lyra.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_30.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_32.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

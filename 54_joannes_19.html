@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_18.html">Previous: John XVIII</a></div>
     <div class="next"><a href="54_joannes_20.html">Next: John XX</a></div>
 </div>
@@ -233,17 +233,18 @@ The water indeed gives the laver, and the crown is from the blood.</p>
 <p id="verse-42"><b>Verse 42: There Therefore, Because of the Jews' Parasceve, They Laid Jesus</b></p>
 <p>42. <em>There therefore, because of the Jews' Parasceve</em> (the approaching Sabbath, on which no work was permitted nor anyone to be buried. So Chrysostom, Theophylact, Euthymius), <em>since the sepulchre was near at hand</em> (namely, because this sepulchre was near Golgotha, where Jesus had been crucified), <em>they laid Jesus.</em> — "They wished," says Euthymius, "to place Jesus in another more worthy monument that was farther from the city." But God did not will it, and willed that He be buried near Golgotha and Jerusalem. St. Chrysostom gives the reason: "So that the disciples might easily betake themselves there, and observe what happened nearby; and so that the witnesses of the burial might not be themselves alone, but His enemies also. For the seal and the guards set upon the sepulchre were evidence of the burial. Christ willed His death to be made manifest no less than His Resurrection; for if His death had then been in doubt, the argument for the Resurrection would not stand. Nor did He will to be buried nearby only for these reasons, but also lest any one be able to pretend falsely that He had been stolen."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_18.html">Previous: John XVIII</a></div>
     <div class="next"><a href="54_joannes_20.html">Next: John XX</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

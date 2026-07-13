@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Habacuc III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_habacuc_02.html">Previous Chapter</a></div>
     <div class="next"><a href="42_Sophonias_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -253,17 +253,18 @@
 <p>We are therefore infinitely short in all things from what is owed to Him, or from what He Himself by His nature deserves, and what we owe Him, even though we are not able to pay. Yet, so that we may render to Him what we can, let us frequently jubilate to Him with the Psalmist, Psalm CII: "Bless the Lord, O my soul: and all that is within me, bless His holy name. Bless the Lord, O my soul: and do not forget all His benefits. Who forgives all your iniquities: who heals all your infirmities. Who redeems your life from destruction: who crowns you with mercy and compassion. Who fills your desire with good things." And Psalm LXXXVIII, 1: "The mercies of the Lord I will sing forever. From generation to generation I will declare Your truth with my mouth."</p>
 <p>Moreover, since we are by no means sufficient to praise Him and give Him the thanks we owe, let us invite all the angels, all the blessed, all the heavens, all creatures both earthly and heavenly, that with us and on our behalf they may give thanks to God and to Jesus Christ for His infinite mercy toward us, and may praise and bless Him, and with Daniel let us say: "Bless the Lord, all you works of the Lord: praise and exalt Him above all forever. Bless the Lord, you angels of the Lord. Bless the Lord, you heavens," etc. Moreover, drunk with divine love, let us wish for a thousand tongues, a thousand hearts, a thousand souls, a thousand lives, a thousand bodies, which we might consume and spend in His honor: indeed, let us wish to love and praise Him as much as all the saints in heaven love and praise Him, and let us as it were put on their praises and minds, so that through them we may love, worship, celebrate, and glorify God immeasurably. Amen.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_habacuc_02.html">Previous Chapter</a></div>
     <div class="next"><a href="42_Sophonias_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

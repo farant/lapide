@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Sophonias I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_Sophonias_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="42_sophonias_02.html">Next Chapter</a></div>
 </div>
@@ -194,17 +194,18 @@ Weathers the cloud of war until it thunders past.</p>
 <p>18. Their gold will not be able to deliver them -- because the savage Chaldeans will seek the lives of the Jews, not their gold.</p>
 <p>In the fire of His (the Lord's) zeal all the land shall be devoured -- namely of Judea, for that is what he is discussing. He calls the fire of zeal the wrath of vengeance, or avenging wrath. For wrath is called fire because in anger, with the blood boiling, we seethe and burn, so that we seem to vomit flames from our eyes, mouth, and nostrils. Hence the saying: "He breathes out fires or wrath from his nostrils." Hence the Arabic Antiochene translates: in the fire of His fervor. The Arabic Alexandrian: in the flame of His fire. Again, vengeance is called zeal because in God it is born from immense love. For He alludes to the zeal of husbands who, because they love their wives ardently, therefore if they commit adultery and betray their faith and love, punish them most severely and often kill them. So God, because He loved His people ardently -- that is, the Jews, as His brides -- when they betrayed their faith and committed adultery with idols, with love turned to indignation, punished, devastated, and consumed them most severely, even to consummation -- that is, fully, utterly, and completely. So says St. Jerome. He speaks literally, as I said, of the day of the destruction of Jerusalem by the Chaldeans, and similarly of the day of its destruction by Titus and the Romans, about which St. Jerome says: "To this day you may see the Jews forbidden to enter Jerusalem except to weep; and so that they may be permitted to mourn the ruin of their city, they pay a price -- so that those who once bought the blood of Christ now buy their own tears. On the day when Jerusalem was captured and destroyed by the Romans, you may see a mournful people coming, decrepit old women and old men covered with rags and years gathering, demonstrating the wrath of the Lord in their bodies and their clothing. A crowd of wretches assembles, and while the gibbet of the Lord gleams and the banner of His Resurrection shines forth, and from the Mount of Olives too the standard of the cross blazes, the wretched people mourn the ruins of their temple -- and yet are not pitiable, etc. -- and does anyone doubt, seeing these things, about the day of tribulation and anguish?"</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_Sophonias_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="42_sophonias_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

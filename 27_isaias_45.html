@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XLV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_44.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_46.html">Next Chapter</a></div>
 </div>
@@ -406,17 +406,18 @@ In the city of Tipasa in Mauritania, the king Huneric installed Cyrilla as Arian
 <p>In the same place he relates that two brothers had sworn to each other to be constant in the faith, and had asked their torturers that they be tormented with the same punishment; and while with the first suspension, with heavy stones tied to their feet, they hung all day, one of them asked to be taken down and to be given a respite. To whom the other brother, fearing that he would deny the faith, cried out from the suspension: &quot;Do not, do not, brother! We did not swear thus to Christ. I will accuse you when we come before His terrible throne, because we swore upon His body and blood that we would suffer for each other for His sake.&quot; Saying this, he strengthened his brother, who cried out with a great voice: &quot;Apply whatever punishments you wish, and press Christians with cruel penalties. What my brother is going to do, I will do also.&quot; And so, burned with red-hot plates, torn with hooks, and afflicted with other most grievous punishments, they stood firm, so that the torturers even cast them from their presence, saying: If the whole people imitate these men, no one will be converted to our religion, especially because no bruises and no traces of punishment whatsoever were visible in them. This is what the Prophet here says and foretells: &quot;In the Lord shall all the seed of Israel be justified and praised.&quot; Truly did St. Jerome say: &quot;The life of the Saints is the interpretation of the Scriptures.&quot;</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_44.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_46.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

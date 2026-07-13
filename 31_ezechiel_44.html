@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XLIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_43.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_45.html">Next Chapter</a></div>
 </div>
@@ -149,17 +149,18 @@
 <p>31. Every carcass. These things are forbidden to all, even laypeople, Leviticus V, 2 and following. But especially to priests: for it is fitting that they be purer and holier than the rest.</p>
 <p>Mystically, Lyranus at the end of the book: "There is described," he says, "the kind, garb, manner, sustenance, and actions of priests." Concerning the first, etc., it is said that they are sons of Sadoc, which is interpreted as "just": and by this is designated that the ministers of the Church ought to be by special imitation sons of Christ, who is called par excellence the Just One, Isaiah XLV: "Drop down dew, ye heavens, from above, and let the clouds," etc. Whence the Apostle John said of himself and those like him, I epistle, chapter III: "See what manner of charity the Father has given us, that we should be called, and should be, the sons of God." As for the second point, it is said that they should have linen garments, by which in the ministers of the Church is designated purity of mind and body. And he adds: that linen breeches should cover the shame of their flesh: by which is signified that in the ministers of the Church nothing shameful or dissolute should appear in word, gesture, or deed. Whence it is said in Exodus XIX: "Let the priests who approach me be sanctified, lest I strike them." It is also said above of the priests that they should minister in the temple in different garments and live among the people in other garments: which seems to be fulfilled in the priesthood of the new law. As for the third point, it is said that the priests should not let their hair grow long, but should trim it. By which is signified the clerical tonsure in the ministers of the new law. As for the fourth point, it is said that the priests should not eat what is caught by a beast, nor what has died of itself. By which is designated that the ministers of the Church should not live by plunder or other illicit means. Likewise it is said of the priests that they should not drink wine when about to enter the temple. By which is understood that in the ministers of the Church there should be sobriety, and especially when they are about to celebrate. For then in them is required not only the fast of the Church, but also of nature. As for the fifth point, it is said that they should celebrate the divine Office, and that they should teach the people what is clean and unclean, and in doubtful matters should determine what is to be held. By which is designated that in the ministers of the Church there should be devotion, for duly celebrating divine things; and knowledge of Sacred Scripture, for teaching the people what is lawful and what is unlawful, and for determining what in doubtful matters is to be held. This knowledge, however, is required to a greater degree according as one is established in a higher rank of the Church. On account of which it is said of the ignorant, Hosea IV: "Because thou hast rejected knowledge, I will reject thee, that thou shalt not do the office of priesthood to me."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_43.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_45.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

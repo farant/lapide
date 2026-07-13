@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_09.html">Previous: Acts IX</a></div>
     <div class="next"><a href="57_acts_11.html">Next Chapter</a></div>
 </div>
@@ -330,18 +330,19 @@ And by the boldness of asserting the truth.</em></p>
 <p>Or how would the Jews have looked on it with equal eyes and minds, namely the head of the Church being torn away from them and going to the Gentiles, and the primacy and Pontificate of the Church being transferred to them? especially since St. Clement, <em>Recognitions</em> X, hands down that St. Peter set up this seat at Antioch in the house of Theophilus, to whom St. Luke dedicates these Acts, chap. I, 1, who was a Gentile, not a Jew, as is clear from his name: for Theophilus is a Greek name, signifying "lover of God"; and because this Theophilus was exercising magistracy at Antioch, as Œcumenius testifies. In the same year of Christ 37 also it seems St. James departed for Spain, as I shall say at chap. XII. For thus all things hang together best. For with Cornelius now converted by St. Peter, St. James could without note and contradiction of the Jews publicly preach to the Spanish Gentiles, and after five years returning to Jerusalem, in the year of Christ 43, or as others wish 44, be killed by Herod: so certain very recent but very judicious chronologists. Hence too some judge that under the same year of Christ 37 the Apostles set out for their provinces, since they were heavenly admonished through Peter to preach to the Gentiles. Hence Cajetan, on Acts IX, 32 and elsewhere, writes that the Apostles were divided throughout the world within the three years which Paul spent in Arabia; now this three-year period began at his conversion soon after, which took place in the year of Christ 36, and ended in the year of Christ 39. For in that year St. Peter founded the Church of Antioch, since the door of the faith and of the Church had now been publicly opened to the Gentiles. Hence also it is in the Life of this St. Cornelius, that he himself, when converted, set out with St. Peter for Antioch. For though the Alexandrian Chronicle hands down that St. Peter set his seat at Antioch in the 4th year after Christ's death, which was the year from Christ's nativity 38 or 39, and the same is judged about the year of Christ 39 by Baronius and all his followers, and many others; yet I shall presently show that this took place in the year 37. But who would believe that St. Peter set up his seat in Antioch, since it was a Gentile city, before the door of faith was opened to the Gentiles, which was done through the conversion of Cornelius.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_09.html">Previous: Acts IX</a></div>
     <div class="next"><a href="57_acts_11.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

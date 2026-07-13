@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_21.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_23.html">Next Chapter</a></div>
 </div>
@@ -255,18 +255,19 @@
 <p>41. AND WHEN MORNING CAME, HE LED HIM TO THE HIGH PLACES OF BAAL, AND HE BEHELD THE OUTERMOST PART OF THE PEOPLE -- as if to say: In the morning Balak led Balaam to the high places, that is, to elevated sites, namely to the mountain containing a temple or shrine in which Baal was worshiped, and this for the purpose that Balaam, seeing the camp of Israel from this mountain, and sacrificing to the idol Baal, might receive from it strength, inspiration, and a kind of ecstatic frenzy for cursing Israel. For this reason he erected seven altars there, and on them Balaam sacrificed, as will be said in the following chapter, verse 1. So Abulensis. This was Mount Abarim, which divided the Moabites from the kingdom of Sihon and Og, one part of which was called Pisgah, and the other Nebo, on which Moses died, as is clear from Deuteronomy 32:49 and chapter 34, verses 1 and 5. Near this mountain, therefore, the camp of Israel was located, in level places which are therefore commonly called the plains of Moab; and from this mountain Balaam surveyed the camp of Israel and, in prophesying, blessed them contrary to his own intention.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_21.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_23.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

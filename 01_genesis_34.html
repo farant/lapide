@@ -28,7 +28,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XXXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_33.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_35.html">Next Chapter</a></div>
 </div>
@@ -299,17 +299,18 @@
 <p>Wherefore Valerius Maximus rightly says, book 9, chapter 6: <em>"Treachery brings as much harm to the human race as good faith brings benefit. Let it therefore receive no less reproach than good faith obtains praise."</em> And Tacitus, book 1 of the <em>Annals</em>: <em>"Traitors are hateful even to those whom they prefer:"</em> for they love the deed, not the doer. Augustus says brilliantly, as reported by Plutarch in the <em>Apophthegms</em>: <em>"I love the treason, but do not approve the traitors."</em> More pointedly Philip of Macedon, as reported by Stobaeus, sermon 52, said that he loved the betrayals, not the betrayers.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_33.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_35.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

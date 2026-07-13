@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Kings (1 Samuel) III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="09_i_regum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="09_i_regum_04.html">Next Chapter</a></div>
 </div>
@@ -93,18 +93,19 @@
 <p>21. And the Lord continued to appear in Shiloh (the Septuagint add: 'to him,' namely to Samuel), because the Lord had revealed Himself to Samuel in Shiloh — as if to say: Because the Lord had begun to appear to Samuel in Shiloh; hence He continued to appear to him there because of the holiness both of Samuel and of the ark of the covenant which was in Shiloh. For God is constant, and therefore constantly promotes and pursues what He has begun: hence the conferring of one benefit from God is a reason and stimulus for conferring another. Tropologically, Philo, On the Migration of Abraham: 'The fountain,' he says, 'from which good things flow is familiarity with a benign God; therefore, as if sealing His benefits, He says: I will be with you.'</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="09_i_regum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="09_i_regum_04.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

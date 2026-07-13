@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_24.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_26.html">Next Chapter</a></div>
 </div>
@@ -181,17 +181,18 @@
 <p>Mystically, St. Gregory, Book 32 of the Moralia, chapter 6: The dove, he says, is God, because He is simple, even-tempered, gentle, unchangeable, and when He is angry and punishes the Jews through the Chaldeans, He is not disturbed by anger. And St. Thomas: God, he says, who through patience has until now been a dove, will now be a lion because of the vehemence of His vengeance; whence Maldonatus and some others understand the dove here literally as God. This interpretation is not implausible.</p>
 <p>AND BECAUSE OF THE FIERCE ANGER (that is, the furious anger, actually raging, that is, fierce) OF THE LORD. — The conjunction "and" means "that is" — as if to say: "Because of the wrath of the dove, that is, because of the fierce anger of the Lord"; because the fury of the dove is the fury of the Lord. Or, as if to say: "Because of the wrath of the dove, or rather because of the fierce anger of the Lord." For a gentle dove does not roll such great wrath in its breast; it is therefore the fury of God, wishing to punish the crimes of the Jews, that instilled these wrathful passions in the dove, that is, in the Chaldeans. So Sanchez.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_24.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_26.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

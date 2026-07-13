@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Timothy II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_01.html">Previous: 1 Timothy Chapter I</a></div>
     <div class="next"><a href="68_i_timotheum_03.html">Next: 1 Timothy Chapter III</a></div>
 </div>
@@ -209,18 +209,19 @@
 <p>Let mothers here learn that their treasure is their children, on whom they ought to spend all their care, not so much to enrich them as to educate them well. Thus Cornelia, the mother of the Gracchi, as Valerius Maximus relates, book IV, ch. IV, when a Campanian matron, a guest at her house, was showing her her ornaments, the most beautiful of that age, drew her into conversation until her children should return: <em>"And these,"</em> she said, <em>"are my ornaments."</em> Hence St. Chrysostom here in homily 9 in his moral section: <em>"We have,"</em> he says, <em>"a great and precious deposit, namely our children; let us guard them with great care, and do everything lest a cunning thief steal them from us; no possession, no estate ought to be equally pleasing and dear to us: for all these things are sought for the children. If therefore we have greater care for possessions than for those for whose sake they are acquired, that is surely most absurd and foolish. Let us therefore train the tender souls of our children to virtue and piety, and let us seek all other things in the second place: for if they are wicked, money will profit them nothing; but if they are good, they will suffer nothing from poverty. Do you wish to leave your son rich? Teach him to be good and kind: for so he will also be able to make the family estate more abundant."</em> And below: <em>"For children not properly instructed, it is better to be poor than rich: for poverty restrains even the unwilling, and keeps them within the limits of virtue; but riches do not allow even the willing to live chastely and temperately, but make them go astray and pervert them."</em> Then he exhorts and instructs mothers thus to rightly educate their daughters: <em>"Mothers, take up the care of your daughters likewise: that care is very easy for you. Take care diligently that they be continually at home. Above all, teach them to be pious and religious, to despise money, to be despisers of outward adornment; and so at last give them in marriage. If you so instruct them, you will save not only them, but also the husbands who shall take them; and not only the husbands, but also the sons and grandsons. For from the best root come stronger shoots, which always advance to better things, and the reward of all these shall be rendered to you."</em> And finally he concludes the matter with this notable sentence: <em>"Thus indeed it is fitting for a virgin to come forth from her father's house and be joined in matrimony, just as a wrestler from the wrestling-school, so that she may have the most diligent skill in all household matters, and may be like leaven, which transforms the whole mass into its own beauty."</em> Particular precepts on the education of daughters are assigned to mothers by St. Jerome, in his epistles to Laeta, to Calantia, and to Gaudentius, in volume I.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_01.html">Previous: 1 Timothy Chapter I</a></div>
     <div class="next"><a href="68_i_timotheum_03.html">Next: 1 Timothy Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

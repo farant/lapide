@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Timothy I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="69_ii_timotheum_argumentum.html">Previous: 2 Timothy Introduction</a></div>
     <div class="next"><a href="69_ii_timotheum_02.html">Next: 2 Timothy Chapter II</a></div>
 </div>
@@ -184,18 +184,19 @@
 <p><b>And in how many things he ministered to me at Ephesus, thou knowest better.</b> — The "to me" is not in the Greek nor in the Latin Royal and Plantinian Bibles, nor in Ambrose, Chrysostom, Theophylact, Theodoret. Whence Ambrose teaches that Onesiphorus liberally ministered not to Paul alone, but to all afflicted on account of the faith: as if by this very thing the Apostle were censuring those who wish to minister not to all, but to certain persons, because they are eminent, kindred, or for some other reason dear and pleasing. The Roman Bible and the Syriac, however, read the "to me," and plainly it seems to be read or to be supplied: for he says "he ministered," to whom? clearly to me, as it preceded; for the Apostle treats of the charity and offices shown to him by Onesiphorus both at Rome and at Ephesus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="69_ii_timotheum_argumentum.html">Previous: 2 Timothy Introduction</a></div>
     <div class="next"><a href="69_ii_timotheum_02.html">Next: 2 Timothy Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

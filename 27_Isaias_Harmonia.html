@@ -15,7 +15,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Chronological Harmony of the Prophets</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_Isaias_Canones.html">Previous Section</a></div>
     <div class="next"><a href="27_isaias_01.html">Chapter I</a></div>
 </div>
@@ -342,11 +342,12 @@ But Jeremiah, placed in prison, by the Lord's command bought from his cousin a f
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

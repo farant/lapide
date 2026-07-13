@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_03.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_05.html">Next Chapter</a></div>
 </div>
@@ -264,17 +264,18 @@
 <p>Indeed even the Apostles, says St. Paul, when he everywhere preaches the cross of Christ: &#x27;to the Jews a scandal, to the Gentiles foolishness.&#x27; Hear him, 1 Corinthians 4:9: &#x27;I think that God has exhibited us Apostles as the last of all, as men doomed to death; for we have been made a spectacle to the world, and to angels, and to men. We are fools for Christ&#x27;s sake, etc.; we are cursed, and we bless; we suffer persecution, and we endure; we are slandered, and we entreat; we have become as the refuse of the world, the offscouring of all things until now.&#x27; See more in our Rader, in his book On Simple Obedience and Contempt of Self.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_03.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

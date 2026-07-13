@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) XXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_22.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_24.html">Next Chapter</a></div>
 </div>
@@ -210,17 +210,18 @@ But this prophecy of Jeremiah nowhere exists, as far as I know. Allegorically, J
 37. And he did evil before the Lord, that is, he worshipped idols, moreover he greedily plundered his subjects, and was proud and ambitious, and therefore was killed by the Chaldeans, and "was buried with the burial of a donkey;" that is, he was left unburied, cast into a dung heap like a donkey, as Jeremiah teaches, chapter 22, verse 13 and following. See what was said there.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_22.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_24.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

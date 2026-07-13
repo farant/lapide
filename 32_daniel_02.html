@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Daniel II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="32_daniel_01.html">Previous Chapter</a></div>
     <div class="next"><a href="32_daniel_03.html">Next Chapter</a></div>
 </div>
@@ -491,17 +491,18 @@ DANIEL WAS AT THE KING'S GATES. — In Greek it is: Daniel was in the court of t
 <p>Vatablus interprets differently: Daniel, he says, sat at the king's gate to render justice, that is, he was a judge. For judges formerly sat at the gates of cities as in a public place accessible to all. But the former sense is truer. In Daniel therefore that saying of Aristides, Volume III, Oration 1 Platonic, is verified: "The greatest things fall to the fewest." And: "The greatest advantage of the state consists in the abundance of good men."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="32_daniel_01.html">Previous Chapter</a></div>
     <div class="next"><a href="32_daniel_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

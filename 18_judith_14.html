@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judith XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="18_judith_13.html">Previous Chapter</a></div>
     <div class="next"><a href="18_judith_15.html">Next Chapter</a></div>
 </div>
@@ -70,17 +70,18 @@ In a similar way David, having cut off the head of Goliath and shown it to the P
 <p id="verse-16"><b>Verse 16: One Hebrew Woman Brought Confusion</b></p>
 <p>16. ONE HEBREW WOMAN HAS BROUGHT CONFUSION UPON THE HOUSE OF THE KING — for by killing the prince, she threw the entire camp into confusion, struck it with terror, and threw it into turmoil. See here the prudence of Judith, who aimed at the head of the general: for by removing him, she destroyed the entire camp. For a camp without a leader is the same as a people without a king, sheep without a shepherd, disciples without a teacher, children without a father, citizens without a consul. Whence Tarquinius, king of the Romans, by cutting off the heads of poppies in his garden, by this very act signified through a messenger to his son, who had pretended to defect to the Gabini, that the heads of the Gabinian leaders must be removed: which being done, the Gabini, being as it were headless, surrendered to Tarquinius, as Livy testifies. This saying the mystical teachers apply to the Blessed Virgin, who, by crushing the head of the infernal Dragon, utterly destroyed all the armies of his infernal spirits.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="18_judith_13.html">Previous Chapter</a></div>
     <div class="next"><a href="18_judith_15.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

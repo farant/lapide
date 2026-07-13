@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Tobias (Tobit) VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="17_tobiae_06.html">Previous Chapter</a></div>
     <div class="next"><a href="17_tobiae_08.html">Next Chapter</a></div>
 </div>
@@ -75,17 +75,18 @@
 <p>Again let spouses learn here to use marriage chastely, and all others to live chastely, lest they be killed by Asmodaeus, just as these impure bridegrooms were. A few years ago, when I was in Belgium, a serious priest from our Society told me that in a military mission he had repeatedly warned a certain soldier about his infamous concubinage to correct his life, but in vain: wherefore at last, moved by zeal and fervor, he had threatened him, and declared that unless he quickly amended himself, he would experience the severe vengeance of God. So it happened, for shortly afterwards, God sent a storm, thunder, and lightning with horrible crashing and universal terror, and struck that man alone with lightning while in the shameful embrace of his concubine, together with her, and laid them dead; and so in the very act of sin he surrendered his body to the lightning and his soul to hell, while all exclaimed: "You are just, O Lord, and Your judgment is right!"</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="17_tobiae_06.html">Previous Chapter</a></div>
     <div class="next"><a href="17_tobiae_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

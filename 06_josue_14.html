@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joshua XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_13.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_15.html">Next Chapter</a></div>
 </div>
@@ -168,18 +168,19 @@
 <p>AND THE LAND RESTED FROM WARS. — This concluding clause, in the Hebrew manner, should be referred to what precedes, not immediately but remotely — namely, to the wars completed by Joshua, which were treated in the preceding chapters — as if to say: When the wars were finished and the Canaanites subdued, since their land was to be divided by lot among the twelve tribes of Israel, and since Caleb had asked and obtained his lot in it from Joshua, that land rested from wars, being now subject to the victorious Hebrews.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_13.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_15.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

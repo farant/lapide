@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_12.html">Previous: John XII</a></div>
     <div class="next"><a href="54_joannes_14.html">Next: John XIV</a></div>
 </div>
@@ -269,17 +269,18 @@
 <p id="verse-38"><b>Verse 38: The Cock Shall Not Crow Until You Deny Me Three Times</b></p>
 <p>38. <em>JESUS ANSWERED HIM: WILL YOU LAY DOWN YOUR LIFE</em> (SOUL) <em>FOR ME? AMEN, AMEN I SAY TO YOU, THE COCK SHALL NOT CROW UNTIL YOU HAVE DENIED ME THREE TIMES.</em> — Christ humbles Peter, who was overconfident in himself, and allows him to fall into denial of Him, that he may learn to trust not in his own strength but in the grace of Christ. For this reason Christ foretold this to Peter several times: for this prediction in John is different from the others recorded by the other three Evangelists. Further, when and how Peter before the second and last cock-crow denied Christ three times, I have shown on Matthew, ch. XXVI, v. 70 and following. Hear St. Chrysostom, Homily 72: "By experience you shall know that your love is nothing without divine grace: whence it is clear that Jesus permitted this fall for his own benefit." And St. Augustine, Tract 66: "Will you do for Me what I have not yet done for you? You will lay down your life for Me; can you go before, who cannot follow? Why do you presume so greatly? What do you think yourself to be? Hear what you are: The cock shall not crow until you deny Me three times."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_12.html">Previous: John XII</a></div>
     <div class="next"><a href="54_joannes_14.html">Next: John XIV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

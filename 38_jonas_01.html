@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jonas I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="38_Jonas_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="38_jonas_02.html">Next Chapter</a></div>
 </div>
@@ -219,17 +219,18 @@ Be called Breadth, a more splendid one will arise for me.</p>
 <p>AND THEY SACRIFICED VICTIMS (not only spiritual offerings of prayers and thanksgivings, as St. Jerome thinks, but also bodily ones: for immediately after Jonah was cast into the sea, they put in to shore, and there they sacrificed victims to the God of the Hebrews. Moreover) THEY MADE VOWS — to be offered in the temple of the Hebrews at Jerusalem, according to the law and rites which they were going to seek out from the Scribes there: for they could not learn these from Jonah, who had already been cast into the sea. So Theophylactus and Hugo. Wherefore there is no doubt that all these sailors thereafter preached and celebrated this miracle and God its author everywhere. Hence someone might suspect that these sailors, worshiping the God of the Hebrews, embraced Judaism and became proselytes.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="38_Jonas_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="38_jonas_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_04.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_06.html">Next Chapter</a></div>
 </div>
@@ -151,17 +151,18 @@
 <p>as if forgetting them and handing them over to their enemies, I will depart to heaven: for this is the place of God's throne and glory, from which He watches from afar the prisons and punishments of the guilty. So St. Cyril, Jerome, Theodoret and others. Vatablus refers these words to the following chapter, and begins chapter 6 here; for they connect with it and point to it, as will soon be clear.</p>
 <p>Until you waste away. — In Hebrew ad ieshemu, that is, until they acknowledge their sin and guilt. So the Chaldee, Vatablus, Clarius, Arias and others; for asham means to sin and sin. But asham is sometimes put for shamam, that is, 'he desolated'; for the conjugations of imperfect verbs are frequently interchanged among the Hebrews, for example, the defective Pe-aleph type, such as asham, is interchanged with those that double the second radical, such as shamam. Whence the Septuagint translates: until they are scattered; our translator: until you waste away. This sense serves and precedes the former. For the Jews, awakened by disaster and destruction, acknowledged their sins and, repentant, returned to God, as is clear from the book of Baruch. For to this end all plagues sent by God upon cities, nations, families and individuals tend: namely, that by them He may lay low their pride, and that He may open, torment and wound the heart obstructed and hardened by lusts, so that the afflicted may acknowledge their crimes and God as their avenger, and repentant may run back to Him; since they see there is no other who can ward off these plagues and bring help in such great evils, according to Psalm 15: 'Their infirmities were multiplied; afterwards they made haste.' Therefore when you are scourged by God, do not run to the Assyrians, that is, not to princes and powerful men who cannot snatch you from the hands of God, but run to God Himself with David and the Ninevites, and humbly say: 'Have mercy on me, O God, according to Your great mercy. Against You alone have I sinned, and done evil before You.' Thus you will soothe the wrath of God, and wrest the scourge from the hands of the angry One, and win back and restore His former favor, grace and help to yourself.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_04.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

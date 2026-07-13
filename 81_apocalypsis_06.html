@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_05.html">Previous: Apocalypse Chapter V</a></div>
     <div class="next"><a href="81_apocalypsis_07.html">Next: Apocalypse Chapter VII</a></div>
 </div>
@@ -405,17 +405,18 @@
 <p>Morally, note that the punishment, fear, and dread of the wicked, and the timorous expectation of unknown and impending plagues, is and will be enormous; <em>"Worse than war is the fear itself of war."</em> Thus often the accused are more afflicted by the fear and apprehension of the death to which they have been condemned, than by death itself: for at every moment they are so distressed that they seem to die a thousand times. Wherefore Seneca, in his book On the Happy Life, ch. IV and following, teaches that a wretched life is set in fear and in desire, while a happy life is set in the contempt and victory over both. <em>"The highest good,"</em> he says, <em>"is a soul that despises chance things, that rejoices in virtue, whom chance does not exalt nor break; for whom true pleasure is the contempt of pleasures. For what hinders us from calling that soul blessed which is free, upright, undaunted, steadfast, set beyond fear, beyond desire — for whom the one good is honesty, the one evil baseness? The rest is a vile crowd of things, neither detracting from the happy life, nor adding to it. He who is so founded must, willing or unwilling, be followed by continuous cheerfulness and a deep joy coming from on high. On which day he will be above pleasure, and above pain."</em> And ch. V: <em>"Happy is he who, by the benefit of reason, neither desires nor fears. For then the mind is pure and freed from all evils, when it has escaped not only lacerations but even pin-pricks, ever to stand where it took its stand, and to vindicate its seat even when fortune is angry and assails it. For as for pleasure, although it be poured around on every side and flow in by all ways, what mortal in whom any vestige of manhood remains would wish to be tickled by day and by night, and, abandoning the soul, give labor to the body?"</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_05.html">Previous: Apocalypse Chapter V</a></div>
     <div class="next"><a href="81_apocalypsis_07.html">Next: Apocalypse Chapter VII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

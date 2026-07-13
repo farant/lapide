@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_02.html">Previous: Luke II</a></div>
     <div class="next"><a href="52_lucas_04.html">Next: Luke IV</a></div>
 </div>
@@ -178,18 +178,19 @@
 <p>Tropologically: "who was" signifies the vanity of this age, namely that the life of men and each generation passes away, and is at once turned from the present into the past, that is, from "is" into "was," according to that line: <em>We have been Trojans, Ilium has been, and the mighty / Glory of the Teucrians.</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_02.html">Previous: Luke II</a></div>
     <div class="next"><a href="52_lucas_04.html">Next: Luke IV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

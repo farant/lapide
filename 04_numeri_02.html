@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_01.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_03.html">Next Chapter</a></div>
 </div>
@@ -145,17 +145,18 @@ The Father Himself thundered from the left parts of heaven.</em></p>
 <p>You ask fifth, in what order did the individual tribes march on the journey? Abulensis here responds, Question I, from the Hebrews, that each soldier had his own assigned place in the camps: but this does not seem necessary. For the difficulty here is this: whether from each camp, that is, from each side, the individual tribes and individual soldiers marched in a square formation, or rather in a long and extended line? I respond that the individual tribes marched one after another separately, not in a square formation, but in a long and extended line, as will be clear from verse 9.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_01.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

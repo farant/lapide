@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_17.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_19.html">Next Chapter</a></div>
 </div>
@@ -230,17 +230,18 @@
 <p>Our Translator calls the chiliarchs "tribunes," because this was formerly the highest magistracy (for tribunes of the people were equal to consuls, and were as it were the consuls of the common people) in the Roman populace, as also in the military; and we too rightly call our colonels, or commanders of a thousand soldiers, tribunes.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_17.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_19.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

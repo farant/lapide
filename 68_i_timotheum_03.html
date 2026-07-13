@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Timothy III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_02.html">Previous: 1 Timothy Chapter II</a></div>
     <div class="next"><a href="68_i_timotheum_04.html">Next: 1 Timothy Chapter IV</a></div>
 </div>
@@ -181,18 +181,19 @@
 <p>Add, with Hesselius, that it can be explained thus: Christ was taken up, that is, received, by the world as one existing in the glory of the Father, as the true God, to whom all glory is due: whom therefore the whole world glorifies.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_02.html">Previous: 1 Timothy Chapter II</a></div>
     <div class="next"><a href="68_i_timotheum_04.html">Next: 1 Timothy Chapter IV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Esther VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="19_esther_05.html">Previous Chapter</a></div>
     <div class="next"><a href="19_esther_07.html">Next Chapter</a></div>
 </div>
@@ -70,17 +70,18 @@
 <p>13. IF MORDECAI IS OF THE SEED OF THE JEWS, BEFORE WHOM YOU HAVE BEGUN TO FALL, YOU WILL NOT BE ABLE TO RESIST HIM, BUT YOU WILL FALL BEFORE HIM. Haman's friends said this either by a certain divine inspiration, says Serarius, like the Sibyls and Caiaphas in John 11, or by a certain human wisdom and shrewd conjecture drawn from the fact that they had seen many Jews of obstinate and unyielding character, who did not rest until they had destroyed their enemies, and that they had heard by common report that Pharaoh, the Canaanites, and other enemies of the Jews had been crushed by them through Moses, Joshua, David, etc. Lyra adds that they said this from Genesis chapter 12, verses 15 and following, where God promises Abraham and Jacob constancy of posterity, prosperity, and victory over their enemies; for Genesis and the Pentateuch had been translated into the Persian language by the Hebrews captive in Persia. This is uncertain, but not improbable.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="19_esther_05.html">Previous Chapter</a></div>
     <div class="next"><a href="19_esther_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XXV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_24.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_26.html">Next Chapter</a></div>
 </div>
@@ -456,17 +456,18 @@
 <p>Finally St. Bernard, in the treatise On the Solitary Life: <em>"A house of God's beauty is to be built by everyone, which is shown to him in the height of the mind and pious meditation, as if in a pattern, so that he may build according to the form of poverty — not houses for dwelling in, but tabernacles for leaving behind — so as thus to arouse in himself contempt for all outward things and love of inward and heavenly things."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_24.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_26.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

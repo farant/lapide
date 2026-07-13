@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias LXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_65.html">Previous Chapter</a></div>
     <div class="next"><a href="27_Isaias_Jubilus.html">Next Chapter</a></div>
 </div>
@@ -383,17 +383,18 @@ Living flames, and unsleeping vapors.&quot;</p>
 <p>There a moment of delight, here an eternity of torment; here a moment of torment, there an eternity of delight. Their worm shall not die, and their fire shall not be quenched; the glory of these shall not die, and their happiness shall not be quenched. Go now, O young man, rejoice in your youth, walk in the ways of your heart and in the sight of your eyes, and know that for all these things God will bring you into judgment. Go, O vain one, gape after vanities; sate yourself on things soon to perish, you who are to die tomorrow. O vain sons of Adam, deceitful in the balances, that they may deceive themselves from vanity in the same! O shadow, O dream, O every man living is universal vanity! Remember your Creator before the time of affliction comes, before the silver cord is snapped and the golden fillet runs back, and the pitcher is broken at the fountain, and the dust returns to its earth whence it was, and the spirit returns to God who gave it. For man will go to the house of his eternity, whether above or below. Enter through the narrow gate, because wide and spacious is the way that leads to destruction, and many there are who enter through it. How narrow the gate, and how strait the way that leads to life, and few there are who find it!</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_65.html">Previous Chapter</a></div>
     <div class="next"><a href="27_Isaias_Jubilus.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

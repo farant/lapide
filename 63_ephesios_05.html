@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ephesians V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_04.html">Previous: Ephesians Chapter IV</a></div>
     <div class="next"><a href="63_ephesios_06.html">Next: Ephesians Chapter VI</a></div>
 </div>
@@ -316,18 +316,19 @@
 <p>But what if the wife is ill-mannered, harsh and quarrelsome? Let the husband bear with her or convert her by his prudence, gravity, and patience; let him do that of the Apostle: <em>"Bear one another's burdens."</em> Thus Christ bore the burdens and sins of the Church His spouse, and expiated her by His blood. Socrates also had a quarrelsome wife named Xanthippe, who always stirred up quarrels, so that while he was studying, she would overturn the table. Once after long quarrels, moved by anger because he was silent, she poured a cup of water over his head. <em>"I was not unaware,"</em> said Socrates, <em>"that rain would follow the thunder."</em> To whom Alcibiades, a nobleman of his household: <em>"How,"</em> said he, <em>"do you put up with this quarrelsome wife, and not throw her out of the house?"</em> to whom Socrates: <em>"He who wishes to eat eggs ought not to be offended by the cackling of the hens. Indeed, I am thus learning patience at home, that I may be able to exercise it better outside."</em> So Laertius in his <em>Life</em>, and A. Gellius, book I, ch. XVII. It is therefore fitting for each man to tolerate inconveniences, and to rejoice in the Lord, by which they will be rendered lighter. For, as Virgil says, <em>"Each man suffers his own ghosts."</em> Varro too in the Menippean Satire which he wrote on the duty of a husband: <em>"The vice of a wife,"</em> he says, <em>"is either to be removed or to be borne. He who removes the vice makes the wife more agreeable; he who bears it makes himself better."</em> Whoever therefore you have chosen as a wife, and you find her quarrelsome, think of <em>"woman,"</em> think of Xanthippe: be Socrates, indeed be Christ, think that you have a domestic exercise of patience, so that you may learn to bear and overcome other things more easily. Many seek crosses outside; you have one at home — she will teach you patience: and patience has a perfect work, as St. James says.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_04.html">Previous: Ephesians Chapter IV</a></div>
     <div class="next"><a href="63_ephesios_06.html">Next: Ephesians Chapter VI</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

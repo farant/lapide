@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 John IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_03.html">Previous: 1 John Chapter III</a></div>
     <div class="next"><a href="77_i_joannis_05.html">Next: 1 John Chapter V</a></div>
 </div>
@@ -237,17 +237,18 @@
 <p>21. AND THIS COMMANDMENT WE HAVE FROM GOD, THAT HE WHO LOVES GOD, LOVE ALSO HIS BROTHER. — For, as Saint Augustine says: <em>"If he is your brother, and you do not love him, how do you love God, whose commandment you despise?"</em> See Saint Gregory, book X Morals, VI, where he sets forth at length the acts of love which we ought to render to our neighbor. And Saint Augustine, On the Discipline of Christians, chapters II and III: <em>"O loving Lord," he says, "what am I to Thee, that Thou shouldst command Thyself to be loved by me? and Thou threatenest me with vast miseries; Thou art angered if I do not do it; Thou promisest many things if I do. And what, O my Love, what delight dost Thou take in this? What king says to his servant: Let us be friends, and I will give thee a province?"</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_03.html">Previous: 1 John Chapter III</a></div>
     <div class="next"><a href="77_i_joannis_05.html">Next: 1 John Chapter V</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XXXII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_31.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_33.html">Next Chapter</a></div>
 </div>
@@ -326,17 +326,18 @@
 <p>Hence it is probable that God shortly afterward, on account of the idol of the calf, while the Hebrews were still at Horeb, sent some plague upon them -- for example, a pestilence. For this is the vengeance which He threatened them with in the preceding verse, and thus this verse corresponds perfectly to the preceding one, as the execution of His sentence and threat. For otherwise the sequence of the Lord's speech is broken here, since the things narrated in the following chapter about the conversation of Moses with the Lord must be woven together and connected in the same sequence as the conversation of Moses and God which is recounted here, just as they occurred. So Rabbi Solomon and Abulensis.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_31.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_33.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

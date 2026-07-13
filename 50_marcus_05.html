@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_04.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_06.html">Next Chapter</a></div>
 </div>
@@ -106,17 +106,18 @@
 <p id="verse-43"><b>Verse 43: And He Commanded That Something Should Be Given Her to Eat</b></p>
 <p>43. AND HE COMMANDED THAT SOMETHING SHOULD BE GIVEN HER TO EAT. — The Arabic: "and He said: Feed her," that He might show that she had not only truly risen, but was also in health and hungry. For boys and girls are wont, when they wake from sleep, to be hungry and to ask for food; for in sleep they digest all the food of the previous day, if they are healthy and vigorous, being then endowed with a great heat of the stomach. For death had served her in place of sleep, as Christ says in verse 39.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_04.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Peter III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_02.html">Previous: 1 Peter Chapter II</a></div>
     <div class="next"><a href="75_i_petri_04.html">Next: 1 Peter Chapter IV</a></div>
 </div>
@@ -354,18 +354,19 @@ To speak with a round mouth, greedy of none but Christ.</p>
 <p>The angels being made subject to Him. — For Christ, not only as God, but also as man, by virtue and dignity of the hypostatic union, is the firstborn of every creature, Colossians 1:15, that is, the prince of all creatures and the lord of the universe, and therefore the head and King of all angels as well as of men, as Paul says, Colossians 1:18, and ch. 2 v. 10, and Ephesians 1:22. See what was said there. For Christ is the head of the whole Church, both militant and triumphant, which, since it is one, is composed of angels as well as of men. Hence weighty theologians hold with probability that the angels also obtained grace and glory from the merits of Christ — this would have pertained to the dignity of Christ, and to the greater association of the Church, which consists of angels as well as of men. See Gregory of Valencia, Part III, disputation 1, Question VIII, point 3, and Suarez, Part III, tome I, disputation 42, sections 1 and 2.</p>
 <p>Wherefore deservedly does St. Leo say in sermon 1 On the Ascension: Truly, he says, there was a great and ineffable cause for rejoicing, when in the sight of the holy multitude the nature of the human race was ascending above the dignity of all heavenly creatures, about to surpass the angelic orders, and to be lifted beyond the height of the Archangels, and to have no measure of its advancement set by any sublimities, until being received into the company of the eternal Father, it was associated on the throne of that glory whose nature it was united to in the Son.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_02.html">Previous: 1 Peter Chapter II</a></div>
     <div class="next"><a href="75_i_petri_04.html">Next: 1 Peter Chapter IV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

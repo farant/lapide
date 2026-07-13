@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_08.html">Previous: 1 Corinthians VIII</a></div>
     <div class="next"><a href="60_i_corinthios_10.html">Next: 1 Corinthians X</a></div>
 </div>
@@ -231,18 +231,19 @@
 <p>Finally, those most holy ancient fathers in the desert, through their zeal for perfection, so chastised the body that it almost seems incredible; and that this pleased God is plain from their life, both holy and long and happy. One may see this in Jerome's Life of St. Hilarion, of St. Paul, of St. Malchus; in Athanasius's Life of St. Antony; in Theodoret's Life of Simeon Stylites, who for 80 years stood continually night and day in the open air on a column, scarcely taking food or sleep; and many others. So much so, indeed, that it has been carefully observed by prudent men in the Lives of the Saints that scarcely any of the Saints have been illustrious for miracles and the glory of admirable deeds, except those who excelled in fasts and austerity of life, and who afflicted their body, or were afflicted by God with diseases, or by enemies and tyrants with torments and hardships; and that the rest of the Saints who led an ordinary life were indeed much profitable to themselves and to the Church, but performed either no miracles or only rare ones.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_08.html">Previous: 1 Corinthians VIII</a></div>
     <div class="next"><a href="60_i_corinthios_10.html">Next: 1 Corinthians X</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

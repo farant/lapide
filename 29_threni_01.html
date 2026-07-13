@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Threni I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="29_Threni_Prolegomena.html">Previous</a></div>
     <div class="next"><a href="29_threni_02.html">Next Chapter</a></div>
 </div>
@@ -309,17 +309,18 @@ First, Hugo responds that these are the words of the captive people; and among t
 <p>Thirdly, Origen judges that these are the words of the Prophet, requesting the punishment of enemies, so that through it they may come to their senses and be corrected from their sins.</p>
 <p>Fourthly, and best, we shall say these things are said by Jerusalem and by the Synagogue from zeal for justice, and that by them it is only asked that God exercise just vengeance upon the proud enemies, and humble the faithless, and punish them according to their merits.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="29_Threni_Prolegomena.html">Previous</a></div>
     <div class="next"><a href="29_threni_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Peter II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_01.html">Previous: 1 Peter Chapter I</a></div>
     <div class="next"><a href="75_i_petri_03.html">Next: 1 Peter Chapter III</a></div>
 </div>
@@ -256,18 +256,19 @@
 <p>Let Bishops and Pastors therefore continually look upon Christ as the prince of Pastors, and from Him let them learn how great a care of souls they ought to bear, that they may be likened to Christ: for they have taken upon themselves His burden and office, as His vicars. So St. Gregory Thaumaturgus, Bishop of Neocaesarea, bore the care of his own, who brought over almost all his fellow-citizens from unbelief to the faith of Christ. Wherefore as he was dying, when he had asked how many in the city remained unbelievers, and he was answered that only seventeen remained, giving thanks to God he said: <em>"There were just so many who were faithful when I undertook the episcopate."</em> Like him was St. Gregory the Great, pontiff, in whom how great was the zeal of souls is plain from his many and so unceasing epistles, homilies, cares, and deeds. Hence he himself, book 2, epistle 25 to John Bishop of Squillace: <em>"We admonish your brotherhood, to watch carefully over the souls committed to you, and to attend more to the gains of souls than to the conveniences of the present life."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_01.html">Previous: 1 Peter Chapter I</a></div>
     <div class="next"><a href="75_i_petri_03.html">Next: 1 Peter Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

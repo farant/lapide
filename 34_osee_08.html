@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_07.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_09.html">Next Chapter</a></div>
 </div>
@@ -173,17 +173,18 @@ Thus it is commonly said: "Raise wolf cubs, and dogs to tear you apart."</p>
 <p>Therefore some less correctly refer the cities to Israel and the palaces to Judah; because, they say, Hosea uses the Hebrew "Israel" in the masculine gender and "Judah" in the feminine, understanding the land of Judah. But this reasoning does not hold; for Hosea here uses "Judah" in the masculine gender, saying: Judas, הרבו hirba, that is, he multiplied cities -- for hirba is a masculine verb; in the feminine one would have to say הרבתה hirbeta, as those skilled in Hebrew know. Again, when he says: "I will send fire upon the cities," he plainly means those about which he just said: "Judah multiplied cities"; for in the Hebrew the same word מרכים arim appears in both places. Therefore he means the cities of Judah. If anyone wishes to distinguish them, it is better, with Arias, to refer the cities to Judah and the buildings or palaces to Israel in the reverse way: for ארמנות armenot, that is, palaces or grand houses and temples, are היכלות hechalot, that is, basilicas, shrines, and temples, which he just said Israel had built.</p>
 <p>But, as I said, it is more true that the cities and the buildings or palaces refer to the same -- namely first to Judah, then equally to Israel. Whence the Septuagint also translates: I will send fire upon his cities, and it shall devour its foundations -- for foundations belong to cities, which the fire sent by the enemy will devour along with the cities. Moreover, the Prophet speaks about Judah, just as about Israel, now in the feminine gender, meaning the land, as when he says ארמנותה armenoteha, that is, its buildings, in the feminine; now in the masculine, meaning the people, as when he says הרבו hirba, that is, he multiplied; and עריו arau, that is, his cities, with a masculine affix or pronoun.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_07.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_09.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_07.html">Previous: Romans VII</a></div>
     <div class="next"><a href="59_romanos_09.html">Next Chapter</a></div>
 </div>
@@ -348,18 +348,19 @@
 <p>So resolved and made steadfast in the love of Christ above other Saints was St. Agatha, the heroine of virgins, that — being most noble, most rich, most honorable and most beautiful — when Quintianus, the governor of Sicily, taken by love of her, played not so much the judge as the suitor, but in vain, and therefore at length handed her over to Aphrodisia, that she might bend her by her allurements and make her compliant to the governor, and she like a Siren day and night sang to her of pleasures and delights, St. Agatha as if deaf, fixing her mind on God, persisted unmoved: and when Aphrodisia made no end of solicitation, at last the holy virgin answered her: "I take your words, Aphrodisia, and your tongue, not as yours, but as the instrument and tongue of the demon. Be ashamed to propose to me these foul and unworthy things. If you are not ashamed, yet cease: for you waste your effort, you sing to a deaf woman. For I am so founded and confirmed in the love of my Lord Jesus, and so constant in the vow of my virginity which I have made to Him, that by His grace I trust the sun shall sooner fail of its light, fire of its heat, snow of its whiteness, than I shall change my will and purpose. Let Quintianus prepare lions, kindle the pyre, stretch out the racks, open the gates of hell if he can, and stir up against me all the force and torments of demons, I shall gladly receive all things that I may die a Christian and a virgin. I fear no violence of Quintianus, because God, to whom I have consecrated my soul and body, will defend me." Wherefore Aphrodisia, reporting back to Quintianus what she had seen and tested in Agatha, said: "It is easier to make stones soft and tender, or to turn iron into lead, than to lead Agatha's mind from the love of Christ and chastity over to you. For I and my daughters for thirty days, night and day, have done nothing else than to beat upon and pound her soul, now with flatteries, now with threats, now with promises; but she esteems everything which is under heaven for Christ's sake no more than the earth which she treads under her feet; nay, night and day she thinks of nothing else, dreams of nothing else, than that she may die for Christ." Quintianus therefore summoning Agatha, by new methods and with all manner of arts again sounded out her mind, promising her whatever could be desired in this world, if she would comply with him. To him the saint said: "Outside of Christ I wish for and desire neither life, nor safety, nor anything else. Nor is there cause, O Quintianus, why you should think to overthrow me with your threats, savagery, and torments. For know that the wearied and thirsting hind is not such as to desire clear water as I desire and thirst for your torments, that through them I may embrace my Christ and be united to Him. If you wish to draw the sword on me, behold my neck; if scourges, behold my back; if fire, behold my whole body. Behold I offer to you my hands, my feet, all my members, torture them as you please. Burn, cut, bind, tear, stretch, bind, torture, kill: the more cruel you are to me, the greater the favor you confer on me, the more consolation and glory I shall receive from my sweet Spouse. Why do you delay? why do you tarry? to a thirsting soul every delay is long." She spoke, and stood by her word; for having endured with eager and brave spirit the cutting off of her breasts, fires, potsherds and other dread torments, she flew up to heaven as a martyr on the 5th of February.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_07.html">Previous: Romans VII</a></div>
     <div class="next"><a href="59_romanos_09.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

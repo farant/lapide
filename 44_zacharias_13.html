@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Zacharias XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_12.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_14.html">Next Chapter</a></div>
 </div>
@@ -148,17 +148,18 @@ And my crucified hope has fixed my hope to the cross.'</p>
 <p>9. AND I WILL BRING THE THIRD PART THROUGH FIRE (as if to say: I will test and purify the faithful with the fire of persecutions and tribulations, so that they may be purified like silver; but the more perfect I will refine with the same fire, so that they may be solidified, perfected, and shine like gold. For in this fire the Lord will be present to them, whom they shall call upon (whence he says): HE (namely my faithful people, whom I said to be the third part of mankind) SHALL CALL (that is, shall invoke) MY NAME, AND I WILL HEAR HIM. I WILL SAY: You are My people (as if to say: I hold you, I love you, I care for you, I protect you as My people); AND HE SHALL SAY: THE LORD IS MY GOD — as if to say: He in turn will worship, love, and invoke Me as his Lord and God. For tested and refined by fire, he is worthy to be stored in the treasures of God, according to Wisdom 3:5: 'God tested them, and found them worthy of Himself. As gold in the furnace He proved them.' And Proverbs 17:3: 'As silver is tried by fire, and gold in the furnace, so the Lord tries hearts.' Hence St. Jerome rightly says of them: 'This third part of the saints, lest it should be delicate and secure, is led and proved through fire like silver and gold.' So Job asserts that he was tested, chapter 23:10: 'He,' he says, 'knows my way, and He has tested me like gold that passes through fire.' Wherefore Ecclesiasticus wisely admonishes, chapter 2:4, saying: 'Take all that shall be brought upon you, and in your pain endure, and in your humility have patience: because gold and silver are tried in the fire, but acceptable men (δεκτοί, that is, acceptable, accepted, pleasing to God) in the furnace of humiliation.' Therefore what fire is to gold, the file to iron, the winnowing-fan to wheat, lye to cloth, salt to meat — this is what tribulation is to the just man. See what was said at Genesis 33, at the end.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_12.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Esther VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="19_esther_06.html">Previous Chapter</a></div>
     <div class="next"><a href="19_esther_08.html">Next Chapter</a></div>
 </div>
@@ -70,17 +70,18 @@
 <p>Finally, see here how great is the world's deceit. Whence St. Bernard rightly exclaims in letter 107: 'O wicked world, which is accustomed to bless only your own friends in such a way that you make them enemies of God. Haman found favor with King Ahasuerus; this favor brought him the cross. Achitophel found favor with Absalom; this brought him the noose.' And St. Augustine, in letter 144 to Anastasius: 'This world,' he says, 'is more dangerous when flattering than when troublesome, and more to be feared when it invites love than when it warns and compels contempt.' Thus we see those who are great with princes gradually fall, as fell Sejanus, Achitophel, Haman, Joab, and very many others. Whoever is wise, therefore, should timely withdraw from the court before the fall.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="19_esther_06.html">Previous Chapter</a></div>
     <div class="next"><a href="19_esther_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

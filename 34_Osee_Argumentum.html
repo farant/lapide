@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Osee</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="33_Prophetae_Minores_Harmonia.html">Previous</a></div>
     <div class="next"><a href="34_osee_01.html">Next Chapter</a></div>
 </div>
@@ -34,17 +34,18 @@
 <p>Moreover, Hosea is pathetic, and therefore aphoristic, as St. Jerome says, that is, concise. For he plays the role of God, who as a Bridegroom passionately loves His bride the Synagogue, and catching her in adultery, stirs up the most intense emotions, on one side of indignation and threats, on the other of love and zeal. Hence he is equally obscure, both because he does not fully express his feelings, but through aposiopesis breaks off on account of strong emotion; and because the Poet's saying is true: "I labor to be brief, I become obscure"; and because he is profound. "The prophet Hosea, the more profoundly he speaks, the more laboriously he is penetrated," says St. Augustine, City of God XVIII, 28.</p>
 <p>Finally, Hosea, illustrious for his obedience and holiness of life, was enrolled by the Church in the catalog of saints on July 4th. See Epiphanius, Dorotheus, and Isidore, in the Life of Hosea.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="33_Prophetae_Minores_Harmonia.html">Previous</a></div>
     <div class="next"><a href="34_osee_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

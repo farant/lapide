@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XXX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_29.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_31.html">Next Chapter</a></div>
 </div>
@@ -439,17 +439,18 @@ The Quirites consecrated it to Jupiter on the Tarpeian mount."</em></p>
 <p>Anacharsis said that oil was a poison that engenders madness, because he saw athletes, once anointed, raging against one another. Nor did the Scythians know the use of oil, as I believe, since it neither grew among them nor was imported from elsewhere. Athletes do not fight unless anointed: for they think the body becomes stronger; and the Scythian pretended to believe that oil was the cause of their madness. Laertius, book I, chapter 9.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_29.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_31.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

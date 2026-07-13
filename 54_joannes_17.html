@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John XVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_16.html">Previous: John XVI</a></div>
     <div class="next"><a href="54_joannes_18.html">Next: John XVIII</a></div>
 </div>
@@ -224,17 +224,18 @@
 <p><em>26. AND I HAVE MADE KNOWN THY NAME TO THEM, AND WILL MAKE IT KNOWN (post resurrectionem et missum Spiritum Sanctum, ut dixi): UT DILECTIO, QUA DILEXISTI ME, IN IPSIS SIT, ET EGO IN IPSIS,</em> — namely that the love which Thou hast shown to me and to them for my sake, Thou mayest continue toward them, and show them ever a greater one in very deed, and do them more good day by day, and heap upon them Thy graces and benefits, so that every day they may advance with great strides in holiness and in the apostolic work; and that in this way I may persevere together with Thee in them and cleave to them more closely through Thy grace and charity ever increasing in them. For when God loves rational creatures, He infuses into them the most precious and most divine gift of grace and love, or charity, which He does not do for irrational ones, like the sky, the sun, and the stars, when He loves them — that is, when out of love He creates, adorns, and governs them. This is the meaning of "that the love may be in them"; for, as Paul says: "The charity of God is poured forth in our hearts by the Holy Spirit who is given to us," Romans V.</p>
 <p>Somewhat differently Rupert: That the Holy Spirit, he says, who is Thy love whereby Thou lovest me, may ever be in them and firmly abide. But this comes to the same thing. For the Holy Spirit cannot be separated from charity, any more than fire from heat. Therefore to him to whom charity is given, the Holy Spirit is also given; and so long as charity abides in a man, so long does the Holy Spirit also abide, nay, the whole Holy Trinity, as I said on chapter XIV, verse 23.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_16.html">Previous: John XVI</a></div>
     <div class="next"><a href="54_joannes_18.html">Next: John XVIII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

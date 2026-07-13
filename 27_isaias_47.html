@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XLVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_46.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_48.html">Next Chapter</a></div>
 </div>
@@ -212,17 +212,18 @@ And as if hell were an empty fable.</p>
 <p>Forerius for &quot;in his own way&quot; translates &quot;in his transit,&quot; and explains it thus, as if to say: Just as merchants who in every transaction, that is, exchange of goods, or in every contract and exchange, suffered loss, were deceived, and erred — driven by some evil spirit, or said to have engaged in trade under an unfavorable star — so your astrologers, who in every transit of the stars, calculation, application, counsel, and divination were deceived, destroyed both themselves and you. For Cicero also teaches that the Chaldeans observed the passages and movements of the stars.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_46.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_48.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

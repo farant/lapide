@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Micheas VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_05.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_07.html">Next Chapter</a></div>
 </div>
@@ -180,17 +180,18 @@
 <p>That I should give you over to destruction (so that it signifies a consequence, not an intended end, as if to say: It will follow, O Jerusalem, that I destroy you) and your inhabitants (in you, O Jerusalem) to hissing (there is a change of person; for he passes from the second to the third person, as if indignant and turning His face and speech away from her, as if to say: The rich and powerful citizens of Jerusalem, on account of idolatry and crimes, I will give over to hissing. Whence by another change of person he returns to the first person, saying): And you shall bear the reproach of My people, — as if to say: You, O rich men, you, O princes, I address here, who have been the leaders and instigators of idolatry and crimes for the people; to you the shame and disgrace of the destruction and captivity of My people will be imputed; and therefore all, both natives and foreigners, will curse and mock you, saying: Justly and most deservedly are the princes of the Jews despoiled, killed, and disgraced by the Chaldeans; because they themselves despoiled, killed, and disgraced the poor; and because by their impious counsels and crimes they destroyed the people, the city, and the kingdom. So St. Jerome, Lyra, Clarius, and others. Note: "The reproach of the people" is the disgrace of the destruction, captivity, and mockery which the Jews suffered from the Chaldeans and other nations, especially neighboring and hostile ones, and which Moses had threatened them with in Deuteronomy chapter XXVIII, 36, and Leviticus XXVI, verse 32.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_05.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_19.html">Previous: Acts XIX</a></div>
     <div class="next"><a href="57_acts_21.html">Next Chapter</a></div>
 </div>
@@ -272,18 +272,19 @@ What thou hast given, those alone thou wilt always keep as wealth.</em></p>
 <p><em>FALLING UPON PAUL'S NECK, THEY KISSED HIM.</em> — The Syriac: they embraced him. An embrace therefore is called a kiss, because it joins head to head, and through that, as it were, mouth to mouth. See what was said of the holy kiss, 2 Corinthians XIII, 12. Wonderful was the love of the faithful toward Paul, inasmuch as he was their teacher, Apostle, father, the cause of their salvation and of every good thing of theirs,</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_19.html">Previous: Acts XIX</a></div>
     <div class="next"><a href="57_acts_21.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_06.html">Matthew VI</a></div>
     <div class="next"><a href="46_matthaeus_08.html">Next Chapter</a></div>
 </div>
@@ -262,17 +262,18 @@
 <p>Let the Christian orator and preacher imitate Christ in these matters, so that he may teach more by his life than by his word, after the example of St. Basil, of whom St. Gregory Nazianzen writes, Oration 20: <em>«The speech of Basil was thunder, because his life was lightning.»</em> So let him use his freedom, authority, and vigor of speaking so as to act as a Doctor with his students, and be effective in teaching and persuading. Such a man will be the master of the chair, the lord of the pulpit; such a man will teach and preach as one having authority, in the manner of Christ, as St. Paul and the Apostles did. St. Malachy, says St. Bernard in his Life, so tamed a certain wrathful and furious woman, and therefore intolerable to all, that she seemed unable to become angry, and this with a single word, saying: <em>«In the name of the Lord Jesus, I command you to be angry no more»</em> — which St. Bernard prefers to the raising of the dead performed by the same St. Malachy, <em>«because there an exterior man was raised, but here an interior man came back to life.»</em> Thus Blessed Francis Borgia said of St. Ignatius of Loyola: <em>«He spoke as one having authority,»</em> because his speech was effective, and he drove men wherever he wished. Ribadeneira testifies to this in his Life.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_06.html">Matthew VI</a></div>
     <div class="next"><a href="46_matthaeus_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

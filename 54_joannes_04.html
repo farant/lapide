@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_03.html">Previous: John III</a></div>
     <div class="next"><a href="54_joannes_05.html">Next: John V</a></div>
 </div>
@@ -352,17 +352,18 @@
 <p id="verse-54"><b>Verse 54: This Was the Second Sign Jesus Did</b></p>
 <p>54. <em>THIS AGAIN (the Arabic has "also") WAS THE SECOND SIGN THAT JESUS PERFORMED, WHEN HE HAD COME FROM JUDEA INTO GALILEE.</em> — Join "again" with "had come," as if to say: This was the second miracle that Christ performed in Cana of Galilee, when He had come again, that is, a second time, from Judea into Galilee. For the first was the changing of water into wine, chapter 2, verse 1 and following, which Christ did when He first came from Judea into Galilee. So He came twice from Judea into Galilee, and He distinguished each arrival with a new miracle. "He said 'second,'" says Euthymius, "not because after the first He had performed no other miracle in all of Palestine (for in Judea He had already performed many), but that after the first, this second one was done in Cana." John says this to indicate that the abundance of miracles performed by Christ in Galilee thereafter, which Matthew narrates in chapter 4, verse 23 and following, occurred after this second miracle recounted here by John.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_03.html">Previous: John III</a></div>
     <div class="next"><a href="54_joannes_05.html">Next: John V</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

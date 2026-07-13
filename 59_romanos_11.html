@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_10.html">Previous: Romans X</a></div>
     <div class="next"><a href="59_romanos_12.html">Next Chapter</a></div>
 </div>
@@ -315,18 +315,19 @@
 <p>Glory therefore to the Father, from whom are all things; glory to the Son, through whom are all things; glory to the Holy Spirit, in whom are all things. Glory to the Father, from whom is every fatherhood in heaven and on earth; glory to the Son, through whom is every sonship; glory to the Holy Spirit, in whom is all sanctity and sanctification. Glory to the Father, from whom is eternity; glory to the Son, through whom is every form and beauty; glory to the Holy Spirit, in whom is all happiness and enjoyment. Glory to the Father, from whom is every unity; glory to the Son, through whom is every equality; glory to the Holy Spirit, in whom is every love and concord. Glory to the Father, from whom is every power; glory to the Son, through whom is every wisdom; glory to the Holy Spirit, in whom is every goodness. Glory to the Father, who created me; glory to the Son, through whom I have been redeemed; glory to the Holy Spirit, in whom I have been justified. Glory to the Father, who predestined me; glory to the Son, by whose blood I have been washed; glory to the Holy Spirit, in whom I shall be glorified for eternity. Amen.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_10.html">Previous: Romans X</a></div>
     <div class="next"><a href="59_romanos_12.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

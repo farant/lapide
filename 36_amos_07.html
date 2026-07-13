@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_06.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_08.html">Next Chapter</a></div>
 </div>
@@ -150,17 +150,18 @@
 <p>17. THEREFORE THUS SAYS THE LORD: YOUR WIFE SHALL PLAY THE HARLOT IN THE CITY — that is, Because you, O Amaziah, for the sake of your gain and profits, drive the people to spiritual fornication, that is, to idolatry, and resist me who oppose it, therefore fittingly and justly you will be punished with this disgrace and indignity, so that you will see, though raging and gnashing your teeth, your wife fornicating and committing adultery in the city after you have been abandoned — either with her lovers, as Arias holds, or with your enemies, namely the Assyrians, by whom she will be violated when the city is captured. So St. Jerome, Theodoret, Remigius, and Hugo. Hence St. Jerome translates from Symmachus: πορνευθήσεται, that is, she will endure fornication.</p>
 <p>This is the first punishment of Amaziah, concerning which St. Jerome says: "Great is the grief and incredible the disgrace, when a husband in the midst of the city cannot prevent the outrage done to his wife. The pain over a violated daughter is not as great as that over a defiled wife: for a husband would rather hear that his wife has been killed than that she has been defiled." The second punishment is the slaughter of his children: "Your sons, he says, and your daughters shall fall by the sword." The third is the despoiling and deprivation of honors: "Your land, he says, shall be measured with a line," that is, the Assyrians and Cuthaeans, invading and occupying Samaria and Bethel, will measure out and divide your estates and fields among themselves with measuring lines. For in ancient times they used lines instead of measuring rods for measuring and dividing land. Hence "line" in Scripture signifies an allotted inheritance, or the portion that falls to each person by lot in the division of an inheritance, as in Psalm XV, 6: "The lines have fallen for me in pleasant places," which, in his customary manner, the later hemistich explains, saying: "Indeed my heritage is beautiful to me." Deuteronomy chapter XXXII, 9: "Jacob is the line of His inheritance," that is, the descendants of Jacob, or the Israelites, are the Lord's lot and inheritance. Joshua chapter XVII, 5: "Ten portions (that is, lots) fell to Manasseh." And verse 14: "You have given me a possession of one lot and one line." And chapter XIX, verse 9: "In the possession and line of Judah." And verse 29: "From the line of Achzib." The fourth punishment is: "You in a polluted land (with idolatry, faithlessness, and crimes, namely in Assyria, to which you will be led captive) shall die." The fifth: not only you, but also all "Israel," whom you deceive and drive to idolatry and wickedness, "shall go captive from its land" into Assyria. So St. Jerome, Cyril, Theodoret, Remigius, Rupert, Haymo, Hugo, and others.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_06.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

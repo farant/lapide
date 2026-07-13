@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum on the Gospel of John</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_24.html">Previous: Luke XXIV</a></div>
     <div class="next"><a href="54_joannes_01.html">Next: John I</a></div>
 </div>
@@ -175,17 +175,18 @@
 <p>Among the heretics, the following wrote on St. John: Martin Bucer, Wolfgang Musculus, Bullinger, Brentius, Calvin, and Theodore Beza; from all of whom Augustinus Marloratus stitched together a Catena, which I read through and refuted in Belgium.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_24.html">Previous: Luke XXIV</a></div>
     <div class="next"><a href="54_joannes_01.html">Next: John I</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

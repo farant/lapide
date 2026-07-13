@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias L</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_49.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_51.html">Next Chapter</a></div>
 </div>
@@ -210,17 +210,18 @@
 <p>The hammer of the whole earth? This is Babylon, which like an adamantine hammer struck and battered the whole earth; so that nothing, however hard or bronzen, could resist it or withstand its blow without being broken and shattered. So Emperor Frederick II boasted that he was the hammer of Rome and of the Roman Church, and indeed of the whole world; but he was broken and crushed by Innocent II and other Pontiffs, as I said on Isaiah 1:10. So Isaiah says of the Assyrians, chapter 10:5: 'Woe, Assyria, the rod of My fury!' And of Cyrus, through whom God punished the Chaldeans, chapter 45:1: 'Whose right hand I have grasped.' So Attila was called 'the terror of the world and the scourge of God.' St. Augustine says admirably on Psalm 73...</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_49.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_51.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

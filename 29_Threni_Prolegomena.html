@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Prolegomena in Threnos Jeremiae</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_Jeremias_Synopsis_Et_Gemma.html">Previous</a></div>
     <div class="next"><a href="29_threni_01.html">Next Chapter</a></div>
 </div>
@@ -134,17 +134,18 @@
 <p>There also wrote on the Lamentations: Origen, Olympiodorus, Theodoret, Procopius, and in later centuries Lyranus, Hugh, and many others, among whom Paschasius Radbertus, Abbot of Corbie, who flourished in the year of the Lord 880, excels. Most recently from our Society have written Martinus Delrio, Gaspar Sanchez, and Christophorus a Castro.</p>
 <p>were later than Jerome, excerpted. A manuscript codex of Gembloux attributes them to the Venerable Bede. In the works of Rabanus printed at Basel, these Commentaries are also contained, and they plainly appear to be by Rabanus. Origen, Olympiodorus, Theodoretus, Procopius also wrote on the Lamentations, and in later centuries Lyranus, Hugo, and many others, among whom Paschasius Ratbertus, Abbot of Corbie, who flourished in the year of the Lord 880, excels. Most recently from our Society, Martinus Delrio, Gaspar Sanchez, and Christophorus a Castro have written.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_Jeremias_Synopsis_Et_Gemma.html">Previous</a></div>
     <div class="next"><a href="29_threni_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

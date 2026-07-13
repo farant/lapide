@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_22.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_24.html">Next Chapter</a></div>
 </div>
@@ -382,17 +382,18 @@
 <p>This was foretold by Hosea, chapter 3, verse 4 and following, to which Christ here alludes, for he says: "Because for many days the children of Israel shall sit without a king, and without a prince, and without a sacrifice, and without an altar, and without an ephod, and without teraphim; and after these things the children of Israel shall return, and shall seek the Lord their God, and David their king, and they shall fear the Lord and His goodness in the last days." See what is said there.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_22.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_24.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

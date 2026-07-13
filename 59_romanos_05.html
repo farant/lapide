@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_04.html">Previous: Romans IV</a></div>
     <div class="next"><a href="59_romanos_06.html">Next Chapter</a></div>
 </div>
@@ -242,18 +242,19 @@
 <p>21. THAT AS SIN HATH REIGNED UNTO DEATH (drawing the sinner namely into bodily and eternal death), SO ALSO GRACE MIGHT REIGN BY JUSTICE UNTO LIFE EVERLASTING, — namely, that through justice we may attain eternal life, to which justice gives the right, as if to say: The grace of Christ superabounded for this purpose, that, the kingdom of death and sin being destroyed, the kingdom of justice and eternal life might be established, and propagated far and wide through Christ. See here two kingdoms, one of death, in which Adam and Adam's sin reigned; the other of life, in which Christ and Christ's grace reign, which first overthrew the kingdom of death. Between these two the law entered in alongside, to make as it were an interregnum, but in vain; for the law rather increased the kingdom of sin than suspended it. Hence it was necessary that Christ should come, who by His grace might cut off the kingdom of sin and death. St. Augustine excellently says, in the <em>Sentences</em>, number 194: <em>"The rational soul is mistress of its body, which will not rule well over the inferior unless it serves the superior God with the total subjection of charity."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_04.html">Previous: Romans IV</a></div>
     <div class="next"><a href="59_romanos_06.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

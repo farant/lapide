@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Zacharias VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_06.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_08.html">Next Chapter</a></div>
 </div>
@@ -112,17 +112,18 @@
 <p>AND THEY MADE THE DESIRABLE LAND A DESERT. — In Hebrew, 'land of desire,' that is, supremely desirable on account of its elegance, fertility, and abundant harvests: and, as the Septuagint says, 'chosen.' So Albert and Hugh. Lyra adds that it was desirable because Christ was to be born in it and suffer for the salvation of mankind. The meaning is, as if He said: By their own crimes they were the cause of the desolation of the Holy Land, which formerly flowed with milk and honey. In Hebrew it is leschamma, which secondly can be translated 'into astonishment,' so that whoever should see such great ruins of so great a disaster might shudder and be astonished. Thirdly, Arias reads leschamma through diaeresis as le schema, that is, 'in which what?' Whence he translates: 'They made the desired land into — what?' that is, about which astonished travelers might ask and say: What good remains in the Holy Land, what of its former fertility and prosperity? Absolutely nothing.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_06.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

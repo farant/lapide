@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_18.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_20.html">Next Chapter</a></div>
 </div>
@@ -246,18 +246,19 @@ Sprinkling them with light dew and a branch of fruitful olive.</em></p>
 <p>Finally, the Hebrews hand down, and from them Burgensis, that only six red heifers were sacrificed throughout the entire duration of both temples: namely the first, in the time of Moses through Eleazar, of which it is spoken here, and its ashes lasted throughout the entire first temple; the second, in the time of Ezra, at the beginning of the second temple; and two others were sacrificed by Simeon the Just, at different times (for he was high priest for 80 years); and finally two others were sacrificed by the high priest John, who was the father of Mattathias, from whom the Maccabees descended. But it is hard to believe that the small amount of ashes from one cow, to be distributed among so many, could have sufficed for such an enormous, practically innumerable multitude of Jews; for the ashes of one cow were distributed throughout all of Judea. For individual Jews frequently used them for their own purification. Therefore it is more probable, as Lyranus says, that one red cow was sacrificed every year.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_18.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_20.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

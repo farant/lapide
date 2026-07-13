@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XLII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_41.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_43.html">Next Chapter</a></div>
 </div>
@@ -387,17 +387,18 @@ Urges mandates more forcefully.</p>
 <p>Forerius takes it differently, understanding all these things from verse 24 as referring to the destruction not of the ten tribes but of the two tribes by the Romans, as if to say: Who, I ask, gave the beloved people of God into captivity — not of seventy years, as formerly, but now of one thousand six hundred years? Surely Jehovah, because they despised His Messiah: wherefore He sent upon them a fierce and hard war and the siege of the Romans, which brought them to this continuous devastation. &#x27;And he did not know,&#x27; as if to say: Even after so dire a disaster he did not understand that he was being punished for his unbelief in the Lord&#x27;s Christ; indeed, even after he has been completely consumed by fire, he does not reflect, does not return to his heart, to see that he suffers these things on account of the Christ whom he killed; but he persists obstinately in Judaism and in hatred of Christ. But the former sense is more fitting. For he stimulates the Jews by the example and recent disaster of their brothers, namely the ten tribes or Samaritans.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_41.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_43.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

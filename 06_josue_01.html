@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joshua I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_Synopsis_Omnium_Praeceptorum.html">Previous: Synopsis of All Precepts</a></div>
     <div class="next"><a href="06_josue_02.html">Next Chapter</a></div>
 </div>
@@ -305,18 +305,19 @@ An example of the Name, an image of Christ's power.</em></p>
 <p>Then he adds another, more divine reason: <em>'For there is a certain kinship between us and Him, and such an affection as ought to be toward a father. For by His gift we have come into the light and into sight; for Him we ought both to live and to die; by His goodness we are nourished; in Him we live, move, and have our being. We obey Him as much as subjects obey a governor, servants a master, magistrates a king. We are all His, who has all dominion; through Him all things are subject to us, both animate and inanimate, and we worship Him. The entire nature of beasts is governed by us, but we are fed by Him, the Prince of shepherds, who for our sake put on our nature.'</em> See more, by which he establishes and reinforces the same point, and at last concludes his Tactics thus about God and with God: <em>'Therefore it is fitting that you, Emperor, with a suppliant mind always address prayers to God, and in all things beseech the Author of salvation for whatever is most salutary.'</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_Synopsis_Omnium_Praeceptorum.html">Previous: Synopsis of All Precepts</a></div>
     <div class="next"><a href="06_josue_02.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

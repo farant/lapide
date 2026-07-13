@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on Ephesians: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_06.html">Previous: Galatians Chapter VI</a></div>
     <div class="next"><a href="63_ephesios_01.html">Next: Ephesians Chapter I</a></div>
 </div>
@@ -51,18 +51,19 @@
 <p>Therefore Paul, fearing lest the Gentile Asians and Ephesians, who had been converted by him to the faith of Christ, should be seduced by these wolves, writes to them this Epistle while they were still steadfast in the faith of Christ (for that it was written to the Gentiles and not to the Jews is clear from chapter 3, verse 1, and chapter 2, verse 11), in order to keep them in the faith and in their duty — which they faithfully performed. Witness S. Ignatius, who, writing forty years later to the same Ephesians, praises their constancy in the faith and their hatred of heresy and heretics in these words: <em>"I know that some have passed through you with perverse doctrine, foreign and malignant spirits, to whom you denied passage, lest they sow tares, stopping your ears that you might not receive the error which they teach."</em> And he indicates above whence the Ephesians had this, when he says: <em>"You therefore are of this kind, instructed by such teachers, by Paul full of Christ, and by the most faithful Timothy."</em> And again: <em>"Most honorably beyond measure does (Onesimus your Bishop) praise your seemly and well-ordered arrangement, and that you all live according to the truth, and that there is no place for heresy among you; nor indeed is the name of any one heard, save only of Jesus Christ the true Pastor and Master, and you are, as Paul wrote to you, one body and one spirit, because you have been called in one hope of your calling."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_06.html">Previous: Galatians Chapter VI</a></div>
     <div class="next"><a href="63_ephesios_01.html">Next: Ephesians Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

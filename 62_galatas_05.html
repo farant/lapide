@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Galatians V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_04.html">Previous: Galatians Chapter IV</a></div>
     <div class="next"><a href="62_galatas_06.html">Next: Galatians Chapter VI</a></div>
 </div>
@@ -240,18 +240,19 @@
 <p>Provoking one another — to strifes, quarrels, brawls, fights: for these, as also envy, are stirred up by the desire of glory and pre-eminence, when, for example, Pompey does not endure an equal, Caesar does not endure a superior.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="62_galatas_04.html">Previous: Galatians Chapter IV</a></div>
     <div class="next"><a href="62_galatas_06.html">Next: Galatians Chapter VI</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

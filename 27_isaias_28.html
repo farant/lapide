@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XXVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_27.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_29.html">Next Chapter</a></div>
 </div>
@@ -262,18 +262,19 @@
 <p>The sense therefore is, as if to say: Just as in farming, namely in working the field, sowing, reaping, and threshing, each in its proper places and times, God shows great wisdom and justice, as it were distributive, so as to give to each what the matter and the time demand; so likewise He Himself in the prophecy of this chapter shows His varied providence and His distribution regarding the ten tribes, the two tribes, and Christ. Wherefore there is no reason to marvel at it: for He acts as a wise farmer, who according to the requirement of the situation variously exercises and governs His field, that is the world, and especially His Synagogue and His Church, that is the faithful people: for now He weeds and purges; now He threshes and punishes; now He has mercy and spares; now He gathers fruits and selects and sets apart His own.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_27.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_29.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

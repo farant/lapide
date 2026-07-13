@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Peter I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_argumentum.html">Previous: 1 Peter Introduction</a></div>
     <div class="next"><a href="75_i_petri_02.html">Next: 1 Peter Chapter II</a></div>
 </div>
@@ -325,18 +325,19 @@ Hope also strongly comforts him bound with a stout fetter.</em></p>
 <p>25. <b>This is the word which has been preached unto you,</b> that is, to you. So the Syriac, as if to say: This word of Isaiah is the word of the Gospel concerning Christ, and His redemption, calling, faith, grace, salvation, and glory which He has brought to you. Truly concerning the efficacy of the faith of this word believed, St. Leo, Sermon 2 On the Ascension: <em>"This faith, increased by the Lord's ascension, and strengthened by the gift of the Holy Spirit, no bonds, no prisons, no exiles, no famines, no fire, no rending of beasts, no exquisite torments of cruel persecutors terrified. For this faith throughout the whole world not only men, but also women; nor only unmarried boys, but even tender virgins, contended unto the shedding of their blood. This faith cast out devils, drove away sicknesses, raised the dead."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_argumentum.html">Previous: 1 Peter Introduction</a></div>
     <div class="next"><a href="75_i_petri_02.html">Next: 1 Peter Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Introduction to Jeremiah</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_Jeremias_Preliminares.html">Preliminaries</a></div>
     <div class="next"><a href="28_Jeremias_Prolegomena.html">Prolegomena</a></div>
 </div>
@@ -183,17 +183,18 @@
 <p>Finally, hear Ezra, or whoever is the author, Book IV of Ezra, ch. II, 18: "I will send you help, my servants Isaiah and Jeremiah, by whose counsel I have sanctified and prepared for you twelve trees, laden with various fruits, and as many fountains flowing with milk and honey, and seven immense mountains, having the rose and the lily, in which I will fill your children with joy." By the twelve trees and fountains, the twelve Apostles and the twelve articles of their Creed seem to be signified; by the seven mountains, the seven Sacraments of the Church, with which Isaiah and Jeremiah foretold that the new Church of Christ would be adorned. For even though this book of Ezra is not in the canon of Sacred Scripture, it nevertheless has its own weight of authority, and a greater one than the books of other Doctors: whence the Church also places it next after the canonical books.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_Jeremias_Preliminares.html">Preliminaries</a></div>
     <div class="next"><a href="28_Jeremias_Prolegomena.html">Prolegomena</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

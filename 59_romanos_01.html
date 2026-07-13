@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="58_Pauline_Preliminares.html">Previous: Pauline Preliminaries</a></div>
     <div class="next"><a href="59_romanos_02.html">Next Chapter</a></div>
 </div>
@@ -551,18 +551,19 @@ Numina!</em></p>
 <p>32. <em>Who, when they had known the justice of God, did not understand</em> (would not understand, consider, and persuade themselves practically), <em>that they who do such things are worthy of death; and not only they that do them, but they also that consent to them that do them.</em> — Kemnitz, Valla, Erasmus and Faber wish here that our text be corrupt, because the Greek so reads: <em>εἴτινες τὸ δικαίωμα τοῦ Θεοῦ ἐπιγνόντες ὅτι οἱ τὰ τοιαῦτα πράσσοντες ἄξιοι θανάτου εἰσίν, οὐ μόνον αὐτὰ ποιοῦσιν, ἀλλὰ καὶ συνευδοκοῦσι τοῖς πράσσουσι</em>, that is, those who, having known the justice of God, namely that those who do such things are worthy of death, not only do them, but also consent to those doing them. For to consent thus is greater and worse than to do. For it comes from malice, while to do often flows from mere weakness. So also St. Chrysostom, Theophylact and Oecumenius read and explain. But that the Greek copies vary and varied of old is plain from Oecumenius, Origen and certain manuscripts. Again Ambrose agrees in all things with our Translator, as do Sedulius, Haymo, Anselm, Hesychius (book VI on Leviticus XX), Pope Symmachus (in his Apologetic against Anastasius the Emperor), and St. Cyprian (book I, epistle 4). Finally our reading is plainer and easier in understanding, and therefore more probable. For the Apostle seems here to censure the wiser Philosophers, who, although they knew the worship of idols and the other vices already mentioned to be evil, and did not commonly do or perpetrate them, nevertheless approved them when done by others, or dissembled them, either from fear of the laws, or from love of pleasing themselves and fear of displeasing those same persons. See what was said on verse 23.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="58_Pauline_Preliminares.html">Previous: Pauline Preliminaries</a></div>
     <div class="next"><a href="59_romanos_02.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XXII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_21.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_23.html">Next Chapter</a></div>
 </div>
@@ -294,17 +294,18 @@ And as if hell were an empty fable.</em></p>
 <p>At the same time, Ethelwold presided over the Church of Winchester, a man of exceptional holiness and distinguished by the training of Father Dunstan. He, having learned about the canons of his church, that they were excessively worldly, by the will of Dunstan admonished them once and repeatedly to change their behavior and actions, to seize upon the paths of a more correct life, abandoning their women. They themselves, denying that this was possible for them at the present time, with a crow-like voice always promised to reform themselves on the morrow. He, knowing this, did not long endure it. Having therefore prepared a great number of monastic cowls, on the day when the Communion antiphon <em>"Serve the Lord in fear"</em> was being sung, he entered the choir, having the garments he had prepared brought with him; and casting them into the midst, he said to the canons: <em>"Have you noticed what you just sang?"</em> We have noticed, they said. <em>"Well then,"</em> he said, <em>"if you wish to serve the Lord in fear and to rejoice before Him with trembling, seize upon discipline, namely the monastic garment, lest you perish (as you sang) from the just way."</em> At which they, astonished, after their usual custom sought a delay, promising to do it in the future. Then he said: <em>"Believe me, I will no longer believe this crow-like response of yours; but either you will seize discipline at present, or having been expelled from the benefits and fellowship of this place, you shall depart forthwith."</em> And so some of them, immediately casting off the clerical habit, became monks, while the rest were expelled from the church by the word of the Pontiff. Furthermore, because those who were newly converted could not observe the rule of regular discipline without the teaching guidance of others, men were summoned from Abingdon and brought there by the same Pontiff, to teach the path of monastic life there.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_21.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_23.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

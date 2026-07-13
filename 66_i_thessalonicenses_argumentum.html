@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on 1 Thessalonians: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_04.html">Previous: Colossians Chapter IV</a></div>
     <div class="next"><a href="66_i_thessalonicenses_01.html">Next: 1 Thessalonians Chapter I</a></div>
 </div>
@@ -39,18 +39,19 @@
 <p>The Greek and Syriac copies of this epistle hold that it was written at Athens. The same is taught by Theodoret, Oecumenius here, and Athanasius in the Synopsis; but it is more truly held to have been written at Corinth in the year of Christ 52, as Baronius teaches; for Timothy had already returned to Paul from Thessalonica, as he himself says in chapter III, verse 6. But Timothy returned to Paul not at Athens, where he scarcely seems to have stayed, but while he was at Corinth, as is clear from Acts 18:5. Whence it follows that this is the first of all the epistles which Paul wrote, as Chrysostom and Theodoret constantly affirm.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_04.html">Previous: Colossians Chapter IV</a></div>
     <div class="next"><a href="66_i_thessalonicenses_01.html">Next: 1 Thessalonians Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

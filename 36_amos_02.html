@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_01.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_03.html">Next Chapter</a></div>
 </div>
@@ -137,17 +137,18 @@ The hinge creaked on the bronze doors.</p>
 <p id="verse-16"><b>Verse 16: 16. THE STOUT OF HEART AMONG THE MIGHTY WILL FLEE NAKED.</b></p>
 <p>16. THE STOUT OF HEART AMONG THE MIGHTY WILL FLEE NAKED. — The Tigurina: He who is magnanimous among heroes will flee naked on that day, namely having thrown away his shield and sword, unarmed, meaning: Men strong both in body and spirit will not withstand the attack of the Assyrians, but will lose heart, and throwing away their weapons, will turn their backs and flee. Hence the Septuagint translates: The mighty will not find his heart among the powers; St. Jerome reads: Among the mighty he will flee naked. Literally it concerns the Israelites fleeing the Assyrians, as is clear from the preceding. Wherefore less correctly Isidore of Pelusium, Book I, Epistle 53, considers that this literally concerns the passion of Christ, and understands by 'the naked one' the young man who, "covered with a linen cloth to his bare skin, escaped the cruelty of the Lord's executioners, leaving the cloth behind." Mystically he considers that religious men are signified here, who strip themselves of earthly things, so that, light and freed from the dregs of mortals, they may fly as if on added wings to that life which is removed from destruction.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_01.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

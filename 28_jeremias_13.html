@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_12.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_14.html">Next Chapter</a></div>
 </div>
@@ -171,17 +171,18 @@
 <p>WOE TO YOU, JERUSALEM, YOU WILL NOT BE MADE CLEAN (you do not care to cleanse yourself from sins and idols) AFTER ME, — that is, by following Me and My worship. The translator reads with the Septuagint אחרי acharai, that is, after Me; now they read אחרי achare, that is, after, but in a very obscure and complicated sense.</p>
 <p>HOW LONG YET? — namely, will you be such? or, shall I wait for you to amend? How long shall I bear with you and restrain My fury? As if to say: I wait in vain; you will not amend except by the most grievous punishment of captivity and destruction; or, as St. Jerome, Theodoret, and Rabanus, as if to say: I wait in vain; you have hardened in wickedness, your correction is hopeless: therefore I will utterly overthrow you and cast you away.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_12.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

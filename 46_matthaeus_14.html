@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_13.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_15.html">Next Chapter</a></div>
 </div>
@@ -206,17 +206,18 @@
 <p>And here end the acts of Christ, from the second Passover to the third — that is, the acts of the second year of Christ's preaching, as is gathered from John 6:1, where it is said that these things happened around the Passover. For this was the third Passover of Christ already preaching. For John has recounted Christ's first Passover in chapter 2:13; the second in chapter 5:1; and the third, finally, in chapter 6:1 already cited. There remains therefore the third and last year of Christ's preaching — that is, His deeds from the third Passover to the fourth, in which He suffered and was crucified, as is clear from John 13:1; Matthew 26:1; Luke 22:1: which Matthew recounts from chapter 15 to the end of his Gospel.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_13.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_15.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

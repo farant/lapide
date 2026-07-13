@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Timothy IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_03.html">Previous: 1 Timothy Chapter III</a></div>
     <div class="next"><a href="68_i_timotheum_05.html">Next: 1 Timothy Chapter V</a></div>
 </div>
@@ -209,17 +209,18 @@
 <p><b>Take heed to thyself</b> (that you may often survey, examine, correct, and order all your actions and morals), <b>and to doctrine,</b> — namely that you may teach others. These two are the duties of a Bishop, indeed of any pastor, teacher, and preacher, namely that he first teach himself, then others. For those who neglect themselves and pour themselves wholly into care of their neighbors labor with a fading spirit, and profit neither themselves nor others. Live for yourself, take heed to yourself, if you wish to be of use to others. Beautifully St. Bernard, in book II <em>On Consideration to Eugenius</em>: <em>"Four things,"</em> he says, <em>"I think, are to be considered by you: yourself, what is beneath you, what is around you, what is above you. Let your consideration begin from yourself, lest you stretch yourself out into other things in vain, while neglecting yourself. What does it profit you if you gain the whole world, while losing yourself alone? And if you are wise, you lack something for wisdom, if you have not been wise to yourself. How much, indeed? as I have at least felt, the whole. Though you know all mysteries, though you know the breadth of the earth, the heights of heaven, the depths of the sea, if you do not know yourself, you will be like one building without a foundation, making ruin, not structure. Whatever you build outside yourself will be like piled-up dust, exposed to the winds,"</em> etc.</p>
 <p><b>For in doing this you shall both save yourself, and those who hear you.</b> — Note, he who attends to himself saves himself; and he who attends to doctrine saves others. See here Paul calls Timothy and the like saviors of themselves and of others. So Obadiah, verse 21, foretells that saviors shall ascend Mount Sion. Therefore no injury is done to Christ if we call Saints our saviors and advocates, if we call the blessed Virgin our lady, patroness, and our hope.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_03.html">Previous: 1 Timothy Chapter III</a></div>
     <div class="next"><a href="68_i_timotheum_05.html">Next: 1 Timothy Chapter V</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

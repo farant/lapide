@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_05.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_07.html">Next Chapter</a></div>
 </div>
@@ -235,17 +235,18 @@ So Plautus says: "You attack a horned beast" — that is, you provoke one who is
 <p>15. A nation — the Assyrians, who would devastate Samaria, and the Chaldeans, who would devastate Jerusalem, and thus all of Canaan; for the northern boundary of this land is Hamath, the southern boundary is the torrent of Egypt, that is, a stream derived from the Nile coming from the desert, which divides Judea from Egypt, and flows into the sea between Rhinocolura and Pelusium. Hence elsewhere it is often called the torrent of Egypt, sometimes the torrent of the desert, sometimes the muddy river, that is the Nile, from which it originates and flows. So say St. Jerome, Remigius, Rupert, Hugh, Lyra and Arias. Others however, such as Theodoret, Vatablus, and a Castro, by 'nation' understand only the Assyrians; for they hold that here only the destruction of Samaria and the ten tribes is treated, and that there is an allusion to the strength and power of King Jeroboam of Israel, under whom Amos prophesied. For by these words he crushes his spirits and forces, of which it is said in IV Kings XIV, 28: "Now the rest of the deeds of Jeroboam, and his might, how he fought, and how he restored Damascus and Hamath to Judah in Israel, are not these things written, etc.?" And verse 25: "He restored the borders of Israel, from the entrance of Hamath to the sea of the desert." Against this overconfidence and strength of Jeroboam and Israel, God sets Himself through Amos, saying in the same words but reversed: Behold, I will bring the Assyrians who will devastate Israel, from Hamath to the sea of the desert, indeed even further to the river of Egypt, and then they will see how feeble was their firmness, how empty their strength, how vain and fearful their foresight, when their virtue in weakness,</p>
 <p>glory will pass into disgrace, boasting into groans and laments. Both interpretations should be reconciled so that we say the Prophet is primarily acting against Samaria and the ten tribes, secondarily against Jerusalem and the Jews, as I showed at the beginning of the chapter. What Hamath is, I explained at verse 2.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_05.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

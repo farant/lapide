@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_30.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_32.html">Next Chapter</a></div>
 </div>
@@ -119,17 +119,18 @@
 <p>See here again the inconstancy of the world. Hear Ovid, Metamorphoses X: "And having lingered a little, sooner or later we hasten to one abode. We all tend hither. This is our final home, and you, (O shades of the underworld), hold the longest-lasting kingdoms of the human race." The same, Metamorphoses XV: "Devouring time, and you, envious old age, you destroy all things, and corrupted by the teeth of time, you gradually consume everything by slow death." The same, Metamorphoses III: "Be mindful, I pray, of the stock from which you are sprung." And again in book XV: "Nothing in the whole world endures: all things flow, time itself also slips by with constant motion, no differently than a river: but as wave is driven by wave, and the same coming wave is pushed and pushes the one before: so times flee equally, and equally follow, and are always new."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_30.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_32.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

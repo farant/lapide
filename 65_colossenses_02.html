@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Colossians II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_01.html">Previous: Colossians Chapter I</a></div>
     <div class="next"><a href="65_colossenses_03.html">Next: Colossians Chapter III</a></div>
 </div>
@@ -264,18 +264,19 @@
 <p>Finally, Calvin wrongly maintains that the cult of the relics of the Saints is <em>ἐθελοθρησκεία</em> (will-worship), both because the Apostle is not speaking of it here, and because it is consonant with reason, Scripture, and the will of God that we honor the Saints and their bodies as temples of the Holy Spirit: for God wishes that the Saints, as His friends and children, be thus honored by us; therefore this cult cannot be called a voluntary religion fabricated against the law of God, but rather a pure religion pleasing to God: for whoever honors the Saints and their relics honors God, who is the Author of all their holiness — just as one who honors a king's sons and princes honors the king himself.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_01.html">Previous: Colossians Chapter I</a></div>
     <div class="next"><a href="65_colossenses_03.html">Next: Colossians Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

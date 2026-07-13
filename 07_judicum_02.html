@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_03.html">Next Chapter</a></div>
 </div>
@@ -137,18 +137,19 @@
 <p>To this meaning the tropological sense aptly applies, which St. Gregory brings forward (Dialogues, Book 3, chapter 14): <em>"The Lord preserved the Canaanites for a long time, so that through them He might test Israel, because sometimes even to those to whom He gives great gifts, He leaves behind certain small faults, so that they may always have something to wage war against."</em> Hence also St. Bernard: <em>"The Jebusite, whether you wish it or not, dwells in your land (that is, concupiscence in the flesh); he can be subjugated, but he cannot be exterminated."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_03.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

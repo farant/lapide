@@ -29,7 +29,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XXV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_24.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_26.html">Next Chapter</a></div>
 </div>
@@ -395,17 +395,18 @@
 <p>On this point St. Chrysostom, Homily 50: "Hearing these things," he says, "let us learn never to neglect the gifts given to us by God, nor to lose great things for the sake of small and worthless ones. For why, tell me, when the kingdom of heaven and those ineffable goods are set before us, do we go mad with desire for riches -- things that are momentary and often do not last until evening -- and prefer them to things that are perpetual and everlasting? And what could be worse than this madness? Since we are deprived of those goods on account of our excessive love for these, and can never enjoy these purely."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_24.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_26.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

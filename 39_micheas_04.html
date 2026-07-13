@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Micheas IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_03.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_05.html">Next Chapter</a></div>
 </div>
@@ -151,17 +151,18 @@ And javelins and shields and beaks torn from ships.</p>
 <p>And you shall immolate to the Lord their spoils — that is to say, I will devote your enemies with their wealth to Myself and to My vengeance: as My own victims I will consign them to death, I will make them anathema, partly through the destroying angel, partly through your citizens, O Zion, especially the Maccabees, as I did to Jericho, Joshua 6:46, and to the Canaanites, Numbers chapter 21:2. See what I said there about the vow of cherem, or anathema.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_03.html">Previous Chapter</a></div>
     <div class="next"><a href="39_micheas_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

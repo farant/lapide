@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joshua IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_08.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_10.html">Next Chapter</a></div>
 </div>
@@ -196,18 +196,19 @@
 <p>IN THE PLACE WHICH THE LORD SHOULD CHOOSE — for placing in it the Tabernacle with the Ark of the Covenant, the Cherubim and the Mercy Seat, and consequently for His veneration, worship, sacrifices and adoration. This place was first at Gilgal, then at Shiloh, third at Nob, fourth at Gibeah, and finally in the temple when Solomon built it. Moreover the Ark remained at Gilgal for the entire seven years during which Joshua waged war against the Canaanites: for the Ark was in the camp, and the camp was at Gilgal, as is clear from chapter 10, last verse. When the seven years of wars were finished, in the eighth year of his leadership, Joshua transferred the Ark from Gilgal to Shiloh, as will be clear from chapter 18, verse 1.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_08.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_10.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

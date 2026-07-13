@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_02.html">Previous: John II</a></div>
     <div class="next"><a href="54_joannes_04.html">Next: John IV</a></div>
 </div>
@@ -264,17 +264,18 @@
 <p><em>BUT HE WHO IS UNBELIEVING TOWARD THE SON SHALL NOT SEE (shall not experience, shall not enjoy, shall not receive) LIFE, BUT THE WRATH OF GOD REMAINS UPON HIM.</em> — "Remains" and will remain eternally, "wrath," that is, God's vengeance and hell, "upon him," that is, will always punish him, says Euthymius, for all eternity. Hear Cyril: "They shall not see life, that is, not even as far as mere sight is concerned shall they be able to reach the life of the Saints; they shall not attain that blessedness, they shall not taste those joys, they shall not see that true life; for they shall be tormented with punishments, which is sadder than any death, retaining their soul in the body in the sole experience of sufferings."</p>
 <p>Thus far John's testimonies about Christ to his disciples, by which they were gradually led over to Christ.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_02.html">Previous: John II</a></div>
     <div class="next"><a href="54_joannes_04.html">Next: John IV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

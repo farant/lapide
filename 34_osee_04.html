@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_03.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_05.html">Next Chapter</a></div>
 </div>
@@ -241,17 +241,18 @@ Thus rainwaters are said not only to be enclosed in clouds, but also to be bound
 <p>by the whirlwind of God's wrath, or by the wings of his own whirlwind, it comes to the same thing; for the whirlwind of Israel is none other than the whirlwind of God's wrath, which His wrath implanted and impressed upon it, to carry it away into Assyria; just as the force of one throwing a stone and the force of the thrown stone are the same. For the thrower imprints his force upon the thrown stone, so that it may cast it where he wishes: this force therefore belongs as much to the man throwing, as the efficient cause, as to the stone thrown, as the receiving and passive cause. Finally, the Hebrew אותה ota, that is, her, some refer to the shame, meaning: The whirlwind of God's wrath has bound the shame in the wings of Israel, so that it cannot shake it off; whence he adds: "They shall be confounded by their sacrifices," that is, because of the sacrifices they offered to idols.</p>
 <p>Tropologically, learn here that sins create a whirlwind that shamefully scatters sinners and finally hurls them into hell. Therefore Zechariah, chapter 5:7, saw a woman, whose name was Wickedness, sitting in a barrel, being carried by two women having the wings of a kite and wind in their wings, away to Babylon, which is a symbol of hell. See what I said about the cords and chains of sins at Isaiah 5:18.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_03.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

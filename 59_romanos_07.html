@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_06.html">Previous: Romans VI</a></div>
     <div class="next"><a href="59_romanos_08.html">Next Chapter</a></div>
 </div>
@@ -218,18 +218,19 @@
 <p>Abbot Elias, in Sophronius, in the <em>Spiritual Meadow</em>, chapter X, relates concerning himself that, having been visited by a religious woman, after her departure he felt a grievous temptation of lust, by which, being overcome, he went out to fulfill it with her. <em>"But when,"</em> he says, <em>"I was still about one stadium distant from her cave, burning grievously with the heat of lust, suddenly being put into an ecstasy, I saw the earth opened, and myself swallowed up by the gaping of the earth. And I behold there putrid corpses lying and dissolved, and full of incredible stench, and a certain man of reverent appearance showing them to me, and saying: 'Behold, this is of a woman, this of a man, this of a boy; enjoy now as thou wilt, and as much as it pleases, thy concupiscence: yet for the sake of this pleasure, see how many labors thou hast wished to lose: see for what sin you wish to deprive yourselves of the kingdom of heaven. Woe to human misery! for the pleasure of one hour you are cheated of the reward of so great labor.' But I, on account of the excessive stench, fell upon the ground. Then that venerable man, who had appeared to me, drawing near, raised me up. And giving thanks to God, I returned to my own place."</em> See more at Numbers xi, 20 and 34.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_06.html">Previous: Romans VI</a></div>
     <div class="next"><a href="59_romanos_08.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

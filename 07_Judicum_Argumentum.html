@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on Judges: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_24.html">Previous: Joshua Chapter XXIV</a></div>
     <div class="next"><a href="07_judicum_01.html">Next: Judges Chapter I</a></div>
 </div>
@@ -83,18 +83,19 @@
 <p>Likewise Riddles, such as that of Samson about the lion having a honeycomb: <em>"Out of the eater came forth food, and out of the strong came forth sweetness"</em> (chapter 14, verse 14).</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_24.html">Previous: Joshua Chapter XXIV</a></div>
     <div class="next"><a href="07_judicum_01.html">Next: Judges Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_23.html">Previous: Acts XXIII</a></div>
     <div class="next"><a href="57_acts_25.html">Next Chapter</a></div>
 </div>
@@ -234,18 +234,19 @@ O new God of the new Pharaoh!</em></p>
 <p><em>BUT WISHING TO BESTOW A FAVOR.</em> — <em>χάριτας καταθέσθαι</em>, that is, to do a favor, or to gain favor. So Vatablus, namely lest he be accused before Nero by the Jews, whom he had vexed. But the impious man did not obtain the favor of men which he sought; for accused by the Jews, he was sent bound to Nero by his successor Festus, as I said at verse 25. Furthermore in Paul that golden gnome of Nazianzen in his <em>Sentences</em> is here true: "Day passes you on to day and most lightly rolls onward: but the resolve of a constant man holds an everlasting day." And again in the same place: "As the great anvil does not fear blows, so the wise mind thrusts out every loss."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_23.html">Previous: Acts XXIII</a></div>
     <div class="next"><a href="57_acts_25.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

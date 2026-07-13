@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_12.html">Previous: Romans XII</a></div>
     <div class="next"><a href="59_romanos_14.html">Next Chapter</a></div>
 </div>
@@ -196,18 +196,19 @@
 <p>AND MAKE NOT PROVISION FOR THE FLESH IN ITS DESIRES, — to fulfil desires — and, as it is in the Greek, <em>ἐπιθυμίας</em>, that is, desires, namely intemperate and excessive desires of the flesh; because, as that Philosopher used to say: "Excessive care of the flesh and the body is a great neglect of the soul and of virtue." Hence another said: "I was born for greater things than to make myself the slave of my body." See St. Gregory, Book 6 of <em>Morals</em>, chapter 40. For otherwise the Apostle praises a moderate care of the flesh, that is, of the body, in Ephesians 5:29, saying: <em>"No one ever hated his own flesh, but nourishes and cherishes it."</em> Forcefully St. Bernard, in <em>On Conversion to Clerics</em>, chapter 13: "Whence," he says, "this so great pusillanimity and so wretched abjection, that an excellent creature, capable of eternal blessedness and the glory of the great God — by whose inspiration she was founded, marked with His likeness, redeemed by His blood, endowed with faith, adopted by the Spirit — does not blush in pity to carry on a servitude under this rottenness of the bodily senses? Rightly indeed she cannot grasp those things, who, deserting such a Spouse, follows such lovers; rightly he hungered for husks and did not get them, who preferred to feed swine rather than to be satisfied with the father's banquets. For it is insane labour to feed a barren woman who does not bring forth, and to refuse kindness to the widow; to neglect the care of the heart, and to undertake care of the flesh in desire; to fatten and cherish a putrid carcass, which without doubt will shortly be food for worms."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_12.html">Previous: Romans XII</a></div>
     <div class="next"><a href="59_romanos_14.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

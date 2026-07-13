@@ -29,7 +29,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_19.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_21.html">Next Chapter</a></div>
 </div>
@@ -194,17 +194,18 @@
 <p>Morally, St. Chrysostom, homily 45, notes how much the just man, for example Abraham, is dear to God's heart and care, so that, because he trusts in Him, He not only delivers him from death, but also suddenly makes him glorious and wealthy. <em>'For in this manner,'</em> he says, <em>'God is accustomed to act: He not only frees from sorrows those who bear themselves bravely in the dangers into which they fall, but also provides so much joy in adversity that they come to a complete forgetfulness of their troubles, and find themselves in an abundance of good things.'</em> And further: <em>'For He always does and manages all things, and dispenses each one, so that those who serve Him may shine like lights, and He may make their virtue manifest everywhere.'</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_19.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_21.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

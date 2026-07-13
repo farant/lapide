@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Osee VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_06.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_08.html">Next Chapter</a></div>
 </div>
@@ -181,17 +181,18 @@ St. Cyril adds: God, he says, bent Israel — fighting against the tyranny of th
 <p>'THEIR PRINCES' (of the Israelites) 'SHALL FALL BY THE SWORD' (of the Assyrians) 'FOR THE FURY OF THEIR TONGUE.' — Because, namely, with their insane tongue raging and indignant, they vomited forth blasphemies against Me, contending for their idols, when they sought help from them against enemies, despising Me. So St. Jerome, Haymo, Albert, Hugh, and Lyranus. Hence the Chaldean translates: On account of the depravity of their tongue. The Septuagint: on account of the ignorance (that is, stupidity) of their tongue, by which they say to wood: 'You are my god,' and to stone: 'You begot me,' says Cyril. Otherwise Vatablus and Arias take it as the fury of God, as if to say: They shall fall because by their cursing tongue they provoked the fury of God, who will destroy them.</p>
 <p>'THIS IS THEIR DERISION IN THE LAND OF EGYPT,' as if to say: This is their ancient custom, this their inherited character; for thus they mocked and scorned Me when they dwelt in Egypt, worshipping Apis. Hence the Chaldean translates: These are their works while they were in the land of Egypt. So St. Jerome, Theophylact, Albert, and Hugh. Otherwise Clarius and Vatablus understand 'derision' passively, as if to say: They will be laughed at by the Egyptians when they seek help from them; for they will say: Go to the Lord your God, go to your Assyrians, let them help you. Or, as Lyranus says, they will be laughed at by God Himself, according to Psalm 2, verse 4: 'He who dwells in heaven shall laugh at them, and the Lord shall mock them.'</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_06.html">Previous Chapter</a></div>
     <div class="next"><a href="34_osee_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

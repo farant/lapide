@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_03.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_05.html">Next Chapter</a></div>
 </div>
@@ -208,17 +208,18 @@ These are the words of the Prophet, that is: I Jeremiah foresee so great a calam
 <p>Because of the slain. — Our translator reads harugim, and so also the Septuagint. Now with other vowel-points they read horegim, that is, the slayers, that is: Jerusalem will grieve most intensely because of the cruelty of the Chaldeans slaying the Jews. So Vatablus, the Chaldean, and Pagninus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_03.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

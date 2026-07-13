@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_13.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_15.html">Next Chapter</a></div>
 </div>
@@ -150,17 +150,18 @@ From this it is evident that Jonah the prophet prophesied under Jeroboam king of
 <p>29. And Jeroboam slept (he died a natural death) with his fathers. — You will say: In Amos ch. vii, verse 11, it is said: "Jeroboam shall die by the sword." I respond that these words are not those of Amos, but of Amaziah the false prophet, who, to discredit the prophet Amos before Jeroboam, lies and pretends that Amos said this. For Amos had not said: "Jeroboam shall die by the sword," but rather, "I will rise against the house of Jeroboam with the sword," namely by killing not Jeroboam himself, but his son Zechariah.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_13.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_15.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

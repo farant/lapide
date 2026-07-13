@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joel II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_joel_01.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_03.html">Next Chapter</a></div>
 </div>
@@ -258,17 +258,18 @@ Hence throughout the Psalms the Psalmist invokes God, and commands Him to be inv
 <p>Similar to this passage is what Isaiah pathetically proclaims in chapter 1, 9: "Unless the Lord of hosts had left us seed (some remnants and survivors, who would sow and propagate the stock of Israel) we would have been like Sodom, and would have resembled Gomorrah." So St. Jerome.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_joel_01.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

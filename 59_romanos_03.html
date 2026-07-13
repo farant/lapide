@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Romans III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_02.html">Previous: Romans II</a></div>
     <div class="next"><a href="59_romanos_04.html">Next Chapter</a></div>
 </div>
@@ -370,18 +370,19 @@
 <p>Note: Paul opposes the verb <em>ἱστάνω</em> (which corresponds to the Hebrew <em>הקים hekim</em>), that is, "I establish, I make firm, I cause something to stand, otherwise wavering and about to fall," to the verb <em>καταργέω</em> (which corresponds to the Hebrew <em>הפיר hephir</em>), that is, "I destroy, abolish, make void," as if to say: I through the Gospel so far from destroying or casting down the law, rather make it stand by this, establish it, and confirm it. For the Gospel is the confirmation, ratification, and sealing of the law and the Prophets. Excellently S. Prosper, in the <em>Sentences</em> extracted from S. Augustine, which are at the end of vol. 3 of S. Augustine, number 44: "The law," he says, "was given that grace might be sought; grace was given that the law might be fulfilled. For not by its own fault was it not fulfilled, but by the fault of the prudence of the flesh, which fault had to be demonstrated by the law, and healed by grace."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="59_romanos_02.html">Previous: Romans II</a></div>
     <div class="next"><a href="59_romanos_04.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

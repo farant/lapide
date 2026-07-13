@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XLI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_40.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_42.html">Next Chapter</a></div>
 </div>
@@ -95,17 +95,18 @@
 <p id="verse-18"><b>Verse 18</b></p>
 <p>18. Because Ishmael had struck. — For they feared the Chaldeans, lest, since they were fugitives, they might be implicated along with Ishmael in the same cause and in the murder of Gedaliah. They therefore withdrew to Chimham, so that from there they might flee into nearby Egypt, should the Chaldeans come to avenge Gedaliah's murder.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_40.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_42.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

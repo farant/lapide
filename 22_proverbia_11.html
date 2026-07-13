@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Proverbs XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="22_proverbia_10.html">Previous Chapter</a></div>
     <div class="next"><a href="22_proverbia_12.html">Next Chapter</a></div>
 </div>
@@ -311,17 +311,18 @@
 <p>Tropologically, St. Gregory, book 20 of the Moralia, chapter 19: &quot;While the unjust rage, he says, the just are purified, and the life of the wicked serves the benefit of the innocent, since by pressing it down it humbles it, and by humbling always forms it for the better. Whence rightly also it is said through Solomon: He who is foolish shall serve the wise. Yet we often see the wise subject, while the foolish hold the citadel of dominion: the wise obey servilely, while the foolish lord it over them with tyrannical pride. How therefore, by the decree of the divine sentence, does the fool serve the wise man, while he generally oppresses him by right of temporal dominion? But it must be known that against the life of the wise man, while the fool in his preeminence exercises the terror of power, while he wearies him with labors and tears him with insults, he assuredly purges him of all the rust of vices by burning. Therefore the fool serves the wise man even by dominating him, advancing him to a better state by pressing him down. Thus sometimes servants preside over their young masters for the purpose of discipline, frightening, pressing, striking them; and yet they by no means cease to be servants: because they were appointed for this very purpose, that they might serve their advancing masters even by striking them. Because, therefore, the evils of the reprobate purify the good while they torment them, even the power of the wicked serves the benefit of the just.&quot; So also Bede, who furthermore adds that he who troubles the house of his soul feeds the winds, that is, delights the demons. &quot;The fool, he says, is any sinner who, while he envies the life of the wise man, that is, the just man, and in his envy persecutes him, serves for his testing as fire serves for gold. He who does not fear to disturb his mind with the tumults of harmful thoughts opens it to the waves of evil spirits by which it may be overwhelmed. And he who is foolish persecutes the wise man. Through this he serves him even by dominating him: because by pressing his patience, he makes it more tested, so that, with himself condemned, the other may receive the prize for which he was striving.&quot;</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="22_proverbia_10.html">Previous Chapter</a></div>
     <div class="next"><a href="22_proverbia_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

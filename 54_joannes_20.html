@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John XX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_19.html">Previous: John XIX</a></div>
     <div class="next"><a href="54_joannes_21.html">Next: John XXI</a></div>
 </div>
@@ -280,17 +280,18 @@
 <p id="verse-31"><b>Verse 31: But These Things Are Written, That You May Believe That Jesus Is the Christ, the Son of God: and That Believing, You May Have Life in His Name</b></p>
 <p>Namely the Messiah, the redeemer of the world, of old promised by God to Abraham and David, and now in fact sent in the flesh — life of grace in the present, and of glory everlasting in the future — that is, through His name, that is, through Him, says Chrysostom, namely through the merits and satisfaction of Christ, which are applied to us through faith and the Sacraments, if, that is, we believe in Him and obey His commandments. It is necessary therefore to believe that He is: first, Jesus, that is the Savior of the world; secondly, the Christ, that is the Messiah awaited for so many ages; thirdly, God and the Son of God; fourthly, that He Himself will give eternal life to those who believe in Him and obey Him. "For he truly believes," says St. Gregory, "who does by working that which he believes."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_19.html">Previous: John XIX</a></div>
     <div class="next"><a href="54_joannes_21.html">Next: John XXI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

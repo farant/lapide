@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_12.html">Previous: 1 Corinthians XII</a></div>
     <div class="next"><a href="60_i_corinthios_14.html">Next: 1 Corinthians XIV</a></div>
 </div>
@@ -182,18 +182,19 @@
 <p>It is clear again, that charity is the greatest and most eminent of all the virtues. For as among the elements fire is eminent, among metals gold, among the heavens the empyrean, among the planets the sun, among the angels the Seraphim: so among the virtues, as it were a queen, charity stands eminent. For it is heavenly fire, which inflames the souls of all around it; it is most resplendent gold, with which we buy heavenly wares; it is the empyrean heaven, in which God and the Blessed dwell; it is the sun, which illumines, makes fruitful, vivifies all things; it is the seraphic virtue, which makes the Seraphim burn. See what is said at Deuteronomy VI, 5: <em>"What the helmsman is in a ship, what the magistrate is in a city, what the sun is in the world, that is love among mortals. A ship without a helmsman totters, a city without a magistrate is endangered, the world without the sun is made dark; and the life of mortals without love is not vital. Take love from men, and you have taken the sun from the world."</em> Elegantly the elder Plantinus calls love a God who makes things clean, that is, who makes all things clean and elegant, says Beroaldus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_12.html">Previous: 1 Corinthians XII</a></div>
     <div class="next"><a href="60_i_corinthios_14.html">Next: 1 Corinthians XIV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

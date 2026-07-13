@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_13.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_15.html">Next Chapter</a></div>
 </div>
@@ -121,17 +121,18 @@
 <p id="verse-72"><b>Verse 72: And He Began to Weep</b></p>
 <p>72. AND HE BEGAN TO WEEP. — In Greek <em>ἐπιβαλὼν ἔκλαιεν</em>, which is literally, casting himself (upon the matter) he was weeping; which you may render first, "he began to weep"; second, "he set himself to weep," that is, with great vehemence he began to weep, says Theophylact; the Arabic: and he turned himself to tears — not in the courtyard in the presence of the Jews, lest he betray himself to them, but after going out from it while he was alone, as is clear from Matthew 26, verse 75.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_13.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_15.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

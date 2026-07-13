@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Kings (2 Samuel) I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_II_Regum_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="10_ii_regum_02.html">Next Chapter</a></div>
 </div>
@@ -158,17 +158,18 @@
 <p>Finally, St. Ambrose in the Apology of David, chapter VI: "He avenged the death of his enemy, tearfully enough he bewailed his destruction; and the sovereignty that was owed to him he delayed a long time, knowing that it was owed to him by God's authority. By this alone he taught all men not to seize a kingdom, even if it is owed to them, but to wait for it to be conferred at the proper time. Would that posterity had imitated this man! We would not have endured such bitter wars."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_II_Regum_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="10_ii_regum_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

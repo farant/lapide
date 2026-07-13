@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Maccabees I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_II_Machabaeorum_Argumentum.html">Argumentum</a></div>
     <div class="next"><a href="21_ii_machabaeorum_02.html">Next Chapter</a></div>
 </div>
@@ -155,17 +155,18 @@
 <p>Nephtar alludes to naphtha, which is a kind of 'bitumen,' says Pliny, Book II, chapter 205, 'there is a great affinity of fires with this liquid, and they leap into it instantly from wherever it is seen,' just as here the fires leapt into the thick water for the purification and sanctification of the temple. Moreover among the ancients lustration and purification were done through sulphur and fire. Hence Pliny, Book XXXV, chapter XV: 'Sulphur has a place in religious rites,' he says, 'for purifying houses with fumigation.' They thought, that is, that something heavenly and divine inhered in sulphurous and bituminous fire, because the things that were sacred to them — lightning bolts and flashes — had the smell of sulphur, and their very light was sulphurous, as Pliny writes there. Hence the Greeks call sulphur theion, and the Romans carefully consecrated places that had been struck by lightning, and having raised altars and slain two-year-old animals, named them bidentalia. So Giraldus, Syntagma 17, and from him Serarius. Finally the Syriac text at this place reads: Those of the house of Nehemiah (the Nehemites) called it (the place) Genephath, which means cleanness (or purification); but it is called by many Nephri. The Arabic reads: Those of Nehemiah called this place Techephtha, which means purity. It is called among many Nephi (Syriac) Nephti, from the root nuph, which means many things, namely to wash, to sprinkle, to agitate, to sift: hence nophet is honeycomb and naphah is region, province. Nephi therefore is a place cleansed, elevated, honored, consecrated, and enlarged. For aphti in Syriac means to enlarge.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_II_Machabaeorum_Argumentum.html">Argumentum</a></div>
     <div class="next"><a href="21_ii_machabaeorum_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

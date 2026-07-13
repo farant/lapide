@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_01.html">Previous: 1 Corinthians I</a></div>
     <div class="next"><a href="60_i_corinthios_03.html">Next: 1 Corinthians III</a></div>
 </div>
@@ -163,18 +163,19 @@ The spleen makes one laugh, the liver compels to love.</em></p>
 <p>We have the mind of Christ. — <em>"The mind,"</em> that is, the understanding, intelligence, wisdom of Christ, namely spiritual and divine, not animal and human: for our wisdom is not Plato's, not Pythagoras's, but Christ's, who has poured His own teachings into our mind. So Chrysostom.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_01.html">Previous: 1 Corinthians I</a></div>
     <div class="next"><a href="60_i_corinthios_03.html">Next: 1 Corinthians III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

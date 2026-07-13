@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_06.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_08.html">Next Chapter</a></div>
 </div>
@@ -59,17 +59,18 @@
 <p id="verse-17"><b>Verse 17: Whom the Crowd Trampled at the Entrance of the Gate</b></p>
 <p>17. WHOM THE CROWD TRAMPLED AT THE ENTRANCE OF THE GATE, because the gate was narrow and the crowd immense: which, ravenous with hunger, was almost mad to get to the food that was in the camp of the Syrians; whence that captain of the gate, wishing to control this crowd and divide it into groups lest they crush one another, was himself oppressed and crushed by the same crowd violently rushing in: thus Elisha's oracle was in every respect true and certain.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_06.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

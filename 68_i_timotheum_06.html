@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Timothy VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_05.html">Previous: 1 Timothy Chapter V</a></div>
     <div class="next"><a href="69_ii_timotheum_argumentum.html">Next: 2 Timothy Introduction</a></div>
 </div>
@@ -269,18 +269,19 @@
 <p>O King of kings and Lord of lords, O Inhabitant and Prince of eternity, who alone hast immortality and dwellest in inaccessible light: to Thee be honor and everlasting dominion. Grant us not to be high-minded, not to hope in the uncertainty of riches and of the vanities of the world, but to do good, to become rich in good works, to lay up a good foundation for the time to come, that we may lay hold on eternal life. O eternal Truth! O true Charity! Thou hast created us for Thy eternal glory: grant us to despise all temporal, vain, and fleeting things; grant us to follow heavenly things, to seek after eternal things; grant us to tend toward Thee by right paths, to pant continually for Thee, to sigh after Thee with our whole heart: because Thou art our portion in the land of the living, Thou art He who shalt restore to us our inheritance, our ETERNITY.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="68_i_timotheum_05.html">Previous: 1 Timothy Chapter V</a></div>
     <div class="next"><a href="69_ii_timotheum_argumentum.html">Next: 2 Timothy Introduction</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

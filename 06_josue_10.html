@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Joshua X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_09.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_11.html">Next Chapter</a></div>
 </div>
@@ -214,18 +214,19 @@ And the conspiring winds come at the trumpet's call.</em></p>
 <p>41. FROM KADESH-BARNEA AS FAR AS GAZA. — See here the courage, success, speed, and victories of Joshua, by which like a thunderbolt sweeping over he overthrew and subdued everything, however well fortified, such as Gaza, the strongest city of the Philistines, so much so that Alexander the Great besieged it for two months before capturing it, as Diodorus testifies, Book 17. Hence it received its name from strength. For Gaza in Hebrew is <em>Azza</em>, or Gaza (for they often pronounce the letter ain as g). However, this name was confirmed for a different reason by Cambyses, son of Cyrus, which Pomponius Mela recounts, Book I, chapter 11: <em>"In Palestine,"</em> he says, <em>"there is the immense and very well fortified Gaza. So the Persians call their treasury. And the name comes from the fact that when Cambyses was heading to Egypt with his army, he had brought his war resources and money here,"</em> so that in Gaza, as the most fortified place, it would be safest. Hence shortly after Joshua's passage, the giants recovered Gaza, and made it more fortified, as is narrated in the following chapter, verse 22.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="06_josue_09.html">Previous Chapter</a></div>
     <div class="next"><a href="06_josue_11.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

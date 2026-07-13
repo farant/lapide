@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_14.html">Previous: 1 Corinthians XIV</a></div>
     <div class="next"><a href="60_i_corinthios_16.html">Next: 1 Corinthians XVI</a></div>
 </div>
@@ -379,18 +379,19 @@
 <p>58. THEREFORE, MY BRETHREN, BE YE STEADFAST — namely in the faith of the resurrection, that you may abound in good works which are pleasing to the Lord God, rousing yourselves to them through the hope of the resurrection and of eternal reward: knowing that your labor will not be in vain, nor without reward with the Lord. For this is what 'in the Lord' means.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_14.html">Previous: 1 Corinthians XIV</a></div>
     <div class="next"><a href="60_i_corinthios_16.html">Next: 1 Corinthians XVI</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

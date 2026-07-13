@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Colossians I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_argumentum.html">Previous: Colossians Introduction</a></div>
     <div class="next"><a href="65_colossenses_02.html">Next: Colossians Chapter II</a></div>
 </div>
@@ -252,18 +252,19 @@
 <p>According to the operation (Greek <em>ἐνέργειαν</em>, that is, force and efficacy) of Him, which He (Christ) worketh in me in might, — that is, powerfully, strongly, and efficaciously; for this is the Hebrew <em>בכוח</em> baccoach, as if to say: I contend in this contest of the Gospel strenuously and manfully, not relying on human strength, but on the power and efficacy of the Spirit of Christ, who works most powerfully in me, namely by performing so many and such great miracles; by giving such efficacy to my words that they penetrate and convert the hearts of all; by suggesting courage, strength, and zeal, so that I may preach with fiery charity and a fiery tongue, and may breathe and inspire this fire of divine love into all.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_argumentum.html">Previous: Colossians Introduction</a></div>
     <div class="next"><a href="65_colossenses_02.html">Next: Colossians Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

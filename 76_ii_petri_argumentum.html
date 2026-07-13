@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on 2 Peter: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_05.html">Previous: 1 Peter Chapter V</a></div>
     <div class="next"><a href="76_ii_petri_01.html">Next: 2 Peter Chapter I</a></div>
 </div>
@@ -53,18 +53,19 @@
 <p>Thirdly, in chapter 3, he urges and depicts the end of the world and the day of judgement (which the heretics said was a fable and would never come), and by its certainty, nearness, and terror he stirs the faithful to keep the faith inviolate and to lead a life worthy of it in all holiness. So in the first chapter he commends to Christians constancy in the faith of Christ; in the second he refutes the heretics who attack it; in the third he gives both groups a sharp goad, namely the impending judgement. Finally, that it was written to the same people to whom the first was written is clear from his words in chapter 3, verse 1, where he says: <em>"Behold, dearly beloved, this second epistle I write unto you."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="75_i_petri_05.html">Previous: 1 Peter Chapter V</a></div>
     <div class="next"><a href="76_ii_petri_01.html">Next: 2 Peter Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

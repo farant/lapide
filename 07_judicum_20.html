@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges XX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_19.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_21.html">Next Chapter</a></div>
 </div>
@@ -88,18 +88,19 @@
 <p>From this it is clear that all children and women were killed, both in Gibeah and in all other cities and villages of Benjamin, and this is even clearer in the Hebrew. Therefore they made the tribe of Benjamin anathema, such as is prescribed to be done in the crime of public idolatry, Deuteronomy XIII, 15. And although the eleven tribes here exceeded the bounds and measure of that law and vengeance by killing innocent women and children, yet by divine providence this was permitted to punish the Sodomite and unbridled lust of the Gibeonites, and at the same time the bold and reckless rebellion of the one tribe of Benjamin against the other eleven.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_19.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_21.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

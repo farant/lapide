@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_01.html">Previous: Acts I</a></div>
     <div class="next"><a href="57_acts_03.html">Next Chapter</a></div>
 </div>
@@ -400,18 +400,19 @@
 <p><em>To the same,</em> — that is, together, namely in the Church, as the Greek and the Syriac have. Furthermore the Greek ἐπὶ τὸ αὐτὸ, that is, "to the same," refers it to the beginning of the following chapter. But it seems that Luke wrote here ἐπὶ τὸ αὐτὸ, which someone explained by adding in the margin τῇ ἐκκλησίᾳ, that is, "in the Church"; which then by another, thinking this belonged to the text, was transferred into the text, with ἐπὶ τὸ αὐτὸ being shifted into the next chapter. But in whatever way you read it, the sense is the same. For "to the same" is the same as "together," "alike," namely in the Church, as I said. Finally, Saint Luke so exactly here and in what follows narrates the virtues and life of the first faithful, because this was the very interpretation of the Gospel and the practice of Christ's doctrine, which expresses His law to us in vivid deeds, and therefore is itself the living law and norm of the Christian life for us. "In the life of the Saints we recognize what we ought to read in Scripture," says Saint Gregory, homily 10 on Ezechiel. And conversely the Gospel and "the written Law is a commentary on the life of the Saints," says Philo, in his book <em>On Abraham</em>.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_01.html">Previous: Acts I</a></div>
     <div class="next"><a href="57_acts_03.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

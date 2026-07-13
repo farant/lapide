@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_16.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_18.html">Next Chapter</a></div>
 </div>
@@ -144,18 +144,19 @@
 <p>12. AND THE CHILDREN OF ISRAEL SAID TO MOSES: BEHOLD, WE ARE CONSUMED, WE HAVE ALL PERISHED — as if to say: A great part of the people has been consumed by these plagues of God, namely more than fifteen thousand, as is clear from the preceding chapter; and so it is absolutely to be feared that we shall all be consumed and perish in the same way, if we ever even slightly offend God or murmur; especially since whoever approaches the tabernacle to burn incense or sacrifice to God is immediately killed by Him, as if to say: What counsel then, lest we die? To which the Lord responds in the following chapter, verse 1, namely that they should employ Aaron, as the designated high priest, as intercessor with God for every offense of the people, and therefore that they should support him and his posterity, as priests, by giving them tithes and firstfruits. Note: For "we shall perish," with the Hebrews, Septuagint, and Roman editions, it should be corrected to "we have perished," as if to say: We shall so certainly perish, as if we had already perished; it is so certain that we shall die, as if it had already happened, as if we were already buried in a pit.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_16.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_18.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

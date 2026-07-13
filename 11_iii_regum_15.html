@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>3 Kings (1 Kings) XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="11_iii_regum_14.html">Previous Chapter</a></div>
     <div class="next"><a href="11_iii_regum_16.html">Next Chapter</a></div>
 </div>
@@ -161,17 +161,18 @@ The greatest terror.</p>
 <p>23. BUT IN THE TIME OF HIS OLD AGE HIS FEET WERE DISEASED. — This matter is narrated more fully in II Paralipomenon XVI, 12: "Asa fell sick, he says, in the thirty-ninth year of his reign, with a most severe pain of the feet (gout), and not even in his infirmity did he seek the Lord, but rather trusted in the skill of physicians;" and therefore he died: whence it is immediately added: "And he slept with his fathers and died in the forty-first year of his reign."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="11_iii_regum_14.html">Previous Chapter</a></div>
     <div class="next"><a href="11_iii_regum_16.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

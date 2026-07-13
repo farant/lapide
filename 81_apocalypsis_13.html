@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_12.html">Previous: Apocalypse Chapter XII</a></div>
     <div class="next"><a href="81_apocalypsis_14.html">Next: Apocalypse Chapter XIV</a></div>
 </div>
@@ -252,17 +252,18 @@
 <p>From this chapter therefore you may gather of what sort Antichrist will be, what his endowments and character: namely, first, from verse 1, that he will be most powerful; for the beast and its ten horns, that is, all the kingdoms of the world, he shall subjugate. Second, verse 2, that he will be savage as a bear, proud as a lion, varied and crafty as a leopard. Third, in the same place, that the devil will hand over to him all his power, and through him will exert all his utmost strength. Fourth, verse 3, that he will pretend to rise from the dead. Hence fifth, verse 4, that he will be adored by men. Sixth, verse 5, that he will be blasphemous against God, the Church and the Saints, and that as monarch he will reign for three and a half years. Seventh, verse 7, that he will wage war against the Saints and slay them. Eighth, in the same verse, that he will subjugate to himself absolutely all nations, and will be monarch of the whole world. Ninth, verse 10, that he will at last be slain by Christ. Tenth, verse 12, that he will have his forerunner, a pseudo-prophet, who will persuade and compel all to adore Antichrist. Eleventh, verse 13, that he will perform feigned miracles, namely that fire shall descend from heaven and the image of Antichrist shall speak. Twelfth, verse 14, he will command the image of Antichrist to be everywhere painted, as of one rising from death. Thirteenth, verse 15, he will command all to be slain who refuse to adore the image of Antichrist. Fourteenth, verse 16, he will compel all to bear the character or name of Antichrist on the right hand, or on the forehead, and will decree that no one without it may buy or sell anything. Fifteenth, verse 18, that the name of Antichrist will by its letters express the number 666.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_12.html">Previous: Apocalypse Chapter XII</a></div>
     <div class="next"><a href="81_apocalypsis_14.html">Next: Apocalypse Chapter XIV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

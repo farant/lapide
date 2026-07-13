@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_02.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_04.html">Next Chapter</a></div>
 </div>
@@ -88,17 +88,18 @@
 <p id="verse-21"><b>Verse 21: And When His Own People Had Heard</b></p>
 <p>21. AND WHEN HIS OWN PEOPLE HAD HEARD (some of Christ's kinsmen; the Syriac has "his cousins." So Euthymius, Theophylact, Bede), THEY WENT OUT TO TAKE HOLD OF (to bind) HIM; FOR THEY SAID: HE HAS BEEN TURNED INTO MADNESS. — In Greek, <em>ἐξέστη</em>, that is, he is beside himself, alienated in mind, made out of his wits, delirious and insane from excessive piety and zeal. See what I have said at Matthew 12:46. The Arabic: "saying that he was mindless"; the Syriac, word for word: "they said he had gone out of his mind"; others otherwise: "saying that he had fallen into a swoon from lack of food, because on account of the crowd he had no leisure to eat." See verse 20.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_02.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXXII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_31.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_33.html">Next Chapter</a></div>
 </div>
@@ -156,17 +156,18 @@
 <p>So recently a certain counselor of Elizabeth, queen of England, dying, saw his own deep, fiery seat in Gehenna, and other similar seats prepared for his colleagues, as I received from men of entire trustworthiness. These trumpet players, these funeral pipers God has given to mortals, who with silent yet fiery voices continually cry out to sinners: Be wise, be wise from our harm. Today for me, tomorrow for you. O vain riches, O deceptive honors! Ambition, avarice, and gluttony led us, and will likewise lead you to the underworld. Who shall be able to dwell with devouring fire, to abide with everlasting burnings?</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_31.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_33.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

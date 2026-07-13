@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>James IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_03.html">Previous: James Chapter III</a></div>
     <div class="next"><a href="74_iacobi_05.html">Next: James Chapter V</a></div>
 </div>
@@ -269,18 +269,19 @@
 <p>17. <b>To him therefore who knows good to be done, and does it not, to him it is sin.</b> — St. James tacitly signifies that the faithful know these admonitions of his, as if to say: I believe you know these things; therefore I admonish you that you carry them out in deed. For he who knows the good which God and the law command, if he does it not, sins, and as one guilty shall be punished by God. Rightly St. Ephrem from this sentence concludes, in his sermon <em>On Penance:</em> If for one who knows good and does it not, it is sin to him; much more for one who knows evil and does it, it shall be sin. St. Bernard, sermon 36 <em>on the Canticle:</em> <em>"To one who knows good,"</em> he says, <em>"and does it not, it is sin to him; as though he were saying by way of comparison: To one taking food and not digesting it, it is harmful. For undigested food generates bad humors and corrupts the body, does not nourish: so also much knowledge taken into the stomach of the soul, which is memory, if it has not been cooked by the fire of charity, and poured forth and digested through certain limbs of the soul — namely manners and acts — etc., shall be reputed for sin, like food turned into harmful and depraved humors. Will he not endure swellings and twistings of conscience who is such a man, namely one who knows the good and does it not?"</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_03.html">Previous: James Chapter III</a></div>
     <div class="next"><a href="74_iacobi_05.html">Next: James Chapter V</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

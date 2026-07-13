@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_22.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_24.html">Next Chapter</a></div>
 </div>
@@ -166,17 +166,18 @@
 <p id="verse-39"><b>Verse 39</b></p>
 <p>39. I WILL TAKE YOU UP AND CARRY YOU AWAY — as if to say: Because you mock the burden of the Lord, I will make you the burden which I will take up and carry off to Babylon. Others translate: I will forget you by taking you away. For the Hebrew nasiti, if you derive it from nascha, means to forget; if from nasa, it means to carry, as if to say: Because you would not forget this word "burden of the Lord," as I commanded; therefore I will forget you, and like a burden I will carry you off to Babylon, and there "I will abandon" you, that is, I will cast you from My face, as He said in verse 33. In the Hebrew there is a beautiful paronomasia by metathesis in nasciti, meaning "I will carry," and natasti, meaning "I will abandon you."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_22.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_24.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

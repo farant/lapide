@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_10.html">Next Chapter</a></div>
 </div>
@@ -106,17 +106,18 @@
 <p>St. Chrysostom notes, homily 25 on the Epistle to the Romans, that Jezebel was more severely punished than Ahab, who died honorably, struck by an arrow in battle, because Jezebel was for him the occasion of all evil, indeed the instigator and inciter: "Jezebel, he says, paid greater penalties than Ahab the robber of the vineyard: for she had woven this whole affair, and had given the king the occasion of his fall."</p>
 <p>Thus Blessed Francis Borgia, formerly Duke of Gandia, when he was conveying the body of the deceased Isabella, wife of Charles V, to the royal tomb at Granada, saw it so deformed, foul, and horrible that he could not recognize it, nor dare to swear that this was the body of the empress. Wherefore, gazing at it with fixed eyes and marveling: "Is this, he said, Isabella, Empress of the world?" Is this the wise and holy Isabella, the joy of Spain, the glory of the empire, the hope of the world? Where is that recent beauty of her face, where the splendor of her eyes, where the majesty of the royal crown? Has her flesh so turned to putrefaction, her beauty to stench, her splendor to horror? Wherefore, with God illuminating his mind, attentively considering how great was the vanity of kings and kingdoms and all the goods of the world, he resolved to bid them farewell and to serve God alone, and entering the Society of Jesus, he gave a rare example of all virtues, to religious and secular alike, and indeed to princes and kings, as is clear from his Life.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_10.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

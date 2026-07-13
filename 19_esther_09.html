@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Esther IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="19_esther_08.html">Previous Chapter</a></div>
     <div class="next"><a href="19_esther_10.html">Next Chapter</a></div>
 </div>
@@ -76,17 +76,18 @@
 <p>Add that St. Athanasius in his Synopsis records that on the same 13th of Adar, the Jews in memory of and as an insult to the crucified Haman used to carry a wooden cross publicly and burn it together with an image of Haman. But because many of the Jews by this tragedy of Haman were representing and mocking the passion and cross of Christ, as if Christ were the masked figure of Haman, for this reason the Emperors Honorius and Theodosius prohibited these rites and gestures, as is evident from the Code, On the Jews and Worshippers of Heaven, Law 'Judaeos,' where it says: 'The governors of provinces shall prohibit certain Jews from lighting fires at the celebration of their festival in memory of a punishment once inflicted, and from burning with sacrilegious intent a likeness simulating the holy cross in contempt of the Christian faith.'</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="19_esther_08.html">Previous Chapter</a></div>
     <div class="next"><a href="19_esther_10.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

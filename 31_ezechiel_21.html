@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_20.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_22.html">Next Chapter</a></div>
 </div>
@@ -258,17 +258,18 @@
 <p>Morally, note here how severely tyrants are punished, and those who cooperate with them and devise new arts and methods of oppressing, tormenting, and killing others — even though God sometimes uses them to chastise others. Illustrious is the example of Perillus, an Athenian craftsman, who, to please the cruel tyrant Phalaris, gave him a bronze bull in which men enclosed inside would be tortured with fire placed beneath, and would bellow like oxen, thus delighting the tyrant's ears. For by the command of Phalaris the craftsman himself was the first to be enclosed in the bull he had fashioned, and gave him the first demonstration of his art. Of whom Ovid says: And Phalaris roasted the limbs of cruel Perillus In the bull! The wretched author inaugurated his own work.</p>
 <p>Such was also the fate of Thrasius with Busiris, which Ovid describes in the Ibis: It is said that Egypt lacked rains to help its fields, And was dry for nine years: When Thrasius approached Busiris and showed that Jupiter Could be appeased by pouring a stranger's blood. Busiris said to him: You shall be Jupiter's first victim, And you, stranger, shall give water to Egypt. Both were just (Busiris and Phalaris); for no law is more just Than that the authors of death should perish by their own art.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_20.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_22.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

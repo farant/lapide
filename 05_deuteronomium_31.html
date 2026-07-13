@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy XXXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_30.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_32.html">Next Chapter</a></div>
 </div>
@@ -139,17 +139,18 @@
 <p>Philip II, King of Spain, about to die in the year 1600, commended these things to his son Philip III: <em>"God will have done you a great favor if He raises you to that pinnacle of glory at which I have seen myself; and if He prospers you as He has prospered me. I earnestly beseech you that when you have attained this, you remember this bed in which you see me, and where all the glory of this world comes to a halt. I commend to you obedience to the Apostolic See, the protection of the Catholic faith, zeal for the Christian religion, peace for the state, and justice toward your subjects. If God confirms these counsels of mine, this kingdom will not have lost its king, but will merely have exchanged him with profit."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_30.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_32.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

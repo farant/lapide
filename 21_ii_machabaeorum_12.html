@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Maccabees XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_11.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_13.html">Next Chapter</a></div>
 </div>
@@ -153,17 +153,18 @@
 <p>Hear St. Augustine, book I: "In the books of the Maccabees," he says, "we read that sacrifice was offered for the dead; but even if this were nowhere read in the ancient Scriptures, the authority of the universal Church, which is distinguished in this custom, is not small, where in the prayers of the priest, which are poured out to the Lord God at His altar, the commendation of the dead also has its place." And Damascene, in his Oration for the Departed: "Consider," he says, "what Sacred Scripture has handed down to memory concerning Judas Maccabeus, namely that, in Zion the city of the great king, when he had seen the people over whom he presided cut down and slaughtered by foreign enemies, and shaking out their garments, had discovered idols hidden on their persons, immediately, for the sake of expiating this crime, with the Lord ready and willing to show mercy, he offered gifts for each one of them, and in this matter discharged the office of the highest piety and charity. Whence it also came about that divine Scripture, just as by all other titles, so also by this title exalted him with the highest praises, and wonderfully commended him."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_11.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_13.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_09.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_11.html">Next Chapter</a></div>
 </div>
@@ -303,17 +303,18 @@
 <p>And St. Jerome, Epistle 49: 'He knocked to the ground the buckle that clasped the edges of his cloak.' Tertullian, On the Pallium, ch. i: 'In men,' he says, 'the outer garment of the cloak, itself rectangular, folded back from both sides, drawn tight around the neck, rested on the shoulders in the bite of its buckle.'</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_09.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_11.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

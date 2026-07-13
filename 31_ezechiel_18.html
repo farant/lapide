@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_17.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_19.html">Next Chapter</a></div>
 </div>
@@ -161,17 +161,18 @@
 <p>Because it is difficult to strive for life through the keeping of the law. And yet it is easy for you to acquire a new spirit and a new heart, by which you may be carried to heavenly life. "Why will you die, O children of Israel?" Because we have already been handed over to death by divine justice. But I, who do not desire the death of the dying, will snatch even those already devoured from the very jaws of death. "Why then will you die?" Because the Lord has forgotten us on account of the sins of our kings, Ahaz and Manasseh, therefore we die. But I cannot forget the devotion of Abraham, Isaac, Israel, and David: mindful of them, I will show you, O house of Israel, mercy and clemency. "And why will you die?" Because we cannot resist the divine power, which has sold us to the Babylonians. But it is permitted to you, if you flee to mercy, to be strong against God, which you well know that your father Israel once did: "Why then will you die?" There is only one thing that accuses you, that casts you down, that condemns and adjudges you to death, namely that you refuse to come to your senses, because you do not yet know what it is to live. But even those laboring under so dangerous a frenzy I will not cease to admonish and urge to sounder counsels: "Why will you die, O house of Israel? For I do not desire the death of the dying, etc., return, and live."</p>
 <p>Plutarch narrates that in times past the Milesian virgins, driven by madness, were accustomed to killing themselves, having no reason except: "I wish to die." And since they could not be turned from this by either threats or promises, a certain wise man gave the counsel that all who had killed themselves should be hung up naked in public. This disgrace restrained the virgins from self-slaughter. So does the sinner act; for like a madman he rushes to his own destruction, inflicts death upon himself, and eternal death at that. Is this not insanity? Is it not madness? The damned now see their madness, their error, and grieve. "But the Phrygians grow wise too late." Justly therefore the worm of conscience here gnaws at them continually: Why, O most foolish of the living, did you willingly bring this eternal misery upon yourself? Why did you voluntarily cast yourself into an eternity of fires? No one compelled you: the devil did not force you, but merely invited you. Blame yourself for your lot; you freely chose death over life, demons over angels, hell over heaven. While we have time, let us think on these things and be wise.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_17.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_19.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXXVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_36.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_38.html">Next Chapter</a></div>
 </div>
@@ -87,17 +87,18 @@
 <p>Jeremiah remained (until the capture of the city) in the court of the prison. Rightly could Jeremiah then, and can he now especially, glory with St. Paul in his frequent and continuous imprisonments and chains, and say with him: 'I, a prisoner in the Lord,' Ephesians 4:1. And: 'In labors more abundant, in prisons more frequently, in stripes above measure, in deaths often,' 2 Corinthians 11:23.</p>
 <p>So recently in Japan the martyr Michael was glorified by these same sufferings in the year of our Lord 1609, as he said thus: 'For four years I was in prison, so joyful and cheerful, that it seemed to me as though it had been only one day. I cannot match with words the kindness of God toward me, that I was captured for His faith; namely that that most august Majesty deigned from that day, as it were, to come and take possession of my soul and body. From then on I was always in the greatest peace. My heart burned with an inestimable desire, always to conform myself exactly to every nod of God, in prosperity and adversity.' And again: 'However much the world might despise, oppress, vex, and afflict me, I resolved to give no weight to any of these things. For I know well enough that mockeries, contempts, disdains, and all manner of injuries patiently borne for the love of God, are to be preferred infinitely over the scepters and diadems of all kings and emperors.'</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_36.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_38.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

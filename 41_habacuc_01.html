@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Habacuc I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_Habacuc_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="41_habacuc_02.html">Next Chapter</a></div>
 </div>
@@ -229,17 +229,18 @@ In the manner of a camp with battlements and an earthwork.</p>
 <p>Note: For "spread out," the Hebrew has יריק iaric, that is, "he shall empty." For fishermen are accustomed to empty their nets full of fish, and then spread them out again for another catch. Thus Nebuchadnezzar, having conquered one city and nation, would empty out its wealth and send it to Babylon; and again would invade another nation with his army, about to empty and fish out that one in the same manner, that is, to plunder it. It is therefore a metalepsis: for from the antecedent is understood the consequent, namely from the emptying the spreading, from the despoiling of one nation the invasion and plundering of another.</p>
 <p>Morally, learn here how great is the force of ambition and avarice: for these have driven tyrants into so many plunderings and wars. Seneca says brilliantly, Epistle 94, near the end: "A frenzy of devastating others' possessions, he says, drove the unhappy Alexander, and sent him toward the unknown. Do you think the man was sane, who begins with the disasters of Greece, in which he was educated; who seizes from everyone what is best for them? He orders Sparta to serve, Athens to be silent. Not content with the destruction of so many cities, which Philip had either conquered or purchased, he casts others in other places, and carries his arms around the whole world: nor does his weary cruelty ever stop; like savage beasts, which bite more than hunger demands. Already he has thrown many kingdoms into one; already Greeks and Persians fear the same man; already even nations free from Darius receive the yoke. Yet the same man is indignant that beyond the Ocean and the sun he must turn his victory from the footsteps of Hercules and Bacchus; he prepares to do violence to nature itself. He does not wish to go, but he cannot stand still: no differently from weights hurled headlong, whose end of movement is to have fallen." Then from Alexander he passes to Pompey, Caesar, and Marius: "Neither was it valor or reason that persuaded Gnaeus Pompey to undertake foreign or domestic wars; but a mad love of false greatness, now he went to Spain and the Sertorian wars, now to gather pirates and pacify the seas. These were the pretexts, for continuing his power. What drew him to Africa? What to the North? What to Mithridates and Armenia, and every corner of Asia? An infinite desire of growing, since to himself alone he seemed too little great. What drove Gaius Caesar equally into his own fate and the public's? Glory and ambition, and no limit to rising above others. He could not bear one man before him, when the republic bore two above itself. What do you think drove Gaius Marius, consul once (for he received one consulship, the rest he seized), when he was cutting down the Teutons and Cimbri, when he was pursuing Jugurtha through the deserts of Africa, to seek so many dangers — the instinct of virtue? The army led Marius, ambition led Marius. These men, while they shook everything, were themselves shaken in the manner of whirlwinds, which spin what they have seized, but are themselves spun first, and for this reason they strike with greater force, because they have no control of themselves. And so, when they had been destructive to many, they themselves also feel that pestilent force by which they harmed most people. There is no reason to believe that anyone becomes happy by the unhappiness of others."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_Habacuc_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="41_habacuc_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

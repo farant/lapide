@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_13.html">Previous: 1 Corinthians XIII</a></div>
     <div class="next"><a href="60_i_corinthios_15.html">Next: 1 Corinthians XV</a></div>
 </div>
@@ -295,18 +295,19 @@
 <p>40. <em>Let all things be done decently and according to order.</em> — It was a great concern to Paul, as also to St. Ignatius in his epistles to the Philippians, the Tarsians, and others, that there be εὐταξία, or good order, in the Church, even in indifferent matters: both because this order is in itself beautiful and seemly; and because it excludes confusion and disturbance; and because it greatly edifies others, even unbelievers. See what was said on Colossians 2:5.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_13.html">Previous: 1 Corinthians XIII</a></div>
     <div class="next"><a href="60_i_corinthios_15.html">Next: 1 Corinthians XV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Baruch VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_05.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_01.html">Next Chapter</a></div>
 </div>
@@ -195,17 +195,18 @@ Preferred it to be a god. A god, therefore, I am: the greatest terror of thieves
 <p>72. Better is the just man who has no idols: for he shall be far from reproach.</p>
 <p>That is to say: Far more excellent and happier is the just man who does not worship images, because he shall be far removed from the reproach and punishments with which God punishes idolaters here and for eternity. This verse is, as it were, the closing statement and conclusion of the entire epistle, in which Jeremiah, as if embracing the Hebrews, asks and entreats them to beware of idols and to detest them, that is to say: Beloved, you see how vain, foolish, and harmful idolatry is: therefore beware of it; rather endure anything whatsoever than worship idols. Remain in the worship of your God, who alone is the true God, who alone loves you, who alone protects you, who alone will free you from captivity, who lives and reigns forever and ever. Amen.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="30_baruch_05.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

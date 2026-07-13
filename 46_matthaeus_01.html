@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_Matthaeus_Argumentum.html">Argumentum</a></div>
     <div class="next"><a href="46_matthaeus_02.html">Next Chapter</a></div>
 </div>
@@ -253,17 +253,18 @@ Begin, little boy, to recognize your mother with a smile.</em></p>
 <p>Therefore that the Blessed Virgin always remained a virgin is a dogma of faith, as is clear from Luke 1:34, Ezekiel 44:2, and from the consensus of all the Fathers and the common sense of the Church, and its perpetual tradition. See St. Jerome, book Against Helvidius, at the beginning of volume 2.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_Matthaeus_Argumentum.html">Argumentum</a></div>
     <div class="next"><a href="46_matthaeus_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

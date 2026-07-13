@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Thessalonians IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="66_i_thessalonicenses_03.html">Previous: 1 Thessalonians Chapter III</a></div>
     <div class="next"><a href="66_i_thessalonicenses_05.html">Next: 1 Thessalonians Chapter V</a></div>
 </div>
@@ -172,18 +172,19 @@ Will descend to you.</em></p>
 <p>Hence it appears thirdly, how the valley of Josaphat in which the judgment shall take place, with the fields and neighboring places (which can extend very far and, if needed, even be leveled), will be able to hold all men who ever were, are, or shall be: for the reprobate shall stand in this valley packed on the earth on the left of the judge round about; but the saints shall stand on the right not on the earth, but higher and nearer the judge in the air; yet so that, just as in amphitheaters there were various ranks of spectators by tiers and platforms, some higher than others: so also the Saints shall have various ranks, some sitting higher than others according to their merits, as on an aerial platform; yet so that the lowest stand far above the reprobate and the earth (which in life they trampled and despised), and approach near to Christ. <em>"And so always,"</em> namely both in the judgment and in heaven, to which they shall presently ascend, <em>"they shall be with the Lord (Christ),"</em> as is said here.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="66_i_thessalonicenses_03.html">Previous: 1 Thessalonians Chapter III</a></div>
     <div class="next"><a href="66_i_thessalonicenses_05.html">Next: 1 Thessalonians Chapter V</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

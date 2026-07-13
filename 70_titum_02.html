@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Titus II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="70_titum_01.html">Previous: Titus Chapter I</a></div>
     <div class="next"><a href="70_titum_03.html">Next: Titus Chapter III</a></div>
 </div>
@@ -122,18 +122,19 @@
 <p><b>Let no one despise you.</b> — In Greek μηδείς σου περιφρονείτω, which Chrysostom with his followers expounds thus: Bear yourself so, live so holily, O Titus, that no one may dare despise you. <em>"For the life makes the authority of doctrine,"</em> says Primasius. But more aptly and connectedly S. Jerome translates, let no one look down on you, as though placed beneath himself, as if to say: Maintain your authority, rebuke with all command, show your power, lest anyone dare to belittle you and despise you as though inferior to himself. Spartianus narrates that when the soldiers had hailed Bassianus, son of the Emperor Severus, as Augustus, Severus ordered punishment to be inflicted on all the leading authors of the deed; and when they prostrated themselves and begged pardon, Severus, touching his head with his hand, said: <em>"At last, you perceive that the head commands, not the feet."</em> In like manner let the Prelate not allow himself to be despised; for this is what περί in περιφρονείτω means. For thus sometimes the nobles, especially if they hold sway and rule, despise Bishops in comparison with themselves, and prefer their own laws to the Bishops' laws. For when writing to Timothy, epistle I, chapter IV, verse 12, when he says: <em>"Let no one despise your youth,"</em> the Greek is not περιφρονείτω but καταφρονείτω, which generally means to despise. For he wishes Timothy, lest he lose authority among his people because of his youth, to win it for himself by gravity and holiness of morals, so that no one may dare despise him though young, teaching and admonishing; but here he admonishes Titus, who was advanced in years, sufficiently grave and mature, not to allow himself to be looked down upon by braggarts and to allow them to exalt themselves over him: for this is what περιφρονείτω means. Beautifully and wisely S. Bernard admonishes Pope Eugenius, at the end of book IV On Consideration, saying: <em>"Where malice is joined to power, something more than human must be assumed by you, your countenance against those who do evil. Let him fear the spirit of your wrath, who does not respect a man and does not fear the sword; let him fear prayer, who has despised admonition. Let him whom you are angry with think God angry with him, not a man; let him who does not hear you, fear that God will hear against him."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="70_titum_01.html">Previous: Titus Chapter I</a></div>
     <div class="next"><a href="70_titum_03.html">Next: Titus Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

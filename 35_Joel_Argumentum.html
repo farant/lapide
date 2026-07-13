@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Joel</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_14.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_01.html">Next Chapter</a></div>
 </div>
@@ -36,17 +36,18 @@ Third, in chapter 3, he teaches that Christ will judge all nations as judge in t
 <p>Tropologically, Joel in Hebrew means the same as 'willing,' 'beginning,' or 'the descent of the Lord;' while Phatuel his father means in Hebrew 'breadth,' or 'door,' or 'persuasion of God,' or 'God opening'; so that it is morally signified that whoever has the door, persuasion, and knowledge of God, rightly begins to prophesy, so that with Paul he can say: 'Our mouth is open to you, O Corinthians, our heart is enlarged;' for he heard from the Lord: 'Open your mouth wide, and I will fill it.' For the very opening of the mouth is not in man's power but in God's, as the same Paul says: 'A great and evident door is opened to me,' II Corinthians 2:12. So St. Jerome, who on chapter 1 of Hosea says: Joel is the same as 'the Lord God'; so that Joel by contraction is the same as Jehovah El, or Ja El, which are all names of God. Finally, Joel has been numbered among the Saints, and is recorded as inscribed in the Roman Martyrology on July 13.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="34_osee_14.html">Previous Chapter</a></div>
     <div class="next"><a href="35_joel_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_12.html">Next Chapter</a></div>
 </div>
@@ -154,18 +154,19 @@
 <p>Seventh, Jephthah sacrificed his daughter; Christ sacrificed His flesh and His humanity.</p>
 <p>Eighth, the Israelites mourned yearly the death of Jephthah's daughter. So Christians every year during Holy Week mourn the death of Christ and sing the Lamentations of Jeremiah to Him in lamentation; and the Church, like a virgin, also mourns the sins of her faithful. Hear St. Augustine, Question 49: "Through the six ages of the world, as through sixty days, the holy Virgin Church wept for her virginal state, because although virginal, yet there were sins to be mourned, on account of which she, the universal virgin spread throughout the whole world, says daily: 'Forgive us our debts.' And these same sixty days he preferred to call two months, as I believe, because of two men: one through whom death came, the other through whom the resurrection of the dead, on account of whom also the two testaments are named."</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_12.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

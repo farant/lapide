@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XLIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_42.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_44.html">Next Chapter</a></div>
 </div>
@@ -291,17 +291,18 @@
 <p>I HAVE GIVEN JACOB TO DESTRUCTION (when I likewise condemned all the Jacobites, that is, the Hebrews, for their murmuring to die in the desert, Numbers 14:29. And so I gave) ISRAEL TO REPROACH — that is, as the Chaldean and the Septuagint have it, to the scorn of enemies. For the enemies mocked and sneered at them, because on account of their crimes they were all being killed in the desert by their God, who had led them out of Egypt. How then does the righteousness of your fathers justify you, when they were condemned to death for their crimes? There is no reason, therefore, for you to boast of their merits, O Israel! &quot;For all have sinned, and fall short of the glory of God,&quot; Romans 3:23. Therefore it is not Aaron who expiates you by his merits or sacrifices, but the mercy of God, by which you are freely justified through Christ. Wherefore it is no wonder if I wished to create a new people of believers from the Gentiles, who recognize this very thing, so that they may celebrate My mercy, since they see that from themselves they had nothing but sins at which to blush, and that they have been justified by My mere grace. So St. Jerome, Forerius, and others.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_42.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_44.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

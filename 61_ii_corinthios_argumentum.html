@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Commentary on 2 Corinthians: Introduction</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_16.html">Previous: 1 Corinthians Chapter XVI</a></div>
     <div class="next"><a href="61_ii_corinthios_01.html">Next: 2 Corinthians Chapter I</a></div>
 </div>
@@ -37,18 +37,19 @@
 <p>It was written from Philippi in Macedonia, sent by Titus and Luke, as the Greek, the Syriac, and the Complutensian Latin have at the end of the Epistle. Baronius however will have it written at Nicopolis in the year of Christ 58, namely when the Apostle, having been compelled to withdraw from Ephesus (where he wrote the first Epistle) after the tumult of Demetrius, leaving Timothy as Bishop of Ephesus, came to Troas, as he says here in chapter II, where not finding Titus, he proceeded into Macedonia, from Macedonia he proceeded into Greece, namely sailing along the Cyclades through the Aegean sea he reached Crete, where he left Titus, see Titus 1:5. Thence at length he came to Nicopolis in Greece, where namely he had resolved to winter and rest, see Titus 3:12. So Baronius, volume I, page 575. And it is probable that he wrote this Epistle there in quiet and leisure: yet nothing certain can be said here; for the Apostle, traversing Asia, could have gone and returned to Philippi, and tarried there for a while while writing this Epistle: for Luke does not narrate all the delays, courses, and returns of the Apostle, in Acts XX.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_16.html">Previous: 1 Corinthians Chapter XVI</a></div>
     <div class="next"><a href="61_ii_corinthios_01.html">Next: 2 Corinthians Chapter I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

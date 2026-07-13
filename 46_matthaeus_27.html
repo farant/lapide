@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Matthew XXVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_26.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_28.html">Next Chapter</a></div>
 </div>
@@ -619,17 +619,18 @@
 <p>Tropologically our Barradius: "From this deed of the wicked," he says, "let us learn piety: after we have received Christ's body from the altar into our breast as into a new sepulcher, let us keep diligent guard, so that by grace He may ever remain in it and never forsake us. Let us set watchful soldiers over it, that is, watchful virtues, which may drive sleep — that is, sloth — away from us; let us bind ourselves with more than an iron instrument, that is, let us fortify our heart with an adamantine resolution against sinning."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_matthaeus_26.html">Previous Chapter</a></div>
     <div class="next"><a href="46_matthaeus_28.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

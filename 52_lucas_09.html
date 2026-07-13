@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_08.html">Previous: Luke VIII</a></div>
     <div class="next"><a href="52_lucas_10.html">Next: Luke X</a></div>
 </div>
@@ -130,17 +130,18 @@
 <p>Tropologically, Bede: "He puts his hand to the plough," he says, "who, as with an instrument of compunction, with the wood and iron of the Lord's Passion, wears down the hardness of the heart and opens it to the fruits of good works; but one must not, like Lot's wife, look back at what he has left; and if one who is about to follow the Lord is rebuked because he even wishes to take leave at home, what will become of those who often visit the homes of those they have left in the world for no useful reason?" And an anonymous Greek in the <em>Catena</em>: "Frequent," he says, "are the glances at those things we have forsaken, drawing us on account of habit; for use is a certain violent thing, from which arises habit, and from habit arises nature, which is difficult to remove or alter; for it swiftly returns to itself." Finally, Suarez explains these words of Christ at length in tom. II <em>On Religion</em>, tract. <em>On the Vow</em>, book I, chap. II, num. 18 and following.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_08.html">Previous: Luke VIII</a></div>
     <div class="next"><a href="52_lucas_10.html">Next: Luke X</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

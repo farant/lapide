@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_18.html">Previous: Apocalypse Chapter XVIII</a></div>
     <div class="next"><a href="81_apocalypsis_20.html">Next: Apocalypse Chapter XX</a></div>
 </div>
@@ -217,17 +217,18 @@
 <p>Beza writes that Calvin was tormented by phthisis, colic, asthma, the stone, gout, and hemorrhoids. To these was added a lousy disease, which spread over his whole body, together with a most foul and purulent ulcer about his private parts: thus, eaten by worms, he expired like Herod, Huneric, Maximian, and Antiochus Epiphanes — the bitterest persecutors of Christ and the Church: so Hieronymus Bolsec, Doctor of Medicine, in his <em>Life of Calvin,</em> chapter 22.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_18.html">Previous: Apocalypse Chapter XVIII</a></div>
     <div class="next"><a href="81_apocalypsis_20.html">Next: Apocalypse Chapter XX</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

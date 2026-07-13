@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_03.html">Next Chapter</a></div>
 </div>
@@ -196,17 +196,18 @@
 <p>All agree that Mattathias was a priest; some deny that he was a Pontiff, including Josephus, Eusebius, and Sigonius; but that he was indeed a Pontiff is asserted by the Hebrews and the Chaldean paraphrase on Song of Songs 6:6, and Serarius proves this with many arguments. Certainly in the Pontificate, as well as the Leadership, Judas succeeded his father, then Jonathan, then Simon, and from Simon his sons down to Herod and Christ. Moreover, the illustrious hero Mattathias died in the year 146 of the Greeks, which was 158 years from the death of Alexander the Great, and 164 years before the birth of Christ. AND HE WAS BURIED IN THE SEPULCHRES OF HIS FATHERS IN MODIN. — This sepulchre was afterward magnificently adorned by his son Simon, as is clear from chapter 13:27; and St. Jerome acknowledges that it still existed in his time. WITH GREAT MOURNING. — "The great mourning is to be understood not as the fainting of the mourners, but as the pomp of the funeral and the large attendance at the obsequies," says St. Jerome, epistle 25 to Paula.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_01.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_35.html">Previous Chapter</a></div>
     <div class="next"><a href="04_Numeri_Doxologia.html">Next: Doxology of Numbers</a></div>
 </div>
@@ -122,18 +122,19 @@
 <p>Mystically, our constant and perpetual possession, never to be alienated, is heaven and the eternal glory of God. While you live, therefore, while you are well, O man the wayfarer, consider that all things have their time, and all things pass away beneath heaven in their allotted spans. <em>Alas, alas, the fleeting years slip by, Posthumus, Posthumus.</em> Consider that all things under the sun are vanity, vanity of vanities, and all is vanity. Consider that for all thoughts, words, and deeds God will bring you into judgment. <em>"Remember therefore your Creator in the days of your youth, before the dust returns to its earth whence it came, and the spirit returns to God who gave it: for man shall go to the house of HIS ETERNITY."</em> Consider that this life is the arena of ETERNITY. O sons of Adam, why do you pursue perishable things? O souls bent toward the earth and empty of heavenly things, why do you follow what is momentary and soon to perish? Would that men were wise, would that they understood, would that they provided for themselves a blessed ETERNITY!</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_35.html">Previous Chapter</a></div>
     <div class="next"><a href="04_Numeri_Doxologia.html">Next: Doxology of Numbers</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

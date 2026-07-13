@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_14.html">Next Chapter</a></div>
 </div>
@@ -212,17 +212,18 @@
 <p>54. And he appointed him (the aforementioned John) commander OF ALL THE FORCES (Greek dynameōn, that is, of the armies or troops); and he (John) dwelt IN GAZARA. — Gazara, or Gadera, or Gaser, or Gezer, says Adrichomius, was a city in the tribe of Ephraim whose king Joshua killed, and he assigned the city to the Levites. But here by Gazara is understood Gaza, the powerful city of the Philistines near Azotus, as is said in chapter XIV, verse 34. For Simon had captured Gaza and established his residence there, as was stated in verse 48. Therefore departing from there and now going to Jerusalem, he entrusted Gaza to his son John to inhabit and guard. So Salianus.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Maccabees XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_12.html">Next Chapter</a></div>
 </div>
@@ -120,17 +120,18 @@
 <p>The Romans also sent a letter, — namely the ambassadors who were being sent by the Romans to Antiochus, to command him to burn the ships he had beyond the number prescribed by the Roman Senate and to kill the elephants, so as to remove from the Romans the fear or suspicion of a new war, as Appian narrates, and from him Sigonius at the year 591 of the city. These ambassadors of the Romans therefore likewise sent a letter to the Jews, in which they indicated that if they desired any other just conditions of peace with Antiochus, they should write them out for them: for they would see to it that Antiochus agreed to them. For the Romans, as Salianus rightly observes, readily assisted all supplicants who were unjustly harassed, which was the primary origin of their power and expansion in Sicily, in Spain, in Greece, in Asia, in Africa, and everywhere in the world, as the course of Roman History has shown up to this point. When therefore the Jews had betaken themselves to the Roman ambassadors, who were at that time in Syria, and had perhaps already then shown that they aspired to their friendship and alliance, they asked that they confirm what was being granted by Lysias, and settle some other matters with the king in favor of their nation.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Aggaeus I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="43_Aggaeus_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="43_aggaeus_02.html">Next Chapter</a></div>
 </div>
@@ -154,17 +154,18 @@ is not to know that Nature is God.</p>
 <p>14. And the Lord stirred up the spirit of Zerubbabel, and the spirit of Joshua. — "So that kingship and priesthood might build the temple of God," says St. Jerome, "the spirit of the people is also stirred up, which had been sleeping in them before — not the body, not the soul, but the spirit, which knows better how to build the temple of God."</p>
 <p>Tropologically, "The Holy Spirit is stirred up in us, that we may enter the house of the Lord and do the works of the Lord." Now God stirred up the spirit — that is, the mind and courage of the people — arousing them so that they would cheerfully and vigorously apply themselves to the construction.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="43_Aggaeus_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="43_aggaeus_02.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

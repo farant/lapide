@@ -20,7 +20,7 @@
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argument on the Gospel of St. Matthew</h1>
 <p><b>The Holy Gospel of Jesus Christ According to Matthew (Sanctum Jesu Christi Evangelium secundum Matthaeum)</b></p>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_Canones_Evangelici.html">Evangelical Canons</a></div>
     <div class="next"><a href="46_matthaeus_01.html">Matthew I</a></div>
 </div>
@@ -137,17 +137,18 @@
 <p>Finally, hear what St. Matthew revealed about himself to St. Bridget as she prayed at his tomb in the city of Amalfi, book 1 of her <em>Revelations</em>, chapter 229: <em>"When I was writing that Gospel, so great a fire of divine inspiration persisted with me that even if I had wished to be silent, I could in no way have wished it because of the intense ardor."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_Canones_Evangelici.html">Evangelical Canons</a></div>
     <div class="next"><a href="46_matthaeus_01.html">Matthew I</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

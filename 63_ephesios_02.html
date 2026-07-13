@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ephesians II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_01.html">Previous: Ephesians Chapter I</a></div>
     <div class="next"><a href="63_ephesios_03.html">Next: Ephesians Chapter III</a></div>
 </div>
@@ -224,18 +224,19 @@
 <p>Again St. Augustine on Psalm 86. We have approached the Church as a heavenly building, so that we ought to be squared, that we may be able to be built into it, and consequently every Christian ought to be like a squared stone. <em>"In every temptation a Christian does not fall, even if he is pushed, and if in any way he is turned, he does not fall. For a squared stone, however you turn it, stands. The Martyrs seemed to fall when they were struck: but what did the voice of Psalm 36 say? When he shall fall he shall not be hurt, because the Lord puts His hand under him. So therefore be squared, prepared for all temptations, so that whatever pushes you, may not overthrow you. Let every fall find you standing."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="63_ephesios_01.html">Previous: Ephesians Chapter I</a></div>
     <div class="next"><a href="63_ephesios_03.html">Next: Ephesians Chapter III</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

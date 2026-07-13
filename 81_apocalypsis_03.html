@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_02.html">Previous: Apocalypse Chapter II</a></div>
     <div class="next"><a href="81_apocalypsis_04.html">Next: Apocalypse Chapter IV</a></div>
 </div>
@@ -345,17 +345,18 @@
 <p>To the Laodicean, verse 21: <em>"He who conquers, I will grant him to sit with Me on My throne, just as I also conquered, and sat with My Father on His throne."</em> Christ therefore, the first Olympic Victor, sets before His followers — the Olympic victors, and indeed each of them individually — the crown of heavenly glory to be gazed upon, and by it invites them to the contest. He gives it various titles and names: for now He calls it the tree of life, now hidden manna, now a white pebble, now a new name, now white garments, now the morning star, now a pillar, now the throne of God, etc. Come then, O athlete of Christ; manfully fight the good fight, lay hold on eternal life; let no labor seem long to you, no pain hard, to whom heaven, eternity, and the divine crown are promised. Weave it there, and embellish it with the continual deeds of heroic virtues. <em>"For this perfected virtue, complete in every measure, bestows on those who conquer a crown and a reward of the immortality which we ought to seek,"</em> says Lactantius, book IV On True Wisdom, chapter 16. <em>"That day will come, will come at last,"</em> says Jerome, tome II, epistle 6, <em>"on which you shall return as victor to your homeland, on which through the heavenly Jerusalem you shall march, a strong man, crowned."</em> Imitate the Martyrs, to whom St. Cyprian writes, book II, epistle 6: <em>"You endured,"</em> he says, <em>"the harshest examination unto the consummation of glory, nor did you yield to torments, but rather the torments yielded to you. The crowns gave an end to your pains, which the torments could not give;"</em> and shortly afterward: <em>"They stood, racked, stronger than those who racked them; and the pounding and tearing iron-claws were conquered by the limbs they pounded and tore. The savage blow, long repeated, could not overcome an unconquerable faith, although, with the framework of their entrails broken, no longer were limbs being tortured in the servants of God, but wounds. Precious is this death, which bought immortality at the price of its own blood, which received a crown from the consummation of virtue."</em> Finally, hear St. Gregory, homily 37 on the Gospels: <em>"Let the magnitude of the rewards delight the mind,"</em> he says, <em>"but let not the contest of labors deter it. For no one shall be crowned, unless he has lawfully striven."</em> For the heavenly Jerusalem is the house of the strong, as St. Vigilantius says in the Life of St. Asio; whence its type was the house of David's strong men — to wit, his 37 mightiest soldiers, who are enumerated in 2 Kings (Samuel) chapter 23, verse 8, and who were heroes.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_02.html">Previous: Apocalypse Chapter II</a></div>
     <div class="next"><a href="81_apocalypsis_04.html">Next: Apocalypse Chapter IV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaiah IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="27_isaias_03.html">Previous Chapter</a></div>
 	<div class="next"><a href="27_isaias_05.html">Next Chapter</a></div>
 </div>
@@ -189,11 +189,12 @@ Naked love of beauty does not love artifice.</em></p>
 <p>Wherefore Pintus explains &quot;for over all the glory shall be a protection&quot; thus, as if to say: This divine protection, by which the Lord defends the just, surpasses all the glory of this world: for that glory is extinguished by the brief death of men and the oblivion of posterity. Hence Isaiah says, chapter XL, 6: &quot;All flesh is grass, and all its glory is like the flower of the field.&quot; Hence also Euripides, as Plutarch reports, said that worldly glory lasts but one day and is immediately extinguished. For which statement he was reproached by Demetrius of Phaleron, who said he should not have said one day, but one instant of time. But divine protection and glory are eternal.</p>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

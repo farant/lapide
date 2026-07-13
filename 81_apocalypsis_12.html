@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_11.html">Previous: Apocalypse Chapter XI</a></div>
     <div class="next"><a href="81_apocalypsis_13.html">Next: Apocalypse Chapter XIII</a></div>
 </div>
@@ -258,17 +258,18 @@
 <p>Furthermore the unstable and the impious are rightly compared to the sand of the sea, first, on account of their infinite, that is, foolish, number: for the sand is innumerable; secondly, on account of its hardness; thirdly, on account of its lack of unity: for the impious do not cohere among themselves, do not agree, but are like sand without lime; fourthly, on account of its sterility: for sand is plainly sterile, and this sterility is increased by the salt sea surging into it. Wherefore Origen, Augustine, and Hesychius note that by the symbol of sand are denoted impious men, as being sterile and earthly. In these therefore the demon takes his stand and hides himself, that through the beast of the sea, that is, through the pride and arrogance of the world, and through the beast of the earth, that is, through carnal wisdom and sense, he may assault the Church and the faithful. For these are the three perpetual enemies and antagonists of the faithful, namely the dragon, the beast of the sea, and the beast of the earth, that is the devil, the world, and the flesh, who continually descend into the arena and contend with the Saints. The devil stands in the middle between the two, because he himself is the leader of the war, and rules and stirs up the world and the flesh to wage war against the faithful: so Alcazar.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_11.html">Previous: Apocalypse Chapter XI</a></div>
     <div class="next"><a href="81_apocalypsis_13.html">Next: Apocalypse Chapter XIII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

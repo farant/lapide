@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_14.html">Previous: John XIV</a></div>
     <div class="next"><a href="54_joannes_16.html">Next: John XVI</a></div>
 </div>
@@ -249,17 +249,18 @@
 <p><em>You are with Me.</em> — In Greek <em>ἐστε</em>, which is either of the indicative mood, so that it means "you bear witness," or of the imperative, so that it means "bear witness." Hence the Syriac translates: "but you also bear witness, inasmuch as from the beginning you have been with Me." So also Cyril. What therefore our version renders "you shall bear witness" is the same as "bear witness." For He commands that, by preaching, they bear witness that Christ is the Son of God; for often the future is used for the imperative. The Apostles did so: for, as it is said in Acts IV, "With great power did the Apostles give testimony of the resurrection of Jesus Christ our Lord."</p>
 <p>From this passage learn who, of what sort, and how great the Holy Spirit is: namely, first, that He is the third Person in the Holy Trinity, distinct from the Father and the Son; for He proceeds and is sent from both, and one proceeding and sent is distinguished from the one sending. Secondly, that the Holy Spirit is truly God, consubstantial (<em>ὁμοούσιος</em>) with God the Father, because He proceeds from Him as God from God. Thirdly, that He proceeds not from the Father alone, nor from the Son alone, but jointly from both, as from one principle of spiration. Fourthly, that He does not proceed from the Father by generation, so as to be Son, but by spiration, so as to be Holy Spirit: whence St. Athanasius, Basil, Nazianzen, Chrysostom, Augustine and others everywhere refute the heretic Macedonius, who said that, since the Holy Spirit does not proceed from the Father by generation as the Son does, therefore He is not consubstantial with Him nor is He God. Fifthly, that He is the Paraclete, that is, the consoler and exhorter to every good. Sixthly, that He is the Spirit of truth, because He teaches all truth and true faith, doctrine, and prudence. Seventhly, that He is the witness of Christ and His doctrine — a witness, I say, greater than every exception and divine, nay, God Himself. Hence many refer to the Holy Spirit that enigma of Hermes Trismegistus: "The monad begot the monad, and reflected its ardor back upon itself," as if to say: the one Father begot the one Son, and embracing Him with divine love produced the Holy Spirit, who is as it were the love of the Father and the Son: whence He proceeds from both, as the reflected and notional love of the Father and the Son. Though others more genuinely explain the saying of Trismegistus as referring to the creation of the world, as if to say: the one God created the one world, not by any necessity of action but out of the pure ardor of love, namely so that He might communicate His goods to the angels, to men, and to the other creatures of the world.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_14.html">Previous: John XIV</a></div>
     <div class="next"><a href="54_joannes_16.html">Next: John XVI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

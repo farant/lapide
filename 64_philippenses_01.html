@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Philippians I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_argumentum.html">Previous: Philippians Introduction</a></div>
     <div class="next"><a href="64_philippenses_02.html">Next: Philippians Chapter II</a></div>
 </div>
@@ -248,18 +248,19 @@
 <p>30. Having the same conflict (in Greek <em>ἀγῶνα</em>, the same contest) as you saw in me, and now hear of me. — In Greek <em>ἀκούετε</em>, that is, you hear. As if to say: In this contest of faith you contend with me as athletes, O Philippians; you have the same contest as I, the same palaestra, the same struggle for the Gospel: because for its sake you suffer persecutions, exiles, prisons, plunderings of goods, and many other things — such as you now hear that I am suffering at Rome, and as once you saw me suffering at Philippi, when among you I was beaten with rods and imprisoned, Acts 16:22.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="64_philippenses_argumentum.html">Previous: Philippians Introduction</a></div>
     <div class="next"><a href="64_philippenses_02.html">Next: Philippians Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

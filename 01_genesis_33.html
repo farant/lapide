@@ -29,7 +29,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XXXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_32.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_34.html">Next Chapter</a></div>
 </div>
@@ -235,17 +235,18 @@
 <p>Let them learn third, that calamities destroy those who reject endurance; but protect those who embrace it. For tribulation patiently endured is the gate of heaven. Hence of Christ it is said, Luke 24:26: <em>"It was necessary for Christ to suffer, and thus to enter into His glory."</em> Paul and Barnabas, Acts 14:21: <em>"Through many tribulations, they say, we must enter the kingdom of God."</em> On the contrary, the prosperity and happiness of this life is the gate of hell. For this reason God gives it to the wicked; but He exercises the pious and those strong in virtue through various crosses, and leads them through the bitter straits of calamities to immortal life; for this is what they themselves say, Psalm 65:10: <em>"You have tested us, O God, You have examined us by fire, as silver is examined."</em> And Christ, Matthew 5:5: <em>"Blessed are those who mourn, for they shall be comforted"</em>; and: <em>"Blessed are those who suffer persecution for the sake of justice, for theirs is the kingdom of heaven."</em> Thus the Patriarchs, thus the Maccabees, thus the martyrs and other heroes of the faith, exercised by persecutions, prisons, blows, racks, martyrdoms, and fires, emerged purer, stronger and more illustrious, and consecrated their name to heaven and immortality.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_32.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_34.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Colossians III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_02.html">Previous: Colossians Chapter II</a></div>
     <div class="next"><a href="65_colossenses_04.html">Next: Colossians Chapter IV</a></div>
 </div>
@@ -221,18 +221,19 @@ But imposed an end upon the fight.</em></p>
 <p>25. For he who doth wrong shall receive for that which he hath done wrongfully: and there is no respect of persons with God. — He proves that just servants and those obedient to their masters shall receive the recompense of the inheritance already mentioned, by an argument from the contrary: for those who are unjust, whether they be masters or servants, shall receive from God the recompense of damnation. He tacitly censures and represses the pride and dominion of masters, who unjustly and tyrannically treat their servants, q.d. Let these know that they are to be judged by God, and to be punished for the injury inflicted on their servants; in turn let servants unjustly afflicted by their masters console themselves, that God will avenge their injuries, and will reward their patience and obedience.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="65_colossenses_02.html">Previous: Colossians Chapter II</a></div>
     <div class="next"><a href="65_colossenses_04.html">Next: Colossians Chapter IV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

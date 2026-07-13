@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_20.html">Previous: Apocalypse Chapter XX</a></div>
     <div class="next"><a href="81_apocalypsis_22.html">Next: Apocalypse Chapter XXII</a></div>
 </div>
@@ -586,17 +586,18 @@
 <p>St. Germanus, Bishop of Capua, saw in the baths of Pozzuoli the soul of Paschasius, Apostolic Deacon, being tormented and purged of stains, and asking him the cause, heard: <em>"For no other cause have I been assigned to this penal place, except that at the time of the schism of Laurentius, I sided against Pope Symmachus."</em> So St. Gregory, book IV of the Dialogues, chapter 40. Who also in chapter 55 narrates that the soul of Justus, his monk, for thirty days expiated in Purgatory the stain of ownership, by which he had secretly kept for himself three pieces of money during his life.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_20.html">Previous: Apocalypse Chapter XX</a></div>
     <div class="next"><a href="81_apocalypsis_22.html">Next: Apocalypse Chapter XXII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

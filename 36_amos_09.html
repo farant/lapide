@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Amos IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_08.html">Previous Chapter</a></div>
     <div class="next"><a href="37_Abdias_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -162,17 +162,18 @@
 <p>Third, the soul is a garden, indeed a paradise of the Lord, according to Song of Songs 4:12: "A garden enclosed is my sister, my bride. Your plants are a paradise of pomegranates with the fruits of apple trees, of henna with spikenard, etc. Arise, O north wind, and come, south wind, blow through my garden, and let its spices flow." And chapter 5:1: "Let my beloved come into his garden, and eat the fruit of his apple trees." And chapter 6:1: "My beloved has gone down to his garden, to the bed of spices, to feed in the gardens and to gather lilies." Sirach 24:42 says in the person of Wisdom: "I will water my garden of plantings, and drench the fruit of my meadow." Numbers 24:5, Balaam, seeing the hosts of Israel, exclaims: "How beautiful are your tents, O Jacob, your dwellings, O Israel! Like wooded valleys, like watered gardens by rivers, like tents which the Lord has pitched, like cedars beside the waters." What, therefore, the gardener does in the garden to cultivate it, let the faithful do in the soul: let him plant in it the spikenard of humility, the lilies of chastity, the pomegranates of charity, the heliotrope of resignation, by which one conforms one's will to the divine, the cedar of hope and contemplation, the oak of constancy, the hyacinth of heavenly thoughts and desires, the amaranth of the cross, the incense of prayer, the myrrh of mortification, the fragrant roses of good edification and example, the palm of contempt of the world, of human praise and blame, etc. Therefore, as often as you elicit or exercise an act, especially a heroic one, of humility, charity, mortification, resignation, etc., so often you offer to God an illustrious spikenard, a beautiful pomegranate, a notable myrrh, an excellent heliotrope, etc., and thereby you adorn the garden and paradise of God with a new plant, as it were, with a splendid flower and fruit, so that you may say to Him confidently with the bride: "At our gates are all manner of fruits: new and old, my beloved, I have kept for you" (Song of Songs 7:13).</p>
 <p>THE END.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="36_amos_08.html">Previous Chapter</a></div>
     <div class="next"><a href="37_Abdias_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Zacharias XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_13.html">Previous Chapter</a></div>
     <div class="next"><a href="45_Malachias_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -287,17 +287,18 @@ From a vessel of disgrace."</p>
 <p>Secondly, the ancient Hebrews, as well as the modern ones, hand down that Malachi was Ezra the priest and scribe. This tradition is reported and followed by St. Jerome, Remigius, Rupert, Ribera, and others. The reasons and conjectures for this opinion are various. First, because Malachi treats the same subject matter as Ezra, namely he censures the neglect of the law and the worship of God, and specifically marriages with foreigners, which Ezra blames in chapter 9. Second, because Ezra lived at the same time as Malachi, and mentions in chapter 5:1 Haggai and Zechariah, but not Malachi: therefore it is a sign that he himself was Malachi, who was so called when he was sent by God to the people as an angel, that is, a messenger and prophet, to lead them to repentance, by which they might escape the impending disasters. Third, because Ezra, a man wonderfully holy, zealous, and an outstanding preacher, altogether seems to have been a prophet, and he could not have been any other than Malachi. Fourth, because Sirach chapter 49, when he praises Zerubbabel, Joshua, and Nehemiah, passes over Ezra, who does not yield to them in virtue and deeds: therefore it is likely that he praised him among the 12 Minor Prophets, under the name of Malachi. On the other hand, Josephus...</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_13.html">Previous Chapter</a></div>
     <div class="next"><a href="45_Malachias_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

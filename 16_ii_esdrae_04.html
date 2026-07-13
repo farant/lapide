@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Esdrae (Nehemiah) IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="16_ii_esdrae_03.html">Previous Chapter</a></div>
     <div class="next"><a href="16_ii_esdrae_05.html">Next Chapter</a></div>
 </div>
@@ -122,17 +122,18 @@ In like manner, when I was living in Belgium, the Marquis Spinola, besieging Ost
 <p>EACH ONE ONLY STRIPPED FOR BATHING — the Hebrew has: each one's removal or laying aside (the 'his' is redundant, in the Hebrew manner), understand, of the garments just mentioned, for the waters, namely baptismal, that is, purificatory, when indeed he wanted to wash his body and cleanse himself. For the Jews, both because of legal uncleanness, which they easily contracted by contact with a legally unclean thing — for example, from association with Gentiles — and because of the heat and resulting sweat and stench, and because of filth contracted from elsewhere (whence Ammianus, book II, and Martial, book IV, Epigram IV, call the Jews malodorous), frequently washed their whole body, indeed even their garments and beds. See the commentary on Mark chapter VII, verse 3.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="16_ii_esdrae_03.html">Previous Chapter</a></div>
     <div class="next"><a href="16_ii_esdrae_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

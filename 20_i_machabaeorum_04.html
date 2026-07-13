@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_03.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_05.html">Next Chapter</a></div>
 </div>
@@ -248,17 +248,18 @@
 <p>61. TO GUARD BETHSURA. — Bethsura was another fortress built by Judas against the Idumeans, five stadia distant from the citadel of Zion and from Jerusalem (a stadium measures 125 paces), within the mountain gorges, like Thermopylae, says Josephus; hence "Bethsura" in Hebrew means "house of the rock." Hear Adrichomius in his Description of the tribe of Judah, number 61: "Bethsur or Bethsura in St. Jerome's time was a town, or, as others say, the strongest fortress and garrison of all Judea; and because it was surrounded on all sides by mountains, it took its name from this. For Bethsur means house of the rock, of stone, or of strength. It was placed at the mountain passes near the Valley of Rephaim, one mile distant from Jerusalem, situated on the public road that leads from Jerusalem to Gaza, as some hold. Rehoboam, King of Judah, fortified this place with buildings, and again Judas Maccabeus; Lysias attacked it; Antiochus Eupator took it by a fraudulent surrender; Jonathan Maccabeus recovered it. At this fortress, the kings of Syria, when they threatened violence against the Jews, were often defeated and routed. Finally, Simon Maccabeus, having occupied it, most strongly fortified it with garrisons against all enemy attacks. In the time of Jerome there was a spring at the foot of Bethsur, which was swallowed up by the very ground from which it sprang, and some think the Eunuch of Queen Candace was baptized by Philip in this spring, and that it hence received the name 'Spring of the Ethiopian.'"</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_03.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_05.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

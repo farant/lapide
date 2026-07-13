@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_14.html">Previous: Luke XIV</a></div>
     <div class="next"><a href="52_lucas_16.html">Next: Luke XVI</a></div>
 </div>
@@ -288,17 +288,18 @@ Which we seek, mixed with sad pain, does harm.</p>
 <p>The reason is most just, as if to say: He is a son to me, a brother to you; recently overflowing with vices, and therefore condemned to death and hell. Now repentant, he is restored to God, to grace, to salvation, and to heaven: therefore we ought not to envy him and murmur, but rather I and you together with the whole household ought to feast, congratulate, and rejoice together. Now Christ leaves this parable for the Pharisees to apply to themselves. "For this, says Theophylact, is the purpose of the parable: on account of the Pharisees who murmured that He received sinners, to teach that even if we are righteous, sinners should not be repelled, nor should we murmur when God receives them." And a little above: "Therefore the Lord says through the present parable to the Pharisees, as if in this manner: Granted that you are righteous, like that son who pleased his father; I beseech you who are righteous and clean, do not murmur at the salvation of sons; for he too is a son. And so He instructs the minds of the Pharisees that, even if they themselves were righteous and had fulfilled all the commandments of God, they ought not to take it amiss that sinners are received."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_14.html">Previous: Luke XIV</a></div>
     <div class="next"><a href="52_lucas_16.html">Next: Luke XVI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

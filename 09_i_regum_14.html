@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Kings (1 Samuel) XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="09_i_regum_13.html">Previous Chapter</a></div>
     <div class="next"><a href="09_i_regum_15.html">Next Chapter</a></div>
 </div>
@@ -347,18 +347,19 @@
 <p>FOR WHOMEVER SAUL SAW WAS A STRONG MAN AND FIT FOR BATTLE, HE ATTACHED HIM TO HIMSELF. The same do great military commanders. Tropologically, let the Bishop and Prelate do the same. Whence St. Gregory says: <em>"Let the teacher, he says, choose soldiers of Christ, let him choose the brave, so that while they strongly subdue the flesh, they may powerfully conquer unclean spirits. Let him therefore choose those fit for battle, so that while they do not grow proud amid the gifts of fortitude, they may be exalted by the glory of triumph in heaven."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="09_i_regum_13.html">Previous Chapter</a></div>
     <div class="next"><a href="09_i_regum_15.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

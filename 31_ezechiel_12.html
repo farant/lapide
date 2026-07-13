@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_11.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_13.html">Next Chapter</a></div>
 </div>
@@ -155,17 +155,18 @@ Follows, and at the same time forces me to do the same.</p>
 <p>24. NOR FLATTERING DIVINATION. — The Septuagint renders: for favor, that is, flattering, lying; in Hebrew חלק chalac, that is, slippery, as is characteristic of flatterers; or rather slippery, that is, ambiguous, of slippery meaning, so that it can be twisted this way and that, as if to say: I will speak not ambiguously, but with deeds and rods — that is, with swords and manifest blows — openly and distinctly chastising the Jews. I will express My wrath and threats against them, which the Prophets direct at them and which they ridicule.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_11.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_13.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

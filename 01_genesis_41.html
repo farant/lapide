@@ -27,7 +27,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XLI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_40.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_42.html">Next Chapter</a></div>
 </div>
@@ -293,18 +293,19 @@
 <p>Whence Osiris is said to have taught the Egyptians the art of plowing and cultivating fields, which Scripture testifies Joseph did here by means of oxen. And Plutarch, in his book On Isis and Osiris, asserts that the proper name of Osiris was Arsaphes, which clearly alludes to the name Joseph. Furthermore, Osiris, he says, is the same as <em>polyophthalmos</em>, that is, "many-eyed": for <em>os</em> in Egyptian signifies "much," and <em>Siris</em> means "eye." Was not Joseph "many-eyed," that is, all-knowing through the wisdom divinely bestowed upon him, by which he most prudently governed the Egyptians and taught them not only astrology and mathematics, but also the faith and the worship of God, according to Psalm 105:21: <em>"He made him lord of his house, and ruler of all his possessions, that he might instruct his princes as himself, and teach his elders wisdom."</em> Hence also on the temple of Serapis, indeed even on the breast of Serapis, a cross was engraved, says Rhodiginus, book 10, chapter 8. And the cross was for the Egyptians a symbol of salvation and of the blessed life; because Joseph taught and by his suffering prefigured the cross of Christ, from which we have both salvation and the blessed life. Thus the management of the grain supply among the Romans was entrusted only to great and wise men. Hence Pliny in his Panegyric: "The management of the grain supply was entrusted to Pompey the Great, and it added no less glory than the expulsion of bribery from the Campus, the driving of the enemy from the sea, and the pacification of the East and the West by his triumphs."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_40.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_42.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

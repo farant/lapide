@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_18.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_20.html">Next Chapter</a></div>
 </div>
@@ -164,17 +164,18 @@
 <p>Third, the Septuagint translates: It is for a parable of lamentations, and shall be for a lamentation, meaning: When posterity wishes to express the greatest calamity, they will use this as an example and proverb: May what happened to Jerusalem not befall me. So Theodoret.</p>
 <p>Fourth, take it simply as meaning: Jerusalem is lamented and will be lamented, that is: This lamentation for Jerusalem will last a long time, and will be perpetual and continuous.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_18.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_20.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

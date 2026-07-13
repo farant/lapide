@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Doxology of the Holy God, and of the Sanctifier to Be Holily Worshipped, from the Sanctifications of Leviticus</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="03_leviticus_27.html">Previous Chapter</a></div>
 	<div class="next"><a href="04_numeri_01.html">Next: Numbers Chapter I</a></div>
 </div>
@@ -41,17 +41,18 @@
 
 <p><em>Nadab and Abihu offered strange fire: fire went forth from the Lord and devoured them. The Lord separated clean animals from unclean: He forbade them to contaminate their souls with unclean things. He established purification in childbirth, in leprosy, in the flux of seed and blood, saying: Be holy, for I am holy. He established that on the day of expiation the lot of the goats be cast, and that the high priest make expiation for the Holy of Holies. All blood and fat He claimed for Himself: for in His hand is our death and our life. He established the laws of marriage: that no one approach a near relation of blood. He established that both priests and victims be without blemish: for He Himself is holy, and sanctifies them. He established the celebration of Passover, Pentecost, Sabbaths, and Tabernacles: holy feasts to the Lord. To sound the trumpet at the new moon: on the solemn day of the feast of Israel. He established the sabbath of the land, He established the joyful jubilee: and in it remission for all the inhabitants of the land. He established the laws of vows, firstborn, and tithes: and the cherem, most holy to the Lord. Make vows, and pay them to the Lord your God: all you who bring gifts round about Him. He has not done thus to every nation: His ceremonies and judgments He has not made manifest to them. Your testimonies are wonderful, O Lord: therefore my soul has searched them out. Give me understanding, and I will search Your commandments: I will consider the wonders of Your law. Glory be to the Father, and to the Son, and to the Holy Spirit: as it was in the beginning, is now, and ever shall be, world without end. Amen.</em></p>
 
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="03_leviticus_27.html">Previous Chapter</a></div>
 	<div class="next"><a href="04_numeri_01.html">Next: Numbers Chapter I</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

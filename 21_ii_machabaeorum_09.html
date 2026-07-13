@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Maccabees IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_10.html">Next Chapter</a></div>
 </div>
@@ -117,17 +117,18 @@ But the devil got well, the devil a monk was he.</p>
 <p>Moreover we must beware of this error of Josephus. For he, book XIV, chapter 17, citing Polybius who says that Antiochus perished because he attempted to plunder the temple of Diana, refutes him: "For merely to have wished, he says, and not actually to have committed the sacrilege, does not seem to be a matter deserving of punishment." You err, O Josephus; for all virtue as well as vice, and hence merit and demerit, consists in the will: for the external act is not in itself free, and therefore draws and derives all its freedom, and its goodness or malice, from the internal act of the will, good or evil. Now every good act is worthy of praise and reward, and every evil act of blame and punishment. But if Antiochus perished because he wished to plunder the temple of Diana, much more did he perish because he actually plundered the temple of the true God in Jerusalem, and there wrought so many and such great slaughters as we have heard up to this point.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_08.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_10.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

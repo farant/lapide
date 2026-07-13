@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_06.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_08.html">Next Chapter</a></div>
 </div>
@@ -166,17 +166,18 @@
 <p>Whence Cassian, <em>Conferences</em> X, chapters 9 and 13, admonishes: <em>"that such as we wish to be found when praying, such we should be before the time of prayer: for the mind must necessarily be formed during the time of its supplication from its present state."</em> <em>"For when,"</em> as St. Gregory says, <em>Morals</em> X, chapter 17, <em>"the mind has raised itself to the study of prayer, it suffers the rebound of images of those things by which, when idle, it was willingly pressed."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_06.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_08.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

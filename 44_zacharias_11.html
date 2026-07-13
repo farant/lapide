@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Zacharias XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_10.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_12.html">Next Chapter</a></div>
 </div>
@@ -177,17 +177,18 @@
 <p>The sword upon his arm. — Either actively or passively. The Chaldean takes it actively when he translates: This foolish shepherd is like a butcher, who has a sword in his hand, and his eye looks to the fat ones to slaughter them, and therefore he will be punished by God, who will wither his arm and darken his eye. Secondly, others generally take it passively, and the following words require this, as if to say: The sword, that is, the vengeance of God, will fall upon the cruel arm of the foolish shepherd, to break his power: likewise upon his right eye, that is, upon his foresight, cunning, counsels, and wicked intention, by which he strives to plunder and destroy the flock, as if to say: God will scatter and confound his counsels and wicked intentions. For He will wither his arm, that is, take away his power: and darken, blind, and overthrow his right eye, that is, his intention and machination. So St. Jerome, Theodoret, Remigius, Hugo, Lyranus, Arias, Vatablus, Ribera, and a Castro. This will be most clearly manifested in the Antichrist, whom "the Lord will slay with the breath of His mouth, and will destroy with the brightness of His coming" (2 Thessalonians 2:8).</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_10.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

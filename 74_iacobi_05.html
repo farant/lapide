@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>James V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_04.html">Previous: James Chapter IV</a></div>
     <div class="next"><a href="75_i_petri_argumentum.html">Next: 1 Peter Introduction</a></div>
 </div>
@@ -344,18 +344,19 @@ Who alone gave so many goods through her childbirth.</em></p>
 <p>Wherefore wisely St. Gregory, book 6, epistle 27, admonishes Dominica, the Superior of the monastery, <em>"that she gather as many souls as she can into the service of her Creator, so that their minds may receive through her word the grace of compunction, and she herself may be the more swiftly absolved from all her sins, the more by her life and tongue also the souls of others may have broken forth from the bonds of their sins, etc.; so therefore that she may perfectly satisfy her Lady, that is, eternal Wisdom, who alone flees, may return with many. For the guilt of her aversion will be imputed to no one, who returning brings back gain."</em> The same, in book 19 of the Morals, ch. 6: <em>"For if, by the great law of retaliation, you give to God the soul of your neighbor for your own soul: you give therefore as much as you owe, for the price of your soul is as it were equivalent to another soul. For here, as it were by the law of wages, if it is meritorious to snatch from death flesh that is some day to die, of how great merit will it be to free from death a soul that shall live without end in the heavenly fatherland!"</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="74_iacobi_04.html">Previous: James Chapter IV</a></div>
     <div class="next"><a href="75_i_petri_argumentum.html">Next: 1 Peter Introduction</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

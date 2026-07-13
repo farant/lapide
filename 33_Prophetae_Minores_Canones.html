@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Canones in XII Prophetas Minores</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="33_Prophetae_Minores_Prooemium.html">Previous</a></div>
     <div class="next"><a href="33_Prophetae_Minores_Harmonia.html">Next</a></div>
 </div>
@@ -364,17 +364,18 @@ What is, what has been, and what is soon to come."</p>
 <p>—but he said: Rather, a husband must belong to his wife. For it is logical: Subjects will be such as their predicates allow. Lais of Corinth asked Demosthenes a hundred talents for her consent. But he, looking up to heaven, said: I do not buy repentance at so high a price.'"</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="33_Prophetae_Minores_Prooemium.html">Previous</a></div>
     <div class="next"><a href="33_Prophetae_Minores_Harmonia.html">Next</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

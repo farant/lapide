@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Mark XV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_14.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_16.html">Next Chapter</a></div>
 </div>
@@ -47,17 +47,18 @@
 <p id="verse-42"><b>Verse 42: Because It Was the Preparation, Which Is Before the Sabbath</b></p>
 <p>BECAUSE IT WAS THE PREPARATION, WHICH IS BEFORE THE SABBATH. — In Greek, which is the <em>prosabbatum</em>. <em>Parasceve</em> is the same as "preparation": hence the sixth weekday is so called, because on it food and things necessary for the Sabbath were prepared — on which day it was unlawful to work; hence it is itself called <em>prosabbatum</em>, or the day before the Sabbath, or the vigil of the Sabbath. <em>Antesabbatum</em> ("before-the-sabbath"), therefore, is a single word answering to the Greek <em>προσάββατον</em>.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="50_marcus_14.html">Previous Chapter</a></div>
     <div class="next"><a href="50_marcus_16.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

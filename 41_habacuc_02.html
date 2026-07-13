@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Habacuc II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_habacuc_01.html">Previous Chapter</a></div>
     <div class="next"><a href="41_habacuc_03.html">Next Chapter</a></div>
 </div>
@@ -206,17 +206,18 @@ Into deep vats, drink.</p>
 <p>Finally, from this we learn that the means and best ladder by which we ascend to God is the silence of creatures. A certain holy man, quoted by Tauler, page 685, when asked: "Where did you find God?" answered: "Where I left creatures behind." St. Dionysius, in his book On Mystical Theology, teaches that by two modes and ways we reach the knowledge of God: the first is that of affirmation and comparison, namely by ascending from creatures to the Creator, and affirming of Him all the endowments we find in creatures, because in God the Creator the same exist incomparably more excellently and perfectly; the second is that of negation, namely by denying of God all created things, for example, saying: God is not an animal, not a man, not heaven, not an angel, but infinitely something more excellent and divine: and he asserts that by this second way God is known better and more purely.</p>
 <p>By this ladder St. Augustine, book X of the Confessions, chapter VI, ascended to God: "Lord, he says, I love You; yet also heaven, and earth, and all things that are in them, behold they say to me from every side that I should love You; and they do not cease saying it to all, so that they are without excuse. But what do I love, when I love You? Not the beauty of bodies, nor the splendour of time, nor the brightness of light, behold so pleasing to these eyes, not the sweet melodies of songs of every kind; not the fragrance of flowers, and ointments, and spices; not manna and honey, not the limbs delightful to the embraces of the flesh. These I do not love, when I love my God; and yet I love a certain light, and a certain voice, and a certain fragrance, and a certain food, and a certain embrace, when I love my God, the light, voice, fragrance, food, embrace of my inner man; where that shines upon my soul which no place contains, and where that sounds which no time snatches away, and where that gives fragrance which no wind scatters, and where that gives savour which no eating diminishes, and where that clings which no satiety tears away. This is what I love, when I love God. And what is this? I asked the earth, and it said: I am not He; and whatever things are in it confessed the same. I asked the sea, and the depths, and the creeping things of living souls; and they answered: We are not your God, seek above us. I asked heaven, sun, moon, stars, etc., and they cried out with a great voice: He Himself made us. I asked the great mass of the world about my God, and it answered me: I am not He, but He Himself made me," etc.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="41_habacuc_01.html">Previous Chapter</a></div>
     <div class="next"><a href="41_habacuc_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

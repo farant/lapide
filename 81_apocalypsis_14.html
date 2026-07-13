@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_13.html">Previous: Apocalypse Chapter XIII</a></div>
     <div class="next"><a href="81_apocalypsis_15.html">Next: Apocalypse Chapter XV</a></div>
 </div>
@@ -244,17 +244,18 @@ Gorgons, and Harpies, and the shape of the three-bodied shade.</p>
 <p>Climacus, in step 4, relates that he saw in a monastery a certain brother, a cook, who had obtained from God the gift of weeping continually; who when asked how he had obtained this, answered: <em>"From the sight of the kitchen fire, which I continually behold, I turn my mind to the vast conflagrations of the fire of hell: which consideration draws abundant tears from my eyes."</em> Examples and horrifying visions on this matter St. Gregory recounts, book IV Dialogues, chapter XXX, where he recounts the casting of King Theodoric into a Vulcan pot, and chapter XXXVI and XLIII, and Damasus, Histor. chapter XXX, where he narrates the vision of King Jehoshaphat about hell. Well known is the story of the deceased Doctor of Paris, who at the funeral rising from the bier said: <em>"By the just judgment of God I have been accused, judged and condemned,"</em> by which voice St. Bruno and others being moved instituted the Carthusians, as Franciscus Puteus narrates in the Life of St. Bruno, and from him our Petrus Thyraeus, in his book On Particular Judgment, chapter VI. Well known also is the heavenly admonition of Bishop Udo: <em>"Udo, Udo, cease from play, enough has Udo played;"</em> and when he did not cease, the same one's judgment, beheading and damnation, which Fulgosius narrates, book IX, chapter XII; Nauclerus, vol. II, gener. 37; St. Antoninus and others. Gregory of Tours relates, book VIII Hist. Franc., chapter V, that Chilperic, the worst of kings, the tyrant of the Franks, after his death was seen by King Guntramnus to be cast with his members broken into a bronze pot, and immediately by the vapors of the waves to be so dissolved and liquefied, that no trace of him at all remained. I have said more on this in Deuteronomy XXXII, 22.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_13.html">Previous: Apocalypse Chapter XIII</a></div>
     <div class="next"><a href="81_apocalypsis_15.html">Next: Apocalypse Chapter XV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

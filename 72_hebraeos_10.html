@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews X</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_09.html">Previous: Hebrews Chapter IX</a></div>
     <div class="next"><a href="72_hebraeos_11.html">Next: Hebrews Chapter XI</a></div>
 </div>
@@ -328,18 +328,19 @@
 <p><b>Unto the gaining of the soul.</b> — Namely, that by this faith we may free the soul from perdition and death, both present and spiritual death of sin, and eternal death in hell; lest there should be made an acquisition, that is, a possession of the demons; but that we may gain and acquire it both for Christ and for ourselves, that namely our soul may become the possession and peculiar property of Christ, and that we ourselves may possess our soul in this life inchoately through patience, but in the life to come most fully and most happily through glory in eternal beatitude. So Anselm.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_09.html">Previous: Hebrews Chapter IX</a></div>
     <div class="next"><a href="72_hebraeos_11.html">Next: Hebrews Chapter XI</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

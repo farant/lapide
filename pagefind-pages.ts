@@ -79,11 +79,12 @@ const HL_START = "<!-- pagefind-highlight:start -->";
 const HL_END = "<!-- pagefind-highlight:end -->";
 const HL_BLOCK = `${HL_START}
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };
@@ -106,6 +107,11 @@ export function setHighlightScript(html: string, present: boolean): string {
   return out;
 }
 
+export function setNavIgnore(html: string, present: boolean): string {
+  const re = /<div class="nav"(?: data-pagefind-ignore)?>/g;
+  return html.replace(re, present ? '<div class="nav" data-pagefind-ignore>' : '<div class="nav">');
+}
+
 async function fix() {
   const files = await collectHtml();
   let changed = 0;
@@ -113,7 +119,7 @@ async function fix() {
     const rel = relative(ROOT, full);
     const canonical = isEnglishLapidePage(rel);
     const before = await readFile(full, "utf-8");
-    const after = setHighlightScript(setBodyMarker(before, canonical), canonical);
+    const after = setNavIgnore(setHighlightScript(setBodyMarker(before, canonical), canonical), canonical);
     if (after !== before) { await writeFile(full, after, "utf-8"); changed++; }
   }
   console.log(`Normalized ${changed} file(s).`);

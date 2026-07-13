@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Corinthians III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_02.html">Previous: 1 Corinthians II</a></div>
     <div class="next"><a href="60_i_corinthios_04.html">Next: 1 Corinthians IV</a></div>
 </div>
@@ -244,18 +244,19 @@
 <p>Beautifully, in his moral homily 10, St. Chrysostom says: <em>"All things,"</em> he says, <em>"we have from Christ — both what we are, and life, and light, and spirit, and air, and earth; and if He shall take away any of these, we perish; for we are tenants and pilgrims. 'Mine' and 'thine' are only empty words; in reality they have no existence (understand: so that it is yours as it is God's, namely, that you have absolute, independent, and perpetual dominion of the thing. For God has granted you dominion only for a time; and this, if compared with God's dominion, is rather use than dominion). Even if you call the house yours, you speak emptily, since both the air and the earth and the material belong to the maker — and you yourself who shape it, and likewise all other things. And if it is for your use, that use is yet uncertain, not only because of death, but even before death because of the instability of things. For we belong to God in two ways, by creation and by faith; and if your soul is not your own, how shall money be yours? Since they are not yours but the Lord's, you must spend them upon your fellow-servants. Do not, therefore, say: I am consuming my own thing — it is not yours but another's; nay, it is common to you and to your fellow-servant, just as the sun and the air and all things are."</em> Thus far Chrysostom.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="60_i_corinthios_02.html">Previous: 1 Corinthians II</a></div>
     <div class="next"><a href="60_i_corinthios_04.html">Next: 1 Corinthians IV</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

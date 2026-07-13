@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) XVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_17.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_19.html">Next Chapter</a></div>
 </div>
@@ -117,17 +117,18 @@
 <p>36. THEY HAD RECEIVED THE COMMAND OF THE KING (Hezekiah) NOT TO ANSWER HIM. Why? St. Cyril of Alexandria responds first, on the cited chapter of Isaiah: "Because," he says, "to unskilled words and barbaric pride and a tongue insolent against God, one ought rather to weep than to protest." Procopius responds secondly, on the cited passage of Kings: "The pious king," he says, "did not allow any answer to be given to these blasphemies, lest he provoke greater ones." Abulensis responds thirdly, in his Question 44 on the same passage: "Because," he says, "it pertained to the honor of the king that affairs be conducted prudently, orderly, and with deliberation; but if anyone of the people could answer Rabshakeh however he wished, it would be a great disorder, and Rabshakeh could ridicule the disorder that Hezekiah had among his subjects and in his affairs."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_17.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_19.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

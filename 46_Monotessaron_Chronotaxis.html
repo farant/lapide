@@ -20,7 +20,7 @@
 <p><b>Cornelius a Lapide</b></p>
 <h1>Monotessaron: Chronological Harmony of the Four Gospels</h1>
 <p><b>(Monotessaron, or Chronological Arrangement of the Years and Deeds of Christ, in Which the Four Gospels Are Set Forth in Correct Order of Time and Coordinated with One Another So As to Form a Single History of the Life of Christ)</b></p>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_Prooemium_In_Evangelia.html">Preface to the Gospels</a></div>
     <div class="next"><a href="46_Canones_Evangelici.html">Evangelical Canons</a></div>
 </div>
@@ -251,17 +251,18 @@
 <p>Finally, on the fortieth day after the Resurrection, namely May 5th, leading them out to the Mount of Olives, teaching and instructing them, and promising the Holy Spirit at Pentecost, having given His blessing, He gloriously ascended into heaven, and sits at the right hand of God, and from there governs His Church, and gradually gathers and draws it to Himself. <em>Mark 16:19; Luke 24:50, 51.</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="46_Prooemium_In_Evangelia.html">Preface to the Gospels</a></div>
     <div class="next"><a href="46_Canones_Evangelici.html">Evangelical Canons</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

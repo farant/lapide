@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_05.html">Previous: John V</a></div>
     <div class="next"><a href="54_joannes_07.html">Next: John VII</a></div>
 </div>
@@ -395,17 +395,18 @@
 <p>72. <em>NOW HE WAS SPEAKING OF JUDAS SIMON ISCARIOT: FOR HE WAS ABOUT TO BETRAY</em> (the Syriac has: to deliver up) <em>HIM, BEING ONE OF THE TWELVE.</em> — Christ forewarns the Apostles so that, when they would later see the betrayal of Judas, they would know that He had foreseen and foretold it, and therefore that it happened not against His will but by His deliberate plan allowing it, in order to bring about His death, through which the human race would be redeemed.</p>
 <p>Here John ends the events of the second year of Christ's preaching up to the third, that is, the events from the second Passover to the third; for he pursues the events of the third year in the following chapter. Therefore he omits many events of the second year of Christ, because they had been narrated at length by the other three Evangelists. He thus ends the second year of Christ with the multiplication of loaves performed by Him at the Passover, on which occasion Christ had a long disputation with the Jews about the spiritual bread and about eating His flesh in the Eucharist. See the Chronotaxis.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_05.html">Previous: John V</a></div>
     <div class="next"><a href="54_joannes_07.html">Next: John VII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

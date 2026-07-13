@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XLIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_48.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_50.html">Next Chapter</a></div>
 </div>
@@ -200,17 +200,18 @@
 <p>39. I will bring back the captives of Elam — namely through Cyrus, who after overthrowing Babylon transferred the kingdom to the Elamites, that is, the Persians, so Lyra; and spiritually, through Christ I will bring them back to freedom and the Evangelical faith, so Rabanus and Vatablus. Hence in Acts 2:9, among other nations converted by the Apostles at Pentecost, the Elamites are numbered. Hence afterwards Christianity flourished so greatly in Persia that it produced many thousands of martyrs there: among the illustrious ones were Simeon and Acepsimas the Bishops, Azades, Usthazanes, and Pusices who were courtiers, Aeithalas, Jonas, Barachisius, and others numbered at sixteen thousand, besides very many others whose number could not be determined, who under Shapur king of the Persians in the time of Emperor Constantius most steadfastly met death for the faith of Christ, as Sozomen narrates, book II, chapters 8, 9, 10, and from him Baronius.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_48.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_50.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

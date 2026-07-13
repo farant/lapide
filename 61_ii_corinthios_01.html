@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Corinthians I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="61_ii_corinthios_argumentum.html">Previous: 2 Corinthians Introduction</a></div>
     <div class="next"><a href="61_ii_corinthios_02.html">Next: 2 Corinthians Chapter II</a></div>
 </div>
@@ -151,18 +151,19 @@
 <p>The second effect is of charity and grace, with which we are copiously anointed as with a spiritual chrism. Hence in Greek for <em>"He anointed,"</em> it is ἐχρίσας, whence are derived Chrism, Christ, and Christians, that is, the anointed. Hence St. Augustine, in the Sentences, number 342: <em>"The name of Christ,"</em> he says, <em>"is from chrism, that is, from anointing. Because for this reason every Christian is sanctified, that he may understand that he is not only a sharer of priestly and royal dignity, but also becomes a wrestler against the devil."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="61_ii_corinthios_argumentum.html">Previous: 2 Corinthians Introduction</a></div>
     <div class="next"><a href="61_ii_corinthios_02.html">Next: 2 Corinthians Chapter II</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

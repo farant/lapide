@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Jeremias XXXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_35.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_37.html">Next Chapter</a></div>
 </div>
@@ -124,17 +124,18 @@ And yet the sense of hearing is deaf to it.</p>
 <p>31. And they did not listen, that is, because they did not listen, that is, obey the commands and oracles of God issued through Jeremiah.</p>
 <p>32. Many more words were added than had been before. In Hebrew, many words were added, similar to those former ones, that is, threatening. So the Septuagint, the Chaldee, Vatablus and others.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="28_jeremias_35.html">Previous Chapter</a></div>
     <div class="next"><a href="28_jeremias_37.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

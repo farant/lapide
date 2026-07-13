@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Nahum</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_07.html">Previous Chapter</a></div>
     <div class="next"><a href="40_nahum_01.html">Next Chapter</a></div>
 </div>
@@ -34,17 +34,18 @@
 <p>-cope. For of Noah it is said in Genesis 5:29: "And he called his name Noah, saying: This one shall console us from our works and the labors of our hands, in the land which the Lord has cursed." See what was said there. Again, because nacham in the piel form signifies 'to repent,' hence Nahum can also be translated as 'repentant.' Whence Pagninus in the Hebrew Names says: "Nahum means the same as consoler, or penitent, or one who has obtained consolation or repentance; or consolation or repentance." For just as Nahum consoles the pious Israelites with hope of divine help, so he strikes the impious Ninevites with the terror of His threats and drives them to repentance. Let the preacher do the same.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="39_micheas_07.html">Previous Chapter</a></div>
     <div class="next"><a href="40_nahum_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_14.html">Next Chapter</a></div>
 </div>
@@ -162,18 +162,19 @@
 <p>BETWEEN ZORAH AND ESHTAOL. — Rabbi Ase in the tractate Sotah, chapter 1, asserts that these are two great mountains which Samson uprooted and ground with his hands like a millstone. But these are ridiculous fabrications of the Rabbis: for these are two cities (not mountains) marking the boundary that separates the tribe of Dan from the tribe of Judah, as is clear from Joshua 15:33 and Nehemiah 11:29; and between them Samson was born and buried. Furthermore, Zorah in Hebrew means the same as 'leprosy.' Eshtaol means 'requested,' or 'fire,' or 'wife of folly,' says Pagninus in the Hebrew Names.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_12.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_14.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

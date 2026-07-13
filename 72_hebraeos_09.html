@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews IX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_08.html">Previous: Hebrews Chapter VIII</a></div>
     <div class="next"><a href="72_hebraeos_10.html">Next: Hebrews Chapter X</a></div>
 </div>
@@ -314,18 +314,19 @@
 <p><b>The second time He will appear without sin to those who await Him, unto salvation.</b> — <em>"Without sin,"</em> that is, with sin abolished. Secondly and better, <em>"without sin,"</em> that is, not to offer Himself again as a victim for sin, so that it is a metonymy, by which <em>"sin"</em> is the same as <em>"a victim for sin."</em> And this aptly agrees with the preceding words, in which He said that Christ was offered to exhaust the sins of many — in Greek <em>"anenegkein,"</em> that is, to bear, to atone for and to expiate, as a victim for sin, as Chrysostom and Theodoret have explained. <em>"At the judgment,"</em> says Anselm, <em>"Christ will appear not as a sacrifice, but as justice in rewarding — namely, in punishing and damning the infidels and wicked; and in rewarding, saving and glorifying the faithful and good."</em> Therefore, O Hebrews, believe in Christ dead and crucified, constantly persist in the faith of Christ, and endure all hardships for it, because soon Christ will come to judgment, that He may bring destruction to your enemies, but eternal salvation to you and to all who await Him.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_08.html">Previous: Hebrews Chapter VIII</a></div>
     <div class="next"><a href="72_hebraeos_10.html">Next: Hebrews Chapter X</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

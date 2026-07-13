@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Hebrews IV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_03.html">Previous: Hebrews Chapter III</a></div>
     <div class="next"><a href="72_hebraeos_05.html">Next: Hebrews Chapter V</a></div>
 </div>
@@ -174,18 +174,19 @@
 <p><b>That we may obtain mercy and find grace in seasonable aid.</b> — As if to say: That, if we have fallen into sin, we may mercifully obtain its forgiveness from Christ. Again, that we may find grace — that is, that we may win for ourselves Christ's grace, favor, and benevolence — <em>"in seasonable aid;"</em> in Greek εἰς εὔκαιρον βοήθειαν, that is, into opportune help, namely, so that at the opportune time — for example, in the time of temptation and persecution, when we shall need Christ's help — He Himself may bestow it on us for bravely overcoming all difficulties.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="72_hebraeos_03.html">Previous: Hebrews Chapter III</a></div>
     <div class="next"><a href="72_hebraeos_05.html">Next: Hebrews Chapter V</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

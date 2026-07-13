@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Kings (2 Samuel) XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_ii_regum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="10_ii_regum_12.html">Next Chapter</a></div>
 </div>
@@ -145,17 +145,18 @@
 <p>Mystically (which is new and wonderful), most of the Fathers interpret David's adultery as referring to Christ betrothing to Himself the Church of the Gentiles. Whence St. Ambrose, book III on Luke: "Mystery in the figure, sin in the history; guilt through the man, the Sacrament through the Word." St. Augustine, book XXII Against Faustus: "This David sinned gravely and wickedly; nevertheless He who is desirable to all nations loved the Church washing herself upon the roof, that is, cleansing herself from the filth of the world." But these allegories are not proper and of the first class, but of the second and improper, because they are looser. For what David did with sin, Christ did from holiness and mercy.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_ii_regum_10.html">Previous Chapter</a></div>
     <div class="next"><a href="10_ii_regum_12.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

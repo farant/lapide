@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_33.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_35.html">Next Chapter</a></div>
 </div>
@@ -139,17 +139,18 @@
 <p>whom she had nursed while awake (1 Kings 3): "Teachers," he says, "who are awake in knowledge but asleep in their life, while they nourish their hearers through the watches of preaching, yet because they neglect to do what they say, they kill them through the sleep of torpor, and by their negligence they smother those whom they seemed to nourish with the milk of words." St. Paulinus, in his epistle to Jovius, advises him: "Be instructed," he says, "not so much by the tongue as by your life: do not so much discourse about great things as do them." For although subjects must observe that precept of Christ: "Whatever they tell you, observe and do," and that instruction of Eucherius in the paraenetic epistle already cited: "I beseech you, always regard the fault of another (even if he is a superior) as a disgrace, never as an example;" nevertheless human weakness teaches that what Abbot Chaeremon says in Cassian, Conference 11, chapter 4, is very true: "The authority of the teacher will never be effective unless he has fixed it in the heart of the hearer by the effect of his own work." For this reason, concerning St. Athanasius, Nazianzen writes, Oration 21: "So conducting himself that he had no great need of speech, because his conduct was abundantly sufficient for instruction." And of St. Basil he says the same in Oration 20: "Having not much need of speech for the cure of souls." Why? He adds the reason: "Accomplishing very many things by his deeds." Hence "his prayer was thunder, because his life was lightning."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_33.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_35.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

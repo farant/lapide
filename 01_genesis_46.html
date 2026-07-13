@@ -27,7 +27,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XLVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_45.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_47.html">Next Chapter</a></div>
 </div>
@@ -161,17 +161,18 @@
 <p><em>"The Egyptians detested all shepherds of sheep,"</em> because shepherds were accustomed to kill and eat the flesh of their sheep and cattle, which the Egyptians worshipped as gods, as is evident from Exodus 8:26. The Egyptians nevertheless raised sheep and cattle, as is evident in the following chapter, verse 17, not for eating, but first, for wool and milk; second, for their own pleasure; third, for the fertilization of fields; fourth, so that they might sell them to other nations.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_45.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_47.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

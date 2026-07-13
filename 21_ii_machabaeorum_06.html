@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Maccabees VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_05.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_07.html">Next Chapter</a></div>
 </div>
@@ -95,17 +95,18 @@ For whose love I gladly choose to die a virgin.</p>
 <p>Hear also the praises which Josephus rightly gives to Eleazar, in his book On the Maccabees, ch. 6: "O priest worthy of the priesthood! You did not defile these sacred teeth, nor did you contaminate with the eating of unclean things the belly that was the host of religion. O harmonizer of the law, O zealous student of the divine word! It befits those who fulfill the sacred ministry of the law with their own blood, and resist the pains of death with noble sweat, to be such as you. You, O father, gloriously confirmed the goodness of our laws by your patience, and established their sanctity with the gravity of your words, and by your deeds you won credibility for the teachings of the divine discipline. O old man more powerful than torture, O elder more fierce than fire, O Eleazar greater than the passions! O happy old age, which a faithful seal of death has completed!"</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="21_ii_machabaeorum_05.html">Previous Chapter</a></div>
     <div class="next"><a href="21_ii_machabaeorum_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

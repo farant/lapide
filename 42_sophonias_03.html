@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Sophonias III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_sophonias_02.html">Previous Chapter</a></div>
     <div class="next"><a href="43_Aggaeus_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -215,17 +215,18 @@ But in your words there is no mind."</p>
 <p>Verse 20. 20. AT THAT TIME. — Repeat: "I will destroy all who afflicted you, and I will save the lame," etc.</p>
 <p>WHEN I SHALL HAVE TURNED BACK YOUR CAPTIVITY — by which in the primitive Church you, O Christians, under Jewish magistrates and Gentile emperors were as captives and oppressed: for I will cause through Constantine that you attain freedom, indeed that you rule over the unbelievers, and occupy their temples, and publicly worship Christ gloriously and magnificently. So Lyranus and Vatablus. Second, this captivity can be understood as the servitude of the devil and of sin, from which Christ brings us to the freedom of the children of God through grace in this life, and through glory in the next, where after many labors and struggles, He will free us from the servitude of the body, of afflictions, and of death, and will bestow upon us heavenly crowns and honors, and will bless us for eternity. So St. Jerome, Theodoret, Hugo, and others.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_sophonias_02.html">Previous Chapter</a></div>
     <div class="next"><a href="43_Aggaeus_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

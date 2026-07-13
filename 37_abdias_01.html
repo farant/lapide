@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Abdias I</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="37_Abdias_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="38_Jonas_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -268,17 +268,18 @@ Mystically, the saviors are Christ and the Apostles, who, having conquered idola
 <p>Come, Lord, rule our heart, that it may obey no one, surrender itself to no one but You, that by no one but by You, and by Your charity and patience breathed into us, may it be directed to undertake all difficult things for love of You, and to bear all hardships steadfastly. Rule likewise our tongue, that it may speak nothing but Your praises; rule our hands, that they may handle and accomplish whatever is pleasing to You; rule our feet, that with sure step they may be borne toward every good. To You with the Bride in the Canticles we sigh and cry out: "Draw me after You: we will run in the fragrance of Your ointments. My Beloved is mine, and I am His, who feeds among the lilies. I am my Beloved's, and His turning is toward me. Set me as a seal upon Your heart, as a seal upon Your arm." This alone is the desire of our soul, this is the sum of our prayers: that You may reign in us through grace, and make us come to Your heavenly kingdom, where there is the manifest vision of You, the perfect love of You, the blessed companionship of You, the everlasting enjoyment of You; that on that last and decisive day of the world, which shall be the horizon of blessed and wretched eternity, separating the elect from the reprobate for all ages, we may merit to hear from You with exultation: "Come, blessed of My Father, possess the kingdom prepared for you from the foundation of the world, in which we shall obtain certain security, secure tranquility, tranquil delight, happy eternity, eternal happiness, where there is perfect love, no fear, an eternal day, a joyful stirring, and one spirit of all," says St. Augustine in Meditations, the last chapter.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="37_Abdias_Argumentum.html">Previous Chapter</a></div>
     <div class="next"><a href="38_Jonas_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

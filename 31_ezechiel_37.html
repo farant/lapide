@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXXVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_36.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_38.html">Next Chapter</a></div>
 </div>
@@ -165,17 +165,18 @@ A single prince.</p>
 <p>Most illustrious is what we read in the Life of St. John Chrysostom. For when he had died in exile at Comana, and the citizens of Constantinople wished to bring his body back to their city, they could by no force or means move it from its place; until the Emperor Theodosius sent the most humble letters to Chrysostom, as if he were still living, in which he begged pardon for the offense committed against him by his mother Eudoxia, and earnestly asked him to return to himself and his citizens. When this letter was placed on the body of the Saint, it suddenly allowed itself to be moved and transported. But hear greater things. Theodosius, surrounded by an assembly and procession of all ranks, received him with wonderful rejoicing, and falling on his knees, begging pardon for his mother, asked that the shaking and noise of her tomb might cease. For it had been trembling for 35 years, namely from the time when she herself had shaken both John and the Church. The Emperor was heard: for immediately his mother's urn became still and was at rest. And when Patriarch Proclus of Constantinople placed the Saint beside him on the same throne, the surrounding crowd exclaimed with one voice: "Receive the throne, O Father!" It is reported that he then opened his lips, long closed, and said: "Peace be with you," as the bystanders and Patriarch Proclus attested. So Baronius from Cosmas Vestiarius, Nicephorus, and others, at the year of Christ 438. Do not the bones of the Saints live before God? Does not Chrysostom live? Finally, the bones of St. Januarius, Pantaleon, Nicholas, Andrew, and other Saints bubble and exude a fragrant and healing liquid, and thus seem, as it were, to live. This is what Isaiah foretold in chapter 66:14: "Your bones shall sprout like grass." See what was said there.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_36.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_38.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

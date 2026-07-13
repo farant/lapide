@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_04.html">Next Chapter</a></div>
 </div>
@@ -251,17 +251,18 @@ AND THERE IS NO DIFFERENCE IN THE SIGHT OF THE GOD OF HEAVEN TO DELIVER BY MANY 
 <p>60. BUT AS SHALL BE THE WILL IN HEAVEN, SO BE IT DONE — whether we conquer, or are conquered and die gloriously, as God shall will; as if to say: However the die of battle falls, it will fall well, because it will fall according to the will of God, than which nothing is better. Whether therefore we conquer or are conquered, we will fulfill the will of God, than which nothing more excellent can be desired or wished for. Note here the fortitude, piety, and resignation to God's will of Judas, by which he won God's grace and victory for himself and his people. Let princes and war leaders imitate him, if they wish to enjoy a similar victory and to be gifted by God.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

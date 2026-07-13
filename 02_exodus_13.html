@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Exodus XIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_12.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_14.html">Next Chapter</a></div>
 </div>
@@ -276,17 +276,18 @@
 <p>Again, when the camp was stationary, this cloud was square. For the camp when pitched was square, as is clear from Numbers 2; but when the camp was on the move, and the Hebrews spread out in a long column, each tribe marching in an ordered line, then this cloud, which had previously been square, likewise extended itself lengthwise over all the columns of marchers, and was equal to them in length as well as in width. For all the Hebrews walked under this cloud as under a covering or an umbrella, and therefore God is said to have led them in a marvelous way, Wisdom 10:17. I will say more about this pillar at Numbers 9:15.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="02_exodus_12.html">Previous Chapter</a></div>
     <div class="next"><a href="02_exodus_14.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

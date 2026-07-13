@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Apocalypse VIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_07.html">Previous: Apocalypse Chapter VII</a></div>
     <div class="next"><a href="81_apocalypsis_09.html">Next: Apocalypse Chapter IX</a></div>
 </div>
@@ -192,17 +192,18 @@ And the earth by its fruit teaches how bitter it is.</em></p>
 <p>WOE TO THE INHABITANTS OF THE EARTH! — Woe to men who are inhabitants of the earth! Mystically, woe to the earthly and worldly, who in heart and affection dwell on the earth, indeed are entirely fixed to it! <em>"For the saint is not an inhabitant of the earth, but a stranger and pilgrim, and he says: I am a stranger and a pilgrim, like all my fathers. Wherefore Abraham too the Hebrew, that is περάτης, is mentioned as a pilgrim and one who passes through,"</em> says St. Jerome on Ezekiel VII. And St. Ambrose, Book II On Abraham, chapter 7, citing this passage: <em>"Woe to the inhabitants of the earth!"</em> and explaining, adds: <em>"It does not include all men who shall then complete the course of this life (for there are also some placed on earth whose conversation is in heaven), but those whom the affection of earthly conversation and the favor of this world will have overcome. Therefore we are not inhabitants but sojourners of this earth. For the sojourner cherishes the hope of a temporary lodging; but the inhabitant seems to place all his hope and the use of his substance there, where he has thought he must dwell. Thus he who is a sojourner of earth is an inhabitant of heaven; but he who is an inhabitant of earth is a possessor of death."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_07.html">Previous: Apocalypse Chapter VII</a></div>
     <div class="next"><a href="81_apocalypsis_09.html">Next: Apocalypse Chapter IX</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

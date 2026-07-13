@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 John III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_02.html">Previous: 1 John Chapter II</a></div>
     <div class="next"><a href="77_i_joannis_04.html">Next: 1 John Chapter IV</a></div>
 </div>
@@ -400,17 +400,18 @@ And prolongs life into misery for the beggar."</em></p>
 <p>Note, first, we know, not by divine faith, which the heretics call special, as if the faithful ought to believe with certainty that they have the faith and grace of God; nor by physical and absolute certainty, as Catharinus would have it, but by moral and conjectural certainty, such as is wont to be had from signs and conjectures, namely from flight from sins, zeal for virtues — especially humility, mortification, charity, contempt of the world, etc.: and the greater the signs one experiences in himself, the greater certainty he has that he is in the grace of God. Hence the more he grows in virtues, the more certain he is of his grace and salvation; and so Andreas Vega, Book IX on the Council of Trent, last and second-to-last chapters, teaches that the Saints can have such certainty as excludes every doubt and fear of the contrary, so that morally they do not doubt of their grace: just as we certainly believe that Constantinople exists from the common assertion of all, even though we have not seen it; or rather as a priest duly ordained certainly knows that he is a priest, and a baptized person knows that he is baptized, either because he heard it from men worthy of credit, or because as an adult he saw himself being baptized; for which reason St. Anthony used to say: <em>"I love my God, I do not fear."</em> This belongs to few, and to most eminent Saints, who have served God long and fervently; who, however, if they look to their own weakness, can fear that they may perhaps be deceived in this their credulity, even though in act they do not fear. The rest can both fear and actually fear. So St. Jerome on Micah ch. 6: <em>"We must, he says, sleep at no hour, be secure at no time, but always await the day of judgment. St. Gregory, Book VI, Epistle 22 to Gregoria, the Empress's chamber-maid: You ought not, he says, to be secure about your sins, and until the last day of your life comes, you ought always to be suspicious, always trembling, to fear faults. St. Bernard, Sermon 3 On Advent: Since I ought to keep watch over both my own and my neighbor's conscience, neither is sufficiently known to me: each is an unsearchable abyss, each is night to me."</em> See the Council of Trent, sess. VI, ch. 16. Therefore commonly the certitude and confidence of the Saints is mixed with fear and dread of the opposite, according to that of Paul: <em>"Work out your salvation with fear and trembling,"</em> Phil. 2:12. God willed this, that this fear might be for us a bridle to humility and a spur to keenness of virtue.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_02.html">Previous: 1 John Chapter II</a></div>
     <div class="next"><a href="77_i_joannis_04.html">Next: 1 John Chapter IV</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

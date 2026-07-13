@@ -57,7 +57,7 @@
 <p id="preamble-p1" data-paragraph-number="1"><b><span class="entity-ref" data-slug="person/cleric/cornelius-a-lapide">Cornelius a Lapide</span>, S.J.</b></p>
 <h1>Preliminares</h1>
 <p id="preamble-p2" data-paragraph-number="2"><b>Preliminaries</b></p>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="next"><a href="02_Clemens_Hieronymi_Du_Culte.html">Next: Jerome's Prefaces</a></div>
 </div>
 <hr />
@@ -5056,17 +5056,19 @@ Given at <span class="entity-ref" data-slug="place/europe/italy/rome">Rome</span
 
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="next"><a href="02_Clemens_Hieronymi_Du_Culte.html">Next: Jerome's Prefaces</a></div>
 </div>
 
-	<!-- pagefind-highlight:start -->
+	
+<!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Deuteronomy XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_13.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_15.html">Next Chapter</a></div>
 </div>
@@ -134,18 +134,19 @@
 <p>Indeed, even now the more religious Jews, although they have no temple, priests, or Levites, nevertheless give a tenth coin of all their goods to the poor, and have this proverb: <em>"Give tithes, that you may grow rich:"</em> for this, they say, God promised through Malachi, chapter III, verse 10, and it is true.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="05_deuteronomium_13.html">Previous Chapter</a></div>
     <div class="next"><a href="05_deuteronomium_15.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

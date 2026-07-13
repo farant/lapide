@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Amos</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_joel_03.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_01.html">Next Chapter</a></div>
 </div>
@@ -32,17 +32,18 @@ The subject of Amos is: He prophesies directly to Israel, that is, to the ten tr
 The same is found in the Roman Martyrology on March 31, where Amos is enrolled in the catalogue of Saints as a martyr and is said to be buried at Tekoa. The same is found in Isidore, Dorotheus, and Epiphanius in the Life of Amos, who also adds the cause of his martyrdom, "that he had reproached him (Hosea) for the deceit of the two golden heifers," namely, that he had rebuked him for the worship of the golden calves with which he was seducing the people. Arias considers that Amos prophesied for only two years, namely the period that preceded the earthquake and the leprosy of King Uzziah, on account of which he was removed from the kingdom, concerning which see chapter 1, verse 1; and Sanchez considers this very probable. But it is uncertain whether those two years in chapter 1, verse 1, refer only to the beginning of Amos's prophecy or to his entire prophecy.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="35_joel_03.html">Previous Chapter</a></div>
     <div class="next"><a href="36_amos_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

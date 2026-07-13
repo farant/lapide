@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_23.html">Previous: Luke XXIII</a></div>
     <div class="next"><a href="53_Joannes_Argumentum.html">Next: John Argumentum</a></div>
 </div>
@@ -308,17 +308,18 @@
 <p>Morally: The Apostles and disciples of Christ here teach us by their example to praise God continually, so that the whole life of a Christian may be a continuous praise of Christ. Thus we begin the life of the Blessed, for whom to praise God perpetually is an ever-active leisure and a leisurely activity, as I have often shown in Apocalypse IV, V, and VII. "Blessed are those who dwell in Your house, O Lord; they shall praise You forever and ever."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_23.html">Previous: Luke XXIII</a></div>
     <div class="next"><a href="53_Joannes_Argumentum.html">Next: John Argumentum</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

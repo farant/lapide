@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum on the Second Epistle of St. John</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_05.html">Previous Chapter</a></div>
     <div class="next"><a href="78_ii_joannis_01.html">Next Chapter</a></div>
 </div>
@@ -31,17 +31,18 @@
 <p><em>according to His commandments. But the frequent inculcation of charity, of love, and of truth that is made in those three Epistles plainly declares that in those two Epistles the same genuine image of John shines forth and is clearly seen as in the first."</em></p>
 <p>To the objection I reply that St. John inscribes himself as <em>"Presbyter,"</em> that is elder, both because in that age Presbyter and Bishop were used for the same thing, as I have shown on 1 Timothy IV, 14, and as St. Jerome teaches in the same place, epist. 85 to Evagrius; and because St. John, already decrepit and senior in apostolic dignity and in fullness of years, was the elder of all Christians. For he was the last of the Apostles to live, surviving even to the reign of Trajan, dying about the year 101 from the incarnation of Christ, which was 68 from Christ's passion: so St. Jerome in the place cited, and Baronius.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="77_i_joannis_05.html">Previous Chapter</a></div>
     <div class="next"><a href="78_ii_joannis_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

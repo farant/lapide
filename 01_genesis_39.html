@@ -28,7 +28,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XXXIX</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_38.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_40.html">Next Chapter</a></div>
 </div>
@@ -165,17 +165,18 @@
 <p>Not Joseph, but the keeper of the prison, who had entrusted the prisoners and everything in the prison to Joseph. See what was said at verse 6. Elegantly St. Chrysostom (or whoever the author is: for the style suggests a Latin author), in the homily On Joseph Sold, volume 1: <em>"Joseph most holy enters the custody, more a visitor than a prisoner; a provider, not a companion in crime; a physician, not a sick man. So he becomes the overseer of all, becomes the steward for the consolation of the accused. Rejoice, O innocence, and exult; rejoice, I say, because everywhere you are unharmed, everywhere secure. If you are tempted, you advance; if you are humbled, you are raised up; if you fight, you conquer; if you are slain, you are crowned. You in servitude are free, in danger safe, in custody joyful. The powerful honor you, princes look up to you, nobles seek you out. The good obey you, the wicked envy you, rivals are jealous, enemies succumb. Nor can you ever fail to be victorious, even if among men a just judge should be wanting to you."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_38.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_40.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

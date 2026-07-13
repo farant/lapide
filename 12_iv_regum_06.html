@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>4 Kings (2 Kings) VI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_05.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_07.html">Next Chapter</a></div>
 </div>
@@ -118,17 +118,18 @@
 <p>SEE THEREFORE, WHEN THE MESSENGER COMES, SHUT THE DOOR, AND DO NOT LET HIM ENTER. FOR BEHOLD, THE SOUND OF HIS MASTER'S FEET IS BEHIND HIM, as if to say: The king himself immediately follows the messenger he sent to kill me, repenting of his command and revoking it. So Josephus, as if to say: Do not fear to resist the king's messenger, because the king will immediately recall him; for he follows him so quickly that one can hear the sound of his hurrying feet. From this it is clear that Elisha had persuaded the king not to surrender Samaria to the Syrians, but to hope for help and support from the Lord. This king was Joram the son of Ahab, who succeeded him; for his deeds are described here up to chapter 8, verse 24, where his death is narrated. Therefore Joram in a precipitate rage had sent a messenger to kill Elisha; but when the anger shortly subsided, he came to himself and repented; wherefore fearing</p>
 <p>lest the messenger should kill Elisha, as he had ordered, he immediately followed after the messenger, hastening to prevent the killing. For he knew that Elisha was a prophet, a holy man and benefactor of Samaria, and he had often experienced his oracles to be faithful and most true: so that about this matter also, about lifting the siege I mean, he could scarcely doubt. So explicitly Josephus, Theodoret, and Abulensis.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="12_iv_regum_05.html">Previous Chapter</a></div>
     <div class="next"><a href="12_iv_regum_07.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

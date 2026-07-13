@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Isaias XLI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_40.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_42.html">Next Chapter</a></div>
 </div>
@@ -345,17 +345,18 @@ At once the beginning, bearer, guide, path, and end!</p>
 <p>29. BEHOLD ALL ARE UNJUST, — as if to say: The gods who are worshipped by the foolish nations, as well as the Gentiles themselves, are unjust, that is, they foster an unjust and iniquitous cause, they lose their case and are condemned; for the word &quot;unjust&quot; is opposed to what he said at verse 26: &quot;You are just.&quot; Again, they are unjust because from their worshippers, as if they were gods, they extort gold and wealth, promising help that they do not provide: for their works are vain, that is, as follows, &quot;their idols are wind and emptiness.&quot; See what was said at verse 24. Passing over them therefore, he transitions in the following chapter to God and the wondrous works of God, which he foresaw He would accomplish in the following ages, especially under Christ; yet so that he occasionally returns to the idols and attacks them. For &quot;emptiness&quot; the Hebrew is תהו tohu, that is, as Vatablus says, a formless thing; others say chaos, that is, a confused and empty thing. See what was said on Genesis I, 2.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="27_isaias_40.html">Previous Chapter</a></div>
     <div class="next"><a href="27_isaias_42.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

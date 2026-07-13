@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John XI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_10.html">Previous: John X</a></div>
     <div class="next"><a href="54_joannes_12.html">Next: John XII</a></div>
 </div>
@@ -428,17 +428,18 @@
 <p>"Because (that) He does not come:" Greek <em>ὅτι οὐ μὴ ἔλθῃ</em>, which Cyril, Leontius and Vatablus render negatively, "that He will not come"; but St. Chrysostom, Theophylact and Maldonatus render it doubtingly, "whether perhaps He is not going to come to the feast-day?" The Syriac adds: "What do you think, that He will not come to the feast?" and the Arabic: "Does it seem to you that He is not coming to the festival?" Cyril thinks this is the questioning of those who believed in Christ, who by questioning said to unbelievers: Why does Jesus not come as usual to this common feast of the Pasch? Indeed because, as God, He foresees snares being prepared for Him in it by the Scribes. More plainly, St. Augustine, Chrysostom, Bede, Theophylact, Rupert, Euthymius think this is the questioning of the chief priests, Pharisees and their followers and ministers, who had decreed to apprehend Jesus, and therefore indignantly asked: Why does Jesus not come to the feast of the Pasch? Will He not celebrate this feast? Will He be a despiser and violator of the law, as we charge against Him? Why on these days preceding the Pasch does He not appear, to purify Himself with the others and prepare Himself for so great a feast?</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_10.html">Previous: John X</a></div>
     <div class="next"><a href="54_joannes_12.html">Next: John XII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

@@ -53,7 +53,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_04.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_06.html">Next Chapter</a></div>
 </div>
@@ -297,17 +297,18 @@ Might be washed by the power of the dripping water.</em></p>
 <p>In the hundredth year after the generation of Shem, which was the 600th year of Noah's life, the flood occurred, Genesis chapter 7, verse 11. The flood lasted a full year, as is clear to anyone comparing Genesis 7:11 with Genesis 8:13 and 14. Therefore from the creation of the world to the end of the flood, 1,657 years elapsed.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="01_genesis_04.html">Previous Chapter</a></div>
     <div class="next"><a href="01_genesis_06.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

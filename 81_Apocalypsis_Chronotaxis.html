@@ -19,7 +19,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Chronotaxis and Order of the Apocalypse</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_22.html">Previous: Apocalypse Chapter XXII</a></div>
     <div class="next"><a href="81_Apocalypsis_Doxologia.html">Next: Doxology of the Apocalypse</a></div>
 </div>
@@ -40,17 +40,18 @@
 <p>Tenthly, in chapter fourteen he describes the glory of the virgins who shall nobly resist Antichrist. Then, on that occasion, he summarily touches upon the day of judgment and the punishments of the reprobate in hell. Eleventhly, in chapters fifteen and sixteen he describes the seven last plagues. Twelfthly, after these shall follow the destruction of Babylon, of which he treats in chapters xvii and xviii; and thence the jubilation and exultation of the Saints, of which he treats at the beginning of chapter xix. Then he begins to narrate Christ's final battle against Antichrist, Gog, and Magog, and completes its narrative in chapter xx. There he traces the origin of this war from a deeper source, and begins from the binding of Satan accomplished a thousand years ago by Christ — who shall be loosed at the beginning of Antichrist's reign, but more so at its end, when he shall bring against him Gog and Magog and other nations. Then, after their slaughter, he describes Christ coming to the final judgment.</p>
 <p>Finally, in chapters twenty-one and twenty-two he portrays at length and graphically the glory of the heavenly Jerusalem, prepared for the Martyrs and Saints who fight nobly, which they shall receive from Christ as a prize on the day of judgment. From what has been said, it is easy to see how upright and exact is S. John's sequence and the order of events and times, and how rare and few are the historical inversions in the Apocalypse.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="81_apocalypsis_22.html">Previous: Apocalypse Chapter XXII</a></div>
     <div class="next"><a href="81_Apocalypsis_Doxologia.html">Next: Doxology of the Apocalypse</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

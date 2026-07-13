@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Zacharias</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="43_aggaeus_02.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_01.html">Next Chapter</a></div>
 </div>
@@ -34,17 +34,18 @@
 <p>His subject matter is, first, together with Haggai, to encourage and urge the people who had returned from Babylon to rebuild Jerusalem and the temple. This is evident from 1 Ezra 5:1: &quot;Now the prophets, Haggai the prophet and Zechariah the son of Iddo, prophesied to the Jews who were in Judea and Jerusalem, in the name of the God of Israel. Then Zerubbabel the son of Shealtiel and Joshua the son of Josedec rose up and began to build the temple of God in Jerusalem, and with them the prophets of God helping them.&quot; Second, to exhort the same people not to imitate the idols and vices of their ancestors, whose punishment, slaughter, and captivity they had seen. Third, he foretells the future successes and various events that would befall the Jews up to Christ, and especially the revolutions and successions of the four monarchies, which would end in the kingdom of Christ. Fourth, he promises Christ, and recounts His life and mysteries so particularly that he seems more a historian and evangelist than a prophet: for he recounts Christ's royal and triumphal entry into Jerusalem, which occurred on Palm Sunday, four days before His passion and death; likewise the betrayal of Judas, the institution of the Eucharist, the passion of Christ, the wounds of His hands, the descent into hell, the leading forth of the patriarchs, the resurrection and glory, the rejection of the Jews, the calling of the Gentiles, the institution and expansion of the Church, as well as its holiness and happiness, and the punishment and destruction of its persecutors. Moreover, he describes these things through hieroglyphic enigmas, parables, and obscure sayings, and truly employs the prophetic style. Hence St. Jerome in his Prologue: &quot;From obscure things, he says, we pass to things more obscure, and with Moses we enter into the cloud and darkness. The abyss calls to the abyss with the voice of God's cataracts, we suffer labyrinthine wanderings, and we guide the blind footsteps of Christ by a thread.&quot;</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="43_aggaeus_02.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

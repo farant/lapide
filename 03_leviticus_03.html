@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Leviticus III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="03_leviticus_02.html">Previous Chapter</a></div>
     <div class="next"><a href="03_leviticus_04.html">Next Chapter</a></div>
 </div>
@@ -225,17 +225,18 @@
 
 <p>Finally note: Just as in the holocaust, so also in the peace offering there was employed a libation of incense, salt, oil, wine, and flour, and this in a certain measure, and with the rite I described in the preceding chapter, verse 13, about which see more at Numbers XV, 4.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="03_leviticus_02.html">Previous Chapter</a></div>
     <div class="next"><a href="03_leviticus_04.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

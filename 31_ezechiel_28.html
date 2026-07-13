@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXVIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_27.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_29.html">Next Chapter</a></div>
 </div>
@@ -223,17 +223,18 @@ A gem of priests, the lamp of the flock."</p>
 <p>pressed — indeed, a great part of illustrious men, if not all, are touched by calamities. Nevertheless, the eminence of a person, by which each of the heroes is placed before the eyes of all, makes the sufferings of the one who bears them more conspicuous." Second: "Or is this also true, and does it happen because of the arduous and difficult condition of the supreme good, which Nature and fortune can scarcely tolerate? For this reason, one who by nature's guidance excelled in intellect and body, fortune often could not favor; just as often one who excelled in fortune lay with a dull mind and a languid body." For God so established nature that good things are mixed with bad, and consequently great evils with great goods in life, so that we may aspire to the blessed life. I pass over envy, which often oppresses great men; and the fact that great men often expose themselves to great dangers, in which they perish. Finally, the moral cause, which the Prophet assigns here, is pride; for the great bear great spirits, which God, the best and greatest, crushes.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_27.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_29.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

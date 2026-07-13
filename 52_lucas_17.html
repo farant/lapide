@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>Luke XVII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_16.html">Previous: Luke XVI</a></div>
     <div class="next"><a href="52_lucas_18.html">Next: Luke XVIII</a></div>
 </div>
@@ -186,17 +186,18 @@
 <p>34. <em>IN THAT NIGHT THERE SHALL BE TWO IN ONE BED: THE ONE SHALL BE TAKEN, AND THE OTHER SHALL BE LEFT.</em> — From the word "night" someone might conclude that the universal judgment will be carried out by Christ at night, for the greater terror of men. But I respond that what He called "day" in verse 31, He here calls "night." First, because the day of judgment will be for very many — namely, for all the reprobate — fatal and most calamitous; and night and darkness are symbols of calamity. Second, because just as night closes the day and the time of working, so that day will close the time of doing good and meriting, according to the saying: "The night comes in which no one can work," John 9:4. Fittingly therefore the day of judgment is called night.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="52_lucas_16.html">Previous: Luke XVI</a></div>
     <div class="next"><a href="52_lucas_18.html">Next: Luke XVIII</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

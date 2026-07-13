@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>2 Kings (2 Samuel) XXIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_ii_regum_23.html">Previous Chapter</a></div>
     <div class="next"><a href="11_III_Regum_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -149,17 +149,18 @@
 <p>At age 20, anointed king by Samuel. At age 22, he killed Goliath. At age 30, David was anointed king of Judah at Hebron. At age 38, he was made king by all the tribes. At age 39, he stormed the citadel of Zion. At age 42, he transferred the Ark to Zion. At age 50, he violated Bathsheba and killed Uriah. At age 51, rebuked by Nathan, he repented. At age 52, Solomon was born. At age 61, Absalom seized the kingdom and was killed. At age 63, the three-year famine and the crucifixion of Saul's descendants. At age 64, four wars against the Philistine giants. At age 67, the census and the plague of 70,000. At age 70, David established Solomon as king and shortly afterward died — which was the year 2929 from the creation of the world, 270 years before the founding of Rome, and 1021 years before the birth of Christ.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="10_ii_regum_23.html">Previous Chapter</a></div>
     <div class="next"><a href="11_III_Regum_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

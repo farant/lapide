@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>1 Maccabees XII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_11.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_13.html">Next Chapter</a></div>
 </div>
@@ -137,17 +137,18 @@
 <p>And not much further on: 'And since they remembered that they had been expelled from Egypt for fear of contagion, lest they be hated by the inhabitants for the same reason, they took care not to have dealings with foreigners; which practice, begun from necessity, gradually turned into a discipline and religion. After Moses, his son Aruas too was made a priest of the Egyptian rites, and then king; and ever after, this was the custom among the Jews, that the same men should be both kings and priests; and their righteousness, mixed with religion, produced incredible growth.' What could be said more falsely than these heaped up and compacted lies?</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="20_i_machabaeorum_11.html">Previous Chapter</a></div>
     <div class="next"><a href="20_i_machabaeorum_13.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

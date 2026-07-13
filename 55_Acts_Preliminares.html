@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Preliminaries to the Acts of the Apostles</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_21.html">Previous: John XXI</a></div>
     <div class="next"><a href="56_Acts_Argumentum.html">Next: Argumentum</a></div>
 </div>
@@ -488,18 +488,19 @@ And in his own measure God.</p>
 <p>"I am conscious, Father, almighty God, that I owe You this as the foremost duty of my life, that all my speech and thought may speak of You. For neither can this very faculty of speaking, granted to me by You, render me any other greater reward than that by preaching You it may serve You, and demonstrate You as You are, namely Father of the Only-Begotten God, either to an ignorant age or to a denying heretic. And in this indeed is only the profession of my will: as for the rest, the gift of Your help and mercy must be prayed for, that You may fill the extended sails of our faith and confession with the breath of Your Spirit, and propel us into the course of the preaching we have begun." Amen.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_21.html">Previous: John XXI</a></div>
     <div class="next"><a href="56_Acts_Argumentum.html">Next: Argumentum</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

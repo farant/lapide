@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XXVI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_25.html">Previous: Acts XXV</a></div>
     <div class="next"><a href="57_acts_27.html">Next Chapter</a></div>
 </div>
@@ -183,18 +183,19 @@ God with earthly flesh.</em></p>
 <p>32. <em>This man might have been set free, if he had not appealed to Caesar.</em> — Nay rather, he could have been released even though he had appealed, because he had appealed under compulsion, and by his appeal sought nothing but his release: wherefore, if the Governor had granted him this, Paul would willingly have withdrawn his appeal. The king therefore put forward this pretext, because he did not wish to offend the Jews by releasing Paul, but to please them by sending him bound to Caesar, to whom he had appealed.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_25.html">Previous: Acts XXV</a></div>
     <div class="next"><a href="57_acts_27.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

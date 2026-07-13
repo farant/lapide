@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Zacharias II</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_01.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_03.html">Next Chapter</a></div>
 </div>
@@ -140,17 +140,18 @@ Mystically, Christ chose and possessed His portion, that is, the Apostles and ot
 <p>Anagogically, let all flesh be silent before the face of Christ coming to judgment, because He has risen from heaven and descended into the valley of Jehoshaphat, to judge there the living and the dead, who ever existed, exist, or will exist in the world. So St. Jerome, Haymo, Lyranus, and Vatablus. For so great will then be the majesty of Christ, so great His wrath against the wicked, that they will not be able to bear the sight of His face, but will cry to the mountains and rocks: &quot;Fall upon us, and hide us from the face of Him who sits upon the throne, and from the wrath of the Lamb,&quot; Apocalypse 6:17. Then that paradox will be true: &quot;A time will come when the damned will not want to leave hell, and the blessed will want to leave heaven;&quot; namely this time is the day of judgment. For on that day the damned will wish to remain in hell, lest they be forced to come to judgment; partly lest they undergo the public disgrace of damnation before the whole world in the valley of Jehoshaphat; partly lest they see the angry and lightning-like face of Christ the Judge: partly lest they be forced to take up their bodies and be tormented in them, since now only their soul is tormented. But the blessed on the day of judgment will wish to leave heaven, both to hear the most happy sentence: &quot;Come, blessed of my Father, possess the kingdom prepared for you from the foundation of the world;&quot; both so that their innocence, virtue, and glory may become known to the whole world, which formerly despised them; and so that they may take up their body and be glorified in it, and triumphantly accompanying Christ as He gloriously ascends into heaven, may enjoy the sight of Him forever. For the glory of the body will be, as it were, a second robe and crown of blessedness, which therefore the blessed souls ardently desire, as is clear from Apocalypse 6:10 and 11.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="44_zacharias_01.html">Previous Chapter</a></div>
     <div class="next"><a href="44_zacharias_03.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

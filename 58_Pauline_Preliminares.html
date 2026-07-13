@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Preliminaries to the Epistles of Saint Paul</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_28.html">Previous: Acts XXVIII</a></div>
     <div class="next"><a href="59_romanos_01.html">Next: Romans I</a></div>
 </div>
@@ -409,18 +409,19 @@ Moral, what you should do; what you should hope for, Anagogy.</em></p>
 <p>John of Gorcum forged an excellent epitome from the commentaries of Estius and Cornelius (a Lapide) on Paul, of which a most excellent edition came out at Louvain in the year 1754.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_28.html">Previous: Acts XXVIII</a></div>
     <div class="next"><a href="59_romanos_01.html">Next: Romans I</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

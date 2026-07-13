@@ -20,7 +20,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Acts of the Apostles XXV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_24.html">Previous: Acts XXIV</a></div>
     <div class="next"><a href="57_acts_26.html">Next Chapter</a></div>
 </div>
@@ -185,18 +185,19 @@ Temples, consecrated by the priest's hand in due rite.</em></p>
 <p>26. <em>Concerning whom what certain thing I should write to the lord;</em> — to Nero Caesar: for the title "lord" was Caesar's, which however Augustus Caesar refused, says Tertullian in the <em>Apology,</em> chap. xxxiv, and Dio, book LV, because by the secret prompting of God he was, in effect, as it were foreboding the imminent rising of Christ, who was to be King of kings and Lord of lords, of whom he himself was only the type and shadow. Thus the Turks call their emperor the Great Lord; the Tartars, Persians and others call him Sultan, that is, lord. Furthermore, Christian emperors are depicted with a globe in their hand, on which a cross is fixed, in the way the Emperor Justinian was first depicted, on the testimony of Procopius, and from him Suidas, under the word "Justinian." But our Gretser, book II <em>On the Cross,</em> chap. liv, teaches from Gregory and Glycas that, before Justinian, Constantine, Theodosius, and Eudoxia, the wife of Valentinian III the Emperor, were depicted in that manner: by which is signified that the Emperor is not so much lord of the world (for he has only a small part of the world subject to him) as he ought to propagate and defend the faith and the cross of Christ throughout the whole world.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="57_acts_24.html">Previous: Acts XXIV</a></div>
     <div class="next"><a href="57_acts_26.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

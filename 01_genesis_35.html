@@ -28,7 +28,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Genesis XXXV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_34.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_36.html">Next Chapter</a></div>
 </div>
@@ -406,17 +406,18 @@
 <p>Verse 29. And worn out with age, as the natural heat failed and the radical moisture dried up, which nourishes and preserves the natural heat, just as the flame of a lamp is fed by oil. He was gathered to his people, that is, to the fathers in Limbo. See what was said at chapter 25, verse 8. Isaac lived 180 years; we live 60 or 70. People complain that life is short, because all live for others, few for themselves: the reason is that they live as if they will live forever. Let them at least consider that saying of Seneca: <em>The time of life either is, or was, or will be; what we are doing is brief; what we are about to do is uncertain; what we have done is certain.</em> Why then, from this small and fleeting passage of time, do we not give ourselves with our whole soul to those things which are immense, which are eternal? What place awaits your soul after life, what lot expects you, where after death will nature, or rather God, place you?</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
 	<div class="prev"><a href="01_genesis_34.html">Previous Chapter</a></div>
 	<div class="next"><a href="01_genesis_36.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

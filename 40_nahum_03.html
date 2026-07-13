@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Nahum III</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="40_nahum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="41_Habacuc_Argumentum.html">Next Chapter</a></div>
 </div>
@@ -169,17 +169,18 @@ That nothing born shall last.</p>
 <p>This is what St. Romula understood, who, trampling the world and dedicating herself entirely to God, as she lay dying was escorted to heaven by two choirs of angels singing psalms. Of whom therefore St. Gregory, in Homily 40 on the Gospels, exclaims thus: "O you who in this world either believe yourselves to be rich or actually are, compare, if you can, your false riches with the true riches of Romula. You, on the road of this world, possess everything you are about to lose; she sought nothing on the journey and found everything at the arrival. You lead a happy life and fear a sad death; she endured a sad life and arrived at a happy death. You seek for a time the service of men; she, despised by men, found as companions the choirs of angels. Learn, therefore, brothers, to despise all temporal things; learn to scorn passing honor, and to love eternal glory."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="40_nahum_02.html">Previous Chapter</a></div>
     <div class="next"><a href="41_Habacuc_Argumentum.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

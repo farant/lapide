@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XXI</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_20.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_22.html">Next Chapter</a></div>
 </div>
@@ -277,18 +277,19 @@
 <p>Hear here, and laugh at, the charming, or rather foolish, fable of the Talmudists about the immense size of this Og and his slaughter. Og, they say, was the greatest of giants, who, when the Hebrews were approaching, uprooted a mountain two leagues wide and placed it on his head, so that he might bury all the Hebrews with a single throw of this mountain. But God sent ants, which, boring through the mountain, caused it to descend down to Og's shoulders; then, as his teeth grew to ten cubits, he could not throw the mountain off himself. Seeing this, Moses, who was ten cubits tall, took an axe of ten cubits, and leaped ten cubits upon Og, and reached the joint of his shin with his foot, and there struck and killed him, the mountain falling upon him at the same time. For Og was of such bulk that a stag entering his dead leg bone wandered about in it for half a day, and a hunter pursued it in this shin bone. Lyranus and Abulensis report these things, in Question 27. See here how true of the Jews is that saying of David, Psalm 68:23: <em>"Let their table become a snare before them, and a retribution, and a stumbling block; let their eyes be darkened, so that they may not see."</em></p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_20.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_22.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

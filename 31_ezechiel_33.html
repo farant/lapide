@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Ezechiel XXXIII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_32.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_34.html">Next Chapter</a></div>
 </div>
@@ -152,17 +152,18 @@
 <p>Such people are many today as well, who with itching ears disdain serious and effective sermons, and pursue elegant and curious ones; like the Athenians in the time of St. Paul, who devoted themselves to nothing else than saying or hearing something new (Acts 17). But let the preacher of God not lose heart on this account, nor cease from preaching, nor again change the manner of his sermon to accommodate their ears and tickle them; but let him persevere in his duty, his station, and his spirit, nor doubt that God will gather abundant fruit from this labour and ministry. And even if he converts only a few, still neither will the sermon be deprived of fruit, nor will he himself be cheated of his fitting reward. For the conversion and salvation of one soul is a worthy price for all one's labour. Cicero relates in his book On Famous Orators that Antimachus, the noble poet, when he had assembled an audience and was reading his poem to them, and all except Plato alone had left as he was speaking, said: "I shall read nonetheless, for Plato alone is to me the equivalent of all."</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="31_ezechiel_32.html">Previous Chapter</a></div>
     <div class="next"><a href="31_ezechiel_34.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

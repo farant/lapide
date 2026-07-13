@@ -23,7 +23,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Numbers XIV</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_13.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_15.html">Next Chapter</a></div>
 </div>
@@ -298,18 +298,19 @@
 <p>45. HE PURSUED THEM AS FAR AS HORMA. -- This is a prolepsis: for Horma, that is, <em>anathema</em>, is here the name given to the land which was afterward called Horma from the slaughter inflicted there by the Hebrews, Numbers chapter XXI, 3; Horma therefore signifies here the boundary and limits of the land later struck by the Hebrews. So Abulensis. Others think this Horma is a different place, which, just like that of chapter XXI, verse 3, was called Horma, from this defeat and the anathema of the Hebrews.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="04_numeri_13.html">Previous Chapter</a></div>
     <div class="next"><a href="04_numeri_15.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

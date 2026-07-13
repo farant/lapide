@@ -19,7 +19,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Judges VII</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_06.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_08.html">Next Chapter</a></div>
 </div>
@@ -136,18 +136,19 @@
 <p>In all these things Gideon was a type of Christ, as I showed through sixteen analogies in my commentary on Isaiah chapter 9:4, at those words predicted of Christ: "You have overcome the rod of His oppressor as in the day of Midian."</p>
 <p>Finally, the army of Midian was at a minimum 135,000, of which 120,000 were slain here, and the remaining 15,000 who fled Gideon pursued and cut down across the Jordan, as we shall hear in the next chapter, verse 10. And he accomplished all these things with only three hundred soldiers; but through stratagems, with God fighting for him and striking the enemies with terror. Truly Judas Maccabeus was another Gideon: "Not in the multitude of the army, he says, is victory in war, but strength comes from heaven," 1 Maccabees 3:19.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="07_judicum_06.html">Previous Chapter</a></div>
     <div class="next"><a href="07_judicum_08.html">Next Chapter</a></div>
 </div>
 
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

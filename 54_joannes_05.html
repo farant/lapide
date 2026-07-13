@@ -18,7 +18,7 @@
 <body data-pagefind-body>
 <p><b>Cornelius a Lapide</b></p>
 <h1>John V</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_04.html">Previous: John IV</a></div>
     <div class="next"><a href="54_joannes_06.html">Next: John VI</a></div>
 </div>
@@ -324,17 +324,18 @@
 <p id="verse-47"><b>Verse 47: If You Do Not Believe His Writings, How Will You Believe My Words?</b></p>
 <p>47. <em>BUT IF YOU DO NOT BELIEVE HIS WRITINGS, HOW WILL YOU BELIEVE MY WORDS?</em> — This is an argument <em>ad hominem</em>; for the Jews preferred Moses to Christ; therefore He rightly argues against them: If you do not believe the writings of Moses, whom you esteem most highly, which he wrote about Me, much less will you believe My words. Therefore I bring forward so many testimonies in vain, since I see you hardened and obstinate in hatred and rebellion against Me. Therefore I end My discourse, fall silent, and depart.</p>
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="54_joannes_04.html">Previous: John IV</a></div>
     <div class="next"><a href="54_joannes_06.html">Next: John VI</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };

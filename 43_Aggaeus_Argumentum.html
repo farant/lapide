@@ -14,7 +14,7 @@
 
 <p><b>Cornelius a Lapide</b></p>
 <h1>Argumentum in Aggaeus</h1>
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_sophonias_03.html">Previous Chapter</a></div>
     <div class="next"><a href="43_aggaeus_01.html">Next Chapter</a></div>
 </div>
@@ -33,17 +33,18 @@
 <p>Finally, Haggai was so illustrious, holy, and wise that Origen judged him, along with Malachi and John the Baptist, to have been not men but incarnate angels, as Gabriel Vasquez reports in Part I, tome I, disputation 184, number 7, and others; indeed even St. Jerome in chapter I, 13. Origen's reasoning was that in chapter I, 13, Haggai is called an angel in Hebrew: "And he said," it reads, "Haggai, the messenger (in Hebrew מלאך malach, that is, angel) of the Lord, from the messengers of the Lord." But this is an error: for it is certain that all the Prophets were men, not angels. Epiphanius briefly describes Haggai's life in his book On the Life of the Prophets: "Haggai the prophet, quite young, set out from Babylon for Jerusalem, and freely prophesied about the return of the people. And with his own eyes he saw the construction of the temple of Jerusalem. He himself was the very first there to sing the Alleluia. In that same place, therefore, he ended his life, and was buried in the ground near the priests with honor and glory. Hence even today we sing the Alleluia, which hymn is attributed to Haggai and Zechariah." St. Dorotheus relates the same things, and adds that he prophesied about Christ under the person of Zerubbabel in chapter II, 24, when he says: "I will make you as a signet ring, because I have chosen you, says the Lord; just as John the Evangelist says: For Him God the Father has sealed." Isidore also agrees, and adds that he was born in Babylon and returned as a young man with the other Jews to Jerusalem. Haggai is found inscribed in the Catalogue of Saints together with Hosea in the Roman Martyrology on July 4. Some think that certain psalms were composed by Haggai, namely Psalm 111, which is inscribed: Alleluia, of the return of Haggai and Zechariah; and Psalm 145, whose title likewise is: Alleluia, of Haggai and Zechariah. The same title appears on Psalms 146, 147, and 148 in the Greek Vatican codices of the Septuagint. Some add Psalm 137, which in the same codices is inscribed: A Psalm of David himself, of Haggai and Zechariah. But others commonly hold that these psalms were not composed but sung by the people returning from Babylon, with Haggai and Zechariah leading the singing, since they are festive and eucharistic, and therefore suited to this subject matter and to the joy of the returning people — about which more can be found in the Psalms. When you hear that Haggai was the first to sing the Alleluia in Jerusalem, understand this as the first since the return from Babylon. For before the captivity the Alleluia was in use, as is clear from the psalms, in which the Alleluia resounds frequently; or perhaps that he was the first to add the Alleluia after the psalms, on account of the joyful return from Babylon.</p>
 
 <hr />
-<div class="nav">
+<div class="nav" data-pagefind-ignore>
     <div class="prev"><a href="42_sophonias_03.html">Previous Chapter</a></div>
     <div class="next"><a href="43_aggaeus_01.html">Next Chapter</a></div>
 </div>
 <!-- pagefind-highlight:start -->
 <script type="module">
-await import('/pagefind/pagefind-highlight.js');
-new PagefindHighlight({ highlightParam: 'highlight' });
 if (new URLSearchParams(location.search).has('highlight')) {
+  await import('/pagefind/pagefind-highlight.js');
+  new PagefindHighlight({ highlightParam: 'highlight' });
   const scrollToFirst = (t = 0) => {
-    const m = document.querySelector('mark.pagefind-highlight');
+    const marks = [...document.querySelectorAll('mark.pagefind-highlight')];
+    const m = marks.find((el) => !el.closest('.nav, h1')) || marks[0];
     if (m) return m.scrollIntoView({ block: 'center' });
     if (t < 20) requestAnimationFrame(() => scrollToFirst(t + 1));
   };
