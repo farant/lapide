@@ -9,6 +9,19 @@
 <link rel="canonical" href="https://lapide.org/search.html">
 <meta name="description" content="Search Cornelius a Lapide's English biblical commentary.">
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<style>
+  /* Pagefind's UI ships no dark theme; match the site's dark palette (style.css).
+     Must load AFTER pagefind-ui.css so this :root override wins on source order. */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --pagefind-ui-primary: #8ab4f8;
+      --pagefind-ui-text: #e0e0e0;
+      --pagefind-ui-background: #1e1e1e;
+      --pagefind-ui-border: #333333;
+      --pagefind-ui-tag: #333333;
+    }
+  }
+</style>
 </head>
 <body>
 <h1>Search the Commentary</h1>
