@@ -250,6 +250,32 @@ If a review uncovers a new recurring issue or pitfall for a language (e.g., agen
 - Section titles in the cite tag should reflect the section heading or a short descriptive phrase from the chapter.
 - Genesis commentary files are named `01_genesis_XX.html` (XX = chapter number, no leading zero).
 
+## Search (Pagefind)
+
+English Lapide commentary search is powered by Pagefind. The index lives in the
+committed `pagefind/` directory and is served by GitHub Pages. The search page is
+`search.html`.
+
+**Which pages are searchable** is controlled by the `data-pagefind-body` attribute
+plus an injected highlight script, both managed by `pagefind-pages.ts`. A page is
+searchable iff it is English Lapide commentary (root-level, no language suffix,
+`NN_` prefix, not `index*`, not `02_Clemens_Hieronymi_Du_Culte`).
+
+**After adding or changing commentary pages, rebuild search:**
+
+1. `bun update-site.ts` — hreflang + sitemap + favicon.
+2. `bun pagefind-pages.ts --check` — audit the marker set (lists MISSING/EXTRA).
+3. `bun pagefind-pages.ts --fix` — add the marker + highlight script to new English
+   Lapide pages; strip it from everything else.
+4. `bunx pagefind --site . --glob "*.html"` — rebuild the committed `pagefind/` index.
+
+Then commit, including `pagefind/`. The `--glob "*.html"` restricts the crawl to
+root-level files; do not remove it (it keeps `quotes_*/` and author subdirectories
+out of the index). Translations must NOT carry `data-pagefind-body` — `--fix`
+strips it, but avoid copying it when creating new translated files.
+
+The committed `pagefind/` assets are what GitHub Pages serves. The index was last built with Pagefind 1.5.0-beta.2 (whatever `bunx pagefind` resolves at run time); a rebuild should use a matching or newer Pagefind to keep the index and committed UI assets compatible.
+
 ## Crampon Footnotes
 
 Augustin Crampon (1826–1894), a French biblical scholar, edited and annotated Cornelius a Lapide's commentaries. He added editorial footnotes throughout the text that are not part of Lapide's original commentary. These have been identified and removed from the Genesis commentary (chapters 1–50) in both the English and Latin files. Future books (Exodus, etc.) will likely contain the same kind of additions and should be cleaned in the same way.
