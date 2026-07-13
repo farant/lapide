@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Search — Cornelius a Lapide</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://lapide.org/search.html">
+<meta name="description" content="Search Cornelius a Lapide's English biblical commentary.">
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+</head>
+<body>
+<h1>Search the Commentary</h1>
+<p><a href="index.html">← Back to index</a></p>
+<div id="search"></div>
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    new PagefindUI({ element: "#search", showSubResults: true, highlightParam: "highlight" });
+  });
+</script>
+</body>
+</html>
